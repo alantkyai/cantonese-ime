@@ -14,9 +14,9 @@ published binary release is for Windows x64.
 
 ## Install
 
-Use [the Windows x64 installer](https://github.com/hadesng173/cantonese-ime/releases/download/v1.0.6/CantoneseIME-1.0.6-windows-x64-setup.exe)
-and [its SHA-256 checksums](https://github.com/hadesng173/cantonese-ime/releases/download/v1.0.6/SHA256SUMS.txt)
-from [release 1.0.6](https://github.com/hadesng173/cantonese-ime/releases/tag/v1.0.6).
+Use [the Windows x64 installer](https://github.com/hadesng173/cantonese-ime/releases/download/v1.0.8/CantoneseIME-1.0.8-windows-x64-setup.exe)
+and [its SHA-256 checksums](https://github.com/hadesng173/cantonese-ime/releases/download/v1.0.8/SHA256SUMS.txt)
+from [release 1.0.8](https://github.com/hadesng173/cantonese-ime/releases/tag/v1.0.8).
 Run Setup normally and approve Windows' administrator prompt. The installer
 includes its own private Python runtime; no system Python, developer tools,
 or Internet connection is required on the target computer.
@@ -32,6 +32,14 @@ branding and mode icons. Reopen applications after an upgrade so they load
 the new DLL. Chrome may keep background processes alive after its windows close;
 save unfinished forms and enter `chrome://restart` to restart it fully.
 
+Plain Yale spelling is treated consistently inside longer phrases: `dijiying`
+can produce 啲字型 and `wunjodijiying` can produce 換咗啲字型. Selecting a full
+phrase learns that input's preference separately from shorter words. Learning
+transferred into longer input is calibrated against static alternatives, so
+several frequently chosen short pieces do not receive an accumulating fixed
+bonus for splitting the input. Valid alternative boundaries remain available;
+long-sentence ranking still has limits.
+
 The installer offers startup at sign-in. Start menu shortcuts enable or stop
 the engine. Windows Settings > Apps provides the standard uninstall entry.
 Upgrades and uninstall preserve personal learning at
@@ -39,7 +47,7 @@ Upgrades and uninstall preserve personal learning at
 
 ## Candidate appearance
 
-Version 1.0.6 uses **LXGW WenKai TC Regular (霞鶩文楷 TC)** for the numbered
+Version 1.0.8 uses **LXGW WenKai TC Regular (霞鶩文楷 TC)** for the numbered
 word choices, at 20 logical pixels with Windows DPI scaling. The installer
 includes the unmodified font; no separate Windows font installation is needed.
 It is loaded privately for the IME's candidate panel. The receiving application
@@ -61,8 +69,8 @@ The package is unsigned. Windows may display an unknown-publisher or SmartScreen
 warning. Support is scoped to native 64-bit desktop applications on Windows x64;
 32-bit applications, ARM64 and secure/password fields are outside this release.
 Validation and remaining platform checks are recorded in
-[the 1.0.6 release notes](docs/RELEASE_NOTES_1.0.6.md) and
-[release checklist](docs/RELEASE_CHECKLIST_1.0.6.md). The
+[the 1.0.8 release notes](docs/RELEASE_NOTES_1.0.8.md) and
+[verification record](docs/release-1.0.8-validation.json). The
 [first public release summary](docs/GITHUB_RELEASE_1.0.5.md) retains the
 historical 1.0.5 checks.
 
@@ -78,7 +86,7 @@ python tools/build_release.py --fetch-tools
 ```
 
 The build pins official application-local Python and Inno Setup downloads and
-stages the release under `dist/CantoneseIME-1.0.6-x64`. It verifies source,
+stages the release under `dist/CantoneseIME-1.0.8-x64`. It verifies source,
 dictionary, runtime and attribution files before compiling the single setup
 executable. Running the builder does not install the resulting IME.
 The native sources, toolchain lock and build scripts are in [native/](native/tsf/README.md)

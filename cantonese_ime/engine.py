@@ -36,9 +36,9 @@ _MAX_LEARNING_BYTES = 4_000_000
 _MAX_LEARNING_RECORDS = 10000
 _LEARNING_DECAY = 0.8
 _LEARNING_MAX_WEIGHT = 5.0
-# Constituent preferences help sentence decoding without outranking an explicit
-# full-input selection (whose first selection adds 10000). At most 256 advancing
-# arcs can occur, so even the maximum transferred reward totals less than 8193.
+# Constituent evidence is calibrated against static alternatives before arc
+# pruning. It never makes a combined unigram/spelling cost negative; exact
+# full-input selections retain their independent 10000-point preference.
 _SPAN_LEARNING_REWARD = 24.0
 _SPAN_LEARNING_MAX_REWARD = 32.0
 _SPAN_LEARNING_WORK_LIMIT = 100000
@@ -342,6 +342,15 @@ class Engine:
         node.outputs.append((base, penalty))
         self._variants[mode].setdefault(spelling, []).append((base, penalty))
 
+    def _effective_spelling_penalty(self, mode: str, spelling: str, base: str, penalty: float) -> float:
+        # Yale is a supported spelling convention rather than a typo when the
+        # user enables that preference. Preserve original variant metadata for
+        # incomplete-alias discovery and keep other forgiving aliases costly.
+        if (mode == "forgiving" and self.prefer_yale
+                and any(form == spelling for form, _ in self._yale_word_forms.get(base, ()))):
+            return 0.0
+        return penalty
+
     @staticmethod
     def _normalise(raw: str) -> str | None:
         if not isinstance(raw, str) or not raw or len(raw) > MAX_INPUT_LENGTH:
@@ -491,7 +500,7 @@ class Engine:
                 assert token is not None  # Validated by the learning loader.
                 base, tone = token.groups()
                 spellings = _spellings(base) if mode == "forgiving" else {base: 0.0}
-                forms.append(tuple((spelling + suffix, penalty)
+                forms.append(tuple((spelling + suffix, self._effective_spelling_penalty(mode, spelling, base, penalty))
                                    for spelling, penalty in spellings.items() for suffix in ("", tone)))
             penalty = _match_yale_word(raw, tuple(forms))
             if penalty is None:
@@ -552,7 +561,11 @@ class Engine:
                     continue
                 if end in protected_interiors:
                     continue
+                typed_spelling = value[start:position + 1]
                 for base, penalty in node.outputs:
+                    # Match full-word Yale interpretation before constituent
+                    # pruning, without changing stored completion metadata.
+                    penalty = self._effective_spelling_penalty(mode, typed_spelling, base, penalty)
                     edge = _Edge(end, base, tone, penalty)
                     key = (end, base, tone)
                     if key not in result or penalty < result[key].penalty:
@@ -590,7 +603,7 @@ class Engine:
                     yield _Arc(end, entry, penalty, reward)
 
         @lru_cache(maxsize=MAX_INPUT_LENGTH + 1)
-        def arcs(start: int) -> tuple[_Arc, ...]:
+        def dictionary_arcs(start: int) -> tuple[_Arc, ...]:
             frontier = [_Path(start, (), (), 0.0)]
             found: dict[tuple[int, str, str], _Arc] = {}
             for _ in range(min(MAX_INPUT_LENGTH, self._max_word_syllables)):
@@ -628,6 +641,40 @@ class Engine:
                 frontier = sorted(following.values(), key=lambda p: (p.penalty, -p.end, p.bases))[:96]
                 if not frontier:
                     break
+            return tuple(found.values())
+
+        @lru_cache(maxsize=MAX_INPUT_LENGTH + 1)
+        def static_span_costs(start: int, end: int) -> tuple[float, ...]:
+            """Static word paths anchor a learned phrase without a stored row.
+
+            The dictionary-only DAG cannot recurse into personalized ranking.
+            Its phonetic paths retain tones, boundaries and alternate parses.
+            On a shared preference-work limit, callers keep their ordinary
+            same-span word anchor instead of dropping any dictionary arcs.
+            """
+            nonlocal learned_work, learned_truncated
+            distances = [math.inf] * (end + 1)
+            distances[start] = 0.0
+            for position in range(start, end):
+                if not math.isfinite(distances[position]):
+                    continue
+                best_end: dict[int, float] = {}
+                for arc in dictionary_arcs(position):
+                    learned_work += 1
+                    if learned_work > _SPAN_LEARNING_WORK_LIMIT:
+                        learned_truncated = True
+                        return ()
+                    if arc.end > end:
+                        continue
+                    cost = max(0.0, self._log_total - math.log1p(arc.entry.weight)) + _FUZZY_COST * arc.penalty
+                    best_end[arc.end] = min(best_end.get(arc.end, math.inf), cost)
+                for stop, cost in best_end.items():
+                    distances[stop] = min(distances[stop], distances[position] + cost)
+            return tuple(distances)
+
+        @lru_cache(maxsize=MAX_INPUT_LENGTH + 1)
+        def arcs(start: int) -> tuple[_Arc, ...]:
+            found = {(arc.end, arc.entry.text, arc.entry.reading): arc for arc in dictionary_arcs(start)}
             # Add selected constituents before the per-end 90-row bound. A
             # low-frequency selected character must survive dictionary pruning
             # to participate in a new phrase, rather than only receiving a late
@@ -645,6 +692,35 @@ class Engine:
             grouped: dict[int, list[_Arc]] = defaultdict(list)
             for arc in found.values():
                 grouped[arc.end].append(arc)
+            # A flat 24/32-point discount can make a common selected character
+            # cheaper than zero, rewarding extra syllable/word splits such as
+            # yi+ng inside ying. Calibrate each matching span against static
+            # competitors, rather than banning valid nonminimal parses.
+            # A selected new phrase may compete with several dictionary words,
+            # so include their cheapest static path as well as stored full-span
+            # words. Discover that baseline only when a multi-syllable learned
+            # arc actually needs it, once per starting position.
+            anchor_end = max((end for end, group in grouped.items()
+                              if any(arc.learning_reward > 0 and len(arc.entry.reading.split()) > 1
+                                     for arc in group)), default=start)
+            static_costs = static_span_costs(start, anchor_end) if anchor_end > start else ()
+            for end, group in grouped.items():
+                if not any(arc.learning_reward > 0 for arc in group):
+                    continue
+                costs = [max(0.0, self._log_total - math.log1p(arc.entry.weight))
+                         + _FUZZY_COST * arc.penalty for arc in group]
+                best = min(costs)
+                if static_costs and end <= anchor_end:
+                    best = min(best, static_costs[end])
+                calibrated = []
+                for arc, cost in zip(group, costs):
+                    reward = arc.learning_reward
+                    if reward > 0:
+                        target = max(0.0, best - reward / _SPAN_LEARNING_REWARD)
+                        reward = min(reward, max(0.0, cost - target))
+                        arc = _Arc(arc.end, arc.entry, arc.penalty, reward)
+                    calibrated.append(arc)
+                grouped[end] = calibrated
             return tuple(
                 arc
                 for end in sorted(grouped)

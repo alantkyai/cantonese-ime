@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "version": "1.0.8",
+  "checked_at_utc": "2026-10-23T17:19:49.011724+00:00",
+  "architecture": "AMD64",
+  "signed": false,
+  "setup": {
+    "filename": "CantoneseIME-1.0.8-windows-x64-setup.exe",
+    "bytes": 91839114,
+    "sha256": "89643de3f872210a3ee2994af2d1df287ec277111cd3b0615cdc4b226e31e52e"
+  },
+  "package_manifest_sha256": "77517c258452f1602880012fc3dc53e6db1f569fa443cce87a65bc41e6469205",
+  "payload_file_count": 128,
+  "native_dll": {
+    "filename": "CantoneseIME.dll",
+    "bytes": 2552320,
+    "sha256": "1ed29c7988322538b804f690db8c354dfa8c69d463d21c101b1e694f20a0f7ca"
+  },
+  "engine_source_sha256": "a4e2d07c98adbb78b8a6978892827bd907a68cd658f06229d6493fbc05e3e141",
+  "dictionary_and_spelling_mappings_unchanged_from_1_0_7": true,
+  "learning_changes": {
+    "borrowed_preference_calibration": "A selected constituent competes with static alternatives covering the same raw input span; its effective discount cannot make combined unigram and spelling cost negative.",
+    "new_phrase_reuse": "A selected phrase without a whole dictionary row is compared with the cheapest static multiword path over its raw span.",
+    "application_point": "Calibrated discounts apply before the existing per-ending 90-arc bound and are reused by sentence ranking.",
+    "learning_work_limit": 100000,
+    "work_limit_behavior": "Retains dictionary candidates and the ordinary same-span fallback; reports truncated optional learning work.",
+    "memory_schema_unchanged": true,
+    "exact_full_input_preference_unchanged": true,
+    "input_and_mode_keys_unchanged": true,
+    "valid_nonminimal_phonetic_parses_retained": true,
+    "tones_and_explicit_boundaries_retained": true,
+    "dictionary_readings_or_phonetic_aliases_added": false
+  },
+  "independent_runtime_tests": {
+    "passed": true,
+    "tests_run": 195,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "guarded_inputs_unchanged": 35,
+    "areas": [
+      "engine",
+      "Yale input",
+      "learning and constituent transfer",
+      "composition search",
+      "typing sessions and paging",
+      "native protocol",
+      "native learning",
+      "native backend and runtime"
+    ],
+    "scope": "Local engine/runtime tests with public dictionaries and disposable synthetic histories; no native game typing acceptance."
+  },
+  "focused_engine_tests": {
+    "passed": true,
+    "tests_run": 32,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "controls": [
+      "Five common short preferences do not cause the reported long-input collapse.",
+      "New composed phrase transfers into a prefix/suffix and persists across reopen.",
+      "Combined personalized arc costs remain nonnegative; repeating short preferences cannot collect free decoding score.",
+      "A deliberate exact full-input choice remains strongest.",
+      "Static-baseline budget fallback preserves dictionary candidates and reports the limit."
+    ]
+  },
+  "public_dictionary_cohort": {
+    "scope": "19 project-authored phrase combinations verified against public dictionary readings, with five newly-created synthetic preferences; not held-out accuracy or a representative language benchmark.",
+    "phrases": 19,
+    "top1": 7,
+    "top9": 16,
+    "top90": 18,
+    "lookup_errors": 0,
+    "remaining_outside_top9": 3,
+    "remaining_outside_top90": 1,
+    "core_cases": [
+      {
+        "input": "dijiying",
+        "target": "啲字型",
+        "rank": 1
+      },
+      {
+        "input": "wunjodijiying",
+        "target": "換咗啲字型",
+        "rank": 2
+      },
+      {
+        "input": "goibinjiying",
+        "target": "改變字型",
+        "rank": 1
+      }
+    ],
+    "legitimate_nonminimal_parse": {
+      "input": "ngonghaigamgong",
+      "target": "我唔係咁講",
+      "rank": 2
+    },
+    "synthetic_new_phrase_reuse": {
+      "selection_input": "neihou",
+      "selection": "妳好",
+      "new_input": "ngoneihou",
+      "target": "我妳好",
+      "rank_before": 2,
+      "rank_after": 1,
+      "rank_after_reopen": 1
+    }
+  },
+  "current_profile_source_diagnostic": {
+    "passed": true,
+    "phase": "Read-only source-engine check; installed 1.0.8 broker acceptance is still pending.",
+    "profile_loaded_internally_by_normal_engine": true,
+    "selection_messages_sent": 0,
+    "history_unchanged": true,
+    "history_contents_or_metadata_published": false,
+    "cases": [
+      {
+        "input": "dijiying",
+        "target": "啲字型",
+        "rank": 1
+      },
+      {
+        "input": "wunjodijiying",
+        "target": "換咗啲字型",
+        "rank": 1
+      },
+      {
+        "input": "goibinjiying",
+        "target": "改變字型",
+        "rank": 1
+      }
+    ]
+  },
+  "retained_frontend_checks": {
+    "reference": "release-1.0.6-validation.json",
+    "original_version": "1.0.6",
+    "unchanged_source_sha256": {
+      "native/tsf/candidate_font.h": "1c5de0537d064811707dc821e92c2926245e742228afa87b266751200dc84094",
+      "native/tsf/candidate_appearance.h": "3988662a0d4918a962c49b3d6ec1124c3d48cf518d374e33b9ea041282eb60ea",
+      "native/tsf/input_mode_button.h": "d3b2b1b47e37b9e51a848dd5eb93f73685d9aa9b19ae16c63e4e4709611ffe83"
+    },
+    "font_family": "LXGW WenKai TC Regular",
+    "font_cases": 15,
+    "offscreen_popup_renders": 9,
+    "appearance": "Per-application themes, opacity, high contrast and hidden native layered-window checks retained from 1.0.6.",
+    "reexecuted_against_1_0_8_dll": false,
+    "scope": "Historical checks on unchanged frontend source; no new claim of game rendering or live visual acceptance."
+  },
+  "installation": {
+    "status": "PENDING: the first setup attempt closed before the protected update; installed 1.0.8 verification has not completed.",
+    "first_attempt_exit_code": 2,
+    "installed_version_verified": null,
+    "installed_payload_files_verified": null,
+    "installed_broker_lookup_verified": null,
+    "learning_preservation_verified_during_completed_install": null,
+    "input_source_preferences_preserved_during_completed_install": null
+  },
+  "live_visual_and_game_acceptance": "PENDING",
+  "limitations": [
+    "The small public cohort retains one phrase outside the first 90 candidates; sentence ranking is not universally solved.",
+    "Ranking uses unigram evidence without preceding-document context; some longer sentences still need contextual language modeling.",
+    "Actual installed 1.0.8 broker and payload verification remain pending.",
+    "Live game-client rendering/typing, clean-machine and Windows 11 acceptance remain pending.",
+    "Unsigned; native x64 Windows desktop applications only. 32-bit applications, ARM64 and secure/password fields remain outside scope.",
+    "Native macOS compilation, installation and typing validation remain pending."
+  ],
+  "source_sha256": {
+    "cantonese_ime/engine.py": "a4e2d07c98adbb78b8a6978892827bd907a68cd658f06229d6493fbc05e3e141",
+    "tests/test_learning_composition.py": "c4bfce35539590f5f8ec4c981198faa9736fb5585f092880438bd11f689da15c",
+    "tests/test_yale_engine.py": "8ef884f0df4653619f319b9c8a26c0e1f6339955f52aa645a8eaf99f0d142ed0",
+    "tests/test_composition_search.py": "32c416be1b9d5566dbb894b433c94433c47faec94cbc7113a08cec3875ec4977"
+  },
+  "privacy": {
+    "desktop_identity_or_absolute_user_paths_included": false,
+    "personal_history_contents_hash_size_or_timestamps_included": false,
+    "machine_specific_raw_evidence_published": false
+  }
+}
