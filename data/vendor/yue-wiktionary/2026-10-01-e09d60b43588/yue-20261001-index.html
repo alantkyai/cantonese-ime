@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>yuewiktionary dump progress on 20261001</title>
+        <link rel="stylesheet" type="text/css" href="/dumps.css" />
+        <style type="text/css">
+		.siteinfo {
+			text-align: center;
+		}
+		li {
+			list-style-type: none;
+			padding: 0.5em 1.5em 0.5em 1.5em;
+			background: #fff;
+			margin-bottom: 1em;
+		}
+		li li {
+			background-color: white;
+			box-shadow: none;
+			border-top: none;
+			padding: 0px;
+			margin-bottom: 0em;
+		}
+		li ul {
+			margin-top: 4px;
+			margin-bottom: 8px;
+			box-shadow: none;
+			border-top: none;
+			padding: 0.5em 0px 0px;
+		}
+		.detail {
+			font-weight: normal;
+			font-style: italic;
+		}
+		.updates {
+			font: monospace;
+			font-size: smaller;
+		}
+		.status {
+			font-weight: bold;
+		}
+		.status, .checksum {
+			padding-left: 1em;
+			padding-right: 1em;
+		}
+		li.in-progress {
+			border-top: 3px solid #3366cc;
+			border-right: 1px solid #a2a9b1;
+			border-left: 1px solid #a2a9b1;
+			border-bottom: 1px solid #a2a9b1;
+			border-radius: 2px;
+			padding: 12px;
+			font-weight: bold;
+		}
+		li.done {
+			border-top: 3px solid #00af89;
+			border-right: 1px solid #a2a9b1;
+			border-left: 1px solid #a2a9b1;
+			border-bottom: 1px solid #a2a9b1;
+			border-radius: 2px;
+			padding: 12px;
+		}
+		li.failed {
+			color: #b32424;
+			font-weight: bold;
+			border-right: 1px solid #a2a9b1;
+			border-left: 1px solid #a2a9b1;
+			border-bottom: 1px solid #a2a9b1;
+			border-radius: 2px;
+			padding: 12px;
+		}
+		.waiting {
+			color: #c8ccd1;
+			box-shadow: none;
+			border-top: none;
+		}
+		.progress {
+			font-family: monospace;
+			font-size: 80%;
+			margin-left: .5in;
+		}
+		.notice {
+			border: none;
+			background-color: transparent;
+			font-weight: normal;
+			color: #b32424;
+		}
+        </style>
+</head>
+
+<body>
+        <h1>yuewiktionary dump progress on 20261001</h1>
+
+        <p class="siteinfo">
+                This is the Wikimedia dump service.
+                Please read the <a href='../../legal.html'>copyrights</a> information.
+                See <a href="http://meta.wikimedia.org/wiki/Data_dumps">Meta:Data dumps</a>
+                for documentation on the provided data formats.
+        </p>
+        <p>
+          Older versions of the 7zip decoder on Windows are known to have
+          <a href="https://phabricator.wikimedia.org/T208647">problems</a> with some bz2-format
+          files for larger wikis; we recommend the use of bzip2 for Windows for these cases.
+          7zip 20.00 alpha (x64) on Win10 LTSC 2019 and later versions should work properly.
+        </p>
+        <p>
+          Please report problems with these dumps on Phabricator and add the
+          <a href="https://phabricator.wikimedia.org/project/profile/1519/">Dumps-generation</a> tag.
+        </p>
+        <p class="notice"></p>
+
+        <p>See <a href="../../backup-index.html">all databases list</a>.</p>
+
+        <p class="previous">
+                <a href="../20260901/">Last dumped on 2026-09-01</a>
+        </p>
+
+        <p>
+          For a machine-readable version of the information on this page,
+          see <a href="dumpstatus.json">the json status file.</a>
+        </p>
+
+        <p class="status">
+                <span class='done'>Dump complete</span>
+        </p>
+
+        <p class="checksum">
+                Verify downloaded files against the <a href="/yuewiktionary/20261001/yuewiktionary-20261001-md5sums.txt">(md5)</a>, <a href="/yuewiktionary/20261001/yuewiktionary-20261001-sha1sums.txt">(sha1)</a> checksums
+                to check for corrupted files.
+        </p>
+
+        <ul>
+                <li class='done'><span class='updates'>2026-10-01 22:31:16</span> <span class='status'>done</span> <span class='title'>Articles, templates, media/file descriptions, and primary meta-pages, in multiple bz2 streams, 100 pages per stream</span><ul><li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-pages-articles-multistream.xml.bz2">yuewiktionary-20261001-pages-articles-multistream.xml.bz2</a> 3.5 MB</li>
+<li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-pages-articles-multistream-index.txt.bz2">yuewiktionary-20261001-pages-articles-multistream-index.txt.bz2</a> 74 KB</li></ul></li>
+<li class='done'><span class='updates'>2026-10-01 22:33:47</span> <span class='status'>done</span> <span class='title'>Deprecated: All pages with complete edit history (.7z)</span><ul><li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-pages-meta-history.xml.7z">yuewiktionary-20261001-pages-meta-history.xml.7z</a> 5.4 MB</li></ul></li>
+<li class='done'><span class='updates'>2026-10-01 22:33:42</span> <span class='status'>done</span> <span class='title'>Deprecated: All pages with complete edit history (.bz2)</span><ul><li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-pages-meta-history.xml.bz2">yuewiktionary-20261001-pages-meta-history.xml.bz2</a> 8.5 MB</li></ul></li>
+<li class='done'><span class='updates'>2026-10-01 22:33:13</span> <span class='status'>done</span> <span class='title'>Log events to all pages and users.</span><ul><li class='detail'>This contains the log of actions performed on pages and users.</li>
+<li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-pages-logging.xml.gz">yuewiktionary-20261001-pages-logging.xml.gz</a> 636 KB</li></ul></li>
+<li class='done'><span class='updates'>2026-10-01 22:31:58</span> <span class='status'>done</span> <span class='title'>Deprecated: All pages, current versions only.</span><ul><li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-pages-meta-current.xml.bz2">yuewiktionary-20261001-pages-meta-current.xml.bz2</a> 3.4 MB</li></ul></li>
+<li class='done'><span class='updates'>2026-10-01 22:30:42</span> <span class='status'>done</span> <span class='title'><big><b>Articles, templates, media/file descriptions, and primary meta-pages.</b></big></span><ul><li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-pages-articles.xml.bz2">yuewiktionary-20261001-pages-articles.xml.bz2</a> 3.3 MB</li></ul></li>
+<li class='done'><span class='updates'>2026-10-01 22:27:01</span> <span class='status'>done</span> <span class='title'>Deprecated: First-pass for page XML data dumps</span><ul><li class='detail'>These files contain no page text, only revision metadata.</li>
+<li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-stub-meta-history.xml.gz">yuewiktionary-20261001-stub-meta-history.xml.gz</a> 2.2 MB</li>
+<li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-stub-meta-current.xml.gz">yuewiktionary-20261001-stub-meta-current.xml.gz</a> 901 KB</li>
+<li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-stub-articles.xml.gz">yuewiktionary-20261001-stub-articles.xml.gz</a> 880 KB</li></ul></li>
+<li class='done'><span class='updates'>2026-10-01 22:33:07</span> <span class='status'>done</span> <span class='title'>Annotation (tag) names and ids.</span><ul><li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-change_tag_def.sql.gz">yuewiktionary-20261001-change_tag_def.sql.gz</a> 1 KB</li></ul></li>
+<li class='done'><span class='updates'>2026-10-01 22:33:05</span> <span class='status'>done</span> <span class='title'>List of annotations (tags) for revisions and log entries</span><ul><li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-change_tag.sql.gz">yuewiktionary-20261001-change_tag.sql.gz</a> 90 KB</li></ul></li>
+<li class='done'><span class='updates'>2026-10-01 22:33:03</span> <span class='status'>done</span> <span class='title'>List of all page titles</span><ul><li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-all-titles.gz">yuewiktionary-20261001-all-titles.gz</a> 51 KB</li></ul></li>
+<li class='done'><span class='updates'>2026-10-01 22:33:01</span> <span class='status'>done</span> <span class='title'>List of page titles in main namespace</span><ul><li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-all-titles-in-ns0.gz">yuewiktionary-20261001-all-titles-in-ns0.gz</a> 40 KB</li></ul></li>
+<li class='done'><span class='updates'>2026-10-01 22:32:59</span> <span class='status'>done</span> <span class='title'>Namespaces, namespace aliases, magic words (formatversion=2).</span><ul><li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-siteinfo2-namespacesv2.json.gz">yuewiktionary-20261001-siteinfo2-namespacesv2.json.gz</a> 87 bytes</li></ul></li>
+<li class='done'><span class='updates'>2026-10-01 22:32:57</span> <span class='status'>done</span> <span class='title'>Namespaces, namespace aliases, magic words.</span><ul><li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-siteinfo-namespaces.json.gz">yuewiktionary-20261001-siteinfo-namespaces.json.gz</a> 5 KB</li></ul></li>
+<li class='done'><span class='updates'>2026-10-01 22:29:58</span> <span class='status'>done</span> <span class='title'>Language proficiency information per user.</span><ul><li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-babel.sql.gz">yuewiktionary-20261001-babel.sql.gz</a> 1000 bytes</li></ul></li>
+<li class='done'><span class='updates'>2026-10-01 22:29:56</span> <span class='status'>done</span> <span class='title'>Tracks which pages use which Wikidata items or properties and what aspect (e.g. item label) is used.</span><ul><li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-wbc_entity_usage.sql.gz">yuewiktionary-20261001-wbc_entity_usage.sql.gz</a> 6 KB</li></ul></li>
+<li class='done'><span class='updates'>2026-10-01 22:29:54</span> <span class='status'>done</span> <span class='title'>This contains the SiteMatrix information from meta.wikimedia.org provided as a table.</span><ul><li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-sites.sql.gz">yuewiktionary-20261001-sites.sql.gz</a> 23 KB</li></ul></li>
+<li class='done'><span class='updates'>2026-10-01 22:29:51</span> <span class='status'>done</span> <span class='title'>Annotation (tag) names and ids.</span><ul><li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-change_tag_def.sql.gz">yuewiktionary-20261001-change_tag_def.sql.gz</a> 1 KB</li></ul></li>
+<li class='done'><span class='updates'>2026-10-01 22:29:49</span> <span class='status'>done</span> <span class='title'>List of annotations (tags) for revisions and log entries</span><ul><li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-change_tag.sql.gz">yuewiktionary-20261001-change_tag.sql.gz</a> 90 KB</li></ul></li>
+<li class='done'><span class='updates'>2026-10-01 22:29:47</span> <span class='status'>done</span> <span class='title'>List of pages' geographical coordinates</span><ul><li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-geo_tags.sql.gz">yuewiktionary-20261001-geo_tags.sql.gz</a> 898 bytes</li></ul></li>
+<li class='done'><span class='updates'>2026-10-01 22:29:45</span> <span class='status'>done</span> <span class='title'>Interwiki link tracking records</span><ul><li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-iwlinks.sql.gz">yuewiktionary-20261001-iwlinks.sql.gz</a> 63 KB</li></ul></li>
+<li class='done'><span class='updates'>2026-10-01 22:29:43</span> <span class='status'>done</span> <span class='title'>Redirect list</span><ul><li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-redirect.sql.gz">yuewiktionary-20261001-redirect.sql.gz</a> 3 KB</li></ul></li>
+<li class='done'><span class='updates'>2026-10-01 22:29:41</span> <span class='status'>done</span> <span class='title'>Nonexistent pages that have been protected.</span><ul><li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-protected_titles.sql.gz">yuewiktionary-20261001-protected_titles.sql.gz</a> 843 bytes</li></ul></li>
+<li class='done'><span class='updates'>2026-10-01 22:29:39</span> <span class='status'>done</span> <span class='title'>Name/value pairs for pages.</span><ul><li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-page_props.sql.gz">yuewiktionary-20261001-page_props.sql.gz</a> 26 KB</li></ul></li>
+<li class='done'><span class='updates'>2026-10-01 22:29:37</span> <span class='status'>done</span> <span class='title'>Newer per-page restrictions table.</span><ul><li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-page_restrictions.sql.gz">yuewiktionary-20261001-page_restrictions.sql.gz</a> 915 bytes</li></ul></li>
+<li class='done'><span class='updates'>2026-10-01 22:29:35</span> <span class='status'>done</span> <span class='title'>Base per-page data (id, title, old restrictions, etc).</span><ul><li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-page.sql.gz">yuewiktionary-20261001-page.sql.gz</a> 308 KB</li></ul></li>
+<li class='done'><span class='updates'>2026-10-01 22:29:33</span> <span class='status'>done</span> <span class='title'>Category information.</span><ul><li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-category.sql.gz">yuewiktionary-20261001-category.sql.gz</a> 18 KB</li></ul></li>
+<li class='done'><span class='updates'>2026-10-01 22:29:31</span> <span class='status'>done</span> <span class='title'>Past user group assignments.</span><ul><li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-user_former_groups.sql.gz">yuewiktionary-20261001-user_former_groups.sql.gz</a> 844 bytes</li></ul></li>
+<li class='done'><span class='updates'>2026-10-01 22:29:29</span> <span class='status'>done</span> <span class='title'>User group assignments.</span><ul><li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-user_groups.sql.gz">yuewiktionary-20261001-user_groups.sql.gz</a> 850 bytes</li></ul></li>
+<li class='done'><span class='updates'>2026-10-01 22:29:27</span> <span class='status'>done</span> <span class='title'>Wiki interlanguage link records.</span><ul><li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-langlinks.sql.gz">yuewiktionary-20261001-langlinks.sql.gz</a> 1.5 MB</li></ul></li>
+<li class='done'><span class='updates'>2026-10-01 22:29:25</span> <span class='status'>done</span> <span class='title'>Wiki external URL link records.</span><ul><li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-externallinks.sql.gz">yuewiktionary-20261001-externallinks.sql.gz</a> 27 KB</li></ul></li>
+<li class='done'><span class='updates'>2026-10-01 22:29:22</span> <span class='status'>done</span> <span class='title'>Link records used in other tables.</span><ul><li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-linktarget.sql.gz">yuewiktionary-20261001-linktarget.sql.gz</a> 224 KB</li></ul></li>
+<li class='done'><span class='updates'>2026-10-01 22:29:20</span> <span class='status'>done</span> <span class='title'>Wiki template inclusion link records.</span><ul><li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-templatelinks.sql.gz">yuewiktionary-20261001-templatelinks.sql.gz</a> 440 KB</li></ul></li>
+<li class='done'><span class='updates'>2026-10-01 22:29:18</span> <span class='status'>done</span> <span class='title'>Wiki media/files usage records.</span><ul><li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-imagelinks.sql.gz">yuewiktionary-20261001-imagelinks.sql.gz</a> 8 KB</li></ul></li>
+<li class='done'><span class='updates'>2026-10-01 22:29:16</span> <span class='status'>done</span> <span class='title'>Wiki category membership link records.</span><ul><li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-categorylinks.sql.gz">yuewiktionary-20261001-categorylinks.sql.gz</a> 197 KB</li></ul></li>
+<li class='done'><span class='updates'>2026-10-01 22:29:14</span> <span class='status'>done</span> <span class='title'>Wiki page-to-page link records.</span><ul><li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-pagelinks.sql.gz">yuewiktionary-20261001-pagelinks.sql.gz</a> 170 KB</li></ul></li>
+<li class='done'><span class='updates'>2026-10-01 22:29:12</span> <span class='status'>done</span> <span class='title'>Metadata on current versions of uploaded media/files.</span><ul><li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-image.sql.gz">yuewiktionary-20261001-image.sql.gz</a> 1 KB</li></ul></li>
+<li class='done'><span class='updates'>2026-10-01 22:29:10</span> <span class='status'>done</span> <span class='title'>A few statistics such as the page count.</span><ul><li class='file'><a href="/yuewiktionary/20261001/yuewiktionary-20261001-site_stats.sql.gz">yuewiktionary-20261001-site_stats.sql.gz</a> 859 bytes</li></ul></li>
+        </ul>
+
+</body>
+</html>

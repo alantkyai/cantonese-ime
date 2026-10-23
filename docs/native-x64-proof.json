@@ -1,0 +1,16 @@
+{
+  "schema_version": 4,
+  "recorded_at_utc": "2026-10-22T22:23:08.123652+00:00",
+  "result": "installed_verified_user_typing_and_visual_qa_delegated",
+  "current_revision": {
+    "path": "docs/yale-expanded-v3-installed-validation.json",
+    "sha256": "924b40c529e41c6e1f50ec8119b5f729a219506dc58b5c1b1f4587a2270f9e7f"
+  },
+  "previous_installed_proof": {
+    "path": "docs/native-evidence/2026-10-23/yale-expanded-v3-installed/docs/native-x64-proof.json",
+    "sha256": "ddb2ce515b56f21aeb2896477f1b70e7152ef9d1035cc998f76ddad754679cb9"
+  },
+  "earlier_ordinary_notepad_typing": "docs/installed-ime-validation.json",
+  "current_revision_typing_and_visual_qa": "Delegated to the user; not automated.",
+  "full_product_acceptance_complete": false
+}

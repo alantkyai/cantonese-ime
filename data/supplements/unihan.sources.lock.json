@@ -1,0 +1,103 @@
+{
+  "archive_members": [
+    {
+      "name": "Unihan_DictionaryIndices.txt",
+      "sha256": "b41c7c5ca3a01d833ed4fe0c7b9cdf41c4ec08cb11a0fd1df6e92ed666ce00e1",
+      "size_bytes": 8921637
+    },
+    {
+      "name": "Unihan_DictionaryLikeData.txt",
+      "sha256": "cce221e3d4719c9fa7f0068d2a86bd0d8f3bf5725a21a77d00fc4f784d5520ed",
+      "size_bytes": 4129290
+    },
+    {
+      "name": "Unihan_IRGSources.txt",
+      "sha256": "e2c484cd22b54f7e0ce896ebb02f33e092b92325accf0fd55e0e14e3863869eb",
+      "size_bytes": 13379351
+    },
+    {
+      "name": "Unihan_NumericValues.txt",
+      "sha256": "ea986cec09192efa3b527049fca964682b394d42b0ce0e15dbe1321dec2dc7e6",
+      "size_bytes": 4990
+    },
+    {
+      "name": "Unihan_OtherMappings.txt",
+      "sha256": "fc7bbb8f923fa1e922a4d421aa15387d1c68250cc5e7619bdf81f575ab38472b",
+      "size_bytes": 3715847
+    },
+    {
+      "name": "Unihan_RadicalStrokeCounts.txt",
+      "sha256": "9330f089ebb61426b277951b319775aa6e3a3e56900f6381cab915891cd4fda9",
+      "size_bytes": 600881
+    },
+    {
+      "name": "Unihan_Readings.txt",
+      "sha256": "9d39995b5de714e8ce93716ed5d15eaa0792d68e407cdf8a0add2893b8f4150b",
+      "size_bytes": 8844571
+    },
+    {
+      "name": "Unihan_Variants.txt",
+      "sha256": "4ccfd34b08ac7b9c14353f6668ba43e3796d85c4cdce7952b635be16015aafa2",
+      "size_bytes": 726700
+    }
+  ],
+  "archive_url": "https://www.unicode.org/Public/18.0.0/ucd/Unihan.zip",
+  "attribution": "Unicode, Inc. Unihan Database, Unicode 18.0.0, kCantonese provisional character readings.",
+  "candidate_audit": "docs/unihan-data-audit.md",
+  "candidate_baseline_sha256": "aec269744279a5d85a9f5ca459b9a04f060ae53c29b975fd4aab132d90fab39d",
+  "data_header_date": "2026-07-31 00:00:00 GMT [KL]",
+  "files": [
+    {
+      "name": "Unihan.zip",
+      "sha256": "4c93ea9c1f636451729a840978f1667a53886af37ba854fdcce109721c63d43e",
+      "size_bytes": 8340649,
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/Unihan.zip"
+    },
+    {
+      "name": "LICENSE.txt",
+      "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+      "size_bytes": 1995,
+      "url": "https://www.unicode.org/license.txt"
+    },
+    {
+      "name": "ReadMe.txt",
+      "sha256": "b0ea442f29dee90584aacd3665a6e1ce87ffc917a4d31f34e1916d2d6f7f9205",
+      "size_bytes": 729,
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/ReadMe.txt"
+    },
+    {
+      "archive_member": "Unihan_Readings.txt",
+      "derived_from": "Unihan.zip",
+      "name": "Unihan_Readings.txt",
+      "sha256": "9d39995b5de714e8ce93716ed5d15eaa0792d68e407cdf8a0add2893b8f4150b",
+      "size_bytes": 8844571
+    }
+  ],
+  "format_version": 1,
+  "license": "Unicode-3.0",
+  "license_name": "Unicode License V3",
+  "license_notice": {
+    "copyright": "1991-2026 Unicode, Inc.",
+    "file": "LICENSE.txt",
+    "requirements": "Keep the full copyright and permission notice with data copies or associated documentation.",
+    "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+    "text": "UNICODE LICENSE V3\n\nCOPYRIGHT AND PERMISSION NOTICE\n\nCopyright © 1991-2026 Unicode, Inc.\n\nNOTICE TO USER: Carefully read the following legal agreement. BY\nDOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING DATA FILES, AND/OR\nSOFTWARE, YOU UNEQUIVOCALLY ACCEPT, AND AGREE TO BE BOUND BY, ALL OF THE\nTERMS AND CONDITIONS OF THIS AGREEMENT. IF YOU DO NOT AGREE, DO NOT\nDOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE THE DATA FILES OR SOFTWARE.\n\nPermission is hereby granted, free of charge, to any person obtaining a\ncopy of data files and any associated documentation (the \"Data Files\") or\nsoftware and any associated documentation (the \"Software\") to deal in the\nData Files or Software without restriction, including without limitation\nthe rights to use, copy, modify, merge, publish, distribute, and/or sell\ncopies of the Data Files or Software, and to permit persons to whom the\nData Files or Software are furnished to do so, provided that either (a)\nthis copyright and permission notice appear with all copies of the Data\nFiles or Software, or (b) this copyright and permission notice appear in\nassociated Documentation.\n\nTHE DATA FILES AND SOFTWARE ARE PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY\nKIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF\nTHIRD PARTY RIGHTS.\n\nIN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS NOTICE\nBE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES,\nOR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,\nWHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,\nARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THE DATA\nFILES OR SOFTWARE.\n\nExcept as contained in this notice, the name of a copyright holder shall\nnot be used in advertising or otherwise to promote the sale, use or other\ndealings in these Data Files or Software without prior written\nauthorization of the copyright holder.\n",
+    "url_is_versioned": false
+  },
+  "license_url": "https://www.unicode.org/license.txt",
+  "local_directory": "data/vendor/unihan/18.0.0",
+  "phrase_policy": "Excluded from ScriptAutoencoder translation tokens: provisional character fallback does not supply authored whole-word pronunciations.",
+  "property": "kCantonese",
+  "property_status": "Provisional",
+  "reading_policy": "kCantonese is a provisional customary-reading property for CLDR collation and transliteration. Space-separated values are direct alternative character readings, not word syllables. Preserve direct rows without asserting normative pronunciation or exhaustive alternatives.",
+  "scope": "Direct kCantonese character readings only; no inherited variant readings, word inference, definitions, glyphs or fonts.",
+  "snapshot_retrieved_at": "2026-10-22T10:07:22.640090+00:00",
+  "source_id": "unihan:kCantonese",
+  "unicode_version": "18.0.0",
+  "version_evidence": [
+    "https://www.unicode.org/Public/18.0.0/ucd/ReadMe.txt",
+    "https://www.unicode.org/Public/UCD/latest/ReadMe.txt",
+    "https://www.unicode.org/reports/tr38/tr38-41.html"
+  ],
+  "weight_policy": "No frequency supplied. Every imported pair has unknown weight0; do not overwrite existing pairs or weights."
+}

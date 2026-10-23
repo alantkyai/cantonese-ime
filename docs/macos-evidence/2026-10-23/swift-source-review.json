@@ -1,0 +1,22 @@
+{
+  "status": "source_frozen_for_mac_build",
+  "source_count": 11,
+  "sources_sha256": {
+    "macos/Resources/Info.plist": "c103ca786b67a087da45c12fe02c9d7da50becd85545eb73e59dfa018672d97d",
+    "macos/Sources/CandidatePanel.swift": "7b5edd94a089105adc5ee1264c02aba1f9261af8ec6271d3f697a066c08c7185",
+    "macos/Sources/CompositionState.swift": "ee382fe93e3aa8e6f62097907930b00a1b6ec9787eb8894fbe709352eff4149d",
+    "macos/Sources/EngineClient.swift": "dfbcd13b1414a9f572c9cbd9d0afb9b49adffa15da0a04e0b9ff4e5dfb838655",
+    "macos/Sources/InputController.swift": "b46b9a53abfa38d1e938bb6adca2a3dced33f5f5ca40f3ffb03e8321474ed2f8",
+    "macos/Sources/main.swift": "62acea5df1c36dcadf5c006cc0feb8aca958662681c0ec7348940755b0690104",
+    "macos/Sources/MainThread.swift": "395cc44124623af8d618674c43a6910fd6fea3c55ec49e3852b2f45934c71914",
+    "macos/Sources/ModeIndicator.swift": "b231e8345ff0395ecaa00c33426462016c4b83ed5b6334e31f2c911fff5c351b",
+    "macos/Sources/WireProtocol.swift": "4bde632f3ccfc8e097c259a3a7be260b37a8d7f79ed324a89be78b3f3f223d83",
+    "macos/tests/NativeCoreTests.swift": "8834a47fd12472f39758f0a474a1b8ab048b4fbfcc00859409f04b1243d9b4a5",
+    "macos/Tools/GenerateIcons.swift": "054f20825e4b43771c4ab6a7f358c5f65cfb26af154ac2593db087f19ce61593"
+  },
+  "plist_parsed": true,
+  "native_compiled": false,
+  "native_tests_executed": false,
+  "inputmethodkit_typing_tested": false,
+  "reason": "Windows host has no macOS SDK or Swift compiler; build runner enforces native compilation and Foundation checks on Mac."
+}

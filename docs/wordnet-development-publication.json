@@ -1,0 +1,56 @@
+{
+  "recorded_at_utc": "2026-10-22T18:47:52.270136+00:00",
+  "passed": true,
+  "records": [
+    {
+      "source": ".local/wordnet-canonical/lexicon.sqlite3",
+      "target": "data/generated/lexicon.sqlite3",
+      "previous_sha256": "3fccc5bcf45cbb676b8a1a51e2030d418803af64b3cd5c0ae7d67cf90a4711bb",
+      "published_sha256": "d835b8c4487b90ef751c8c91f467b9245c8bd54ee5be8157531dd9530ac7667b"
+    },
+    {
+      "source": ".local/wordnet-canonical/lexicon.manifest.json",
+      "target": "data/generated/lexicon.manifest.json",
+      "previous_sha256": "d8840908777d264fee449f749493e34ff58b4d6898ff8bd4a135f5a083162257",
+      "published_sha256": "a7c06bf7a165c51b0958a4512b96d1f7d65010605bc9c42ae68f0970da6d9029"
+    },
+    {
+      "source": "docs/wordnet-dictionary-audit.json",
+      "target": "data/generated/dictionary-audit.json",
+      "previous_sha256": "702512c16b9dd53bd9362f8c354167aca9a1de935d48896e9b4129ab05612ed1",
+      "published_sha256": "73a9a2e97b68a223822442a7c4632eb4fe11d862cf2e36bebc46452d1477472c"
+    },
+    {
+      "source": "docs/wordnet-engine-evaluation.json",
+      "target": "docs/engine-evaluation.json",
+      "previous_sha256": "2c77c5f9708a4381ecbb1276ecff0114f3e92aa14a290671cff63f2b5457d9c7",
+      "published_sha256": "11161e0ce2445558fba3a060790fb018b1b4b9141cf0b9e70a8f494196751120"
+    },
+    {
+      "source": "docs/wordnet-yale-coverage.json",
+      "target": "docs/yale-coverage.json",
+      "previous_sha256": "b07b2cb4ecc8d0d0eb8daeca3d72bd60712b121488c29f0c5ba2235c15a2aca0",
+      "published_sha256": "71f1efbc736bef515f72a5376df6aadb48d32902be301442d3a8f349b79b6f37"
+    },
+    {
+      "source": ".local/wordnet-mappings/syllables.json",
+      "target": "data/mappings/syllables.json",
+      "previous_sha256": "6dc0e6c3395faba24b51f9762dee17e33166cadfa5bd143d9f186810b68ce307",
+      "published_sha256": "43fa147c5a852563e7b3d59280362d274984eeb53d4fd9c1b8bb5097539fe9a3"
+    },
+    {
+      "source": ".local/wordnet-mappings/spellings.json",
+      "target": "data/mappings/spellings.json",
+      "previous_sha256": "9961e406369d78151531df15983dbc795fc1c3fb2549b8113089f67865dd9077",
+      "published_sha256": "b3690a3792ee94a08771eb3f6a62433f979fca347207e3e21724c605d087c9a2"
+    },
+    {
+      "source": ".local/wordnet-mappings/build.manifest.json",
+      "target": "data/mappings/build.manifest.json",
+      "previous_sha256": "6409aa6ed51dc2fb3ffd4a7d162e76d40deeeb3fa14f6f6f83b6a28720a501a9",
+      "published_sha256": "951241bbdce2e1d2e9e3d22eb2e4e2efaea2784616200837320500051003d4d6"
+    }
+  ],
+  "native_package_or_installed_files_changed": false,
+  "notice": "Workspace publication only. Reports retain the canonical build path they actually audited; development copies are byte-identical."
+}

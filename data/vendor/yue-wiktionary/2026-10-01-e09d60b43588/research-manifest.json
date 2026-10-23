@@ -1,0 +1,303 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-22T19:13:10.775157+00:00",
+  "research_only": true,
+  "selected_for_product": false,
+  "total_retained_public_download_body_bytes": 18586761,
+  "download_allowance_bytes": 100000000,
+  "download_bound_respected": true,
+  "files": [
+    {
+      "name": "en-cantonese-index.html",
+      "size_bytes": 15112,
+      "sha256": "ff891b3ed3e42f49219306e86550dc41756381a13fcc1264b41fd65725561305",
+      "kind": "downloaded source bytes",
+      "url": "https://kaikki.org/dictionary/Cantonese/index.html"
+    },
+    {
+      "name": "en-chinese-cantonese-0.jsonl.part",
+      "size_bytes": 4000000,
+      "sha256": "37d352c8147ccdb8180272772461ad2cb635d6bc719017e6403c0f2419920deb",
+      "kind": "downloaded source bytes",
+      "url": "https://kaikki.org/dictionary/Chinese/tags/rY/Cantonese/kaikki.org-dictionary-Chinese-tag-Cantonese.jsonl"
+    },
+    {
+      "name": "en-chinese-cantonese-40000000.jsonl.part",
+      "size_bytes": 4000000,
+      "sha256": "1332826ed5428df6c6c6e19e1d9132f275d4b2bc95bcccc3ca72c510d05fd2a7",
+      "kind": "downloaded source bytes",
+      "url": "https://kaikki.org/dictionary/Chinese/tags/rY/Cantonese/kaikki.org-dictionary-Chinese-tag-Cantonese.jsonl"
+    },
+    {
+      "name": "en-chinese-cantonese-80000000.jsonl.part",
+      "size_bytes": 4000000,
+      "sha256": "6a08d2ab0e7a542f8c8db4f528d6003e4bda4cae8d9a0a5249f0528042e98e3a",
+      "kind": "downloaded source bytes",
+      "url": "https://kaikki.org/dictionary/Chinese/tags/rY/Cantonese/kaikki.org-dictionary-Chinese-tag-Cantonese.jsonl"
+    },
+    {
+      "name": "en-chinese-cantonese-tag-index.html",
+      "size_bytes": 22927,
+      "sha256": "b0f6e5473f006b8db7e40e8c5ba37ecd524eecdfe000fc14b725621d26d97606",
+      "kind": "downloaded source bytes",
+      "url": "https://kaikki.org/dictionary/Chinese/tags/rY/Cantonese/index.html"
+    },
+    {
+      "name": "en-chinese-firsttags.html",
+      "size_bytes": 15783,
+      "sha256": "41610ab5070192e9fa771a2ad036fd6c69ae8c31450198f922894c5df5921b36",
+      "kind": "downloaded source bytes",
+      "url": "https://kaikki.org/dictionary/Chinese/tags/Ancient--Chifeng.html"
+    },
+    {
+      "name": "en-chinese-index.html",
+      "size_bytes": 17411,
+      "sha256": "d6bbfd411edeffc0c66b8e5e0776915ce844765951f54c1c4bc307ae41c474a1",
+      "kind": "downloaded source bytes",
+      "url": "https://kaikki.org/dictionary/Chinese/index.html"
+    },
+    {
+      "name": "en-wiktionary-revision-sample.json",
+      "size_bytes": 3599,
+      "sha256": "f9c3396338a34960eb53e0b3858edffc6c39765494eda362db96cd2e6c900bce",
+      "kind": "downloaded source bytes",
+      "url": "https://en.wiktionary.org/w/api.php?action=query&prop=revisions&rvprop=ids%7Ctimestamp%7Ccontent%7Csha1&rvslots=main&format=json&formatversion=2&titles=%E4%B8%88%E4%BA%BA%E4%BD%AC%7C%E4%B8%80%E8%87%BA%E8%8A%B1%7C%E4%B8%89%E5%8F%89%E7%A5%9E%E7%B6%93%E7%B7%9A%7C%E4%BA%94%E8%A1%8C%E6%AC%A0%E6%8A%A6%7C%E5%87%BA%E7%9B%A3%7C%E4%BA%82%E5%97%AE%E5%A4%A7%E9%BE%8D"
+    },
+    {
+      "name": "en-zh-pron-documentation.html",
+      "size_bytes": 130328,
+      "sha256": "a1139c9dd4ab0a3a5769b416cb22a09b087eb2336a9d54804cd440866f5abb17",
+      "kind": "downloaded source bytes",
+      "url": "https://en.wiktionary.org/wiki/Template:zh-pron/documentation"
+    },
+    {
+      "name": "fetch_metadata.py",
+      "size_bytes": 2479,
+      "sha256": "13ca19593b89543575e16784677cfbb68827d48e8490e84c4461380183c0b766",
+      "kind": "project-authored research analysis or extracted source field"
+    },
+    {
+      "name": "fetch_small.py",
+      "size_bytes": 2934,
+      "sha256": "7bf57ade385d8e22f6b5260b525599aecf4c285c0159fd856d45fcc6c7c4096e",
+      "kind": "project-authored research analysis or extracted source field"
+    },
+    {
+      "name": "fetch_tag_ranges.py",
+      "size_bytes": 2043,
+      "sha256": "8d9449b694cded16c8ad344fc83bb7b619eba6c3e91f770ba51d48892afd228a",
+      "kind": "project-authored research analysis or extracted source field"
+    },
+    {
+      "name": "fetch_terms_and_api.py",
+      "size_bytes": 2024,
+      "sha256": "e990873a55acb0c76bf76da9727f294bb0a484b946c878960499c49f9035d2b3",
+      "kind": "project-authored research analysis or extracted source field"
+    },
+    {
+      "name": "kaikki-range-probe.json",
+      "size_bytes": 645265,
+      "sha256": "18be451103388fe0120da3eb8eeed50c9f50b1bf5f145942d21065b751fa0183",
+      "kind": "project-authored research analysis or extracted source field"
+    },
+    {
+      "name": "metadata-fetch.json",
+      "size_bytes": 4100,
+      "sha256": "401e83aa8952bdd62d0202efcdc468aa21c3568171566656521e0770bacf49ab",
+      "kind": "project-authored research analysis or extracted source field"
+    },
+    {
+      "name": "probe_kaikki_ranges.py",
+      "size_bytes": 5868,
+      "sha256": "76e99b57afd131fe0498c22906b8bf72872a764fe01088777f0c26fa3282b1da",
+      "kind": "project-authored research analysis or extracted source field"
+    },
+    {
+      "name": "probe_yue_dump.py",
+      "size_bytes": 11261,
+      "sha256": "84f238eaa55b09a3e2684e6508baeac5461b912a72f2d000edde44ede10300f0",
+      "kind": "project-authored research analysis or extracted source field"
+    },
+    {
+      "name": "range-fetch.json",
+      "size_bytes": 2729,
+      "sha256": "8794f93a73072ecaaaee4c5ad0078d0d79bed07c026a0a3fe227bcc585ec7a42",
+      "kind": "project-authored research analysis or extracted source field"
+    },
+    {
+      "name": "rawdata.html",
+      "size_bytes": 27249,
+      "sha256": "e0314dbdd6ecedbf82d689767fe6631fb0cbcf521fd5b67ff02c742140c323c3",
+      "kind": "downloaded source bytes",
+      "url": "https://kaikki.org/dictionary/rawdata.html"
+    },
+    {
+      "name": "small-fetch.json",
+      "size_bytes": 3951,
+      "sha256": "365274838692c8c2b365536b0bef19476e3e0a901861e4c7876776c1c388f304",
+      "kind": "project-authored research analysis or extracted source field"
+    },
+    {
+      "name": "source-template-jyutping.wikitext",
+      "size_bytes": 3309,
+      "sha256": "acc5f0c81b006e4db2412b66ade34cda6659f47f3e5f317d2b96469da9b27f17",
+      "kind": "project-authored research analysis or extracted source field"
+    },
+    {
+      "name": "source-template-yue-rom.wikitext",
+      "size_bytes": 112,
+      "sha256": "95be4bc85b521bc627d10daf3d09daed07e86389cb3674195d838a731647cdc3",
+      "kind": "project-authored research analysis or extracted source field"
+    },
+    {
+      "name": "source-template-zh-pron.wikitext",
+      "size_bytes": 100,
+      "sha256": "6b4f266fc564f8ede70ab7cb5bfe23d913af1a6865c8cd00382d07fd0ffe2b94",
+      "kind": "project-authored research analysis or extracted source field"
+    },
+    {
+      "name": "terms-api-fetch.json",
+      "size_bytes": 22157,
+      "sha256": "086fe33850cd8ea5785dd4ca3821642aa51d82f0c87439c902c6205c4d546353",
+      "kind": "project-authored research analysis or extracted source field"
+    },
+    {
+      "name": "wikimedia-terms.html",
+      "size_bytes": 152857,
+      "sha256": "2c301b5b995b4c27cce60d39091e2f48983e15fa944de0f9b6e6f831eafa46e3",
+      "kind": "downloaded source bytes",
+      "url": "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use"
+    },
+    {
+      "name": "yue-20261001-index.html",
+      "size_bytes": 17057,
+      "sha256": "26ccbe49935ba3776198111e694ee9f06b67b450816bbd847950aa897de0ad6b",
+      "kind": "downloaded source bytes",
+      "url": "https://dumps.wikimedia.org/yuewiktionary/20261001/"
+    },
+    {
+      "name": "yue-20261001-sha1sums.txt",
+      "size_bytes": 3446,
+      "sha256": "e8ba652675f4c0a89ef532b2fad362895cf4eaf3604ce6f841906666df486bf9",
+      "kind": "downloaded source bytes",
+      "url": "https://dumps.wikimedia.org/yuewiktionary/20261001/yuewiktionary-20261001-sha1sums.txt"
+    },
+    {
+      "name": "yue-dump-index.html",
+      "size_bytes": 11919,
+      "sha256": "a38faa379e2c688f9fca2a91b8174fe6cfc26e90a67577289730aabef86db903",
+      "kind": "downloaded source bytes",
+      "url": "https://dumps.wikimedia.org/yuewiktionary/latest/"
+    },
+    {
+      "name": "yue-dump-probe.json",
+      "size_bytes": 915360,
+      "sha256": "75c518e1a8268f692f8f4551c6646983022c78e6818dceab965432ddb7f6975e",
+      "kind": "project-authored research analysis or extracted source field"
+    },
+    {
+      "name": "yue-field-ledger.jsonl",
+      "size_bytes": 714864,
+      "sha256": "674ff85ca727071bf523d2890c9f1939b677faa356a74d27b119408195263a2a",
+      "kind": "project-authored research analysis or extracted source field"
+    },
+    {
+      "name": "yue-page-ledger.jsonl",
+      "size_bytes": 4677504,
+      "sha256": "5129058f954bf1544b61e6cd6fd10a58165b3441c8cdb82d06b5300d4eff617e",
+      "kind": "project-authored research analysis or extracted source field"
+    },
+    {
+      "name": "yue-page-licensing-sample.html",
+      "size_bytes": 56205,
+      "sha256": "612c1da37a91026f9586b793f3b0114da4b93506b1da3b956e8e565f9250dcf0",
+      "kind": "downloaded source bytes",
+      "url": "https://yue.wiktionary.org/wiki/%E4%B8%89%E7%95%8C"
+    },
+    {
+      "name": "yuewiktionary-20261001-pages-articles.xml.bz2",
+      "size_bytes": 3510364,
+      "sha256": "e09d60b43588bf5a860ce2dac2a865002e145579b4c3c7a3cc26743e5407d542",
+      "kind": "downloaded source bytes",
+      "url": "https://dumps.wikimedia.org/yuewiktionary/20261001/yuewiktionary-20261001-pages-articles.xml.bz2"
+    },
+    {
+      "name": "zh-yue-index.html",
+      "size_bytes": 15301,
+      "sha256": "83b31760583cf72ff712992bff8c555aa383aff2e25963ac38ee52b88df9c06e",
+      "kind": "downloaded source bytes",
+      "url": "https://kaikki.org/zhwiktionary/%E7%B2%B5%E8%AA%9E/index.html"
+    },
+    {
+      "name": "zh-yue.jsonl",
+      "size_bytes": 2587203,
+      "sha256": "a34ac6c73dad0ba761e69693dff6884e05d67e931a9f79a67934977f125ef2cf",
+      "kind": "downloaded source bytes",
+      "url": "https://kaikki.org/zhwiktionary/%E7%B2%B5%E8%AA%9E/kaikki.org-dictionary-%E7%B2%B5%E8%AA%9E.jsonl"
+    }
+  ],
+  "comparison_database": {
+    "path": ".local/wordnet-canonical/lexicon.sqlite3",
+    "sha256": "d835b8c4487b90ef751c8c91f467b9245c8bd54ee5be8157531dd9530ac7667b",
+    "pairs": 739128,
+    "texts": 623223,
+    "query_only": true
+  },
+  "official_yue_dump": {
+    "url": "https://dumps.wikimedia.org/yuewiktionary/20261001/yuewiktionary-20261001-pages-articles.xml.bz2",
+    "sha1": "78600a2b4cf61cc9157047bed02980e89c37fc80",
+    "sha256": "e09d60b43588bf5a860ce2dac2a865002e145579b4c3c7a3cc26743e5407d542",
+    "all_xml_pages": 11396,
+    "supported_yue_sections": 1948,
+    "research_unique_pairs": 1037,
+    "potential_new_pairs": 194,
+    "potential_new_texts": 110,
+    "complete_reading_extraction": false
+  },
+  "kaikki_sample": {
+    "whole_file_size_bytes": 99849306,
+    "retained_ranges": [
+      [
+        0,
+        3999999
+      ],
+      [
+        40000000,
+        43999999
+      ],
+      [
+        80000000,
+        83999999
+      ]
+    ],
+    "complete_json_records": 1028,
+    "potential_new_pairs": 119,
+    "potential_new_texts": 80,
+    "extrapolation_allowed": false,
+    "six_current_raw_revisions_cross_checked": true
+  },
+  "combined_observed_new_pair_union": 312,
+  "combined_observed_new_text_union": 190,
+  "source_template_extractions": [
+    {
+      "name": "source-template-yue-rom.wikitext",
+      "title": "模:Yue-rom",
+      "revision_id": 10752
+    },
+    {
+      "name": "source-template-jyutping.wikitext",
+      "title": "模:粵拼",
+      "revision_id": 9516
+    },
+    {
+      "name": "source-template-zh-pron.wikitext",
+      "title": "模:zh-pron",
+      "revision_id": 14605
+    }
+  ],
+  "product_runtime_files_observed_at_research_freeze": {
+    "cantonese_ime/engine.py": "f45b0a29693e613ba9dd0633be7ca67e905ad3bbca17b95fc01aac36df823d5f",
+    "cantonese_ime/mappings.py": "3eaee728fc7355d466dee722e1ee4f67e508eb9c362fd92762b8d0531e5e99fe"
+  },
+  "runtime_mutation_note": "Research wrote no product runtime files. The shared-workspace owner may separately publish approved source-metadata changes; these hashes identify observed files, not a global concurrent immutability claim."
+}

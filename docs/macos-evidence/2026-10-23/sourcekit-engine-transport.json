@@ -1,0 +1,331 @@
+{
+  "started_at_utc": "2026-10-23T03:21:46.291884+00:00",
+  "passed": true,
+  "platform": "win32",
+  "native_mac_compile_or_inputmethodkit_proof": false,
+  "personal_learning_opened": false,
+  "test_store": "D:\\IME_Project\\.local\\macos-qa\\sourcekit-engine\\synthetic-learning.json",
+  "source_pins": {
+    "D:\\IME_Project\\dist\\CantoneseIME-1.0.0-macos\\CantoneseIME-1.0.0-macos-source\\engine\\data\\generated\\lexicon.sqlite3": "bd312406a15162556ac58a257ede1514ad40890c793b6f8fa05084fda2d6241a",
+    "D:\\IME_Project\\dist\\CantoneseIME-1.0.0-macos\\CantoneseIME-1.0.0-macos-source\\engine\\stdio_bridge.py": "0dd4d41e46b982686c4986be076f1ca95ba2b5faa0cadd078845058042b16b82",
+    "D:\\IME_Project\\dist\\CantoneseIME-1.0.0-macos\\CantoneseIME-1.0.0-macos-source\\macos\\tests\\engine-cases.json": "dce8d9f85633840161b56151a8b7fbc7e24a106681f023f4da22299ad765ff24",
+    "D:\\IME_Project\\dist\\CantoneseIME-1.0.0-macos\\CantoneseIME-1.0.0-macos-source\\engine\\cantonese_ime\\engine.py": "0622bf5a377b67ea881449b229f09af3eec2dac950e154bc1cfbbf0e3303b5df",
+    "D:\\IME_Project\\dist\\CantoneseIME-1.0.0-macos\\CantoneseIME-1.0.0-macos-source\\engine\\cantonese_ime\\mappings.py": "d61d6e7ab3b82bab7a31d42f7abfefb4f224eed5c9dbf505304eef2d940249e1",
+    "D:\\IME_Project\\dist\\CantoneseIME-1.0.0-macos\\CantoneseIME-1.0.0-macos-source\\engine\\cantonese_ime\\native_protocol.py": "99fd60652eab93b6bf4e6c2bf4a1ace39a6571419963670ff9807287115e422f",
+    "D:\\IME_Project\\dist\\CantoneseIME-1.0.0-macos\\CantoneseIME-1.0.0-macos-source\\tools\\check_macos_engine.py": "f368fabfe93e8d45eeb28c42491401190cf6f93a97804463f1ff2d68eb9506eb"
+  },
+  "cases": [
+    {
+      "id": "torch",
+      "input": "fogeui",
+      "target": "\u706b\u70ac",
+      "mode": "forgiving",
+      "passed": true,
+      "rank": 1,
+      "reading": "fo2 geoi6"
+    },
+    {
+      "id": "hong_kong",
+      "input": "heunggong",
+      "target": "\u9999\u6e2f",
+      "mode": "forgiving",
+      "passed": true,
+      "rank": 1,
+      "reading": "hoeng1 gong2"
+    },
+    {
+      "id": "set_out",
+      "input": "cheutfaat",
+      "target": "\u51fa\u767c",
+      "mode": "forgiving",
+      "passed": true,
+      "rank": 1,
+      "reading": "ceot1 faat3"
+    },
+    {
+      "id": "moon",
+      "input": "yut",
+      "target": "\u6708",
+      "mode": "forgiving",
+      "passed": true,
+      "rank": 1,
+      "reading": "jyut6"
+    },
+    {
+      "id": "strict_yale_negative",
+      "input": "geui",
+      "target": "\u70ac",
+      "mode": "jyutping",
+      "passed": true,
+      "rank": null,
+      "reading": null
+    },
+    {
+      "id": "strict_jyutping_positive",
+      "input": "geoi",
+      "target": "\u70ac",
+      "mode": "jyutping",
+      "passed": true,
+      "rank": 10,
+      "reading": "geoi6"
+    },
+    {
+      "id": "yale_jim",
+      "input": "jim",
+      "target": "\u5c16",
+      "mode": "forgiving",
+      "passed": true,
+      "rank": 1,
+      "reading": "zim1"
+    },
+    {
+      "id": "yale_new_cantonese",
+      "input": "heuiheuiseng",
+      "target": "\u35fe\u35fe\u58f0",
+      "mode": "forgiving",
+      "passed": true,
+      "rank": 1,
+      "reading": "heoi4 heoi4 seng1"
+    },
+    {
+      "id": "new_traditional",
+      "input": "kinheiwokgoi",
+      "target": "\u3a34\u8d77\u944a\u84cb",
+      "mode": "forgiving",
+      "passed": true,
+      "rank": 1,
+      "reading": "kin2 hei2 wok6 goi3"
+    },
+    {
+      "id": "new_simplified",
+      "input": "kinheiwokgoi",
+      "target": "\u3a34\u8d77\u956c\u76d6",
+      "mode": "forgiving",
+      "passed": true,
+      "rank": 2,
+      "reading": "kin2 hei2 wok6 goi3"
+    },
+    {
+      "id": "real_long_name",
+      "input": "gwongdunggaakmingliksibokmatgunyutnaamchingninjingjifanlinbaangauji",
+      "target": "\u5ee3\u6771\u9769\u547d\u6b77\u53f2\u535a\u7269\u9928\u8d8a\u5357\u9752\u5e74\u653f\u6cbb\u8a13\u7df4\u73ed\u820a\u5740",
+      "mode": "forgiving",
+      "passed": true,
+      "rank": 1,
+      "reading": "gwong2 dung1 gaak3 ming6 lik6 si2 bok3 mat6 gun2 jyut6 naam4 cing1 nin4 zing3 zi6 fan3 lin6 baan1 gau6 zi2"
+    },
+    {
+      "id": "second_long_name",
+      "input": "jungyeungyanmanjingfujyuheunggongdakbithangjingkeuilyunlokbaangungsat",
+      "target": "\u4e2d\u592e\u4eba\u6c11\u653f\u5e9c\u99d0\u9999\u6e2f\u7279\u5225\u884c\u653f\u5340\u806f\u7d61\u8fa6\u516c\u5ba4",
+      "mode": "forgiving",
+      "passed": true,
+      "rank": 1,
+      "reading": "zung1 joeng1 jan4 man4 zing3 fu2 zyu3 hoeng1 gong2 dak6 bit6 hang4 zing3 keoi1 lyun4 lok3 baan6 gung1 sat1"
+    },
+    {
+      "id": "wordnet_1",
+      "input": "gamjyu",
+      "target": "\u3a52\u4f4f",
+      "mode": "forgiving",
+      "passed": true,
+      "rank": 4,
+      "reading": "gam6 zyu6"
+    },
+    {
+      "id": "wordnet_2",
+      "input": "yatlinyatdou",
+      "target": "\u4e00\u5e74\u4e00\u5ea6",
+      "mode": "forgiving",
+      "passed": true,
+      "rank": 1,
+      "reading": "jat1 lin4 jat1 dou6"
+    },
+    {
+      "id": "wordnet_3",
+      "input": "yatpinwanlyun",
+      "target": "\u4e00\u7247\u6df7\u4e82",
+      "mode": "forgiving",
+      "passed": true,
+      "rank": 1,
+      "reading": "jat1 pin3 wan6 lyun6"
+    },
+    {
+      "id": "kfcd_deeu",
+      "input": "deeudai",
+      "target": "\u6389\u4f4e",
+      "mode": "forgiving",
+      "passed": true,
+      "rank": 1,
+      "reading": "deu6 dai1"
+    },
+    {
+      "id": "kfcd_eeu",
+      "input": "oueeu",
+      "target": "OL",
+      "mode": "forgiving",
+      "passed": true,
+      "rank": 1,
+      "reading": "ou1 eu1"
+    },
+    {
+      "id": "kfcd_meeu",
+      "input": "meeumeeumeeu",
+      "target": "\u55b5\u55b5\u55b5",
+      "mode": "forgiving",
+      "passed": true,
+      "rank": 1,
+      "reading": "meu1 meu1 meu1"
+    },
+    {
+      "id": "kfcd_peeu",
+      "input": "hengpeeupeeu",
+      "target": "\u8f15\u98c4\u98c4",
+      "mode": "forgiving",
+      "passed": true,
+      "rank": 1,
+      "reading": "heng1 peu1 peu1"
+    },
+    {
+      "id": "kfcd_seeu",
+      "input": "seeusi",
+      "target": "sales",
+      "mode": "forgiving",
+      "passed": true,
+      "rank": 1,
+      "reading": "seu1 si2"
+    },
+    {
+      "id": "kfcd_jeeu",
+      "input": "jeeudai",
+      "target": "\u564d\u4f4e",
+      "mode": "forgiving",
+      "passed": true,
+      "rank": 1,
+      "reading": "zeu6 dai1"
+    },
+    {
+      "id": "mixed_1",
+      "input": "mewmeeumew",
+      "target": "\u55b5\u55b5\u55b5",
+      "mode": "forgiving",
+      "passed": true,
+      "rank": 1,
+      "reading": "meu1 meu1 meu1"
+    },
+    {
+      "id": "mixed_2",
+      "input": "meeumewmeeu",
+      "target": "\u55b5\u55b5\u55b5",
+      "mode": "forgiving",
+      "passed": true,
+      "rank": 1,
+      "reading": "meu1 meu1 meu1"
+    },
+    {
+      "id": "mixed_3",
+      "input": "meeu'mew'meeu",
+      "target": "\u55b5\u55b5\u55b5",
+      "mode": "forgiving",
+      "passed": true,
+      "rank": 1,
+      "reading": "meu1 meu1 meu1"
+    },
+    {
+      "id": "mixed_4",
+      "input": "mew'meeu'mew",
+      "target": "\u55b5\u55b5\u55b5",
+      "mode": "forgiving",
+      "passed": true,
+      "rank": 1,
+      "reading": "meu1 meu1 meu1"
+    },
+    {
+      "id": "new_cc_1",
+      "input": "tongfong",
+      "target": "\u34e5\u623f",
+      "mode": "forgiving",
+      "passed": true,
+      "rank": 2,
+      "reading": "tong1 fong4"
+    },
+    {
+      "id": "new_cc_2",
+      "input": "laanlou",
+      "target": "\u3613\u54f0",
+      "mode": "forgiving",
+      "passed": true,
+      "rank": 1,
+      "reading": "laan4 lou4"
+    },
+    {
+      "id": "new_cc_3",
+      "input": "chauchau",
+      "target": "\u393d\u393d",
+      "mode": "forgiving",
+      "passed": true,
+      "rank": 1,
+      "reading": "cau4 cau4"
+    },
+    {
+      "id": "new_yue_1",
+      "input": "gauap",
+      "target": "\u3797\u564f",
+      "mode": "forgiving",
+      "passed": true,
+      "rank": 2,
+      "reading": "gau1 ap1"
+    },
+    {
+      "id": "new_yue_2",
+      "input": "yimjim",
+      "target": "\u393f\u61b8",
+      "mode": "forgiving",
+      "passed": true,
+      "rank": 2,
+      "reading": "jim1 zim1"
+    },
+    {
+      "id": "new_yue_3",
+      "input": "yatgauwan",
+      "target": "\u4e00\u4286\u96f2",
+      "mode": "forgiving",
+      "passed": true,
+      "rank": 1,
+      "reading": "jat1 gau6 wan4"
+    },
+    {
+      "id": "learned_ng",
+      "input": "ng",
+      "target": "\u5514",
+      "mode": "forgiving",
+      "passed": true,
+      "rank": 1,
+      "reading": "ng4"
+    },
+    {
+      "id": "learned_ngho",
+      "input": "ngho",
+      "target": "\u5514\u597d",
+      "mode": "forgiving",
+      "passed": true,
+      "rank": 7,
+      "reading": "ng4 hou2"
+    },
+    {
+      "id": "learned_nghaigam",
+      "input": "nghaigam",
+      "target": "\u5514\u4fc2\u5481",
+      "mode": "forgiving",
+      "passed": true,
+      "rank": 2,
+      "reading": "ng4 hai6 gam3"
+    }
+  ],
+  "full_phrase_preference_independent": true,
+  "first_start_ms": 6265.8598001580685,
+  "max_warm_request_ms": 14.703199965879321,
+  "learning_restart_passed": true,
+  "source_hashes_unchanged": true,
+  "finished_at_utc": "2026-10-23T03:22:00.904783+00:00"
+}

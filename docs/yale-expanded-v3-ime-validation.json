@@ -1,0 +1,149 @@
+{
+  "recorded_at_utc": "2026-10-22T21:36:45.109457+00:00",
+  "status": "staged_verified_waiting_for_uac_retry_readiness",
+  "package": {
+    "package_root": "D:\\IME_Project\\.local\\native\\packages\\preview-20261023-yale-expanded-v3-r2",
+    "manifest_sha256": "fde66d90d6ffa67be2fdc5bf567fa0c7ee853e74583f88542c6f3cda01c7bb6f",
+    "payload_files": 86,
+    "payload_bytes": 430972843,
+    "dictionary_sha256": "bd312406a15162556ac58a257ede1514ad40890c793b6f8fa05084fda2d6241a",
+    "dll_sha256": "594bd83b2252289781a7ad7c08d4db7824a0295aa36e17a182f72a73effe3c6c",
+    "engine_sha256": "088d69562a6dae9d3455cfd9e82bcbf6378b300148e13bd1424ae1a943c0d562",
+    "mappings_sha256": "d61d6e7ab3b82bab7a31d42f7abfefb4f224eed5c9dbf505304eef2d940249e1",
+    "updater_sha256": "ade67c7e32b05f59d2a5507d4632efc4e25a25a5aeb3a0d01ef3cff0b5642c82"
+  },
+  "installed": false,
+  "installed_baseline": {
+    "recorded_at_utc": "2026-10-22T20:34:21.2560966Z",
+    "package_manifest_sha256": "94c29cf8e9e1e5c521368a38f109ea24aaa28cecf111cff0bc734085d29d6000",
+    "dll_sha256": "dfe90daff7339fc01437fef5c3bb28719f0c50db84789ac8e9cc403c4970e7e4",
+    "registration_plan_sha256": "bf6fbe19c3955d8ba6ed9360809f5601ea25f2dc22236a41857860dc36b59de6",
+    "previously_restored_broker_process_exists": true,
+    "installed_files_changed_by_this_check": false,
+    "private_learning_read_or_written": false,
+    "scope": "Read-only installed baseline hashes and process existence; no fresh pipe readiness or typing claim."
+  },
+  "vocabulary": {
+    "pairs": 776335,
+    "distinct_texts": 644427,
+    "baseline_pairs_preserved": 739128,
+    "added_pairs_since_wordnet": 37207,
+    "added_texts_since_wordnet": 21204,
+    "two_clean_builds_byte_identical": true
+  },
+  "checks": {
+    "python_suite": {
+      "passed": true,
+      "tests": 567,
+      "evidence": {
+        "path": ".local/final-v3-python-suite-r2.json",
+        "sha256": "cad13107b6044c28e2e357abfb232e47ff7893d3f615e73fb3c8a534daba8aa6"
+      }
+    },
+    "mechanical_dictionary_gates_passed": 10,
+    "human_quality_gates_incomplete": 3,
+    "all_stored_reading_routes": 776335,
+    "alternate_spelling_regression": {
+      "affected_pairs": 398,
+      "affected_texts": 315,
+      "all_competing_target_memberships": 2340,
+      "controls_all_found": true,
+      "database_pairs": 776335,
+      "database_texts": 644427,
+      "distinct_inputs": 2002,
+      "frozen400_rank_changes": 10,
+      "frozen400_statuses": {
+        "all_found": 400
+      },
+      "frozen400_visible_reading_changes": 2,
+      "fully_toned_source_pair_memberships": 834,
+      "input_statuses": {
+        "all_found": 2002
+      },
+      "maximum_alternate_sites_in_actual_word": 3,
+      "stored_pair_variant_combinations": 834,
+      "strict_all_passed": true,
+      "strict_control_statuses": {
+        "all_found": 6,
+        "exhausted": 6
+      },
+      "toned_exact_readings_visible": 834,
+      "total_elapsed_seconds": 25.311018400127068,
+      "total_public_calls": 2470
+    },
+    "native_x64_ipc_cases_passed": 31,
+    "native_max_observed_request_ms": 200.7312,
+    "native_client_deadline_ms": 250,
+    "fresh_x64_dll_load_and_exports_passed": true,
+    "all_payload_hashes_verified_and_unchanged": true,
+    "isolated_test_broker_stopped": true,
+    "test_learning_enabled": false,
+    "native_evidence": {
+      "path": ".local/native/expanded-v3-headless/run-20261022T204055Z-2e70cdaa/report.json",
+      "sha256": "8ae30ba9c4e8f49b7d5e9332a3177fc5e262c3de408d252c2d0c48dab156b460"
+    }
+  },
+  "final_catalog": {
+    "status": "complete_with_frozen_replay",
+    "input_groups_verified": 503708,
+    "source_pairs": 776335,
+    "public_page_calls": 503925,
+    "missing_target_memberships": 0,
+    "aggregate": {
+      "path": "docs/final-yale-catalog-coverage.json",
+      "sha256": "710727d71bba09f42af32afeabeb821581072990d6daa30b13fe973a09ee9756"
+    },
+    "frozen_replay": {
+      "path": ".local/yale-catalog/final-v3-frozen-runtime/replay-validation.json",
+      "sha256": "12e0ced1b78271c2d5dd2cdd89f6ea20615baa52a7f573e887ba7a821afb1b5b"
+    },
+    "frozen_manifest": {
+      "path": ".local/yale-catalog/final-v3-frozen-runtime/freeze-manifest.json",
+      "sha256": "3731827bd3f911157ba22925e679d49f8887ee615200c93cad029ff4c9f85c07"
+    },
+    "actual_worker_exits": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "scope": "All stored target texts per compact plain-Yale input. Source-reading alternatives that collapse to the same text/input are represented once. Not all Chinese vocabulary, pronunciation quality, ranking acceptance, native timeout or typing proof."
+  },
+  "earlier_failed_full_suite_retained": {
+    "path": ".local/final-v3-python-suite.json",
+    "sha256": "bb362bc7839af6a433e007300a46ae14a6cc1aad421a2a60dfd23e6859c5c185"
+  },
+  "previous_wordnet_catalog": {
+    "path": "docs/wordnet-yale-catalog-coverage.json",
+    "sha256": "7ada8a46abee68afc197b84ea5583193f1971870654567812e7f76d597d54ab3"
+  },
+  "evidence_manifest": {
+    "path": "docs/native-evidence/2026-10-23/yale-expanded-v3/evidence-manifest.json",
+    "sha256": "f4d94d5e7dc1a0e70f320c493a5e604cc157774117adbdce84ad42c204b3056a",
+    "frozen_items": 85
+  },
+  "installation": {
+    "applied": false,
+    "admin_wrapper_prepared": ".local/native/Invoke-ExpandedV3Update.ps1",
+    "admin_wrapper_executed": false,
+    "uac_prompt_retried": false,
+    "reason": "Earlier Windows administrator prompt was canceled; user readiness to show it again remains pending."
+  },
+  "limitations": [
+    "Finite selected vocabulary is not all Chinese words.",
+    "Ninety-eight bases use documented project Yale extensions; ngm and soei retain explicit Jyutping fallbacks.",
+    "Human pronunciation review, independent held-out quality and mapping behavior review remain incomplete.",
+    "User owns native typing/UI acceptance. These staged checks do not activate the installed TSF profile.",
+    "Observed finite native timings are not a universal deadline guarantee."
+  ],
+  "keyboard_or_ui_actions": 0,
+  "new_installed_tsf_typing_proof": false,
+  "catalog_evidence_manifest": {
+    "path": "docs/native-evidence/2026-10-23/yale-expanded-v3/catalog/evidence-manifest.json",
+    "sha256": "72e1c7995c0b9229962a30fa744f264a3f61dd88e5cf73261d6b1ff29393d494"
+  },
+  "previous_staged_validation": {
+    "path": "docs/native-evidence/2026-10-23/yale-expanded-v3/catalog/docs/yale-expanded-v3-ime-validation.json",
+    "sha256": "ba44268aa8313abb0f46ac348874a536f4d5f6ac50fee7973a38cab9539c33e0"
+  }
+}

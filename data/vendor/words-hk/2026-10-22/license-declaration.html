@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="yue-Hant-HK">
+ <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+
+  <title>粵典詞表 words.hk word list | 數據 | 粵典 words.hk</title>
+  
+
+  
+
+  <!-- Bootstrap core CSS -->
+  <link href="//fastly.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <!-- Bootstrap Font Icon CSS -->
+  <link rel="stylesheet" href="//fastly.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
+  <!-- https://chiron-fonts.github.io/ -->
+  
+  <link rel="stylesheet" href="//fastly.jsdelivr.net/npm/chiron-hei-hk-webfont@2.5.24/css/vf.css" />
+  <link rel="stylesheet" href="//fastly.jsdelivr.net/npm/chiron-hei-hk-webfont@2.5.24/css/vf-italic.css" />
+  
+
+  <!-- Custom styles-->
+  <link href="/static/base.css?t=2022-08-10.1" rel="stylesheet" />
+  
+   <link rel="shortcut icon" href="/static/favicon.ico" />
+  
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv-printshiv.min.js"></script>
+  <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <script deferred="deferred" src="//fastly.jsdelivr.net/npm/jquery@1.11.3/dist/jquery.min.js"></script>
+  <script deferred="deferred" src="//fastly.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+
+  <meta property="og:title" content="" />
+  <meta property="og:description" content="" />
+
+  
+   <meta property="og:locale" content="zh_HK" />
+   <meta property="og:type" content="article" />
+   <meta property="og:site_name" content="粵典 words.hk" />
+   <meta property="article:author" content="https://www.facebook.com/www.words.hk" />
+   <meta property="article:publisher" content="https://www.facebook.com/www.words.hk" />
+   <meta property="og:image" content="https://words.hk/static/og2018.jpg" />
+   <meta property="fb:app_id" content="668825199909866" />
+  
+
+  <script deferred="deferred" src="/static/base.js?v=2022-10-11"></script>
+  
+
+  
+ </head>
+
+ <body>
+  <nav class="navbar fixed-top navbar-expand navbar-dark bg-gradient bg-dark text-light ">
+   <div class="container-lg">
+    <a class="navbar-brand" href="/"><img src="/static/logo-white.png" height="40" width="73"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     <ul class="navbar-nav me-auto">
+      
+      <li class="nav-item"><a class="nav-link " href="/zidin/">查字典</a></li>
+       <li class="nav-item"><a class="nav-link " href="/resources/">資源</a></li>
+      
+       <li class="nav-item"><a class="nav-link " href="/faiman/">粵文庫</a></li>
+      
+      <li class="nav-item"><a class="nav-link active" href="/faiman/analysis/">細數據</a></li>
+      
+      <li class="nav-item"><a class="nav-link " href="/base/about/">關於我哋</a></li>
+     </ul>
+     
+     <form action="/zidin/wan/" method="GET" class="d-flex wide-only">
+      <input id="nav-search-input" class="form-control" type="search" style="width: 130px; max-width: 130px" placeholder="漢字 / 粵拼" aria-label="Search" name="q">
+      <button class="btn btn-outline-success" style="margin-right: 3em; margin-left: 3px;" type="submit">查</button>
+     </form>
+     
+     
+     <div class="d-flex page-login" style="padding: 4px 0px 4px 4px">
+      
+      <a class="btn-sm btn-primary" rel="nofollow" href="/accounts/login/?next=/faiman/analysis/wordslist/">登入</a>
+      
+     </div>
+     
+    </div>
+   </div>
+  </nav>
+
+  <div class="page-content container-lg">
+   
+   
+
+<style>
+/* https://stackoverflow.com/questions/248011/how-do-i-wrap-text-in-a-pre-tag */
+pre.dowrap {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+span.percentage {
+    color: #BBB;
+}
+</style>
+<script deferred="deferred" type="text/javascript" src="/static/Chart.min.js"></script>
+<script deferred="deferred" type="text/javascript">
+
+var FULL_WIDTH_WHITESPACE = JSON.parse('"\\u3000"');  // changjie ZXAA
+
+// XXX: Due to wonderful implementation of UTF-16 in many languages including
+// Javascript, the string length returns the amount of wchar storage used for
+// the string instead of the actual number of unicode characters. So,
+// characters on supplementary planes are read as 2+ characters instead.
+//
+// We defiantly ignore this behavior knowing that it may cause some confusion
+// in the UI
+function pad(w) {
+    while (w.length < 6) {
+        w = w + FULL_WIDTH_WHITESPACE;
+    }
+    return w;
+}
+
+var start_loading = function() {
+  var dataUrl = "/faiman/analysis/1337.json".replace("1337", 'wordslist');
+  console.log("Fetching from", dataUrl);
+  $.ajax({ url: dataUrl }).done(function(jsonData) {
+    var data = jsonData;
+    var keys = [];
+    for (var k in data) {
+      // console.log(k);
+      if (data[k] !== null) {
+        keys.push(k);
+      }
+    }
+
+    cmp = function(a, b) {
+      p = data[a];
+      q = data[b];
+      if (q instanceof Array) {
+        return q.length - p.length;
+      }
+      if ((typeof q) == "string") {
+        if (p == q) {
+          return 0;
+        } else {
+          return p > q ? -1 : 1;
+        }
+      }
+      /*
+      if (q instanceof Object) {
+        return 0;
+        // give up
+      }
+      */
+      // Probably number or sth
+      return q - p; // descending
+    };
+
+    var niceData = function(x) {
+        var d = data[keys[x]];
+        if ((typeof d) == "number") {
+            return d;
+        }
+        if ((typeof d) == "string") {
+            return d;
+        }
+        return JSON.stringify(d);
+    };
+
+    var summableData = function(x) {
+        var d = data[keys[x]];
+        if ((typeof d) == "number") {
+            return d;
+        }
+        return 0;
+    };
+
+    keys.sort(cmp);
+
+    var e = $("#console");
+    e.empty();
+    var gau1sum = 0;
+    for (var i = 0; i < keys.length; i++) {
+     // XXX: the percentage is incorrect if the value are the same for a range of inputs.
+      e.append("<DIV>" + pad(keys[i]) + ": " + niceData(i) + " &nbsp; &nbsp; <span class='percentage'>(" + parseInt(10000-i*10000.0/keys.length) / 100 + "%)</span></DIV>");
+      gau1sum += summableData(i);
+    }
+
+    e.append("<DIV>[總值: " + gau1sum + "]</DIV>");
+    e.append("<DIV>[項目數量: " + keys.length + "]</DIV>");
+   });
+}
+</script>
+<h2>粵典詞表 words.hk word list</h2>
+<div>
+<div>簡介:</div>
+<div><pre class="dowrap old-pre">Contains the wordlist and pronunciations of all entries recorded in the dictionary. Result will be a dictionary (pun not intended) of written characters as keys, and their respective list of possible pronunciations values. Words that contain variants (異體字) will have a &quot;*&quot;
+
+粵典所收錄嘅詞表同佢哋嘅拼音。異體字會打粒「*」
+
+Data License: public domain. Credits to words.hk appreciated.
+授權：公有領域。</pre></div>
+
+</div>
+<div style="font-size:20px; margin-top: 0.5em; margin-bottom: 0.5em">
+ <div>原始數據 <a href='/faiman/analysis/wordslist.json'>JSON 格式</a> | <a href='/faiman/analysis/wordslist.csv'>CSV 格式</a> -- <i>最後更新：2026年10月8日14:24:41</i></div>
+ 
+ 
+</div>
+<div style="font-size:12px" id="console"><a href="" onclick="$('#console').html('LOADING... PLEASE WAIT.'); window.setTimeout(start_loading, 10); return false;"><b>SHOW DATA IN BROWSER</a></b></div>
+
+
+  </div><!-- /.container -->
+
+  <div class="page-footer">
+   歡迎向我哋反映意見。 電郵：<span class="emaillinkplaceholder">關於粵典 </span> | <a href="/base/privacy/">私隱政策聲明</a>
+  </div>
+
+  
+   
+<script deferred="deferred" type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52921015-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- DIU LA SING GA 4 -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K4ZFC9RS0E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-K4ZFC9RS0E');
+</script>
+   
+   
+  
+ </body>
+</html>

@@ -1,0 +1,101 @@
+{
+  "recorded_at_utc": "2026-10-22T19:53:19.652835+00:00",
+  "status": "passed",
+  "candidate_only": true,
+  "inputs_sha256": {
+    ".local\\cccedict-canonical-integration\\builds\\selected\\lexicon.sqlite3": "4374c53b1ffa2f2c90614ffae6e2b6fe2fda0ce6d25bbd7eb657424206d75b03",
+    "data\\supplements\\cccedict-headwords.sources.lock.json": "213582ec577b12878167c8f6632be4df30ee0109b0b91d423c027916d95d8fab",
+    "tools\\audit_dictionary.py": "3761f1f70b05e7885c2d27a705c6e6befb88d32be273c2885dd9043c62b9e209",
+    "tools\\audit_cccedict_headwords.py": "fb76d93ca2b5370f129267daf9a9d1ec0cc8a27b7dd5818781f61319532dc014",
+    ".local\\audit-canonical-headwords.py": "0bed5ddf8790b5f102a1e2e001d1369a69309b7186e0d88fa295aa029427b942"
+  },
+  "inputs_unchanged": true,
+  "source_lock_audit": {
+    "path": "D:\\IME_Project\\data\\supplements\\cccedict-headwords.sources.lock.json",
+    "sha256": "213582ec577b12878167c8f6632be4df30ee0109b0b91d423c027916d95d8fab",
+    "repository": "https://www.mdbg.net/chinese/export/cedict/cedict_1_0_ts_utf-8_mdbg.txt.gz",
+    "commit": null,
+    "snapshot_id": "2026-10-21-f6b2248b589a",
+    "license": "CC-BY-SA-4.0",
+    "retrieved_at": "2026-10-22T19:00:30.951110+00:00",
+    "scope": null,
+    "license_declaration": "Creative Commons Attribution-ShareAlike 4.0 International License",
+    "attribution": "CC-CEDICT contributors, published by MDBG; original CEDICT copyright 1997,1998 Paul Andrew Denisowski.",
+    "excluded": [],
+    "source_directory": "D:\\IME_Project\\data\\vendor\\cc-cedict\\2026-10-21-f6b2248b589a",
+    "files": [
+      {
+        "name": "download-page.html",
+        "safe_unique_path": true,
+        "exists": true,
+        "sha256": "077a06f01c99e24769125748e167b6c4c5370cad83ddafe9032a1789f35da768",
+        "size_bytes": 15623,
+        "matches_lock": true,
+        "pinned_url": "https://www.mdbg.net/chinese/dictionary?lang=en&page=cc-cedict"
+      },
+      {
+        "name": "cedict_1_0_ts_utf-8_mdbg.txt.gz",
+        "safe_unique_path": true,
+        "exists": true,
+        "sha256": "f50281886b7cedc9be90aa923886710711c2a67853e350b848733f8a2f75db47",
+        "size_bytes": 3981425,
+        "matches_lock": true,
+        "pinned_url": "https://www.mdbg.net/chinese/export/cedict/cedict_1_0_ts_utf-8_mdbg.txt.gz"
+      },
+      {
+        "name": "cedict_ts.u8",
+        "safe_unique_path": true,
+        "exists": true,
+        "sha256": "f6b2248b589a7f231952bbcb86db5206c089c69c9de06ded0f2a5569e962ec64",
+        "size_bytes": 9866261,
+        "matches_lock": true,
+        "pinned_url": "https://www.mdbg.net/chinese/export/cedict/cedict_1_0_ts_utf-8_mdbg.txt.gz"
+      },
+      {
+        "name": "LICENSE-CC-BY-SA-4.0.txt",
+        "safe_unique_path": true,
+        "exists": true,
+        "sha256": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5",
+        "size_bytes": 20138,
+        "matches_lock": true,
+        "pinned_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en"
+      },
+      {
+        "name": "ATTRIBUTION.md",
+        "safe_unique_path": true,
+        "exists": true,
+        "sha256": "5a8cb35d88504a0af8cc9d6b52cb7d691be5ffae5752973dff1eaea4241285e4",
+        "size_bytes": 1287,
+        "matches_lock": true,
+        "pinned_url": "https://www.mdbg.net/chinese/dictionary?lang=en&page=cc-cedict"
+      }
+    ],
+    "pin_type": "retrieved_content_hash_snapshot",
+    "license_evidence_retained": true,
+    "website_license_declaration_matches": true,
+    "unicode_release_evidence": null,
+    "principal_license_declaration_matches": null,
+    "cccanto_archive_and_declaration_verified": null,
+    "wordnet_snapshot_verified": null,
+    "cccedict_headwords_snapshot_verified": true,
+    "expected_source_id_matches": true,
+    "verified": true
+  },
+  "source_audit": {
+    "mechanical_complete": true,
+    "counts": {
+      "input_rows": 125295,
+      "form_candidates": 250590,
+      "source_files_audited": 1,
+      "encoding_texts_recomputed": 21142,
+      "generated_pairs": 36884,
+      "generated_rows_credited": 36884,
+      "source_occurrences_verified": 250590
+    },
+    "errors": [],
+    "notice": "Independent raw headword and occurrence audit, rerunning the frozen production encoder to check correspondence. Only generated-source IDs are credited after every check passes. Not independent pronunciation, held-out quality or vocabulary-completeness approval."
+  },
+  "only_valid_new_generated_ids_credited": true,
+  "credited_generated_ids": 36884,
+  "scope": "Canonical opt-in build source correspondence; no default or installed files written. No pronunciation or all-Chinese approval."
+}

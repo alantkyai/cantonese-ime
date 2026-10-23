@@ -1,0 +1,321 @@
+{
+  "audit_tool_sha256": "fa92d9117b90ffce2f42b7e27c2c2019c88eed1262a5918e4bf5f6401d01c1ec",
+  "baseline_database": {
+    "pairs": 607026,
+    "path": "D:\\IME_Project\\data\\generated\\lexicon.sqlite3",
+    "sha256": "4353328cb17f8c8f8cc5d78730e34c3aa26c6c8ea7d1a4f4a8f91fee5d900a6e",
+    "texts": 495321
+  },
+  "combined": {
+    "new_pairs": 129609,
+    "new_texts": 125924,
+    "overlap_pairs": 83712,
+    "pairs": 213321,
+    "quarantine_records": 891
+  },
+  "kind": "source-derived lexical admission and overlap audit; no linguistic approval",
+  "license": "CC-BY-SA-3.0 originals; CC-BY-SA-4.0 combined transformed adaptation",
+  "limits": [
+    "No claim of all Chinese vocabulary",
+    "Source-derived coverage is not independent held-out accuracy",
+    "Unknown bases and codepoint/syllable alignment exceptions require human review; no inferred repairs",
+    "Mandarin fields and definitions do not supply lookup readings"
+  ],
+  "linguistic_approval": false,
+  "parser_sha256": "f28a9af8e121b2ca7324cc5ec5605ff0839d393180a4af80ec815accf63bd2e1",
+  "schema_version": 1,
+  "source_lock_sha256": "f9c7354de4262262cab99c99d63d67e807f7eedb16f12d94d554d2c4b31b5de6",
+  "sources": {
+    "cccanto-webdist.txt": {
+      "distinct_pairs": 50274,
+      "new_pairs": 22626,
+      "new_texts": 20157,
+      "overlap_pairs": 27648,
+      "sha256": "95392fbfe3c1690dc5b1460ad29ee451d17cad75935c00d5af2d18913f9bd940",
+      "simplified_field_new_pairs": 17990,
+      "stats": {
+        "accepted_entries": 50274,
+        "accepted_rows": 33973,
+        "duplicate_entries": 1626,
+        "form_candidates": 52110,
+        "input_rows": 34335,
+        "normalized_reading_rows": 3,
+        "quarantined_forms": 210,
+        "quarantined_rows": 362,
+        "rejected_codepoint_syllable_alignment": 210,
+        "rejected_malformed_record": 1,
+        "rejected_noncanonical_jyutping": 211,
+        "rejected_unattested_syllables": 15,
+        "review_records": 437
+      },
+      "traditional_field_new_pairs": 7745,
+      "traditional_new_pair_examples": [
+        [
+          "⺕",
+          "gai3"
+        ],
+        [
+          "㓟",
+          "ngo4"
+        ],
+        [
+          "㓟",
+          "pei1"
+        ],
+        [
+          "㓤",
+          "hot3"
+        ],
+        [
+          "㓤",
+          "kit6"
+        ],
+        [
+          "㕵",
+          "wou1"
+        ],
+        [
+          "㧬",
+          "gung1"
+        ],
+        [
+          "㨃",
+          "cang4"
+        ],
+        [
+          "㨢",
+          "lang3"
+        ],
+        [
+          "㨴",
+          "gin3"
+        ],
+        [
+          "㨴",
+          "hin1"
+        ],
+        [
+          "㨴",
+          "zin5"
+        ],
+        [
+          "㩒",
+          "kaam4"
+        ],
+        [
+          "㩧",
+          "bok6"
+        ],
+        [
+          "㷫",
+          "kaai2"
+        ],
+        [
+          "䟴",
+          "zaan1"
+        ],
+        [
+          "䟴",
+          "zaan3"
+        ],
+        [
+          "䠋",
+          "bei2"
+        ],
+        [
+          "両",
+          "loeng5"
+        ],
+        [
+          "丨",
+          "jat1"
+        ],
+        [
+          "丨",
+          "kwan2"
+        ],
+        [
+          "仡",
+          "gaak3"
+        ],
+        [
+          "以",
+          "jyu5"
+        ],
+        [
+          "佗",
+          "taa4"
+        ],
+        [
+          "佯",
+          "jeoi4"
+        ],
+        [
+          "俄",
+          "ngo5"
+        ],
+        [
+          "倀",
+          "zaang1"
+        ],
+        [
+          "偃",
+          "jim3"
+        ],
+        [
+          "儈",
+          "kiu3"
+        ],
+        [
+          "儗",
+          "hoi3"
+        ]
+      ]
+    },
+    "cccedict-canto-readings-150923.txt": {
+      "distinct_pairs": 171145,
+      "new_pairs": 108376,
+      "new_texts": 107149,
+      "overlap_pairs": 62769,
+      "sha256": "93ecbd7b7d58741bb8205107c736632438bf42dc07042b4090a66ce765432b0b",
+      "simplified_field_new_pairs": 79555,
+      "stats": {
+        "accepted_entries": 171145,
+        "accepted_rows": 105412,
+        "duplicate_entries": 2425,
+        "form_candidates": 173581,
+        "input_rows": 105862,
+        "normalized_reading_rows": 34,
+        "quarantined_forms": 11,
+        "quarantined_rows": 450,
+        "rejected_codepoint_syllable_alignment": 11,
+        "rejected_noncanonical_jyutping": 443,
+        "review_records": 454
+      },
+      "traditional_field_new_pairs": 43072,
+      "traditional_new_pair_examples": [
+        [
+          "咪",
+          "miu1"
+        ],
+        [
+          "燜",
+          "mun1"
+        ],
+        [
+          "膀",
+          "bong4"
+        ],
+        [
+          "㐖毒",
+          "kit3 duk6"
+        ],
+        [
+          "㚻姦",
+          "gei1 gaan1"
+        ],
+        [
+          "一下",
+          "jat1 haa6"
+        ],
+        [
+          "一並",
+          "jat1 bing6"
+        ],
+        [
+          "一價",
+          "jat1 gaa3"
+        ],
+        [
+          "一元",
+          "jat1 jyun4"
+        ],
+        [
+          "一准",
+          "jat1 zeon2"
+        ],
+        [
+          "一匙",
+          "jat1 ci4"
+        ],
+        [
+          "一品",
+          "jat1 ban2"
+        ],
+        [
+          "一壁",
+          "jat1 bik1"
+        ],
+        [
+          "一審",
+          "jat1 sam2"
+        ],
+        [
+          "一徑",
+          "jat1 ging3"
+        ],
+        [
+          "一意",
+          "jat1 ji3"
+        ],
+        [
+          "一斑",
+          "jat1 baan1"
+        ],
+        [
+          "一晃",
+          "jat1 fong2"
+        ],
+        [
+          "一更",
+          "jat1 gaang1"
+        ],
+        [
+          "一氣",
+          "jat1 hei3"
+        ],
+        [
+          "一準",
+          "jat1 zeon2"
+        ],
+        [
+          "一甲",
+          "jat1 gaap3"
+        ],
+        [
+          "一睹",
+          "jat1 dou2"
+        ],
+        [
+          "一瞥",
+          "jat1 pit3"
+        ],
+        [
+          "一瞬",
+          "jat1 seon3"
+        ],
+        [
+          "一秘",
+          "jat1 bei3"
+        ],
+        [
+          "一空",
+          "jat1 hung1"
+        ],
+        [
+          "一等",
+          "jat1 dang2"
+        ],
+        [
+          "一統",
+          "jat1 tung2"
+        ],
+        [
+          "一維",
+          "jat1 wai4"
+        ]
+      ]
+    }
+  },
+  "unknown_frequency_weight": 0
+}

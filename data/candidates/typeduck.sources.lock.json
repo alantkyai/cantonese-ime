@@ -1,0 +1,74 @@
+{
+  "format_version": 1,
+  "candidate_status": "isolated audit only; not approved or included in the live build",
+  "repository": "https://github.com/TypeDuck-HK/schema",
+  "commit": "7f9d90d4185eca293576de5b5dddaaf1d265f3c9",
+  "commit_date": "2026-09-04T07:18:54Z",
+  "retrieved_date": "2026-10-22",
+  "retrieval_timezone": "Asia/Hong_Kong",
+  "local_directory": "data/vendor/candidates/typeduck-schema/7f9d90d4185eca293576de5b5dddaaf1d265f3c9",
+  "attribution": "TypeDuck-HK and TypeDuck contributors; source maintainer's principal schema/dictionary license declaration retained in README.md.",
+  "license": "CC-BY-4.0 as declared for non-reverse-lookup principal data by the pinned repository README",
+  "license_file": "LICENSE",
+  "declaration_file": "README.md",
+  "license_scope_url": "https://github.com/TypeDuck-HK/schema/blob/7f9d90d4185eca293576de5b5dddaaf1d265f3c9/README.md#license--授權",
+  "source_lineage_status": "The current README expressly declares principal data CC BY 4.0. Per-row/category origin and the principal table generation recipe were not found. Initial 2023 source had an explicitly ODbL maps table, removed before the replacement monolith was added; current monolith inheritance of those rows is not established. Explicit table rows are not independent proof of human authorship.",
+  "historical_provenance_evidence": [
+    {
+      "commit": "5050489faa3f059eb39f9eaa56f214a9440494bd",
+      "date": "2023-02-06T16:37:09Z",
+      "finding": "First commit added a separate maps table with explicit OpenStreetMap/ODbL header; the old main dictionary imported that table.",
+      "url": "https://github.com/TypeDuck-HK/schema/blob/5050489faa3f059eb39f9eaa56f214a9440494bd/jyut6ping3.maps.dict.yaml"
+    },
+    {
+      "commit": "f5c375fca1dc272b8c76fda59521b2c65d59d291",
+      "date": "2023-06-09T16:57:10Z",
+      "finding": "Original commit removed the old main import dictionary, maps, phrase and words tables.",
+      "url": "https://github.com/TypeDuck-HK/schema/commit/f5c375fca1dc272b8c76fda59521b2c65d59d291"
+    },
+    {
+      "commit": "2b4030c11cda311b9c664b4626f32407b5e22f11",
+      "date": "2023-06-09T16:58:38Z",
+      "finding": "Cantoboard Schema commit added replacement monolithic principal and scolar tables, without a row-origin manifest or generation source in the inspected tree.",
+      "url": "https://github.com/TypeDuck-HK/schema/commit/2b4030c11cda311b9c664b4626f32407b5e22f11"
+    },
+    {
+      "commit": "c9a464a6c7155e72bfc5fdc7a471d35d94e4e166",
+      "date": "2023-11-16T01:45:28Z",
+      "finding": "Commit message refers to the latest generation script, but this commit changed only the two dictionaries; the inspected recursive tree contains no such script.",
+      "url": "https://github.com/TypeDuck-HK/schema/commit/c9a464a6c7155e72bfc5fdc7a471d35d94e4e166"
+    }
+  ],
+  "changes": "Downloaded files unmodified. Candidate audit normalizes reading whitespace/case in memory only, compares exact pairs, and excludes two tilde-marked emoji reading rows without stripping their markers.",
+  "excluded_from_download_and_live_import": [
+    "jyut6ping3_scolar.dict.yaml rich translation/annotation table",
+    "essay.txt candidate frequencies",
+    "reverse lookup dictionaries and schemas",
+    "OpenCC binary tables",
+    "all native runtimes, frontends, installers and compiled artifacts"
+  ],
+  "live_build_imported": false,
+  "files": [
+    {
+      "name": "jyut6ping3.dict.yaml",
+      "size_bytes": 4479053,
+      "sha256": "e54eab6a3ef4328e0803e65fe4320f088329d1f0496cf7b1576dc1d0d2e28a6b",
+      "git_blob_sha1": "8bf31200c15992a2e2904c194dc2f5671393628f",
+      "url": "https://raw.githubusercontent.com/TypeDuck-HK/schema/7f9d90d4185eca293576de5b5dddaaf1d265f3c9/jyut6ping3.dict.yaml"
+    },
+    {
+      "name": "README.md",
+      "size_bytes": 3896,
+      "sha256": "6776d56c458a585df64b8175534a6a15b9ae244fe41f97f8e22e626d996f9495",
+      "git_blob_sha1": "55da06d5d093f60267c87396d6e8e2bb96bce04c",
+      "url": "https://raw.githubusercontent.com/TypeDuck-HK/schema/7f9d90d4185eca293576de5b5dddaaf1d265f3c9/README.md"
+    },
+    {
+      "name": "LICENSE",
+      "size_bytes": 18657,
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+      "git_blob_sha1": "da6ab6cc8f333d7e89a99812866df8f24374d47c",
+      "url": "https://raw.githubusercontent.com/TypeDuck-HK/schema/7f9d90d4185eca293576de5b5dddaaf1d265f3c9/LICENSE"
+    }
+  ]
+}

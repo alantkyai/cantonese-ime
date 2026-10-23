@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "source_id": "cccedict:headwords",
+  "source_name": "CC-CEDICT Han headword candidate",
+  "data_url": "https://www.mdbg.net/chinese/export/cedict/cedict_1_0_ts_utf-8_mdbg.txt.gz",
+  "source_page": "https://www.mdbg.net/chinese/dictionary?lang=en&page=cc-cedict",
+  "snapshot_id": "2026-10-21-f6b2248b589a",
+  "snapshot_retrieved_at": "2026-10-22T19:00:30.951110+00:00",
+  "source_release_header": {
+    "date": "2026-10-21T05:46:59Z",
+    "entries": 125295,
+    "format": "ts",
+    "version": "1",
+    "charset": "UTF-8"
+  },
+  "local_directory": "data/vendor/cc-cedict/2026-10-21-f6b2248b589a",
+  "license": "CC-BY-SA-4.0",
+  "license_declaration": "Creative Commons Attribution-ShareAlike 4.0 International License",
+  "attribution": "CC-CEDICT contributors, published by MDBG; original CEDICT copyright 1997,1998 Paul Andrew Denisowski.",
+  "selection_status": "Candidate source preparation only; not selected for default import, staged package or independent pronunciation approval.",
+  "reading_policy": "Text headwords only; no Mandarin reading or definition becomes Cantonese lookup data. Generated candidates, if built, must retain complete source/encoding ledgers and unknown-frequency zero, without replacing earlier rows or supplying new encoder inputs.",
+  "files": [
+    {
+      "name": "download-page.html",
+      "sha256": "077a06f01c99e24769125748e167b6c4c5370cad83ddafe9032a1789f35da768",
+      "size_bytes": 15623,
+      "url": "https://www.mdbg.net/chinese/dictionary?lang=en&page=cc-cedict",
+      "transformation": "unmodified download"
+    },
+    {
+      "name": "cedict_1_0_ts_utf-8_mdbg.txt.gz",
+      "sha256": "f50281886b7cedc9be90aa923886710711c2a67853e350b848733f8a2f75db47",
+      "size_bytes": 3981425,
+      "url": "https://www.mdbg.net/chinese/export/cedict/cedict_1_0_ts_utf-8_mdbg.txt.gz",
+      "transformation": "unmodified download"
+    },
+    {
+      "name": "cedict_ts.u8",
+      "sha256": "f6b2248b589a7f231952bbcb86db5206c089c69c9de06ded0f2a5569e962ec64",
+      "size_bytes": 9866261,
+      "url": "https://www.mdbg.net/chinese/export/cedict/cedict_1_0_ts_utf-8_mdbg.txt.gz",
+      "transformation": "gzip decompression only"
+    },
+    {
+      "name": "LICENSE-CC-BY-SA-4.0.txt",
+      "sha256": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5",
+      "size_bytes": 20138,
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+      "provenance": "Unmodified full terms retained by the existing project; same CC BY-SA 4.0 terms named by this source header."
+    },
+    {
+      "name": "ATTRIBUTION.md",
+      "sha256": "5a8cb35d88504a0af8cc9d6b52cb7d691be5ffae5752973dff1eaea4241285e4",
+      "size_bytes": 1287,
+      "url": "https://www.mdbg.net/chinese/dictionary?lang=en&page=cc-cedict",
+      "transformation": "Project-authored attribution and transformation notice; original source unchanged"
+    }
+  ]
+}

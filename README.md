@@ -1,0 +1,214 @@
+# Cantonese IME
+
+An offline Cantonese input method for native Windows x64 applications. Type
+plain Yale-style or Jyutping letters, select compact numbered word choices,
+and build personal word and phrase preferences through normal typing.
+
+The native **macOS port** uses InputMethodKit with the same offline engine,
+dictionary and learning. Its source kit and Mac app/PKG build instructions are
+in [macos/README.md](macos/README.md). It targets Apple silicon and Intel on
+macOS 13 or later. Native Mac compilation, installation and typing validation
+remain pending; see [Mac validation](docs/MACOS_VALIDATION.md).
+The Mac sources and installer builder are included in this repository. The first
+published binary release is for Windows x64.
+
+## Install
+
+Use [the Windows x64 installer](https://github.com/hadesng173/cantonese-ime/releases/download/v1.0.5/CantoneseIME-1.0.5-windows-x64-setup.exe)
+and [its SHA-256 checksums](https://github.com/hadesng173/cantonese-ime/releases/download/v1.0.5/SHA256SUMS.txt)
+from [release 1.0.5](https://github.com/hadesng173/cantonese-ime/releases/tag/v1.0.5).
+Run Setup normally and approve Windows' administrator prompt. The installer
+includes its own private Python runtime; no system Python, developer tools,
+or Internet connection is required on the target computer.
+
+After installation, press **Win+Space** and choose **Cantonese IME** under
+**Chinese (Traditional, Hong Kong SAR)**. The English US keyboard remains
+available separately; **ENG** identifies that English source. For example,
+type `fogeui` for 火炬 or `neihou` for 你好. Press Space to commit the highlighted
+choice, or 1–9 to choose its numbered candidate. Escape cancels; Enter commits
+the typed Latin letters. Ctrl+Space or the native **粵 / 英** button changes modes.
+Windows hosts that expose the TSF system tray/language bar can show the new
+branding and mode icons. Reopen applications after an upgrade so they load
+the new DLL. Chrome may keep background processes alive after its windows close;
+save unfinished forms and enter `chrome://restart` to restart it fully.
+
+The installer offers startup at sign-in. Start menu shortcuts enable or stop
+the engine. Windows Settings > Apps provides the standard uninstall entry.
+Upgrades and uninstall preserve personal learning at
+`%LOCALAPPDATA%\CantoneseIME\learning.json`.
+
+The package is unsigned. Windows may display an unknown-publisher or SmartScreen
+warning. Support is scoped to native 64-bit desktop applications on Windows x64;
+32-bit applications, ARM64 and secure/password fields are outside this release.
+Validation and remaining platform checks are recorded in
+[the public release summary](docs/GITHUB_RELEASE_1.0.5.md),
+[the technical release notes](docs/RELEASE_NOTES_1.0.5.md) and
+[release checklist](docs/RELEASE_CHECKLIST.md).
+
+## Build the installer
+
+Use Python 3.11 or later and Windows x64. Build the dictionary from the retained
+source snapshots, then build the native DLL/helper with the pinned project
+toolchain before packaging:
+
+```powershell
+python tools/build_dictionary.py
+python tools/build_release.py --fetch-tools
+```
+
+The build pins official application-local Python and Inno Setup downloads and
+stages the release under `dist/CantoneseIME-1.0.5-x64`. It verifies source,
+dictionary, runtime and attribution files before compiling the single setup
+executable. Running the builder does not install the resulting IME.
+The native sources, toolchain lock and build scripts are in [native/](native/tsf/README.md)
+and [native/registration/](native/registration/README.md). The packager requires
+fresh native build and guard evidence; a source checkout does not include the
+maintainer's local build cache or machine-specific validation logs.
+
+Dictionary data retains its original component licenses and attribution;
+the combined adaptation is distributed under CC BY-SA 4.0. See
+[data licensing](data/DATA_LICENSE.md),
+[third-party notices](data/THIRD_PARTY_NOTICES.md) and
+[release notices](installer/RELEASE_NOTICES.txt). The independent application
+code is separate from these data licenses and currently has no general
+redistribution license declaration. See the [release notices](installer/RELEASE_NOTICES.txt).
+
+## Dictionary and development evidence
+
+The included catalog contains **776,335 text/pronunciation pairs across 644,427
+texts**. It includes authored readings and explicitly identified mechanically
+encoded headwords. Pronunciation and ranking refinement remain ongoing work.
+
+The previous v3 runtime completed an exhaustive finite-catalog retrieval check
+over 503,708 compact Yale input groups. Its
+[frozen catalog proof](docs/final-yale-catalog-coverage.json) and
+locally retained installed validation remain historical evidence for those exact
+bytes. Machine-specific installation logs are excluded from this public
+repository. The release has its own
+native, learning and installer checks; earlier evidence is not a substitute
+for checking the new mode indicator or a new Windows version.
+
+## Run the engine
+
+From `D:\IME_Project`:
+
+```powershell
+python tools/build_dictionary.py
+python -m cantonese_ime lookup neihou
+python -m cantonese_ime lookup bohim --mode forgiving
+python -m cantonese_ime lookup "nei5'hou2" --mode jyutping --json
+python -m cantonese_ime lookup lei4 --mode jyutping --offset 108 --limit 9 --json
+```
+
+The dictionary build uses the pinned source files already in this project. It
+requires no network access, package installation, compiler, or administrator access.
+The generated database is already present on this machine; rebuild it when needed.
+
+Examples observed with the bundled data:
+
+| Input | Mode | Candidate |
+| --- | --- | --- |
+| `neihou` | Jyutping | 你好, first |
+| `bouhim` | Jyutping | 保險, first |
+| `bohim` | Forgiving | 保險, first |
+| `lay` | Forgiving | 你, first |
+| `failok` | Forgiving | 快樂, first |
+| `ngosheungsikchasiubao` | Forgiving | 我想食叉燒包, second |
+
+## Replay typing and selection
+
+```powershell
+python -m cantonese_ime type bohim --keys Space --trace
+python -m cantonese_ime type neihou --keys Down Space --json
+python -m cantonese_ime type Hello --keys Enter
+```
+
+`type` feeds individual characters into the composition state machine. Space
+commits the highlighted candidate; 1–9 select a visible slot; Up/Down and
+PageUp/PageDown navigate; Enter commits the original Latin text; Escape cancels.
+Apostrophes mark syllable boundaries. Numeric tones are accepted by `lookup`;
+the typing session reserves digits for candidate selection. Pages are fetched
+as you navigate; stored homophones remain selectable beyond the first 90 results.
+Broad prefix completions have a separate bound and may require more typing.
+
+The installed native IME learns committed selections and phrases for the full entered spelling locally
+in `%LOCALAPPDATA%\CantoneseIME\learning.json`; the update preserved existing
+personal data. CLI selection memory remains opt-in with an explicit path:
+
+```powershell
+python -m cantonese_ime type bohim --keys Space --learning .local/learning.json
+python -m cantonese_ime lookup bohim --learning .local/learning.json
+```
+
+## Dictionary and verification
+
+The development SQLite lexicon contains **776,335 text/pronunciation pairs**
+across **644,427 distinct texts** and 878 observed
+syllable bases. It combines pinned Rime Cantonese, LSHK, words.hk, TypeDuck,
+Unihan, CC-Canto, Cantonese Wordnet, CC-CEDICT written headwords and Yue Wiktionary
+data: 327,259 source-explicit pairs and 449,076 mechanically generated
+phrase readings. Unihan's provisional readings support direct character lookup;
+they do not generate whole-word readings. CC-Canto adds explicit traditional and
+simplified headwords. Wordnet adds only explicit own-entry readings after phrase
+generation, preserving earlier IDs, readings and weights. CC-CEDICT contributes
+36,884 generated pairs for 21,038 new texts; its Mandarin readings are excluded.
+Yue Wiktionary adds 323 explicit pairs and 166 texts after overlap removal.
+The combined development data uses
+[CC BY-SA 4.0](data/DATA_LICENSE.md), with original component notices retained.
+Every one of the 330,701 text-only source phrases has an encoding record;
+80 reach the bounded encoder's path limit and stay quarantined. Generated
+pronunciations and polyphonic alternatives still need linguistic review. See the
+[dictionary documentation](data/README.md) and [license notices](data/THIRD_PARTY_NOTICES.md).
+
+```powershell
+python -m unittest discover -s tests -v
+python -m cantonese_ime evaluate --repeat 3 --output docs/engine-evaluation.json
+python tools/build_mappings.py
+python tools/audit_dictionary.py --evaluation docs/engine-evaluation.json --output data/generated/dictionary-audit.json
+```
+
+The 40 development seed cases find their target in the first nine candidates;
+34 targets rank first with the v3 dictionary. These examples guide development and are not
+a held-out accuracy benchmark. The [saved evaluation](docs/final-yale-engine-evaluation.json)
+records actual ranks and timings.
+
+Synthetic checks exercise every exported spelling relation and collision.
+A stored-prefix search fix also makes
+all 222 long target texts reachable from each tested shorter prefix form in that
+historical check. The current input limit is 256 characters; suffix-reading
+ambiguity and bounded composition remain.
+
+An earlier [HKCanCor external baseline](docs/HKCANCOR_EVALUATION.md) tests 500
+fixed corpus-derived cases. Fully toned top-9 coverage is 232/250 word types and
+160/250 conversational spans; tone-free spans reach 111/250. This exposes a
+composition/ranking gap. Upstream source overlap is unresolved, so these are
+external annotation results rather than clean held-out or natural typing scores.
+Human pronunciation, spelling-profile and typing review are still required.
+
+The newer [composition search](docs/COMPOSITION_SEARCH_UPDATE.md) fixes duplicate
+paths hiding distinct suggestions. On a replay of those same cases, top-90
+text hits rise from 778 to 810 out of 1,000 requests, while top-9 hits fall from
+722 to 720. Some completions move to later pages. These are development
+comparisons with all gains and losses retained; ranking still needs work.
+
+## Implementation
+
+- [Engine design and current limits](docs/ENGINE.md)
+- [Dictionary readiness and acceptance requirements](docs/DICTIONARY_READINESS.md)
+- [Source and license audit](docs/dictionary-source-audit.md)
+- [Spelling map policy and provenance](data/mappings/README.md)
+- [Current pronunciation and spelling review pack](data/review-v2/README.md)
+- [Contextual evidence for seven apparent reading gaps](docs/PRONUNCIATION_GAP_REVIEW.md)
+- [Independent typing-corpus collection template](eval/HELDOUT_COLLECTION.md)
+- [External corpus source and evaluation](docs/HKCANCOR_EVALUATION.md)
+- [Initial Windows research proposal](docs/RESEARCH_AND_PLAN.md)
+- [Validation and later Windows checks](docs/VALIDATION.md)
+
+The decoder is our Python implementation over licensed data, independent of the
+librime runtime. The native TSF frontend uses it through a local broker. Learned
+complete words and phrases also help longer composition: choosing `ng` for 唔
+can bring 唔好 into the choices for `ngho` and 唔係咁 for `nghaigam`. Choices made
+for a full input retain their own priority. This is local preference learning;
+broader contextual language modeling and pronunciation refinement remain future
+work. Historical native typing evidence is retained separately from the current
+release checks and the user's application/visual acceptance.

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Cantonese-English dictionary with over 120,000 entries, incorporating data from CC-CEDICT plus our own CC-Canto project">
+    <meta name="author" content="Pleco Software Incorporated">
+
+    <title>CC-Canto - A Cantonese dictionary for everyone</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- icon font -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="cantonese.css" rel="stylesheet">
+   
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">CC-Canto</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Search</a></li>
+            <li class="active"><a href="about.html">About</a></li>
+            <li><a href="download.html">Download</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="canto-header">
+        <h1>About CC-Canto</h1>
+      </div>
+      
+      <div class="col-xs-10 col-xs-offset-1">
+      <h3>Summary</h3>
+      <p>CC-Canto is an open-source Cantonese-to-English dictionary with about 22,000 entries, designed to be used alongside <a href="http://cc-cedict.org">CC-CEDICT</a> - we only include entries for words in CC-CEDICT when the meaning is significantly different in Cantonese. We've also added human-checked Cantonese readings to CC-CEDICT so that it can be easily searched in Cantonese. This is still very much a beta / work-in-progress, but we now feel it's a point where it's useful enough that we can release it to the public. It's distributed under the same <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0</a> license as CC-CEDICT - download data files <a href="download.html">here</a> - and uses a similar data format to CC-CEDICT's for easy interoperability.</p>
+      <p>Feedback can be submitted via the pencil icon next to every entry in search results. Missing results can be reported with the "report missing word" link at the top of the search results page. You can also send any general or specific feedback you like by email to <a href="mailto:ccyfeedback@pleco.com">ccyfeedback@pleco.com</a>.</p>
+      <h3>Purpose</h3>
+	<p>CC-Canto was created by <a href="http://www.pleco.com">Pleco Software</a> to fill a need for a Cantonese-English dictionary that's not only user-created, but also free, open-source, and usable by any app or website that wishes to use it. We needed such a dictionary for use in our own apps, filling the same role that CC-CEDICT does for Mandarin, but none existed, so we decided to make our own; we think we'll end up with a better dictionary this way than we would have if we'd kept it closed-source and proprietary.</p>
+	<h3>Development</h3>
+	<p>We hope that eventually people will be motivated to voluntarily contribute feedback / new entries / corrections / etc, but we realize that to get a new open-source project off the ground - especially something as (frankly) boring to write as a dictionary - you need a useful core product to build on; nobody wants to contribute to a dictionary with only 500 entries, but they might be motivated to contribute to something that's fleshed-out enough for them to actually use. So we got the ball rolling by hiring people to write entries for us.</p>
+	<p>The initial release of CC-Canto was developed by a team of about a dozen paid freelance editors - native Cantonese speakers - over the span of about 6 months; it represents roughly a thousand person-hours of labor in its present form. It contains about 22,000 entries, which are intended to be used alongside entries from CC-CEDICT; we don't supply our own definitions for any words that are already in CC-CEDICT unless the meaning differs significantly in Cantonese, we just add Cantonese readings. Entries for the most common words have been checked by 3 or more editors, about half of the entries have been checked by at least 2, less common words may only have been checked by one editor but development is ongoing.</p>
+	<p>The lexicon (list of words to include) was compiled by Pleco and our editors based on a combination of corpus analysis, free public Cantonese word lists, and checking-Google-to-see-how-many-results-come-up-for-a-word, and since a lot of that was done automatically by computers it's a bit rough; some of the words in this database aren't particularly Cantonese but are simply words that came up a lot and didn't happen to be in CC-CEDICT, and there are almost certainly other words that are very uncommon or the result of typos / poorly coded Pinyin IMEs / etc. No doubt we're also missing some important Cantonese words, which we hope you'll help us fill in.</p>
+	<p>So basically, it's very much a work in progress, but after 6 months we now feel it's at a point where it might perhaps be useful to some of our customers / friends / random internet strangers, so here you go.</p>
+	<h3>Issues / Further Development</h3>
+	<p>We're still paying editors to improve this for us, and don't plan to immediately stop doing that; the most important thing we need now is the sort of feedback that crowds are fantastic at providing, namely, missing words and corrections.</p>
+	<p>Since the entries were written by native Cantonese speakers, some of the English is a bit rough, and there is not yet a consistent editorial voice - this is another thing we hope the community might help us with, rewriting entries to be clearer and more consistent.</p>
+	<p>We'd also like to do a better job with usage tagging; in general most entries in CC-Canto are there because they're used in Cantonese, and entries in CC-CEDICT can be presumed to be either Mandarin + Cantonese or Mandarin-only, but we'd like to do a better job of tagging those and of weeding out the non-Cantonese-specific entries from the CC-Canto lexicon. We'd also like to identify slang versus formal usage, and to do a better job with formal versus informal tone transformations (denoted in most printed Cantonese dictionaries by separating them with a -). (we've generally opted for informal tones in this dictionary)</p>
+	<p>Finally, longer-term we'd like to expand entries to be more than just definitions; example sentences would be great but we'd also like to go into more details about the stories and the history behind some Cantonese slang terms; there are some really wonderful ones we've uncovered while developing this dictionary and we think they deserve to be shared.</p>
+	<p>If you'd like to work on this project as an editor (either as a volunteer or, if your Cantonese skills are sufficient, possibly even for pay), contact <a href="mikelove@pleco.com">mikelove@pleco.com</a>.</p>
+	<h3>Website</h3>
+	<p>The website search feature was originally an afterthought - we wanted people to be able to get a rough idea of what the dictionary was like without scrolling through a long text file - but after spending a couple of hours on it we decided we kind of liked it and put a good day or so into fleshing it out a bit further. So it's still very simple compared to our apps, but we like it enough that we'll probably keep building on it and will perhaps at some point even bring some non-Cantonese-specific content into the mix. We are planning to use this website for editing / improving the dictionary as well.</p>
+	<h3>Privacy</h3>
+	<p>This site uses no ads, no tracking, not even any website analytics scripts. We do keep a record of all searches so that we can see which words are popular and which missing words we might like to add, but the only thing we log along with those searches is the current  time - no IP address or anything else personally identifiable, we don't need to know anything about you.</p>
+	<p>We also use cookies, but solely for the purpose of saving your search settings, not for tracking - if you disable cookies, the site should still work fine but you'll be stuck with the default set of options.</p>
+	</div>
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </body>
+</html>
+

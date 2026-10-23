@@ -1,0 +1,32 @@
+{
+  "repository": "https://github.com/lshk-org/jyutping-table",
+  "commit": "dad2dd6d6f02fc51138ecc6818f7b38eba5c2ad3",
+  "local_directory": "data/vendor/lshk-jyutping-table/dad2dd6d6f02fc51138ecc6818f7b38eba5c2ad3",
+  "license": "CC-BY-4.0",
+  "attribution": [
+    "Dr Cheung Kwan Hin",
+    "Prof Lu Qin",
+    "Jyutping Workgroup, Linguistic Society of Hong Kong",
+    "Nathan Hammond"
+  ],
+  "files": [
+    {
+      "name": "list.tsv",
+      "size_bytes": 1026299,
+      "sha256": "0dbc5922fb886c0434bc58ff013f1ba9d332a721206b876e57b3314496b27b86",
+      "url": "https://raw.githubusercontent.com/lshk-org/jyutping-table/dad2dd6d6f02fc51138ecc6818f7b38eba5c2ad3/list.tsv"
+    },
+    {
+      "name": "LICENSE",
+      "size_bytes": 18658,
+      "sha256": "f5b745ef98087f531e719ee8ca6a96809444573ecc7173c6fa68eaad39b3cc3f",
+      "url": "https://raw.githubusercontent.com/lshk-org/jyutping-table/dad2dd6d6f02fc51138ecc6818f7b38eba5c2ad3/LICENSE"
+    },
+    {
+      "name": "README.md",
+      "size_bytes": 3028,
+      "sha256": "1541430cfae06169ccf39b63be237e40a33cd7c200adeb0a2bafb0d7d3e1f5d3",
+      "url": "https://raw.githubusercontent.com/lshk-org/jyutping-table/dad2dd6d6f02fc51138ecc6818f7b38eba5c2ad3/README.md"
+    }
+  ]
+}

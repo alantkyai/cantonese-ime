@@ -1,0 +1,11 @@
+# Small project-authored parser fixture; not extracted upstream text.
+---
+name: parser_fixture
+version: "1"
+sort: by_weight
+...
+# Explicit weights, percentage weights, and missing weights differ.
+你	nei5	10
+你好	nei5   hou2	2%
+妳	NEI5
+好	hou2	0

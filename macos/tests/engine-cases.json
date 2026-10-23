@@ -1,0 +1,240 @@
+[
+  {
+    "id": "torch",
+    "input": "fogeui",
+    "text": "\u706b\u70ac",
+    "mode": "forgiving",
+    "expect_present": true
+  },
+  {
+    "id": "hong_kong",
+    "input": "heunggong",
+    "text": "\u9999\u6e2f",
+    "mode": "forgiving",
+    "expect_present": true
+  },
+  {
+    "id": "set_out",
+    "input": "cheutfaat",
+    "text": "\u51fa\u767c",
+    "mode": "forgiving",
+    "expect_present": true
+  },
+  {
+    "id": "moon",
+    "input": "yut",
+    "text": "\u6708",
+    "mode": "forgiving",
+    "expect_present": true
+  },
+  {
+    "id": "strict_yale_negative",
+    "input": "geui",
+    "text": "\u70ac",
+    "mode": "jyutping",
+    "expect_present": false
+  },
+  {
+    "id": "strict_jyutping_positive",
+    "input": "geoi",
+    "text": "\u70ac",
+    "mode": "jyutping",
+    "expect_present": true
+  },
+  {
+    "id": "yale_jim",
+    "input": "jim",
+    "text": "\u5c16",
+    "mode": "forgiving",
+    "expect_present": true
+  },
+  {
+    "id": "yale_new_cantonese",
+    "input": "heuiheuiseng",
+    "text": "\u35fe\u35fe\u58f0",
+    "mode": "forgiving",
+    "expect_present": true
+  },
+  {
+    "id": "new_traditional",
+    "input": "kinheiwokgoi",
+    "text": "\u3a34\u8d77\u944a\u84cb",
+    "mode": "forgiving",
+    "expect_present": true
+  },
+  {
+    "id": "new_simplified",
+    "input": "kinheiwokgoi",
+    "text": "\u3a34\u8d77\u956c\u76d6",
+    "mode": "forgiving",
+    "expect_present": true
+  },
+  {
+    "id": "real_long_name",
+    "input": "gwongdunggaakmingliksibokmatgunyutnaamchingninjingjifanlinbaangauji",
+    "text": "\u5ee3\u6771\u9769\u547d\u6b77\u53f2\u535a\u7269\u9928\u8d8a\u5357\u9752\u5e74\u653f\u6cbb\u8a13\u7df4\u73ed\u820a\u5740",
+    "mode": "forgiving",
+    "expect_present": true
+  },
+  {
+    "id": "second_long_name",
+    "input": "jungyeungyanmanjingfujyuheunggongdakbithangjingkeuilyunlokbaangungsat",
+    "text": "\u4e2d\u592e\u4eba\u6c11\u653f\u5e9c\u99d0\u9999\u6e2f\u7279\u5225\u884c\u653f\u5340\u806f\u7d61\u8fa6\u516c\u5ba4",
+    "mode": "forgiving",
+    "expect_present": true
+  },
+  {
+    "id": "wordnet_1",
+    "input": "gamjyu",
+    "text": "\u3a52\u4f4f",
+    "mode": "forgiving",
+    "expect_present": true
+  },
+  {
+    "id": "wordnet_2",
+    "input": "yatlinyatdou",
+    "text": "\u4e00\u5e74\u4e00\u5ea6",
+    "mode": "forgiving",
+    "expect_present": true
+  },
+  {
+    "id": "wordnet_3",
+    "input": "yatpinwanlyun",
+    "text": "\u4e00\u7247\u6df7\u4e82",
+    "mode": "forgiving",
+    "expect_present": true
+  },
+  {
+    "id": "kfcd_deeu",
+    "input": "deeudai",
+    "text": "\u6389\u4f4e",
+    "mode": "forgiving",
+    "expect_present": true
+  },
+  {
+    "id": "kfcd_eeu",
+    "input": "oueeu",
+    "text": "OL",
+    "mode": "forgiving",
+    "expect_present": true
+  },
+  {
+    "id": "kfcd_meeu",
+    "input": "meeumeeumeeu",
+    "text": "\u55b5\u55b5\u55b5",
+    "mode": "forgiving",
+    "expect_present": true
+  },
+  {
+    "id": "kfcd_peeu",
+    "input": "hengpeeupeeu",
+    "text": "\u8f15\u98c4\u98c4",
+    "mode": "forgiving",
+    "expect_present": true
+  },
+  {
+    "id": "kfcd_seeu",
+    "input": "seeusi",
+    "text": "sales",
+    "mode": "forgiving",
+    "expect_present": true
+  },
+  {
+    "id": "kfcd_jeeu",
+    "input": "jeeudai",
+    "text": "\u564d\u4f4e",
+    "mode": "forgiving",
+    "expect_present": true
+  },
+  {
+    "id": "mixed_1",
+    "input": "mewmeeumew",
+    "text": "\u55b5\u55b5\u55b5",
+    "mode": "forgiving",
+    "expect_present": true
+  },
+  {
+    "id": "mixed_2",
+    "input": "meeumewmeeu",
+    "text": "\u55b5\u55b5\u55b5",
+    "mode": "forgiving",
+    "expect_present": true
+  },
+  {
+    "id": "mixed_3",
+    "input": "meeu'mew'meeu",
+    "text": "\u55b5\u55b5\u55b5",
+    "mode": "forgiving",
+    "expect_present": true
+  },
+  {
+    "id": "mixed_4",
+    "input": "mew'meeu'mew",
+    "text": "\u55b5\u55b5\u55b5",
+    "mode": "forgiving",
+    "expect_present": true
+  },
+  {
+    "id": "new_cc_1",
+    "input": "tongfong",
+    "text": "\u34e5\u623f",
+    "mode": "forgiving",
+    "expect_present": true
+  },
+  {
+    "id": "new_cc_2",
+    "input": "laanlou",
+    "text": "\u3613\u54f0",
+    "mode": "forgiving",
+    "expect_present": true
+  },
+  {
+    "id": "new_cc_3",
+    "input": "chauchau",
+    "text": "\u393d\u393d",
+    "mode": "forgiving",
+    "expect_present": true
+  },
+  {
+    "id": "new_yue_1",
+    "input": "gauap",
+    "text": "\u3797\u564f",
+    "mode": "forgiving",
+    "expect_present": true
+  },
+  {
+    "id": "new_yue_2",
+    "input": "yimjim",
+    "text": "\u393f\u61b8",
+    "mode": "forgiving",
+    "expect_present": true
+  },
+  {
+    "id": "new_yue_3",
+    "input": "yatgauwan",
+    "text": "\u4e00\u4286\u96f2",
+    "mode": "forgiving",
+    "expect_present": true
+  },
+  {
+    "id": "learned_ng",
+    "input": "ng",
+    "text": "\u5514",
+    "mode": "forgiving",
+    "expect_present": true
+  },
+  {
+    "id": "learned_ngho",
+    "input": "ngho",
+    "text": "\u5514\u597d",
+    "mode": "forgiving",
+    "expect_present": true
+  },
+  {
+    "id": "learned_nghaigam",
+    "input": "nghaigam",
+    "text": "\u5514\u4fc2\u5481",
+    "mode": "forgiving",
+    "expect_present": true
+  }
+]

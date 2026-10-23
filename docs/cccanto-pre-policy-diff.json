@@ -1,0 +1,2964 @@
+{
+  "kind": "Pre-safeguard CC-Canto expansion diff; preserve historical evidence",
+  "lost_pair_records": [
+    {
+      "new_ledger": {
+        "codes_json": "[\"hai6 mai6 sin1\"]",
+        "line": 21007,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "係咪先",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "hai6 mai6 sin1",
+          "source": "cccanto:dictionary",
+          "text": "係咪先",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "hai6 mai1 sin1",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "係咪先",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"hai6 mai6 sin1\"]",
+        "line": 21007,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "係咪先",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "hai6 mai6 sin1",
+          "source": "cccanto:dictionary",
+          "text": "係咪先",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "hai6 mai5 sin1",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "係咪先",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"hai6 mai6 sin1\"]",
+        "line": 21007,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "係咪先",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "hai6 mai6 sin1",
+          "source": "cccanto:dictionary",
+          "text": "係咪先",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "hai6 mei1 sin1",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "係咪先",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"hai6 mai6 sin1\"]",
+        "line": 21007,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "係咪先",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "hai6 mai6 sin1",
+          "source": "cccanto:dictionary",
+          "text": "係咪先",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "hai6 mi1 sin1",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "係咪先",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"zek3 cau1\"]",
+        "line": 47390,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "只抽",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "zek3 cau1",
+          "source": "cccanto:dictionary",
+          "text": "只抽",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "zi2 cau1",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "只抽",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"m4 sai2 do1 ze6\"]",
+        "line": 56165,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "唔使多謝",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "m4 sai2 do1 ze6",
+          "source": "cccanto:dictionary",
+          "text": "唔使多謝",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "m4 si2 do1 ze6",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "唔使多謝",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"daan1 ngaan5 jam4\"]",
+        "line": 58325,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "單眼簷",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "daan1 ngaan5 jam4",
+          "source": "cccanto:dictionary",
+          "text": "單眼簷",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "daan1 ngaan5 sim4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "單眼簷",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"hai2 ni1 dou6\"]",
+        "line": 58383,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "喺呢度",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "hai2 ni1 dou6",
+          "source": "cccanto:dictionary",
+          "text": "喺呢度",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "hai2 ne1 dou6",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "喺呢度",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"laa1 laa1 lam4\", \"laa1 laa2 lam4\", \"laa1 laa4 lam4\", \"laa1 laa5 lam4\", \"laa1 naa2 lam4\", \"laa1 naa4 lam4\", \"laa1 naa5 lam4\", \"laa2 laa1 lam4\", \"laa2 laa2 lam4\", \"laa2 laa4 lam4\", \"laa2 laa5 lam4\", \"laa2 naa2 lam4\", \"laa2 naa4 lam4\", \"laa2 naa5 lam4\", \"laa4 laa1 lam4\", \"laa4 laa2 lam4\", \"laa4 laa4 lam4\", \"laa4 laa5 lam4\", \"laa4 naa2 lam4\", \"laa4 naa4 lam4\", \"laa4 naa5 lam4\", \"laa5 laa1 lam4\", \"laa5 laa2 lam4\", \"laa5 laa4 lam4\", \"laa5 laa5 lam4\", \"laa5 naa2 lam4\", \"laa5 naa4 lam4\", \"laa5 naa5 lam4\", \"naa2 laa1 lam4\", \"naa2 laa2 lam4\", \"naa2 laa4 lam4\", \"naa2 laa5 lam4\"]",
+        "line": 58601,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "嗱嗱啉",
+        "work_count": 75
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa1 laa1 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱啉",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"laa1 laa1 lam4\", \"laa1 laa2 lam4\", \"laa1 laa4 lam4\", \"laa1 laa5 lam4\", \"laa1 naa2 lam4\", \"laa1 naa4 lam4\", \"laa1 naa5 lam4\", \"laa2 laa1 lam4\", \"laa2 laa2 lam4\", \"laa2 laa4 lam4\", \"laa2 laa5 lam4\", \"laa2 naa2 lam4\", \"laa2 naa4 lam4\", \"laa2 naa5 lam4\", \"laa4 laa1 lam4\", \"laa4 laa2 lam4\", \"laa4 laa4 lam4\", \"laa4 laa5 lam4\", \"laa4 naa2 lam4\", \"laa4 naa4 lam4\", \"laa4 naa5 lam4\", \"laa5 laa1 lam4\", \"laa5 laa2 lam4\", \"laa5 laa4 lam4\", \"laa5 laa5 lam4\", \"laa5 naa2 lam4\", \"laa5 naa4 lam4\", \"laa5 naa5 lam4\", \"naa2 laa1 lam4\", \"naa2 laa2 lam4\", \"naa2 laa4 lam4\", \"naa2 laa5 lam4\"]",
+        "line": 58601,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "嗱嗱啉",
+        "work_count": 75
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa1 laa2 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱啉",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"laa1 laa1 lam4\", \"laa1 laa2 lam4\", \"laa1 laa4 lam4\", \"laa1 laa5 lam4\", \"laa1 naa2 lam4\", \"laa1 naa4 lam4\", \"laa1 naa5 lam4\", \"laa2 laa1 lam4\", \"laa2 laa2 lam4\", \"laa2 laa4 lam4\", \"laa2 laa5 lam4\", \"laa2 naa2 lam4\", \"laa2 naa4 lam4\", \"laa2 naa5 lam4\", \"laa4 laa1 lam4\", \"laa4 laa2 lam4\", \"laa4 laa4 lam4\", \"laa4 laa5 lam4\", \"laa4 naa2 lam4\", \"laa4 naa4 lam4\", \"laa4 naa5 lam4\", \"laa5 laa1 lam4\", \"laa5 laa2 lam4\", \"laa5 laa4 lam4\", \"laa5 laa5 lam4\", \"laa5 naa2 lam4\", \"laa5 naa4 lam4\", \"laa5 naa5 lam4\", \"naa2 laa1 lam4\", \"naa2 laa2 lam4\", \"naa2 laa4 lam4\", \"naa2 laa5 lam4\"]",
+        "line": 58601,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "嗱嗱啉",
+        "work_count": 75
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa1 laa4 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱啉",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"laa1 laa1 lam4\", \"laa1 laa2 lam4\", \"laa1 laa4 lam4\", \"laa1 laa5 lam4\", \"laa1 naa2 lam4\", \"laa1 naa4 lam4\", \"laa1 naa5 lam4\", \"laa2 laa1 lam4\", \"laa2 laa2 lam4\", \"laa2 laa4 lam4\", \"laa2 laa5 lam4\", \"laa2 naa2 lam4\", \"laa2 naa4 lam4\", \"laa2 naa5 lam4\", \"laa4 laa1 lam4\", \"laa4 laa2 lam4\", \"laa4 laa4 lam4\", \"laa4 laa5 lam4\", \"laa4 naa2 lam4\", \"laa4 naa4 lam4\", \"laa4 naa5 lam4\", \"laa5 laa1 lam4\", \"laa5 laa2 lam4\", \"laa5 laa4 lam4\", \"laa5 laa5 lam4\", \"laa5 naa2 lam4\", \"laa5 naa4 lam4\", \"laa5 naa5 lam4\", \"naa2 laa1 lam4\", \"naa2 laa2 lam4\", \"naa2 laa4 lam4\", \"naa2 laa5 lam4\"]",
+        "line": 58601,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "嗱嗱啉",
+        "work_count": 75
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa1 laa5 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱啉",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"laa1 laa1 lam4\", \"laa1 laa2 lam4\", \"laa1 laa4 lam4\", \"laa1 laa5 lam4\", \"laa1 naa2 lam4\", \"laa1 naa4 lam4\", \"laa1 naa5 lam4\", \"laa2 laa1 lam4\", \"laa2 laa2 lam4\", \"laa2 laa4 lam4\", \"laa2 laa5 lam4\", \"laa2 naa2 lam4\", \"laa2 naa4 lam4\", \"laa2 naa5 lam4\", \"laa4 laa1 lam4\", \"laa4 laa2 lam4\", \"laa4 laa4 lam4\", \"laa4 laa5 lam4\", \"laa4 naa2 lam4\", \"laa4 naa4 lam4\", \"laa4 naa5 lam4\", \"laa5 laa1 lam4\", \"laa5 laa2 lam4\", \"laa5 laa4 lam4\", \"laa5 laa5 lam4\", \"laa5 naa2 lam4\", \"laa5 naa4 lam4\", \"laa5 naa5 lam4\", \"naa2 laa1 lam4\", \"naa2 laa2 lam4\", \"naa2 laa4 lam4\", \"naa2 laa5 lam4\"]",
+        "line": 58601,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "嗱嗱啉",
+        "work_count": 75
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa1 naa4 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱啉",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"laa1 laa1 lam4\", \"laa1 laa2 lam4\", \"laa1 laa4 lam4\", \"laa1 laa5 lam4\", \"laa1 naa2 lam4\", \"laa1 naa4 lam4\", \"laa1 naa5 lam4\", \"laa2 laa1 lam4\", \"laa2 laa2 lam4\", \"laa2 laa4 lam4\", \"laa2 laa5 lam4\", \"laa2 naa2 lam4\", \"laa2 naa4 lam4\", \"laa2 naa5 lam4\", \"laa4 laa1 lam4\", \"laa4 laa2 lam4\", \"laa4 laa4 lam4\", \"laa4 laa5 lam4\", \"laa4 naa2 lam4\", \"laa4 naa4 lam4\", \"laa4 naa5 lam4\", \"laa5 laa1 lam4\", \"laa5 laa2 lam4\", \"laa5 laa4 lam4\", \"laa5 laa5 lam4\", \"laa5 naa2 lam4\", \"laa5 naa4 lam4\", \"laa5 naa5 lam4\", \"naa2 laa1 lam4\", \"naa2 laa2 lam4\", \"naa2 laa4 lam4\", \"naa2 laa5 lam4\"]",
+        "line": 58601,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "嗱嗱啉",
+        "work_count": 75
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa2 laa1 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱啉",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"laa1 laa1 lam4\", \"laa1 laa2 lam4\", \"laa1 laa4 lam4\", \"laa1 laa5 lam4\", \"laa1 naa2 lam4\", \"laa1 naa4 lam4\", \"laa1 naa5 lam4\", \"laa2 laa1 lam4\", \"laa2 laa2 lam4\", \"laa2 laa4 lam4\", \"laa2 laa5 lam4\", \"laa2 naa2 lam4\", \"laa2 naa4 lam4\", \"laa2 naa5 lam4\", \"laa4 laa1 lam4\", \"laa4 laa2 lam4\", \"laa4 laa4 lam4\", \"laa4 laa5 lam4\", \"laa4 naa2 lam4\", \"laa4 naa4 lam4\", \"laa4 naa5 lam4\", \"laa5 laa1 lam4\", \"laa5 laa2 lam4\", \"laa5 laa4 lam4\", \"laa5 laa5 lam4\", \"laa5 naa2 lam4\", \"laa5 naa4 lam4\", \"laa5 naa5 lam4\", \"naa2 laa1 lam4\", \"naa2 laa2 lam4\", \"naa2 laa4 lam4\", \"naa2 laa5 lam4\"]",
+        "line": 58601,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "嗱嗱啉",
+        "work_count": 75
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa2 laa2 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱啉",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"laa1 laa1 lam4\", \"laa1 laa2 lam4\", \"laa1 laa4 lam4\", \"laa1 laa5 lam4\", \"laa1 naa2 lam4\", \"laa1 naa4 lam4\", \"laa1 naa5 lam4\", \"laa2 laa1 lam4\", \"laa2 laa2 lam4\", \"laa2 laa4 lam4\", \"laa2 laa5 lam4\", \"laa2 naa2 lam4\", \"laa2 naa4 lam4\", \"laa2 naa5 lam4\", \"laa4 laa1 lam4\", \"laa4 laa2 lam4\", \"laa4 laa4 lam4\", \"laa4 laa5 lam4\", \"laa4 naa2 lam4\", \"laa4 naa4 lam4\", \"laa4 naa5 lam4\", \"laa5 laa1 lam4\", \"laa5 laa2 lam4\", \"laa5 laa4 lam4\", \"laa5 laa5 lam4\", \"laa5 naa2 lam4\", \"laa5 naa4 lam4\", \"laa5 naa5 lam4\", \"naa2 laa1 lam4\", \"naa2 laa2 lam4\", \"naa2 laa4 lam4\", \"naa2 laa5 lam4\"]",
+        "line": 58601,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "嗱嗱啉",
+        "work_count": 75
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa2 laa4 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱啉",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"laa1 laa1 lam4\", \"laa1 laa2 lam4\", \"laa1 laa4 lam4\", \"laa1 laa5 lam4\", \"laa1 naa2 lam4\", \"laa1 naa4 lam4\", \"laa1 naa5 lam4\", \"laa2 laa1 lam4\", \"laa2 laa2 lam4\", \"laa2 laa4 lam4\", \"laa2 laa5 lam4\", \"laa2 naa2 lam4\", \"laa2 naa4 lam4\", \"laa2 naa5 lam4\", \"laa4 laa1 lam4\", \"laa4 laa2 lam4\", \"laa4 laa4 lam4\", \"laa4 laa5 lam4\", \"laa4 naa2 lam4\", \"laa4 naa4 lam4\", \"laa4 naa5 lam4\", \"laa5 laa1 lam4\", \"laa5 laa2 lam4\", \"laa5 laa4 lam4\", \"laa5 laa5 lam4\", \"laa5 naa2 lam4\", \"laa5 naa4 lam4\", \"laa5 naa5 lam4\", \"naa2 laa1 lam4\", \"naa2 laa2 lam4\", \"naa2 laa4 lam4\", \"naa2 laa5 lam4\"]",
+        "line": 58601,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "嗱嗱啉",
+        "work_count": 75
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa2 laa5 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱啉",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"laa1 laa1 lam4\", \"laa1 laa2 lam4\", \"laa1 laa4 lam4\", \"laa1 laa5 lam4\", \"laa1 naa2 lam4\", \"laa1 naa4 lam4\", \"laa1 naa5 lam4\", \"laa2 laa1 lam4\", \"laa2 laa2 lam4\", \"laa2 laa4 lam4\", \"laa2 laa5 lam4\", \"laa2 naa2 lam4\", \"laa2 naa4 lam4\", \"laa2 naa5 lam4\", \"laa4 laa1 lam4\", \"laa4 laa2 lam4\", \"laa4 laa4 lam4\", \"laa4 laa5 lam4\", \"laa4 naa2 lam4\", \"laa4 naa4 lam4\", \"laa4 naa5 lam4\", \"laa5 laa1 lam4\", \"laa5 laa2 lam4\", \"laa5 laa4 lam4\", \"laa5 laa5 lam4\", \"laa5 naa2 lam4\", \"laa5 naa4 lam4\", \"laa5 naa5 lam4\", \"naa2 laa1 lam4\", \"naa2 laa2 lam4\", \"naa2 laa4 lam4\", \"naa2 laa5 lam4\"]",
+        "line": 58601,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "嗱嗱啉",
+        "work_count": 75
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa2 naa4 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱啉",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"laa1 laa1 lam4\", \"laa1 laa2 lam4\", \"laa1 laa4 lam4\", \"laa1 laa5 lam4\", \"laa1 naa2 lam4\", \"laa1 naa4 lam4\", \"laa1 naa5 lam4\", \"laa2 laa1 lam4\", \"laa2 laa2 lam4\", \"laa2 laa4 lam4\", \"laa2 laa5 lam4\", \"laa2 naa2 lam4\", \"laa2 naa4 lam4\", \"laa2 naa5 lam4\", \"laa4 laa1 lam4\", \"laa4 laa2 lam4\", \"laa4 laa4 lam4\", \"laa4 laa5 lam4\", \"laa4 naa2 lam4\", \"laa4 naa4 lam4\", \"laa4 naa5 lam4\", \"laa5 laa1 lam4\", \"laa5 laa2 lam4\", \"laa5 laa4 lam4\", \"laa5 laa5 lam4\", \"laa5 naa2 lam4\", \"laa5 naa4 lam4\", \"laa5 naa5 lam4\", \"naa2 laa1 lam4\", \"naa2 laa2 lam4\", \"naa2 laa4 lam4\", \"naa2 laa5 lam4\"]",
+        "line": 58601,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "嗱嗱啉",
+        "work_count": 75
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa4 laa1 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱啉",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"laa1 laa1 lam4\", \"laa1 laa2 lam4\", \"laa1 laa4 lam4\", \"laa1 laa5 lam4\", \"laa1 naa2 lam4\", \"laa1 naa4 lam4\", \"laa1 naa5 lam4\", \"laa2 laa1 lam4\", \"laa2 laa2 lam4\", \"laa2 laa4 lam4\", \"laa2 laa5 lam4\", \"laa2 naa2 lam4\", \"laa2 naa4 lam4\", \"laa2 naa5 lam4\", \"laa4 laa1 lam4\", \"laa4 laa2 lam4\", \"laa4 laa4 lam4\", \"laa4 laa5 lam4\", \"laa4 naa2 lam4\", \"laa4 naa4 lam4\", \"laa4 naa5 lam4\", \"laa5 laa1 lam4\", \"laa5 laa2 lam4\", \"laa5 laa4 lam4\", \"laa5 laa5 lam4\", \"laa5 naa2 lam4\", \"laa5 naa4 lam4\", \"laa5 naa5 lam4\", \"naa2 laa1 lam4\", \"naa2 laa2 lam4\", \"naa2 laa4 lam4\", \"naa2 laa5 lam4\"]",
+        "line": 58601,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "嗱嗱啉",
+        "work_count": 75
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa4 laa2 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱啉",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"laa1 laa1 lam4\", \"laa1 laa2 lam4\", \"laa1 laa4 lam4\", \"laa1 laa5 lam4\", \"laa1 naa2 lam4\", \"laa1 naa4 lam4\", \"laa1 naa5 lam4\", \"laa2 laa1 lam4\", \"laa2 laa2 lam4\", \"laa2 laa4 lam4\", \"laa2 laa5 lam4\", \"laa2 naa2 lam4\", \"laa2 naa4 lam4\", \"laa2 naa5 lam4\", \"laa4 laa1 lam4\", \"laa4 laa2 lam4\", \"laa4 laa4 lam4\", \"laa4 laa5 lam4\", \"laa4 naa2 lam4\", \"laa4 naa4 lam4\", \"laa4 naa5 lam4\", \"laa5 laa1 lam4\", \"laa5 laa2 lam4\", \"laa5 laa4 lam4\", \"laa5 laa5 lam4\", \"laa5 naa2 lam4\", \"laa5 naa4 lam4\", \"laa5 naa5 lam4\", \"naa2 laa1 lam4\", \"naa2 laa2 lam4\", \"naa2 laa4 lam4\", \"naa2 laa5 lam4\"]",
+        "line": 58601,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "嗱嗱啉",
+        "work_count": 75
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa4 laa4 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱啉",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"laa1 laa1 lam4\", \"laa1 laa2 lam4\", \"laa1 laa4 lam4\", \"laa1 laa5 lam4\", \"laa1 naa2 lam4\", \"laa1 naa4 lam4\", \"laa1 naa5 lam4\", \"laa2 laa1 lam4\", \"laa2 laa2 lam4\", \"laa2 laa4 lam4\", \"laa2 laa5 lam4\", \"laa2 naa2 lam4\", \"laa2 naa4 lam4\", \"laa2 naa5 lam4\", \"laa4 laa1 lam4\", \"laa4 laa2 lam4\", \"laa4 laa4 lam4\", \"laa4 laa5 lam4\", \"laa4 naa2 lam4\", \"laa4 naa4 lam4\", \"laa4 naa5 lam4\", \"laa5 laa1 lam4\", \"laa5 laa2 lam4\", \"laa5 laa4 lam4\", \"laa5 laa5 lam4\", \"laa5 naa2 lam4\", \"laa5 naa4 lam4\", \"laa5 naa5 lam4\", \"naa2 laa1 lam4\", \"naa2 laa2 lam4\", \"naa2 laa4 lam4\", \"naa2 laa5 lam4\"]",
+        "line": 58601,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "嗱嗱啉",
+        "work_count": 75
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa4 laa5 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱啉",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"laa1 laa1 lam4\", \"laa1 laa2 lam4\", \"laa1 laa4 lam4\", \"laa1 laa5 lam4\", \"laa1 naa2 lam4\", \"laa1 naa4 lam4\", \"laa1 naa5 lam4\", \"laa2 laa1 lam4\", \"laa2 laa2 lam4\", \"laa2 laa4 lam4\", \"laa2 laa5 lam4\", \"laa2 naa2 lam4\", \"laa2 naa4 lam4\", \"laa2 naa5 lam4\", \"laa4 laa1 lam4\", \"laa4 laa2 lam4\", \"laa4 laa4 lam4\", \"laa4 laa5 lam4\", \"laa4 naa2 lam4\", \"laa4 naa4 lam4\", \"laa4 naa5 lam4\", \"laa5 laa1 lam4\", \"laa5 laa2 lam4\", \"laa5 laa4 lam4\", \"laa5 laa5 lam4\", \"laa5 naa2 lam4\", \"laa5 naa4 lam4\", \"laa5 naa5 lam4\", \"naa2 laa1 lam4\", \"naa2 laa2 lam4\", \"naa2 laa4 lam4\", \"naa2 laa5 lam4\"]",
+        "line": 58601,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "嗱嗱啉",
+        "work_count": 75
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa4 naa4 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱啉",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"laa1 laa1 lam4\", \"laa1 laa2 lam4\", \"laa1 laa4 lam4\", \"laa1 laa5 lam4\", \"laa1 naa2 lam4\", \"laa1 naa4 lam4\", \"laa1 naa5 lam4\", \"laa2 laa1 lam4\", \"laa2 laa2 lam4\", \"laa2 laa4 lam4\", \"laa2 laa5 lam4\", \"laa2 naa2 lam4\", \"laa2 naa4 lam4\", \"laa2 naa5 lam4\", \"laa4 laa1 lam4\", \"laa4 laa2 lam4\", \"laa4 laa4 lam4\", \"laa4 laa5 lam4\", \"laa4 naa2 lam4\", \"laa4 naa4 lam4\", \"laa4 naa5 lam4\", \"laa5 laa1 lam4\", \"laa5 laa2 lam4\", \"laa5 laa4 lam4\", \"laa5 laa5 lam4\", \"laa5 naa2 lam4\", \"laa5 naa4 lam4\", \"laa5 naa5 lam4\", \"naa2 laa1 lam4\", \"naa2 laa2 lam4\", \"naa2 laa4 lam4\", \"naa2 laa5 lam4\"]",
+        "line": 58601,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "嗱嗱啉",
+        "work_count": 75
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa5 laa1 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱啉",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"laa1 laa1 lam4\", \"laa1 laa2 lam4\", \"laa1 laa4 lam4\", \"laa1 laa5 lam4\", \"laa1 naa2 lam4\", \"laa1 naa4 lam4\", \"laa1 naa5 lam4\", \"laa2 laa1 lam4\", \"laa2 laa2 lam4\", \"laa2 laa4 lam4\", \"laa2 laa5 lam4\", \"laa2 naa2 lam4\", \"laa2 naa4 lam4\", \"laa2 naa5 lam4\", \"laa4 laa1 lam4\", \"laa4 laa2 lam4\", \"laa4 laa4 lam4\", \"laa4 laa5 lam4\", \"laa4 naa2 lam4\", \"laa4 naa4 lam4\", \"laa4 naa5 lam4\", \"laa5 laa1 lam4\", \"laa5 laa2 lam4\", \"laa5 laa4 lam4\", \"laa5 laa5 lam4\", \"laa5 naa2 lam4\", \"laa5 naa4 lam4\", \"laa5 naa5 lam4\", \"naa2 laa1 lam4\", \"naa2 laa2 lam4\", \"naa2 laa4 lam4\", \"naa2 laa5 lam4\"]",
+        "line": 58601,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "嗱嗱啉",
+        "work_count": 75
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa5 laa2 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱啉",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"laa1 laa1 lam4\", \"laa1 laa2 lam4\", \"laa1 laa4 lam4\", \"laa1 laa5 lam4\", \"laa1 naa2 lam4\", \"laa1 naa4 lam4\", \"laa1 naa5 lam4\", \"laa2 laa1 lam4\", \"laa2 laa2 lam4\", \"laa2 laa4 lam4\", \"laa2 laa5 lam4\", \"laa2 naa2 lam4\", \"laa2 naa4 lam4\", \"laa2 naa5 lam4\", \"laa4 laa1 lam4\", \"laa4 laa2 lam4\", \"laa4 laa4 lam4\", \"laa4 laa5 lam4\", \"laa4 naa2 lam4\", \"laa4 naa4 lam4\", \"laa4 naa5 lam4\", \"laa5 laa1 lam4\", \"laa5 laa2 lam4\", \"laa5 laa4 lam4\", \"laa5 laa5 lam4\", \"laa5 naa2 lam4\", \"laa5 naa4 lam4\", \"laa5 naa5 lam4\", \"naa2 laa1 lam4\", \"naa2 laa2 lam4\", \"naa2 laa4 lam4\", \"naa2 laa5 lam4\"]",
+        "line": 58601,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "嗱嗱啉",
+        "work_count": 75
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa5 laa4 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱啉",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"laa1 laa1 lam4\", \"laa1 laa2 lam4\", \"laa1 laa4 lam4\", \"laa1 laa5 lam4\", \"laa1 naa2 lam4\", \"laa1 naa4 lam4\", \"laa1 naa5 lam4\", \"laa2 laa1 lam4\", \"laa2 laa2 lam4\", \"laa2 laa4 lam4\", \"laa2 laa5 lam4\", \"laa2 naa2 lam4\", \"laa2 naa4 lam4\", \"laa2 naa5 lam4\", \"laa4 laa1 lam4\", \"laa4 laa2 lam4\", \"laa4 laa4 lam4\", \"laa4 laa5 lam4\", \"laa4 naa2 lam4\", \"laa4 naa4 lam4\", \"laa4 naa5 lam4\", \"laa5 laa1 lam4\", \"laa5 laa2 lam4\", \"laa5 laa4 lam4\", \"laa5 laa5 lam4\", \"laa5 naa2 lam4\", \"laa5 naa4 lam4\", \"laa5 naa5 lam4\", \"naa2 laa1 lam4\", \"naa2 laa2 lam4\", \"naa2 laa4 lam4\", \"naa2 laa5 lam4\"]",
+        "line": 58601,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "嗱嗱啉",
+        "work_count": 75
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa5 laa5 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱啉",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"laa1 laa1 lam4\", \"laa1 laa2 lam4\", \"laa1 laa4 lam4\", \"laa1 laa5 lam4\", \"laa1 naa2 lam4\", \"laa1 naa4 lam4\", \"laa1 naa5 lam4\", \"laa2 laa1 lam4\", \"laa2 laa2 lam4\", \"laa2 laa4 lam4\", \"laa2 laa5 lam4\", \"laa2 naa2 lam4\", \"laa2 naa4 lam4\", \"laa2 naa5 lam4\", \"laa4 laa1 lam4\", \"laa4 laa2 lam4\", \"laa4 laa4 lam4\", \"laa4 laa5 lam4\", \"laa4 naa2 lam4\", \"laa4 naa4 lam4\", \"laa4 naa5 lam4\", \"laa5 laa1 lam4\", \"laa5 laa2 lam4\", \"laa5 laa4 lam4\", \"laa5 laa5 lam4\", \"laa5 naa2 lam4\", \"laa5 naa4 lam4\", \"laa5 naa5 lam4\", \"naa2 laa1 lam4\", \"naa2 laa2 lam4\", \"naa2 laa4 lam4\", \"naa2 laa5 lam4\"]",
+        "line": 58601,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "嗱嗱啉",
+        "work_count": 75
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa5 naa4 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱啉",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"laa1 laa1 lam4\", \"laa1 laa2 lam4\", \"laa1 laa4 lam4\", \"laa1 laa5 lam4\", \"laa1 naa2 lam4\", \"laa1 naa4 lam4\", \"laa1 naa5 lam4\", \"laa2 laa1 lam4\", \"laa2 laa2 lam4\", \"laa2 laa4 lam4\", \"laa2 laa5 lam4\", \"laa2 naa2 lam4\", \"laa2 naa4 lam4\", \"laa2 naa5 lam4\", \"laa4 laa1 lam4\", \"laa4 laa2 lam4\", \"laa4 laa4 lam4\", \"laa4 laa5 lam4\", \"laa4 naa2 lam4\", \"laa4 naa4 lam4\", \"laa4 naa5 lam4\", \"laa5 laa1 lam4\", \"laa5 laa2 lam4\", \"laa5 laa4 lam4\", \"laa5 laa5 lam4\", \"laa5 naa2 lam4\", \"laa5 naa4 lam4\", \"laa5 naa5 lam4\", \"naa2 laa1 lam4\", \"naa2 laa2 lam4\", \"naa2 laa4 lam4\", \"naa2 laa5 lam4\"]",
+        "line": 58601,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "嗱嗱啉",
+        "work_count": 75
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "naa4 laa1 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱啉",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"laa1 laa1 lam4\", \"laa1 laa2 lam4\", \"laa1 laa4 lam4\", \"laa1 laa5 lam4\", \"laa1 naa2 lam4\", \"laa1 naa4 lam4\", \"laa1 naa5 lam4\", \"laa2 laa1 lam4\", \"laa2 laa2 lam4\", \"laa2 laa4 lam4\", \"laa2 laa5 lam4\", \"laa2 naa2 lam4\", \"laa2 naa4 lam4\", \"laa2 naa5 lam4\", \"laa4 laa1 lam4\", \"laa4 laa2 lam4\", \"laa4 laa4 lam4\", \"laa4 laa5 lam4\", \"laa4 naa2 lam4\", \"laa4 naa4 lam4\", \"laa4 naa5 lam4\", \"laa5 laa1 lam4\", \"laa5 laa2 lam4\", \"laa5 laa4 lam4\", \"laa5 laa5 lam4\", \"laa5 naa2 lam4\", \"laa5 naa4 lam4\", \"laa5 naa5 lam4\", \"naa2 laa1 lam4\", \"naa2 laa2 lam4\", \"naa2 laa4 lam4\", \"naa2 laa5 lam4\"]",
+        "line": 58601,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "嗱嗱啉",
+        "work_count": 75
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "naa4 laa2 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱啉",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"laa1 laa1 lam4\", \"laa1 laa2 lam4\", \"laa1 laa4 lam4\", \"laa1 laa5 lam4\", \"laa1 naa2 lam4\", \"laa1 naa4 lam4\", \"laa1 naa5 lam4\", \"laa2 laa1 lam4\", \"laa2 laa2 lam4\", \"laa2 laa4 lam4\", \"laa2 laa5 lam4\", \"laa2 naa2 lam4\", \"laa2 naa4 lam4\", \"laa2 naa5 lam4\", \"laa4 laa1 lam4\", \"laa4 laa2 lam4\", \"laa4 laa4 lam4\", \"laa4 laa5 lam4\", \"laa4 naa2 lam4\", \"laa4 naa4 lam4\", \"laa4 naa5 lam4\", \"laa5 laa1 lam4\", \"laa5 laa2 lam4\", \"laa5 laa4 lam4\", \"laa5 laa5 lam4\", \"laa5 naa2 lam4\", \"laa5 naa4 lam4\", \"laa5 naa5 lam4\", \"naa2 laa1 lam4\", \"naa2 laa2 lam4\", \"naa2 laa4 lam4\", \"naa2 laa5 lam4\"]",
+        "line": 58601,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "嗱嗱啉",
+        "work_count": 75
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "naa4 laa4 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱啉",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"laa1 laa1 lam4\", \"laa1 laa2 lam4\", \"laa1 laa4 lam4\", \"laa1 laa5 lam4\", \"laa1 naa2 lam4\", \"laa1 naa4 lam4\", \"laa1 naa5 lam4\", \"laa2 laa1 lam4\", \"laa2 laa2 lam4\", \"laa2 laa4 lam4\", \"laa2 laa5 lam4\", \"laa2 naa2 lam4\", \"laa2 naa4 lam4\", \"laa2 naa5 lam4\", \"laa4 laa1 lam4\", \"laa4 laa2 lam4\", \"laa4 laa4 lam4\", \"laa4 laa5 lam4\", \"laa4 naa2 lam4\", \"laa4 naa4 lam4\", \"laa4 naa5 lam4\", \"laa5 laa1 lam4\", \"laa5 laa2 lam4\", \"laa5 laa4 lam4\", \"laa5 laa5 lam4\", \"laa5 naa2 lam4\", \"laa5 naa4 lam4\", \"laa5 naa5 lam4\", \"naa2 laa1 lam4\", \"naa2 laa2 lam4\", \"naa2 laa4 lam4\", \"naa2 laa5 lam4\"]",
+        "line": 58601,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "嗱嗱啉",
+        "work_count": 75
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "naa4 laa5 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱啉",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"laa1 laa1 lam4\", \"laa1 laa2 lam4\", \"laa1 laa4 lam4\", \"laa1 laa5 lam4\", \"laa1 naa2 lam4\", \"laa1 naa4 lam4\", \"laa1 naa5 lam4\", \"laa2 laa1 lam4\", \"laa2 laa2 lam4\", \"laa2 laa4 lam4\", \"laa2 laa5 lam4\", \"laa2 naa2 lam4\", \"laa2 naa4 lam4\", \"laa2 naa5 lam4\", \"laa4 laa1 lam4\", \"laa4 laa2 lam4\", \"laa4 laa4 lam4\", \"laa4 laa5 lam4\", \"laa4 naa2 lam4\", \"laa4 naa4 lam4\", \"laa4 naa5 lam4\", \"laa5 laa1 lam4\", \"laa5 laa2 lam4\", \"laa5 laa4 lam4\", \"laa5 laa5 lam4\", \"laa5 naa2 lam4\", \"laa5 naa4 lam4\", \"laa5 naa5 lam4\", \"naa2 laa1 lam4\", \"naa2 laa2 lam4\", \"naa2 laa4 lam4\", \"naa2 laa5 lam4\"]",
+        "line": 58601,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "嗱嗱啉",
+        "work_count": 75
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "naa4 naa4 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱啉",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"naa4 naa4 lam4\"]",
+        "line": 58602,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "嗱嗱淋",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "naa4 naa4 lam4",
+          "source": "cccanto:dictionary",
+          "text": "嗱嗱淋",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa1 laa1 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱淋",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"naa4 naa4 lam4\"]",
+        "line": 58602,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "嗱嗱淋",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "naa4 naa4 lam4",
+          "source": "cccanto:dictionary",
+          "text": "嗱嗱淋",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa1 laa2 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱淋",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"naa4 naa4 lam4\"]",
+        "line": 58602,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "嗱嗱淋",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "naa4 naa4 lam4",
+          "source": "cccanto:dictionary",
+          "text": "嗱嗱淋",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa1 laa4 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱淋",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"naa4 naa4 lam4\"]",
+        "line": 58602,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "嗱嗱淋",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "naa4 naa4 lam4",
+          "source": "cccanto:dictionary",
+          "text": "嗱嗱淋",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa1 laa5 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱淋",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"naa4 naa4 lam4\"]",
+        "line": 58602,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "嗱嗱淋",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "naa4 naa4 lam4",
+          "source": "cccanto:dictionary",
+          "text": "嗱嗱淋",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa1 naa4 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱淋",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"naa4 naa4 lam4\"]",
+        "line": 58602,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "嗱嗱淋",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "naa4 naa4 lam4",
+          "source": "cccanto:dictionary",
+          "text": "嗱嗱淋",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa2 laa1 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱淋",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"naa4 naa4 lam4\"]",
+        "line": 58602,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "嗱嗱淋",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "naa4 naa4 lam4",
+          "source": "cccanto:dictionary",
+          "text": "嗱嗱淋",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa2 laa2 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱淋",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"naa4 naa4 lam4\"]",
+        "line": 58602,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "嗱嗱淋",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "naa4 naa4 lam4",
+          "source": "cccanto:dictionary",
+          "text": "嗱嗱淋",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa2 laa4 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱淋",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"naa4 naa4 lam4\"]",
+        "line": 58602,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "嗱嗱淋",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "naa4 naa4 lam4",
+          "source": "cccanto:dictionary",
+          "text": "嗱嗱淋",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa2 laa5 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱淋",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"naa4 naa4 lam4\"]",
+        "line": 58602,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "嗱嗱淋",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "naa4 naa4 lam4",
+          "source": "cccanto:dictionary",
+          "text": "嗱嗱淋",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa2 naa4 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱淋",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"naa4 naa4 lam4\"]",
+        "line": 58602,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "嗱嗱淋",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "naa4 naa4 lam4",
+          "source": "cccanto:dictionary",
+          "text": "嗱嗱淋",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa4 laa1 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱淋",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"naa4 naa4 lam4\"]",
+        "line": 58602,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "嗱嗱淋",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "naa4 naa4 lam4",
+          "source": "cccanto:dictionary",
+          "text": "嗱嗱淋",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa4 laa2 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱淋",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"naa4 naa4 lam4\"]",
+        "line": 58602,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "嗱嗱淋",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "naa4 naa4 lam4",
+          "source": "cccanto:dictionary",
+          "text": "嗱嗱淋",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa4 laa4 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱淋",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"naa4 naa4 lam4\"]",
+        "line": 58602,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "嗱嗱淋",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "naa4 naa4 lam4",
+          "source": "cccanto:dictionary",
+          "text": "嗱嗱淋",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa4 laa5 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱淋",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"naa4 naa4 lam4\"]",
+        "line": 58602,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "嗱嗱淋",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "naa4 naa4 lam4",
+          "source": "cccanto:dictionary",
+          "text": "嗱嗱淋",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa4 naa4 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱淋",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"naa4 naa4 lam4\"]",
+        "line": 58602,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "嗱嗱淋",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "naa4 naa4 lam4",
+          "source": "cccanto:dictionary",
+          "text": "嗱嗱淋",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa5 laa1 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱淋",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"naa4 naa4 lam4\"]",
+        "line": 58602,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "嗱嗱淋",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "naa4 naa4 lam4",
+          "source": "cccanto:dictionary",
+          "text": "嗱嗱淋",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa5 laa2 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱淋",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"naa4 naa4 lam4\"]",
+        "line": 58602,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "嗱嗱淋",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "naa4 naa4 lam4",
+          "source": "cccanto:dictionary",
+          "text": "嗱嗱淋",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa5 laa4 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱淋",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"naa4 naa4 lam4\"]",
+        "line": 58602,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "嗱嗱淋",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "naa4 naa4 lam4",
+          "source": "cccanto:dictionary",
+          "text": "嗱嗱淋",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa5 laa5 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱淋",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"naa4 naa4 lam4\"]",
+        "line": 58602,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "嗱嗱淋",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "naa4 naa4 lam4",
+          "source": "cccanto:dictionary",
+          "text": "嗱嗱淋",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "laa5 naa4 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱淋",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"naa4 naa4 lam4\"]",
+        "line": 58602,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "嗱嗱淋",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "naa4 naa4 lam4",
+          "source": "cccanto:dictionary",
+          "text": "嗱嗱淋",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "naa4 laa1 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱淋",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"naa4 naa4 lam4\"]",
+        "line": 58602,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "嗱嗱淋",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "naa4 naa4 lam4",
+          "source": "cccanto:dictionary",
+          "text": "嗱嗱淋",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "naa4 laa2 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱淋",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"naa4 naa4 lam4\"]",
+        "line": 58602,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "嗱嗱淋",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "naa4 naa4 lam4",
+          "source": "cccanto:dictionary",
+          "text": "嗱嗱淋",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "naa4 laa4 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱淋",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"naa4 naa4 lam4\"]",
+        "line": 58602,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "嗱嗱淋",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "naa4 naa4 lam4",
+          "source": "cccanto:dictionary",
+          "text": "嗱嗱淋",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "naa4 laa5 lam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "嗱嗱淋",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"dak1 mei6 aa3\"]",
+        "line": 113891,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "得未呀",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "dak1 mei6 aa3",
+          "source": "cccanto:dictionary",
+          "text": "得未呀",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "dak1 mei6 aa4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "得未呀",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"sam1 geng1 geng1\"]",
+        "line": 114409,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "心驚驚",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "sam1 geng1 geng1",
+          "source": "cccanto:dictionary",
+          "text": "心驚驚",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "sam1 ging1 ging1",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "心驚驚",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"nim6 hau2 wong2\"]",
+        "line": 115408,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "念口黃",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "nim6 hau2 wong2",
+          "source": "cccanto:dictionary",
+          "text": "念口黃",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "nim6 hau2 wong4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "念口黃",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"sau2 doi2 dim3\"]",
+        "line": 124806,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "手袋店",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "sau2 doi2 dim3",
+          "source": "cccanto:dictionary",
+          "text": "手袋店",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "sau2 doi6 dim3",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "手袋店",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"zip3 zo2\"]",
+        "line": 125326,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "折咗",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "zip3 zo2",
+          "source": "cccanto:dictionary",
+          "text": "折咗",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "zit3 zo2",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "折咗",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"paak3 goeng1 gam2 paak3\"]",
+        "line": 125494,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "拍姜咁拍",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "paak3 goeng1 gam2 paak3",
+          "source": "cccanto:dictionary",
+          "text": "拍姜咁拍",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "paak3 goeng1 gam3 paak3",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "拍姜咁拍",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"aau1 han4\"]",
+        "line": 125639,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "拗痕",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "aau1 han4",
+          "source": "cccanto:dictionary",
+          "text": "拗痕",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "aau3 han4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "拗痕",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"nan2 faa3\"]",
+        "line": 126703,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "捻化",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "nan2 faa3",
+          "source": "cccanto:dictionary",
+          "text": "捻化",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "nip6 faa3",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "捻化",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"sou3 maa5 jing2 zoeng6\"]",
+        "line": 128914,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "數碼影像",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "sou3 maa5 jing2 zoeng6",
+          "source": "cccanto:dictionary",
+          "text": "數碼影像",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "sok3 maa5 jing2 zoeng6",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "數碼影像",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"sou3 maa5 jing2 zoeng6\"]",
+        "line": 128914,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "數碼影像",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "sou3 maa5 jing2 zoeng6",
+          "source": "cccanto:dictionary",
+          "text": "數碼影像",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "sou2 maa5 jing2 zoeng6",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "數碼影像",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"sung1 jan4\"]",
+        "line": 157457,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "松人",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "sung1 jan4",
+          "source": "cccanto:dictionary",
+          "text": "松人",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "cung4 jan4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "松人",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"lam4 sam2\"]",
+        "line": 157973,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "林沉",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "lam4 sam2",
+          "source": "cccanto:dictionary",
+          "text": "林沉",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "lam4 cam4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "林沉",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"zeng3 dau2\"]",
+        "line": 169151,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "正鬥",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "zeng3 dau2",
+          "source": "cccanto:dictionary",
+          "text": "正鬥",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "zing3 dau3",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "正鬥",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"paa1 si2\"]",
+        "line": 182310,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "派士",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "paa1 si2",
+          "source": "cccanto:dictionary",
+          "text": "派士",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "paai3 si6",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "派士",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"mou4 laa1 laa1 do1 daat6 baa1\", \"mou4 laa1 laa2 do1 daat6 baa1\", \"mou4 laa1 laa4 do1 daat6 baa1\", \"mou4 laa1 laa5 do1 daat6 baa1\", \"mou4 laa1 naa2 do1 daat6 baa1\", \"mou4 laa1 naa4 do1 daat6 baa1\", \"mou4 laa1 naa5 do1 daat6 baa1\", \"mou4 laa2 laa1 do1 daat6 baa1\", \"mou4 laa2 laa2 do1 daat6 baa1\", \"mou4 laa2 laa4 do1 daat6 baa1\", \"mou4 laa2 laa5 do1 daat6 baa1\", \"mou4 laa2 naa2 do1 daat6 baa1\", \"mou4 laa2 naa4 do1 daat6 baa1\", \"mou4 laa2 naa5 do1 daat6 baa1\", \"mou4 laa4 laa1 do1 daat6 baa1\", \"mou4 laa4 laa2 do1 daat6 baa1\", \"mou4 laa4 laa4 do1 daat6 baa1\", \"mou4 laa4 laa5 do1 daat6 baa1\", \"mou4 laa4 naa2 do1 daat6 baa1\", \"mou4 laa4 naa4 do1 daat6 baa1\", \"mou4 laa4 naa5 do1 daat6 baa1\", \"mou4 laa5 laa1 do1 daat6 baa1\", \"mou4 laa5 laa2 do1 daat6 baa1\", \"mou4 laa5 laa4 do1 daat6 baa1\", \"mou4 laa5 laa5 do1 daat6 baa1\", \"mou4 laa5 naa2 do1 daat6 baa1\", \"mou4 laa5 naa4 do1 daat6 baa1\", \"mou4 laa5 naa5 do1 daat6 baa1\", \"mou4 naa2 laa1 do1 daat6 baa1\", \"mou4 naa2 laa2 do1 daat6 baa1\", \"mou4 naa2 laa4 do1 daat6 baa1\", \"mou4 naa2 laa5 do1 daat6 baa1\"]",
+        "line": 199143,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "無嗱嗱多噠疤",
+        "work_count": 155
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "mou4 laa1 laa1 do1 daat6 baa1",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "無嗱嗱多噠疤",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"mou4 laa1 laa1 do1 daat6 baa1\", \"mou4 laa1 laa2 do1 daat6 baa1\", \"mou4 laa1 laa4 do1 daat6 baa1\", \"mou4 laa1 laa5 do1 daat6 baa1\", \"mou4 laa1 naa2 do1 daat6 baa1\", \"mou4 laa1 naa4 do1 daat6 baa1\", \"mou4 laa1 naa5 do1 daat6 baa1\", \"mou4 laa2 laa1 do1 daat6 baa1\", \"mou4 laa2 laa2 do1 daat6 baa1\", \"mou4 laa2 laa4 do1 daat6 baa1\", \"mou4 laa2 laa5 do1 daat6 baa1\", \"mou4 laa2 naa2 do1 daat6 baa1\", \"mou4 laa2 naa4 do1 daat6 baa1\", \"mou4 laa2 naa5 do1 daat6 baa1\", \"mou4 laa4 laa1 do1 daat6 baa1\", \"mou4 laa4 laa2 do1 daat6 baa1\", \"mou4 laa4 laa4 do1 daat6 baa1\", \"mou4 laa4 laa5 do1 daat6 baa1\", \"mou4 laa4 naa2 do1 daat6 baa1\", \"mou4 laa4 naa4 do1 daat6 baa1\", \"mou4 laa4 naa5 do1 daat6 baa1\", \"mou4 laa5 laa1 do1 daat6 baa1\", \"mou4 laa5 laa2 do1 daat6 baa1\", \"mou4 laa5 laa4 do1 daat6 baa1\", \"mou4 laa5 laa5 do1 daat6 baa1\", \"mou4 laa5 naa2 do1 daat6 baa1\", \"mou4 laa5 naa4 do1 daat6 baa1\", \"mou4 laa5 naa5 do1 daat6 baa1\", \"mou4 naa2 laa1 do1 daat6 baa1\", \"mou4 naa2 laa2 do1 daat6 baa1\", \"mou4 naa2 laa4 do1 daat6 baa1\", \"mou4 naa2 laa5 do1 daat6 baa1\"]",
+        "line": 199143,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "無嗱嗱多噠疤",
+        "work_count": 155
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "mou4 laa1 laa2 do1 daat6 baa1",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "無嗱嗱多噠疤",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"mou4 laa1 laa1 do1 daat6 baa1\", \"mou4 laa1 laa2 do1 daat6 baa1\", \"mou4 laa1 laa4 do1 daat6 baa1\", \"mou4 laa1 laa5 do1 daat6 baa1\", \"mou4 laa1 naa2 do1 daat6 baa1\", \"mou4 laa1 naa4 do1 daat6 baa1\", \"mou4 laa1 naa5 do1 daat6 baa1\", \"mou4 laa2 laa1 do1 daat6 baa1\", \"mou4 laa2 laa2 do1 daat6 baa1\", \"mou4 laa2 laa4 do1 daat6 baa1\", \"mou4 laa2 laa5 do1 daat6 baa1\", \"mou4 laa2 naa2 do1 daat6 baa1\", \"mou4 laa2 naa4 do1 daat6 baa1\", \"mou4 laa2 naa5 do1 daat6 baa1\", \"mou4 laa4 laa1 do1 daat6 baa1\", \"mou4 laa4 laa2 do1 daat6 baa1\", \"mou4 laa4 laa4 do1 daat6 baa1\", \"mou4 laa4 laa5 do1 daat6 baa1\", \"mou4 laa4 naa2 do1 daat6 baa1\", \"mou4 laa4 naa4 do1 daat6 baa1\", \"mou4 laa4 naa5 do1 daat6 baa1\", \"mou4 laa5 laa1 do1 daat6 baa1\", \"mou4 laa5 laa2 do1 daat6 baa1\", \"mou4 laa5 laa4 do1 daat6 baa1\", \"mou4 laa5 laa5 do1 daat6 baa1\", \"mou4 laa5 naa2 do1 daat6 baa1\", \"mou4 laa5 naa4 do1 daat6 baa1\", \"mou4 laa5 naa5 do1 daat6 baa1\", \"mou4 naa2 laa1 do1 daat6 baa1\", \"mou4 naa2 laa2 do1 daat6 baa1\", \"mou4 naa2 laa4 do1 daat6 baa1\", \"mou4 naa2 laa5 do1 daat6 baa1\"]",
+        "line": 199143,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "無嗱嗱多噠疤",
+        "work_count": 155
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "mou4 laa1 laa4 do1 daat6 baa1",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "無嗱嗱多噠疤",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"mou4 laa1 laa1 do1 daat6 baa1\", \"mou4 laa1 laa2 do1 daat6 baa1\", \"mou4 laa1 laa4 do1 daat6 baa1\", \"mou4 laa1 laa5 do1 daat6 baa1\", \"mou4 laa1 naa2 do1 daat6 baa1\", \"mou4 laa1 naa4 do1 daat6 baa1\", \"mou4 laa1 naa5 do1 daat6 baa1\", \"mou4 laa2 laa1 do1 daat6 baa1\", \"mou4 laa2 laa2 do1 daat6 baa1\", \"mou4 laa2 laa4 do1 daat6 baa1\", \"mou4 laa2 laa5 do1 daat6 baa1\", \"mou4 laa2 naa2 do1 daat6 baa1\", \"mou4 laa2 naa4 do1 daat6 baa1\", \"mou4 laa2 naa5 do1 daat6 baa1\", \"mou4 laa4 laa1 do1 daat6 baa1\", \"mou4 laa4 laa2 do1 daat6 baa1\", \"mou4 laa4 laa4 do1 daat6 baa1\", \"mou4 laa4 laa5 do1 daat6 baa1\", \"mou4 laa4 naa2 do1 daat6 baa1\", \"mou4 laa4 naa4 do1 daat6 baa1\", \"mou4 laa4 naa5 do1 daat6 baa1\", \"mou4 laa5 laa1 do1 daat6 baa1\", \"mou4 laa5 laa2 do1 daat6 baa1\", \"mou4 laa5 laa4 do1 daat6 baa1\", \"mou4 laa5 laa5 do1 daat6 baa1\", \"mou4 laa5 naa2 do1 daat6 baa1\", \"mou4 laa5 naa4 do1 daat6 baa1\", \"mou4 laa5 naa5 do1 daat6 baa1\", \"mou4 naa2 laa1 do1 daat6 baa1\", \"mou4 naa2 laa2 do1 daat6 baa1\", \"mou4 naa2 laa4 do1 daat6 baa1\", \"mou4 naa2 laa5 do1 daat6 baa1\"]",
+        "line": 199143,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "無嗱嗱多噠疤",
+        "work_count": 155
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "mou4 laa1 laa5 do1 daat6 baa1",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "無嗱嗱多噠疤",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"mou4 laa1 laa1 do1 daat6 baa1\", \"mou4 laa1 laa2 do1 daat6 baa1\", \"mou4 laa1 laa4 do1 daat6 baa1\", \"mou4 laa1 laa5 do1 daat6 baa1\", \"mou4 laa1 naa2 do1 daat6 baa1\", \"mou4 laa1 naa4 do1 daat6 baa1\", \"mou4 laa1 naa5 do1 daat6 baa1\", \"mou4 laa2 laa1 do1 daat6 baa1\", \"mou4 laa2 laa2 do1 daat6 baa1\", \"mou4 laa2 laa4 do1 daat6 baa1\", \"mou4 laa2 laa5 do1 daat6 baa1\", \"mou4 laa2 naa2 do1 daat6 baa1\", \"mou4 laa2 naa4 do1 daat6 baa1\", \"mou4 laa2 naa5 do1 daat6 baa1\", \"mou4 laa4 laa1 do1 daat6 baa1\", \"mou4 laa4 laa2 do1 daat6 baa1\", \"mou4 laa4 laa4 do1 daat6 baa1\", \"mou4 laa4 laa5 do1 daat6 baa1\", \"mou4 laa4 naa2 do1 daat6 baa1\", \"mou4 laa4 naa4 do1 daat6 baa1\", \"mou4 laa4 naa5 do1 daat6 baa1\", \"mou4 laa5 laa1 do1 daat6 baa1\", \"mou4 laa5 laa2 do1 daat6 baa1\", \"mou4 laa5 laa4 do1 daat6 baa1\", \"mou4 laa5 laa5 do1 daat6 baa1\", \"mou4 laa5 naa2 do1 daat6 baa1\", \"mou4 laa5 naa4 do1 daat6 baa1\", \"mou4 laa5 naa5 do1 daat6 baa1\", \"mou4 naa2 laa1 do1 daat6 baa1\", \"mou4 naa2 laa2 do1 daat6 baa1\", \"mou4 naa2 laa4 do1 daat6 baa1\", \"mou4 naa2 laa5 do1 daat6 baa1\"]",
+        "line": 199143,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "無嗱嗱多噠疤",
+        "work_count": 155
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "mou4 laa1 naa4 do1 daat6 baa1",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "無嗱嗱多噠疤",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"mou4 laa1 laa1 do1 daat6 baa1\", \"mou4 laa1 laa2 do1 daat6 baa1\", \"mou4 laa1 laa4 do1 daat6 baa1\", \"mou4 laa1 laa5 do1 daat6 baa1\", \"mou4 laa1 naa2 do1 daat6 baa1\", \"mou4 laa1 naa4 do1 daat6 baa1\", \"mou4 laa1 naa5 do1 daat6 baa1\", \"mou4 laa2 laa1 do1 daat6 baa1\", \"mou4 laa2 laa2 do1 daat6 baa1\", \"mou4 laa2 laa4 do1 daat6 baa1\", \"mou4 laa2 laa5 do1 daat6 baa1\", \"mou4 laa2 naa2 do1 daat6 baa1\", \"mou4 laa2 naa4 do1 daat6 baa1\", \"mou4 laa2 naa5 do1 daat6 baa1\", \"mou4 laa4 laa1 do1 daat6 baa1\", \"mou4 laa4 laa2 do1 daat6 baa1\", \"mou4 laa4 laa4 do1 daat6 baa1\", \"mou4 laa4 laa5 do1 daat6 baa1\", \"mou4 laa4 naa2 do1 daat6 baa1\", \"mou4 laa4 naa4 do1 daat6 baa1\", \"mou4 laa4 naa5 do1 daat6 baa1\", \"mou4 laa5 laa1 do1 daat6 baa1\", \"mou4 laa5 laa2 do1 daat6 baa1\", \"mou4 laa5 laa4 do1 daat6 baa1\", \"mou4 laa5 laa5 do1 daat6 baa1\", \"mou4 laa5 naa2 do1 daat6 baa1\", \"mou4 laa5 naa4 do1 daat6 baa1\", \"mou4 laa5 naa5 do1 daat6 baa1\", \"mou4 naa2 laa1 do1 daat6 baa1\", \"mou4 naa2 laa2 do1 daat6 baa1\", \"mou4 naa2 laa4 do1 daat6 baa1\", \"mou4 naa2 laa5 do1 daat6 baa1\"]",
+        "line": 199143,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "無嗱嗱多噠疤",
+        "work_count": 155
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "mou4 laa2 laa1 do1 daat6 baa1",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "無嗱嗱多噠疤",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"mou4 laa1 laa1 do1 daat6 baa1\", \"mou4 laa1 laa2 do1 daat6 baa1\", \"mou4 laa1 laa4 do1 daat6 baa1\", \"mou4 laa1 laa5 do1 daat6 baa1\", \"mou4 laa1 naa2 do1 daat6 baa1\", \"mou4 laa1 naa4 do1 daat6 baa1\", \"mou4 laa1 naa5 do1 daat6 baa1\", \"mou4 laa2 laa1 do1 daat6 baa1\", \"mou4 laa2 laa2 do1 daat6 baa1\", \"mou4 laa2 laa4 do1 daat6 baa1\", \"mou4 laa2 laa5 do1 daat6 baa1\", \"mou4 laa2 naa2 do1 daat6 baa1\", \"mou4 laa2 naa4 do1 daat6 baa1\", \"mou4 laa2 naa5 do1 daat6 baa1\", \"mou4 laa4 laa1 do1 daat6 baa1\", \"mou4 laa4 laa2 do1 daat6 baa1\", \"mou4 laa4 laa4 do1 daat6 baa1\", \"mou4 laa4 laa5 do1 daat6 baa1\", \"mou4 laa4 naa2 do1 daat6 baa1\", \"mou4 laa4 naa4 do1 daat6 baa1\", \"mou4 laa4 naa5 do1 daat6 baa1\", \"mou4 laa5 laa1 do1 daat6 baa1\", \"mou4 laa5 laa2 do1 daat6 baa1\", \"mou4 laa5 laa4 do1 daat6 baa1\", \"mou4 laa5 laa5 do1 daat6 baa1\", \"mou4 laa5 naa2 do1 daat6 baa1\", \"mou4 laa5 naa4 do1 daat6 baa1\", \"mou4 laa5 naa5 do1 daat6 baa1\", \"mou4 naa2 laa1 do1 daat6 baa1\", \"mou4 naa2 laa2 do1 daat6 baa1\", \"mou4 naa2 laa4 do1 daat6 baa1\", \"mou4 naa2 laa5 do1 daat6 baa1\"]",
+        "line": 199143,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "無嗱嗱多噠疤",
+        "work_count": 155
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "mou4 laa2 laa2 do1 daat6 baa1",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "無嗱嗱多噠疤",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"mou4 laa1 laa1 do1 daat6 baa1\", \"mou4 laa1 laa2 do1 daat6 baa1\", \"mou4 laa1 laa4 do1 daat6 baa1\", \"mou4 laa1 laa5 do1 daat6 baa1\", \"mou4 laa1 naa2 do1 daat6 baa1\", \"mou4 laa1 naa4 do1 daat6 baa1\", \"mou4 laa1 naa5 do1 daat6 baa1\", \"mou4 laa2 laa1 do1 daat6 baa1\", \"mou4 laa2 laa2 do1 daat6 baa1\", \"mou4 laa2 laa4 do1 daat6 baa1\", \"mou4 laa2 laa5 do1 daat6 baa1\", \"mou4 laa2 naa2 do1 daat6 baa1\", \"mou4 laa2 naa4 do1 daat6 baa1\", \"mou4 laa2 naa5 do1 daat6 baa1\", \"mou4 laa4 laa1 do1 daat6 baa1\", \"mou4 laa4 laa2 do1 daat6 baa1\", \"mou4 laa4 laa4 do1 daat6 baa1\", \"mou4 laa4 laa5 do1 daat6 baa1\", \"mou4 laa4 naa2 do1 daat6 baa1\", \"mou4 laa4 naa4 do1 daat6 baa1\", \"mou4 laa4 naa5 do1 daat6 baa1\", \"mou4 laa5 laa1 do1 daat6 baa1\", \"mou4 laa5 laa2 do1 daat6 baa1\", \"mou4 laa5 laa4 do1 daat6 baa1\", \"mou4 laa5 laa5 do1 daat6 baa1\", \"mou4 laa5 naa2 do1 daat6 baa1\", \"mou4 laa5 naa4 do1 daat6 baa1\", \"mou4 laa5 naa5 do1 daat6 baa1\", \"mou4 naa2 laa1 do1 daat6 baa1\", \"mou4 naa2 laa2 do1 daat6 baa1\", \"mou4 naa2 laa4 do1 daat6 baa1\", \"mou4 naa2 laa5 do1 daat6 baa1\"]",
+        "line": 199143,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "無嗱嗱多噠疤",
+        "work_count": 155
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "mou4 laa2 laa4 do1 daat6 baa1",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "無嗱嗱多噠疤",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"mou4 laa1 laa1 do1 daat6 baa1\", \"mou4 laa1 laa2 do1 daat6 baa1\", \"mou4 laa1 laa4 do1 daat6 baa1\", \"mou4 laa1 laa5 do1 daat6 baa1\", \"mou4 laa1 naa2 do1 daat6 baa1\", \"mou4 laa1 naa4 do1 daat6 baa1\", \"mou4 laa1 naa5 do1 daat6 baa1\", \"mou4 laa2 laa1 do1 daat6 baa1\", \"mou4 laa2 laa2 do1 daat6 baa1\", \"mou4 laa2 laa4 do1 daat6 baa1\", \"mou4 laa2 laa5 do1 daat6 baa1\", \"mou4 laa2 naa2 do1 daat6 baa1\", \"mou4 laa2 naa4 do1 daat6 baa1\", \"mou4 laa2 naa5 do1 daat6 baa1\", \"mou4 laa4 laa1 do1 daat6 baa1\", \"mou4 laa4 laa2 do1 daat6 baa1\", \"mou4 laa4 laa4 do1 daat6 baa1\", \"mou4 laa4 laa5 do1 daat6 baa1\", \"mou4 laa4 naa2 do1 daat6 baa1\", \"mou4 laa4 naa4 do1 daat6 baa1\", \"mou4 laa4 naa5 do1 daat6 baa1\", \"mou4 laa5 laa1 do1 daat6 baa1\", \"mou4 laa5 laa2 do1 daat6 baa1\", \"mou4 laa5 laa4 do1 daat6 baa1\", \"mou4 laa5 laa5 do1 daat6 baa1\", \"mou4 laa5 naa2 do1 daat6 baa1\", \"mou4 laa5 naa4 do1 daat6 baa1\", \"mou4 laa5 naa5 do1 daat6 baa1\", \"mou4 naa2 laa1 do1 daat6 baa1\", \"mou4 naa2 laa2 do1 daat6 baa1\", \"mou4 naa2 laa4 do1 daat6 baa1\", \"mou4 naa2 laa5 do1 daat6 baa1\"]",
+        "line": 199143,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "無嗱嗱多噠疤",
+        "work_count": 155
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "mou4 laa2 laa5 do1 daat6 baa1",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "無嗱嗱多噠疤",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"mou4 laa1 laa1 do1 daat6 baa1\", \"mou4 laa1 laa2 do1 daat6 baa1\", \"mou4 laa1 laa4 do1 daat6 baa1\", \"mou4 laa1 laa5 do1 daat6 baa1\", \"mou4 laa1 naa2 do1 daat6 baa1\", \"mou4 laa1 naa4 do1 daat6 baa1\", \"mou4 laa1 naa5 do1 daat6 baa1\", \"mou4 laa2 laa1 do1 daat6 baa1\", \"mou4 laa2 laa2 do1 daat6 baa1\", \"mou4 laa2 laa4 do1 daat6 baa1\", \"mou4 laa2 laa5 do1 daat6 baa1\", \"mou4 laa2 naa2 do1 daat6 baa1\", \"mou4 laa2 naa4 do1 daat6 baa1\", \"mou4 laa2 naa5 do1 daat6 baa1\", \"mou4 laa4 laa1 do1 daat6 baa1\", \"mou4 laa4 laa2 do1 daat6 baa1\", \"mou4 laa4 laa4 do1 daat6 baa1\", \"mou4 laa4 laa5 do1 daat6 baa1\", \"mou4 laa4 naa2 do1 daat6 baa1\", \"mou4 laa4 naa4 do1 daat6 baa1\", \"mou4 laa4 naa5 do1 daat6 baa1\", \"mou4 laa5 laa1 do1 daat6 baa1\", \"mou4 laa5 laa2 do1 daat6 baa1\", \"mou4 laa5 laa4 do1 daat6 baa1\", \"mou4 laa5 laa5 do1 daat6 baa1\", \"mou4 laa5 naa2 do1 daat6 baa1\", \"mou4 laa5 naa4 do1 daat6 baa1\", \"mou4 laa5 naa5 do1 daat6 baa1\", \"mou4 naa2 laa1 do1 daat6 baa1\", \"mou4 naa2 laa2 do1 daat6 baa1\", \"mou4 naa2 laa4 do1 daat6 baa1\", \"mou4 naa2 laa5 do1 daat6 baa1\"]",
+        "line": 199143,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "無嗱嗱多噠疤",
+        "work_count": 155
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "mou4 laa2 naa4 do1 daat6 baa1",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "無嗱嗱多噠疤",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"mou4 laa1 laa1 do1 daat6 baa1\", \"mou4 laa1 laa2 do1 daat6 baa1\", \"mou4 laa1 laa4 do1 daat6 baa1\", \"mou4 laa1 laa5 do1 daat6 baa1\", \"mou4 laa1 naa2 do1 daat6 baa1\", \"mou4 laa1 naa4 do1 daat6 baa1\", \"mou4 laa1 naa5 do1 daat6 baa1\", \"mou4 laa2 laa1 do1 daat6 baa1\", \"mou4 laa2 laa2 do1 daat6 baa1\", \"mou4 laa2 laa4 do1 daat6 baa1\", \"mou4 laa2 laa5 do1 daat6 baa1\", \"mou4 laa2 naa2 do1 daat6 baa1\", \"mou4 laa2 naa4 do1 daat6 baa1\", \"mou4 laa2 naa5 do1 daat6 baa1\", \"mou4 laa4 laa1 do1 daat6 baa1\", \"mou4 laa4 laa2 do1 daat6 baa1\", \"mou4 laa4 laa4 do1 daat6 baa1\", \"mou4 laa4 laa5 do1 daat6 baa1\", \"mou4 laa4 naa2 do1 daat6 baa1\", \"mou4 laa4 naa4 do1 daat6 baa1\", \"mou4 laa4 naa5 do1 daat6 baa1\", \"mou4 laa5 laa1 do1 daat6 baa1\", \"mou4 laa5 laa2 do1 daat6 baa1\", \"mou4 laa5 laa4 do1 daat6 baa1\", \"mou4 laa5 laa5 do1 daat6 baa1\", \"mou4 laa5 naa2 do1 daat6 baa1\", \"mou4 laa5 naa4 do1 daat6 baa1\", \"mou4 laa5 naa5 do1 daat6 baa1\", \"mou4 naa2 laa1 do1 daat6 baa1\", \"mou4 naa2 laa2 do1 daat6 baa1\", \"mou4 naa2 laa4 do1 daat6 baa1\", \"mou4 naa2 laa5 do1 daat6 baa1\"]",
+        "line": 199143,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "無嗱嗱多噠疤",
+        "work_count": 155
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "mou4 laa4 laa1 do1 daat6 baa1",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "無嗱嗱多噠疤",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"mou4 laa1 laa1 do1 daat6 baa1\", \"mou4 laa1 laa2 do1 daat6 baa1\", \"mou4 laa1 laa4 do1 daat6 baa1\", \"mou4 laa1 laa5 do1 daat6 baa1\", \"mou4 laa1 naa2 do1 daat6 baa1\", \"mou4 laa1 naa4 do1 daat6 baa1\", \"mou4 laa1 naa5 do1 daat6 baa1\", \"mou4 laa2 laa1 do1 daat6 baa1\", \"mou4 laa2 laa2 do1 daat6 baa1\", \"mou4 laa2 laa4 do1 daat6 baa1\", \"mou4 laa2 laa5 do1 daat6 baa1\", \"mou4 laa2 naa2 do1 daat6 baa1\", \"mou4 laa2 naa4 do1 daat6 baa1\", \"mou4 laa2 naa5 do1 daat6 baa1\", \"mou4 laa4 laa1 do1 daat6 baa1\", \"mou4 laa4 laa2 do1 daat6 baa1\", \"mou4 laa4 laa4 do1 daat6 baa1\", \"mou4 laa4 laa5 do1 daat6 baa1\", \"mou4 laa4 naa2 do1 daat6 baa1\", \"mou4 laa4 naa4 do1 daat6 baa1\", \"mou4 laa4 naa5 do1 daat6 baa1\", \"mou4 laa5 laa1 do1 daat6 baa1\", \"mou4 laa5 laa2 do1 daat6 baa1\", \"mou4 laa5 laa4 do1 daat6 baa1\", \"mou4 laa5 laa5 do1 daat6 baa1\", \"mou4 laa5 naa2 do1 daat6 baa1\", \"mou4 laa5 naa4 do1 daat6 baa1\", \"mou4 laa5 naa5 do1 daat6 baa1\", \"mou4 naa2 laa1 do1 daat6 baa1\", \"mou4 naa2 laa2 do1 daat6 baa1\", \"mou4 naa2 laa4 do1 daat6 baa1\", \"mou4 naa2 laa5 do1 daat6 baa1\"]",
+        "line": 199143,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "無嗱嗱多噠疤",
+        "work_count": 155
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "mou4 laa4 laa2 do1 daat6 baa1",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "無嗱嗱多噠疤",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"mou4 laa1 laa1 do1 daat6 baa1\", \"mou4 laa1 laa2 do1 daat6 baa1\", \"mou4 laa1 laa4 do1 daat6 baa1\", \"mou4 laa1 laa5 do1 daat6 baa1\", \"mou4 laa1 naa2 do1 daat6 baa1\", \"mou4 laa1 naa4 do1 daat6 baa1\", \"mou4 laa1 naa5 do1 daat6 baa1\", \"mou4 laa2 laa1 do1 daat6 baa1\", \"mou4 laa2 laa2 do1 daat6 baa1\", \"mou4 laa2 laa4 do1 daat6 baa1\", \"mou4 laa2 laa5 do1 daat6 baa1\", \"mou4 laa2 naa2 do1 daat6 baa1\", \"mou4 laa2 naa4 do1 daat6 baa1\", \"mou4 laa2 naa5 do1 daat6 baa1\", \"mou4 laa4 laa1 do1 daat6 baa1\", \"mou4 laa4 laa2 do1 daat6 baa1\", \"mou4 laa4 laa4 do1 daat6 baa1\", \"mou4 laa4 laa5 do1 daat6 baa1\", \"mou4 laa4 naa2 do1 daat6 baa1\", \"mou4 laa4 naa4 do1 daat6 baa1\", \"mou4 laa4 naa5 do1 daat6 baa1\", \"mou4 laa5 laa1 do1 daat6 baa1\", \"mou4 laa5 laa2 do1 daat6 baa1\", \"mou4 laa5 laa4 do1 daat6 baa1\", \"mou4 laa5 laa5 do1 daat6 baa1\", \"mou4 laa5 naa2 do1 daat6 baa1\", \"mou4 laa5 naa4 do1 daat6 baa1\", \"mou4 laa5 naa5 do1 daat6 baa1\", \"mou4 naa2 laa1 do1 daat6 baa1\", \"mou4 naa2 laa2 do1 daat6 baa1\", \"mou4 naa2 laa4 do1 daat6 baa1\", \"mou4 naa2 laa5 do1 daat6 baa1\"]",
+        "line": 199143,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "無嗱嗱多噠疤",
+        "work_count": 155
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "mou4 laa4 laa4 do1 daat6 baa1",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "無嗱嗱多噠疤",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"mou4 laa1 laa1 do1 daat6 baa1\", \"mou4 laa1 laa2 do1 daat6 baa1\", \"mou4 laa1 laa4 do1 daat6 baa1\", \"mou4 laa1 laa5 do1 daat6 baa1\", \"mou4 laa1 naa2 do1 daat6 baa1\", \"mou4 laa1 naa4 do1 daat6 baa1\", \"mou4 laa1 naa5 do1 daat6 baa1\", \"mou4 laa2 laa1 do1 daat6 baa1\", \"mou4 laa2 laa2 do1 daat6 baa1\", \"mou4 laa2 laa4 do1 daat6 baa1\", \"mou4 laa2 laa5 do1 daat6 baa1\", \"mou4 laa2 naa2 do1 daat6 baa1\", \"mou4 laa2 naa4 do1 daat6 baa1\", \"mou4 laa2 naa5 do1 daat6 baa1\", \"mou4 laa4 laa1 do1 daat6 baa1\", \"mou4 laa4 laa2 do1 daat6 baa1\", \"mou4 laa4 laa4 do1 daat6 baa1\", \"mou4 laa4 laa5 do1 daat6 baa1\", \"mou4 laa4 naa2 do1 daat6 baa1\", \"mou4 laa4 naa4 do1 daat6 baa1\", \"mou4 laa4 naa5 do1 daat6 baa1\", \"mou4 laa5 laa1 do1 daat6 baa1\", \"mou4 laa5 laa2 do1 daat6 baa1\", \"mou4 laa5 laa4 do1 daat6 baa1\", \"mou4 laa5 laa5 do1 daat6 baa1\", \"mou4 laa5 naa2 do1 daat6 baa1\", \"mou4 laa5 naa4 do1 daat6 baa1\", \"mou4 laa5 naa5 do1 daat6 baa1\", \"mou4 naa2 laa1 do1 daat6 baa1\", \"mou4 naa2 laa2 do1 daat6 baa1\", \"mou4 naa2 laa4 do1 daat6 baa1\", \"mou4 naa2 laa5 do1 daat6 baa1\"]",
+        "line": 199143,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "無嗱嗱多噠疤",
+        "work_count": 155
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "mou4 laa4 laa5 do1 daat6 baa1",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "無嗱嗱多噠疤",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"mou4 laa1 laa1 do1 daat6 baa1\", \"mou4 laa1 laa2 do1 daat6 baa1\", \"mou4 laa1 laa4 do1 daat6 baa1\", \"mou4 laa1 laa5 do1 daat6 baa1\", \"mou4 laa1 naa2 do1 daat6 baa1\", \"mou4 laa1 naa4 do1 daat6 baa1\", \"mou4 laa1 naa5 do1 daat6 baa1\", \"mou4 laa2 laa1 do1 daat6 baa1\", \"mou4 laa2 laa2 do1 daat6 baa1\", \"mou4 laa2 laa4 do1 daat6 baa1\", \"mou4 laa2 laa5 do1 daat6 baa1\", \"mou4 laa2 naa2 do1 daat6 baa1\", \"mou4 laa2 naa4 do1 daat6 baa1\", \"mou4 laa2 naa5 do1 daat6 baa1\", \"mou4 laa4 laa1 do1 daat6 baa1\", \"mou4 laa4 laa2 do1 daat6 baa1\", \"mou4 laa4 laa4 do1 daat6 baa1\", \"mou4 laa4 laa5 do1 daat6 baa1\", \"mou4 laa4 naa2 do1 daat6 baa1\", \"mou4 laa4 naa4 do1 daat6 baa1\", \"mou4 laa4 naa5 do1 daat6 baa1\", \"mou4 laa5 laa1 do1 daat6 baa1\", \"mou4 laa5 laa2 do1 daat6 baa1\", \"mou4 laa5 laa4 do1 daat6 baa1\", \"mou4 laa5 laa5 do1 daat6 baa1\", \"mou4 laa5 naa2 do1 daat6 baa1\", \"mou4 laa5 naa4 do1 daat6 baa1\", \"mou4 laa5 naa5 do1 daat6 baa1\", \"mou4 naa2 laa1 do1 daat6 baa1\", \"mou4 naa2 laa2 do1 daat6 baa1\", \"mou4 naa2 laa4 do1 daat6 baa1\", \"mou4 naa2 laa5 do1 daat6 baa1\"]",
+        "line": 199143,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "無嗱嗱多噠疤",
+        "work_count": 155
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "mou4 laa4 naa4 do1 daat6 baa1",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "無嗱嗱多噠疤",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"mou4 laa1 laa1 do1 daat6 baa1\", \"mou4 laa1 laa2 do1 daat6 baa1\", \"mou4 laa1 laa4 do1 daat6 baa1\", \"mou4 laa1 laa5 do1 daat6 baa1\", \"mou4 laa1 naa2 do1 daat6 baa1\", \"mou4 laa1 naa4 do1 daat6 baa1\", \"mou4 laa1 naa5 do1 daat6 baa1\", \"mou4 laa2 laa1 do1 daat6 baa1\", \"mou4 laa2 laa2 do1 daat6 baa1\", \"mou4 laa2 laa4 do1 daat6 baa1\", \"mou4 laa2 laa5 do1 daat6 baa1\", \"mou4 laa2 naa2 do1 daat6 baa1\", \"mou4 laa2 naa4 do1 daat6 baa1\", \"mou4 laa2 naa5 do1 daat6 baa1\", \"mou4 laa4 laa1 do1 daat6 baa1\", \"mou4 laa4 laa2 do1 daat6 baa1\", \"mou4 laa4 laa4 do1 daat6 baa1\", \"mou4 laa4 laa5 do1 daat6 baa1\", \"mou4 laa4 naa2 do1 daat6 baa1\", \"mou4 laa4 naa4 do1 daat6 baa1\", \"mou4 laa4 naa5 do1 daat6 baa1\", \"mou4 laa5 laa1 do1 daat6 baa1\", \"mou4 laa5 laa2 do1 daat6 baa1\", \"mou4 laa5 laa4 do1 daat6 baa1\", \"mou4 laa5 laa5 do1 daat6 baa1\", \"mou4 laa5 naa2 do1 daat6 baa1\", \"mou4 laa5 naa4 do1 daat6 baa1\", \"mou4 laa5 naa5 do1 daat6 baa1\", \"mou4 naa2 laa1 do1 daat6 baa1\", \"mou4 naa2 laa2 do1 daat6 baa1\", \"mou4 naa2 laa4 do1 daat6 baa1\", \"mou4 naa2 laa5 do1 daat6 baa1\"]",
+        "line": 199143,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "無嗱嗱多噠疤",
+        "work_count": 155
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "mou4 laa5 laa1 do1 daat6 baa1",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "無嗱嗱多噠疤",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"mou4 laa1 laa1 do1 daat6 baa1\", \"mou4 laa1 laa2 do1 daat6 baa1\", \"mou4 laa1 laa4 do1 daat6 baa1\", \"mou4 laa1 laa5 do1 daat6 baa1\", \"mou4 laa1 naa2 do1 daat6 baa1\", \"mou4 laa1 naa4 do1 daat6 baa1\", \"mou4 laa1 naa5 do1 daat6 baa1\", \"mou4 laa2 laa1 do1 daat6 baa1\", \"mou4 laa2 laa2 do1 daat6 baa1\", \"mou4 laa2 laa4 do1 daat6 baa1\", \"mou4 laa2 laa5 do1 daat6 baa1\", \"mou4 laa2 naa2 do1 daat6 baa1\", \"mou4 laa2 naa4 do1 daat6 baa1\", \"mou4 laa2 naa5 do1 daat6 baa1\", \"mou4 laa4 laa1 do1 daat6 baa1\", \"mou4 laa4 laa2 do1 daat6 baa1\", \"mou4 laa4 laa4 do1 daat6 baa1\", \"mou4 laa4 laa5 do1 daat6 baa1\", \"mou4 laa4 naa2 do1 daat6 baa1\", \"mou4 laa4 naa4 do1 daat6 baa1\", \"mou4 laa4 naa5 do1 daat6 baa1\", \"mou4 laa5 laa1 do1 daat6 baa1\", \"mou4 laa5 laa2 do1 daat6 baa1\", \"mou4 laa5 laa4 do1 daat6 baa1\", \"mou4 laa5 laa5 do1 daat6 baa1\", \"mou4 laa5 naa2 do1 daat6 baa1\", \"mou4 laa5 naa4 do1 daat6 baa1\", \"mou4 laa5 naa5 do1 daat6 baa1\", \"mou4 naa2 laa1 do1 daat6 baa1\", \"mou4 naa2 laa2 do1 daat6 baa1\", \"mou4 naa2 laa4 do1 daat6 baa1\", \"mou4 naa2 laa5 do1 daat6 baa1\"]",
+        "line": 199143,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "無嗱嗱多噠疤",
+        "work_count": 155
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "mou4 laa5 laa2 do1 daat6 baa1",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "無嗱嗱多噠疤",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"mou4 laa1 laa1 do1 daat6 baa1\", \"mou4 laa1 laa2 do1 daat6 baa1\", \"mou4 laa1 laa4 do1 daat6 baa1\", \"mou4 laa1 laa5 do1 daat6 baa1\", \"mou4 laa1 naa2 do1 daat6 baa1\", \"mou4 laa1 naa4 do1 daat6 baa1\", \"mou4 laa1 naa5 do1 daat6 baa1\", \"mou4 laa2 laa1 do1 daat6 baa1\", \"mou4 laa2 laa2 do1 daat6 baa1\", \"mou4 laa2 laa4 do1 daat6 baa1\", \"mou4 laa2 laa5 do1 daat6 baa1\", \"mou4 laa2 naa2 do1 daat6 baa1\", \"mou4 laa2 naa4 do1 daat6 baa1\", \"mou4 laa2 naa5 do1 daat6 baa1\", \"mou4 laa4 laa1 do1 daat6 baa1\", \"mou4 laa4 laa2 do1 daat6 baa1\", \"mou4 laa4 laa4 do1 daat6 baa1\", \"mou4 laa4 laa5 do1 daat6 baa1\", \"mou4 laa4 naa2 do1 daat6 baa1\", \"mou4 laa4 naa4 do1 daat6 baa1\", \"mou4 laa4 naa5 do1 daat6 baa1\", \"mou4 laa5 laa1 do1 daat6 baa1\", \"mou4 laa5 laa2 do1 daat6 baa1\", \"mou4 laa5 laa4 do1 daat6 baa1\", \"mou4 laa5 laa5 do1 daat6 baa1\", \"mou4 laa5 naa2 do1 daat6 baa1\", \"mou4 laa5 naa4 do1 daat6 baa1\", \"mou4 laa5 naa5 do1 daat6 baa1\", \"mou4 naa2 laa1 do1 daat6 baa1\", \"mou4 naa2 laa2 do1 daat6 baa1\", \"mou4 naa2 laa4 do1 daat6 baa1\", \"mou4 naa2 laa5 do1 daat6 baa1\"]",
+        "line": 199143,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "無嗱嗱多噠疤",
+        "work_count": 155
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "mou4 laa5 laa4 do1 daat6 baa1",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "無嗱嗱多噠疤",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"mou4 laa1 laa1 do1 daat6 baa1\", \"mou4 laa1 laa2 do1 daat6 baa1\", \"mou4 laa1 laa4 do1 daat6 baa1\", \"mou4 laa1 laa5 do1 daat6 baa1\", \"mou4 laa1 naa2 do1 daat6 baa1\", \"mou4 laa1 naa4 do1 daat6 baa1\", \"mou4 laa1 naa5 do1 daat6 baa1\", \"mou4 laa2 laa1 do1 daat6 baa1\", \"mou4 laa2 laa2 do1 daat6 baa1\", \"mou4 laa2 laa4 do1 daat6 baa1\", \"mou4 laa2 laa5 do1 daat6 baa1\", \"mou4 laa2 naa2 do1 daat6 baa1\", \"mou4 laa2 naa4 do1 daat6 baa1\", \"mou4 laa2 naa5 do1 daat6 baa1\", \"mou4 laa4 laa1 do1 daat6 baa1\", \"mou4 laa4 laa2 do1 daat6 baa1\", \"mou4 laa4 laa4 do1 daat6 baa1\", \"mou4 laa4 laa5 do1 daat6 baa1\", \"mou4 laa4 naa2 do1 daat6 baa1\", \"mou4 laa4 naa4 do1 daat6 baa1\", \"mou4 laa4 naa5 do1 daat6 baa1\", \"mou4 laa5 laa1 do1 daat6 baa1\", \"mou4 laa5 laa2 do1 daat6 baa1\", \"mou4 laa5 laa4 do1 daat6 baa1\", \"mou4 laa5 laa5 do1 daat6 baa1\", \"mou4 laa5 naa2 do1 daat6 baa1\", \"mou4 laa5 naa4 do1 daat6 baa1\", \"mou4 laa5 naa5 do1 daat6 baa1\", \"mou4 naa2 laa1 do1 daat6 baa1\", \"mou4 naa2 laa2 do1 daat6 baa1\", \"mou4 naa2 laa4 do1 daat6 baa1\", \"mou4 naa2 laa5 do1 daat6 baa1\"]",
+        "line": 199143,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "無嗱嗱多噠疤",
+        "work_count": 155
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "mou4 laa5 laa5 do1 daat6 baa1",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "無嗱嗱多噠疤",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"mou4 laa1 laa1 do1 daat6 baa1\", \"mou4 laa1 laa2 do1 daat6 baa1\", \"mou4 laa1 laa4 do1 daat6 baa1\", \"mou4 laa1 laa5 do1 daat6 baa1\", \"mou4 laa1 naa2 do1 daat6 baa1\", \"mou4 laa1 naa4 do1 daat6 baa1\", \"mou4 laa1 naa5 do1 daat6 baa1\", \"mou4 laa2 laa1 do1 daat6 baa1\", \"mou4 laa2 laa2 do1 daat6 baa1\", \"mou4 laa2 laa4 do1 daat6 baa1\", \"mou4 laa2 laa5 do1 daat6 baa1\", \"mou4 laa2 naa2 do1 daat6 baa1\", \"mou4 laa2 naa4 do1 daat6 baa1\", \"mou4 laa2 naa5 do1 daat6 baa1\", \"mou4 laa4 laa1 do1 daat6 baa1\", \"mou4 laa4 laa2 do1 daat6 baa1\", \"mou4 laa4 laa4 do1 daat6 baa1\", \"mou4 laa4 laa5 do1 daat6 baa1\", \"mou4 laa4 naa2 do1 daat6 baa1\", \"mou4 laa4 naa4 do1 daat6 baa1\", \"mou4 laa4 naa5 do1 daat6 baa1\", \"mou4 laa5 laa1 do1 daat6 baa1\", \"mou4 laa5 laa2 do1 daat6 baa1\", \"mou4 laa5 laa4 do1 daat6 baa1\", \"mou4 laa5 laa5 do1 daat6 baa1\", \"mou4 laa5 naa2 do1 daat6 baa1\", \"mou4 laa5 naa4 do1 daat6 baa1\", \"mou4 laa5 naa5 do1 daat6 baa1\", \"mou4 naa2 laa1 do1 daat6 baa1\", \"mou4 naa2 laa2 do1 daat6 baa1\", \"mou4 naa2 laa4 do1 daat6 baa1\", \"mou4 naa2 laa5 do1 daat6 baa1\"]",
+        "line": 199143,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "無嗱嗱多噠疤",
+        "work_count": 155
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "mou4 laa5 naa4 do1 daat6 baa1",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "無嗱嗱多噠疤",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"mou4 laa1 laa1 do1 daat6 baa1\", \"mou4 laa1 laa2 do1 daat6 baa1\", \"mou4 laa1 laa4 do1 daat6 baa1\", \"mou4 laa1 laa5 do1 daat6 baa1\", \"mou4 laa1 naa2 do1 daat6 baa1\", \"mou4 laa1 naa4 do1 daat6 baa1\", \"mou4 laa1 naa5 do1 daat6 baa1\", \"mou4 laa2 laa1 do1 daat6 baa1\", \"mou4 laa2 laa2 do1 daat6 baa1\", \"mou4 laa2 laa4 do1 daat6 baa1\", \"mou4 laa2 laa5 do1 daat6 baa1\", \"mou4 laa2 naa2 do1 daat6 baa1\", \"mou4 laa2 naa4 do1 daat6 baa1\", \"mou4 laa2 naa5 do1 daat6 baa1\", \"mou4 laa4 laa1 do1 daat6 baa1\", \"mou4 laa4 laa2 do1 daat6 baa1\", \"mou4 laa4 laa4 do1 daat6 baa1\", \"mou4 laa4 laa5 do1 daat6 baa1\", \"mou4 laa4 naa2 do1 daat6 baa1\", \"mou4 laa4 naa4 do1 daat6 baa1\", \"mou4 laa4 naa5 do1 daat6 baa1\", \"mou4 laa5 laa1 do1 daat6 baa1\", \"mou4 laa5 laa2 do1 daat6 baa1\", \"mou4 laa5 laa4 do1 daat6 baa1\", \"mou4 laa5 laa5 do1 daat6 baa1\", \"mou4 laa5 naa2 do1 daat6 baa1\", \"mou4 laa5 naa4 do1 daat6 baa1\", \"mou4 laa5 naa5 do1 daat6 baa1\", \"mou4 naa2 laa1 do1 daat6 baa1\", \"mou4 naa2 laa2 do1 daat6 baa1\", \"mou4 naa2 laa4 do1 daat6 baa1\", \"mou4 naa2 laa5 do1 daat6 baa1\"]",
+        "line": 199143,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "無嗱嗱多噠疤",
+        "work_count": 155
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "mou4 naa4 laa1 do1 daat6 baa1",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "無嗱嗱多噠疤",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"mou4 laa1 laa1 do1 daat6 baa1\", \"mou4 laa1 laa2 do1 daat6 baa1\", \"mou4 laa1 laa4 do1 daat6 baa1\", \"mou4 laa1 laa5 do1 daat6 baa1\", \"mou4 laa1 naa2 do1 daat6 baa1\", \"mou4 laa1 naa4 do1 daat6 baa1\", \"mou4 laa1 naa5 do1 daat6 baa1\", \"mou4 laa2 laa1 do1 daat6 baa1\", \"mou4 laa2 laa2 do1 daat6 baa1\", \"mou4 laa2 laa4 do1 daat6 baa1\", \"mou4 laa2 laa5 do1 daat6 baa1\", \"mou4 laa2 naa2 do1 daat6 baa1\", \"mou4 laa2 naa4 do1 daat6 baa1\", \"mou4 laa2 naa5 do1 daat6 baa1\", \"mou4 laa4 laa1 do1 daat6 baa1\", \"mou4 laa4 laa2 do1 daat6 baa1\", \"mou4 laa4 laa4 do1 daat6 baa1\", \"mou4 laa4 laa5 do1 daat6 baa1\", \"mou4 laa4 naa2 do1 daat6 baa1\", \"mou4 laa4 naa4 do1 daat6 baa1\", \"mou4 laa4 naa5 do1 daat6 baa1\", \"mou4 laa5 laa1 do1 daat6 baa1\", \"mou4 laa5 laa2 do1 daat6 baa1\", \"mou4 laa5 laa4 do1 daat6 baa1\", \"mou4 laa5 laa5 do1 daat6 baa1\", \"mou4 laa5 naa2 do1 daat6 baa1\", \"mou4 laa5 naa4 do1 daat6 baa1\", \"mou4 laa5 naa5 do1 daat6 baa1\", \"mou4 naa2 laa1 do1 daat6 baa1\", \"mou4 naa2 laa2 do1 daat6 baa1\", \"mou4 naa2 laa4 do1 daat6 baa1\", \"mou4 naa2 laa5 do1 daat6 baa1\"]",
+        "line": 199143,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "無嗱嗱多噠疤",
+        "work_count": 155
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "mou4 naa4 laa2 do1 daat6 baa1",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "無嗱嗱多噠疤",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"mou4 laa1 laa1 do1 daat6 baa1\", \"mou4 laa1 laa2 do1 daat6 baa1\", \"mou4 laa1 laa4 do1 daat6 baa1\", \"mou4 laa1 laa5 do1 daat6 baa1\", \"mou4 laa1 naa2 do1 daat6 baa1\", \"mou4 laa1 naa4 do1 daat6 baa1\", \"mou4 laa1 naa5 do1 daat6 baa1\", \"mou4 laa2 laa1 do1 daat6 baa1\", \"mou4 laa2 laa2 do1 daat6 baa1\", \"mou4 laa2 laa4 do1 daat6 baa1\", \"mou4 laa2 laa5 do1 daat6 baa1\", \"mou4 laa2 naa2 do1 daat6 baa1\", \"mou4 laa2 naa4 do1 daat6 baa1\", \"mou4 laa2 naa5 do1 daat6 baa1\", \"mou4 laa4 laa1 do1 daat6 baa1\", \"mou4 laa4 laa2 do1 daat6 baa1\", \"mou4 laa4 laa4 do1 daat6 baa1\", \"mou4 laa4 laa5 do1 daat6 baa1\", \"mou4 laa4 naa2 do1 daat6 baa1\", \"mou4 laa4 naa4 do1 daat6 baa1\", \"mou4 laa4 naa5 do1 daat6 baa1\", \"mou4 laa5 laa1 do1 daat6 baa1\", \"mou4 laa5 laa2 do1 daat6 baa1\", \"mou4 laa5 laa4 do1 daat6 baa1\", \"mou4 laa5 laa5 do1 daat6 baa1\", \"mou4 laa5 naa2 do1 daat6 baa1\", \"mou4 laa5 naa4 do1 daat6 baa1\", \"mou4 laa5 naa5 do1 daat6 baa1\", \"mou4 naa2 laa1 do1 daat6 baa1\", \"mou4 naa2 laa2 do1 daat6 baa1\", \"mou4 naa2 laa4 do1 daat6 baa1\", \"mou4 naa2 laa5 do1 daat6 baa1\"]",
+        "line": 199143,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "無嗱嗱多噠疤",
+        "work_count": 155
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "mou4 naa4 laa4 do1 daat6 baa1",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "無嗱嗱多噠疤",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"mou4 laa1 laa1 do1 daat6 baa1\", \"mou4 laa1 laa2 do1 daat6 baa1\", \"mou4 laa1 laa4 do1 daat6 baa1\", \"mou4 laa1 laa5 do1 daat6 baa1\", \"mou4 laa1 naa2 do1 daat6 baa1\", \"mou4 laa1 naa4 do1 daat6 baa1\", \"mou4 laa1 naa5 do1 daat6 baa1\", \"mou4 laa2 laa1 do1 daat6 baa1\", \"mou4 laa2 laa2 do1 daat6 baa1\", \"mou4 laa2 laa4 do1 daat6 baa1\", \"mou4 laa2 laa5 do1 daat6 baa1\", \"mou4 laa2 naa2 do1 daat6 baa1\", \"mou4 laa2 naa4 do1 daat6 baa1\", \"mou4 laa2 naa5 do1 daat6 baa1\", \"mou4 laa4 laa1 do1 daat6 baa1\", \"mou4 laa4 laa2 do1 daat6 baa1\", \"mou4 laa4 laa4 do1 daat6 baa1\", \"mou4 laa4 laa5 do1 daat6 baa1\", \"mou4 laa4 naa2 do1 daat6 baa1\", \"mou4 laa4 naa4 do1 daat6 baa1\", \"mou4 laa4 naa5 do1 daat6 baa1\", \"mou4 laa5 laa1 do1 daat6 baa1\", \"mou4 laa5 laa2 do1 daat6 baa1\", \"mou4 laa5 laa4 do1 daat6 baa1\", \"mou4 laa5 laa5 do1 daat6 baa1\", \"mou4 laa5 naa2 do1 daat6 baa1\", \"mou4 laa5 naa4 do1 daat6 baa1\", \"mou4 laa5 naa5 do1 daat6 baa1\", \"mou4 naa2 laa1 do1 daat6 baa1\", \"mou4 naa2 laa2 do1 daat6 baa1\", \"mou4 naa2 laa4 do1 daat6 baa1\", \"mou4 naa2 laa5 do1 daat6 baa1\"]",
+        "line": 199143,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "無嗱嗱多噠疤",
+        "work_count": 155
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "mou4 naa4 laa5 do1 daat6 baa1",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "無嗱嗱多噠疤",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"mou4 laa1 laa1 do1 daat6 baa1\", \"mou4 laa1 laa2 do1 daat6 baa1\", \"mou4 laa1 laa4 do1 daat6 baa1\", \"mou4 laa1 laa5 do1 daat6 baa1\", \"mou4 laa1 naa2 do1 daat6 baa1\", \"mou4 laa1 naa4 do1 daat6 baa1\", \"mou4 laa1 naa5 do1 daat6 baa1\", \"mou4 laa2 laa1 do1 daat6 baa1\", \"mou4 laa2 laa2 do1 daat6 baa1\", \"mou4 laa2 laa4 do1 daat6 baa1\", \"mou4 laa2 laa5 do1 daat6 baa1\", \"mou4 laa2 naa2 do1 daat6 baa1\", \"mou4 laa2 naa4 do1 daat6 baa1\", \"mou4 laa2 naa5 do1 daat6 baa1\", \"mou4 laa4 laa1 do1 daat6 baa1\", \"mou4 laa4 laa2 do1 daat6 baa1\", \"mou4 laa4 laa4 do1 daat6 baa1\", \"mou4 laa4 laa5 do1 daat6 baa1\", \"mou4 laa4 naa2 do1 daat6 baa1\", \"mou4 laa4 naa4 do1 daat6 baa1\", \"mou4 laa4 naa5 do1 daat6 baa1\", \"mou4 laa5 laa1 do1 daat6 baa1\", \"mou4 laa5 laa2 do1 daat6 baa1\", \"mou4 laa5 laa4 do1 daat6 baa1\", \"mou4 laa5 laa5 do1 daat6 baa1\", \"mou4 laa5 naa2 do1 daat6 baa1\", \"mou4 laa5 naa4 do1 daat6 baa1\", \"mou4 laa5 naa5 do1 daat6 baa1\", \"mou4 naa2 laa1 do1 daat6 baa1\", \"mou4 naa2 laa2 do1 daat6 baa1\", \"mou4 naa2 laa4 do1 daat6 baa1\", \"mou4 naa2 laa5 do1 daat6 baa1\"]",
+        "line": 199143,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "無嗱嗱多噠疤",
+        "work_count": 155
+      },
+      "new_retained_pairs": [],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "mou4 naa4 naa4 do1 daat6 baa1",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "無嗱嗱多噠疤",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"zaang1 hou2 jyun5\"]",
+        "line": 200603,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "爭好遠",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "zaang1 hou2 jyun5",
+          "source": "cccanto:dictionary",
+          "text": "爭好遠",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "zang1 hou2 jyun5",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "爭好遠",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"baak6 paai2\"]",
+        "line": 209716,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "白牌",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "baak6 paai2",
+          "source": "cccanto:dictionary",
+          "text": "白牌",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "baak6 paai4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "白牌",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"ngaan5 mung1\"]",
+        "line": 216076,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "眼蒙",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "ngaan5 mung1",
+          "source": "cccanto:dictionary",
+          "text": "眼蒙",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "ngaan5 mung4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "眼蒙",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"zoek3 haai4\"]",
+        "line": 216113,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "着鞋",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "zoek3 haai4",
+          "source": "cccanto:dictionary",
+          "text": "着鞋",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "zoek6 haai4",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "着鞋",
+        "weight": 444.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"fan3 m4 zoek6\"]",
+        "line": 216349,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "瞓唔著",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "fan3 m4 zoek6",
+          "source": "cccanto:dictionary",
+          "text": "瞓唔著",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "fan3 m4 zoek3",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "瞓唔著",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"fan3 m4 zoek6\"]",
+        "line": 216349,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "瞓唔著",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "fan3 m4 zoek6",
+          "source": "cccanto:dictionary",
+          "text": "瞓唔著",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "fan3 m4 zyu3",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "瞓唔著",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"to4 biu1\"]",
+        "line": 218425,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "砣表",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "to4 biu1",
+          "source": "cccanto:dictionary",
+          "text": "砣表",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "to4 biu2",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "砣表",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"ngaang2 hai6\"]",
+        "line": 218485,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "硬系",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "ngaang2 hai6",
+          "source": "cccanto:dictionary",
+          "text": "硬系",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "ngaang6 hai6",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "硬系",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"kam1 zoek3\"]",
+        "line": 220693,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "禁著",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "kam1 zoek3",
+          "source": "cccanto:dictionary",
+          "text": "禁著",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "gam3 zoek3",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "禁著",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"kam1 zoek3\"]",
+        "line": 220693,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "禁著",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "kam1 zoek3",
+          "source": "cccanto:dictionary",
+          "text": "禁著",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "gam3 zoek6",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "禁著",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"kam1 zoek3\"]",
+        "line": 220693,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "禁著",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "kam1 zoek3",
+          "source": "cccanto:dictionary",
+          "text": "禁著",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "gam3 zyu3",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "禁著",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"zoek6 sat6\"]",
+        "line": 262739,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "著實",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "zoek6 sat6",
+          "source": "cccanto:cedict-readings",
+          "text": "著實",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "zoek3 sat6",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "著實",
+        "weight": 88.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"zoek6 sat6\"]",
+        "line": 262739,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "著實",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "zoek6 sat6",
+          "source": "cccanto:cedict-readings",
+          "text": "著實",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "zyu3 sat6",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "著實",
+        "weight": 88.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"zoek6 dang1\"]",
+        "line": 262742,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "著燈",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "zoek6 dang1",
+          "source": "cccanto:dictionary",
+          "text": "著燈",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "zoek3 dang1",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "著燈",
+        "weight": 444.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"zoek6 dang1\"]",
+        "line": 262742,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "著燈",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "zoek6 dang1",
+          "source": "cccanto:dictionary",
+          "text": "著燈",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "zyu3 dang1",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "著燈",
+        "weight": 444.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"biu1 juk2\"]",
+        "line": 268758,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "表肉",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "biu1 juk2",
+          "source": "cccanto:dictionary",
+          "text": "表肉",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "biu2 juk6",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "表肉",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"seoi1 seoi1 gam2\"]",
+        "line": 268780,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "衰衰啖",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "seoi1 seoi1 gam2",
+          "source": "cccanto:dictionary",
+          "text": "衰衰啖",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "seoi1 seoi1 daam6",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "衰衰啖",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"tek3 jin2\"]",
+        "line": 279910,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "踢燕",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "tek3 jin2",
+          "source": "cccanto:dictionary",
+          "text": "踢燕",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "tek3 jin3",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "踢燕",
+        "weight": 0.0
+      }
+    },
+    {
+      "new_ledger": {
+        "codes_json": "[\"seng2 m4 hei2\"]",
+        "line": 287437,
+        "path_count": 0,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "already_explicit",
+        "text": "醒唔起",
+        "work_count": 0
+      },
+      "new_retained_pairs": [
+        {
+          "origin": "supplement",
+          "reading": "seng2 m4 hei2",
+          "source": "cccanto:dictionary",
+          "text": "醒唔起",
+          "weight": 0.0
+        }
+      ],
+      "old_pair": {
+        "origin": "generated",
+        "reading": "sing2 m4 hei2",
+        "source": "jyut6ping3.phrase.dict.yaml:autoencoded",
+        "text": "醒唔起",
+        "weight": 0.0
+      }
+    }
+  ],
+  "new_database_sha256": "ea62ca78275f683be6b94f4e5e433ccc42639959002f25bfd71eab61f2340ba6",
+  "newly_truncated_phrases": [
+    {
+      "changed_characters": [
+        {
+          "added_pairs": [
+            {
+              "origin": "supplement",
+              "reading": "naa2",
+              "source": "cccanto:dictionary",
+              "text": "嗱",
+              "weight": 0.0
+            },
+            {
+              "origin": "supplement",
+              "reading": "naa5",
+              "source": "cccanto:dictionary",
+              "text": "嗱",
+              "weight": 0.0
+            }
+          ],
+          "new_codes": [
+            "laa1",
+            "laa2",
+            "laa4",
+            "laa5",
+            "naa2",
+            "naa4",
+            "naa5"
+          ],
+          "old_codes": [
+            "laa1",
+            "laa2",
+            "laa4",
+            "laa5",
+            "naa4"
+          ],
+          "text": "嗱"
+        }
+      ],
+      "new_ledger": {
+        "codes_json": "[\"laa1 laa1 lam4\", \"laa1 laa2 lam4\", \"laa1 laa4 lam4\", \"laa1 laa5 lam4\", \"laa1 naa2 lam4\", \"laa1 naa4 lam4\", \"laa1 naa5 lam4\", \"laa2 laa1 lam4\", \"laa2 laa2 lam4\", \"laa2 laa4 lam4\", \"laa2 laa5 lam4\", \"laa2 naa2 lam4\", \"laa2 naa4 lam4\", \"laa2 naa5 lam4\", \"laa4 laa1 lam4\", \"laa4 laa2 lam4\", \"laa4 laa4 lam4\", \"laa4 laa5 lam4\", \"laa4 naa2 lam4\", \"laa4 naa4 lam4\", \"laa4 naa5 lam4\", \"laa5 laa1 lam4\", \"laa5 laa2 lam4\", \"laa5 laa4 lam4\", \"laa5 laa5 lam4\", \"laa5 naa2 lam4\", \"laa5 naa4 lam4\", \"laa5 naa5 lam4\", \"naa2 laa1 lam4\", \"naa2 laa2 lam4\", \"naa2 laa4 lam4\", \"naa2 laa5 lam4\"]",
+        "line": 58601,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "嗱嗱啉",
+        "work_count": 75
+      },
+      "old_ledger": {
+        "codes_json": "[\"laa1 laa1 lam4\", \"laa1 laa2 lam4\", \"laa1 laa4 lam4\", \"laa1 laa5 lam4\", \"laa1 naa4 lam4\", \"laa2 laa1 lam4\", \"laa2 laa2 lam4\", \"laa2 laa4 lam4\", \"laa2 laa5 lam4\", \"laa2 naa4 lam4\", \"laa4 laa1 lam4\", \"laa4 laa2 lam4\", \"laa4 laa4 lam4\", \"laa4 laa5 lam4\", \"laa4 naa4 lam4\", \"laa5 laa1 lam4\", \"laa5 laa2 lam4\", \"laa5 laa4 lam4\", \"laa5 laa5 lam4\", \"laa5 naa4 lam4\", \"naa4 laa1 lam4\", \"naa4 laa2 lam4\", \"naa4 laa4 lam4\", \"naa4 laa5 lam4\", \"naa4 naa4 lam4\"]",
+        "line": 58601,
+        "path_count": 25,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "encoded_ambiguous",
+        "text": "嗱嗱啉",
+        "work_count": 61
+      },
+      "text": "嗱嗱啉"
+    },
+    {
+      "changed_characters": [
+        {
+          "added_pairs": [
+            {
+              "origin": "supplement",
+              "reading": "naa2",
+              "source": "cccanto:dictionary",
+              "text": "嗱",
+              "weight": 0.0
+            },
+            {
+              "origin": "supplement",
+              "reading": "naa5",
+              "source": "cccanto:dictionary",
+              "text": "嗱",
+              "weight": 0.0
+            }
+          ],
+          "new_codes": [
+            "laa1",
+            "laa2",
+            "laa4",
+            "laa5",
+            "naa2",
+            "naa4",
+            "naa5"
+          ],
+          "old_codes": [
+            "laa1",
+            "laa2",
+            "laa4",
+            "laa5",
+            "naa4"
+          ],
+          "text": "嗱"
+        }
+      ],
+      "new_ledger": {
+        "codes_json": "[\"mou4 laa1 laa1 do1 daat6 baa1\", \"mou4 laa1 laa2 do1 daat6 baa1\", \"mou4 laa1 laa4 do1 daat6 baa1\", \"mou4 laa1 laa5 do1 daat6 baa1\", \"mou4 laa1 naa2 do1 daat6 baa1\", \"mou4 laa1 naa4 do1 daat6 baa1\", \"mou4 laa1 naa5 do1 daat6 baa1\", \"mou4 laa2 laa1 do1 daat6 baa1\", \"mou4 laa2 laa2 do1 daat6 baa1\", \"mou4 laa2 laa4 do1 daat6 baa1\", \"mou4 laa2 laa5 do1 daat6 baa1\", \"mou4 laa2 naa2 do1 daat6 baa1\", \"mou4 laa2 naa4 do1 daat6 baa1\", \"mou4 laa2 naa5 do1 daat6 baa1\", \"mou4 laa4 laa1 do1 daat6 baa1\", \"mou4 laa4 laa2 do1 daat6 baa1\", \"mou4 laa4 laa4 do1 daat6 baa1\", \"mou4 laa4 laa5 do1 daat6 baa1\", \"mou4 laa4 naa2 do1 daat6 baa1\", \"mou4 laa4 naa4 do1 daat6 baa1\", \"mou4 laa4 naa5 do1 daat6 baa1\", \"mou4 laa5 laa1 do1 daat6 baa1\", \"mou4 laa5 laa2 do1 daat6 baa1\", \"mou4 laa5 laa4 do1 daat6 baa1\", \"mou4 laa5 laa5 do1 daat6 baa1\", \"mou4 laa5 naa2 do1 daat6 baa1\", \"mou4 laa5 naa4 do1 daat6 baa1\", \"mou4 laa5 naa5 do1 daat6 baa1\", \"mou4 naa2 laa1 do1 daat6 baa1\", \"mou4 naa2 laa2 do1 daat6 baa1\", \"mou4 naa2 laa4 do1 daat6 baa1\", \"mou4 naa2 laa5 do1 daat6 baa1\"]",
+        "line": 199143,
+        "path_count": 32,
+        "reason": "path_limit",
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "truncated",
+        "text": "無嗱嗱多噠疤",
+        "work_count": 155
+      },
+      "old_ledger": {
+        "codes_json": "[\"mou4 laa1 laa1 do1 daat6 baa1\", \"mou4 laa1 laa2 do1 daat6 baa1\", \"mou4 laa1 laa4 do1 daat6 baa1\", \"mou4 laa1 laa5 do1 daat6 baa1\", \"mou4 laa1 naa4 do1 daat6 baa1\", \"mou4 laa2 laa1 do1 daat6 baa1\", \"mou4 laa2 laa2 do1 daat6 baa1\", \"mou4 laa2 laa4 do1 daat6 baa1\", \"mou4 laa2 laa5 do1 daat6 baa1\", \"mou4 laa2 naa4 do1 daat6 baa1\", \"mou4 laa4 laa1 do1 daat6 baa1\", \"mou4 laa4 laa2 do1 daat6 baa1\", \"mou4 laa4 laa4 do1 daat6 baa1\", \"mou4 laa4 laa5 do1 daat6 baa1\", \"mou4 laa4 naa4 do1 daat6 baa1\", \"mou4 laa5 laa1 do1 daat6 baa1\", \"mou4 laa5 laa2 do1 daat6 baa1\", \"mou4 laa5 laa4 do1 daat6 baa1\", \"mou4 laa5 laa5 do1 daat6 baa1\", \"mou4 laa5 naa4 do1 daat6 baa1\", \"mou4 naa4 laa1 do1 daat6 baa1\", \"mou4 naa4 laa2 do1 daat6 baa1\", \"mou4 naa4 laa4 do1 daat6 baa1\", \"mou4 naa4 laa5 do1 daat6 baa1\", \"mou4 naa4 naa4 do1 daat6 baa1\"]",
+        "line": 199143,
+        "path_count": 25,
+        "reason": null,
+        "source": "jyut6ping3.phrase.dict.yaml",
+        "status": "encoded_ambiguous",
+        "text": "無嗱嗱多噠疤",
+        "work_count": 127
+      },
+      "text": "無嗱嗱多噠疤"
+    }
+  ],
+  "old_database_sha256": "4353328cb17f8c8f8cc5d78730e34c3aa26c6c8ea7d1a4f4a8f91fee5d900a6e",
+  "schema_version": 1,
+  "summary": {
+    "added_pairs": 129672,
+    "lost_pair_new_status_counts": {
+      "already_explicit": 65,
+      "truncated": 50
+    },
+    "lost_pairs": 115,
+    "lost_texts": [
+      "嗱嗱啉",
+      "無嗱嗱多噠疤"
+    ],
+    "new_pairs": 736583,
+    "old_pairs": 607026
+  }
+}

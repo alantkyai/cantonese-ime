@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-22T18:27:19.134990+00:00",
+  "passed": true,
+  "inputs_sha256": {
+    "baseline": "3fccc5bcf45cbb676b8a1a51e2030d418803af64b3cd5c0ae7d67cf90a4711bb",
+    "canonical": "d835b8c4487b90ef751c8c91f467b9245c8bd54ee5be8157531dd9530ac7667b",
+    "rebuild": "d835b8c4487b90ef751c8c91f467b9245c8bd54ee5be8157531dd9530ac7667b",
+    "candidate": "99f7fd4ec29692e5afe3a90a1ab7cd0d302937afbefa1d03b783958ff21dbdb2"
+  },
+  "inputs_stable": true,
+  "comparison_script_sha256": "450a94e058771f73828c4f4d7e4ac1d1466c84777fe653e9e7c92a25a4c563de",
+  "canonical_and_independent_rebuild_bytes_identical": true,
+  "canonical_and_independent_manifests_identical": true,
+  "canonical_semantic_sha256": "17e2fafac34ef9d48defa3d408f055256e18af9a62278d5ea5925f628cae9aea",
+  "counts": {
+    "main": {
+      "pairs": 739128,
+      "texts": 623223
+    },
+    "baseline": {
+      "pairs": 736570,
+      "texts": 621245
+    },
+    "candidate": {
+      "pairs": 739128,
+      "texts": 623223
+    }
+  },
+  "baseline_pair_fields_changed_or_missing": 0,
+  "candidate_pair_fields_changed_or_missing": 0,
+  "baseline_review_records_compared": 3613,
+  "baseline_review_records_changed_or_missing": 0,
+  "baseline_phrase_ledger_rows_compared": 330701,
+  "phrase_ledger_rows_changed_or_missing": 0,
+  "phrase_ledger_row_count_unchanged": true,
+  "wordnet_pair_count": 2558,
+  "wordnet_nonzero_weights": 0,
+  "origins": {
+    "explicit": 137439,
+    "generated": 412192,
+    "supplement": 189497
+  },
+  "clean_build_invocations": [
+    {
+      "script": "tools/build_dictionary.py",
+      "output": ".local/wordnet-canonical/lexicon.sqlite3",
+      "exec_session_id": 21012,
+      "observed_exit_code": 0
+    },
+    {
+      "script": "tools/build_dictionary.py",
+      "output": ".local/wordnet-rebuild/lexicon.sqlite3",
+      "exec_session_id": 2365,
+      "observed_exit_code": 0
+    }
+  ],
+  "build_logs_sha256": {
+    "wordnet-canonical": "69d02d992328133888055b665020d05737fe5a763dd05cf504f402edd8b6a1d4",
+    "wordnet-rebuild": "74ea7f877c8dde375d4c37e53a57a51487b7a953e99c6339cb3a5c20a7722dd1"
+  },
+  "source_implementation_sha256": {
+    "cantonese_ime/dictionary.py": "eb2bed8bc625b23769ff0f9e4d0e3690c52723904098ca4dc47691a8362d4eea",
+    "cantonese_ime/wordnet.py": "8ecc02e5c989a48c8e17c3f2cc922f534f73b0cef94d54347f0701031952b087",
+    "tools/build_dictionary.py": "7060e7e48b08e779b8545a2763e311279255fffbfdb6b126592e493ddea1177a"
+  },
+  "scope": "Full stored fields including IDs, unchanged baseline encoding/review ledgers, separate clean-build equality and exact candidate/canonical runtime rows. No pronunciation truth, new native typing, all-Chinese coverage or full candidate lookup claim.",
+  "derived_data_license": "CC-BY-SA-4.0",
+  "attribution": [
+    "data/DATA_LICENSE.md",
+    "data/THIRD_PARTY_NOTICES.md"
+  ],
+  "canonical_default_database_replaced": false,
+  "native_or_installed_state_changed": false
+}

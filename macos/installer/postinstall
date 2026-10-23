@@ -1,0 +1,8 @@
+#!/bin/sh
+# Input source activation belongs to the logged-in user in System Settings.
+# Do not run a user IMK server, launchctl, defaults, or TIS APIs as root.
+set -eu
+echo 'Cantonese IME is installed in /Library/Input Methods.'
+echo 'Add Cantonese IME under System Settings > Keyboard > Text Input > Edit.'
+echo 'If it is not listed yet, sign out and sign in, then add it.'
+exit 0

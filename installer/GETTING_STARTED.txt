@@ -1,0 +1,51 @@
+Cantonese IME
+
+Windows 10/11, native x64 applications
+
+Press Windows + Space and choose Cantonese IME. Type plain Yale or Jyutping
+letters. For example, fogeui finds 火炬. Press a candidate's number or Space
+to select it. The compact candidate window shows numbered choices.
+
+Cantonese IME appears under Chinese (Traditional, Hong Kong SAR). Setup adds
+this keyboard input source for your account and preserves your English
+keyboard, other languages, Windows display language, and default override.
+The old English-slot Cantonese entry is removed after the Hong Kong source
+is verified. If you explicitly made that old entry your default, it is kept.
+No Windows language pack is downloaded by this installer.
+
+The taskbar button shows 粵 for Cantonese and 英 for direct English input.
+Click that button to change modes. Existing applications may need to be
+closed and reopened after an upgrade before the new icon appears.
+
+Candidate preferences and phrases are learned locally on this computer.
+Choosing ng -> 唔 also helps longer combinations such as ngho -> 唔好 and
+nghaigam -> 唔係咁. Choosing a whole phrase learns that phrase separately,
+so a short input and a longer input can keep different preferred choices.
+The engine works offline. Personal learning is stored separately at:
+  %LOCALAPPDATA%\CantoneseIME\learning.json
+Upgrades and uninstall keep that file.
+
+Start menu > Cantonese IME > Enable Cantonese IME starts the engine and
+enables the keyboard for your account. It also arranges startup at sign-in.
+Start menu > Cantonese IME > Stop Cantonese IME stops the engine.
+Use Windows Settings > Apps > Installed apps > Cantonese IME to uninstall.
+Close applications using this keyboard and sign out other users first.
+Windows may request a restart when files are still in use.
+
+This installer includes a private Python runtime. Python, a compiler,
+developer tools and an Internet connection are not needed on the target PC.
+Run Setup normally and approve its Windows administrator prompt. Do not
+start Setup with "Run as administrator": user activation needs the original
+ordinary user account. If that happened, use the Enable shortcut afterward.
+
+The package is unsigned. Windows may show an unknown publisher or
+SmartScreen prompt. Check the supplied SHA256SUMS.txt before distributing.
+This release does not include a code-signing certificate.
+
+Supported scope: Windows 10/11 x64, native 64-bit desktop text controls.
+32-bit applications, ARM64 Windows and secure/password fields are outside
+this release's supported scope. Dictionary reachability was mechanically
+checked; generated readings and ranking can still need language corrections.
+
+Licensing: see RELEASE_NOTICES.txt and data\THIRD_PARTY_NOTICES.md. The
+bundled dictionary and runtime retain their separate upstream licenses.

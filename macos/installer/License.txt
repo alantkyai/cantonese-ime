@@ -1,0 +1,21 @@
+Cantonese IME 1.0.0
+
+The original application code has no general redistribution license
+declaration in this project. Packaging the owner's application does not add
+a license grant for that original source.
+
+The shared dictionary retains its upstream licenses and attributions. See
+the bundled engine/data/THIRD_PARTY_NOTICES.md and every linked license and
+source-history notice. The combined adapted dictionary is distributed under
+CC BY-SA 4.0 to the extent this project has rights in its adaptations; this
+does not replace the licenses and exclusions of individual source material.
+
+Python 3.13.17 and its components retain the original Python Software
+Foundation and third-party licenses. The original license material is copied
+from the official Python package into Contents/Resources/licenses/Python.
+The private framework's load paths are modified for this app, and its code
+is re-signed during the Mac build. Upstream signatures do not certify those
+modifications. https://www.python.org/downloads/release/python-31317/
+
+No warranty of pronunciation, ranking, platform support, or fitness is made.
+The source archive is a build input, not an installable or notarized app.

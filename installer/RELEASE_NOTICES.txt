@@ -1,0 +1,34 @@
+Cantonese IME
+
+The original application source has no general redistribution license
+declaration in this project. Packaging the owner's application for the
+owner's distribution does not grant rights to third parties in that source.
+No new license for the original code is imposed by this installer.
+
+The dictionary is assembled from separately licensed upstream data.
+See data\THIRD_PARTY_NOTICES.md and the referenced attribution, source-lock,
+license and source-history files included in this package. In particular,
+CC-CANTO, CC-CEDICT and Yue Wiktionary-derived dictionary material includes
+Creative Commons Attribution-ShareAlike obligations. The generated combined
+dictionary is distributed under CC BY-SA 4.0 to the extent this project has
+rights in its adaptations; that does not relicense source components whose
+own licenses or exclusions require separate treatment. No warranty is made
+about pronunciation or contextual suitability. See all upstream notices.
+
+Python 3.13.17, Copyright Python Software Foundation and contributors.
+The private runtime and its third-party components retain their original
+licenses. Full license: runtime\python\LICENSE.txt.
+Source: https://www.python.org/downloads/release/python-31317/
+The runtime's python313._pth is adjusted only to include the application
+root; it ignores environment and installed Python packages.
+
+The native toolchain's runtime license notices are in licenses\.
+
+The installer is built with Inno Setup 7.1.0, Copyright Jordan Russell
+and Martijn Laan. Its license is retained in licenses\INNO-SETUP-LICENSE.txt.
+Source and tool license: https://jrsoftware.org/isinfo.php
+For commercial build use, review the upstream purchase guidance and retained
+license. The generated application installer is not the compiler.
+
+Authenticode code signing has not been applied to this release. Check
+the release SHA256 manifest when copying or sharing the setup executable.

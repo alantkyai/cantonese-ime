@@ -1,0 +1,5 @@
+#include "../tsf/resource.h"
+
+// Separate from the COM DLL so an old loaded service image cannot shadow the
+// currently installed profile-branding resource container.
+IDI_CANTONESE_BRAND ICON "../tsf/icons/cantonese.ico"

@@ -1,0 +1,62 @@
+{
+  "attribution": "Rime Cantonese, Cantonese Computational Linguistics Infrastructure Development Workgroup (CanCLID) and contributors; see upstream README and dictionary source headers.",
+  "commit": "259f0e48bba840c3a2e0d117539e96937f3d89bc",
+  "commit_date": "2026-08-13T09:40:32Z",
+  "excluded": [
+    "jyut6ping3.maps.dict.yaml (ODbL OpenStreetMap data)",
+    "jyut6ping3.lettered.dict.yaml (nonphonetic entries outside initial scope)"
+  ],
+  "files": [
+    {
+      "git_blob_sha1": "f31eb5e66b0f26b6427306c514aa42d396c13a97",
+      "name": "jyut6ping3.chars.dict.yaml",
+      "sha256": "9b053a594c80eae76545bcdd83239884a49b1ba48b89ca0ab9e8daac79f33013",
+      "size_bytes": 345329,
+      "url": "https://raw.githubusercontent.com/rime/rime-cantonese/259f0e48bba840c3a2e0d117539e96937f3d89bc/jyut6ping3.chars.dict.yaml"
+    },
+    {
+      "git_blob_sha1": "5e581cee9fd38e6063e0ea90bc947e9299bdc3e3",
+      "name": "jyut6ping3.words.dict.yaml",
+      "sha256": "54d174ad2bb997e4a678b7b076b84e4dc5914481b32467cdea3b43e88b7d5474",
+      "size_bytes": 2630257,
+      "url": "https://raw.githubusercontent.com/rime/rime-cantonese/259f0e48bba840c3a2e0d117539e96937f3d89bc/jyut6ping3.words.dict.yaml"
+    },
+    {
+      "git_blob_sha1": "e3888c43b2e2aac2c89a7134f93f4920705c9187",
+      "name": "jyut6ping3.phrase.dict.yaml",
+      "sha256": "3071d1ca43d6861aefcaa14e1b72780b21537b4e58b86ffce27ae0577c94e2ed",
+      "size_bytes": 4958423,
+      "url": "https://raw.githubusercontent.com/rime/rime-cantonese/259f0e48bba840c3a2e0d117539e96937f3d89bc/jyut6ping3.phrase.dict.yaml"
+    },
+    {
+      "git_blob_sha1": "95a3f919bb6bc769a59abbc95f92f2e47856f9db",
+      "name": "essay-cantonese.txt",
+      "sha256": "d08836175f598219f43c2f2f9e12e12711212dbefe08d57b2eddb7a9d9f22a5d",
+      "size_bytes": 3416812,
+      "url": "https://raw.githubusercontent.com/rime/rime-cantonese/259f0e48bba840c3a2e0d117539e96937f3d89bc/essay-cantonese.txt"
+    },
+    {
+      "git_blob_sha1": "f987f3daa1f8637793144323bcd10e330b8db97c",
+      "name": "LICENSE-CC-BY",
+      "sha256": "97d24386ff776d7160b87031b259a942bd03c9939796cab6724ad5d17d2cf785",
+      "size_bytes": 18657,
+      "url": "https://raw.githubusercontent.com/rime/rime-cantonese/259f0e48bba840c3a2e0d117539e96937f3d89bc/LICENSE-CC-BY"
+    },
+    {
+      "git_blob_sha1": "675ba94e8a49dffb2082e8a6283499a254ae6777",
+      "name": "README-en.md",
+      "sha256": "159ae4384c0de771e76952abb5e83e52567dc3ddebfa23435f451f385cfac4f6",
+      "size_bytes": 6099,
+      "url": "https://raw.githubusercontent.com/rime/rime-cantonese/259f0e48bba840c3a2e0d117539e96937f3d89bc/README-en.md"
+    }
+  ],
+  "format_version": 1,
+  "license": "CC-BY-4.0",
+  "license_file": "vendor/rime-cantonese/259f0e48bba840c3a2e0d117539e96937f3d89bc/LICENSE-CC-BY",
+  "local_directory": "data/vendor/rime-cantonese/259f0e48bba840c3a2e0d117539e96937f3d89bc",
+  "repository": "https://github.com/rime/rime-cantonese",
+  "usage": {
+    "dictionary": "Import explicit toned entries only; text-only rows skipped.",
+    "essay-cantonese.txt": "Frequency lookup only; no new entries autoencoded or imported."
+  }
+}

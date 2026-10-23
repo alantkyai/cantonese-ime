@@ -1,0 +1,33 @@
+.local/
+__pycache__/
+build/
+data/generated/
+
+# Installers and private runtime bundles are published as release assets.
+/dist/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+.venv/
+.DS_Store
+
+# Local configuration, credentials and personal learning are not source files.
+.env
+.env.*
+!.env.example
+learning.json
+
+# Original machine-specific verification is retained locally.
+/docs/native-evidence/
+/docs/windows-installer-repair-evidence/
+/docs/adaptive-ime-validation.json
+/docs/installed-ime-validation.json
+/docs/native-build-environment.json
+/docs/numbered-candidates-validation.json
+/docs/persistent-ime-progress.json
+/docs/release-1.0.0-validation.json
+/docs/wordnet-source-audit.json
+/docs/yale-expanded-v3-installed-validation.json
+/docs/yale-ime-validation.json
+/docs/environment.json

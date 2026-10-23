@@ -1,0 +1,73 @@
+{
+  "captured_at_utc": "2026-10-22T11:19:10.420804+00:00",
+  "purpose": "Preserved byte-exact reports before distinct-composition refresh; historical evidence, not claims for the new engine.",
+  "old_engine": {
+    "path": ".local/composition-search-baseline/engine.py",
+    "sha256": "dd9e6c46a702a945098b0a1c4c8dc54fb9c82e1aeb763430897b207ea4157d7e"
+  },
+  "files": [
+    {
+      "source": "docs/engine-evaluation.json",
+      "snapshot": "docs/baselines/before-distinct-composition/engine-evaluation.json",
+      "sha256": "a9187f0e51af492111367b3da1ec9aeab5bbd5085457fe097fa63300d047eed3",
+      "bytes": 81757,
+      "status": "preserved"
+    },
+    {
+      "source": "docs/dictionary-lookup-coverage.json",
+      "snapshot": "docs/baselines/before-distinct-composition/dictionary-lookup-coverage.json",
+      "sha256": "721de888b7f92edab738d07f657feb5c357ec2db76ee982d4409fdb24e39d59e",
+      "bytes": 979652,
+      "status": "preserved"
+    },
+    {
+      "source": "docs/long-input-coverage.json",
+      "snapshot": "docs/baselines/before-distinct-composition/long-input-coverage.json",
+      "sha256": "d2f9f58af3a2f594f33ac81372b28028a228944e14f03bcde0965383872e4017",
+      "bytes": 4497648,
+      "status": "preserved"
+    },
+    {
+      "source": "docs/mapping-behavior-coverage.json",
+      "snapshot": "docs/baselines/before-distinct-composition/mapping-behavior-coverage.json",
+      "sha256": "256a01c867d18a94acab3dc680130d896c733e7879e5f69f5baa63746cdff2c3",
+      "bytes": 409330,
+      "status": "preserved"
+    },
+    {
+      "source": "docs/unit-test-results.json",
+      "snapshot": "docs/baselines/before-distinct-composition/unit-test-results.json",
+      "sha256": "b236f929e206b5039bc974a07696f2eced402aa7f221cc68e56b4d121ba74977",
+      "bytes": 4437,
+      "status": "preserved"
+    },
+    {
+      "source": "docs/paged-typing-evidence.json",
+      "snapshot": "docs/baselines/before-distinct-composition/paged-typing-evidence.json",
+      "sha256": "fa54e23a4e648049cb401bf0031a70b631612913129fc9331ef998e6e37cd24c",
+      "bytes": 703,
+      "status": "preserved"
+    },
+    {
+      "source": "data/generated/dictionary-audit.json",
+      "snapshot": "docs/baselines/before-distinct-composition/dictionary-audit.json",
+      "sha256": "5699ba8b350553aa0ebbfc118c983fc2b0115d90bf8a5b40698c9bf516a9525e",
+      "bytes": 182384,
+      "status": "preserved"
+    },
+    {
+      "source": ".local/unit-tests.log",
+      "snapshot": "docs/baselines/before-distinct-composition/unit-tests.log",
+      "sha256": "dd72cd2441a87393eba26a45af442e49dbf4392b118743065ac508a011c1d100",
+      "bytes": 32844,
+      "status": "preserved"
+    },
+    {
+      "source": "docs/typing-latency.json",
+      "snapshot": "docs/baselines/before-distinct-composition/typing-latency.json",
+      "sha256": "b1c2f7e58b1d8467ba850c97664d6b7b64dc5ee04b61ac435fbcf6eedf6071cf",
+      "bytes": 1226359,
+      "status": "preserved"
+    }
+  ]
+}

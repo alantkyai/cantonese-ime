@@ -1,0 +1,1271 @@
+{
+  "artifact_kind": "composition_search_development_comparison",
+  "purpose": "Post-hoc replay of previously inspected external corpus; no clean held-out or representative typing claim. Search algorithm changed; dictionary, corpus labels and unigram weights did not.",
+  "database_sha256": "4353328cb17f8c8f8cc5d78730e34c3aa26c6c8ea7d1a4f4a8f91fee5d900a6e",
+  "corpus_sha256": "410f4b612ca14e5e60da0b147f7bf9fb4b4a1e25c125053e00596981b72ef085",
+  "source_lock_sha256": "e020995669488936880d4ef9dd55290cb86a23d22476c576d705e87145fbb060",
+  "baseline_report": {
+    "path": "docs/hkcancor-evaluation.json",
+    "sha256": "d6f44b92d3287da9cafa80693d32de689a972ddeee65920406c9666251ce67b8",
+    "runtime_source_sha256": {
+      "cantonese_ime/engine.py": "dd9e6c46a702a945098b0a1c4c8dc54fb9c82e1aeb763430897b207ea4157d7e",
+      "cantonese_ime/mappings.py": "39a19b8b9227153dfb16317b7ef5f223ce95fd005b68c61126248fec1a91872d",
+      "tools/evaluate_hkcancor.py": "86a796b9f43194b9e0067cb161a0b3d02f18a821a8938ba6221a5e709977f295"
+    },
+    "summary": {
+      "empty_candidate_lists": 0,
+      "errors": 0,
+      "latency_ms": {
+        "maximum": 128.062,
+        "median": 4.645,
+        "p95": 30.958,
+        "samples": 1000
+      },
+      "pair_top1": 475,
+      "pair_top9": 691,
+      "pair_top90": 736,
+      "requests": 1000,
+      "text_top1": 487,
+      "text_top9": 722,
+      "text_top90": 778
+    }
+  },
+  "replay_report": {
+    "path": "docs/hkcancor-distinct-composition-replay.json",
+    "sha256": "d9ff429203a397fec965bf510e28f279a0875c0b828ce54c13d526b956b9bd07",
+    "runtime_source_sha256": {
+      "cantonese_ime/engine.py": "c2b67530f0fa42f14841f37e56369f776d023e4f63f67a4b92ad5085707e4d92",
+      "cantonese_ime/mappings.py": "39a19b8b9227153dfb16317b7ef5f223ce95fd005b68c61126248fec1a91872d",
+      "tools/evaluate_hkcancor.py": "86a796b9f43194b9e0067cb161a0b3d02f18a821a8938ba6221a5e709977f295"
+    },
+    "summary": {
+      "empty_candidate_lists": 0,
+      "errors": 0,
+      "latency_ms": {
+        "maximum": 105.549,
+        "median": 3.948,
+        "p95": 16.106,
+        "samples": 1000
+      },
+      "pair_top1": 476,
+      "pair_top9": 686,
+      "pair_top90": 762,
+      "requests": 1000,
+      "text_top1": 487,
+      "text_top9": 720,
+      "text_top90": 810
+    }
+  },
+  "transition_policy": "Match every original case id and scenario. All 1,000 requests retained; no target or accepted-alternative changes. Rank-threshold gains and losses both preserved.",
+  "changes": {
+    "text_rank:top1": {
+      "gained": [],
+      "lost": [],
+      "gained_count": 0,
+      "lost_count": 0
+    },
+    "text_rank:top9": {
+      "gained": [
+        {
+          "id": "speech_span:007c5f108ad7f9f0bb874d47",
+          "scenario": "fully_toned",
+          "text": "拎去賣吖嗎可以",
+          "old_rank": null,
+          "new_rank": 9
+        },
+        {
+          "id": "speech_span:021f49ac59a4cc8caf6dd22a",
+          "scenario": "tone_free",
+          "text": "我淨係知道最新款隻",
+          "old_rank": null,
+          "new_rank": 9
+        }
+      ],
+      "lost": [
+        {
+          "id": "speech_span:01a631aa2297e72341570aea",
+          "scenario": "fully_toned",
+          "text": "哩個唔係𠸏",
+          "old_rank": 6,
+          "new_rank": 11
+        },
+        {
+          "id": "speech_span:01c2b1b4041b5a3785e55204",
+          "scenario": "fully_toned",
+          "text": "噉我落咗廠又即係都唔使點覆電話喇",
+          "old_rank": 9,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:0228c403cc4860651e7f88a9",
+          "scenario": "fully_toned",
+          "text": "但係今年佢話佢去都係三千幾啫嗎",
+          "old_rank": 9,
+          "new_rank": 10
+        },
+        {
+          "id": "speech_span:0290d217d2f34047a681ffee",
+          "scenario": "fully_toned",
+          "text": "即係改改一部",
+          "old_rank": 9,
+          "new_rank": 10
+        }
+      ],
+      "gained_count": 2,
+      "lost_count": 4
+    },
+    "text_rank:top90": {
+      "gained": [
+        {
+          "id": "speech_span:0008ebb25182644b69097a8e",
+          "scenario": "tone_free",
+          "text": "嗰陣時你知喇冇乜錢",
+          "old_rank": null,
+          "new_rank": 31
+        },
+        {
+          "id": "speech_span:00146643e77b6756b71d12ee",
+          "scenario": "tone_free",
+          "text": "又再由菲律賓搭返去香港",
+          "old_rank": null,
+          "new_rank": 28
+        },
+        {
+          "id": "speech_span:002049e41d4b68c0be1f6187",
+          "scenario": "fully_toned",
+          "text": "俾返我個",
+          "old_rank": null,
+          "new_rank": 17
+        },
+        {
+          "id": "speech_span:002049e41d4b68c0be1f6187",
+          "scenario": "tone_free",
+          "text": "俾返我個",
+          "old_rank": null,
+          "new_rank": 83
+        },
+        {
+          "id": "speech_span:002d939d5c4184e52d71bed5",
+          "scenario": "tone_free",
+          "text": "揸住個毫子好開心",
+          "old_rank": null,
+          "new_rank": 15
+        },
+        {
+          "id": "speech_span:00429c7d09dd5a61b0be768d",
+          "scenario": "tone_free",
+          "text": "去去玩啫嗎",
+          "old_rank": null,
+          "new_rank": 88
+        },
+        {
+          "id": "speech_span:004fae3f441a449498ceb816",
+          "scenario": "fully_toned",
+          "text": "即刻誇咗",
+          "old_rank": null,
+          "new_rank": 25
+        },
+        {
+          "id": "speech_span:006d9bbf470d8046d6aa8653",
+          "scenario": "fully_toned",
+          "text": "燒臘舖嘅",
+          "old_rank": null,
+          "new_rank": 32
+        },
+        {
+          "id": "speech_span:007c5f108ad7f9f0bb874d47",
+          "scenario": "fully_toned",
+          "text": "拎去賣吖嗎可以",
+          "old_rank": null,
+          "new_rank": 9
+        },
+        {
+          "id": "speech_span:007d70b9f9e861e9a3aace63",
+          "scenario": "tone_free",
+          "text": "改卷啊",
+          "old_rank": null,
+          "new_rank": 23
+        },
+        {
+          "id": "speech_span:008a9c8d48c6ccde3bd0bfba",
+          "scenario": "tone_free",
+          "text": "曾經有個時期可以要來",
+          "old_rank": null,
+          "new_rank": 56
+        },
+        {
+          "id": "speech_span:00b2f3fef666297f4a9144fc",
+          "scenario": "tone_free",
+          "text": "但係佢做嗰啲戲好似唔係而家",
+          "old_rank": null,
+          "new_rank": 19
+        },
+        {
+          "id": "speech_span:00c5548c8000409da4fe2451",
+          "scenario": "fully_toned",
+          "text": "噉哩個情況𠻺未出現過喎",
+          "old_rank": null,
+          "new_rank": 16
+        },
+        {
+          "id": "speech_span:00e00aae7d950b5c5dcfcbb8",
+          "scenario": "tone_free",
+          "text": "噉啲同學喺度同佢玩",
+          "old_rank": null,
+          "new_rank": 11
+        },
+        {
+          "id": "speech_span:00e8e3c4173601ed19a9ca19",
+          "scenario": "fully_toned",
+          "text": "係文化嘅迴異",
+          "old_rank": null,
+          "new_rank": 27
+        },
+        {
+          "id": "speech_span:011436972683f2e754e20e52",
+          "scenario": "tone_free",
+          "text": "噉所以我哋有陣時",
+          "old_rank": null,
+          "new_rank": 30
+        },
+        {
+          "id": "speech_span:014ccde61957fe3b2940fe17",
+          "scenario": "fully_toned",
+          "text": "同張少華食飯",
+          "old_rank": null,
+          "new_rank": 21
+        },
+        {
+          "id": "speech_span:01541fe19555e8a851649a55",
+          "scenario": "tone_free",
+          "text": "一啲啲有來呀",
+          "old_rank": null,
+          "new_rank": 49
+        },
+        {
+          "id": "speech_span:01632bf86dd01e7bf08e58ae",
+          "scenario": "fully_toned",
+          "text": "你發覺裏邊係有樂趣",
+          "old_rank": null,
+          "new_rank": 72
+        },
+        {
+          "id": "speech_span:018f687a1acce439ad5ff04f",
+          "scenario": "fully_toned",
+          "text": "有二百蚊喺街度賣",
+          "old_rank": null,
+          "new_rank": 26
+        },
+        {
+          "id": "speech_span:01db3600af8dbe25409cbddc",
+          "scenario": "tone_free",
+          "text": "三個字啊",
+          "old_rank": null,
+          "new_rank": 29
+        },
+        {
+          "id": "speech_span:01e3d5117fd4d455bc69b8aa",
+          "scenario": "fully_toned",
+          "text": "即係𠻺歐洲嘅最佳影片啊",
+          "old_rank": null,
+          "new_rank": 16
+        },
+        {
+          "id": "speech_span:01efedb5708addafbcaad34c",
+          "scenario": "fully_toned",
+          "text": "就有咗一種即係同人哋解籤啊",
+          "old_rank": null,
+          "new_rank": 22
+        },
+        {
+          "id": "speech_span:020bed9f896e96c29471ed83",
+          "scenario": "fully_toned",
+          "text": "咗出來喎",
+          "old_rank": null,
+          "new_rank": 11
+        },
+        {
+          "id": "speech_span:020bed9f896e96c29471ed83",
+          "scenario": "tone_free",
+          "text": "咗出來喎",
+          "old_rank": null,
+          "new_rank": 84
+        },
+        {
+          "id": "speech_span:020e1bf4f005f1fad8740d73",
+          "scenario": "fully_toned",
+          "text": "跟住個醫生呢叫我剝晒佢啝",
+          "old_rank": null,
+          "new_rank": 34
+        },
+        {
+          "id": "speech_span:020e98f0eaf7be4b404a0d2e",
+          "scenario": "tone_free",
+          "text": "十四分嘅人都",
+          "old_rank": null,
+          "new_rank": 30
+        },
+        {
+          "id": "speech_span:021ceeeaca0ab76f77135356",
+          "scenario": "tone_free",
+          "text": "你變咗你唔需要追求嗰個肉質",
+          "old_rank": null,
+          "new_rank": 24
+        },
+        {
+          "id": "speech_span:021f49ac59a4cc8caf6dd22a",
+          "scenario": "tone_free",
+          "text": "我淨係知道最新款隻",
+          "old_rank": null,
+          "new_rank": 9
+        },
+        {
+          "id": "speech_span:0233f052d11b5cb0ee9754aa",
+          "scenario": "fully_toned",
+          "text": "噉𠻺先前呢",
+          "old_rank": null,
+          "new_rank": 16
+        },
+        {
+          "id": "speech_span:023b65c519fe1d3bb548c132",
+          "scenario": "fully_toned",
+          "text": "佢話應該就會冇事啝",
+          "old_rank": null,
+          "new_rank": 22
+        },
+        {
+          "id": "speech_span:02482abb31820a02dd11fedf",
+          "scenario": "fully_toned",
+          "text": "陳子欣",
+          "old_rank": null,
+          "new_rank": 56
+        },
+        {
+          "id": "speech_span:02575b8a2909d60c46366a55",
+          "scenario": "tone_free",
+          "text": "都有人工收㗎",
+          "old_rank": null,
+          "new_rank": 50
+        },
+        {
+          "id": "speech_span:025a20bbd54a5a446e977d4e",
+          "scenario": "fully_toned",
+          "text": "對我來講就係話",
+          "old_rank": null,
+          "new_rank": 16
+        },
+        {
+          "id": "speech_span:0261e81a4f7bace0d52918f0",
+          "scenario": "fully_toned",
+          "text": "有啲噉樣嘅行為呢",
+          "old_rank": null,
+          "new_rank": 26
+        },
+        {
+          "id": "speech_span:027c2b69aa0f513e9bb8b061",
+          "scenario": "fully_toned",
+          "text": "即係佢係對香港𠻺充滿憧憬",
+          "old_rank": null,
+          "new_rank": 16
+        },
+        {
+          "id": "speech_span:02927e030eead5584e863e43",
+          "scenario": "tone_free",
+          "text": "嘅嗰個城市呢係一個鋼鐵城呢",
+          "old_rank": null,
+          "new_rank": 46
+        },
+        {
+          "id": "speech_span:029b463bf223196e77479d45",
+          "scenario": "tone_free",
+          "text": "你想去邊喇噉樣",
+          "old_rank": null,
+          "new_rank": 11
+        },
+        {
+          "id": "speech_span:02b75f7f318979b8edb34cb6",
+          "scenario": "tone_free",
+          "text": "噉你想點吖",
+          "old_rank": null,
+          "new_rank": 77
+        },
+        {
+          "id": "speech_span:03193960963c316a69933e41",
+          "scenario": "tone_free",
+          "text": "有得聚下",
+          "old_rank": null,
+          "new_rank": 86
+        },
+        {
+          "id": "word_type:001dbfe0eb0f772910e6660e",
+          "scenario": "tone_free",
+          "text": "子由",
+          "old_rank": null,
+          "new_rank": 82
+        },
+        {
+          "id": "word_type:010d9c6ea38a620330cfa603",
+          "scenario": "tone_free",
+          "text": "調亂",
+          "old_rank": null,
+          "new_rank": 89
+        },
+        {
+          "id": "word_type:014d112a09a75e996ca84dec",
+          "scenario": "fully_toned",
+          "text": "辦工室",
+          "old_rank": null,
+          "new_rank": 40
+        },
+        {
+          "id": "word_type:018e62448629816f6eac2afc",
+          "scenario": "tone_free",
+          "text": "六筒",
+          "old_rank": null,
+          "new_rank": 74
+        },
+        {
+          "id": "word_type:03b1ed6533108a86f6ca3a8a",
+          "scenario": "tone_free",
+          "text": "脫跤",
+          "old_rank": null,
+          "new_rank": 22
+        },
+        {
+          "id": "word_type:045140bf3377dab687f4c2e0",
+          "scenario": "tone_free",
+          "text": "婆孫",
+          "old_rank": null,
+          "new_rank": 28
+        },
+        {
+          "id": "word_type:048d68b3f48773026ff0548d",
+          "scenario": "fully_toned",
+          "text": "少娟",
+          "old_rank": null,
+          "new_rank": 19
+        },
+        {
+          "id": "word_type:04a513d062ef4c19fa90686c",
+          "scenario": "tone_free",
+          "text": "南哥",
+          "old_rank": null,
+          "new_rank": 32
+        },
+        {
+          "id": "word_type:065941c5056f97397f2920e2",
+          "scenario": "tone_free",
+          "text": "朝朝",
+          "old_rank": null,
+          "new_rank": 33
+        },
+        {
+          "id": "word_type:07fbd945b5129590b288a7ae",
+          "scenario": "tone_free",
+          "text": "一九四三年",
+          "old_rank": null,
+          "new_rank": 26
+        },
+        {
+          "id": "word_type:084d552f248463475ab41124",
+          "scenario": "tone_free",
+          "text": "上冊",
+          "old_rank": null,
+          "new_rank": 53
+        },
+        {
+          "id": "word_type:08a9f0654fa18a1f34f0e954",
+          "scenario": "tone_free",
+          "text": "豬朋",
+          "old_rank": null,
+          "new_rank": 28
+        },
+        {
+          "id": "word_type:092cbd0c20db2ed33414d1ef",
+          "scenario": "fully_toned",
+          "text": "體委",
+          "old_rank": null,
+          "new_rank": 34
+        }
+      ],
+      "lost": [
+        {
+          "id": "speech_span:006e465e2d59b0546eb420d4",
+          "scenario": "tone_free",
+          "text": "喎想出來",
+          "old_rank": 16,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:0084ace2ee3b23822a53425f",
+          "scenario": "fully_toned",
+          "text": "是但嚹",
+          "old_rank": 27,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:009a7b86fd1db051b2155311",
+          "scenario": "fully_toned",
+          "text": "中國大粒佬係老細囖",
+          "old_rank": 14,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:009a7b86fd1db051b2155311",
+          "scenario": "tone_free",
+          "text": "中國大粒佬係老細囖",
+          "old_rank": 20,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:00a9e7bab3ce633e49243768",
+          "scenario": "fully_toned",
+          "text": "我就唔知嚹",
+          "old_rank": 30,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:00d75d9a51995e92e8a4777f",
+          "scenario": "tone_free",
+          "text": "即係佢洗得係好仔細囖",
+          "old_rank": 20,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:01033288685d7097146c4885",
+          "scenario": "fully_toned",
+          "text": "飲黑啡𡃉",
+          "old_rank": 21,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:016ab76f09b3e5ab3bfd79b1",
+          "scenario": "tone_free",
+          "text": "或者係一啲明朗嘅表現囖",
+          "old_rank": 20,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:01a631aa2297e72341570aea",
+          "scenario": "tone_free",
+          "text": "哩個唔係𠸏",
+          "old_rank": 14,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:01b4ffb4d3f8cd2952f307ff",
+          "scenario": "tone_free",
+          "text": "噉我諗同多啲基督徒分享囖",
+          "old_rank": 21,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:01c2b1b4041b5a3785e55204",
+          "scenario": "fully_toned",
+          "text": "噉我落咗廠又即係都唔使點覆電話喇",
+          "old_rank": 9,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:01c4c92abfc175cba5ea00cd",
+          "scenario": "tone_free",
+          "text": "我覺得唔會囖",
+          "old_rank": 20,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:01ccf4ee911d1e5f09b26438",
+          "scenario": "fully_toned",
+          "text": "啲同學覺得學科係唔緊要𡃉",
+          "old_rank": 21,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:01d9ddb39d925c9f89f3e2c9",
+          "scenario": "fully_toned",
+          "text": "都應該係𡃉",
+          "old_rank": 21,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:01fbbc88ea912978cf02c1b5",
+          "scenario": "fully_toned",
+          "text": "喺中間水入邊游𡃉",
+          "old_rank": 31,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:023d3a6c8eb8b3742be1fec7",
+          "scenario": "tone_free",
+          "text": "理性啲囖",
+          "old_rank": 20,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:027158d1c33e032cbb4e095a",
+          "scenario": "fully_toned",
+          "text": "唔使錢𡃉",
+          "old_rank": 21,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:02be7b454cb46bccb32ecb1d",
+          "scenario": "fully_toned",
+          "text": "成個過程幾好玩𡃉",
+          "old_rank": 21,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:03127159754bb9656659dfae",
+          "scenario": "tone_free",
+          "text": "海灘同農場囖",
+          "old_rank": 21,
+          "new_rank": null
+        },
+        {
+          "id": "word_type:01bf917b6f1892a948fdd0fb",
+          "scenario": "fully_toned",
+          "text": "後邊",
+          "old_rank": 24,
+          "new_rank": null
+        },
+        {
+          "id": "word_type:0449d7b0d5a0f210071986cb",
+          "scenario": "fully_toned",
+          "text": "留底",
+          "old_rank": 21,
+          "new_rank": null
+        }
+      ],
+      "gained_count": 53,
+      "lost_count": 21
+    },
+    "pair_rank:top1": {
+      "gained": [
+        {
+          "id": "speech_span:006c61919173bc4b49ab5bf8",
+          "scenario": "tone_free",
+          "text": "個姐姐",
+          "old_rank": null,
+          "new_rank": 1
+        },
+        {
+          "id": "speech_span:023c4a318fb7e53a6ecec789",
+          "scenario": "tone_free",
+          "text": "咪好似男仔噉其實",
+          "old_rank": null,
+          "new_rank": 1
+        }
+      ],
+      "lost": [
+        {
+          "id": "speech_span:0033ab137311b722ddef57b0",
+          "scenario": "tone_free",
+          "text": "但係奶茶會冇事喎",
+          "old_rank": 1,
+          "new_rank": null
+        }
+      ],
+      "gained_count": 2,
+      "lost_count": 1
+    },
+    "pair_rank:top9": {
+      "gained": [
+        {
+          "id": "speech_span:006c61919173bc4b49ab5bf8",
+          "scenario": "tone_free",
+          "text": "個姐姐",
+          "old_rank": null,
+          "new_rank": 1
+        },
+        {
+          "id": "speech_span:007c5f108ad7f9f0bb874d47",
+          "scenario": "fully_toned",
+          "text": "拎去賣吖嗎可以",
+          "old_rank": null,
+          "new_rank": 9
+        },
+        {
+          "id": "speech_span:00f1a73c3d398311b9b420cc",
+          "scenario": "tone_free",
+          "text": "佢姐姐都陪住佢一齊去玩噉樣",
+          "old_rank": null,
+          "new_rank": 2
+        },
+        {
+          "id": "speech_span:021f49ac59a4cc8caf6dd22a",
+          "scenario": "tone_free",
+          "text": "我淨係知道最新款隻",
+          "old_rank": null,
+          "new_rank": 9
+        },
+        {
+          "id": "speech_span:023c4a318fb7e53a6ecec789",
+          "scenario": "tone_free",
+          "text": "咪好似男仔噉其實",
+          "old_rank": null,
+          "new_rank": 1
+        }
+      ],
+      "lost": [
+        {
+          "id": "speech_span:0033ab137311b722ddef57b0",
+          "scenario": "tone_free",
+          "text": "但係奶茶會冇事喎",
+          "old_rank": 1,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:01a631aa2297e72341570aea",
+          "scenario": "fully_toned",
+          "text": "哩個唔係𠸏",
+          "old_rank": 6,
+          "new_rank": 11
+        },
+        {
+          "id": "speech_span:01c2b1b4041b5a3785e55204",
+          "scenario": "fully_toned",
+          "text": "噉我落咗廠又即係都唔使點覆電話喇",
+          "old_rank": 9,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:0228c403cc4860651e7f88a9",
+          "scenario": "fully_toned",
+          "text": "但係今年佢話佢去都係三千幾啫嗎",
+          "old_rank": 9,
+          "new_rank": 10
+        },
+        {
+          "id": "speech_span:0247c60f5a43786615d16225",
+          "scenario": "tone_free",
+          "text": "百週年乜嘢郵局",
+          "old_rank": 6,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:02902bd4598d7bc6c908c908",
+          "scenario": "tone_free",
+          "text": "即係唔會有害健康",
+          "old_rank": 6,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:0290d217d2f34047a681ffee",
+          "scenario": "fully_toned",
+          "text": "即係改改一部",
+          "old_rank": 9,
+          "new_rank": 10
+        },
+        {
+          "id": "speech_span:0319218231c87a8749281d67",
+          "scenario": "tone_free",
+          "text": "阿婆對面嗰個都係阿婆",
+          "old_rank": 4,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:0328ddb4b5d1cc8741806377",
+          "scenario": "tone_free",
+          "text": "唔講唔係幾好意思",
+          "old_rank": 2,
+          "new_rank": null
+        },
+        {
+          "id": "word_type:01f23e9683346dded862b767",
+          "scenario": "tone_free",
+          "text": "嗰個時候",
+          "old_rank": 3,
+          "new_rank": null
+        }
+      ],
+      "gained_count": 5,
+      "lost_count": 10
+    },
+    "pair_rank:top90": {
+      "gained": [
+        {
+          "id": "speech_span:00146643e77b6756b71d12ee",
+          "scenario": "tone_free",
+          "text": "又再由菲律賓搭返去香港",
+          "old_rank": null,
+          "new_rank": 28
+        },
+        {
+          "id": "speech_span:002049e41d4b68c0be1f6187",
+          "scenario": "fully_toned",
+          "text": "俾返我個",
+          "old_rank": null,
+          "new_rank": 17
+        },
+        {
+          "id": "speech_span:002d939d5c4184e52d71bed5",
+          "scenario": "tone_free",
+          "text": "揸住個毫子好開心",
+          "old_rank": null,
+          "new_rank": 15
+        },
+        {
+          "id": "speech_span:00429c7d09dd5a61b0be768d",
+          "scenario": "tone_free",
+          "text": "去去玩啫嗎",
+          "old_rank": null,
+          "new_rank": 88
+        },
+        {
+          "id": "speech_span:004fae3f441a449498ceb816",
+          "scenario": "fully_toned",
+          "text": "即刻誇咗",
+          "old_rank": null,
+          "new_rank": 25
+        },
+        {
+          "id": "speech_span:006c61919173bc4b49ab5bf8",
+          "scenario": "tone_free",
+          "text": "個姐姐",
+          "old_rank": null,
+          "new_rank": 1
+        },
+        {
+          "id": "speech_span:006d9bbf470d8046d6aa8653",
+          "scenario": "fully_toned",
+          "text": "燒臘舖嘅",
+          "old_rank": null,
+          "new_rank": 32
+        },
+        {
+          "id": "speech_span:007c5f108ad7f9f0bb874d47",
+          "scenario": "fully_toned",
+          "text": "拎去賣吖嗎可以",
+          "old_rank": null,
+          "new_rank": 9
+        },
+        {
+          "id": "speech_span:007d70b9f9e861e9a3aace63",
+          "scenario": "tone_free",
+          "text": "改卷啊",
+          "old_rank": null,
+          "new_rank": 23
+        },
+        {
+          "id": "speech_span:008a9c8d48c6ccde3bd0bfba",
+          "scenario": "tone_free",
+          "text": "曾經有個時期可以要來",
+          "old_rank": null,
+          "new_rank": 56
+        },
+        {
+          "id": "speech_span:00b2f3fef666297f4a9144fc",
+          "scenario": "tone_free",
+          "text": "但係佢做嗰啲戲好似唔係而家",
+          "old_rank": null,
+          "new_rank": 19
+        },
+        {
+          "id": "speech_span:00c5548c8000409da4fe2451",
+          "scenario": "fully_toned",
+          "text": "噉哩個情況𠻺未出現過喎",
+          "old_rank": null,
+          "new_rank": 16
+        },
+        {
+          "id": "speech_span:00e00aae7d950b5c5dcfcbb8",
+          "scenario": "tone_free",
+          "text": "噉啲同學喺度同佢玩",
+          "old_rank": null,
+          "new_rank": 11
+        },
+        {
+          "id": "speech_span:00e8e3c4173601ed19a9ca19",
+          "scenario": "fully_toned",
+          "text": "係文化嘅迴異",
+          "old_rank": null,
+          "new_rank": 27
+        },
+        {
+          "id": "speech_span:00f1a73c3d398311b9b420cc",
+          "scenario": "tone_free",
+          "text": "佢姐姐都陪住佢一齊去玩噉樣",
+          "old_rank": null,
+          "new_rank": 2
+        },
+        {
+          "id": "speech_span:011436972683f2e754e20e52",
+          "scenario": "tone_free",
+          "text": "噉所以我哋有陣時",
+          "old_rank": null,
+          "new_rank": 30
+        },
+        {
+          "id": "speech_span:014ccde61957fe3b2940fe17",
+          "scenario": "fully_toned",
+          "text": "同張少華食飯",
+          "old_rank": null,
+          "new_rank": 21
+        },
+        {
+          "id": "speech_span:01541fe19555e8a851649a55",
+          "scenario": "tone_free",
+          "text": "一啲啲有來呀",
+          "old_rank": null,
+          "new_rank": 49
+        },
+        {
+          "id": "speech_span:01632bf86dd01e7bf08e58ae",
+          "scenario": "fully_toned",
+          "text": "你發覺裏邊係有樂趣",
+          "old_rank": null,
+          "new_rank": 72
+        },
+        {
+          "id": "speech_span:018f687a1acce439ad5ff04f",
+          "scenario": "fully_toned",
+          "text": "有二百蚊喺街度賣",
+          "old_rank": null,
+          "new_rank": 26
+        },
+        {
+          "id": "speech_span:01db3600af8dbe25409cbddc",
+          "scenario": "tone_free",
+          "text": "三個字啊",
+          "old_rank": null,
+          "new_rank": 29
+        },
+        {
+          "id": "speech_span:01e3d5117fd4d455bc69b8aa",
+          "scenario": "fully_toned",
+          "text": "即係𠻺歐洲嘅最佳影片啊",
+          "old_rank": null,
+          "new_rank": 16
+        },
+        {
+          "id": "speech_span:01efedb5708addafbcaad34c",
+          "scenario": "fully_toned",
+          "text": "就有咗一種即係同人哋解籤啊",
+          "old_rank": null,
+          "new_rank": 22
+        },
+        {
+          "id": "speech_span:020bed9f896e96c29471ed83",
+          "scenario": "fully_toned",
+          "text": "咗出來喎",
+          "old_rank": null,
+          "new_rank": 11
+        },
+        {
+          "id": "speech_span:020bed9f896e96c29471ed83",
+          "scenario": "tone_free",
+          "text": "咗出來喎",
+          "old_rank": null,
+          "new_rank": 84
+        },
+        {
+          "id": "speech_span:020e1bf4f005f1fad8740d73",
+          "scenario": "fully_toned",
+          "text": "跟住個醫生呢叫我剝晒佢啝",
+          "old_rank": null,
+          "new_rank": 34
+        },
+        {
+          "id": "speech_span:020e98f0eaf7be4b404a0d2e",
+          "scenario": "tone_free",
+          "text": "十四分嘅人都",
+          "old_rank": null,
+          "new_rank": 30
+        },
+        {
+          "id": "speech_span:021f49ac59a4cc8caf6dd22a",
+          "scenario": "tone_free",
+          "text": "我淨係知道最新款隻",
+          "old_rank": null,
+          "new_rank": 9
+        },
+        {
+          "id": "speech_span:0233f052d11b5cb0ee9754aa",
+          "scenario": "fully_toned",
+          "text": "噉𠻺先前呢",
+          "old_rank": null,
+          "new_rank": 16
+        },
+        {
+          "id": "speech_span:023b65c519fe1d3bb548c132",
+          "scenario": "fully_toned",
+          "text": "佢話應該就會冇事啝",
+          "old_rank": null,
+          "new_rank": 22
+        },
+        {
+          "id": "speech_span:023c4a318fb7e53a6ecec789",
+          "scenario": "tone_free",
+          "text": "咪好似男仔噉其實",
+          "old_rank": null,
+          "new_rank": 1
+        },
+        {
+          "id": "speech_span:02482abb31820a02dd11fedf",
+          "scenario": "fully_toned",
+          "text": "陳子欣",
+          "old_rank": null,
+          "new_rank": 56
+        },
+        {
+          "id": "speech_span:025a20bbd54a5a446e977d4e",
+          "scenario": "fully_toned",
+          "text": "對我來講就係話",
+          "old_rank": null,
+          "new_rank": 16
+        },
+        {
+          "id": "speech_span:0261e81a4f7bace0d52918f0",
+          "scenario": "fully_toned",
+          "text": "有啲噉樣嘅行為呢",
+          "old_rank": null,
+          "new_rank": 26
+        },
+        {
+          "id": "speech_span:027c2b69aa0f513e9bb8b061",
+          "scenario": "fully_toned",
+          "text": "即係佢係對香港𠻺充滿憧憬",
+          "old_rank": null,
+          "new_rank": 16
+        },
+        {
+          "id": "speech_span:02b75f7f318979b8edb34cb6",
+          "scenario": "tone_free",
+          "text": "噉你想點吖",
+          "old_rank": null,
+          "new_rank": 77
+        },
+        {
+          "id": "word_type:001dbfe0eb0f772910e6660e",
+          "scenario": "tone_free",
+          "text": "子由",
+          "old_rank": null,
+          "new_rank": 82
+        },
+        {
+          "id": "word_type:010d9c6ea38a620330cfa603",
+          "scenario": "tone_free",
+          "text": "調亂",
+          "old_rank": null,
+          "new_rank": 89
+        },
+        {
+          "id": "word_type:014d112a09a75e996ca84dec",
+          "scenario": "fully_toned",
+          "text": "辦工室",
+          "old_rank": null,
+          "new_rank": 40
+        },
+        {
+          "id": "word_type:045140bf3377dab687f4c2e0",
+          "scenario": "tone_free",
+          "text": "婆孫",
+          "old_rank": null,
+          "new_rank": 28
+        },
+        {
+          "id": "word_type:048d68b3f48773026ff0548d",
+          "scenario": "fully_toned",
+          "text": "少娟",
+          "old_rank": null,
+          "new_rank": 19
+        },
+        {
+          "id": "word_type:04a513d062ef4c19fa90686c",
+          "scenario": "tone_free",
+          "text": "南哥",
+          "old_rank": null,
+          "new_rank": 32
+        },
+        {
+          "id": "word_type:065941c5056f97397f2920e2",
+          "scenario": "tone_free",
+          "text": "朝朝",
+          "old_rank": null,
+          "new_rank": 33
+        },
+        {
+          "id": "word_type:07fbd945b5129590b288a7ae",
+          "scenario": "tone_free",
+          "text": "一九四三年",
+          "old_rank": null,
+          "new_rank": 26
+        },
+        {
+          "id": "word_type:084d552f248463475ab41124",
+          "scenario": "tone_free",
+          "text": "上冊",
+          "old_rank": null,
+          "new_rank": 53
+        },
+        {
+          "id": "word_type:08a9f0654fa18a1f34f0e954",
+          "scenario": "tone_free",
+          "text": "豬朋",
+          "old_rank": null,
+          "new_rank": 28
+        },
+        {
+          "id": "word_type:092cbd0c20db2ed33414d1ef",
+          "scenario": "fully_toned",
+          "text": "體委",
+          "old_rank": null,
+          "new_rank": 34
+        }
+      ],
+      "lost": [
+        {
+          "id": "speech_span:0033ab137311b722ddef57b0",
+          "scenario": "tone_free",
+          "text": "但係奶茶會冇事喎",
+          "old_rank": 1,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:006e465e2d59b0546eb420d4",
+          "scenario": "tone_free",
+          "text": "喎想出來",
+          "old_rank": 16,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:0084ace2ee3b23822a53425f",
+          "scenario": "fully_toned",
+          "text": "是但嚹",
+          "old_rank": 27,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:009a7b86fd1db051b2155311",
+          "scenario": "fully_toned",
+          "text": "中國大粒佬係老細囖",
+          "old_rank": 14,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:00a9e7bab3ce633e49243768",
+          "scenario": "fully_toned",
+          "text": "我就唔知嚹",
+          "old_rank": 30,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:01033288685d7097146c4885",
+          "scenario": "fully_toned",
+          "text": "飲黑啡𡃉",
+          "old_rank": 21,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:01a631aa2297e72341570aea",
+          "scenario": "tone_free",
+          "text": "哩個唔係𠸏",
+          "old_rank": 14,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:01c2b1b4041b5a3785e55204",
+          "scenario": "fully_toned",
+          "text": "噉我落咗廠又即係都唔使點覆電話喇",
+          "old_rank": 9,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:01ccf4ee911d1e5f09b26438",
+          "scenario": "fully_toned",
+          "text": "啲同學覺得學科係唔緊要𡃉",
+          "old_rank": 21,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:01d9ddb39d925c9f89f3e2c9",
+          "scenario": "fully_toned",
+          "text": "都應該係𡃉",
+          "old_rank": 21,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:01fbbc88ea912978cf02c1b5",
+          "scenario": "fully_toned",
+          "text": "喺中間水入邊游𡃉",
+          "old_rank": 31,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:0247c60f5a43786615d16225",
+          "scenario": "tone_free",
+          "text": "百週年乜嘢郵局",
+          "old_rank": 6,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:027158d1c33e032cbb4e095a",
+          "scenario": "fully_toned",
+          "text": "唔使錢𡃉",
+          "old_rank": 21,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:027918e45eccec18417a53ea",
+          "scenario": "tone_free",
+          "text": "即係當你一個人",
+          "old_rank": 10,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:02902bd4598d7bc6c908c908",
+          "scenario": "tone_free",
+          "text": "即係唔會有害健康",
+          "old_rank": 6,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:02be7b454cb46bccb32ecb1d",
+          "scenario": "fully_toned",
+          "text": "成個過程幾好玩𡃉",
+          "old_rank": 21,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:0319218231c87a8749281d67",
+          "scenario": "tone_free",
+          "text": "阿婆對面嗰個都係阿婆",
+          "old_rank": 4,
+          "new_rank": null
+        },
+        {
+          "id": "speech_span:0328ddb4b5d1cc8741806377",
+          "scenario": "tone_free",
+          "text": "唔講唔係幾好意思",
+          "old_rank": 2,
+          "new_rank": null
+        },
+        {
+          "id": "word_type:01bf917b6f1892a948fdd0fb",
+          "scenario": "fully_toned",
+          "text": "後邊",
+          "old_rank": 24,
+          "new_rank": null
+        },
+        {
+          "id": "word_type:01f23e9683346dded862b767",
+          "scenario": "tone_free",
+          "text": "嗰個時候",
+          "old_rank": 3,
+          "new_rank": null
+        },
+        {
+          "id": "word_type:0449d7b0d5a0f210071986cb",
+          "scenario": "fully_toned",
+          "text": "留底",
+          "old_rank": 21,
+          "new_rank": null
+        }
+      ],
+      "gained_count": 47,
+      "lost_count": 21
+    }
+  },
+  "interpretation": "More complete retained-graph search improves aggregate first-90 coverage but not every metric: exact-text top-9 loses two net, exact-pair top-9 loses five net. More composed outputs can move completions to later pages. Not a linguistic readiness pass."
+}

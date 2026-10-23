@@ -1,0 +1,117 @@
+{
+  "admission_inventory_policy": "Frozen pre-import stored-base inventory; absence requires quarantine, not automatic pronunciation repair or a linguistic invalidity judgment.",
+  "attribution": "Cantonese Wordnet by Joanna Ut-Seong Sio and Luis Morgado da Costa; source README, canonical citation and original XML notices retained unmodified. See ATTRIBUTION.md.",
+  "attribution_file": "ATTRIBUTION.md",
+  "changes": "Downloaded XML and README bytes are unmodified. The full standard license text is copied byte-for-byte from an already retained, verified CC BY4.0 license because the canonical legalcode.txt endpoint returned HTTP403. ATTRIBUTION.md and parser-attested-bases.json are project-generated metadata. No product database or package was changed.",
+  "citation": "Sio, Joanna Ut-Seong & Morgado da Costa, Luis. (2019). Building the Cantonese Wordnet. In Proceedings of the Tenth Global Wordnet Conference (GWC2019), pp.206-215. Wroclaw, Poland.",
+  "citation_url": "https://aclanthology.org/2019.gwc-1.26/",
+  "combined_adaptation_license": "CC-BY-SA-4.0",
+  "combined_adaptation_license_basis": "CC BY4.0 source attribution and original license are retained within the separately documented CC BY-SA4.0 combined dictionary adaptation; application code is separate.",
+  "commit": "6434cbc1d692d3061266352aa223a8df4a9c883e",
+  "commit_date": "2023-12-04T10:25:29Z",
+  "data_file": "cantown.xml",
+  "declaration_file": "README.md",
+  "excluded": [
+    "cantown-en English lexicon (5 explanatory lexical entries and 5 empty forms) and any other non-target lexicons",
+    "legacy cantown.tsv without Jyutping forms",
+    "definitions and semantic relations as lookup data",
+    "example sentences and companion corpus data",
+    "audio and other media",
+    "inferred or reconstructed missing readings",
+    "spelling, tone, punctuation or nasal repairs",
+    "HKCanCor evaluation labels",
+    "any dictionary/native runtime changes"
+  ],
+  "files": [
+    {
+      "kind": "project-generated source attribution metadata",
+      "name": "ATTRIBUTION.md",
+      "sha256": "55a8781116a1549d7f59255e20e5daf30108323597c8362ea4fa0238f5156557",
+      "size_bytes": 3257
+    },
+    {
+      "canonical_license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "copied_from": "data/vendor/typeduck-schema/7f9d90d4185eca293576de5b5dddaaf1d265f3c9/LICENSE",
+      "kind": "unmodified complete standard CC BY4.0 legal text; license text only, not TypeDuck dictionary data",
+      "name": "LICENSE-CC-BY-4.0.txt",
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+      "size_bytes": 18657,
+      "url": "https://raw.githubusercontent.com/TypeDuck-HK/schema/7f9d90d4185eca293576de5b5dddaaf1d265f3c9/LICENSE"
+    },
+    {
+      "name": "README.md",
+      "sha256": "1d301f8931bf687e81f5b145a78170059d07a9849f7d20048a71587c68cca093",
+      "size_bytes": 3711,
+      "url": "https://raw.githubusercontent.com/lmorgadodacosta/CantoneseWN/6434cbc1d692d3061266352aa223a8df4a9c883e/README.md"
+    },
+    {
+      "name": "cantown.xml",
+      "sha256": "660debb24d51a439de758cfc80dd4d2bcfc9f2b5cad6d83f68c1206be48865d9",
+      "size_bytes": 4448577,
+      "url": "https://raw.githubusercontent.com/lmorgadodacosta/CantoneseWN/6434cbc1d692d3061266352aa223a8df4a9c883e/cantown.xml"
+    },
+    {
+      "baseline_database_sha256": "3fccc5bcf45cbb676b8a1a51e2030d418803af64b3cd5c0ae7d67cf90a4711bb",
+      "kind": "project-generated validation metadata",
+      "name": "parser-attested-bases.json",
+      "sha256": "58068acac23faf02462263ca3a68d80959516e9e5f01bbd3b0d711fcbb54ffc8",
+      "size_bytes": 10595
+    }
+  ],
+  "format_version": 1,
+  "license": "CC-BY-4.0",
+  "license_declaration": "The pinned README License section and XML Lexicon license attribute both declare Creative Commons Attribution 4.0 International.",
+  "license_file": "LICENSE-CC-BY-4.0.txt",
+  "local_directory": "data/vendor/cantonese-wordnet/6434cbc1d692d3061266352aa223a8df4a9c883e",
+  "parser_attestation": {
+    "base_count": 878,
+    "baseline_database_sha256": "3fccc5bcf45cbb676b8a1a51e2030d418803af64b3cd5c0ae7d67cf90a4711bb",
+    "file": "parser-attested-bases.json",
+    "sha256": "58068acac23faf02462263ca3a68d80959516e9e5f01bbd3b0d711fcbb54ffc8"
+  },
+  "phrase_translation_policy": "Candidate single-character readings must remain direct-lookup-only until separately reviewed; no change to existing ScriptEncoder inputs is authorized by this snapshot.",
+  "repository": "https://github.com/lmorgadodacosta/CantoneseWN",
+  "retrieval_timezone": "Asia/Hong_Kong",
+  "retrieved_date": "2026-10-23",
+  "review_policy": "Account for target Cantonese lexical entries and Form occurrences, including empty forms, and record excluded non-target lexicons separately; quarantine malformed, noncanonical, unknown-base, non-Han or text/syllable-unaligned forms with source entry IDs and raw fields. Preserve variant/tone notation without silent interpretation.",
+  "scope": "Candidate explicit Cantonese/Jyutping Form writtenForm values paired with the Lemma in the same LexicalEntry, only within Lexicon id cantown-yue and language yue. Exclude cantown-en (English) and other non-target lexicons. Full upstream originals retained unchanged. Legacy TSV is not selected because it omits Jyutping forms.",
+  "selection_status": "Candidate source preparation only; not selected for default import and not independent linguistic approval.",
+  "source_id": "wordnet:cantown",
+  "source_name": "Cantonese Wordnet",
+  "source_snapshot_counts": {
+    "excluded_english_form_nodes": 5,
+    "excluded_english_lexical_entries": 5,
+    "excluded_english_nonempty_forms": 0,
+    "meaning": "Raw source observations, not accepted pair counts, linguistic approval or dictionary contents.",
+    "target_yue_empty_forms": 11660,
+    "target_yue_form_nodes": 23733,
+    "target_yue_lexical_entries": 11667,
+    "target_yue_nonempty_forms": 12073,
+    "target_yue_unique_lemmas": 10407,
+    "whole_file_lexical_entries": 11672,
+    "whole_file_lexicons": 2
+  },
+  "source_url": "https://github.com/lmorgadodacosta/CantoneseWN",
+  "weight_policy": "All possible newly selected pairs have weight0 as frequency unknown; do not infer pronunciation frequency, replace existing readings, or inherit whole-text counts.",
+  "xml_expectations": {
+    "entry_element": "LexicalEntry",
+    "excluded_lexicons": [
+      {
+        "form_nodes": 5,
+        "id": "cantown-en",
+        "language": "en",
+        "lexical_entries": 5,
+        "nonempty_forms": 0
+      }
+    ],
+    "language": "yue",
+    "lemma_element": "Lemma",
+    "lexicon_id": "cantown-yue",
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "reading_element": "Form",
+    "root": "LexicalResource",
+    "selection_policy": "Select exactly one Lexicon with both id cantown-yue and language yue; other lexicons are excluded from Cantonese entry/Form accounting and recorded separately.",
+    "text_attribute": "writtenForm",
+    "version": "1.0"
+  }
+}

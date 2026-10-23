@@ -1,0 +1,120 @@
+{
+  "recorded_at_utc": "2026-10-22T20:19:12.469240+00:00",
+  "status": "installed_verified_user_typing_and_visual_qa_delegated",
+  "published": [
+    {
+      "source": ".local\\final-source-canonical\\first\\lexicon.sqlite3",
+      "target": "data\\generated\\lexicon.sqlite3",
+      "sha256": "bd312406a15162556ac58a257ede1514ad40890c793b6f8fa05084fda2d6241a"
+    },
+    {
+      "source": ".local\\final-source-canonical\\first\\lexicon.manifest.json",
+      "target": "data\\generated\\lexicon.manifest.json",
+      "sha256": "60532631e6790299e4e30145b99b8ad201b826112a58596f5a6ac5cd97994a08"
+    },
+    {
+      "source": ".local\\final-source-mappings\\syllables.json",
+      "target": "data\\mappings\\syllables.json",
+      "sha256": "6ba71ec3b02e763be7f371b0c354945075bb974092454aaba4725d750b03ef02"
+    },
+    {
+      "source": ".local\\final-source-mappings\\spellings.json",
+      "target": "data\\mappings\\spellings.json",
+      "sha256": "6726e07ec0751d8a2017d25eb494c416555c0bc70d744155e48cdd1b513abb60"
+    },
+    {
+      "source": ".local\\final-source-mappings\\build.manifest.json",
+      "target": "data\\mappings\\build.manifest.json",
+      "sha256": "41bc44d94baab85f84168dcd7d09f0728034d7fb96859719c8874607b3349e5d"
+    }
+  ],
+  "previous_sha256": {
+    "data\\generated\\lexicon.sqlite3": "d835b8c4487b90ef751c8c91f467b9245c8bd54ee5be8157531dd9530ac7667b",
+    "data\\generated\\lexicon.manifest.json": "a7c06bf7a165c51b0958a4512b96d1f7d65010605bc9c42ae68f0970da6d9029",
+    "data\\mappings\\syllables.json": "43fa147c5a852563e7b3d59280362d274984eeb53d4fd9c1b8bb5097539fe9a3",
+    "data\\mappings\\spellings.json": "b3690a3792ee94a08771eb3f6a62433f979fca347207e3e21724c605d087c9a2",
+    "data\\mappings\\build.manifest.json": "951241bbdce2e1d2e9e3d22eb2e4e2efaea2784616200837320500051003d4d6"
+  },
+  "previous_database_retained_at": ".local/wordnet-canonical/lexicon.sqlite3",
+  "previous_metadata_retained_at": ".local\\final-development-publication\\previous-metadata",
+  "dictionary_pairs": 776335,
+  "distinct_texts": 644427,
+  "profile": "cantonese-yale-ascii-v3",
+  "native_installation_changed": true,
+  "scope": "Reversible project development publication after byte-identical raw builds, source checks and mapping diagnostics. Full suite, combined audit and staged native checks remain separate; this is not installation or all-Chinese approval.",
+  "mapping_manifest_refresh": {
+    "recorded_at_utc": "2026-10-22T20:32:44.479940+00:00",
+    "reason": "Build-only legacy dictionary selector compatibility fix; functional mapping JSON and runtime unchanged.",
+    "previous_sha256": "41bc44d94baab85f84168dcd7d09f0728034d7fb96859719c8874607b3349e5d",
+    "current_sha256": "8a91d6f2ef6b0258edf63f82eb8fdbcffded0aca706a4456f359d2eab3016f39",
+    "build_script_sha256": "d1e3f8d879565844206d9753e344f75acab2064ad3c4e931d11e0da5f6a9c8e0",
+    "focused_evidence": ".local/mapping-selector-fix/report.json",
+    "previous_manifest_retained": ".local/final-development-publication/mapping-manifest-before-r2.json"
+  },
+  "diagnostic_outputs_published": {
+    "recorded_at_utc": "2026-10-22T20:41:07.301524+00:00",
+    "files": [
+      {
+        "source": "docs/final-yale-coverage-r2.json",
+        "target": "docs/yale-coverage.json",
+        "sha256": "7314dad03d6eac485e6a8c688534a6ccbd11005aa4bcb38c50865754206dc73d"
+      },
+      {
+        "source": "docs/final-yale-engine-evaluation-r2.json",
+        "target": "docs/engine-evaluation.json",
+        "sha256": "ef7ca3375c3ac754f853c1f19b631b1f2f137dfcf623a1ccb9b1d44787482596"
+      },
+      {
+        "source": "docs/final-yale-dictionary-audit-r2.json",
+        "target": "data/generated/dictionary-audit.json",
+        "sha256": "24872d1ef47c6683033bc62666ab6c0eb1d0acfa60aabbd8183f647c9256bae5"
+      }
+    ],
+    "previous_outputs_retained": ".local/final-development-publication/previous-default-diagnostics"
+  },
+  "python_suite": {
+    "tests": 567,
+    "passed": true,
+    "evidence": ".local/final-v3-python-suite-r2.json"
+  },
+  "completed_checks": {
+    "python_tests": 567,
+    "mechanical_gates": 10,
+    "native_x64_cases": 31
+  },
+  "latest_validation": {
+    "path": "docs/yale-expanded-v3-installed-validation.json",
+    "sha256": "924b40c529e41c6e1f50ec8119b5f729a219506dc58b5c1b1f4587a2270f9e7f"
+  },
+  "completed_catalog": {
+    "status": "complete_with_frozen_replay",
+    "input_groups_verified": 503708,
+    "source_pairs": 776335,
+    "public_page_calls": 503925,
+    "missing_target_memberships": 0,
+    "aggregate": {
+      "path": "docs/final-yale-catalog-coverage.json",
+      "sha256": "710727d71bba09f42af32afeabeb821581072990d6daa30b13fe973a09ee9756"
+    },
+    "frozen_replay": {
+      "path": ".local/yale-catalog/final-v3-frozen-runtime/replay-validation.json",
+      "sha256": "12e0ced1b78271c2d5dd2cdd89f6ea20615baa52a7f573e887ba7a821afb1b5b"
+    },
+    "frozen_manifest": {
+      "path": ".local/yale-catalog/final-v3-frozen-runtime/freeze-manifest.json",
+      "sha256": "3731827bd3f911157ba22925e679d49f8887ee615200c93cad029ff4c9f85c07"
+    },
+    "actual_worker_exits": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "scope": "All stored target texts per compact plain-Yale input. Source-reading alternatives that collapse to the same text/input are represented once. Not all Chinese vocabulary, pronunciation quality, ranking acceptance, native timeout or typing proof."
+  },
+  "installation_followup": {
+    "path": "docs/yale-expanded-v3-installed-validation.json",
+    "sha256": "924b40c529e41c6e1f50ec8119b5f729a219506dc58b5c1b1f4587a2270f9e7f"
+  },
+  "private_learning_contents_copied_or_logged": false
+}

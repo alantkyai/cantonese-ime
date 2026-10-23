@@ -1,0 +1,15 @@
+{
+  "artifact_kind": "external_corpus_pre_score_freeze",
+  "captured_at_utc": "2026-10-22T10:48:23.198875+00:00",
+  "case_count": 500,
+  "selection": "250 word types and 250 maximal eligible speech spans; source-only selection before engine scoring",
+  "scope": "External annotation baseline; not clean held-out or natural typing, no quality acceptance decision",
+  "sha256": {
+    "eval/hkcancor_cases.json": "410f4b612ca14e5e60da0b147f7bf9fb4b4a1e25c125053e00596981b72ef085",
+    "eval/hkcancor.sources.lock.json": "e020995669488936880d4ef9dd55290cb86a23d22476c576d705e87145fbb060",
+    "cantonese_ime/engine.py": "dd9e6c46a702a945098b0a1c4c8dc54fb9c82e1aeb763430897b207ea4157d7e",
+    "cantonese_ime/mappings.py": "39a19b8b9227153dfb16317b7ef5f223ce95fd005b68c61126248fec1a91872d",
+    "tools/evaluate_hkcancor.py": "86a796b9f43194b9e0067cb161a0b3d02f18a821a8938ba6221a5e709977f295",
+    "data/generated/lexicon.sqlite3": "4353328cb17f8c8f8cc5d78730e34c3aa26c6c8ea7d1a4f4a8f91fee5d900a6e"
+  }
+}

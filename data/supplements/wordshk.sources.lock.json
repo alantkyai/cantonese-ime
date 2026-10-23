@@ -1,0 +1,34 @@
+{
+  "attribution": "words.hk 粵典 contributors. Credit retained as requested by the source.",
+  "data_url": "https://words.hk/faiman/analysis/wordslist.json",
+  "files": [
+    {
+      "name": "wordslist.json",
+      "sha256": "0ea376604451f43401b4b6e574cea28c63d4dedd4aaf5b32e86f920382969886",
+      "size_bytes": 2418939,
+      "url": "https://words.hk/faiman/analysis/wordslist.json"
+    },
+    {
+      "name": "license-declaration.html",
+      "sha256": "bafaf154e5a8cb071e59d0b5ff615881105aa950a8cdc0778e22f3ea00b827dd",
+      "size_bytes": 9152,
+      "url": "https://words.hk/faiman/analysis/wordslist/"
+    }
+  ],
+  "format_version": 1,
+  "license": "public-domain declaration (wordlist and pronunciations only)",
+  "license_declaration": "Data License: public domain. Credits to words.hk appreciated.",
+  "license_declaration_url": "https://words.hk/faiman/analysis/wordslist/",
+  "license_declaration_zh": "授權：公有領域。",
+  "local_directory": "data/vendor/words-hk/2026-10-22",
+  "retrieval_timezone": "Asia/Hong_Kong",
+  "review_policy": "Normalize exactly one documented trailing variant-star marker with source_flag=variant and exact raw text preserved in normalized_variant review records. Quarantine malformed middle/multiple-star markers, non-Jyutping readings and ellipsis templates; never silently strip phonetic notation.",
+  "scope": "Wordlist/pronunciations only; dictionary definitions, examples, media and other API datasets excluded.",
+  "snapshot_id": "2026-10-22",
+  "snapshot_retrieved_at": "2026-10-22T14:44:39+08:00",
+  "source_id": "words.hk:wordlist",
+  "source_updated_display": "2026年10月8日14:24:41",
+  "source_updated_timezone": null,
+  "source_updated_timezone_note": "The upstream page does not state the timezone for its displayed update time.",
+  "weight_policy": "No frequency supplied; imported rows have weight0 until separately attributed text frequencies are applied."
+}

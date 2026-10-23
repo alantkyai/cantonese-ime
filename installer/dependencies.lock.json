@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "python": {
+    "version": "3.13.17",
+    "url": "https://www.python.org/ftp/python/3.13.17/python-3.13.17-embed-amd64.zip",
+    "sha256": "9e35319bffedab8b36ad44d8f377cb4f1733bcec257a0b6d04d94f01486ddb38",
+    "release_page": "https://www.python.org/downloads/release/python-31317/",
+    "architecture": "AMD64",
+    "pth_contents": "python313.zip\n.\n..\\..\n"
+  },
+  "inno_setup": {
+    "version": "7.1.0",
+    "url": "https://github.com/jrsoftware/issrc/releases/download/is-7_1_0/innosetup-7.1.0-x64.exe",
+    "sha256": "0362a383ed217d4c4239b5933866dd96d3eb2102737da92f80f6057a4b40df2f",
+    "publisher": "Pyrsys B.V.",
+    "download_page": "https://jrsoftware.org/isdl.php",
+    "portable_documentation": "https://jrsoftware.org/ishelp/topic_technotes.htm"
+  }
+}

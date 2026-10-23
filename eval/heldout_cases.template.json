@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "purpose": "Empty collection template for independently authored Cantonese typing tasks; no accuracy evidence yet.",
+  "status": "empty_not_frozen",
+  "corpus_author": null,
+  "reviewer": null,
+  "reviewed_at": null,
+  "discovery_and_source_overlap": null,
+  "acceptance_criteria": {
+    "owner_decision": null,
+    "minimum_top1_rate": null,
+    "minimum_top9_rate": null,
+    "latency_measurement_and_target": null
+  },
+  "default_top_k": 9,
+  "cases": []
+}

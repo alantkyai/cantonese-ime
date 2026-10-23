@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-23T11:56:13.955410+00:00",
+  "version": "1.0.1",
+  "status": "installed_and_readonly_verified",
+  "installer": "dist/CantoneseIME-1.0.1-x64/CantoneseIME-1.0.1-windows-x64-setup.exe",
+  "setup_sha256": "5c7e7c3e9603da16d5cfdf5196f6f0dc75dac71f1813711e35f9d9283df0d505",
+  "manifest_sha256": "f0422ef41ad80064e7653162c6c9c28bcbeb15395036ede4af5ea913438400d1",
+  "installed_payload_files_verified": 120,
+  "broker_ready": true,
+  "broker_pid": 22232,
+  "machine_registration_exit": 0,
+  "ordinary_user_activation_exit": 0,
+  "original_user_enabled_profiles": {
+    "0409": true,
+    "0c04": false
+  },
+  "profile_metadata_release_name_verified": true,
+  "persisted_category_count": 4,
+  "fresh_process_category_count": 4,
+  "targeted_installer_and_packager_tests": 56,
+  "native_inventory_fixtures": 15,
+  "registration_guard_checks": 18,
+  "shared_engine_dictionary_and_dll_unchanged_from_1_0_0": true,
+  "signed": false,
+  "native_typing_visual_check": "delegated_to_user",
+  "actual_uninstall_tested": false,
+  "observations": [
+    "Default-profile query differed from the before snapshot and was retained as a warning; no global-default preservation claim.",
+    "Learning file remains present and grew from 8351 to 9022 bytes, with last write after installation completed. The delayed monitor snapshot cannot establish byte-for-byte preservation. No learning contents were copied.",
+    "The local test launcher waited for the persistent broker after Setup exited; installer completion was recovered from its closed log plus independent installed checks, without inventing an observed setup process exit code."
+  ],
+  "next_work": "User screenshot requests white high-contrast mode icons and a Cantonese source under Traditional Chinese Hong Kong instead of the legacy English profile. Version1.0.2 work is in progress.",
+  "evidence_dir": "docs/windows-installer-repair-evidence/2026-10-23"
+}

@@ -1,0 +1,39 @@
+{
+  "version": "1.0.3",
+  "package_checks_passed": true,
+  "setup": {
+    "filename": "CantoneseIME-1.0.3-windows-x64-setup.exe",
+    "bytes": 84636134,
+    "sha256": "90390044806d7dc76337f607d8204804fa83a2de26a40198b3e12abdb2650da6"
+  },
+  "package_manifest_sha256": "fb5eb8fe432137b3340b13633be6f7353dae00fb6f6ef47b2ee54f18cb386de7",
+  "payload_file_count": 121,
+  "focused_tests_passed": 45,
+  "native_icons": {
+    "variants": 24,
+    "dark_and_white_renders": 48,
+    "validated": true
+  },
+  "standalone_actual_migration_passed": true,
+  "repeated_migration_preferences_stable": true,
+  "standard_installer_status": "closed_before_installation_exit_2_no_setup_log",
+  "final_1_0_3_installed_verification_passed": false,
+  "native_typing_and_taskbar_acceptance": "user will check after reopening applications",
+  "remaining": [
+    "Final 1.0.3 installer completion and read-back",
+    "User taskbar and typing check",
+    "Clean-machine and Windows 11 acceptance",
+    "Actual uninstall and sign-in startup",
+    "Complete live failure/cancellation matrix"
+  ],
+  "evidence_sha256": {
+    "windows-installer-repair-evidence/2026-10-23/build-1.0.3.json": "174ed1ce892819c0773b8b2b9ef066facaa6cd5027922b27b56fb0983248747b",
+    "windows-installer-repair-evidence/2026-10-23/native-icons-1.0.2.json": "bc0d1efae5616769b63fb0542dc5a272663c358f7e8b92c2425846840e3d9de1",
+    "windows-installer-repair-evidence/2026-10-23/source-migration-1.0.3.json": "844708a2d4304c2fb1d0e6f0ae6c2b0a2b5775db72cce6f42d2fa1124c27e738",
+    "windows-installer-repair-evidence/2026-10-23/setup-1.0.3-attempt-1.json": "108bccb0aaad7d1141f37e13aa5e3023d7d9bf2a5a5d1e830dd60bb9fa5acd48"
+  },
+  "installed_package_version": "1.0.2",
+  "corrected_hk_source_and_white_icon_dll_active": true,
+  "retained_installation_read_only_verification_passed": true,
+  "personal_learning_unchanged_during_setup_attempt": true
+}

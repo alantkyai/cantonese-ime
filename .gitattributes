@@ -1,0 +1,2 @@
+# Source locks and build reports pin exact bytes, including vendor line endings.
+* -text

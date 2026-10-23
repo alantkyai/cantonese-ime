@@ -1,0 +1,361 @@
+{
+  "archive_members": [
+    {
+      "name": "Unihan_DictionaryIndices.txt",
+      "sha256": "b41c7c5ca3a01d833ed4fe0c7b9cdf41c4ec08cb11a0fd1df6e92ed666ce00e1",
+      "size_bytes": 8921637
+    },
+    {
+      "name": "Unihan_DictionaryLikeData.txt",
+      "sha256": "cce221e3d4719c9fa7f0068d2a86bd0d8f3bf5725a21a77d00fc4f784d5520ed",
+      "size_bytes": 4129290
+    },
+    {
+      "name": "Unihan_IRGSources.txt",
+      "sha256": "e2c484cd22b54f7e0ce896ebb02f33e092b92325accf0fd55e0e14e3863869eb",
+      "size_bytes": 13379351
+    },
+    {
+      "name": "Unihan_NumericValues.txt",
+      "sha256": "ea986cec09192efa3b527049fca964682b394d42b0ce0e15dbe1321dec2dc7e6",
+      "size_bytes": 4990
+    },
+    {
+      "name": "Unihan_OtherMappings.txt",
+      "sha256": "fc7bbb8f923fa1e922a4d421aa15387d1c68250cc5e7619bdf81f575ab38472b",
+      "size_bytes": 3715847
+    },
+    {
+      "name": "Unihan_RadicalStrokeCounts.txt",
+      "sha256": "9330f089ebb61426b277951b319775aa6e3a3e56900f6381cab915891cd4fda9",
+      "size_bytes": 600881
+    },
+    {
+      "name": "Unihan_Readings.txt",
+      "sha256": "9d39995b5de714e8ce93716ed5d15eaa0792d68e407cdf8a0add2893b8f4150b",
+      "size_bytes": 8844571
+    },
+    {
+      "name": "Unihan_Variants.txt",
+      "sha256": "4ccfd34b08ac7b9c14353f6668ba43e3796d85c4cdce7952b635be16015aafa2",
+      "size_bytes": 726700
+    }
+  ],
+  "baseline": {
+    "authored_single_character_pairs": 42677,
+    "bases": 873,
+    "pairs": 576125,
+    "path": "D:\\IME_Project\\data\\generated\\lexicon.sqlite3",
+    "sha256": "aec269744279a5d85a9f5ca459b9a04f060ae53c29b975fd4aab132d90fab39d",
+    "single_character_pairs": 42677,
+    "toned_forms": 2950
+  },
+  "candidate_status": "audit_only_not_selected",
+  "counts": {
+    "missing_components_still_without_kCantonese": 3,
+    "missing_components_with_direct_kCantonese": 11,
+    "new_pairs_vs_authored": 2899,
+    "new_pairs_vs_baseline": 2899,
+    "new_readings_existing_texts": 110,
+    "new_texts": 2789,
+    "overlapping_baseline_pairs": 27037,
+    "path_limited_exact_wholeword_matches": 0,
+    "path_limited_phrase_rows": 80,
+    "source_bases": 659,
+    "source_character_texts": 29936,
+    "source_pairs": 29936,
+    "source_toned_forms": 1869
+  },
+  "derived_files": {
+    "new-pairs.tsv": {
+      "rows": 2899,
+      "sha256": "f391f6b1ac50eef4959a2b3d8c0a00186b395941a4e32369622c5df9e65ecab6"
+    }
+  },
+  "interpretation": "Exact textual pair delta only. No pronunciation/frequency quality claim, no variant inheritance, no word reading generation and no source selection change.",
+  "missing_components": [
+    {
+      "baseline_readings": [],
+      "codepoint": "U+4E44",
+      "kCantonese": [
+        {
+          "codepoint": "U+4E44",
+          "line": 30628,
+          "member": "Unihan_Readings.txt",
+          "reading": "ngau1"
+        }
+      ],
+      "text": "乄"
+    },
+    {
+      "baseline_readings": [],
+      "codepoint": "U+4E4A",
+      "kCantonese": [
+        {
+          "codepoint": "U+4E4A",
+          "line": 30684,
+          "member": "Unihan_Readings.txt",
+          "reading": "fu4"
+        }
+      ],
+      "text": "乊"
+    },
+    {
+      "baseline_readings": [],
+      "codepoint": "U+4E5B",
+      "kCantonese": [
+        {
+          "codepoint": "U+4E5B",
+          "line": 30866,
+          "member": "Unihan_Readings.txt",
+          "reading": "waang4"
+        }
+      ],
+      "text": "乛"
+    },
+    {
+      "baseline_readings": [],
+      "codepoint": "U+7E9F",
+      "kCantonese": [
+        {
+          "codepoint": "U+7E9F",
+          "line": 143536,
+          "member": "Unihan_Readings.txt",
+          "reading": "mik6"
+        }
+      ],
+      "text": "纟"
+    },
+    {
+      "baseline_readings": [],
+      "codepoint": "U+7F53",
+      "kCantonese": [],
+      "text": "罓"
+    },
+    {
+      "baseline_readings": [],
+      "codepoint": "U+8080",
+      "kCantonese": [],
+      "text": "肀"
+    },
+    {
+      "baseline_readings": [],
+      "codepoint": "U+8980",
+      "kCantonese": [
+        {
+          "codepoint": "U+8980",
+          "line": 167274,
+          "member": "Unihan_Readings.txt",
+          "reading": "sai1"
+        }
+      ],
+      "text": "覀"
+    },
+    {
+      "baseline_readings": [],
+      "codepoint": "U+8BA0",
+      "kCantonese": [
+        {
+          "codepoint": "U+8BA0",
+          "line": 171935,
+          "member": "Unihan_Readings.txt",
+          "reading": "jin4"
+        }
+      ],
+      "text": "讠"
+    },
+    {
+      "baseline_readings": [],
+      "codepoint": "U+9485",
+      "kCantonese": [
+        {
+          "codepoint": "U+9485",
+          "line": 190583,
+          "member": "Unihan_Readings.txt",
+          "reading": "gam1"
+        }
+      ],
+      "text": "钅"
+    },
+    {
+      "baseline_readings": [],
+      "codepoint": "U+961D",
+      "kCantonese": [
+        {
+          "codepoint": "U+961D",
+          "line": 193078,
+          "member": "Unihan_Readings.txt",
+          "reading": "fau6"
+        }
+      ],
+      "text": "阝"
+    },
+    {
+      "baseline_readings": [],
+      "codepoint": "U+9963",
+      "kCantonese": [
+        {
+          "codepoint": "U+9963",
+          "line": 200390,
+          "member": "Unihan_Readings.txt",
+          "reading": "sik6"
+        }
+      ],
+      "text": "饣"
+    },
+    {
+      "baseline_readings": [],
+      "codepoint": "U+200CD",
+      "kCantonese": [
+        {
+          "codepoint": "U+200CD",
+          "line": 213620,
+          "member": "Unihan_Readings.txt",
+          "reading": "waang4"
+        }
+      ],
+      "text": "𠃍"
+    },
+    {
+      "baseline_readings": [],
+      "codepoint": "U+200D1",
+      "kCantonese": [
+        {
+          "codepoint": "U+200D1",
+          "line": 213623,
+          "member": "Unihan_Readings.txt",
+          "reading": "saam1"
+        }
+      ],
+      "text": "𠃑"
+    },
+    {
+      "baseline_readings": [],
+      "codepoint": "U+27607",
+      "kCantonese": [],
+      "text": "𧘇"
+    }
+  ],
+  "new_base_classification": [
+    {
+      "base": "bap",
+      "exception_flags": [
+        "new_to_selected_inventory",
+        "provisional_source_property"
+      ],
+      "final": "ap",
+      "interpretation": "Onset/final shape compatibility only; no exhaustive phonotactic or modern-use validation.",
+      "onset": "b",
+      "scheme_shape": true,
+      "source_tones": [
+        "6"
+      ]
+    },
+    {
+      "base": "dun",
+      "exception_flags": [
+        "new_to_selected_inventory",
+        "provisional_source_property"
+      ],
+      "final": "un",
+      "interpretation": "Onset/final shape compatibility only; no exhaustive phonotactic or modern-use validation.",
+      "onset": "d",
+      "scheme_shape": true,
+      "source_tones": [
+        "1"
+      ]
+    },
+    {
+      "base": "eot",
+      "exception_flags": [
+        "new_to_selected_inventory",
+        "provisional_source_property"
+      ],
+      "final": "eot",
+      "interpretation": "Onset/final shape compatibility only; no exhaustive phonotactic or modern-use validation.",
+      "onset": "",
+      "scheme_shape": true,
+      "source_tones": [
+        "1"
+      ]
+    },
+    {
+      "base": "kwaat",
+      "exception_flags": [
+        "new_to_selected_inventory",
+        "provisional_source_property"
+      ],
+      "final": "aat",
+      "interpretation": "Onset/final shape compatibility only; no exhaustive phonotactic or modern-use validation.",
+      "onset": "kw",
+      "scheme_shape": true,
+      "source_tones": [
+        "1"
+      ]
+    }
+  ],
+  "new_base_examples": {
+    "bap": [
+      {
+        "codepoint": "U+2BAC8",
+        "line": 281637,
+        "member": "Unihan_Readings.txt",
+        "reading": "bap6",
+        "text": "𫫈"
+      }
+    ],
+    "dun": [
+      {
+        "codepoint": "U+204CE",
+        "line": 214810,
+        "member": "Unihan_Readings.txt",
+        "reading": "dun1",
+        "text": "𠓎"
+      }
+    ],
+    "eot": [
+      {
+        "codepoint": "U+20C32",
+        "line": 217649,
+        "member": "Unihan_Readings.txt",
+        "reading": "eot1",
+        "text": "𠰲"
+      }
+    ],
+    "kwaat": [
+      {
+        "codepoint": "U+21078",
+        "line": 219437,
+        "member": "Unihan_Readings.txt",
+        "reading": "kwaat1",
+        "text": "𡁸"
+      }
+    ]
+  },
+  "new_bases": [
+    "bap",
+    "dun",
+    "eot",
+    "kwaat"
+  ],
+  "new_toned_forms": [
+    "aap6",
+    "bap6",
+    "caa6",
+    "dun1",
+    "eot1",
+    "ju4",
+    "kek3",
+    "koeng6",
+    "kui1",
+    "kwaat1",
+    "meng5",
+    "nip3",
+    "paang6",
+    "zeot6"
+  ],
+  "property": "kCantonese",
+  "property_status": "Provisional",
+  "schema_version": 1,
+  "unicode_version": "18.0.0"
+}

@@ -1,0 +1,3075 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-22T11:18:49.398596+00:00",
+  "scope": "Independent synthetic exhaustive search mechanics; no external corpus scoring or live lexicon access",
+  "source_hashes": {
+    "cantonese_ime/engine.py": "c2b67530f0fa42f14841f37e56369f776d023e4f63f67a4b92ad5085707e4d92",
+    "cantonese_ime/mappings.py": "39a19b8b9227153dfb16317b7ef5f223ce95fd005b68c61126248fec1a91872d",
+    "cantonese_ime/__init__.py": "d7652cf2dbc20d81143b337fbfd59f83bbc6dc3c0b929b125cd28371f1ee222d",
+    "tools/check_composition_search.py": "6ceebb9244432d1cc3c134bebe68b543b368217cf324f1f737fecb83d8b4bf2b",
+    ".local/composition-search-baseline/engine.py": "dd9e6c46a702a945098b0a1c4c8dc54fb9c82e1aeb763430897b207ea4157d7e"
+  },
+  "source_guards_passed": true,
+  "objective": "800 - sum(max(0, log(sum(weights)+entry_count)-log1p(word_weight))) - 6*sum(alias_penalties)",
+  "tie_policy": "Per text choose max(score, full reading); final order (-score,text,reading)",
+  "numeric_precision": "Oracle/prototype use math.fsum of arc cost parts. Runtime suffix addition may differ by an ulp; score tolerance 1e-9, exact text/reading ordering on these fixtures.",
+  "fixtures": [
+    {
+      "name": "ninth_unique_prefix",
+      "raw": "nei5hou2",
+      "mode": "jyutping",
+      "source": "Project-authored synthetic words, readings and weights",
+      "rows": [
+        {
+          "text": "P00",
+          "reading": "nei5",
+          "weight": 1000
+        },
+        {
+          "text": "P01",
+          "reading": "nei5",
+          "weight": 990
+        },
+        {
+          "text": "P02",
+          "reading": "nei5",
+          "weight": 980
+        },
+        {
+          "text": "P03",
+          "reading": "nei5",
+          "weight": 970
+        },
+        {
+          "text": "P04",
+          "reading": "nei5",
+          "weight": 960
+        },
+        {
+          "text": "P05",
+          "reading": "nei5",
+          "weight": 950
+        },
+        {
+          "text": "P06",
+          "reading": "nei5",
+          "weight": 940
+        },
+        {
+          "text": "P07",
+          "reading": "nei5",
+          "weight": 930
+        },
+        {
+          "text": "P08",
+          "reading": "nei5",
+          "weight": 920
+        },
+        {
+          "text": "S",
+          "reading": "hou2",
+          "weight": 1000
+        }
+      ],
+      "complete_composed_paths": 9,
+      "oracle_scope": "entire independent fixture graph",
+      "prototype": {
+        "matches_exhaustive_oracle": true,
+        "heap_pops": 10,
+        "heap_pushes": 10,
+        "streams": 10,
+        "states": 11,
+        "max_heap": 9
+      },
+      "engines": {
+        "current": {
+          "oracle_top90_unique": 9,
+          "composed_returned": 9,
+          "public_total": 9,
+          "missing_oracle_top9": [],
+          "missing_oracle_top90": [],
+          "readings_differ": [],
+          "same_top90_text_order": true,
+          "max_score_delta": 0.0,
+          "top9_expected": [
+            "P00S",
+            "P01S",
+            "P02S",
+            "P03S",
+            "P04S",
+            "P05S",
+            "P06S",
+            "P07S",
+            "P08S"
+          ],
+          "top9_actual": [
+            "P00S",
+            "P01S",
+            "P02S",
+            "P03S",
+            "P04S",
+            "P05S",
+            "P06S",
+            "P07S",
+            "P08S"
+          ],
+          "matches_oracle": true,
+          "offsets": [
+            0
+          ],
+          "error": null
+        },
+        "baseline": {
+          "oracle_top90_unique": 9,
+          "composed_returned": 8,
+          "public_total": 8,
+          "missing_oracle_top9": [
+            "P08S"
+          ],
+          "missing_oracle_top90": [
+            "P08S"
+          ],
+          "readings_differ": [],
+          "same_top90_text_order": false,
+          "max_score_delta": 0.0,
+          "top9_expected": [
+            "P00S",
+            "P01S",
+            "P02S",
+            "P03S",
+            "P04S",
+            "P05S",
+            "P06S",
+            "P07S",
+            "P08S"
+          ],
+          "top9_actual": [
+            "P00S",
+            "P01S",
+            "P02S",
+            "P03S",
+            "P04S",
+            "P05S",
+            "P06S",
+            "P07S"
+          ],
+          "matches_oracle": false,
+          "offsets": [
+            0
+          ],
+          "error": null
+        }
+      }
+    },
+    {
+      "name": "prefix_of_other_lexical_top1",
+      "raw": "nei5hou2",
+      "mode": "jyutping",
+      "source": "Project-authored synthetic words, readings and weights",
+      "rows": [
+        {
+          "text": "A",
+          "reading": "nei5",
+          "weight": 1000
+        },
+        {
+          "text": "AA",
+          "reading": "nei5",
+          "weight": 1000
+        },
+        {
+          "text": "AAA",
+          "reading": "nei5",
+          "weight": 1000
+        },
+        {
+          "text": "AAAA",
+          "reading": "nei5",
+          "weight": 1000
+        },
+        {
+          "text": "AAAAA",
+          "reading": "nei5",
+          "weight": 1000
+        },
+        {
+          "text": "AAAAAA",
+          "reading": "nei5",
+          "weight": 1000
+        },
+        {
+          "text": "AAAAAAA",
+          "reading": "nei5",
+          "weight": 1000
+        },
+        {
+          "text": "AAAAAAAA",
+          "reading": "nei5",
+          "weight": 1000
+        },
+        {
+          "text": "AAAAAAAAA",
+          "reading": "nei5",
+          "weight": 1000
+        },
+        {
+          "text": "B",
+          "reading": "hou2",
+          "weight": 1000
+        }
+      ],
+      "complete_composed_paths": 9,
+      "oracle_scope": "entire independent fixture graph",
+      "prototype": {
+        "matches_exhaustive_oracle": true,
+        "heap_pops": 10,
+        "heap_pushes": 10,
+        "streams": 10,
+        "states": 11,
+        "max_heap": 9
+      },
+      "engines": {
+        "current": {
+          "oracle_top90_unique": 9,
+          "composed_returned": 9,
+          "public_total": 9,
+          "missing_oracle_top9": [],
+          "missing_oracle_top90": [],
+          "readings_differ": [],
+          "same_top90_text_order": true,
+          "max_score_delta": 0.0,
+          "top9_expected": [
+            "AAAAAAAAAB",
+            "AAAAAAAAB",
+            "AAAAAAAB",
+            "AAAAAAB",
+            "AAAAAB",
+            "AAAAB",
+            "AAAB",
+            "AAB",
+            "AB"
+          ],
+          "top9_actual": [
+            "AAAAAAAAAB",
+            "AAAAAAAAB",
+            "AAAAAAAB",
+            "AAAAAAB",
+            "AAAAAB",
+            "AAAAB",
+            "AAAB",
+            "AAB",
+            "AB"
+          ],
+          "matches_oracle": true,
+          "offsets": [
+            0
+          ],
+          "error": null
+        },
+        "baseline": {
+          "oracle_top90_unique": 9,
+          "composed_returned": 8,
+          "public_total": 8,
+          "missing_oracle_top9": [
+            "AAAAAAAAAB"
+          ],
+          "missing_oracle_top90": [
+            "AAAAAAAAAB"
+          ],
+          "readings_differ": [],
+          "same_top90_text_order": false,
+          "max_score_delta": 0.0,
+          "top9_expected": [
+            "AAAAAAAAAB",
+            "AAAAAAAAB",
+            "AAAAAAAB",
+            "AAAAAAB",
+            "AAAAAB",
+            "AAAAB",
+            "AAAB",
+            "AAB",
+            "AB"
+          ],
+          "top9_actual": [
+            "AAAAAAAAB",
+            "AAAAAAAB",
+            "AAAAAAB",
+            "AAAAAB",
+            "AAAAB",
+            "AAAB",
+            "AAB",
+            "AB"
+          ],
+          "matches_oracle": false,
+          "offsets": [
+            0
+          ],
+          "error": null
+        }
+      }
+    },
+    {
+      "name": "duplicate_tone_paths_final32",
+      "raw": "neihou",
+      "mode": "jyutping",
+      "source": "Project-authored synthetic words, readings and weights",
+      "rows": [
+        {
+          "text": "P",
+          "reading": "nei1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6",
+          "weight": 1000
+        },
+        {
+          "text": "Q",
+          "reading": "nei5",
+          "weight": 900
+        },
+        {
+          "text": "A",
+          "reading": "hou1",
+          "weight": 1000
+        },
+        {
+          "text": "A",
+          "reading": "hou2",
+          "weight": 1000
+        },
+        {
+          "text": "A",
+          "reading": "hou3",
+          "weight": 1000
+        },
+        {
+          "text": "A",
+          "reading": "hou4",
+          "weight": 1000
+        },
+        {
+          "text": "A",
+          "reading": "hou5",
+          "weight": 1000
+        },
+        {
+          "text": "A",
+          "reading": "hou6",
+          "weight": 1000
+        },
+        {
+          "text": "B",
+          "reading": "hou2",
+          "weight": 900
+        }
+      ],
+      "complete_composed_paths": 49,
+      "oracle_scope": "entire independent fixture graph",
+      "prototype": {
+        "matches_exhaustive_oracle": true,
+        "heap_pops": 21,
+        "heap_pushes": 21,
+        "streams": 14,
+        "states": 7,
+        "max_heap": 7
+      },
+      "engines": {
+        "current": {
+          "oracle_top90_unique": 4,
+          "composed_returned": 4,
+          "public_total": 4,
+          "missing_oracle_top9": [],
+          "missing_oracle_top90": [],
+          "readings_differ": [],
+          "same_top90_text_order": true,
+          "max_score_delta": 0.0,
+          "top9_expected": [
+            "PA",
+            "PB",
+            "QA",
+            "QB"
+          ],
+          "top9_actual": [
+            "PA",
+            "PB",
+            "QA",
+            "QB"
+          ],
+          "matches_oracle": true,
+          "offsets": [
+            0
+          ],
+          "error": null
+        },
+        "baseline": {
+          "oracle_top90_unique": 4,
+          "composed_returned": 1,
+          "public_total": 1,
+          "missing_oracle_top9": [
+            "PB",
+            "QA",
+            "QB"
+          ],
+          "missing_oracle_top90": [
+            "PB",
+            "QA",
+            "QB"
+          ],
+          "readings_differ": [
+            {
+              "text": "PA",
+              "expected": "nei6 hou6",
+              "actual": "nei6 hou2"
+            }
+          ],
+          "same_top90_text_order": false,
+          "max_score_delta": 0.0,
+          "top9_expected": [
+            "PA",
+            "PB",
+            "QA",
+            "QB"
+          ],
+          "top9_actual": [
+            "PA"
+          ],
+          "matches_oracle": false,
+          "offsets": [
+            0
+          ],
+          "error": null
+        }
+      }
+    },
+    {
+      "name": "duplicate_tone_paths_toned_control",
+      "raw": "nei5hou2",
+      "mode": "jyutping",
+      "source": "Project-authored synthetic words, readings and weights",
+      "rows": [
+        {
+          "text": "P",
+          "reading": "nei1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6",
+          "weight": 1000
+        },
+        {
+          "text": "Q",
+          "reading": "nei5",
+          "weight": 900
+        },
+        {
+          "text": "A",
+          "reading": "hou1",
+          "weight": 1000
+        },
+        {
+          "text": "A",
+          "reading": "hou2",
+          "weight": 1000
+        },
+        {
+          "text": "A",
+          "reading": "hou3",
+          "weight": 1000
+        },
+        {
+          "text": "A",
+          "reading": "hou4",
+          "weight": 1000
+        },
+        {
+          "text": "A",
+          "reading": "hou5",
+          "weight": 1000
+        },
+        {
+          "text": "A",
+          "reading": "hou6",
+          "weight": 1000
+        },
+        {
+          "text": "B",
+          "reading": "hou2",
+          "weight": 900
+        }
+      ],
+      "complete_composed_paths": 4,
+      "oracle_scope": "entire independent fixture graph",
+      "prototype": {
+        "matches_exhaustive_oracle": true,
+        "heap_pops": 6,
+        "heap_pushes": 6,
+        "streams": 4,
+        "states": 7,
+        "max_heap": 2
+      },
+      "engines": {
+        "current": {
+          "oracle_top90_unique": 4,
+          "composed_returned": 4,
+          "public_total": 4,
+          "missing_oracle_top9": [],
+          "missing_oracle_top90": [],
+          "readings_differ": [],
+          "same_top90_text_order": true,
+          "max_score_delta": 0.0,
+          "top9_expected": [
+            "PA",
+            "PB",
+            "QA",
+            "QB"
+          ],
+          "top9_actual": [
+            "PA",
+            "PB",
+            "QA",
+            "QB"
+          ],
+          "matches_oracle": true,
+          "offsets": [
+            0
+          ],
+          "error": null
+        },
+        "baseline": {
+          "oracle_top90_unique": 4,
+          "composed_returned": 4,
+          "public_total": 4,
+          "missing_oracle_top9": [],
+          "missing_oracle_top90": [],
+          "readings_differ": [],
+          "same_top90_text_order": true,
+          "max_score_delta": 0.0,
+          "top9_expected": [
+            "PA",
+            "PB",
+            "QA",
+            "QB"
+          ],
+          "top9_actual": [
+            "PA",
+            "PB",
+            "QA",
+            "QB"
+          ],
+          "matches_oracle": true,
+          "offsets": [
+            0
+          ],
+          "error": null
+        }
+      }
+    },
+    {
+      "name": "duplicate_tone_paths_apostrophe",
+      "raw": "nei'hou",
+      "mode": "jyutping",
+      "source": "Project-authored synthetic words, readings and weights",
+      "rows": [
+        {
+          "text": "P",
+          "reading": "nei1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6",
+          "weight": 1000
+        },
+        {
+          "text": "Q",
+          "reading": "nei5",
+          "weight": 900
+        },
+        {
+          "text": "A",
+          "reading": "hou1",
+          "weight": 1000
+        },
+        {
+          "text": "A",
+          "reading": "hou2",
+          "weight": 1000
+        },
+        {
+          "text": "A",
+          "reading": "hou3",
+          "weight": 1000
+        },
+        {
+          "text": "A",
+          "reading": "hou4",
+          "weight": 1000
+        },
+        {
+          "text": "A",
+          "reading": "hou5",
+          "weight": 1000
+        },
+        {
+          "text": "A",
+          "reading": "hou6",
+          "weight": 1000
+        },
+        {
+          "text": "B",
+          "reading": "hou2",
+          "weight": 900
+        }
+      ],
+      "complete_composed_paths": 49,
+      "oracle_scope": "entire independent fixture graph",
+      "prototype": {
+        "matches_exhaustive_oracle": true,
+        "heap_pops": 21,
+        "heap_pushes": 21,
+        "streams": 14,
+        "states": 7,
+        "max_heap": 7
+      },
+      "engines": {
+        "current": {
+          "oracle_top90_unique": 4,
+          "composed_returned": 4,
+          "public_total": 4,
+          "missing_oracle_top9": [],
+          "missing_oracle_top90": [],
+          "readings_differ": [],
+          "same_top90_text_order": true,
+          "max_score_delta": 0.0,
+          "top9_expected": [
+            "PA",
+            "PB",
+            "QA",
+            "QB"
+          ],
+          "top9_actual": [
+            "PA",
+            "PB",
+            "QA",
+            "QB"
+          ],
+          "matches_oracle": true,
+          "offsets": [
+            0
+          ],
+          "error": null
+        },
+        "baseline": {
+          "oracle_top90_unique": 4,
+          "composed_returned": 1,
+          "public_total": 1,
+          "missing_oracle_top9": [
+            "PB",
+            "QA",
+            "QB"
+          ],
+          "missing_oracle_top90": [
+            "PB",
+            "QA",
+            "QB"
+          ],
+          "readings_differ": [
+            {
+              "text": "PA",
+              "expected": "nei6 hou6",
+              "actual": "nei6 hou2"
+            }
+          ],
+          "same_top90_text_order": false,
+          "max_score_delta": 0.0,
+          "top9_expected": [
+            "PA",
+            "PB",
+            "QA",
+            "QB"
+          ],
+          "top9_actual": [
+            "PA"
+          ],
+          "matches_oracle": false,
+          "offsets": [
+            0
+          ],
+          "error": null
+        }
+      }
+    },
+    {
+      "name": "forgiving_alias_duplicate_paths",
+      "raw": "leihou",
+      "mode": "forgiving",
+      "source": "Project-authored synthetic words, readings and weights",
+      "rows": [
+        {
+          "text": "P",
+          "reading": "nei1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6",
+          "weight": 1000
+        },
+        {
+          "text": "Q",
+          "reading": "nei5",
+          "weight": 900
+        },
+        {
+          "text": "A",
+          "reading": "hou1",
+          "weight": 1000
+        },
+        {
+          "text": "A",
+          "reading": "hou2",
+          "weight": 1000
+        },
+        {
+          "text": "A",
+          "reading": "hou3",
+          "weight": 1000
+        },
+        {
+          "text": "A",
+          "reading": "hou4",
+          "weight": 1000
+        },
+        {
+          "text": "A",
+          "reading": "hou5",
+          "weight": 1000
+        },
+        {
+          "text": "A",
+          "reading": "hou6",
+          "weight": 1000
+        },
+        {
+          "text": "B",
+          "reading": "hou2",
+          "weight": 900
+        }
+      ],
+      "complete_composed_paths": 49,
+      "oracle_scope": "entire independent fixture graph",
+      "prototype": {
+        "matches_exhaustive_oracle": true,
+        "heap_pops": 21,
+        "heap_pushes": 21,
+        "streams": 14,
+        "states": 7,
+        "max_heap": 7
+      },
+      "engines": {
+        "current": {
+          "oracle_top90_unique": 4,
+          "composed_returned": 4,
+          "public_total": 4,
+          "missing_oracle_top9": [],
+          "missing_oracle_top90": [],
+          "readings_differ": [],
+          "same_top90_text_order": true,
+          "max_score_delta": 1.1368683772161603e-13,
+          "top9_expected": [
+            "PA",
+            "PB",
+            "QA",
+            "QB"
+          ],
+          "top9_actual": [
+            "PA",
+            "PB",
+            "QA",
+            "QB"
+          ],
+          "matches_oracle": true,
+          "offsets": [
+            0
+          ],
+          "error": null
+        },
+        "baseline": {
+          "oracle_top90_unique": 4,
+          "composed_returned": 1,
+          "public_total": 1,
+          "missing_oracle_top9": [
+            "PB",
+            "QA",
+            "QB"
+          ],
+          "missing_oracle_top90": [
+            "PB",
+            "QA",
+            "QB"
+          ],
+          "readings_differ": [
+            {
+              "text": "PA",
+              "expected": "nei6 hou6",
+              "actual": "nei6 hou2"
+            }
+          ],
+          "same_top90_text_order": false,
+          "max_score_delta": 1.1368683772161603e-13,
+          "top9_expected": [
+            "PA",
+            "PB",
+            "QA",
+            "QB"
+          ],
+          "top9_actual": [
+            "PA"
+          ],
+          "matches_oracle": false,
+          "offsets": [
+            0
+          ],
+          "error": null
+        }
+      }
+    },
+    {
+      "name": "duplicate_prefixes_intermediate8",
+      "raw": "neihou",
+      "mode": "jyutping",
+      "source": "Project-authored synthetic words, readings and weights",
+      "rows": [
+        {
+          "text": "P",
+          "reading": "nei1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6",
+          "weight": 1000
+        },
+        {
+          "text": "Q",
+          "reading": "nei1",
+          "weight": 1000
+        },
+        {
+          "text": "Q",
+          "reading": "nei2",
+          "weight": 1000
+        },
+        {
+          "text": "Q",
+          "reading": "nei3",
+          "weight": 1000
+        },
+        {
+          "text": "Q",
+          "reading": "nei4",
+          "weight": 1000
+        },
+        {
+          "text": "Q",
+          "reading": "nei5",
+          "weight": 1000
+        },
+        {
+          "text": "Q",
+          "reading": "nei6",
+          "weight": 1000
+        },
+        {
+          "text": "R",
+          "reading": "nei5",
+          "weight": 900
+        },
+        {
+          "text": "A",
+          "reading": "hou2",
+          "weight": 1000
+        }
+      ],
+      "complete_composed_paths": 13,
+      "oracle_scope": "entire independent fixture graph",
+      "prototype": {
+        "matches_exhaustive_oracle": true,
+        "heap_pops": 14,
+        "heap_pushes": 14,
+        "streams": 14,
+        "states": 5,
+        "max_heap": 13
+      },
+      "engines": {
+        "current": {
+          "oracle_top90_unique": 3,
+          "composed_returned": 3,
+          "public_total": 3,
+          "missing_oracle_top9": [],
+          "missing_oracle_top90": [],
+          "readings_differ": [],
+          "same_top90_text_order": true,
+          "max_score_delta": 0.0,
+          "top9_expected": [
+            "PA",
+            "QA",
+            "RA"
+          ],
+          "top9_actual": [
+            "PA",
+            "QA",
+            "RA"
+          ],
+          "matches_oracle": true,
+          "offsets": [
+            0
+          ],
+          "error": null
+        },
+        "baseline": {
+          "oracle_top90_unique": 3,
+          "composed_returned": 2,
+          "public_total": 2,
+          "missing_oracle_top9": [
+            "RA"
+          ],
+          "missing_oracle_top90": [
+            "RA"
+          ],
+          "readings_differ": [
+            {
+              "text": "QA",
+              "expected": "nei6 hou2",
+              "actual": "nei2 hou2"
+            }
+          ],
+          "same_top90_text_order": false,
+          "max_score_delta": 0.0,
+          "top9_expected": [
+            "PA",
+            "QA",
+            "RA"
+          ],
+          "top9_actual": [
+            "PA",
+            "QA"
+          ],
+          "matches_oracle": false,
+          "offsets": [
+            0
+          ],
+          "error": null
+        }
+      }
+    },
+    {
+      "name": "sixty_four_distinct_compositions",
+      "raw": "nei5hou2",
+      "mode": "jyutping",
+      "source": "Project-authored synthetic words, readings and weights",
+      "rows": [
+        {
+          "text": "P0",
+          "reading": "nei5",
+          "weight": 1000
+        },
+        {
+          "text": "P1",
+          "reading": "nei5",
+          "weight": 1000
+        },
+        {
+          "text": "P2",
+          "reading": "nei5",
+          "weight": 1000
+        },
+        {
+          "text": "P3",
+          "reading": "nei5",
+          "weight": 1000
+        },
+        {
+          "text": "P4",
+          "reading": "nei5",
+          "weight": 1000
+        },
+        {
+          "text": "P5",
+          "reading": "nei5",
+          "weight": 1000
+        },
+        {
+          "text": "P6",
+          "reading": "nei5",
+          "weight": 1000
+        },
+        {
+          "text": "P7",
+          "reading": "nei5",
+          "weight": 1000
+        },
+        {
+          "text": "S0",
+          "reading": "hou2",
+          "weight": 1000
+        },
+        {
+          "text": "S1",
+          "reading": "hou2",
+          "weight": 1000
+        },
+        {
+          "text": "S2",
+          "reading": "hou2",
+          "weight": 1000
+        },
+        {
+          "text": "S3",
+          "reading": "hou2",
+          "weight": 1000
+        },
+        {
+          "text": "S4",
+          "reading": "hou2",
+          "weight": 1000
+        },
+        {
+          "text": "S5",
+          "reading": "hou2",
+          "weight": 1000
+        },
+        {
+          "text": "S6",
+          "reading": "hou2",
+          "weight": 1000
+        },
+        {
+          "text": "S7",
+          "reading": "hou2",
+          "weight": 1000
+        }
+      ],
+      "complete_composed_paths": 64,
+      "oracle_scope": "entire independent fixture graph",
+      "prototype": {
+        "matches_exhaustive_oracle": true,
+        "heap_pops": 72,
+        "heap_pushes": 72,
+        "streams": 16,
+        "states": 73,
+        "max_heap": 8
+      },
+      "engines": {
+        "current": {
+          "oracle_top90_unique": 64,
+          "composed_returned": 64,
+          "public_total": 64,
+          "missing_oracle_top9": [],
+          "missing_oracle_top90": [],
+          "readings_differ": [],
+          "same_top90_text_order": true,
+          "max_score_delta": 0.0,
+          "top9_expected": [
+            "P0S0",
+            "P0S1",
+            "P0S2",
+            "P0S3",
+            "P0S4",
+            "P0S5",
+            "P0S6",
+            "P0S7",
+            "P1S0"
+          ],
+          "top9_actual": [
+            "P0S0",
+            "P0S1",
+            "P0S2",
+            "P0S3",
+            "P0S4",
+            "P0S5",
+            "P0S6",
+            "P0S7",
+            "P1S0"
+          ],
+          "matches_oracle": true,
+          "offsets": [
+            0
+          ],
+          "error": null
+        },
+        "baseline": {
+          "oracle_top90_unique": 64,
+          "composed_returned": 32,
+          "public_total": 32,
+          "missing_oracle_top9": [],
+          "missing_oracle_top90": [
+            "P4S0",
+            "P4S1",
+            "P4S2",
+            "P4S3",
+            "P4S4",
+            "P4S5",
+            "P4S6",
+            "P4S7",
+            "P5S0",
+            "P5S1",
+            "P5S2",
+            "P5S3",
+            "P5S4",
+            "P5S5",
+            "P5S6",
+            "P5S7",
+            "P6S0",
+            "P6S1",
+            "P6S2",
+            "P6S3",
+            "P6S4",
+            "P6S5",
+            "P6S6",
+            "P6S7",
+            "P7S0",
+            "P7S1",
+            "P7S2",
+            "P7S3",
+            "P7S4",
+            "P7S5",
+            "P7S6",
+            "P7S7"
+          ],
+          "readings_differ": [],
+          "same_top90_text_order": false,
+          "max_score_delta": 0.0,
+          "top9_expected": [
+            "P0S0",
+            "P0S1",
+            "P0S2",
+            "P0S3",
+            "P0S4",
+            "P0S5",
+            "P0S6",
+            "P0S7",
+            "P1S0"
+          ],
+          "top9_actual": [
+            "P0S0",
+            "P0S1",
+            "P0S2",
+            "P0S3",
+            "P0S4",
+            "P0S5",
+            "P0S6",
+            "P0S7",
+            "P1S0"
+          ],
+          "matches_oracle": false,
+          "offsets": [
+            0
+          ],
+          "error": null
+        }
+      }
+    },
+    {
+      "name": "root_direct_paths_must_not_spend_composed_budget",
+      "raw": "nei5hou2",
+      "mode": "jyutping",
+      "source": "Project-authored synthetic words, readings and weights",
+      "rows": [
+        {
+          "text": "D000",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D001",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D002",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D003",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D004",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D005",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D006",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D007",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D008",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D009",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D010",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D011",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D012",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D013",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D014",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D015",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D016",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D017",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D018",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D019",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D020",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D021",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D022",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D023",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D024",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D025",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D026",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D027",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D028",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D029",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D030",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D031",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D032",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D033",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D034",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D035",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D036",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D037",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D038",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D039",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D040",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D041",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D042",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D043",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D044",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D045",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D046",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D047",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D048",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D049",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D050",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D051",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D052",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D053",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D054",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D055",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D056",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D057",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D058",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D059",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D060",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D061",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D062",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D063",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D064",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D065",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D066",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D067",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D068",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D069",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D070",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D071",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D072",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D073",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D074",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D075",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D076",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D077",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D078",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D079",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D080",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D081",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D082",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D083",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D084",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D085",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D086",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D087",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D088",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D089",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D090",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D091",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D092",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D093",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D094",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D095",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D096",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D097",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D098",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "D099",
+          "reading": "nei5 hou2",
+          "weight": 1000000000.0
+        },
+        {
+          "text": "P",
+          "reading": "nei5",
+          "weight": 1000
+        },
+        {
+          "text": "Q",
+          "reading": "nei5",
+          "weight": 900
+        },
+        {
+          "text": "A",
+          "reading": "hou2",
+          "weight": 1000
+        }
+      ],
+      "complete_composed_paths": 2,
+      "oracle_scope": "entire independent fixture graph",
+      "prototype": {
+        "matches_exhaustive_oracle": true,
+        "heap_pops": 3,
+        "heap_pushes": 3,
+        "streams": 3,
+        "states": 4,
+        "max_heap": 2
+      },
+      "engines": {
+        "current": {
+          "oracle_top90_unique": 2,
+          "composed_returned": 2,
+          "public_total": 102,
+          "missing_oracle_top9": [],
+          "missing_oracle_top90": [],
+          "readings_differ": [],
+          "same_top90_text_order": true,
+          "max_score_delta": 0.0,
+          "top9_expected": [
+            "PA",
+            "QA"
+          ],
+          "top9_actual": [
+            "PA",
+            "QA"
+          ],
+          "matches_oracle": true,
+          "offsets": [
+            0,
+            90
+          ],
+          "error": null
+        },
+        "baseline": {
+          "oracle_top90_unique": 2,
+          "composed_returned": 0,
+          "public_total": 100,
+          "missing_oracle_top9": [
+            "PA",
+            "QA"
+          ],
+          "missing_oracle_top90": [
+            "PA",
+            "QA"
+          ],
+          "readings_differ": [],
+          "same_top90_text_order": false,
+          "max_score_delta": 0.0,
+          "top9_expected": [
+            "PA",
+            "QA"
+          ],
+          "top9_actual": [],
+          "matches_oracle": false,
+          "offsets": [
+            0,
+            90
+          ],
+          "error": null
+        }
+      }
+    },
+    {
+      "name": "retained_arc90_scope_control",
+      "raw": "neihousikhou",
+      "mode": "jyutping",
+      "source": "Project-authored synthetic words, readings and weights",
+      "rows": [
+        {
+          "text": "P",
+          "reading": "nei1 hou1 sik1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei1 hou1 sik2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei1 hou1 sik3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei1 hou1 sik4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei1 hou1 sik5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei1 hou1 sik6",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei1 hou2 sik1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei1 hou2 sik2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei1 hou2 sik3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei1 hou2 sik4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei1 hou2 sik5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei1 hou2 sik6",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei1 hou3 sik1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei1 hou3 sik2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei1 hou3 sik3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei1 hou3 sik4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei1 hou3 sik5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei1 hou3 sik6",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei1 hou4 sik1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei1 hou4 sik2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei1 hou4 sik3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei1 hou4 sik4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei1 hou4 sik5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei1 hou4 sik6",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei1 hou5 sik1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei1 hou5 sik2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei1 hou5 sik3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei1 hou5 sik4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei1 hou5 sik5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei1 hou5 sik6",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei1 hou6 sik1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei1 hou6 sik2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei1 hou6 sik3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei1 hou6 sik4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei1 hou6 sik5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei1 hou6 sik6",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2 hou1 sik1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2 hou1 sik2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2 hou1 sik3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2 hou1 sik4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2 hou1 sik5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2 hou1 sik6",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2 hou2 sik1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2 hou2 sik2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2 hou2 sik3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2 hou2 sik4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2 hou2 sik5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2 hou2 sik6",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2 hou3 sik1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2 hou3 sik2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2 hou3 sik3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2 hou3 sik4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2 hou3 sik5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2 hou3 sik6",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2 hou4 sik1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2 hou4 sik2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2 hou4 sik3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2 hou4 sik4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2 hou4 sik5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2 hou4 sik6",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2 hou5 sik1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2 hou5 sik2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2 hou5 sik3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2 hou5 sik4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2 hou5 sik5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2 hou5 sik6",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2 hou6 sik1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2 hou6 sik2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2 hou6 sik3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2 hou6 sik4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2 hou6 sik5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei2 hou6 sik6",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3 hou1 sik1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3 hou1 sik2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3 hou1 sik3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3 hou1 sik4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3 hou1 sik5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3 hou1 sik6",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3 hou2 sik1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3 hou2 sik2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3 hou2 sik3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3 hou2 sik4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3 hou2 sik5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3 hou2 sik6",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3 hou3 sik1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3 hou3 sik2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3 hou3 sik3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3 hou3 sik4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3 hou3 sik5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3 hou3 sik6",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3 hou4 sik1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3 hou4 sik2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3 hou4 sik3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3 hou4 sik4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3 hou4 sik5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3 hou4 sik6",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3 hou5 sik1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3 hou5 sik2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3 hou5 sik3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3 hou5 sik4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3 hou5 sik5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3 hou5 sik6",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3 hou6 sik1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3 hou6 sik2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3 hou6 sik3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3 hou6 sik4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3 hou6 sik5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei3 hou6 sik6",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4 hou1 sik1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4 hou1 sik2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4 hou1 sik3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4 hou1 sik4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4 hou1 sik5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4 hou1 sik6",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4 hou2 sik1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4 hou2 sik2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4 hou2 sik3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4 hou2 sik4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4 hou2 sik5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4 hou2 sik6",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4 hou3 sik1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4 hou3 sik2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4 hou3 sik3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4 hou3 sik4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4 hou3 sik5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4 hou3 sik6",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4 hou4 sik1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4 hou4 sik2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4 hou4 sik3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4 hou4 sik4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4 hou4 sik5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4 hou4 sik6",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4 hou5 sik1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4 hou5 sik2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4 hou5 sik3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4 hou5 sik4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4 hou5 sik5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4 hou5 sik6",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4 hou6 sik1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4 hou6 sik2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4 hou6 sik3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4 hou6 sik4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4 hou6 sik5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei4 hou6 sik6",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5 hou1 sik1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5 hou1 sik2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5 hou1 sik3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5 hou1 sik4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5 hou1 sik5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5 hou1 sik6",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5 hou2 sik1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5 hou2 sik2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5 hou2 sik3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5 hou2 sik4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5 hou2 sik5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5 hou2 sik6",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5 hou3 sik1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5 hou3 sik2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5 hou3 sik3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5 hou3 sik4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5 hou3 sik5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5 hou3 sik6",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5 hou4 sik1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5 hou4 sik2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5 hou4 sik3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5 hou4 sik4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5 hou4 sik5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5 hou4 sik6",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5 hou5 sik1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5 hou5 sik2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5 hou5 sik3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5 hou5 sik4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5 hou5 sik5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5 hou5 sik6",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5 hou6 sik1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5 hou6 sik2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5 hou6 sik3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5 hou6 sik4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5 hou6 sik5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei5 hou6 sik6",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6 hou1 sik1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6 hou1 sik2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6 hou1 sik3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6 hou1 sik4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6 hou1 sik5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6 hou1 sik6",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6 hou2 sik1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6 hou2 sik2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6 hou2 sik3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6 hou2 sik4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6 hou2 sik5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6 hou2 sik6",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6 hou3 sik1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6 hou3 sik2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6 hou3 sik3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6 hou3 sik4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6 hou3 sik5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6 hou3 sik6",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6 hou4 sik1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6 hou4 sik2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6 hou4 sik3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6 hou4 sik4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6 hou4 sik5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6 hou4 sik6",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6 hou5 sik1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6 hou5 sik2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6 hou5 sik3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6 hou5 sik4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6 hou5 sik5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6 hou5 sik6",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6 hou6 sik1",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6 hou6 sik2",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6 hou6 sik3",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6 hou6 sik4",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6 hou6 sik5",
+          "weight": 1000
+        },
+        {
+          "text": "P",
+          "reading": "nei6 hou6 sik6",
+          "weight": 1000
+        },
+        {
+          "text": "Q",
+          "reading": "nei5 hou2 sik6",
+          "weight": 900
+        },
+        {
+          "text": "S",
+          "reading": "hou2",
+          "weight": 1000
+        }
+      ],
+      "complete_composed_paths": 90,
+      "oracle_scope": "retained 90 arcs per ending",
+      "prototype": {
+        "matches_exhaustive_oracle": true,
+        "heap_pops": 91,
+        "heap_pushes": 91,
+        "streams": 91,
+        "states": 3,
+        "max_heap": 90
+      },
+      "engines": {
+        "current": {
+          "oracle_top90_unique": 1,
+          "composed_returned": 1,
+          "public_total": 1,
+          "missing_oracle_top9": [],
+          "missing_oracle_top90": [],
+          "readings_differ": [],
+          "same_top90_text_order": true,
+          "max_score_delta": 0.0,
+          "top9_expected": [
+            "PS"
+          ],
+          "top9_actual": [
+            "PS"
+          ],
+          "matches_oracle": true,
+          "offsets": [
+            0
+          ],
+          "error": null
+        },
+        "baseline": {
+          "oracle_top90_unique": 1,
+          "composed_returned": 1,
+          "public_total": 1,
+          "missing_oracle_top9": [],
+          "missing_oracle_top90": [],
+          "readings_differ": [
+            {
+              "text": "PS",
+              "expected": "nei3 hou3 sik6 hou2",
+              "actual": "nei1 hou2 sik2 hou2"
+            }
+          ],
+          "same_top90_text_order": true,
+          "max_score_delta": 0.0,
+          "top9_expected": [
+            "PS"
+          ],
+          "top9_actual": [
+            "PS"
+          ],
+          "matches_oracle": false,
+          "offsets": [
+            0
+          ],
+          "error": null
+        }
+      },
+      "full_graph_control": {
+        "complete_paths": 217,
+        "unique_texts": [
+          "PS",
+          "QS"
+        ],
+        "lost_before_composition_search": [
+          "QS"
+        ]
+      }
+    }
+  ],
+  "randomized_dag_oracles": {
+    "seed": 20261022,
+    "cases": 100,
+    "complete_paths_enumerated": 39602,
+    "max_complete_paths_one_case": 2944,
+    "prototype_heap_pops": 17803,
+    "failures": [],
+    "current_runtime_helper_exercised": true,
+    "current_runtime_helper_failures": []
+  },
+  "bounded_work_probe": {
+    "layered_nodes": 7,
+    "arcs": 180,
+    "possible_complete_paths": 729000000,
+    "returned_unique": 90,
+    "heap_pops": 480,
+    "heap_pushes": 630,
+    "streams": 180,
+    "states": 481,
+    "max_heap": 30,
+    "elapsed_ms_single_observation": 2.128,
+    "low_budget_raises_before_returning_partial_pool": true,
+    "timing_scope": "Synthetic Python prototype only; not a native IME latency measurement"
+  },
+  "summary": {
+    "current": {
+      "fixtures": 10,
+      "oracle_matches": 10,
+      "missing_top9_cases": 0,
+      "reading_tie_mismatch_cases": 0
+    },
+    "baseline": {
+      "fixtures": 10,
+      "oracle_matches": 1,
+      "missing_top9_cases": 7,
+      "reading_tie_mismatch_cases": 5
+    }
+  },
+  "limitations": [
+    "Guarantee concerns only the retained acyclic word-arc graph; runtime per-base/per-ending arc90 and syllable-path96 bounds remain.",
+    "The composed pool remains at most90 distinct texts before learning. Learning outside that base pool is not exhaustive.",
+    "Prefix completion has separate limits and is not assessed by these composition-only oracles.",
+    "Synthetic word labels and weights say nothing about preferred Cantonese phrasing or real language ranking quality."
+  ]
+}

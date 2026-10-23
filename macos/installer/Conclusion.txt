@@ -1,0 +1,18 @@
+Cantonese IME has been copied to /Library/Input Methods.
+
+To enable it for your account:
+1. Open System Settings > Keyboard.
+2. Under Text Input, click Edit, then the + button.
+3. Find Cantonese IME, add it, then select it from the input menu.
+
+If it is not listed, sign out and sign back in, then try again.
+
+Type fogeui for 火炬. The candidates have number shortcuts. Local learning
+also applies to longer combinations: choosing ng as 唔 helps ngho as 唔好
+and nghaigam as 唔係咁; whole-phrase choices are learned separately.
+
+Learning is kept at:
+  ~/Library/Application Support/CantoneseIME/learning.json
+
+Removing the input source and application does not delete that learning.
+See the README supplied with this release for removal and build instructions.

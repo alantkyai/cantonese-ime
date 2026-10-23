@@ -1,0 +1,62 @@
+{
+  "recorded_at_utc": "2026-10-22T19:33:16.403117+00:00",
+  "status": "passed",
+  "candidate_only": true,
+  "source_reader_and_builder_imported": false,
+  "source_forms_independently_reparsed": true,
+  "all_old_nine_entry_fields_and_ids_preserved": true,
+  "earlier_tables_preserved": {
+    "phrase_encodings": 330701,
+    "supplement_review": 15520,
+    "syllables": 878
+  },
+  "old_metadata_preserved_in_namespace": true,
+  "all_candidate_text_encodings_recomputed": true,
+  "encoder_scope": "Same frozen production algorithm and permitted baseline character translations; this verifies correspondence, not pronunciation accuracy.",
+  "all_source_occurrences_accounted": true,
+  "form_counts": {
+    "physical_rows": 125295,
+    "source_quarantined": 1610,
+    "already_present": 223782,
+    "encoded_unique": 18652,
+    "unencodable": 73,
+    "encoded_ambiguous": 6439,
+    "truncated": 34
+  },
+  "encoding_counts": {
+    "encoded_unique": 14818,
+    "unencodable": 70,
+    "encoded_ambiguous": 6220,
+    "truncated": 34
+  },
+  "new_pairs": 36884,
+  "new_texts": 21038,
+  "total_pairs": 776012,
+  "total_texts": 644261,
+  "inputs_sha256": {
+    "data\\generated\\lexicon.sqlite3": "d835b8c4487b90ef751c8c91f467b9245c8bd54ee5be8157531dd9530ac7667b",
+    ".local\\cccedict-candidate\\lexicon.sqlite3": "4931e9e25898b48dc663fadb0d6554bfdc920d0046aded4f8e6e1e811657b0ad",
+    ".local\\cccedict-candidate\\lexicon.manifest.json": "771cf5c1698f8da565b3d0ec3c2b64f9306e760eb9c19d699f180b9abdfb8697",
+    "data\\supplements\\cccedict-headwords.sources.lock.json": "213582ec577b12878167c8f6632be4df30ee0109b0b91d423c027916d95d8fab",
+    ".local\\audit-cccedict-candidate.py": "ca2a54a8e55fd2305bab373f081bf3a0b4b2251ad908e24fd11172c7518c63cd",
+    "cantonese_ime\\autoencode.py": "35d97fb9c6e984c9c0264ba49ace32c69db8a8026a8c16a8494319ea496b2464",
+    "cantonese_ime\\mappings.py": "3eaee728fc7355d466dee722e1ee4f67e508eb9c362fd92762b8d0531e5e99fe",
+    "cantonese_ime\\cccedict_headwords.py": "2cff217728fa044fc1d5e07906dce8ad53fc9eeb151437583bad6a8f3961a6d9",
+    "tools\\build_cccedict_candidate.py": "dbef4b424f0551914be9403dbd9a25e209816d7b0cd210e04e1f1f40e9ade074",
+    "data\\generated\\lexicon.manifest.json": "a7c06bf7a165c51b0958a4512b96d1f7d65010605bc9c42ae68f0970da6d9029",
+    ".local\\cccedict-candidate\\lexicon.review.json": "e59154e02724c7229ca45046813a9b2d60b889b1fca57e0f19942de67e3b44d8",
+    "data\\vendor\\cc-cedict\\2026-10-21-f6b2248b589a\\download-page.html": "077a06f01c99e24769125748e167b6c4c5370cad83ddafe9032a1789f35da768",
+    "data\\vendor\\cc-cedict\\2026-10-21-f6b2248b589a\\cedict_1_0_ts_utf-8_mdbg.txt.gz": "f50281886b7cedc9be90aa923886710711c2a67853e350b848733f8a2f75db47",
+    "data\\vendor\\cc-cedict\\2026-10-21-f6b2248b589a\\cedict_ts.u8": "f6b2248b589a7f231952bbcb86db5206c089c69c9de06ded0f2a5569e962ec64",
+    "data\\vendor\\cc-cedict\\2026-10-21-f6b2248b589a\\LICENSE-CC-BY-SA-4.0.txt": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5",
+    "data\\vendor\\cc-cedict\\2026-10-21-f6b2248b589a\\ATTRIBUTION.md": "5a8cb35d88504a0af8cc9d6b52cb7d691be5ffae5752973dff1eaea4241285e4"
+  },
+  "inputs_unchanged": true,
+  "installed_or_default_files_written": false,
+  "derived_data_license": "CC-BY-SA-4.0",
+  "attribution": [
+    "data/DATA_LICENSE.md",
+    "data/THIRD_PARTY_NOTICES.md",
+    "data\\vendor\\cc-cedict\\2026-10-21-f6b2248b589a\\ATTRIBUTION.md"
+  ]
+}

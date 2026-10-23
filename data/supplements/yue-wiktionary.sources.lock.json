@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "source_id": "wiktionary:yue",
+  "source_name": "Official Yue Wiktionary source-explicit Cantonese candidate",
+  "snapshot_id": "2026-10-01-e09d60b43588",
+  "local_directory": "data/vendor/yue-wiktionary/2026-10-01-e09d60b43588",
+  "data_file": "yuewiktionary-20261001-pages-articles.xml.bz2",
+  "compression": "bzip2",
+  "repository": "https://yue.wiktionary.org/",
+  "data_url": "https://dumps.wikimedia.org/yuewiktionary/20261001/yuewiktionary-20261001-pages-articles.xml.bz2",
+  "license": "CC-BY-SA-4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "license_declaration_file": "yue-page-licensing-sample.html",
+  "license_terms_file": "wikimedia-terms.html",
+  "attribution": "Yue Wiktionary contributors; preserve revision/history URLs and additional source attribution as applicable. See ATTRIBUTION.md.",
+  "selection_status": "Candidate source preparation only; not selected for default import or linguistic approval.",
+  "official_archive_sha1": "78600a2b4cf61cc9157047bed02980e89c37fc80",
+  "xml_sha256": "200ed7639d136ec3aba819c78a495da42b9b495d1d22e267382570a88fa543ab",
+  "xml_size_bytes": 23513780,
+  "xml_export_version": "0.11",
+  "wiki_database": "yuewiktionary",
+  "wiki_language": "yue",
+  "page_count": 11396,
+  "template_revisions": [
+    {
+      "name": "source-template-yue-rom.wikitext",
+      "title": "模:Yue-rom",
+      "revision_id": 10752,
+      "sha256": "95be4bc85b521bc627d10daf3d09daed07e86389cb3674195d838a731647cdc3",
+      "revision_url": "https://yue.wiktionary.org/w/index.php?oldid=10752",
+      "revision_text_sha256": "95be4bc85b521bc627d10daf3d09daed07e86389cb3674195d838a731647cdc3",
+      "retained_text_transformation": "Original research extraction retained unchanged; compare CRLF-to-LF only with decoded XML revision text."
+    },
+    {
+      "name": "source-template-jyutping.wikitext",
+      "title": "模:粵拼",
+      "revision_id": 9516,
+      "sha256": "acc5f0c81b006e4db2412b66ade34cda6659f47f3e5f317d2b96469da9b27f17",
+      "revision_url": "https://yue.wiktionary.org/w/index.php?oldid=9516",
+      "revision_text_sha256": "381d7c98e48df6c8aee225bcea3522600f8ccc25707cf0fbcd9da6e2e3a8eaf5",
+      "retained_text_transformation": "Original research extraction retained unchanged; compare CRLF-to-LF only with decoded XML revision text."
+    },
+    {
+      "name": "source-template-zh-pron.wikitext",
+      "title": "模:zh-pron",
+      "revision_id": 14605,
+      "sha256": "6b4f266fc564f8ede70ab7cb5bfe23d913af1a6865c8cd00382d07fd0ffe2b94",
+      "revision_url": "https://yue.wiktionary.org/w/index.php?oldid=14605",
+      "revision_text_sha256": "e7b11777a13633d646c5e40f57220af3510be2c064f81d3322af07bd998b1847",
+      "retained_text_transformation": "Original research extraction retained unchanged; compare CRLF-to-LF only with decoded XML revision text."
+    }
+  ],
+  "parser_attestation": {
+    "file": "parser-attested-bases.json",
+    "sha256": "02a92dddb33073f3c9f5b29e117c3c69f1db82139dad2d0e308a0da43b4d3f64",
+    "base_count": 878,
+    "baseline_database_sha256": "d835b8c4487b90ef751c8c91f467b9245c8bd54ee5be8157531dd9530ac7667b"
+  },
+  "field_policy": "Own-headword exact langue|yue sections only; flat line-leading zh-pron unique c=, Yue-rom first positional, documented alternating index/display fields in template revision9516. No expansion/repair; unsupported structures, marked notation, unknown bases and unaligned/non-Han forms ledgered.",
+  "weight_policy": "Unknown pronunciation frequency: zero; no cross-corpus counts supplied.",
+  "exclusions": [
+    "Kaikki exports/ranges",
+    "English and Chinese Wiktionary subsets",
+    "Mandarin fields",
+    "definitions/examples/audio",
+    "template/Lua expansion",
+    "inherited or mechanically generated word readings"
+  ],
+  "research_manifest_sha256": "377f9f0624c80f24d354dd6535f936ca1d99347a8a4c140c1b7c03671fbaeeda",
+  "files": [
+    {
+      "name": "yuewiktionary-20261001-pages-articles.xml.bz2",
+      "sha256": "e09d60b43588bf5a860ce2dac2a865002e145579b4c3c7a3cc26743e5407d542",
+      "size_bytes": 3510364,
+      "transformation": "Unmodified retained source bytes",
+      "url": "https://dumps.wikimedia.org/yuewiktionary/20261001/yuewiktionary-20261001-pages-articles.xml.bz2"
+    },
+    {
+      "name": "yue-20261001-sha1sums.txt",
+      "sha256": "e8ba652675f4c0a89ef532b2fad362895cf4eaf3604ce6f841906666df486bf9",
+      "size_bytes": 3446,
+      "transformation": "Unmodified retained source bytes",
+      "url": "https://dumps.wikimedia.org/yuewiktionary/20261001/yuewiktionary-20261001-sha1sums.txt"
+    },
+    {
+      "name": "yue-20261001-index.html",
+      "sha256": "26ccbe49935ba3776198111e694ee9f06b67b450816bbd847950aa897de0ad6b",
+      "size_bytes": 17057,
+      "transformation": "Unmodified retained source bytes",
+      "url": "https://dumps.wikimedia.org/yuewiktionary/20261001/"
+    },
+    {
+      "name": "yue-page-licensing-sample.html",
+      "sha256": "612c1da37a91026f9586b793f3b0114da4b93506b1da3b956e8e565f9250dcf0",
+      "size_bytes": 56205,
+      "transformation": "Unmodified retained source bytes",
+      "url": "https://yue.wiktionary.org/wiki/%E4%B8%89%E7%95%8C"
+    },
+    {
+      "name": "wikimedia-terms.html",
+      "sha256": "2c301b5b995b4c27cce60d39091e2f48983e15fa944de0f9b6e6f831eafa46e3",
+      "size_bytes": 152857,
+      "transformation": "Unmodified retained source bytes",
+      "url": "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use"
+    },
+    {
+      "name": "source-template-yue-rom.wikitext",
+      "sha256": "95be4bc85b521bc627d10daf3d09daed07e86389cb3674195d838a731647cdc3",
+      "size_bytes": 112,
+      "transformation": "Unmodified retained research provenance or extracted original revision text"
+    },
+    {
+      "name": "source-template-zh-pron.wikitext",
+      "sha256": "6b4f266fc564f8ede70ab7cb5bfe23d913af1a6865c8cd00382d07fd0ffe2b94",
+      "size_bytes": 100,
+      "transformation": "Unmodified retained research provenance or extracted original revision text"
+    },
+    {
+      "name": "source-template-jyutping.wikitext",
+      "sha256": "acc5f0c81b006e4db2412b66ade34cda6659f47f3e5f317d2b96469da9b27f17",
+      "size_bytes": 3309,
+      "transformation": "Unmodified retained research provenance or extracted original revision text"
+    },
+    {
+      "name": "research-manifest.json",
+      "sha256": "377f9f0624c80f24d354dd6535f936ca1d99347a8a4c140c1b7c03671fbaeeda",
+      "size_bytes": 12428,
+      "transformation": "Unmodified retained research provenance or extracted original revision text"
+    },
+    {
+      "name": "LICENSE-CC-BY-SA-4.0.txt",
+      "sha256": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5",
+      "size_bytes": 20138,
+      "transformation": "Unmodified full CC BY-SA 4.0 legal terms retained by the project; not CC-CEDICT source data",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en"
+    },
+    {
+      "name": "parser-attested-bases.json",
+      "sha256": "02a92dddb33073f3c9f5b29e117c3c69f1db82139dad2d0e308a0da43b4d3f64",
+      "size_bytes": 10204,
+      "transformation": "Project-authored frozen admission inventory"
+    },
+    {
+      "name": "ATTRIBUTION.md",
+      "sha256": "c8108e22d10a0ab48cadb8dcae7b65c990a5d1e53f4c31222a06176f67f4ae64",
+      "size_bytes": 1520,
+      "transformation": "Project-authored attribution/transformation notice",
+      "url": "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use#7._Licensing_of_Content"
+    }
+  ]
+}

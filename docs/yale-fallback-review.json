@@ -1,0 +1,344 @@
+{
+  "schema_version": 1,
+  "research_date_local": "2026-10-23",
+  "timezone": "Asia/Hong_Kong",
+  "research_only": true,
+  "snapshot": {
+    "database_path": "data/generated/lexicon.sqlite3",
+    "database_sha256": "3fccc5bcf45cbb676b8a1a51e2030d418803af64b3cd5c0ae7d67cf90a4711bb",
+    "database_pairs": 736570,
+    "database_distinct_texts": 621245,
+    "manifest_sha256": "d8840908777d264fee449f749493e34ff58b4d6898ff8bd4a135f5a083162257",
+    "mapping_inventory_path": "data/mappings/syllables.json",
+    "mapping_inventory_sha256": "6dc0e6c3395faba24b51f9762dee17e33166cadfa5bd143d9f186810b68ce307",
+    "mapping_source_sha256": "72dc9c44cea7a0f6ea7f2956b08114356d4ab611f06e8cfaa7c6204af7d6e4d4"
+  },
+  "scope": {
+    "bases": [
+      "hm",
+      "hng",
+      "ngm",
+      "soei"
+    ],
+    "stored_pairs": 12,
+    "distinct_texts": 7,
+    "all_current_mapping_status": "jyutping_fallback",
+    "formal_yale_complete": false,
+    "human_approval_records": [],
+    "source_data_or_runtime_mutations": false
+  },
+  "pairs": [
+    {
+      "base": "hm",
+      "text": "哼",
+      "reading": "hm1",
+      "source": "words.hk:wordlist",
+      "origin": "supplement"
+    },
+    {
+      "base": "hm",
+      "text": "哼",
+      "reading": "hm6",
+      "source": "lshk:list.tsv",
+      "origin": "supplement"
+    },
+    {
+      "base": "hm",
+      "text": "啈",
+      "reading": "hm6",
+      "source": "lshk:list.tsv",
+      "origin": "supplement"
+    },
+    {
+      "base": "hm",
+      "text": "噷",
+      "reading": "hm1",
+      "source": "jyut6ping3.chars.dict.yaml",
+      "origin": "explicit"
+    },
+    {
+      "base": "hng",
+      "text": "哼",
+      "reading": "hng1",
+      "source": "jyut6ping3.chars.dict.yaml",
+      "origin": "explicit"
+    },
+    {
+      "base": "hng",
+      "text": "哼",
+      "reading": "hng6",
+      "source": "jyut6ping3.chars.dict.yaml",
+      "origin": "explicit"
+    },
+    {
+      "base": "hng",
+      "text": "啈",
+      "reading": "hng6",
+      "source": "jyut6ping3.chars.dict.yaml",
+      "origin": "explicit"
+    },
+    {
+      "base": "hng",
+      "text": "嗯哼",
+      "reading": "ng6 hng6",
+      "source": "jyut6ping3.words.dict.yaml",
+      "origin": "explicit"
+    },
+    {
+      "base": "ngm",
+      "text": "呣",
+      "reading": "ngm2",
+      "source": "lshk:list.tsv",
+      "origin": "supplement"
+    },
+    {
+      "base": "ngm",
+      "text": "呣",
+      "reading": "ngm6",
+      "source": "lshk:list.tsv",
+      "origin": "supplement"
+    },
+    {
+      "base": "ngm",
+      "text": "唔",
+      "reading": "ngm4",
+      "source": "lshk:list.tsv",
+      "origin": "supplement"
+    },
+    {
+      "base": "soei",
+      "text": "穗",
+      "reading": "soei2",
+      "source": "lshk:list.tsv",
+      "origin": "supplement"
+    }
+  ],
+  "historical_lshk_observations": [
+    {
+      "version": "2004-09-07",
+      "commit": "dad2dd6d6f02fc51138ecc6818f7b38eba5c2ad3",
+      "url": "https://github.com/lshk-org/jyutping-table/blob/dad2dd6d6f02fc51138ecc6818f7b38eba5c2ad3/versions/list-20040907.tsv",
+      "rows": [
+        {
+          "line": 15654,
+          "fields": [
+            "穗",
+            "U+7A57",
+            "soei2",
+            "s",
+            "oei",
+            "2"
+          ]
+        },
+        {
+          "line": 28694,
+          "fields": [
+            "呣",
+            "U+5463",
+            "ngm2",
+            "ng",
+            "m",
+            "2"
+          ]
+        },
+        {
+          "line": 28696,
+          "fields": [
+            "呣",
+            "U+5463",
+            "ngm6",
+            "ng",
+            "m",
+            "6"
+          ]
+        },
+        {
+          "line": 29019,
+          "fields": [
+            "唔",
+            "U+5514",
+            "ngm4",
+            "ng",
+            "m",
+            "4"
+          ]
+        }
+      ]
+    },
+    {
+      "version": "2023-01-04",
+      "commit": "dad2dd6d6f02fc51138ecc6818f7b38eba5c2ad3",
+      "url": "https://github.com/lshk-org/jyutping-table/blob/dad2dd6d6f02fc51138ecc6818f7b38eba5c2ad3/versions/list-20230104.tsv",
+      "rows": [
+        {
+          "line": 15651,
+          "fields": [
+            "穗",
+            "U+7A57",
+            "soei2",
+            "s",
+            "oei",
+            "2",
+            "",
+            ""
+          ]
+        },
+        {
+          "line": 28686,
+          "fields": [
+            "呣",
+            "U+5463",
+            "ngm2",
+            "ng",
+            "m",
+            "2",
+            "",
+            ""
+          ]
+        },
+        {
+          "line": 28688,
+          "fields": [
+            "呣",
+            "U+5463",
+            "ngm6",
+            "ng",
+            "m",
+            "6",
+            "",
+            ""
+          ]
+        },
+        {
+          "line": 29011,
+          "fields": [
+            "唔",
+            "U+5514",
+            "ngm4",
+            "ng",
+            "m",
+            "4",
+            "",
+            ""
+          ]
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "base": "hm",
+      "current_literal_route": "hm",
+      "primary_shape_attested": true,
+      "evidence": "CUHK syllable table: initial h, final m, example 噷; retained source attestations include LSHK, Rime, TypeDuck, Unihan and words.hk.",
+      "provisional_plain_yale": "hm",
+      "recommendation": "documented_compositional_extension_pending_review",
+      "direct_formal_yale_whole_syllable_attestation_verified": false,
+      "independent_validation_of_all_character_tone_pairs": false
+    },
+    {
+      "base": "hng",
+      "current_literal_route": "hng",
+      "primary_shape_attested": true,
+      "evidence": "CUHK syllable table: initial h, final ng, example 哼; CUHK pronunciation index lists 哼 hng6; PyCantonese parser explicitly analyzes hng6.",
+      "provisional_plain_yale": "hng",
+      "recommendation": "documented_compositional_extension_pending_review",
+      "direct_formal_yale_whole_syllable_attestation_verified": false,
+      "independent_validation_of_all_character_tone_pairs": false
+    },
+    {
+      "base": "ngm",
+      "current_literal_route": "ngm",
+      "primary_shape_attested": null,
+      "evidence": "Three explicit LSHK rows, present in pinned current, 2004 and 2023 exports; exports are shared lineage, not independent phonetic evidence.",
+      "provisional_plain_yale": null,
+      "recommendation": "retain_literal_fallback_pending_source_editor_or_phonetic_review",
+      "metadata_error_established": false,
+      "original_scanned_table_visually_verified": false
+    },
+    {
+      "base": "soei",
+      "current_literal_route": "soei",
+      "primary_shape_attested": null,
+      "evidence": "LSHK 穗 soei2 explicitly has initial s and final oei, already present in 2004 and 2023 exports; 穗 seoi6 is a separate row. No verified Yale whole-final oei correspondence found.",
+      "provisional_plain_yale": null,
+      "recommendation": "retain_literal_fallback_do_not_transpose_or_infer_seui",
+      "metadata_error_established": false,
+      "original_scanned_table_visually_verified": false
+    }
+  ],
+  "references": [
+    {
+      "id": "cuhk_syllables",
+      "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/syllables.htm",
+      "role": "primary_syllable_shape_evidence",
+      "facts": [
+        "h+m 噷 cell",
+        "h+ng 哼 cell"
+      ],
+      "reuse": "citation and minimal facts only; no chart imported"
+    },
+    {
+      "id": "cuhk_syllabic_ng",
+      "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/pho-rel.php?s2=ng",
+      "role": "primary_pronunciation_index",
+      "facts": [
+        "哼 hng6"
+      ],
+      "reuse": "citation only; no entries imported"
+    },
+    {
+      "id": "eduhk_yale",
+      "url": "https://www.eduhk.hk/cle/resources/cep/cantonese-survival-package/Appendix%20I.html",
+      "role": "primary_yale_component_chart",
+      "facts": [
+        "initial h",
+        "syllabic m and ng"
+      ],
+      "reuse": "express reproduction restriction; chart not reproduced"
+    },
+    {
+      "id": "cuhk_finals",
+      "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/finals.php",
+      "role": "primary_comparison_chart",
+      "facts": [
+        "Yale m/ng",
+        "ordinary eoi to eui",
+        "devised extensions distinguished"
+      ],
+      "reuse": "citation and minimal facts only"
+    },
+    {
+      "id": "pycantonese_parser",
+      "url": "https://docs.pycantonese.org/v4.3.0/_modules/pycantonese/jyutping/parse_jyutping.html",
+      "role": "primary_software_implementation",
+      "facts": [
+        "explicit hng6 onset h nucleus ng example"
+      ],
+      "reuse": "read only; no code copied or executed"
+    },
+    {
+      "id": "pycantonese_yale",
+      "url": "https://docs.pycantonese.org/v4.3.0/_modules/pycantonese/jyutping/yale.html",
+      "role": "primary_software_implementation_not_normative_phonology",
+      "facts": [
+        "component conversion supports hm/hng inference",
+        "permissive conversion does not validate ngm or oei"
+      ],
+      "reuse": "read only; no code copied or executed"
+    },
+    {
+      "id": "lshk_readme",
+      "url": "https://github.com/lshk-org/jyutping-table/blob/dad2dd6d6f02fc51138ecc6818f7b38eba5c2ad3/README.md",
+      "role": "pinned_primary_dataset_lineage",
+      "reuse": "CC-BY-4.0; existing project attribution retained"
+    }
+  ],
+  "limitations": [
+    "No linguistic or mapping approvals are claimed.",
+    "Multiple source-file attestations are not proven independent linguistic research.",
+    "No incorrect-source-reading finding was established for ngm or soei.",
+    "Source dictionary coverage is finite and does not establish coverage of all Chinese words.",
+    "Current package, source readings, mapping classification and OS state were unchanged."
+  ]
+}

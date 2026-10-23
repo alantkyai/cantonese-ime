@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "python": {
+    "version": "3.13.17",
+    "major_minor": "3.13",
+    "filename": "python-3.13.17-macos11.pkg",
+    "url": "https://www.python.org/ftp/python/3.13.17/python-3.13.17-macos11.pkg",
+    "sha256": "3053592af66128269efab37fe7851a4894920b27c442aeec99ce4d34d17c07e3",
+    "bytes": 70800910,
+    "release_page": "https://www.python.org/downloads/release/python-31317/",
+    "architectures": ["arm64", "x86_64"],
+    "upstream_framework_prefix": "/Library/Frameworks/Python.framework",
+    "redistribution": "Extract the regular Python.framework payload only; do not execute the Python installer. Relocate its Mach-O dependencies into the app, then sign the modified code with the app developer's identity. Preserve Python license and notices."
+  },
+  "build": {
+    "minimum_macos": "13.0",
+    "minimum_swift": "5.10",
+    "minimum_xcode": "15.3",
+    "architectures": ["arm64", "x86_64"],
+    "sdk": "macosx"
+  },
+  "references": {
+    "python_universal2": "https://docs.python.org/3.13/using/mac.html",
+    "python_isolated_embedding": "https://docs.python.org/3.13/c-api/init_config.html",
+    "apple_code_signing": "https://developer.apple.com/library/archive/technotes/tn2206/_index.html",
+    "apple_distribution_xml": "https://developer.apple.com/library/archive/documentation/DeveloperTools/Reference/DistributionDefinitionRef/Chapters/Distribution_XML_Ref.html",
+    "apple_developer_id": "https://developer.apple.com/developer-id/"
+  }
+}

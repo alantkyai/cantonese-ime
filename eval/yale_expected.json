@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "purpose": "Independently authored factual spelling grid, fixed before production lookup scoring. It checks a tone-free ASCII input derivative, not full tonal Yale or linguistic approval of dictionary pronunciations.",
+  "sources": [
+    {"id":"eduhk_yale_chart","url":"https://www.eduhk.hk/cle/resources/cep/cantonese-survival-package/Appendix%20I.html","role":"Primary university teaching chart: Yale initials and finals; directly read 2026-10-23 Hong Kong."},
+    {"id":"cuhk_comparison","url":"https://www.ilc.cuhk.edu.hk/workshop/Chinese/Cantonese/Romanization/ch1_intro/3_compare.aspx","role":"Primary university comparison aligning Yale and Jyutping. Indexed table was available; direct retrieval returned an anti-bot page. Cross-check only, with the direct EdUHK and LSHK charts as primary evidence."},
+    {"id":"lshk_jyutping","url":"https://jyutping.org/en/jyutping/","role":"Primary canonical Jyutping onset/final definitions."},
+    {"id":"eduhk_j_initial","url":"https://corpus.eduhk.hk/cantonese/eng/chapter1/1-6.html","role":"Primary explanation of Jyutping j and the jyu versus yyu distinction."},
+    {"id":"pycantonese_extension","url":"https://pycantonese.org/_modules/pycantonese/jyutping/yale.html","role":"Author's published converter source: supplementary eu-to-ew convention and explanation of low-register h/diacritics. Its kw-to-k differs from the university chart; this grid retains chart-backed kw."},
+    {"id":"project_marginal_extensions","role":"Explicit project input policy requested 2026-10-23: keep marginal final letters a/em/en/ep/et/om/op/um/up/oet while applying ordinary onset conversion. These extra inputs are not claimed to occur in the primary Yale chart."},
+    {"id":"kfcd_literal_nasal_extensions","url":"https://github.com/kfcd/pingyam/blob/d0ceb32c2da07d156db99e50b192aaf45236ca95/pingyambiu","role":"Pinned published numeric-Yale/Jyutping fields explicitly preserve hm/hng. Reclassified from unverified fallback to supplementary source-backed extension after research; no letters or penalties change and no ordinary-chart or independent linguistic approval is claimed."}
+  ],
+  "policy": {
+    "tones":"Input aliases omit Yale diacritics and the low-register h marker. Numeric Jyutping tones, where the engine supports them, are audited separately without claiming Yale tonal notation.",
+    "closed_aa":"Only open aa becomes a; closed aai/aau/aam/aan/aang/aap/aat/aak retain aa.",
+    "rare":"Declared marginal-final extensions have separate project-policy status; other unusual shapes retain canonical Jyutping as an explicitly labelled fallback. Neither class is formal Yale chart coverage.",
+    "reuse":"Project-authored factual correspondences and examples; no source prose, audio, illustrations or third-party converter code is redistributed."
+  },
+  "final_grid": [
+    ["aa","a"],["aai","aai"],["aau","aau"],["aam","aam"],["aan","aan"],["aang","aang"],["aap","aap"],["aat","aat"],["aak","aak"],
+    ["ai","ai"],["au","au"],["am","am"],["an","an"],["ang","ang"],["ap","ap"],["at","at"],["ak","ak"],
+    ["e","e"],["ei","ei"],["eng","eng"],["ek","ek"],
+    ["i","i"],["iu","iu"],["im","im"],["in","in"],["ing","ing"],["ip","ip"],["it","it"],["ik","ik"],
+    ["o","o"],["oi","oi"],["ou","ou"],["on","on"],["ong","ong"],["ot","ot"],["ok","ok"],
+    ["u","u"],["ui","ui"],["un","un"],["ung","ung"],["ut","ut"],["uk","uk"],
+    ["oe","eu"],["eoi","eui"],["eon","eun"],["oeng","eung"],["eot","eut"],["oek","euk"],
+    ["yu","yu"],["yun","yun"],["yut","yut"],["m","m"],["ng","ng"]
+  ],
+  "onset_grid": [
+    ["baa","ba"],["paa","pa"],["maa","ma"],["faa","fa"],["daa","da"],["taa","ta"],["naa","na"],["laa","la"],
+    ["gaa","ga"],["kaa","ka"],["ngaa","nga"],["haa","ha"],["gwaa","gwa"],["kwaa","kwa"],["waa","wa"],
+    ["zaa","ja"],["caa","cha"],["saa","sa"],["jaa","ya"]
+  ],
+  "compound_grid": [
+    ["geoi","geui"],["keoi","keui"],["heoi","heui"],["seoi","seui"],["zeoi","jeui"],["ceoi","cheui"],["jeoi","yeui"],
+    ["zeon","jeun"],["ceon","cheun"],["seon","seun"],["jeon","yeun"],
+    ["ceot","cheut"],["zeot","jeut"],["seot","seut"],["jeot","yeut"],
+    ["goe","geu"],["coe","cheu"],["zoe","jeu"],["joe","yeu"],
+    ["hoeng","heung"],["zoeng","jeung"],["coeng","cheung"],["soeng","seung"],
+    ["zoek","jeuk"],["coek","cheuk"],["soek","seuk"],
+    ["jyu","yu"],["jyun","yun"],["jyut","yut"],["zyu","jyu"],["cyu","chyu"],
+    ["zyun","jyun"],["cyun","chyun"],["zyut","jyut"],["cyut","chyut"],["syut","syut"],["nyun","nyun"],
+    ["zaang","jaang"],["saang","saang"],["caau","chaau"],["zaam","jaam"],
+    ["jim","yim"],["jin","yin"],["jeng","yeng"],["zung","jung"],["zim","jim"],["zing","jing"],
+    ["sin","sin"],["ce","che"],["gwok","gwok"],["kwok","kwok"],["zau","jau"],["jau","yau"]
+  ],
+  "extension_grid": [
+    ["eu","ew"],["deu","dew"],["jeu","yew"],["zeu","jew"],
+    ["a","a"],["em","em"],["en","en"],["ep","ep"],["et","et"],["om","om"],["op","op"],["um","um"],["up","up"],["oet","eut"],
+    ["cet","chet"],["jen","yen"],["za","ja"],["zop","jop"],["zoet","jeut"],["hm","hm"],["hng","hng"]
+  ],
+  "fallback_grid": ["oei","eo","ngm","soei"],
+  "word_cases": [
+    {"id":"torch","text":"火炬","reading":"fo2 geoi6","input":"fogeui","kind":"table"},
+    {"id":"hong_kong","text":"香港","reading":"hoeng1 gong2","input":"heung gong","kind":"table"},
+    {"id":"china","text":"中國","reading":"zung1 gwok3","input":"jung gwok","kind":"table"},
+    {"id":"exit","text":"出","reading":"ceot1","input":"cheut","kind":"table"},
+    {"id":"snow","text":"雪","reading":"syut3","input":"syut","kind":"table"},
+    {"id":"surname_zhang","text":"張","reading":"zoeng1","input":"jeung","kind":"table"},
+    {"id":"car","text":"車","reading":"ce1","input":"che","kind":"table"},
+    {"id":"rain","text":"雨","reading":"jyu5","input":"yu","kind":"table"},
+    {"id":"moon","text":"月","reading":"jyut6","input":"yut","kind":"table"},
+    {"id":"win","text":"贏","reading":"jeng4","input":"yeng","kind":"table"},
+    {"id":"teacher_formal","text":"先生","reading":"sin1 saang1","input":"sinsaang","kind":"table"},
+    {"id":"teacher_requested_casual","text":"先生","reading":"sin1 saang1","input":"sinsang","kind":"project_alias","note":"Requested casual aa-shortening; not the formal Yale spelling of closed aang."},
+    {"id":"sharp","text":"尖","reading":"zim1","input":"jim","kind":"table"},
+    {"id":"all","text":"全部","reading":"cyun4 bou6","input":"chyunbou","kind":"table"},
+    {"id":"warm","text":"暖","reading":"nyun5","input":"nyun","kind":"table"}
+  ]
+}

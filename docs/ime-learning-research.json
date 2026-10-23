@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "researched_on": "2026-10-22",
+  "purpose": "Primary-source review for adaptive Cantonese IME personalization and compact candidate UI. This records design choices, not evidence that all techniques below have been implemented.",
+  "sources": [
+    {
+      "project": "Rime / librime",
+      "urls": [
+        "https://github.com/rime/librime/blob/master/src/rime/gear/memory.cc",
+        "https://github.com/rime/librime/blob/master/src/rime/dict/user_dictionary.cc",
+        "https://github.com/rime/librime/blob/master/src/rime/algo/dynamics.h"
+      ],
+      "observed_techniques": [
+        "Commit processing can collect selected phrase components into a user phrase.",
+        "User entries retain spelling codes, selected text, commit counts and a usage tick.",
+        "Dynamic entry scoring incorporates frequency and decayed usage; user-dictionary search distinguishes exact and predictive matches.",
+        "Recent transactions can be reverted rather than permanently teaching every mistaken commit."
+      ]
+    },
+    {
+      "project": "Google Mozc",
+      "urls": [
+        "https://github.com/google/mozc/blob/master/src/prediction/user_history_predictor.cc"
+      ],
+      "observed_techniques": [
+        "User-history scoring uses last access with candidate-length and bigram adjustments.",
+        "Matching distinguishes exact input, shorter prefixes and longer input requiring linked history entries.",
+        "Neighboring history entries support phrase chaining and contextual suggestions.",
+        "Low-frequency whole-sentence suggestions can be suppressed in the relevant mixed-conversion mode."
+      ]
+    },
+    {
+      "project": "Fcitx / libime",
+      "urls": [
+        "https://github.com/fcitx/libime/blob/master/src/libime/core/historybigram.cpp",
+        "https://github.com/fcitx/libime/blob/master/src/libime/core/userlanguagemodel.cpp"
+      ],
+      "observed_techniques": [
+        "Personal history scores both individual words and preceding-word/current-word pairs, with optional spelling validation codes.",
+        "History uses several bounded recency pools with different weights.",
+        "The user language model blends history scores with the static language model."
+      ]
+    }
+  ],
+  "project_design_inferences": [
+    "Keep preferences conditional on complete normalized input and spelling mode. A learned long phrase must not automatically take over every shorter prefix.",
+    "Use adaptive competing-choice weights rather than a permanent single mapping or unbounded lifetime-count advantage.",
+    "Retain validly selected whole phrases in a local personal phrase store, including composed candidates, so bounded static search does not later hide them.",
+    "Learn only after successful candidate commit; cancel, literal Latin, lookup and failed commits must not teach the model.",
+    "Keep learning transport off the TSF edit thread, preserve commit order, and save bounded per-user state atomically across sessions.",
+    "Preceding-word context, new phrases assembled across separate commits, correction/revert feedback and a trained Cantonese language model are further extensions; the initial adaptive full-input model does not claim them."
+  ],
+  "initial_policy": {
+    "adaptive_decay_per_competing_selection": 0.8,
+    "selected_choice_increment": 1.0,
+    "adaptive_weight_cap": 5.0,
+    "decay_scope": "Same full normalized input and mode only; shorter and longer inputs remain independent.",
+    "policy_status": "Project-authored heuristic to verify with regression cases and user examples; not copied from an upstream probability model."
+  },
+  "ui_design": {
+    "contents": "Candidate words only; no duplicate phonetic header, readings, numeric labels or instructional footer.",
+    "layout": "Measured horizontal cells that wrap within a bounded, DPI-aware popup; highlight and existing selection/paging keys remain."
+  }
+}

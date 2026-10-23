@@ -1,0 +1,96 @@
+{
+  "adaptation_license_basis": "CC-BY-SA-3.0 legalcode section4(b)(ii) expressly allows adaptations under a later version with the same License Elements; original data and attribution remain under original terms. Combined transformed database adaptation is offered under CC-BY-SA-4.0, separately from program code.",
+  "attribution": "CC-Canto copyright(c)2015-17 Pleco Inc.; CC-CEDICT Cantonese Readings copyright(c)2015 Pleco Software Incorporated. Exact notices retained in source headers; source download page also credits CC-CEDICT maintainers and Paul Andrew Denisowski for the separate CC-CEDICT title.",
+  "combined_adaptation_license": "CC-BY-SA-4.0",
+  "declaration_file": "download.html",
+  "excluded": [
+    "Mandarin Pinyin readings as lookup codes",
+    "English definitions as lookup or review-field content",
+    "CC-CEDICT Mandarin dictionary download itself",
+    "CantoDict proprietary content",
+    "HKCanCor evaluation labels"
+  ],
+  "files": [
+    {
+      "name": "LICENSE-CC-BY-SA-3.0.txt",
+      "sha256": "3f941b3b89cf7b8370ceb83cc76d2120d471b58735d8ca60238a751a48d7f72f",
+      "size_bytes": 22240,
+      "url": "https://creativecommons.org/licenses/by-sa/3.0/legalcode.txt"
+    },
+    {
+      "name": "LICENSE-CC-BY-SA-4.0.txt",
+      "sha256": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5",
+      "size_bytes": 20138,
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt"
+    },
+    {
+      "name": "about.html",
+      "sha256": "6654d8ad14c1851f9fe07498e416098894bea6d242cbcb5a66828ffc89079298",
+      "size_bytes": 9691,
+      "url": "https://www.cc-canto.org/about.html"
+    },
+    {
+      "name": "cccanto-170202.zip",
+      "sha256": "0cc9e600a19c02405064d6d227d96563c09da1a0af1c7717508c0f231028af27",
+      "size_bytes": 1282537,
+      "url": "https://www.cc-canto.org/cccanto-170202.zip"
+    },
+    {
+      "archive": "cccanto-170202.zip",
+      "member": "cccanto-webdist.txt",
+      "name": "cccanto-webdist.txt",
+      "sha256": "95392fbfe3c1690dc5b1460ad29ee451d17cad75935c00d5af2d18913f9bd940",
+      "size_bytes": 3446667,
+      "url": "https://www.cc-canto.org/cccanto-170202.zip"
+    },
+    {
+      "archive": "cccedict-canto-readings-150923.zip",
+      "member": "cccedict-canto-readings-150923.txt",
+      "name": "cccedict-canto-readings-150923.txt",
+      "sha256": "93ecbd7b7d58741bb8205107c736632438bf42dc07042b4090a66ce765432b0b",
+      "size_bytes": 5328574,
+      "url": "https://www.cc-canto.org/cccedict-canto-readings-150923.zip"
+    },
+    {
+      "name": "cccedict-canto-readings-150923.zip",
+      "sha256": "f6d99991791f49aaf96d97b2838a3ba9e057e060a5a9e24311cf851f8f71a950",
+      "size_bytes": 1874027,
+      "url": "https://www.cc-canto.org/cccedict-canto-readings-150923.zip"
+    },
+    {
+      "name": "download.html",
+      "sha256": "b8dccb10da53ccd0ec01ac898c0f686fb753caad91950cd72a8216798a677125",
+      "size_bytes": 4325,
+      "url": "https://www.cc-canto.org/download.html"
+    },
+    {
+      "baseline_database_sha256": "4353328cb17f8c8f8cc5d78730e34c3aa26c6c8ea7d1a4f4a8f91fee5d900a6e",
+      "kind": "project-generated validation metadata",
+      "name": "parser-attested-bases.json",
+      "sha256": "f06875d7e5e8446326c0058ee51f333a404fe9071bc86e3a4ffd94a03c5b5fa8",
+      "size_bytes": 11401
+    }
+  ],
+  "format_version": 1,
+  "license": "CC-BY-SA-3.0",
+  "license_file": "LICENSE-CC-BY-SA-3.0.txt",
+  "local_directory": "data/vendor/cc-canto/2017-02-02-and-2015-09-23",
+  "parser_attestation": {
+    "base_count": 878,
+    "baseline_database_sha256": "4353328cb17f8c8f8cc5d78730e34c3aa26c6c8ea7d1a4f4a8f91fee5d900a6e",
+    "file": "parser-attested-bases.json",
+    "sha256": "f06875d7e5e8446326c0058ee51f333a404fe9071bc86e3a4ffd94a03c5b5fa8"
+  },
+  "published_versions": {
+    "cccanto": "2017-02-02",
+    "cccedict_cantonese": "2015-09-23"
+  },
+  "retrieval_timezone": "Asia/Hong_Kong",
+  "retrieved_date": "2026-10-23",
+  "review_policy": "Quarantine malformed, noncanonical, un-attested or codepoint/syllable-unaligned forms with full accounting, physical source references and raw prefix fields. Do not invent y/j, tone, letter, punctuation or compound-character repairs.",
+  "scope": "Explicit brace-delimited Cantonese/Jyutping readings for traditional and simplified headword fields. Bracketed Mandarin Pinyin and definitions are not imported as lookup data. Full originals retained unmodified.",
+  "selection_status": "Selected additional default Cantonese lexical source; not independent human approval",
+  "source_id": "cccanto",
+  "source_url": "https://www.cc-canto.org/download.html",
+  "weight_policy": "All newly added pairs retain weight0 as frequency unknown; preserve earlier source pairs and weights."
+}

@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "source_id": "yale_kfcd_numeric",
+  "source_name": "KFCD pingyam numeric Yale table",
+  "commit": "d0ceb32c2da07d156db99e50b192aaf45236ca95",
+  "license": "CC-BY-3.0",
+  "attribution": "KFCD (開放詞典), pingyam",
+  "local_directory": "data/vendor/kfcd-pingyam/d0ceb32c2da07d156db99e50b192aaf45236ca95",
+  "recorded_at_utc": "2026-10-22T19:37:35.100480+00:00",
+  "selection_status": "Source retained for reviewed isolated alias prototype; not yet selected by live mappings or installed IME.",
+  "field_policy": {
+    "numeric_yale_column": 0,
+    "jyutping_column": 6,
+    "column_count": 11,
+    "terminal_numeric_tones_only": true,
+    "changed_tone_mapping": {
+      "7": "1",
+      "8": "3",
+      "9": "6"
+    }
+  },
+  "alternate_spellings": {
+    "deu": [
+      "deeu"
+    ],
+    "eu": [
+      "eeu"
+    ],
+    "meu": [
+      "meeu"
+    ],
+    "peu": [
+      "peeu"
+    ],
+    "seu": [
+      "seeu"
+    ],
+    "zeu": [
+      "jeeu"
+    ]
+  },
+  "literal_extension_bases": [
+    "hm",
+    "hng"
+  ],
+  "files": [
+    {
+      "name": "pingyambiu",
+      "sha256": "bfb4a10ff62238a27d087a9a82e64de9b3cf9d3fc2326097ef083a476103e3aa",
+      "size_bytes": 267047,
+      "url": "https://github.com/kfcd/pingyam/blob/d0ceb32c2da07d156db99e50b192aaf45236ca95/pingyambiu",
+      "transformation": "unmodified retained source"
+    },
+    {
+      "name": "README.md",
+      "sha256": "72667a8ac72516528ffb527796646aef0382c3c6e8f0ba05140fdfcb8a5e1977",
+      "size_bytes": 3090,
+      "url": "https://github.com/kfcd/pingyam/blob/d0ceb32c2da07d156db99e50b192aaf45236ca95/README.md",
+      "transformation": "unmodified retained source"
+    },
+    {
+      "name": "LICENSE",
+      "sha256": "243ce65e3a5a24669b08b5b6d25e82e961dfc747f841f04f199126a218968100",
+      "size_bytes": 836,
+      "url": "https://github.com/kfcd/pingyam/blob/d0ceb32c2da07d156db99e50b192aaf45236ca95/LICENSE",
+      "transformation": "unmodified retained source"
+    },
+    {
+      "name": "LICENSE-CC-BY-3.0.txt",
+      "sha256": "e6bc9e9c474700b708f568bac9e5a8a9bcb2b1dad53442f5ba449fcb848b8e76",
+      "size_bytes": 19467,
+      "url": "https://creativecommons.org/licenses/by/3.0/legalcode.txt",
+      "transformation": "unmodified retained source"
+    },
+    {
+      "name": "ATTRIBUTION.md",
+      "sha256": "164a805e83e53b71c23067fba1b7647884a0d700e7ade884eb7fabd5582b084a",
+      "size_bytes": 1222,
+      "url": null,
+      "transformation": "project-authored attribution"
+    }
+  ]
+}

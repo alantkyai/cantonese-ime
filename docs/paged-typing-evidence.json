@@ -1,0 +1,16 @@
+{
+  "kind": "Python Engine and Session integration replay, not native Windows IME evidence",
+  "dictionary_sha256": "4353328cb17f8c8f8cc5d78730e34c3aa26c6c8ea7d1a4f4a8f91fee5d900a6e",
+  "engine_sha256": "c2b67530f0fa42f14841f37e56369f776d023e4f63f67a4b92ad5085707e4d92",
+  "session_sha256": "736010659dd9b1d83472cd318303cf2bdf63c75ca854a2ce6b461fe07bb26c26",
+  "mode": "jyutping",
+  "input": "lei",
+  "target": "铌",
+  "rank_before_learning": 193,
+  "page_zero_based": 21,
+  "slot_one_based": 4,
+  "committed": "铌",
+  "first_before_learning": "離",
+  "first_after_reopen": "铌",
+  "learning_storage": "Temporary test directory, removed after replay; no default learning enabled."
+}

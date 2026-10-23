@@ -1,0 +1,314 @@
+{
+  "recorded_at_utc": "2026-10-22T19:40:39.909809+00:00",
+  "prototype_only": true,
+  "passed": true,
+  "tests_run": 13,
+  "failures": 0,
+  "errors": 0,
+  "source_evidence": {
+    "source_id": "yale_kfcd_numeric",
+    "license": "CC-BY-3.0",
+    "commit": "d0ceb32c2da07d156db99e50b192aaf45236ca95",
+    "source_lock_file": "data/mappings/kfcd.sources.lock.json",
+    "source_lock_sha256": "1fb4788fa32fd984843b22ee9a169434ebfbb6a0d81da5e064e2b0efda83e6e9",
+    "files_sha256": {
+      "data/vendor/kfcd-pingyam/d0ceb32c2da07d156db99e50b192aaf45236ca95/pingyambiu": "bfb4a10ff62238a27d087a9a82e64de9b3cf9d3fc2326097ef083a476103e3aa",
+      "data/vendor/kfcd-pingyam/d0ceb32c2da07d156db99e50b192aaf45236ca95/README.md": "72667a8ac72516528ffb527796646aef0382c3c6e8f0ba05140fdfcb8a5e1977",
+      "data/vendor/kfcd-pingyam/d0ceb32c2da07d156db99e50b192aaf45236ca95/LICENSE": "243ce65e3a5a24669b08b5b6d25e82e961dfc747f841f04f199126a218968100",
+      "data/vendor/kfcd-pingyam/d0ceb32c2da07d156db99e50b192aaf45236ca95/LICENSE-CC-BY-3.0.txt": "e6bc9e9c474700b708f568bac9e5a8a9bcb2b1dad53442f5ba449fcb848b8e76",
+      "data/vendor/kfcd-pingyam/d0ceb32c2da07d156db99e50b192aaf45236ca95/ATTRIBUTION.md": "164a805e83e53b71c23067fba1b7647884a0d700e7ade884eb7fabd5582b084a"
+    },
+    "table_rows": 3972,
+    "table_bases": 741,
+    "alternate_spellings": {
+      "deu": [
+        "deeu"
+      ],
+      "eu": [
+        "eeu"
+      ],
+      "meu": [
+        "meeu"
+      ],
+      "peu": [
+        "peeu"
+      ],
+      "seu": [
+        "seeu"
+      ],
+      "zeu": [
+        "jeeu"
+      ]
+    },
+    "literal_extension_bases": [
+      "hm",
+      "hng"
+    ],
+    "selected_literal_rows": [
+      {
+        "line": 599,
+        "yale_numeric": "deeu1",
+        "jyutping": "deu1"
+      },
+      {
+        "line": 600,
+        "yale_numeric": "deeu2",
+        "jyutping": "deu2"
+      },
+      {
+        "line": 601,
+        "yale_numeric": "deeu3",
+        "jyutping": "deu3"
+      },
+      {
+        "line": 602,
+        "yale_numeric": "deeu4",
+        "jyutping": "deu4"
+      },
+      {
+        "line": 603,
+        "yale_numeric": "deeu5",
+        "jyutping": "deu5"
+      },
+      {
+        "line": 604,
+        "yale_numeric": "deeu6",
+        "jyutping": "deu6"
+      },
+      {
+        "line": 759,
+        "yale_numeric": "eeu1",
+        "jyutping": "eu1"
+      },
+      {
+        "line": 760,
+        "yale_numeric": "eeu2",
+        "jyutping": "eu2"
+      },
+      {
+        "line": 761,
+        "yale_numeric": "eeu3",
+        "jyutping": "eu3"
+      },
+      {
+        "line": 762,
+        "yale_numeric": "eeu4",
+        "jyutping": "eu4"
+      },
+      {
+        "line": 763,
+        "yale_numeric": "eeu5",
+        "jyutping": "eu5"
+      },
+      {
+        "line": 764,
+        "yale_numeric": "eeu6",
+        "jyutping": "eu6"
+      },
+      {
+        "line": 2477,
+        "yale_numeric": "meeu1",
+        "jyutping": "meu1"
+      },
+      {
+        "line": 2478,
+        "yale_numeric": "meeu2",
+        "jyutping": "meu2"
+      },
+      {
+        "line": 2479,
+        "yale_numeric": "meeu3",
+        "jyutping": "meu3"
+      },
+      {
+        "line": 2480,
+        "yale_numeric": "meeu4",
+        "jyutping": "meu4"
+      },
+      {
+        "line": 2481,
+        "yale_numeric": "meeu5",
+        "jyutping": "meu5"
+      },
+      {
+        "line": 2482,
+        "yale_numeric": "meeu6",
+        "jyutping": "meu6"
+      },
+      {
+        "line": 3059,
+        "yale_numeric": "peeu1",
+        "jyutping": "peu1"
+      },
+      {
+        "line": 3060,
+        "yale_numeric": "peeu2",
+        "jyutping": "peu2"
+      },
+      {
+        "line": 3061,
+        "yale_numeric": "peeu3",
+        "jyutping": "peu3"
+      },
+      {
+        "line": 3062,
+        "yale_numeric": "peeu4",
+        "jyutping": "peu4"
+      },
+      {
+        "line": 3063,
+        "yale_numeric": "peeu5",
+        "jyutping": "peu5"
+      },
+      {
+        "line": 3064,
+        "yale_numeric": "peeu6",
+        "jyutping": "peu6"
+      },
+      {
+        "line": 3271,
+        "yale_numeric": "seeu1",
+        "jyutping": "seu1"
+      },
+      {
+        "line": 3272,
+        "yale_numeric": "seeu2",
+        "jyutping": "seu2"
+      },
+      {
+        "line": 3273,
+        "yale_numeric": "seeu3",
+        "jyutping": "seu3"
+      },
+      {
+        "line": 3274,
+        "yale_numeric": "seeu4",
+        "jyutping": "seu4"
+      },
+      {
+        "line": 3275,
+        "yale_numeric": "seeu5",
+        "jyutping": "seu5"
+      },
+      {
+        "line": 3276,
+        "yale_numeric": "seeu6",
+        "jyutping": "seu6"
+      },
+      {
+        "line": 1655,
+        "yale_numeric": "jeeu1",
+        "jyutping": "zeu1"
+      },
+      {
+        "line": 1656,
+        "yale_numeric": "jeeu2",
+        "jyutping": "zeu2"
+      },
+      {
+        "line": 1657,
+        "yale_numeric": "jeeu3",
+        "jyutping": "zeu3"
+      },
+      {
+        "line": 1658,
+        "yale_numeric": "jeeu4",
+        "jyutping": "zeu4"
+      },
+      {
+        "line": 1659,
+        "yale_numeric": "jeeu5",
+        "jyutping": "zeu5"
+      },
+      {
+        "line": 1660,
+        "yale_numeric": "jeeu6",
+        "jyutping": "zeu6"
+      },
+      {
+        "line": 1481,
+        "yale_numeric": "hm1",
+        "jyutping": "hm1"
+      },
+      {
+        "line": 1482,
+        "yale_numeric": "hm2",
+        "jyutping": "hm2"
+      },
+      {
+        "line": 1483,
+        "yale_numeric": "hm3",
+        "jyutping": "hm3"
+      },
+      {
+        "line": 1484,
+        "yale_numeric": "hm4",
+        "jyutping": "hm4"
+      },
+      {
+        "line": 1485,
+        "yale_numeric": "hm5",
+        "jyutping": "hm5"
+      },
+      {
+        "line": 1486,
+        "yale_numeric": "hm6",
+        "jyutping": "hm6"
+      },
+      {
+        "line": 1487,
+        "yale_numeric": "hng1",
+        "jyutping": "hng1"
+      },
+      {
+        "line": 1488,
+        "yale_numeric": "hng2",
+        "jyutping": "hng2"
+      },
+      {
+        "line": 1489,
+        "yale_numeric": "hng3",
+        "jyutping": "hng3"
+      },
+      {
+        "line": 1490,
+        "yale_numeric": "hng4",
+        "jyutping": "hng4"
+      },
+      {
+        "line": 1491,
+        "yale_numeric": "hng5",
+        "jyutping": "hng5"
+      },
+      {
+        "line": 1492,
+        "yale_numeric": "hng6",
+        "jyutping": "hng6"
+      }
+    ],
+    "independent_linguistic_approval": false,
+    "scope": "Published numeric-Yale spelling evidence; no word frequency, independent pronunciation approval or all-tones word attestation."
+  },
+  "source_verifier_sha256": "da0fee8cceb9dfae3db81d2e8fd177ea99ff146adbca9c358e4b7c0b51a518f5",
+  "actual_modules": {
+    "cantonese_ime.engine": {
+      "path": "D:\\IME_Project\\.local\\yale-alternate-prototype\\cantonese_ime\\engine.py",
+      "sha256": "c78c577a02c5e5f80ff82ade18187a33822d90ecf1a5662416f5638342f9adba"
+    },
+    "cantonese_ime.mappings": {
+      "path": "D:\\IME_Project\\.local\\yale-alternate-prototype\\cantonese_ime\\mappings.py",
+      "sha256": "b7c01ba406985eb578cfa7f58d1240f87783693a19ead15d18cbde4f63ce5c29"
+    }
+  },
+  "guarded_sha256": {
+    "cantonese_ime\\engine.py": "f45b0a29693e613ba9dd0633be7ca67e905ad3bbca17b95fc01aac36df823d5f",
+    "cantonese_ime\\mappings.py": "3eaee728fc7355d466dee722e1ee4f67e508eb9c362fd92762b8d0531e5e99fe",
+    "data\\generated\\lexicon.sqlite3": "d835b8c4487b90ef751c8c91f467b9245c8bd54ee5be8157531dd9530ac7667b",
+    "eval\\yale_expected.json": "de858845d9f98e5bc922c18406b3714ad195861de8218816bc3bad477cce44c1",
+    ".local\\yale-alternate-prototype\\prototype-manifest.json": "2622d6b1d315b6f86262dacd9e9e76fb939e2bcbf27b051e0c82ef8feda0bb10",
+    ".local\\review-yale-prototype.py": "56381eb169b1521ffa4623d2b097b9096eae57365a63a5a17928cd868693f9e9"
+  },
+  "guarded_unchanged": true,
+  "prototype_evidence_unchanged": true,
+  "scope": "Root review and focused prototype rerun with retained source correspondence. No live runtime, fixture, default dictionary or installed files changed."
+}

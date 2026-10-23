@@ -1,0 +1,2099 @@
+{
+  "approval_authenticated": false,
+  "artifact_kind": "pronunciation_gap_review",
+  "baseline_metrics_changed": false,
+  "checked_on": "2026-10-22",
+  "corpus_attribution": "K. K. Luke and May L. Y. Wong; Hong Kong Cantonese Corpus (HKCanCor), original corpus transcriptions, hosted by Francis Bond.",
+  "corpus_license": "CC-BY-4.0",
+  "dictionary_changed": false,
+  "evidence": [
+    {
+      "exact_excerpt": "often transcribed as 呢 or 哩, with pronunciation variants including li1, lei1, ni1 and nei1",
+      "finding": "General research statement about proximal demonstrative variation. Paper also uses HKCanCor and normalizes analysis to 呢 li1; not an independent recording validation of these selected tokens.",
+      "id": "kwong2018",
+      "license_url": "https://aclanthology.org/faq/copyright/",
+      "location": "Printed page313, footnote1; page316 corpus discussion",
+      "reuse_boundary": "Research citation and short excerpt only. ACL metadata labels post2016 materials CC BY4.0 and publisher ACL; PDF says Copyright2018bytheauthor. No paper dataset was imported.",
+      "title": "Oi Yee Kwong (2018), The Non-deictic Use of Demonstratives in Conversations and Interpreted Speeches in Contemporary Hong Kong Cantonese",
+      "url": "https://aclanthology.org/Y18-1036.pdf"
+    },
+    {
+      "exact_excerpt": "Data License: public domain. Credits to words.hk appreciated.",
+      "finding": "All three exact keys carry ding2 lung2. This is authored dictionary word-level attestation, not proof of unconstrained single-character tone.",
+      "id": "wordshk-wordlist",
+      "location": "Retained2026-10-22 wordslist.json, keys 頂窿/頂櫳/頂籠",
+      "reuse_boundary": "Public-domain declaration applies only to wordlist/pronunciations; definitions/examples are a separate noncommercial-licensed source. Credit words.hk contributors.",
+      "title": "words.hk official public-domain wordlist/pronunciations",
+      "url": "https://words.hk/faiman/analysis/wordslist/"
+    },
+    {
+      "finding": "None of the seven requested single-character pairs appears. Other readings are retained verbatim.",
+      "id": "lshk-retained",
+      "location": "Retained list.tsv exact physical rows included per record",
+      "reuse_boundary": "CC BY4.0; retain source attribution and original bytes. CUHK and this table can share source authorities; not counted as independent votes.",
+      "title": "LSHK Jyutping Workgroup, Cantonese Pronunciation List of the Characters for Computers",
+      "url": "https://github.com/lshk-org/jyutping-table/tree/dad2dd6d6f02fc51138ecc6818f7b38eba5c2ad3"
+    },
+    {
+      "exact_excerpt": "語氣詞",
+      "finding": "CUHK also distinguishes a particle sense and the mile sense; this character page alone does not establish ni1.",
+      "id": "cuhk-li",
+      "location": "Cantonese word-formation notes",
+      "reuse_boundary": "Reference/short quotation only; no bulk or dictionary redistribution permission established by this review.",
+      "title": "CUHK Multi-function Chinese Character Database, 哩",
+      "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=哩"
+    },
+    {
+      "finding": "Rows list lung1 variant and lung4 examples, not generic lung2. Contextual 頂窿 has separate retained word-level evidence.",
+      "id": "cuhk-lung",
+      "location": "Cantonese rows and linked tone tables",
+      "reuse_boundary": "Reference only; no page/database import.",
+      "title": "CUHK Multi-function Chinese Character Database, 窿",
+      "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=窿"
+    },
+    {
+      "finding": "肆 appears under si3, not si5 in this table. Absence from the table is not proof of impossible contextual speech.",
+      "id": "cuhk-si",
+      "location": "si3 and si5 rows",
+      "reuse_boundary": "Reference only; no page/database import.",
+      "title": "CUHK Cantonese homophone table si",
+      "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/pho-rel.php?s1=s&s2=i"
+    },
+    {
+      "exact_excerpt": "sik6 si3",
+      "finding": "Headword and its example use si3, agreeing with the retained wordlist.",
+      "id": "wordshk-siksi",
+      "license_url": "https://words.hk/base/hoifong/",
+      "location": "Headword reading",
+      "reuse_boundary": "Licensed under the Non-Commercial Open Data License ( https://words.hk/zidin/食肆 ); citation only, no definition/example import.",
+      "title": "words.hk 食肆",
+      "url": "https://words.hk/zidin/食肆"
+    },
+    {
+      "exact_excerpt": "杜絕無牌食肆 (dou6 zyut6 mou4 paai4 sik6 si5)",
+      "finding": "This independent primary dictionary example explicitly contains si5, conflicting with its 食肆 headword. It does not explain the discrepancy as a changed-tone rule.",
+      "id": "wordshk-douzyut",
+      "license_url": "https://words.hk/base/hoifong/",
+      "location": "First usage example romanization",
+      "reuse_boundary": "Licensed under the Non-Commercial Open Data License ( https://words.hk/zidin/杜絕 ); narrow citation only, do not import into the default commercial-compatible data boundary.",
+      "title": "words.hk 杜絕",
+      "url": "https://words.hk/zidin/杜絕"
+    },
+    {
+      "exact_excerpt": "人聲鼎沸",
+      "finding": "CUHK links 沸 to fai3 and includes the exact compound context. No fat6 attestation found in these checked primary tables.",
+      "id": "cuhk-fai",
+      "location": "沸 Cantonese example row; fai3 homophones",
+      "reuse_boundary": "Reference only; no page/database import.",
+      "supporting_url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/pho-rel.php?s1=f&s2=ai",
+      "title": "CUHK 沸 and Cantonese homophone table fai",
+      "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=沸"
+    },
+    {
+      "finding": "Metalinguistic discussion, not independent linguistic validation.",
+      "id": "hkcancor-fat-context",
+      "location": "turn37 explicitly contrasts ding2fat6 and ding2fai3; context retained below",
+      "reuse_boundary": "CC BY4.0; K. K. Luke and May L. Y. Wong, original corpus hosted by Francis Bond; raw annotations unchanged.",
+      "title": "Pinned HKCanCor FC-R016_v turns35–44",
+      "url": "https://github.com/fcbond/hkcancor/blob/39aeadf920e0b5ca93d0ad7792c59e740e7bdd65/data/utf8/FC-R016_v"
+    },
+    {
+      "finding": "蚚 is listed as kei4.",
+      "id": "cuhk-kei",
+      "location": "kei4 row",
+      "reuse_boundary": "Reference only; no page/database import.",
+      "title": "CUHK Cantonese homophone table kei",
+      "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/pho-rel.php?s1=k&s2=ei"
+    },
+    {
+      "finding": "蜥 is listed as sik1; 蚚 is absent from that row.",
+      "id": "cuhk-sik",
+      "location": "sik1 row",
+      "reuse_boundary": "Reference only; no page/database import.",
+      "title": "CUHK Cantonese homophone table sik",
+      "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/pho-rel.php?s1=s&s2=ik"
+    },
+    {
+      "exact_excerpt": "米中小黑蟲",
+      "finding": "Semantic/character evidence: entry describes a rice insect, not a Cantonese sik1 pronunciation or an explicit 蜥 variant relation.",
+      "id": "moe-qi",
+      "location": "Definition and Mandarin reading; not a Cantonese pronunciation source",
+      "reuse_boundary": "Narrow cited reference only; no new data redistribution permission assumed.",
+      "title": "Taiwan Ministry of Education Dictionary of Chinese Character Variants, B04228 蚚",
+      "url": "https://dict.variants.moe.edu.tw/dictView.jsp?ID=69756&la=1"
+    },
+    {
+      "finding": "跤 appears under gaau1, not gaau3. This does not settle the original corpus orthographic intention.",
+      "id": "cuhk-gaau",
+      "location": "gaau1 and gaau3 rows",
+      "reuse_boundary": "Reference only; no page/database import.",
+      "title": "CUHK Cantonese homophone table gaau",
+      "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/pho-rel.php?s1=g&s2=aau"
+    },
+    {
+      "finding": "Same turn contains 脫骹/v/tyut3gaau3/ and 脫跤/v/tyut3gaau3/; counts are source-token coordinates, not a preferred spelling ruling.",
+      "id": "hkcancor-gaau-context",
+      "location": "Turn1; exact token coordinates retained in same_turn_orthography_context.matched_tokens",
+      "reuse_boundary": "CC BY4.0, original source annotations unchanged.",
+      "title": "Pinned HKCanCor FC-R011_v turn1",
+      "url": "https://github.com/fcbond/hkcancor/blob/39aeadf920e0b5ca93d0ad7792c59e740e7bdd65/data/utf8/FC-R011_v"
+    },
+    {
+      "exact_excerpt": "三十嘅縮寫、合音",
+      "finding": "Explicit saa1 aa6/saa1 a6; 卅幾 saa1 aa6 gei2. Independently describes the thirty contraction, not 三 as an unrestricted single-character saa1.",
+      "id": "wordshk-saa",
+      "license_url": "https://words.hk/base/hoifong/",
+      "location": "Headword pronunciation and 卅幾 usage",
+      "reuse_boundary": "Licensed under the Non-Commercial Open Data License ( https://words.hk/zidin/卅 ); citation only. The same pronunciation facts are already retained separately in the public-domain wordlist.",
+      "title": "words.hk 卅",
+      "url": "https://words.hk/zidin/卅"
+    },
+    {
+      "exact_excerpt": "三十",
+      "finding": "卅 is thirty and is listed with saa1; does not license changing source 三𠻺幾 to 卅幾 in the frozen evaluation.",
+      "id": "cuhk-saa",
+      "location": "Cantonese saa1 row and meaning",
+      "reuse_boundary": "Reference only; no page/database import.",
+      "supporting_url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/pho-rel.php?s1=s&s3=1",
+      "title": "CUHK 卅",
+      "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=卅"
+    },
+    {
+      "finding": "Generic 三 is listed with saam1/saam3, matching the need to distinguish contraction from a single-character entry.",
+      "id": "cuhk-saam",
+      "location": "Cantonese saam1/saam3 rows and linked homophone tables",
+      "reuse_boundary": "Reference only; no page/database import.",
+      "title": "CUHK 三",
+      "url": "https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=三"
+    }
+  ],
+  "input_sha256": {
+    "data\\generated\\lexicon.sqlite3": "4353328cb17f8c8f8cc5d78730e34c3aa26c6c8ea7d1a4f4a8f91fee5d900a6e",
+    "docs/hkcancor-error-analysis.json": "399a13d7279994a64b1ba7d3c9d5706c53ff5709de085653900539ac7181bf67",
+    "docs\\hkcancor-evaluation.json": "d6f44b92d3287da9cafa80693d32de689a972ddeee65920406c9666251ce67b8",
+    "eval\\hkcancor.sources.lock.json": "e020995669488936880d4ef9dd55290cb86a23d22476c576d705e87145fbb060",
+    "eval\\hkcancor_cases.json": "410f4b612ca14e5e60da0b147f7bf9fb4b4a1e25c125053e00596981b72ef085"
+  },
+  "limitations": [
+    "All seven records remain pending; evidence does not authenticate a human decision.",
+    "Research paper uses HKCanCor and retained tables can share upstream authorities; citations are not counted as independent speaker attestations.",
+    "No audio was downloaded or inspected, and no bulk web dictionary was harvested.",
+    "Noncommercial dictionary definitions/examples are references only and are outside selected default-source imports.",
+    "A separately published primary reference is not proof of independent data lineage. No independent recording or source-overlap exclusion is claimed."
+  ],
+  "method": "Retained raw character/word tables first; generated phrase entries excluded from attestation. Word alignments are mechanical character-to-syllable matches, not a linguistic decomposition claim. Original corpus tokens/coordinates preserved. Primary web references then checked narrowly; absent table entries are not proof of impossible speech.",
+  "pronunciation_discussion_context": {
+    "35": {
+      "raw_tokens": [
+        "啲/q/di1/",
+        "民情/n/man4cing4/",
+        "都/d/dou1/",
+        "係/v/hai6/",
+        "好/a/hou2/",
+        "…/w/VQ1/"
+      ],
+      "speaker": "A:"
+    },
+    "36": {
+      "raw_tokens": [
+        "民情/n/man4cing4/",
+        "係/v/hai6/",
+        "好/d/hou2/",
+        "-/w/VQ2/",
+        "好/d/hou2/",
+        "鼎沸/a/ding2fat6/",
+        "𡃉/y/gaa3/",
+        "都/d/dou1/",
+        "。/w/VQ1/"
+      ],
+      "speaker": "B:"
+    },
+    "37": {
+      "raw_tokens": [
+        "鼎沸/a/ding2fat6/",
+        "呀/y/aa4/",
+        "？/w/VQ6/",
+        "鼎沸/a/ding2fai3/",
+        "啊/y/aa3/",
+        "？/w/VQ6/"
+      ],
+      "speaker": "A:"
+    },
+    "38": {
+      "raw_tokens": [
+        "啊/e/aa3/",
+        "鼎沸/a/ding2fai3/",
+        "啊/y/aa3/",
+        "。/w/VQ1/"
+      ],
+      "speaker": "B:"
+    },
+    "39": {
+      "raw_tokens": [
+        "人聲/n/jan4seng1/",
+        "𠻺/y/aa6/",
+        "鼎沸/a/ding2fai3/",
+        "。/w/VQ1/"
+      ],
+      "speaker": "A:"
+    },
+    "40": {
+      "raw_tokens": [
+        "鼎沸/a/ding2fai3/",
+        "啊/y/aa3/",
+        "。/w/VQ1/",
+        "頂心頂肺/l/ding2sam1ding2fat6/",
+        "啊/y/aa3/",
+        "。/w/VQ1/",
+        "鼎沸/a/ding2fat6/",
+        "，/w/VQ2/",
+        "即係/c/zik1hai6/",
+        "沸點/n/fat6dim2/",
+        "啊/y/aa3/",
+        "即係/v/zik1hai6/",
+        "。/w/VQ1/"
+      ],
+      "speaker": "B:"
+    },
+    "41": {
+      "raw_tokens": [
+        "沸/x/fai3/",
+        "。/w/VQ1/"
+      ],
+      "speaker": "A:"
+    },
+    "42": {
+      "raw_tokens": [
+        "哦/e/o5/",
+        "沸/x/fai3/",
+        "。/w/VQ1/"
+      ],
+      "speaker": "B:"
+    },
+    "43": {
+      "raw_tokens": [
+        "佢/r/keoi5/",
+        "就/d/zau6/",
+        "鼎沸/a/ding2fat6/",
+        "，/w/VQ2/",
+        "你/r/nei5/",
+        "就/d/zau6/",
+        "頂/v/ding2/",
+        "肺/n/fai3/",
+        "。/w/VQ1/"
+      ],
+      "speaker": "C:"
+    },
+    "44": {
+      "raw_tokens": [
+        "嗰個/r/go2go3/",
+        "沸點/n/fai3dim2/",
+        "。/w/VQ1/",
+        "冇得/vu/mou5dak1/",
+        "講/v/gong2/",
+        "。/w/VQ1/"
+      ],
+      "speaker": "A:"
+    }
+  },
+  "purpose": "Evidence pack only; seven annotation/dictionary disagreements from the frozen HKCanCor evaluation. No import, label repair, approval, fitting or production change.",
+  "readiness_changed": false,
+  "records": [
+    {
+      "approved_action": "",
+      "assessment": "The proximal demonstrative has research-attested 呢/哩 spellings and ni1 variants. Retained Rime also has the whole word 哩個 ni1 go3. This does not approve every 哩 context or establish independent speaker validation; the research paper also uses HKCanCor.",
+      "assessment_category": "research_attested_orthographic_pronunciation_variant",
+      "assessment_is_inference": true,
+      "corpus_aligned_occurrences": 973,
+      "corpus_examples": [
+        {
+          "context_token_start": 0,
+          "file": "data/utf8/FC-001_v2",
+          "file_sha256": "88e96e59bd07b84dfcbaa3b5961a09d643cdc27a9e4a032c7e96b1eb65c52a21",
+          "raw_context_tokens": [
+            "因為/c/jan1wai6/",
+            "我/r/ngo5/",
+            "老公/n/lou5gung1/",
+            "做/v/zou6/",
+            "哩/r/ni1/",
+            "行/n/hong4/",
+            "。/w/VQ1/",
+            "我/r/ngo5/",
+            "可以/vu/ho2ji5/",
+            "唔使/vu/m4sai2/",
+            "話/v/waa6/",
+            "。/w/VQ1/"
+          ],
+          "raw_token": "哩/r/ni1/",
+          "source_line_in_tag": 5,
+          "speaker": "B:",
+          "token_index": 4,
+          "turn": 27
+        },
+        {
+          "context_token_start": 0,
+          "file": "data/utf8/FC-001_v2",
+          "file_sha256": "88e96e59bd07b84dfcbaa3b5961a09d643cdc27a9e4a032c7e96b1eb65c52a21",
+          "raw_context_tokens": [
+            "哩個/r/ni1go3/",
+            "去/v/heoi3/",
+            "-/w/VQ2/",
+            "哩個/r/ni1go3/",
+            "去/v/heoi3/",
+            "帕斯/ns/paak3si1/",
+            "咋/y/zaa3/",
+            "喎/y/wo3/"
+          ],
+          "raw_token": "哩個/r/ni1go3/",
+          "source_line_in_tag": 1,
+          "speaker": "A:",
+          "token_index": 0,
+          "turn": 64
+        },
+        {
+          "context_token_start": 0,
+          "file": "data/utf8/FC-001_v2",
+          "file_sha256": "88e96e59bd07b84dfcbaa3b5961a09d643cdc27a9e4a032c7e96b1eb65c52a21",
+          "raw_context_tokens": [
+            "哩個/r/ni1go3/",
+            "去/v/heoi3/",
+            "-/w/VQ2/",
+            "哩個/r/ni1go3/",
+            "去/v/heoi3/",
+            "帕斯/ns/paak3si1/",
+            "咋/y/zaa3/",
+            "喎/y/wo3/",
+            "。/w/VQ1/"
+          ],
+          "raw_token": "哩個/r/ni1go3/",
+          "source_line_in_tag": 4,
+          "speaker": "A:",
+          "token_index": 3,
+          "turn": 64
+        }
+      ],
+      "corpus_reading": "ni1",
+      "evidence_ids": [
+        "kwong2018",
+        "cuhk-li",
+        "lshk-retained"
+      ],
+      "human_approved": false,
+      "id": "U+54E9:ni1",
+      "retained_aligned_word_attestations": [
+        {
+          "physical_line": 32175,
+          "raw_line": "哩個\tni1 go3",
+          "reading": "ni1 go3",
+          "source_file": "data/vendor/rime-cantonese/259f0e48bba840c3a2e0d117539e96937f3d89bc/jyut6ping3.words.dict.yaml",
+          "text": "哩個"
+        }
+      ],
+      "retained_single_character_rows": [
+        {
+          "physical_line": 18847,
+          "raw_line": "哩\tle5\t5%",
+          "reading": "le5",
+          "source_file": "data/vendor/rime-cantonese/259f0e48bba840c3a2e0d117539e96937f3d89bc/jyut6ping3.chars.dict.yaml",
+          "text": "哩"
+        },
+        {
+          "physical_line": 18849,
+          "raw_line": "哩\tlei1\t0%",
+          "reading": "lei1",
+          "source_file": "data/vendor/rime-cantonese/259f0e48bba840c3a2e0d117539e96937f3d89bc/jyut6ping3.chars.dict.yaml",
+          "text": "哩"
+        },
+        {
+          "physical_line": 18947,
+          "raw_line": "哩\tlei5\t5%",
+          "reading": "lei5",
+          "source_file": "data/vendor/rime-cantonese/259f0e48bba840c3a2e0d117539e96937f3d89bc/jyut6ping3.chars.dict.yaml",
+          "text": "哩"
+        },
+        {
+          "physical_line": 19351,
+          "raw_line": "哩\tli1\t0%",
+          "reading": "li1",
+          "source_file": "data/vendor/rime-cantonese/259f0e48bba840c3a2e0d117539e96937f3d89bc/jyut6ping3.chars.dict.yaml",
+          "text": "哩"
+        },
+        {
+          "physical_line": 84454,
+          "raw_line": "哩\tle1\t0.0%",
+          "reading": "le1",
+          "source_file": "data/vendor/typeduck-schema/7f9d90d4185eca293576de5b5dddaaf1d265f3c9/jyut6ping3.dict.yaml",
+          "text": "哩"
+        },
+        {
+          "physical_line": 84480,
+          "raw_line": "哩\tle5\t48.0%",
+          "reading": "le5",
+          "source_file": "data/vendor/typeduck-schema/7f9d90d4185eca293576de5b5dddaaf1d265f3c9/jyut6ping3.dict.yaml",
+          "text": "哩"
+        },
+        {
+          "physical_line": 84485,
+          "raw_line": "哩\tlei1\t0.0%",
+          "reading": "lei1",
+          "source_file": "data/vendor/typeduck-schema/7f9d90d4185eca293576de5b5dddaaf1d265f3c9/jyut6ping3.dict.yaml",
+          "text": "哩"
+        },
+        {
+          "physical_line": 84736,
+          "raw_line": "哩\tlei5\t48.0%",
+          "reading": "lei5",
+          "source_file": "data/vendor/typeduck-schema/7f9d90d4185eca293576de5b5dddaaf1d265f3c9/jyut6ping3.dict.yaml",
+          "text": "哩"
+        },
+        {
+          "physical_line": 86088,
+          "raw_line": "哩\tli1\t4.0%",
+          "reading": "li1",
+          "source_file": "data/vendor/typeduck-schema/7f9d90d4185eca293576de5b5dddaaf1d265f3c9/jyut6ping3.dict.yaml",
+          "text": "哩"
+        },
+        {
+          "physical_line": 86097,
+          "raw_line": "哩\tli4\t0.0%",
+          "reading": "li4",
+          "source_file": "data/vendor/typeduck-schema/7f9d90d4185eca293576de5b5dddaaf1d265f3c9/jyut6ping3.dict.yaml",
+          "text": "哩"
+        },
+        {
+          "physical_line": 28941,
+          "raw_fields": {
+            "CH": "哩",
+            "DESC": "",
+            "DESC_JP": "",
+            "FINL": "i",
+            "INIT": "l",
+            "JP": "li1",
+            "TONE": "1",
+            "UCODE": "U+54E9"
+          },
+          "reading": "li1",
+          "source_file": "data/vendor/lshk-jyutping-table/dad2dd6d6f02fc51138ecc6818f7b38eba5c2ad3/list.tsv",
+          "text": "哩"
+        },
+        {
+          "physical_line": 28942,
+          "raw_fields": {
+            "CH": "哩",
+            "DESC": "",
+            "DESC_JP": "",
+            "FINL": "e",
+            "INIT": "l",
+            "JP": "le1",
+            "TONE": "1",
+            "UCODE": "U+54E9"
+          },
+          "reading": "le1",
+          "source_file": "data/vendor/lshk-jyutping-table/dad2dd6d6f02fc51138ecc6818f7b38eba5c2ad3/list.tsv",
+          "text": "哩"
+        },
+        {
+          "physical_line": 28943,
+          "raw_fields": {
+            "CH": "哩",
+            "DESC": "",
+            "DESC_JP": "",
+            "FINL": "ei",
+            "INIT": "l",
+            "JP": "lei5",
+            "TONE": "5",
+            "UCODE": "U+54E9"
+          },
+          "reading": "lei5",
+          "source_file": "data/vendor/lshk-jyutping-table/dad2dd6d6f02fc51138ecc6818f7b38eba5c2ad3/list.tsv",
+          "text": "哩"
+        },
+        {
+          "physical_line": 28944,
+          "raw_fields": {
+            "CH": "哩",
+            "DESC": "英里",
+            "DESC_JP": "jing1 lei5",
+            "FINL": "",
+            "INIT": "",
+            "JP": "",
+            "TONE": "",
+            "UCODE": "U+54E9"
+          },
+          "reading": "",
+          "source_file": "data/vendor/lshk-jyutping-table/dad2dd6d6f02fc51138ecc6818f7b38eba5c2ad3/list.tsv",
+          "text": "哩"
+        },
+        {
+          "json_key": "哩",
+          "raw_reading": "le5",
+          "reading": "le5",
+          "source_file": "data/vendor/words-hk/2026-10-22/wordslist.json",
+          "text": "哩"
+        },
+        {
+          "json_key": "哩",
+          "raw_reading": "lei5",
+          "reading": "lei5",
+          "source_file": "data/vendor/words-hk/2026-10-22/wordslist.json",
+          "text": "哩"
+        },
+        {
+          "physical_line": 47859,
+          "raw_line": "U+54E9\tkCantonese\tli1",
+          "reading": "li1",
+          "source_file": "data/vendor/unihan/18.0.0/Unihan_Readings.txt",
+          "text": "哩"
+        }
+      ],
+      "review_status": "pending",
+      "reviewed_at": "",
+      "reviewer": "",
+      "reviewer_evidence": "",
+      "selected_case_occurrences": 13,
+      "selected_cases": [
+        {
+          "coverage_cohort": "aligned_composable",
+          "first_occurrence": {
+            "file": "data/utf8/FC-025_v",
+            "raw_tokens": [
+              "又/d/jau6/",
+              "係/v/hai6/",
+              "哩個/r/ni1go3/"
+            ],
+            "speaker": "Y:",
+            "token_indices": [
+              6,
+              7,
+              8
+            ],
+            "turn": 259
+          },
+          "id": "speech_span:00255acc6db7d555a70fb290",
+          "reading": "jau6 hai6 ni1 go3",
+          "text": "又係哩個"
+        },
+        {
+          "coverage_cohort": "aligned_composable",
+          "first_occurrence": {
+            "file": "data/utf8/FC-109a_v2",
+            "raw_tokens": [
+              "噉/c/gam2/",
+              "哩個/r/ni1go3/",
+              "情況/n/cing4fong3/",
+              "𠻺/d/aa6/",
+              "未/d/mei6/",
+              "出現/v/ceot1jin6/",
+              "過/u/gwo3/",
+              "喎/y/wo3/"
+            ],
+            "speaker": "B:",
+            "token_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "turn": 27
+          },
+          "id": "speech_span:00c5548c8000409da4fe2451",
+          "reading": "gam2 ni1 go3 cing4 fong3 aa6 mei6 ceot1 jin6 gwo3 wo3",
+          "text": "噉哩個情況𠻺未出現過喎"
+        },
+        {
+          "coverage_cohort": "not_composable_source_aligned",
+          "first_occurrence": {
+            "file": "data/utf8/FC-107_v2",
+            "raw_tokens": [
+              "哩樣/r/ni1joeng6/",
+              "嘢/n/je5/",
+              "真係/d/zan1hai6/",
+              "一定/d/jat1ding6/",
+              "係/v/hai6/",
+              "噉/r/gam2/",
+              "啊/y/aa3/"
+            ],
+            "speaker": "A:",
+            "token_indices": [
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13
+            ],
+            "turn": 222
+          },
+          "id": "speech_span:00efe8e1fa7484a2567a7415",
+          "reading": "ni1 joeng6 je5 zan1 hai6 jat1 ding6 hai6 gam2 aa3",
+          "text": "哩樣嘢真係一定係噉啊"
+        },
+        {
+          "coverage_cohort": "not_composable_source_aligned",
+          "first_occurrence": {
+            "file": "data/utf8/FC-R002b_v2",
+            "raw_tokens": [
+              "哩/r/ni1/",
+              "類/q/leoi6/",
+              "戲/n/hei3/",
+              "嘅/u/ge3/",
+              "觀眾/n/gun1zung3/",
+              "呢/y1/ne1/"
+            ],
+            "speaker": "A:",
+            "token_indices": [
+              21,
+              22,
+              23,
+              24,
+              25,
+              26
+            ],
+            "turn": 98
+          },
+          "id": "speech_span:014904acec2b7ff371f16439",
+          "reading": "ni1 leoi6 hei3 ge3 gun1 zung3 ne1",
+          "text": "哩類戲嘅觀眾呢"
+        },
+        {
+          "coverage_cohort": "aligned_composable",
+          "first_occurrence": {
+            "file": "data/utf8/FC-012_v",
+            "raw_tokens": [
+              "哩個/r/ni1go3/",
+              "唔係/v/m4hai6/",
+              "𠸏/y/ge2/"
+            ],
+            "speaker": "B:",
+            "token_indices": [
+              3,
+              4,
+              5
+            ],
+            "turn": 16
+          },
+          "id": "speech_span:01a631aa2297e72341570aea",
+          "reading": "ni1 go3 m4 hai6 ge2",
+          "text": "哩個唔係𠸏"
+        },
+        {
+          "coverage_cohort": "not_composable_source_aligned",
+          "first_occurrence": {
+            "file": "data/utf8/FC-R007_v2",
+            "raw_tokens": [
+              "我哋/r/ngo5dei6/",
+              "哩度/r/ni1dou6/",
+              "呢/y1/ne1/",
+              "整/v/zing2/"
+            ],
+            "speaker": "A:",
+            "token_indices": [
+              24,
+              25,
+              26,
+              27
+            ],
+            "turn": 3
+          },
+          "id": "speech_span:01b349231b482cff0d9dbce4",
+          "reading": "ngo5 dei6 ni1 dou6 ne1 zing2",
+          "text": "我哋哩度呢整"
+        },
+        {
+          "coverage_cohort": "aligned_composable",
+          "first_occurrence": {
+            "file": "data/utf8/FC-R011_v",
+            "raw_tokens": [
+              "譬如/v/pei3jyu4/",
+              "你/r/nei5/",
+              "一路/d/jat1lou6/",
+              "係/v/hai6/",
+              "從事/v/cung4si6/",
+              "開/u/hoi1/",
+              "哩個/r/ni1go3/",
+              "行業/n/hong4jip6/"
+            ],
+            "speaker": "C:",
+            "token_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "turn": 4
+          },
+          "id": "speech_span:01dc564a06e942c16e0fcb06",
+          "reading": "pei3 jyu4 nei5 jat1 lou6 hai6 cung4 si6 hoi1 ni1 go3 hong4 jip6",
+          "text": "譬如你一路係從事開哩個行業"
+        },
+        {
+          "coverage_cohort": "not_composable_source_aligned",
+          "first_occurrence": {
+            "file": "data/utf8/FC-027_v2",
+            "raw_tokens": [
+              "哩啲/r/ni1di1/",
+              "問題/n/man6tai4/",
+              "真係/d/zan1hai6/"
+            ],
+            "speaker": "A:",
+            "token_indices": [
+              0,
+              1,
+              2
+            ],
+            "turn": 343
+          },
+          "id": "speech_span:01e679d74465b883c1aa74de",
+          "reading": "ni1 di1 man6 tai4 zan1 hai6",
+          "text": "哩啲問題真係"
+        },
+        {
+          "coverage_cohort": "not_composable_source_aligned",
+          "first_occurrence": {
+            "file": "data/utf8/FC-026_v2",
+            "raw_tokens": [
+              "但係/c/daan6hai6/",
+              "我/r/ngo5/",
+              "唔記得/v/m4gei3dak1/",
+              "係/v/hai6/",
+              "哩/r/ni1/",
+              "種/q/zung2/",
+              "形式/n/jing4sik1/",
+              "囖/y/lo1/"
+            ],
+            "speaker": "J:",
+            "token_indices": [
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "turn": 388
+          },
+          "id": "speech_span:01fbd48776032bb5d8fefa3a",
+          "reading": "daan6 hai6 ngo5 m4 gei3 dak1 hai6 ni1 zung2 jing4 sik1 lo1",
+          "text": "但係我唔記得係哩種形式囖"
+        },
+        {
+          "coverage_cohort": "not_composable_source_aligned",
+          "first_occurrence": {
+            "file": "data/utf8/FC-R018_v",
+            "raw_tokens": [
+              "哩啲/r/ni1di1/",
+              "都/d/dou1/",
+              "係/v/hai6/",
+              "一啲/m/jat1di1/",
+              "熱門/a/jit6mun2/",
+              "嘅/u/ge3/",
+              "活動/vn/wut6dung6/",
+              "來/v/lai4/",
+              "嘅/u/ge3/"
+            ],
+            "speaker": "A:",
+            "token_indices": [
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "turn": 107
+          },
+          "id": "speech_span:028f53d3027cd30e0e1fbfd4",
+          "reading": "ni1 di1 dou1 hai6 jat1 di1 jit6 mun2 ge3 wut6 dung6 lai4 ge3",
+          "text": "哩啲都係一啲熱門嘅活動來嘅"
+        },
+        {
+          "coverage_cohort": "not_composable_source_aligned",
+          "first_occurrence": {
+            "file": "data/utf8/FC-R011_v",
+            "raw_tokens": [
+              "幾多/r/gei2do1/",
+              "年/q/nin4/",
+              "先/d/sin1/",
+              "得到/v/dak1dou2/",
+              "哩/r/ni1/",
+              "一/m/jat1/",
+              "個/q/go3/",
+              "噉樣/c/gam2joeng2/",
+              "嘅/u/ge3/",
+              "數字/n/sou3zi6/",
+              "呢/y1/ne1/"
+            ],
+            "speaker": "B:",
+            "token_indices": [
+              146,
+              147,
+              148,
+              149,
+              150,
+              151,
+              152,
+              153,
+              154,
+              155,
+              156
+            ],
+            "turn": 12
+          },
+          "id": "speech_span:02ddda80bd939a863ca43698",
+          "reading": "gei2 do1 nin4 sin1 dak1 dou2 ni1 jat1 go3 gam2 joeng2 ge3 sou3 zi6 ne1",
+          "text": "幾多年先得到哩一個噉樣嘅數字呢"
+        },
+        {
+          "coverage_cohort": "not_composable_source_aligned",
+          "first_occurrence": {
+            "file": "data/utf8/FC-020_v",
+            "raw_tokens": [
+              "揾/v/wan2/",
+              "哩/r/ni1/",
+              "份/q/fan6/",
+              "工/n/gung1/",
+              "噉/c/gam2/"
+            ],
+            "speaker": "A:",
+            "token_indices": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "turn": 238
+          },
+          "id": "speech_span:030177a1143b779fe22311c2",
+          "reading": "wan2 ni1 fan6 gung1 gam2",
+          "text": "揾哩份工噉"
+        },
+        {
+          "coverage_cohort": "not_composable_source_aligned",
+          "first_occurrence": {
+            "file": "data/utf8/FC-109a_v2",
+            "raw_tokens": [
+              "或者/c/waak6ze2/",
+              "想/vu/soeng2/",
+              "要/v/jiu3/",
+              "哩樣/r/ni1joeng6/"
+            ],
+            "speaker": "B:",
+            "token_indices": [
+              60,
+              61,
+              62,
+              63
+            ],
+            "turn": 122
+          },
+          "id": "speech_span:032c373a18696504f2efd5e1",
+          "reading": "waak6 ze2 soeng2 jiu3 ni1 joeng6",
+          "text": "或者想要哩樣"
+        }
+      ],
+      "stored_single_character_readings": [
+        "le1",
+        "le5",
+        "lei1",
+        "lei5",
+        "li1",
+        "li4"
+      ],
+      "suggested_review_question": "Review a scoped demonstrative/word-level policy; do not rewrite frozen source labels.",
+      "text": "哩"
+    },
+    {
+      "approved_action": "",
+      "assessment": "Both selected and full-source instances occur in 頂窿. Retained public-domain words.hk explicitly supplies 頂窿, 頂櫳 and 頂籠 ding2 lung2; Rime already stores 頂窿. This attests the lexical context, not an unrestricted single-character lung2 or its historical tone-change mechanism.",
+      "assessment_category": "independently_attested_lexical_context",
+      "assessment_is_inference": true,
+      "corpus_aligned_occurrences": 2,
+      "corpus_examples": [
+        {
+          "context_token_start": 0,
+          "file": "data/utf8/FC-027_v2",
+          "file_sha256": "502e50e7a478550a5956863fe6f45044c1b7612b9c6cdac56066c987d67951d0",
+          "raw_context_tokens": [
+            "佢/r/keoi5/",
+            "MC/xjn/MC0/",
+            "你/r/nei5/",
+            "頂窿/a/ding2lung2/",
+            "錯/a/co3/",
+            "兩/m/loeng5/",
+            "題/q/tai4/",
+            "𡃉/y/gaa3/",
+            "咋/y/zaa3/",
+            "只/d/zi2/",
+            "可以/vu/ho2ji5/"
+          ],
+          "raw_token": "頂窿/a/ding2lung2/",
+          "source_line_in_tag": 4,
+          "speaker": "A:",
+          "token_index": 3,
+          "turn": 265
+        },
+        {
+          "context_token_start": 0,
+          "file": "data/utf8/FC-108a_v2",
+          "file_sha256": "b2cded9c3de1db8faa15b576cea223103d64da7b34784b0ba149580bba34483d",
+          "raw_context_tokens": [
+            "賺/v/zaan6/",
+            "佢/r/keoi5/",
+            "嗰/r/go2/",
+            "百/m/baak3/",
+            "零/m/leng4/",
+            "蚊/q/man1/",
+            "頂窿/d/ding2lung2/",
+            "一/m/jat1/",
+            "晚/q/maan5/",
+            "。/w/VQ1/"
+          ],
+          "raw_token": "頂窿/d/ding2lung2/",
+          "source_line_in_tag": 7,
+          "speaker": "B:",
+          "token_index": 6,
+          "turn": 121
+        }
+      ],
+      "corpus_reading": "lung2",
+      "evidence_ids": [
+        "wordshk-wordlist",
+        "cuhk-lung"
+      ],
+      "human_approved": false,
+      "id": "U+7ABF:lung2",
+      "retained_aligned_word_attestations": [
+        {
+          "physical_line": 8934,
+          "raw_line": "頂窿\tding2 lung2",
+          "reading": "ding2 lung2",
+          "source_file": "data/vendor/rime-cantonese/259f0e48bba840c3a2e0d117539e96937f3d89bc/jyut6ping3.words.dict.yaml",
+          "text": "頂窿"
+        },
+        {
+          "json_key": "頂窿",
+          "raw_reading": "ding2 lung2",
+          "reading": "ding2 lung2",
+          "source_file": "data/vendor/words-hk/2026-10-22/wordslist.json",
+          "text": "頂窿"
+        }
+      ],
+      "retained_single_character_rows": [
+        {
+          "physical_line": 20539,
+          "raw_line": "窿\tlung1",
+          "reading": "lung1",
+          "source_file": "data/vendor/rime-cantonese/259f0e48bba840c3a2e0d117539e96937f3d89bc/jyut6ping3.chars.dict.yaml",
+          "text": "窿"
+        },
+        {
+          "physical_line": 20575,
+          "raw_line": "窿\tlung4\t3%",
+          "reading": "lung4",
+          "source_file": "data/vendor/rime-cantonese/259f0e48bba840c3a2e0d117539e96937f3d89bc/jyut6ping3.chars.dict.yaml",
+          "text": "窿"
+        },
+        {
+          "physical_line": 91018,
+          "raw_line": "窿\tlung1\t100.0%",
+          "reading": "lung1",
+          "source_file": "data/vendor/typeduck-schema/7f9d90d4185eca293576de5b5dddaaf1d265f3c9/jyut6ping3.dict.yaml",
+          "text": "窿"
+        },
+        {
+          "physical_line": 91066,
+          "raw_line": "窿\tlung4\t0.0%",
+          "reading": "lung4",
+          "source_file": "data/vendor/typeduck-schema/7f9d90d4185eca293576de5b5dddaaf1d265f3c9/jyut6ping3.dict.yaml",
+          "text": "窿"
+        },
+        {
+          "physical_line": 15788,
+          "raw_fields": {
+            "CH": "窿",
+            "DESC": "",
+            "DESC_JP": "",
+            "FINL": "ung",
+            "INIT": "l",
+            "JP": "lung1",
+            "TONE": "1",
+            "UCODE": "U+7ABF"
+          },
+          "reading": "lung1",
+          "source_file": "data/vendor/lshk-jyutping-table/dad2dd6d6f02fc51138ecc6818f7b38eba5c2ad3/list.tsv",
+          "text": "窿"
+        },
+        {
+          "physical_line": 15789,
+          "raw_fields": {
+            "CH": "窿",
+            "DESC": "",
+            "DESC_JP": "",
+            "FINL": "ung",
+            "INIT": "l",
+            "JP": "lung4",
+            "TONE": "4",
+            "UCODE": "U+7ABF"
+          },
+          "reading": "lung4",
+          "source_file": "data/vendor/lshk-jyutping-table/dad2dd6d6f02fc51138ecc6818f7b38eba5c2ad3/list.tsv",
+          "text": "窿"
+        },
+        {
+          "json_key": "窿",
+          "raw_reading": "lung1",
+          "reading": "lung1",
+          "source_file": "data/vendor/words-hk/2026-10-22/wordslist.json",
+          "text": "窿"
+        },
+        {
+          "physical_line": 134916,
+          "raw_line": "U+7ABF\tkCantonese\tlung1",
+          "reading": "lung1",
+          "source_file": "data/vendor/unihan/18.0.0/Unihan_Readings.txt",
+          "text": "窿"
+        }
+      ],
+      "review_status": "pending",
+      "reviewed_at": "",
+      "reviewer": "",
+      "reviewer_evidence": "",
+      "selected_case_occurrences": 1,
+      "selected_cases": [
+        {
+          "coverage_cohort": "aligned_composable",
+          "first_occurrence": {
+            "file": "data/utf8/FC-108a_v2",
+            "raw_tokens": [
+              "賺/v/zaan6/",
+              "佢/r/keoi5/",
+              "嗰/r/go2/",
+              "百/m/baak3/",
+              "零/m/leng4/",
+              "蚊/q/man1/",
+              "頂窿/d/ding2lung2/",
+              "一/m/jat1/",
+              "晚/q/maan5/"
+            ],
+            "speaker": "B:",
+            "token_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "turn": 121
+          },
+          "id": "speech_span:0076bfec0e30dcd6e5005bd8",
+          "reading": "zaan6 keoi5 go2 baak3 leng4 man1 ding2 lung2 jat1 maan5",
+          "text": "賺佢嗰百零蚊頂窿一晚"
+        }
+      ],
+      "stored_single_character_readings": [
+        "lung1",
+        "lung4"
+      ],
+      "suggested_review_question": "Keep review at the attested word/variant level rather than infer generic 窿 lung2.",
+      "text": "窿"
+    },
+    {
+      "approved_action": "",
+      "assessment": "LSHK and words.hk 食肆 headword/wordlist give si3; however the primary words.hk 杜絕 example explicitly has 食肆 sik6 si5. Thus si5 is externally present in an example, but conflicting lexicographic annotation is unresolved; no checked source explains it as changed tone.",
+      "assessment_category": "conflicting_contextual_attestation_unresolved",
+      "assessment_is_inference": true,
+      "corpus_aligned_occurrences": 2,
+      "corpus_examples": [
+        {
+          "context_token_start": 87,
+          "file": "data/utf8/FC-R004_v2",
+          "file_sha256": "9e899ee7e2b37c6c6ab521e97635c64f0dfdfa3e22c5ee5275c67a2ea5a78aa0",
+          "raw_context_tokens": [
+            "嘅/u/ge3/",
+            "又/d/jau6/",
+            "係/v/hai6/",
+            "好/d/hou2/",
+            "難/a/naan4/",
+            "做/v/zou6/",
+            "。/w/VQ1/",
+            "食肆/n/sik6si5/",
+            "𠻺/y1/aa6/",
+            "重/d/zung6/",
+            "慘/a/caam2/",
+            "。/w/VQ1/",
+            "來/v/lai4/",
+            "𡁵/u/gan2/",
+            "呢/y1/ne1/"
+          ],
+          "raw_token": "食肆/n/sik6si5/",
+          "source_line_in_tag": 95,
+          "speaker": "B:",
+          "token_index": 94,
+          "turn": 103
+        },
+        {
+          "context_token_start": 7,
+          "file": "data/utf8/FC-R004_v2",
+          "file_sha256": "9e899ee7e2b37c6c6ab521e97635c64f0dfdfa3e22c5ee5275c67a2ea5a78aa0",
+          "raw_context_tokens": [
+            "啲/q/di1/",
+            "舖頭/n/pou3tau2/",
+            "。/w/VQ1/",
+            "譬如/v/pei3jyu4/",
+            "你/r/nei5/",
+            "即/c/zik1/",
+            "係/v/hai6/",
+            "食肆/n/sik6si5/",
+            "嗰啲/r/go2di1/",
+            "個/q/go3/",
+            "爐頭/n/lou4tau4/",
+            "啊/y1/aa3/",
+            "嗰啲/r/go2di1/",
+            "呢/y1/ne1/",
+            "，/w/VQ2/"
+          ],
+          "raw_token": "食肆/n/sik6si5/",
+          "source_line_in_tag": 15,
+          "speaker": "A:",
+          "token_index": 14,
+          "turn": 107
+        }
+      ],
+      "corpus_reading": "si5",
+      "evidence_ids": [
+        "cuhk-si",
+        "wordshk-siksi",
+        "wordshk-douzyut"
+      ],
+      "human_approved": false,
+      "id": "U+8086:si5",
+      "retained_aligned_word_attestations": [],
+      "retained_single_character_rows": [
+        {
+          "physical_line": 25951,
+          "raw_line": "肆\tsei3\t5%",
+          "reading": "sei3",
+          "source_file": "data/vendor/rime-cantonese/259f0e48bba840c3a2e0d117539e96937f3d89bc/jyut6ping3.chars.dict.yaml",
+          "text": "肆"
+        },
+        {
+          "physical_line": 26562,
+          "raw_line": "肆\tsi3",
+          "reading": "si3",
+          "source_file": "data/vendor/rime-cantonese/259f0e48bba840c3a2e0d117539e96937f3d89bc/jyut6ping3.chars.dict.yaml",
+          "text": "肆"
+        },
+        {
+          "physical_line": 118472,
+          "raw_line": "肆\tsei3\t16.0%",
+          "reading": "sei3",
+          "source_file": "data/vendor/typeduck-schema/7f9d90d4185eca293576de5b5dddaaf1d265f3c9/jyut6ping3.dict.yaml",
+          "text": "肆"
+        },
+        {
+          "physical_line": 121531,
+          "raw_line": "肆\tsi3\t84.0%",
+          "reading": "si3",
+          "source_file": "data/vendor/typeduck-schema/7f9d90d4185eca293576de5b5dddaaf1d265f3c9/jyut6ping3.dict.yaml",
+          "text": "肆"
+        },
+        {
+          "physical_line": 14120,
+          "raw_fields": {
+            "CH": "肆",
+            "DESC": "",
+            "DESC_JP": "",
+            "FINL": "i",
+            "INIT": "s",
+            "JP": "si3",
+            "TONE": "3",
+            "UCODE": "U+8086"
+          },
+          "reading": "si3",
+          "source_file": "data/vendor/lshk-jyutping-table/dad2dd6d6f02fc51138ecc6818f7b38eba5c2ad3/list.tsv",
+          "text": "肆"
+        },
+        {
+          "physical_line": 14121,
+          "raw_fields": {
+            "CH": "肆",
+            "DESC": "",
+            "DESC_JP": "",
+            "FINL": "ei",
+            "INIT": "s",
+            "JP": "sei3",
+            "TONE": "3",
+            "UCODE": "U+8086"
+          },
+          "reading": "sei3",
+          "source_file": "data/vendor/lshk-jyutping-table/dad2dd6d6f02fc51138ecc6818f7b38eba5c2ad3/list.tsv",
+          "text": "肆"
+        },
+        {
+          "json_key": "肆",
+          "raw_reading": "si3",
+          "reading": "si3",
+          "source_file": "data/vendor/words-hk/2026-10-22/wordslist.json",
+          "text": "肆"
+        },
+        {
+          "json_key": "肆",
+          "raw_reading": "sei3",
+          "reading": "sei3",
+          "source_file": "data/vendor/words-hk/2026-10-22/wordslist.json",
+          "text": "肆"
+        },
+        {
+          "physical_line": 147449,
+          "raw_line": "U+8086\tkCantonese\tsi3",
+          "reading": "si3",
+          "source_file": "data/vendor/unihan/18.0.0/Unihan_Readings.txt",
+          "text": "肆"
+        }
+      ],
+      "review_status": "pending",
+      "reviewed_at": "",
+      "reviewer": "",
+      "reviewer_evidence": "",
+      "selected_case_occurrences": 1,
+      "selected_cases": [
+        {
+          "coverage_cohort": "not_composable_source_aligned",
+          "first_occurrence": {
+            "file": "data/utf8/FC-R004_v2",
+            "raw_tokens": [
+              "譬如/v/pei3jyu4/",
+              "你/r/nei5/",
+              "即/c/zik1/",
+              "係/v/hai6/",
+              "食肆/n/sik6si5/",
+              "嗰啲/r/go2di1/",
+              "個/q/go3/",
+              "爐頭/n/lou4tau4/",
+              "啊/y1/aa3/",
+              "嗰啲/r/go2di1/",
+              "呢/y1/ne1/"
+            ],
+            "speaker": "A:",
+            "token_indices": [
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "turn": 107
+          },
+          "id": "speech_span:00b9daeb329061ca6df6fde7",
+          "reading": "pei3 jyu4 nei5 zik1 hai6 sik6 si5 go2 di1 go3 lou4 tau4 aa3 go2 di1 ne1",
+          "text": "譬如你即係食肆嗰啲個爐頭啊嗰啲呢"
+        }
+      ],
+      "stored_single_character_readings": [
+        "sei3",
+        "si3"
+      ],
+      "suggested_review_question": "Ask linguistic review to distinguish contextual speech, example error and corpus annotation; no automatic correction/import.",
+      "text": "肆"
+    },
+    {
+      "approved_action": "",
+      "assessment": "The raw adjacent corpus turns contrast ding2 fat6 with ding2 fai3 and discuss the pronunciation. CUHK explicitly associates 沸 fai3 with 人聲鼎沸. Treat this as quoted/discussed speech, not evidence to promote fat6 into the ordinary dictionary. Audio was not inspected, so no recording-level correction is claimed.",
+      "assessment_category": "metalinguistic_pronunciation_contrast",
+      "assessment_is_inference": true,
+      "corpus_aligned_occurrences": 5,
+      "corpus_examples": [
+        {
+          "context_token_start": 0,
+          "file": "data/utf8/FC-R016_v",
+          "file_sha256": "0be309681b7afe28db469c37e58f8913e18c331a90e0b9044f70fbb65c0562b6",
+          "raw_context_tokens": [
+            "民情/n/man4cing4/",
+            "係/v/hai6/",
+            "好/d/hou2/",
+            "-/w/VQ2/",
+            "好/d/hou2/",
+            "鼎沸/a/ding2fat6/",
+            "𡃉/y/gaa3/",
+            "都/d/dou1/",
+            "。/w/VQ1/"
+          ],
+          "raw_token": "鼎沸/a/ding2fat6/",
+          "source_line_in_tag": 6,
+          "speaker": "B:",
+          "token_index": 5,
+          "turn": 36
+        },
+        {
+          "context_token_start": 0,
+          "file": "data/utf8/FC-R016_v",
+          "file_sha256": "0be309681b7afe28db469c37e58f8913e18c331a90e0b9044f70fbb65c0562b6",
+          "raw_context_tokens": [
+            "鼎沸/a/ding2fat6/",
+            "呀/y/aa4/",
+            "？/w/VQ6/",
+            "鼎沸/a/ding2fai3/",
+            "啊/y/aa3/",
+            "？/w/VQ6/"
+          ],
+          "raw_token": "鼎沸/a/ding2fat6/",
+          "source_line_in_tag": 1,
+          "speaker": "A:",
+          "token_index": 0,
+          "turn": 37
+        },
+        {
+          "context_token_start": 0,
+          "file": "data/utf8/FC-R016_v",
+          "file_sha256": "0be309681b7afe28db469c37e58f8913e18c331a90e0b9044f70fbb65c0562b6",
+          "raw_context_tokens": [
+            "鼎沸/a/ding2fai3/",
+            "啊/y/aa3/",
+            "。/w/VQ1/",
+            "頂心頂肺/l/ding2sam1ding2fat6/",
+            "啊/y/aa3/",
+            "。/w/VQ1/",
+            "鼎沸/a/ding2fat6/",
+            "，/w/VQ2/",
+            "即係/c/zik1hai6/",
+            "沸點/n/fat6dim2/",
+            "啊/y/aa3/",
+            "即係/v/zik1hai6/",
+            "。/w/VQ1/"
+          ],
+          "raw_token": "鼎沸/a/ding2fat6/",
+          "source_line_in_tag": 7,
+          "speaker": "B:",
+          "token_index": 6,
+          "turn": 40
+        }
+      ],
+      "corpus_reading": "fat6",
+      "evidence_ids": [
+        "cuhk-fai",
+        "hkcancor-fat-context"
+      ],
+      "human_approved": false,
+      "id": "U+6CB8:fat6",
+      "retained_aligned_word_attestations": [],
+      "retained_single_character_rows": [
+        {
+          "physical_line": 6559,
+          "raw_line": "沸\tfai3",
+          "reading": "fai3",
+          "source_file": "data/vendor/rime-cantonese/259f0e48bba840c3a2e0d117539e96937f3d89bc/jyut6ping3.chars.dict.yaml",
+          "text": "沸"
+        },
+        {
+          "physical_line": 6813,
+          "raw_line": "沸\tfat1\t3%",
+          "reading": "fat1",
+          "source_file": "data/vendor/rime-cantonese/259f0e48bba840c3a2e0d117539e96937f3d89bc/jyut6ping3.chars.dict.yaml",
+          "text": "沸"
+        },
+        {
+          "physical_line": 33241,
+          "raw_line": "沸\tfai3\t100.0%",
+          "reading": "fai3",
+          "source_file": "data/vendor/typeduck-schema/7f9d90d4185eca293576de5b5dddaaf1d265f3c9/jyut6ping3.dict.yaml",
+          "text": "沸"
+        },
+        {
+          "physical_line": 37717,
+          "raw_fields": {
+            "CH": "沸",
+            "DESC": "",
+            "DESC_JP": "",
+            "FINL": "ai",
+            "INIT": "f",
+            "JP": "fai3",
+            "TONE": "3",
+            "UCODE": "U+6CB8"
+          },
+          "reading": "fai3",
+          "source_file": "data/vendor/lshk-jyutping-table/dad2dd6d6f02fc51138ecc6818f7b38eba5c2ad3/list.tsv",
+          "text": "沸"
+        },
+        {
+          "json_key": "沸",
+          "raw_reading": "fai3",
+          "reading": "fai3",
+          "source_file": "data/vendor/words-hk/2026-10-22/wordslist.json",
+          "text": "沸"
+        },
+        {
+          "physical_line": 103896,
+          "raw_line": "U+6CB8\tkCantonese\tfai3",
+          "reading": "fai3",
+          "source_file": "data/vendor/unihan/18.0.0/Unihan_Readings.txt",
+          "text": "沸"
+        }
+      ],
+      "review_status": "pending",
+      "reviewed_at": "",
+      "reviewer": "",
+      "reviewer_evidence": "",
+      "selected_case_occurrences": 1,
+      "selected_cases": [
+        {
+          "coverage_cohort": "not_composable_source_aligned",
+          "first_occurrence": {
+            "file": "data/utf8/FC-R016_v",
+            "raw_tokens": [
+              "佢/r/keoi5/",
+              "就/d/zau6/",
+              "鼎沸/a/ding2fat6/"
+            ],
+            "speaker": "C:",
+            "token_indices": [
+              0,
+              1,
+              2
+            ],
+            "turn": 43
+          },
+          "id": "speech_span:010ccb46aa1c5bfd11db6de1",
+          "reading": "keoi5 zau6 ding2 fat6",
+          "text": "佢就鼎沸"
+        }
+      ],
+      "stored_single_character_readings": [
+        "fai3",
+        "fat1"
+      ],
+      "suggested_review_question": "Retain baseline labels and mark the metalinguistic context for review; do not fit this pronunciation.",
+      "text": "沸"
+    },
+    {
+      "approved_action": "",
+      "assessment": "Corpus 蚚蜴 sik1 jik6 contrasts with retained 蜥蜴 sik1 jik6. LSHK/CUHK list 蚚 kei4 and 蜥 sik1; the MOE character dictionary defines 蚚 as a rice insect. This supports a possible written-character mismatch, but no checked primary source establishes 蚚 as a licensed variant of 蜥.",
+      "assessment_category": "possible_transcription_character_substitution_unresolved",
+      "assessment_is_inference": true,
+      "corpus_aligned_occurrences": 3,
+      "corpus_examples": [
+        {
+          "context_token_start": 0,
+          "file": "data/utf8/FC-045_v2",
+          "file_sha256": "9461933e7c58dcabb46e754cdc8fd8e95dadd7f7d30a56ad32bd42af6c44fb36",
+          "raw_context_tokens": [
+            "唔係/v/m4hai6/",
+            "，/w/VQ2/",
+            "嗰啲/r/go2di1/",
+            "大/a/daai6/",
+            "蚚蜴/n/sik1jik6/",
+            "呀/y/aa4/",
+            "？/w/VQ6/"
+          ],
+          "raw_token": "蚚蜴/n/sik1jik6/",
+          "source_line_in_tag": 5,
+          "speaker": "P:",
+          "token_index": 4,
+          "turn": 142
+        },
+        {
+          "context_token_start": 2,
+          "file": "data/utf8/FC-045_v2",
+          "file_sha256": "9461933e7c58dcabb46e754cdc8fd8e95dadd7f7d30a56ad32bd42af6c44fb36",
+          "raw_context_tokens": [
+            "點解/r/dim2gaai2/",
+            "唔見/v/m4gin3/",
+            "咗/u/zo2/",
+            "你哋/r/nei5dei6/",
+            "抱/v/pou5/",
+            "住/u/zyu6/",
+            "隻/q/zek3/",
+            "蚚蜴/n/sik1jik6/",
+            "嗰/r/go2/",
+            "張/q/zoeng1/",
+            "𠸏/y/ge2/",
+            "？/w/VQ6/"
+          ],
+          "raw_token": "蚚蜴/n/sik1jik6/",
+          "source_line_in_tag": 10,
+          "speaker": "M:",
+          "token_index": 9,
+          "turn": 144
+        },
+        {
+          "context_token_start": 0,
+          "file": "data/utf8/FC-045_v2",
+          "file_sha256": "9461933e7c58dcabb46e754cdc8fd8e95dadd7f7d30a56ad32bd42af6c44fb36",
+          "raw_context_tokens": [
+            "但係/c/daan6hai6/",
+            "蚚蜴/n/sik1jik6/",
+            "會/vu/wui5/",
+            "咬/v/ngaau5/",
+            "人/n/jan4/",
+            "𡃉/y/gaa3/",
+            "喎/y/wo3/",
+            "。/w/VQ1/"
+          ],
+          "raw_token": "蚚蜴/n/sik1jik6/",
+          "source_line_in_tag": 2,
+          "speaker": "K:",
+          "token_index": 1,
+          "turn": 146
+        }
+      ],
+      "corpus_reading": "sik1",
+      "evidence_ids": [
+        "cuhk-kei",
+        "cuhk-sik",
+        "moe-qi"
+      ],
+      "human_approved": false,
+      "id": "U+869A:sik1",
+      "retained_aligned_word_attestations": [],
+      "retained_single_character_rows": [
+        {
+          "physical_line": 17142,
+          "raw_line": "蚚\tkei4",
+          "reading": "kei4",
+          "source_file": "data/vendor/rime-cantonese/259f0e48bba840c3a2e0d117539e96937f3d89bc/jyut6ping3.chars.dict.yaml",
+          "text": "蚚"
+        },
+        {
+          "physical_line": 79047,
+          "raw_line": "蚚\tkei4\t100.0%",
+          "reading": "kei4",
+          "source_file": "data/vendor/typeduck-schema/7f9d90d4185eca293576de5b5dddaaf1d265f3c9/jyut6ping3.dict.yaml",
+          "text": "蚚"
+        },
+        {
+          "physical_line": 10715,
+          "raw_fields": {
+            "CH": "蚚",
+            "DESC": "",
+            "DESC_JP": "",
+            "FINL": "ei",
+            "INIT": "k",
+            "JP": "kei4",
+            "TONE": "4",
+            "UCODE": "U+869A"
+          },
+          "reading": "kei4",
+          "source_file": "data/vendor/lshk-jyutping-table/dad2dd6d6f02fc51138ecc6818f7b38eba5c2ad3/list.tsv",
+          "text": "蚚"
+        },
+        {
+          "physical_line": 161030,
+          "raw_line": "U+869A\tkCantonese\tkei4",
+          "reading": "kei4",
+          "source_file": "data/vendor/unihan/18.0.0/Unihan_Readings.txt",
+          "text": "蚚"
+        }
+      ],
+      "review_status": "pending",
+      "reviewed_at": "",
+      "reviewer": "",
+      "reviewer_evidence": "",
+      "selected_case_occurrences": 1,
+      "selected_cases": [
+        {
+          "coverage_cohort": "not_composable_source_aligned",
+          "first_occurrence": {
+            "file": "data/utf8/FC-045_v2",
+            "raw_tokens": [
+              "蚚蜴/n/sik1jik6/"
+            ],
+            "speaker": "P:",
+            "token_indices": [
+              4
+            ],
+            "turn": 142
+          },
+          "id": "word_type:03372ed85c50bedee9962957",
+          "reading": "sik1 jik6",
+          "text": "蚚蜴"
+        }
+      ],
+      "stored_single_character_readings": [
+        "kei4"
+      ],
+      "suggested_review_question": "Review original transcription/audio or ask the corpus maintainers; preserve raw 蚚, do not repair it automatically.",
+      "text": "蚚"
+    },
+    {
+      "approved_action": "",
+      "assessment": "The same original turn has 脫骹/v/tyut3gaau3/ and 脫跤/v/tyut3gaau3/ in the injury discussion. CUHK/LSHK give 跤 gaau1 (also LSHK haau1), not gaau3. This is strong within-source orthographic inconsistency, not proof of a generic 跤 gaau3 reading or of a preferred correction.",
+      "assessment_category": "within_turn_orthographic_inconsistency",
+      "assessment_is_inference": true,
+      "corpus_aligned_occurrences": 1,
+      "corpus_examples": [
+        {
+          "context_token_start": 58,
+          "file": "data/utf8/FC-R011_v",
+          "file_sha256": "3aab00d9bc8fda821c0337c7b6a7d37bf0cd88bbeb9aeaaa3ff3d605d3102372",
+          "raw_context_tokens": [
+            "就/d/zau6/",
+            "脫骹/v/tyut3gaau3/",
+            "啊/y1/aa3/",
+            "，/w/VQ2/",
+            "膊頭/n/bok3tau4/",
+            "啊/y1/aa3/",
+            "，/w/VQ2/",
+            "脫跤/v/tyut3gaau3/",
+            "同埋/c/tung4maai4/",
+            "腿部/n/teoi2bou6/",
+            "𠻺/y1/aa6/",
+            "骨折/v/gwat1zit3/",
+            "嘅/u/ge3/",
+            "。/w/VQ1/",
+            "噉/c/gam2/"
+          ],
+          "raw_token": "脫跤/v/tyut3gaau3/",
+          "source_line_in_tag": 66,
+          "speaker": "A:",
+          "token_index": 65,
+          "turn": 1
+        }
+      ],
+      "corpus_reading": "gaau3",
+      "evidence_ids": [
+        "cuhk-gaau",
+        "hkcancor-gaau-context"
+      ],
+      "human_approved": false,
+      "id": "U+8DE4:gaau3",
+      "retained_aligned_word_attestations": [],
+      "retained_single_character_rows": [
+        {
+          "physical_line": 8162,
+          "raw_line": "跤\tgaau1",
+          "reading": "gaau1",
+          "source_file": "data/vendor/rime-cantonese/259f0e48bba840c3a2e0d117539e96937f3d89bc/jyut6ping3.chars.dict.yaml",
+          "text": "跤"
+        },
+        {
+          "physical_line": 40016,
+          "raw_line": "跤\tgaau1\t100.0%",
+          "reading": "gaau1",
+          "source_file": "data/vendor/typeduck-schema/7f9d90d4185eca293576de5b5dddaaf1d265f3c9/jyut6ping3.dict.yaml",
+          "text": "跤"
+        },
+        {
+          "physical_line": 54245,
+          "raw_line": "跤\thaau1\t0.0%",
+          "reading": "haau1",
+          "source_file": "data/vendor/typeduck-schema/7f9d90d4185eca293576de5b5dddaaf1d265f3c9/jyut6ping3.dict.yaml",
+          "text": "跤"
+        },
+        {
+          "physical_line": 9639,
+          "raw_fields": {
+            "CH": "跤",
+            "DESC": "",
+            "DESC_JP": "",
+            "FINL": "aau",
+            "INIT": "g",
+            "JP": "gaau1",
+            "TONE": "1",
+            "UCODE": "U+8DE4"
+          },
+          "reading": "gaau1",
+          "source_file": "data/vendor/lshk-jyutping-table/dad2dd6d6f02fc51138ecc6818f7b38eba5c2ad3/list.tsv",
+          "text": "跤"
+        },
+        {
+          "physical_line": 9640,
+          "raw_fields": {
+            "CH": "跤",
+            "DESC": "",
+            "DESC_JP": "",
+            "FINL": "aau",
+            "INIT": "h",
+            "JP": "haau1",
+            "TONE": "1",
+            "UCODE": "U+8DE4"
+          },
+          "reading": "haau1",
+          "source_file": "data/vendor/lshk-jyutping-table/dad2dd6d6f02fc51138ecc6818f7b38eba5c2ad3/list.tsv",
+          "text": "跤"
+        },
+        {
+          "json_key": "跤",
+          "raw_reading": "gaau1",
+          "reading": "gaau1",
+          "source_file": "data/vendor/words-hk/2026-10-22/wordslist.json",
+          "text": "跤"
+        },
+        {
+          "physical_line": 176321,
+          "raw_line": "U+8DE4\tkCantonese\tgaau1",
+          "reading": "gaau1",
+          "source_file": "data/vendor/unihan/18.0.0/Unihan_Readings.txt",
+          "text": "跤"
+        }
+      ],
+      "review_status": "pending",
+      "reviewed_at": "",
+      "reviewer": "",
+      "reviewer_evidence": "",
+      "selected_case_occurrences": 1,
+      "selected_cases": [
+        {
+          "coverage_cohort": "not_composable_source_aligned",
+          "first_occurrence": {
+            "file": "data/utf8/FC-R011_v",
+            "raw_tokens": [
+              "脫跤/v/tyut3gaau3/"
+            ],
+            "speaker": "A:",
+            "token_indices": [
+              65
+            ],
+            "turn": 1
+          },
+          "id": "word_type:03b1ed6533108a86f6ca3a8a",
+          "reading": "tyut3 gaau3",
+          "text": "脫跤"
+        }
+      ],
+      "stored_single_character_readings": [
+        "gaau1",
+        "haau1"
+      ],
+      "suggested_review_question": "Review the written variant in context; do not infer a global gaau1-to-gaau3 tone rule.",
+      "text": "跤"
+    },
+    {
+      "approved_action": "",
+      "assessment": "Source 三𠻺幾 saa1 aa6 gei2 describes thirty-something. Primary words.hk explicitly gives 卅 saa1 aa6 with 卅幾; CUHK gives 卅 saa1 as thirty, while 三 is saam1/saam3. Retained Rime 三十 phrases already encode saa1 aa6. This is a multi-syllable contraction/transcription question, not evidence for unrestricted 三 saa1.",
+      "assessment_category": "attested_contraction_with_transcription_alignment",
+      "assessment_is_inference": true,
+      "corpus_aligned_occurrences": 2,
+      "corpus_examples": [
+        {
+          "context_token_start": 0,
+          "file": "data/utf8/FC-028_v2",
+          "file_sha256": "6e3c53d98c47b7dcedb45906703237f8ffc2ece6439bfa5e1e29d00d35f01510",
+          "raw_context_tokens": [
+            "三𠻺幾/m/saa1aa6gei2/",
+            "度/q/dou6/",
+            "，/w/VQ2/",
+            "噉/r/gam2/",
+            "嘅/u/ge3/",
+            "球場/n/kau4coeng4/",
+            "都/d/dou1/",
+            "贏/v/jeng4/"
+          ],
+          "raw_token": "三𠻺幾/m/saa1aa6gei2/",
+          "source_line_in_tag": 1,
+          "speaker": "B:",
+          "token_index": 0,
+          "turn": 294
+        },
+        {
+          "context_token_start": 0,
+          "file": "data/utf8/FC-028_v2",
+          "file_sha256": "6e3c53d98c47b7dcedb45906703237f8ffc2ece6439bfa5e1e29d00d35f01510",
+          "raw_context_tokens": [
+            "奇連士文/nr/kei4lin4si6man4/",
+            "三𠻺/m/saa1aa6/",
+            "歲/q/seoi3/",
+            "等陣間/t/dang2zan6gaan1/",
+            "又/d/jau6/",
+            "俾/p/bei2/",
+            "人/n/jan4/",
+            "話/v/waa6/",
+            "。/w/VQ1/"
+          ],
+          "raw_token": "三𠻺/m/saa1aa6/",
+          "source_line_in_tag": 2,
+          "speaker": "B:",
+          "token_index": 1,
+          "turn": 453
+        }
+      ],
+      "corpus_reading": "saa1",
+      "evidence_ids": [
+        "wordshk-saa",
+        "cuhk-saa",
+        "cuhk-saam"
+      ],
+      "human_approved": false,
+      "id": "U+4E09:saa1",
+      "retained_aligned_word_attestations": [
+        {
+          "physical_line": 89080,
+          "raw_line": "年三十晚\tnin4 saa1 aa6 maan5",
+          "reading": "nin4 saa1 aa6 maan5",
+          "source_file": "data/vendor/rime-cantonese/259f0e48bba840c3a2e0d117539e96937f3d89bc/jyut6ping3.words.dict.yaml",
+          "text": "年三十晚"
+        },
+        {
+          "physical_line": 99632,
+          "raw_line": "做又三十六\tzou6 jau6 saa1 aa6 luk6",
+          "reading": "zou6 jau6 saa1 aa6 luk6",
+          "source_file": "data/vendor/rime-cantonese/259f0e48bba840c3a2e0d117539e96937f3d89bc/jyut6ping3.words.dict.yaml",
+          "text": "做又三十六"
+        },
+        {
+          "physical_line": 100475,
+          "raw_line": "唔做又三十六\tm4 zou6 jau6 saa1 aa6 luk6",
+          "reading": "m4 zou6 jau6 saa1 aa6 luk6",
+          "source_file": "data/vendor/rime-cantonese/259f0e48bba840c3a2e0d117539e96937f3d89bc/jyut6ping3.words.dict.yaml",
+          "text": "唔做又三十六"
+        }
+      ],
+      "retained_single_character_rows": [
+        {
+          "physical_line": 25178,
+          "raw_line": "三\tsaam1",
+          "reading": "saam1",
+          "source_file": "data/vendor/rime-cantonese/259f0e48bba840c3a2e0d117539e96937f3d89bc/jyut6ping3.chars.dict.yaml",
+          "text": "三"
+        },
+        {
+          "physical_line": 25211,
+          "raw_line": "三\tsaam3\t3%",
+          "reading": "saam3",
+          "source_file": "data/vendor/rime-cantonese/259f0e48bba840c3a2e0d117539e96937f3d89bc/jyut6ping3.chars.dict.yaml",
+          "text": "三"
+        },
+        {
+          "physical_line": 111218,
+          "raw_line": "三\tsaam1\t100.0%",
+          "reading": "saam1",
+          "source_file": "data/vendor/typeduck-schema/7f9d90d4185eca293576de5b5dddaaf1d265f3c9/jyut6ping3.dict.yaml",
+          "text": "三"
+        },
+        {
+          "physical_line": 112110,
+          "raw_line": "三\tsaam3\t0.0%",
+          "reading": "saam3",
+          "source_file": "data/vendor/typeduck-schema/7f9d90d4185eca293576de5b5dddaaf1d265f3c9/jyut6ping3.dict.yaml",
+          "text": "三"
+        },
+        {
+          "physical_line": 113874,
+          "raw_line": "三\tsam1\t0.0%",
+          "reading": "sam1",
+          "source_file": "data/vendor/typeduck-schema/7f9d90d4185eca293576de5b5dddaaf1d265f3c9/jyut6ping3.dict.yaml",
+          "text": "三"
+        },
+        {
+          "physical_line": 26218,
+          "raw_fields": {
+            "CH": "三",
+            "DESC": "",
+            "DESC_JP": "",
+            "FINL": "aam",
+            "INIT": "s",
+            "JP": "saam1",
+            "TONE": "1",
+            "UCODE": "U+4E09"
+          },
+          "reading": "saam1",
+          "source_file": "data/vendor/lshk-jyutping-table/dad2dd6d6f02fc51138ecc6818f7b38eba5c2ad3/list.tsv",
+          "text": "三"
+        },
+        {
+          "physical_line": 26219,
+          "raw_fields": {
+            "CH": "三",
+            "DESC": "",
+            "DESC_JP": "",
+            "FINL": "aam",
+            "INIT": "s",
+            "JP": "saam3",
+            "TONE": "3",
+            "UCODE": "U+4E09"
+          },
+          "reading": "saam3",
+          "source_file": "data/vendor/lshk-jyutping-table/dad2dd6d6f02fc51138ecc6818f7b38eba5c2ad3/list.tsv",
+          "text": "三"
+        },
+        {
+          "json_key": "三",
+          "raw_reading": "saam1",
+          "reading": "saam1",
+          "source_file": "data/vendor/words-hk/2026-10-22/wordslist.json",
+          "text": "三"
+        },
+        {
+          "physical_line": 29980,
+          "raw_line": "U+4E09\tkCantonese\tsaam1",
+          "reading": "saam1",
+          "source_file": "data/vendor/unihan/18.0.0/Unihan_Readings.txt",
+          "text": "三"
+        }
+      ],
+      "review_status": "pending",
+      "reviewed_at": "",
+      "reviewer": "",
+      "reviewer_evidence": "",
+      "selected_case_occurrences": 1,
+      "selected_cases": [
+        {
+          "coverage_cohort": "not_composable_source_aligned",
+          "first_occurrence": {
+            "file": "data/utf8/FC-028_v2",
+            "raw_tokens": [
+              "三𠻺幾/m/saa1aa6gei2/"
+            ],
+            "speaker": "B:",
+            "token_indices": [
+              0
+            ],
+            "turn": 294
+          },
+          "id": "word_type:06a0c0211e78c2eadf0b7138",
+          "reading": "saa1 aa6 gei2",
+          "text": "三𠻺幾"
+        }
+      ],
+      "stored_single_character_readings": [
+        "saam1",
+        "saam3",
+        "sam1"
+      ],
+      "suggested_review_question": "Review the contracted numeral as a word/orthographic unit; do not derive a generic single-character reading.",
+      "text": "三"
+    }
+  ],
+  "retained_table_sha256": [
+    {
+      "path": "data/vendor/rime-cantonese/259f0e48bba840c3a2e0d117539e96937f3d89bc/jyut6ping3.chars.dict.yaml",
+      "sha256": "9b053a594c80eae76545bcdd83239884a49b1ba48b89ca0ab9e8daac79f33013"
+    },
+    {
+      "path": "data/vendor/rime-cantonese/259f0e48bba840c3a2e0d117539e96937f3d89bc/jyut6ping3.words.dict.yaml",
+      "sha256": "54d174ad2bb997e4a678b7b076b84e4dc5914481b32467cdea3b43e88b7d5474"
+    },
+    {
+      "path": "data/vendor/typeduck-schema/7f9d90d4185eca293576de5b5dddaaf1d265f3c9/jyut6ping3.dict.yaml",
+      "sha256": "e54eab6a3ef4328e0803e65fe4320f088329d1f0496cf7b1576dc1d0d2e28a6b"
+    },
+    {
+      "path": "data/vendor/lshk-jyutping-table/dad2dd6d6f02fc51138ecc6818f7b38eba5c2ad3/list.tsv",
+      "sha256": "0dbc5922fb886c0434bc58ff013f1ba9d332a721206b876e57b3314496b27b86"
+    },
+    {
+      "path": "data/vendor/words-hk/2026-10-22/wordslist.json",
+      "sha256": "0ea376604451f43401b4b6e574cea28c63d4dedd4aaf5b32e86f920382969886"
+    },
+    {
+      "path": "data/vendor/unihan/18.0.0/Unihan_Readings.txt",
+      "sha256": "9d39995b5de714e8ce93716ed5d15eaa0792d68e407cdf8a0add2893b8f4150b"
+    }
+  ],
+  "same_turn_orthography_context": {
+    "context_token_start": 52,
+    "file": "data/utf8/FC-R011_v",
+    "file_sha256": "3aab00d9bc8fda821c0337c7b6a7d37bf0cd88bbeb9aeaaa3ff3d605d3102372",
+    "matched_tokens": [
+      {
+        "raw": "脫骹/v/tyut3gaau3/",
+        "source_line_in_tag": 60,
+        "token_index": 59
+      },
+      {
+        "raw": "脫跤/v/tyut3gaau3/",
+        "source_line_in_tag": 66,
+        "token_index": 65
+      }
+    ],
+    "raw_context_tokens": [
+      "噉/c/gam2/",
+      "𠻺/d/aa6/",
+      "撞/v/zong6/",
+      "到/u/dou2/",
+      "佢/r/keoi5/",
+      "呢/y1/ne1/",
+      "就/d/zau6/",
+      "脫骹/v/tyut3gaau3/",
+      "啊/y1/aa3/",
+      "，/w/VQ2/",
+      "膊頭/n/bok3tau4/",
+      "啊/y1/aa3/",
+      "，/w/VQ2/",
+      "脫跤/v/tyut3gaau3/",
+      "同埋/c/tung4maai4/",
+      "腿部/n/teoi2bou6/",
+      "𠻺/y1/aa6/",
+      "骨折/v/gwat1zit3/",
+      "嘅/u/ge3/",
+      "。/w/VQ1/"
+    ],
+    "speaker": "A:",
+    "turn": 1
+  },
+  "schema_version": 1,
+  "selection_scope": "Seven missing single-character pairs,19 occurrences across the500 selected cases; full-source aligned counts are separately recomputed over58 retained transcripts. No new sampling or metric relabeling.",
+  "source_commit": "39aeadf920e0b5ca93d0ad7792c59e740e7bdd65",
+  "source_id": "hkcancor:original-utf8",
+  "source_locks": [
+    {
+      "commit": "259f0e48bba840c3a2e0d117539e96937f3d89bc",
+      "license": "CC-BY-4.0",
+      "path": "data/sources.lock.json",
+      "repository": "https://github.com/rime/rime-cantonese",
+      "sha256": "e33ae4ae7c4be7d7236f2566da2075ee6c96d9f53ebaac2d43f7dbac53254e88",
+      "source_id": null,
+      "version": null
+    },
+    {
+      "commit": "dad2dd6d6f02fc51138ecc6818f7b38eba5c2ad3",
+      "license": "CC-BY-4.0",
+      "path": "data/mappings/lshk.sources.lock.json",
+      "repository": "https://github.com/lshk-org/jyutping-table",
+      "sha256": "4e8cdb775d3fa396187214f8813a248959aeb8838f704c41f09c481ad38714a1",
+      "source_id": null,
+      "version": null
+    },
+    {
+      "commit": null,
+      "license": "public-domain declaration (wordlist and pronunciations only)",
+      "path": "data/supplements/wordshk.sources.lock.json",
+      "repository": null,
+      "sha256": "630bfd8dac948638537181b176d8a7a1743a054d19d51506574e3fc54eba94d2",
+      "source_id": "words.hk:wordlist",
+      "version": null
+    },
+    {
+      "commit": "7f9d90d4185eca293576de5b5dddaaf1d265f3c9",
+      "license": "CC-BY-4.0",
+      "path": "data/supplements/typeduck.sources.lock.json",
+      "repository": "https://github.com/TypeDuck-HK/schema",
+      "sha256": "8aa2dcd72f4d453a0ae8d45f390b2bf2c9b3b8f0e8fa257e725156e2440aa51b",
+      "source_id": "typeduck:principal",
+      "version": null
+    },
+    {
+      "commit": null,
+      "license": "Unicode-3.0",
+      "path": "data/supplements/unihan.sources.lock.json",
+      "repository": null,
+      "sha256": "0f986fd73849025ffc9a72fbc686fe9aa5ce8540c995a8a15a23f850b8286505",
+      "source_id": "unihan:kCantonese",
+      "version": null
+    }
+  ],
+  "timezone": "Asia/Hong_Kong"
+}

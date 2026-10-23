@@ -1,0 +1,35 @@
+{
+  "recorded_at_utc": "2026-10-22T18:44:08.715742+00:00",
+  "passed": true,
+  "checks": {
+    "aliases": true,
+    "rules": true,
+    "yale_ascii": true,
+    "profile_version": true,
+    "schema_version": true,
+    "counts": true,
+    "all_base_yale_records_unchanged": true,
+    "wordnet_source_attestations_present": true
+  },
+  "base_count": 878,
+  "mapping_counts": {
+    "ambiguous_spellings": 298,
+    "canonical_bases": 878,
+    "distinct_spellings": 1164,
+    "identity_records": 878,
+    "nonidentity_records": 636,
+    "records": 1514
+  },
+  "new_dictionary_sha256": "d835b8c4487b90ef751c8c91f467b9245c8bd54ee5be8157531dd9530ac7667b",
+  "new_module_sha256": "3eaee728fc7355d466dee722e1ee4f67e508eb9c362fd92762b8d0531e5e99fe",
+  "artifacts": {
+    ".local\\native\\packages\\preview-20261023-yale-preferred\\data\\mappings\\build.manifest.json": "6409aa6ed51dc2fb3ffd4a7d162e76d40deeeb3fa14f6f6f83b6a28720a501a9",
+    ".local\\native\\packages\\preview-20261023-yale-preferred\\data\\mappings\\lshk.sources.lock.json": "4e8cdb775d3fa396187214f8813a248959aeb8838f704c41f09c481ad38714a1",
+    ".local\\native\\packages\\preview-20261023-yale-preferred\\data\\mappings\\spellings.json": "9961e406369d78151531df15983dbc795fc1c3fb2549b8113089f67865dd9077",
+    ".local\\native\\packages\\preview-20261023-yale-preferred\\data\\mappings\\syllables.json": "6dc0e6c3395faba24b51f9762dee17e33166cadfa5bd143d9f186810b68ce307",
+    ".local\\wordnet-mappings\\build.manifest.json": "951241bbdce2e1d2e9e3d22eb2e4e2efaea2784616200837320500051003d4d6",
+    ".local\\wordnet-mappings\\spellings.json": "b3690a3792ee94a08771eb3f6a62433f979fca347207e3e21724c605d087c9a2",
+    ".local\\wordnet-mappings\\syllables.json": "43fa147c5a852563e7b3d59280362d274984eeb53d4fd9c1b8bb5097539fe9a3"
+  },
+  "scope": "Source provenance metadata updated; all alias/rule/Yale conversion records and ambiguity counts identical to the frozen staged baseline."
+}

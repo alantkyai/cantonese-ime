@@ -1,0 +1,17 @@
+Cantonese IME 1.0.0 for macOS
+
+Native Cantonese input with the same offline dictionary, numbered candidates,
+Yale/Jyutping typing, and local phrase learning as the Windows release.
+
+Requires macOS 13 or later. The universal2 application includes native Apple
+Silicon and Intel code and its own private Python runtime. Python, Homebrew,
+and developer tools are not required on the receiving Mac.
+
+The installer copies only CantoneseIME.app to /Library/Input Methods. It
+does not change your default keyboard, add login items, or enable an input
+source on your behalf. After installing, add Cantonese IME from the Keyboard
+settings for your own account. You may need to sign out and sign in first.
+
+Upgrading: switch to another input source and quit Cantonese IME first.
+Other signed-in users must do the same or sign out. The installer does not
+force applications to quit. Personal learning is stored separately and kept.

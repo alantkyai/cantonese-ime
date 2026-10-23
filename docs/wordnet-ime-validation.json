@@ -1,0 +1,85 @@
+{
+  "recorded_at_utc": "2026-10-22T18:53:44.240741+00:00",
+  "status": "staged_tested_ready_waiting_for_uac_retry_confirmation",
+  "package": {
+    "package_root": "D:\\IME_Project\\.local\\native\\packages\\preview-20261023-yale-wordnet",
+    "manifest_sha256": "cf81a6a8c5d47495bdbe5aecf3f425da94b04081f83668a355d71237cc0f0f6d",
+    "payload_files": 69,
+    "payload_bytes": 307957206,
+    "dictionary_sha256": "d835b8c4487b90ef751c8c91f467b9245c8bd54ee5be8157531dd9530ac7667b",
+    "dll_sha256": "594bd83b2252289781a7ad7c08d4db7824a0295aa36e17a182f72a73effe3c6c",
+    "engine_sha256": "f45b0a29693e613ba9dd0633be7ca67e905ad3bbca17b95fc01aac36df823d5f",
+    "mappings_sha256": "3eaee728fc7355d466dee722e1ee4f67e508eb9c362fd92762b8d0531e5e99fe",
+    "updater_sha256": "ade67c7e32b05f59d2a5507d4632efc4e25a25a5aeb3a0d01ef3cff0b5642c82"
+  },
+  "installed": false,
+  "installed_baseline": {
+    "recorded_at_utc": "2026-10-22T18:52:04.1484427Z",
+    "package_manifest_sha256": "94c29cf8e9e1e5c521368a38f109ea24aaa28cecf111cff0bc734085d29d6000",
+    "dll_sha256": "dfe90daff7339fc01437fef5c3bb28719f0c50db84789ac8e9cc403c4970e7e4",
+    "registration_plan_sha256": "bf6fbe19c3955d8ba6ed9360809f5601ea25f2dc22236a41857860dc36b59de6",
+    "previously_restored_broker_process_exists": true,
+    "installed_files_changed_by_this_check": false
+  },
+  "vocabulary": {
+    "pairs": 739128,
+    "distinct_texts": 623223,
+    "added_pairs": 2558,
+    "new_texts": 1978,
+    "baseline_rows_preserved": 736570,
+    "two_clean_builds_byte_identical": true
+  },
+  "checks": {
+    "full_suite": {
+      "tests": 412,
+      "passed": true,
+      "scope": "Before metadata-only mapping-source patch"
+    },
+    "final_focused_tests": {
+      "tests": 56,
+      "passed": true
+    },
+    "mechanical_dictionary_gates_passed": 10,
+    "human_quality_gates_incomplete": 3,
+    "all_stored_reading_routes": 739128,
+    "compact_and_apostrophe_samples_found": 400,
+    "wordnet_affected_inputs_verified": 2497,
+    "core_development_targets_found": 40,
+    "unchanged_functional_alias_and_yale_records": true,
+    "native_x64_ipc_cases_passed": 15,
+    "native_max_observed_request_ms": 189.1874,
+    "native_client_deadline_ms": 250,
+    "fresh_x64_dll_load_and_exports_passed": true,
+    "all_69_payload_hashes_verified_and_unchanged": true,
+    "isolated_test_broker_stopped": true,
+    "test_learning_enabled": false
+  },
+  "baseline_full_catalog": {
+    "database_sha256": "3fccc5bcf45cbb676b8a1a51e2030d418803af64b3cd5c0ae7d67cf90a4711bb",
+    "input_groups_verified": 488219,
+    "source_pairs": 736570,
+    "frozen_replay_verified": true,
+    "applies_to_expanded_catalog": false
+  },
+  "evidence_manifest": {
+    "path": "docs/native-evidence/2026-10-23/yale-wordnet/evidence-manifest.json",
+    "sha256": "b50a7b42986592f5339758a6bd893d9ed8729179403de9d1c03dc479ac1df99f",
+    "frozen_items": 62
+  },
+  "installation": {
+    "applied": false,
+    "admin_wrapper_prepared": ".local/native/Invoke-WordnetUpdate.ps1",
+    "admin_wrapper_executed": false,
+    "uac_prompt_retried": false,
+    "reason": "The earlier UAC launch was canceled. User readiness to show it again remains pending."
+  },
+  "limitations": [
+    "Finite vocabulary expansion is not all-Chinese completeness.",
+    "Four marginal bases retain documented canonical fallback; 96 are project Yale extensions.",
+    "Entire expanded-catalog public retrieval was not exhaustively rerun; affected groups and route coverage passed.",
+    "Human pronunciation, held-out quality, mapping behavior and user-owned native typing/UI acceptance remain incomplete.",
+    "Observed finite native timings do not establish a universal deadline guarantee."
+  ],
+  "keyboard_or_ui_actions": 0,
+  "new_installed_tsf_typing_proof": false
+}

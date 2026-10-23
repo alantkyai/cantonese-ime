@@ -1,0 +1,79 @@
+{
+  "version": "1.0.5",
+  "package_checks_passed": true,
+  "standard_installer_status": "completed_exit_0",
+  "setup": {
+    "filename": "CantoneseIME-1.0.5-windows-x64-setup.exe",
+    "bytes": 84644993,
+    "sha256": "e23a936f5c5bcf38ff74f1874ad3143b63ada893cc1cc151188e63a6c5e23c58"
+  },
+  "package_manifest_sha256": "4dd49a1d7b5af3e2101da9ce57b3cba9d68f743e6b6e2761c213294ef9beeed4",
+  "installed_payload_files_verified": 121,
+  "installed_checks_passed": 9,
+  "profile_icon_file": "C:\\Program Files\\CantoneseIME\\native\\CantoneseMachineRegistration.exe",
+  "explicit_brand_resource_id": 101,
+  "registered_icon_location_signed": -101,
+  "registered_icon_location_dword": 4294967195,
+  "both_machine_profiles_verified": true,
+  "com_service_binding": "C:\\Program Files\\CantoneseIME\\native\\CantoneseIME.dll",
+  "fresh_user_enabled": {
+    "0409": false,
+    "0c04": true
+  },
+  "engine_status": "ready",
+  "english_us_keyboard_retained": true,
+  "user_added_array_ime_retained": true,
+  "full_language_preferences_order_and_explicit_ui_default_settings_preserved": true,
+  "legacy_default_query_changed_observed": false,
+  "learning_hash_size_timestamp_unchanged_during_setup": true,
+  "learning_contents_copied": false,
+  "lifecycle_package_builder_tests_passed": 44,
+  "real_windows_mapped_helper_cases_passed": 2,
+  "native_category_fixtures_passed": 15,
+  "helper_guards_passed": 18,
+  "production_registration_profile_captures": 2,
+  "captured_resource_matches": 12,
+  "shell_shortcut_and_uninstall_icon_readback_passed": true,
+  "shell_icon_ordinal": 0,
+  "same_explorer_controlled_resource_probe": {
+    "pid": 1228,
+    "architecture": "x64",
+    "old_service": {
+      "path": "C:\\Program Files\\CantoneseIME\\native\\CantoneseIME.dll",
+      "size": 692224,
+      "brand_group101_found": false
+    },
+    "icon_path": "C:\\Program Files\\CantoneseIME\\native\\CantoneseMachineRegistration.exe",
+    "flags": 34,
+    "resource_id": 101,
+    "icon_size": 16,
+    "helper_loaded": true,
+    "resource_handle_tag": "0x2",
+    "brand_group101_found": true,
+    "brand_icon101_loadable": true,
+    "icon_destroyed": true,
+    "helper_released": true
+  },
+  "same_explorer_probe_scope": "Caller-authored resource-load calls inside actual Explorer. Not a trace of naturally issued picker calls or rendered pixels. Temporary resource references balanced; ephemeral Frida session detached.",
+  "typing_dll_engine_dictionary_migration_changed": false,
+  "switcher_visual_acceptance": "PENDING: user asked to close and reopen Win+Space after verified 1.0.5 installation",
+  "limitations": [
+    "Actual picker appearance awaits user confirmation.",
+    "Clean-machine and Windows 11 acceptance pending.",
+    "Actual uninstall and sign-in startup pending.",
+    "Unsigned; native x64 desktop applications only. 32-bit, ARM64 and secure/password fields excluded."
+  ],
+  "evidence_sha256": {
+    "windows-installer-repair-evidence/2026-10-23/build-1.0.5.json": "9e894676d54ff18fd8d797a6c102c068d2c1d70df3a0244cc7cd40f29c57b02c",
+    "windows-installer-repair-evidence/2026-10-23/native-helper-icon-1.0.5.json": "61beec7e57132934c8c35f8c750f15469d7faa68ebcdb0fc0c1d6429cf0bff84",
+    "windows-installer-repair-evidence/2026-10-23/mapped-helper-1.0.5.json": "39cd22fc7f7848a487429398aaee0244e765f75cdee49a9b20188deb8fb72f31",
+    "windows-installer-repair-evidence/2026-10-23/installed-1.0.5.json": "454085699598db406c6626d8b4246c0e09348250e03371df81181acc1ecb6053",
+    "windows-installer-repair-evidence/2026-10-23/setup-1.0.5-completion.json": "446ab1dabd3674c956fd6f34c6b83fcd7232db306a22ec7025e934ba98f6f084",
+    "windows-installer-repair-evidence/2026-10-23/shell-icons-1.0.5.json": "f754cb3e961f3353cf21052a4899d40faa1c524f3407c101727d68c6f6ec4188",
+    "windows-installer-repair-evidence/2026-10-23/installed-explorer-icon-1.0.5.json": "14dbf00eb8af9585efc9850161cae2d3f0b454c10ceaf27a6900771c5fe4689e",
+    "windows-installer-repair-evidence/2026-10-23/explorer-finding-ledger-1.0.5.json": "aa59e6b77841b5c3a73d951b60127bb4ccb40f9548e4123ad94c069353e8f17f",
+    "windows-installer-repair-evidence/2026-10-23/explorer-old-module-1.0.5.json": "00550119c5e0267da7bca92bc13d12cd8fb817a1fefaf09db4ae76202a012daa",
+    "windows-installer-repair-evidence/2026-10-23/explorer-dll-reuse-1.0.5.json": "f675a5d1099d64954aac5eac53abc16da6fae2d0d6d57b4c044bfd75cb0d4752",
+    "windows-installer-repair-evidence/2026-10-23/explorer-prototype-icon-1.0.5.json": "10be1a38eb3fa1e36c5c64aeb1e72841f2db42d73a9b9d89afeb9290ad1df20b"
+  }
+}

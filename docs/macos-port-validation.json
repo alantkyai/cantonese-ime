@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-23T03:22:38.855308+00:00",
+  "status": "source_port_implemented_native_pending",
+  "version": "1.0.0",
+  "host_platform": "win32",
+  "target_architectures": [
+    "arm64",
+    "x86_64"
+  ],
+  "minimum_target_macos": "13.0",
+  "artifact": {
+    "kind": "source_and_offline_build_inputs",
+    "path": "dist/CantoneseIME-1.0.0-macos/CantoneseIME-1.0.0-macos-source.zip",
+    "bytes": 168353185,
+    "sha256": "86fa866a2ef3b71b565ed9b9e4c88e42265dd8618e890dd19753f1563985550b",
+    "manifest": "dist/CantoneseIME-1.0.0-macos/macos-build.json",
+    "source_hashes_match_portable_test_inputs": true
+  },
+  "portable_tests": {
+    "passed": true,
+    "count": 24,
+    "report": "docs/macos-evidence/2026-10-23/portable-tests-final.json"
+  },
+  "exact_sourcekit_engine_transport": {
+    "passed": true,
+    "dictionary_cases": 34,
+    "phrase_and_constituent_preferences_independent": true,
+    "learning_persisted_after_child_restart": true,
+    "source_hashes_unchanged": true,
+    "report": "docs/macos-evidence/2026-10-23/sourcekit-engine-transport.json"
+  },
+  "native_source_review": "docs/macos-evidence/2026-10-23/swift-source-review.json",
+  "native_compiled": false,
+  "native_inputmethodkit_typing_verified": false,
+  "native_installer_verified": false,
+  "signed": false,
+  "notarized": false,
+  "personal_learning_used_or_copied": false,
+  "next_required_step": "Build the app and PKG on macOS using macos/build_release.py; execute native core tests and bundled engine checks, then install and verify InputMethodKit typing on a Mac."
+}

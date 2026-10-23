@@ -1,0 +1,6789 @@
+{
+  "ambiguous_phrase_matches": [
+    {
+      "current_ledger_codes": [
+        "faan2 dou2",
+        "faan2 dou3"
+      ],
+      "existing_text_frequency_for_review_priority": 51167.0,
+      "line": 282331,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "返到",
+      "typeduck_candidate_rows": [
+        {
+          "line": 32043,
+          "percentage": 100.0,
+          "raw_reading": "faan1 dou3",
+          "raw_weight": "100.0%",
+          "reading": "faan1 dou3",
+          "text": "返到"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "sin1 wui2",
+        "sin1 wui3",
+        "sin1 wui5",
+        "sin1 wui6"
+      ],
+      "existing_text_frequency_for_review_priority": 18420.0,
+      "line": 27389,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "先會",
+      "typeduck_candidate_rows": [
+        {
+          "line": 123023,
+          "percentage": 100.0,
+          "raw_reading": "sin1 wui5",
+          "raw_weight": "100.0%",
+          "reading": "sin1 wui5",
+          "text": "先會"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "bin1 dou2",
+        "bin1 dou3"
+      ],
+      "existing_text_frequency_for_review_priority": 7919.0,
+      "line": 285680,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "邊到",
+      "typeduck_candidate_rows": [
+        {
+          "line": 6543,
+          "percentage": 100.0,
+          "raw_reading": "bin1 dou3",
+          "raw_weight": "100.0%",
+          "reading": "bin1 dou3",
+          "text": "邊到"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "wui2 zi1",
+        "wui3 zi1",
+        "wui5 zi1",
+        "wui6 zi1"
+      ],
+      "existing_text_frequency_for_review_priority": 3826.0,
+      "line": 149350,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "會知",
+      "typeduck_candidate_rows": [
+        {
+          "line": 140907,
+          "percentage": 100.0,
+          "raw_reading": "wui5 zi1",
+          "raw_weight": "100.0%",
+          "reading": "wui5 zi1",
+          "text": "會知"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "haang4 ceot1",
+        "hang4 ceot1",
+        "hang6 ceot1",
+        "hong2 ceot1",
+        "hong4 ceot1"
+      ],
+      "existing_text_frequency_for_review_priority": 3648.0,
+      "line": 268172,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "行出",
+      "typeduck_candidate_rows": [
+        {
+          "line": 54061,
+          "percentage": 100.0,
+          "raw_reading": "haang4 ceot1",
+          "raw_weight": "100.0%",
+          "reading": "haang4 ceot1",
+          "text": "行出"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "jau5 gaan1",
+        "jau5 gaan3",
+        "jau5 haan4"
+      ],
+      "existing_text_frequency_for_review_priority": 3381.0,
+      "line": 150045,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "有間",
+      "typeduck_candidate_rows": [
+        {
+          "line": 67897,
+          "percentage": 100.0,
+          "raw_reading": "jau5 gaan1",
+          "raw_weight": "100.0%",
+          "reading": "jau5 gaan1",
+          "text": "有間"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "wui2 sik1",
+        "wui3 sik1",
+        "wui5 sik1",
+        "wui6 sik1"
+      ],
+      "existing_text_frequency_for_review_priority": 2224.0,
+      "line": 149372,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "會識",
+      "typeduck_candidate_rows": [
+        {
+          "line": 140893,
+          "percentage": 100.0,
+          "raw_reading": "wui5 sik1",
+          "raw_weight": "100.0%",
+          "reading": "wui5 sik1",
+          "text": "會識"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "teng1 haa6",
+        "ting1 haa6",
+        "ting3 haa6"
+      ],
+      "existing_text_frequency_for_review_priority": 2135.0,
+      "line": 244020,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "聽下",
+      "typeduck_candidate_rows": [
+        {
+          "line": 131459,
+          "percentage": 100.0,
+          "raw_reading": "teng1 haa5",
+          "raw_weight": "100.0%",
+          "reading": "teng1 haa5",
+          "text": "聽下"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 gok3",
+        "soeng6 gok3"
+      ],
+      "existing_text_frequency_for_review_priority": 1868.0,
+      "line": 4466,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上角",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126632,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 gok3",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 gok3",
+          "text": "上角"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "dou2 nei5",
+        "dou3 nei5"
+      ],
+      "existing_text_frequency_for_review_priority": 1676.0,
+      "line": 33521,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "到你",
+      "typeduck_candidate_rows": [
+        {
+          "line": 30245,
+          "percentage": 100.0,
+          "raw_reading": "dou3 nei5",
+          "raw_weight": "100.0%",
+          "reading": "dou3 nei5",
+          "text": "到你"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "dai6 ji6 gaan1",
+        "dai6 ji6 gaan3",
+        "dai6 ji6 haan4"
+      ],
+      "existing_text_frequency_for_review_priority": 1601.0,
+      "line": 227450,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "第二間",
+      "typeduck_candidate_rows": [
+        {
+          "line": 25272,
+          "percentage": 100.0,
+          "raw_reading": "dai6 ji6 gaan1",
+          "raw_weight": "100.0%",
+          "reading": "dai6 ji6 gaan1",
+          "text": "第二間"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "gaau1 haang4",
+        "gaau1 hang4",
+        "gaau1 hang6",
+        "gaau1 hong2",
+        "gaau1 hong4"
+      ],
+      "existing_text_frequency_for_review_priority": 1216.0,
+      "line": 12333,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "交行",
+      "typeduck_candidate_rows": [
+        {
+          "line": 40091,
+          "percentage": 100.0,
+          "raw_reading": "gaau1 hong2",
+          "raw_weight": "100.0%",
+          "reading": "gaau1 hong2",
+          "text": "交行"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "naa5 gaan1",
+        "naa5 gaan3",
+        "naa5 haan4"
+      ],
+      "existing_text_frequency_for_review_priority": 1067.0,
+      "line": 285838,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "那間",
+      "typeduck_candidate_rows": [
+        {
+          "line": 99996,
+          "percentage": 100.0,
+          "raw_reading": "naa5 gaan1",
+          "raw_weight": "100.0%",
+          "reading": "naa5 gaan1",
+          "text": "那間"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "heoi3 dou2",
+        "heoi3 dou3"
+      ],
+      "existing_text_frequency_for_review_priority": 981.0,
+      "line": 45882,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "去到",
+      "typeduck_candidate_rows": [
+        {
+          "line": 57771,
+          "percentage": 100.0,
+          "raw_reading": "heoi3 dou3",
+          "raw_weight": "100.0%",
+          "reading": "heoi3 dou3",
+          "text": "去到"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "mai1 tung4",
+        "mai5 tung4",
+        "mai6 tung4",
+        "mei1 tung4",
+        "mi1 tung4"
+      ],
+      "existing_text_frequency_for_review_priority": 889.0,
+      "line": 55130,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "咪同",
+      "typeduck_candidate_rows": [
+        {
+          "line": 93727,
+          "percentage": 100.0,
+          "raw_reading": "mai6 tung4",
+          "raw_weight": "100.0%",
+          "reading": "mai6 tung4",
+          "text": "咪同"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 on1 gaai1",
+        "zoeng2 on1 gaai1"
+      ],
+      "existing_text_frequency_for_review_priority": 842.0,
+      "line": 300330,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長安街",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18811,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 on1 gaai1",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 on1 gaai1",
+          "text": "長安街"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "mau5 gaan1",
+        "mau5 gaan3",
+        "mau5 haan4"
+      ],
+      "existing_text_frequency_for_review_priority": 800.0,
+      "line": 158806,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "某間",
+      "typeduck_candidate_rows": [
+        {
+          "line": 95066,
+          "percentage": 100.0,
+          "raw_reading": "mau5 gaan1",
+          "raw_weight": "100.0%",
+          "reading": "mau5 gaan1",
+          "text": "某間"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "lau4 ji3 dou2",
+        "lau4 ji3 dou3"
+      ],
+      "existing_text_frequency_for_review_priority": 596.0,
+      "line": 208223,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "留意到",
+      "typeduck_candidate_rows": [
+        {
+          "line": 84084,
+          "percentage": 100.0,
+          "raw_reading": "lau4 ji3 dou3",
+          "raw_weight": "100.0%",
+          "reading": "lau4 ji3 dou3",
+          "text": "留意到"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "si1 zi2 wui2",
+        "si1 zi2 wui3",
+        "si1 zi2 wui5",
+        "si1 zi2 wui6"
+      ],
+      "existing_text_frequency_for_review_priority": 498.0,
+      "line": 202014,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "獅子會",
+      "typeduck_candidate_rows": [
+        {
+          "line": 121360,
+          "percentage": 100.0,
+          "raw_reading": "si1 zi2 wui2",
+          "raw_weight": "100.0%",
+          "reading": "si1 zi2 wui2",
+          "text": "獅子會"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "sap6 gaan1",
+        "sap6 gaan3",
+        "sap6 haan4"
+      ],
+      "existing_text_frequency_for_review_priority": 472.0,
+      "line": 39290,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "十間",
+      "typeduck_candidate_rows": [
+        {
+          "line": 115910,
+          "percentage": 100.0,
+          "raw_reading": "sap6 gaan1",
+          "raw_weight": "100.0%",
+          "reading": "sap6 gaan1",
+          "text": "十間"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "ngo5 m4 wui2",
+        "ngo5 m4 wui3",
+        "ngo5 m4 wui5",
+        "ngo5 m4 wui6"
+      ],
+      "existing_text_frequency_for_review_priority": 266.0,
+      "line": 123558,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "我唔會",
+      "typeduck_candidate_rows": [
+        {
+          "line": 104392,
+          "percentage": 100.0,
+          "raw_reading": "ngo5 m4 wui5",
+          "raw_weight": "100.0%",
+          "reading": "ngo5 m4 wui5",
+          "text": "我唔會"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "ging6 dou2",
+        "ging6 dou3"
+      ],
+      "existing_text_frequency_for_review_priority": 177.0,
+      "line": 35672,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "勁到",
+      "typeduck_candidate_rows": [
+        {
+          "line": 45898,
+          "percentage": 100.0,
+          "raw_reading": "ging6 dou3",
+          "raw_weight": "100.0%",
+          "reading": "ging6 dou3",
+          "text": "勁到"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "lai5 jin4 wui2",
+        "lai5 jin4 wui3",
+        "lai5 jin4 wui5",
+        "lai5 jin4 wui6"
+      ],
+      "existing_text_frequency_for_review_priority": 177.0,
+      "line": 223508,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "禮賢會",
+      "typeduck_candidate_rows": [
+        {
+          "line": 82981,
+          "percentage": 100.0,
+          "raw_reading": "lai5 jin4 wui2",
+          "raw_weight": "100.0%",
+          "reading": "lai5 jin4 wui2",
+          "text": "禮賢會"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "hou2 hou2 teng1",
+        "hou2 hou2 ting1",
+        "hou2 hou2 ting3"
+      ],
+      "existing_text_frequency_for_review_priority": 1.0,
+      "line": 81004,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "好好聽",
+      "typeduck_candidate_rows": [
+        {
+          "line": 61608,
+          "percentage": 100.0,
+          "raw_reading": "hou2 hou2 ting1",
+          "raw_weight": "100.0%",
+          "reading": "hou2 hou2 ting1",
+          "text": "好好聽"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 saan1",
+        "zoeng2 saan1"
+      ],
+      "existing_text_frequency_for_review_priority": 1.0,
+      "line": 300392,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長山",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18843,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 saan1",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 saan1",
+          "text": "長山"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "cat1 zi2 mui1 dou6",
+        "cat1 zi2 mui2 dou6",
+        "cat1 zi2 mui6 dou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 1422,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "七姊妹道",
+      "typeduck_candidate_rows": [
+        {
+          "line": 12811,
+          "percentage": 100.0,
+          "raw_reading": "cat1 zi2 mui2 dou6",
+          "raw_weight": "100.0%",
+          "reading": "cat1 zi2 mui2 dou6",
+          "text": "七姊妹道"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "saam1 cang4 lau4 soeng5 gaai1",
+        "saam1 cang4 lau4 soeng6 gaai1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 2113,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "三層樓上街",
+      "typeduck_candidate_rows": [
+        {
+          "line": 111412,
+          "percentage": 100.0,
+          "raw_reading": "saam1 cang4 lau4 soeng6 gaai1",
+          "raw_weight": "100.0%",
+          "reading": "saam1 cang4 lau4 soeng6 gaai1",
+          "text": "三層樓上街"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 jyun4 gaai1",
+        "soeng6 jyun4 gaai1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 3316,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上元街",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126695,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 jyun4 gaai1",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 jyun4 gaai1",
+          "text": "上元街"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 bak1 cyun1",
+        "soeng6 bak1 cyun1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 3332,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上北村",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126562,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 bak1 cyun1",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 bak1 cyun1",
+          "text": "上北村"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 tong4",
+        "soeng6 tong4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 3473,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上塘",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126771,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 tong4",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 tong4",
+          "text": "上塘"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 saan1 gai1 jyut6",
+        "soeng6 saan1 gai1 jyut6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 3560,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上山雞乙",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126735,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 saan1 gai1 jyut3",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 saan1 gai1 jyut3",
+          "text": "上山雞乙"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 ling5 pei4",
+        "soeng6 ling5 pei4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 3601,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上嶺皮",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126705,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 leng5 pei4",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 leng5 pei4",
+          "text": "上嶺皮"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 ging3 hau2",
+        "soeng6 ging3 hau2"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 3634,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上徑口",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126623,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 ging3 hau2",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 ging3 hau2",
+          "text": "上徑口"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 jau4 tin4 cyun1",
+        "soeng6 jau4 tin4 cyun1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 3652,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上攸田村",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126679,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 jau4 tin4 cyun1",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 jau4 tin4 cyun1",
+          "text": "上攸田村"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 cyun1",
+        "soeng6 cyun1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 3708,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上村",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126595,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 cyun1",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 cyun1",
+          "text": "上村"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 cyun1 san1 cyun1",
+        "soeng6 cyun1 san1 cyun1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 3717,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上村新村",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126596,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 cyun1 san1 cyun1",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 cyun1 san1 cyun1",
+          "text": "上村新村"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 seoi2 gun1 laap6 zung1 hok6",
+        "soeng6 seoi2 gun1 laap6 zung1 hok6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 3849,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上水官立中學",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126739,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 seoi2 gun1 laap6 zung1 hok6",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 seoi2 gun1 laap6 zung1 hok6",
+          "text": "上水官立中學"
+        },
+        {
+          "line": 126740,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 seoi2 gun1 lap6 zung1 hok6",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 seoi2 gun1 lap6 zung1 hok6",
+          "text": "上水官立中學"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 seoi2 syun1 dou6 siu2 hok6",
+        "soeng6 seoi2 syun1 dou6 siu2 hok6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 3850,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上水宣道小學",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126745,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 seoi2 syun1 dou6 siu2 hok6",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 seoi2 syun1 dou6 siu2 hok6",
+          "text": "上水宣道小學"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 seoi2 gwong2 coeng4",
+        "soeng6 seoi2 gwong2 coeng4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 3856,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上水廣場",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126741,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 seoi2 gwong2 coeng4",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 seoi2 gwong2 coeng4",
+          "text": "上水廣場"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 seoi2 jau4 wing6 ci4",
+        "soeng6 seoi2 jau4 wing6 ci4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 3870,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上水游泳池",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126743,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 seoi2 jau4 wing6 ci4",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 seoi2 jau4 wing6 ci4",
+          "text": "上水游泳池"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 seoi2 zaam6",
+        "soeng6 seoi2 zaam6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 3872,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上水站",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126749,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 seoi2 zaam6",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 seoi2 zaam6",
+          "text": "上水站"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 seoi2 waa4 saan1",
+        "soeng6 seoi2 waa4 saan1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 3877,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上水華山",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126746,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 seoi2 waa4 saan1",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 seoi2 waa4 saan1",
+          "text": "上水華山"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 seoi2 hoeng1",
+        "soeng6 seoi2 hoeng1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 3884,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上水鄉",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126742,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 seoi2 hoeng1",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 seoi2 hoeng1",
+          "text": "上水鄉"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 joeng4",
+        "soeng6 joeng4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 3957,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上洋",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126690,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 joeng4",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 joeng4",
+          "text": "上洋"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 joeng4 saan1",
+        "soeng6 joeng4 saan1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 3958,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上洋山",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126693,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 joeng4 saan1",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 joeng4 saan1",
+          "text": "上洋山"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 hoi2 soeng1 jip6 ngan4 haang4",
+        "soeng5 hoi2 soeng1 jip6 ngan4 hang4",
+        "soeng5 hoi2 soeng1 jip6 ngan4 hang6",
+        "soeng5 hoi2 soeng1 jip6 ngan4 hong2",
+        "soeng5 hoi2 soeng1 jip6 ngan4 hong4",
+        "soeng6 hoi2 soeng1 jip6 ngan4 haang4",
+        "soeng6 hoi2 soeng1 jip6 ngan4 hang4",
+        "soeng6 hoi2 soeng1 jip6 ngan4 hang6",
+        "soeng6 hoi2 soeng1 jip6 ngan4 hong2",
+        "soeng6 hoi2 soeng1 jip6 ngan4 hong4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 4006,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上海商業銀行",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126665,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 hoi2 soeng1 jip6 ngan4 hong4",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 hoi2 soeng1 jip6 ngan4 hong4",
+          "text": "上海商業銀行"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 waan4 zaam6",
+        "soeng6 waan4 zaam6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 330628,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上環站",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126775,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 waan4 zaam6",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 waan4 zaam6",
+          "text": "上環站"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 tin4 liu4 haa6",
+        "soeng6 tin4 liu4 haa6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 4288,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上田寮下",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126768,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 tin4 liu4 haa6",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 tin4 liu4 haa6",
+          "text": "上田寮下"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 baak6 nai4",
+        "soeng6 baak6 nai4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 4294,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上白泥",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126561,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 baak6 nai4",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 baak6 nai4",
+          "text": "上白泥"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 wo4 haang1",
+        "soeng6 wo4 haang1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 4339,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上禾坑",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126781,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 wo4 haang1",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 wo4 haang1",
+          "text": "上禾坑"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 wo4 ce4",
+        "soeng6 wo4 ce4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 4342,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上禾輋",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126779,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 wo4 ce4",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 wo4 ce4",
+          "text": "上禾輋"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 wo4 ce4 lou6",
+        "soeng6 wo4 ce4 lou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 4344,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上禾輋路",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126780,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 wo4 ce4 lou6",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 wo4 ce4 lou6",
+          "text": "上禾輋路"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 zoeng1 wai4",
+        "soeng6 zoeng1 wai4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 4352,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上章圍",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126798,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 zoeng1 wai4",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 zoeng1 wai4",
+          "text": "上章圍"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 zuk1 jyun4",
+        "soeng6 zuk1 jyun4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 4356,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上竹園",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126802,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 zuk1 jyun4",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 zuk1 jyun4",
+          "text": "上竹園"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 miu4 tin4",
+        "soeng6 miu4 tin4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 4405,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上苗田",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126722,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 miu4 tin4",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 miu4 tin4",
+          "text": "上苗田"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 kwai4 cung1",
+        "soeng6 kwai4 cung1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 4411,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上葵涌",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126701,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 kwai4 cung1",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 kwai4 cung1",
+          "text": "上葵涌"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 kwai4 cung1 cyun1",
+        "soeng6 kwai4 cung1 cyun1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 4417,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上葵涌村",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126702,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 kwai4 cung1 cyun1",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 kwai4 cung1 cyun1",
+          "text": "上葵涌村"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 gok3 zeoi2",
+        "soeng6 gok3 zeoi2"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 4467,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上角咀",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126635,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 gok3 zeoi2",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 gok3 zeoi2",
+          "text": "上角咀"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 gok3 gaai1",
+        "soeng6 gok3 gaai1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 4472,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上角街",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126633,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 gok3 gaai1",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 gok3 gaai1",
+          "text": "上角街"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 hoeng1 dou6",
+        "soeng6 hoeng1 dou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 4507,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上鄉道",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126656,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 hoeng1 dou6",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 hoeng1 dou6",
+          "text": "上鄉道"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 coeng4 saa1 wing6 taan1",
+        "soeng5 zoeng2 saa1 wing6 taan1",
+        "soeng6 coeng4 saa1 wing6 taan1",
+        "soeng6 zoeng2 saa1 wing6 taan1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 4511,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上長沙泳灘",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126593,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 coeng4 saa1 wing6 taan1",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 coeng4 saa1 wing6 taan1",
+          "text": "上長沙泳灘"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 min6 zing1 sung1 gou1 haa6 min6 maai6 loeng4 fan2",
+        "soeng6 min6 zing1 sung1 gou1 haa6 min6 maai6 loeng4 fan2"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 4532,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上面蒸鬆糕下面賣涼粉",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126721,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 min6 zing1 sung1 gou1 haa6 min6 maai6 loeng4 fan2",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 min6 zing1 sung1 gou1 haa6 min6 maai6 loeng4 fan2",
+          "text": "上面蒸鬆糕下面賣涼粉"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 gou1 taan1",
+        "soeng6 gou1 taan1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 4543,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上高灘",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126637,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 gou1 taan1",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 gou1 taan1",
+          "text": "上高灘"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 gou1 taan1 gaai1",
+        "soeng6 gou1 taan1 gaai1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 4544,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上高灘街",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126638,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 gou1 taan1 gaai1",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 gou1 taan1 gaai1",
+          "text": "上高灘街"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "soeng5 wong4 ji4 aau3",
+        "soeng6 wong4 ji4 aau3"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 4551,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "上黃宜坳",
+      "typeduck_candidate_rows": [
+        {
+          "line": 126782,
+          "percentage": 100.0,
+          "raw_reading": "soeng6 wong4 ji4 aau3",
+          "raw_weight": "100.0%",
+          "reading": "soeng6 wong4 ji4 aau3",
+          "text": "上黃宜坳"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "haa6 coeng4 saa1 wing6 taan1",
+        "haa6 zoeng2 saa1 wing6 taan1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 5046,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "下長沙泳灘",
+      "typeduck_candidate_rows": [
+        {
+          "line": 52807,
+          "percentage": 100.0,
+          "raw_reading": "haa6 coeng4 saa1 wing6 taan1",
+          "raw_weight": "100.0%",
+          "reading": "haa6 coeng4 saa1 wing6 taan1",
+          "text": "下長沙泳灘"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "zung1 gwok3 leoi5 haang4 se5",
+        "zung1 gwok3 leoi5 hang4 se5",
+        "zung1 gwok3 leoi5 hang6 se5",
+        "zung1 gwok3 leoi5 hong2 se5",
+        "zung1 gwok3 leoi5 hong4 se5"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 6232,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "中國旅行社",
+      "typeduck_candidate_rows": [
+        {
+          "line": 153473,
+          "percentage": 100.0,
+          "raw_reading": "zung1 gwok3 leoi5 hang4 se5",
+          "raw_weight": "100.0%",
+          "reading": "zung1 gwok3 leoi5 hang4 se5",
+          "text": "中國旅行社"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "zung1 waa4 gei1 duk1 gaau3 wui2",
+        "zung1 waa4 gei1 duk1 gaau3 wui3",
+        "zung1 waa4 gei1 duk1 gaau3 wui5",
+        "zung1 waa4 gei1 duk1 gaau3 wui6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 8454,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "中華基督教會",
+      "typeduck_candidate_rows": [
+        {
+          "line": 153882,
+          "percentage": 100.0,
+          "raw_reading": "zung1 waa4 gei1 duk1 gaau3 wui2",
+          "raw_weight": "100.0%",
+          "reading": "zung1 waa4 gei1 duk1 gaau3 wui2",
+          "text": "中華基督教會"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "zung1 gaan1 ou3",
+        "zung1 gaan3 ou3",
+        "zung1 haan4 ou3"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 9015,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "中間澳",
+      "typeduck_candidate_rows": [
+        {
+          "line": 153366,
+          "percentage": 100.0,
+          "raw_reading": "zung1 gaan1 ou3",
+          "raw_weight": "100.0%",
+          "reading": "zung1 gaan1 ou3",
+          "text": "中間澳"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "zung1 gaan1 dou6",
+        "zung1 gaan3 dou6",
+        "zung1 haan4 dou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 9018,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "中間道",
+      "typeduck_candidate_rows": [
+        {
+          "line": 153359,
+          "percentage": 100.0,
+          "raw_reading": "zung1 gaan1 dou6",
+          "raw_weight": "100.0%",
+          "reading": "zung1 gaan1 dou6",
+          "text": "中間道"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "gau2 lung4 sing4 zam3 seon3 wui2",
+        "gau2 lung4 sing4 zam3 seon3 wui3",
+        "gau2 lung4 sing4 zam3 seon3 wui5",
+        "gau2 lung4 sing4 zam3 seon3 wui6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 10291,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "九龍城浸信會",
+      "typeduck_candidate_rows": [
+        {
+          "line": 42737,
+          "percentage": 100.0,
+          "raw_reading": "gau2 lung4 sing4 zam3 seon3 wui2",
+          "raw_weight": "100.0%",
+          "reading": "gau2 lung4 sing4 zam3 seon3 wui2",
+          "text": "九龍城浸信會"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "jan4 paa3 ai1 mai5 paa3 sai1",
+        "jan4 paa3 ngai1 mai5 paa3 sai1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 13459,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "人怕𠼮米怕篩",
+      "typeduck_candidate_rows": [
+        {
+          "line": 64551,
+          "percentage": 100.0,
+          "raw_reading": "jan4 paa3 ngai1 mai5 paa3 sai1",
+          "raw_weight": "100.0%",
+          "reading": "jan4 paa3 ngai1 mai5 paa3 sai1",
+          "text": "人怕𠼮米怕篩"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "baak3 do1 luk6 guk6 coeng4 gaai1",
+        "baak3 do1 luk6 guk6 zoeng2 gaai1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 15694,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "伯多祿局長街",
+      "typeduck_candidate_rows": [
+        {
+          "line": 1917,
+          "percentage": 100.0,
+          "raw_reading": "baak3 do1 luk6 guk6 zoeng2 gaai1",
+          "raw_weight": "100.0%",
+          "reading": "baak3 do1 luk6 guk6 zoeng2 gaai1",
+          "text": "伯多祿局長街"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "nei5 hai6 mai1",
+        "nei5 hai6 mai5",
+        "nei5 hai6 mai6",
+        "nei5 hai6 mei1",
+        "nei5 hai6 mi1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 16659,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "你係咪",
+      "typeduck_candidate_rows": [
+        {
+          "line": 101501,
+          "percentage": 100.0,
+          "raw_reading": "nei5 hai6 mai6",
+          "raw_weight": "100.0%",
+          "reading": "nei5 hai6 mai6",
+          "text": "你係咪"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "hai6 mai1 nei5",
+        "hai6 mai5 nei5",
+        "hai6 mai6 nei5",
+        "hai6 mei1 nei5",
+        "hai6 mi1 nei5"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 21005,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "係咪你",
+      "typeduck_candidate_rows": [
+        {
+          "line": 54695,
+          "percentage": 100.0,
+          "raw_reading": "hai6 mai6 nei5",
+          "raw_weight": "100.0%",
+          "reading": "hai6 mai6 nei5",
+          "text": "係咪你"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "hai6 mai1 soeng2",
+        "hai6 mai5 soeng2",
+        "hai6 mai6 soeng2",
+        "hai6 mei1 soeng2",
+        "hai6 mi1 soeng2"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 21013,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "係咪想",
+      "typeduck_candidate_rows": [
+        {
+          "line": 54696,
+          "percentage": 100.0,
+          "raw_reading": "hai6 mai6 soeng2",
+          "raw_weight": "100.0%",
+          "reading": "hai6 mai6 soeng2",
+          "text": "係咪想"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "hai6 mai1 zan1 hai6",
+        "hai6 mai5 zan1 hai6",
+        "hai6 mai6 zan1 hai6",
+        "hai6 mei1 zan1 hai6",
+        "hai6 mi1 zan1 hai6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 21022,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "係咪真係",
+      "typeduck_candidate_rows": [
+        {
+          "line": 54699,
+          "percentage": 100.0,
+          "raw_reading": "hai6 mai6 zan1 hai6",
+          "raw_weight": "100.0%",
+          "reading": "hai6 mai6 zan1 hai6",
+          "text": "係咪真係"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "jyun4 long5 soeng1 wui2 zung1 hok6",
+        "jyun4 long5 soeng1 wui3 zung1 hok6",
+        "jyun4 long5 soeng1 wui5 zung1 hok6",
+        "jyun4 long5 soeng1 wui6 zung1 hok6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 26697,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "元朗商會中學",
+      "typeduck_candidate_rows": [
+        {
+          "line": 77093,
+          "percentage": 100.0,
+          "raw_reading": "jyun4 long5 soeng1 wui2 zung1 hok6",
+          "raw_weight": "100.0%",
+          "reading": "jyun4 long5 soeng1 wui2 zung1 hok6",
+          "text": "元朗商會中學"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "jyun4 long5 soeng1 wui2 siu2 hok6",
+        "jyun4 long5 soeng1 wui3 siu2 hok6",
+        "jyun4 long5 soeng1 wui5 siu2 hok6",
+        "jyun4 long5 soeng1 wui6 siu2 hok6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 26698,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "元朗商會小學",
+      "typeduck_candidate_rows": [
+        {
+          "line": 77092,
+          "percentage": 100.0,
+          "raw_reading": "jyun4 long5 soeng1 wui2 siu2 hok6",
+          "raw_weight": "100.0%",
+          "reading": "jyun4 long5 soeng1 wui2 siu2 hok6",
+          "text": "元朗商會小學"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "jap6 m4 dou2",
+        "jap6 m4 dou3"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 28442,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "入唔到",
+      "typeduck_candidate_rows": [
+        {
+          "line": 64966,
+          "percentage": 100.0,
+          "raw_reading": "jap6 m4 dou3",
+          "raw_weight": "100.0%",
+          "reading": "jap6 m4 dou3",
+          "text": "入唔到"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "baat3 gaan1",
+        "baat3 gaan3",
+        "baat3 haan4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 29358,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "八間",
+      "typeduck_candidate_rows": [
+        {
+          "line": 3487,
+          "percentage": 100.0,
+          "raw_reading": "baat3 gaan1",
+          "raw_weight": "100.0%",
+          "reading": "baat3 gaan1",
+          "text": "八間"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "luk6 gaan1",
+        "luk6 gaan3",
+        "luk6 haan4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 30119,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "六間",
+      "typeduck_candidate_rows": [
+        {
+          "line": 90749,
+          "percentage": 100.0,
+          "raw_reading": "luk6 gaan1",
+          "raw_weight": "100.0%",
+          "reading": "luk6 gaan1",
+          "text": "六間"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "dou2 gam1 jat6",
+        "dou3 gam1 jat6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 33519,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "到今日",
+      "typeduck_candidate_rows": [
+        {
+          "line": 30194,
+          "percentage": 100.0,
+          "raw_reading": "dou3 gam1 jat6",
+          "raw_weight": "100.0%",
+          "reading": "dou3 gam1 jat6",
+          "text": "到今日"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "dou2 keoi5",
+        "dou3 keoi5"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 33522,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "到佢",
+      "typeduck_candidate_rows": [
+        {
+          "line": 30206,
+          "percentage": 8.63,
+          "raw_reading": "dou3 heoi5",
+          "raw_weight": "8.63%",
+          "reading": "dou3 heoi5",
+          "text": "到佢"
+        },
+        {
+          "line": 30231,
+          "percentage": 100.0,
+          "raw_reading": "dou3 keoi5",
+          "raw_weight": "100.0%",
+          "reading": "dou3 keoi5",
+          "text": "到佢"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "dou2 uk1 kei5",
+        "dou3 uk1 kei5"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 33543,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "到屋企",
+      "typeduck_candidate_rows": [
+        {
+          "line": 30266,
+          "percentage": 100.0,
+          "raw_reading": "dou3 uk1 kei2",
+          "raw_weight": "100.0%",
+          "reading": "dou3 uk1 kei2",
+          "text": "到屋企"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "dou2 ji4 gaa1",
+        "dou3 ji4 gaa1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 33572,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "到而家",
+      "typeduck_candidate_rows": [
+        {
+          "line": 30216,
+          "percentage": 100.0,
+          "raw_reading": "dou3 ji4 gaa1",
+          "raw_weight": "100.0%",
+          "reading": "dou3 ji4 gaa1",
+          "text": "到而家"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "cong3 hing1 ngan4 haang4",
+        "cong3 hing1 ngan4 hang4",
+        "cong3 hing1 ngan4 hang6",
+        "cong3 hing1 ngan4 hong2",
+        "cong3 hing1 ngan4 hong4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 34690,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "創興銀行",
+      "typeduck_candidate_rows": [
+        {
+          "line": 19530,
+          "percentage": 100.0,
+          "raw_reading": "cong3 hing1 ngan4 hong4",
+          "raw_weight": "100.0%",
+          "reading": "cong3 hing1 ngan4 hong4",
+          "text": "創興銀行"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "gip3 gei1 haang4 wai2",
+        "gip3 gei1 haang4 wai4",
+        "gip3 gei1 haang4 wai6",
+        "gip3 gei1 hang4 wai2",
+        "gip3 gei1 hang4 wai4",
+        "gip3 gei1 hang4 wai6",
+        "gip3 gei1 hang6 wai2",
+        "gip3 gei1 hang6 wai4",
+        "gip3 gei1 hang6 wai6",
+        "gip3 gei1 hong2 wai2",
+        "gip3 gei1 hong2 wai4",
+        "gip3 gei1 hong2 wai6",
+        "gip3 gei1 hong4 wai2",
+        "gip3 gei1 hong4 wai4",
+        "gip3 gei1 hong4 wai6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 330771,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "劫機行為",
+      "typeduck_candidate_rows": [
+        {
+          "line": 45968,
+          "percentage": 100.0,
+          "raw_reading": "gip3 gei1 hang4 wai4",
+          "raw_weight": "100.0%",
+          "reading": "gip3 gei1 hang4 wai4",
+          "text": "劫機行為"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "hip3 deu6 dou6",
+        "hip3 diu6 dou6",
+        "hip3 tiu4 dou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 40561,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "協調道",
+      "typeduck_candidate_rows": [
+        {
+          "line": 58559,
+          "percentage": 100.0,
+          "raw_reading": "hip3 diu6 dou6",
+          "raw_weight": "100.0%",
+          "reading": "hip3 diu6 dou6",
+          "text": "協調道"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "naam4 joeng4 soeng1 jip6 ngan4 haang4",
+        "naam4 joeng4 soeng1 jip6 ngan4 hang4",
+        "naam4 joeng4 soeng1 jip6 ngan4 hang6",
+        "naam4 joeng4 soeng1 jip6 ngan4 hong2",
+        "naam4 joeng4 soeng1 jip6 ngan4 hong4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 42893,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "南洋商業銀行",
+      "typeduck_candidate_rows": [
+        {
+          "line": 100404,
+          "percentage": 100.0,
+          "raw_reading": "naam4 joeng2 soeng1 jip6 ngan4 hong4",
+          "raw_weight": "100.0%",
+          "reading": "naam4 joeng2 soeng1 jip6 ngan4 hong4",
+          "text": "南洋商業銀行"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "heoi3 coeng4 lung4",
+        "heoi3 zoeng2 lung4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 46039,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "去長隆",
+      "typeduck_candidate_rows": [
+        {
+          "line": 57759,
+          "percentage": 100.0,
+          "raw_reading": "heoi3 coeng4 lung4",
+          "raw_weight": "100.0%",
+          "reading": "heoi3 coeng4 lung4",
+          "text": "去長隆"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "ho2 m4 ho2 haang4",
+        "ho2 m4 ho2 hang4",
+        "ho2 m4 ho2 hang6",
+        "ho2 m4 ho2 hong2",
+        "ho2 m4 ho2 hong4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 47563,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "可唔可行",
+      "typeduck_candidate_rows": [
+        {
+          "line": 58912,
+          "percentage": 100.0,
+          "raw_reading": "ho2 m4 ho2 hang4",
+          "raw_weight": "100.0%",
+          "reading": "ho2 m4 ho2 hang4",
+          "text": "可唔可行"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "gat1 ou3 soeng5 wai4",
+        "gat1 ou3 soeng6 wai4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 49065,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "吉澳上圍",
+      "typeduck_candidate_rows": [
+        {
+          "line": 42222,
+          "percentage": 100.0,
+          "raw_reading": "gat1 ou3 soeng6 wai4",
+          "raw_weight": "100.0%",
+          "reading": "gat1 ou3 soeng6 wai4",
+          "text": "吉澳上圍"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "tung4 jat1 gaan1",
+        "tung4 jat1 gaan3",
+        "tung4 jat1 haan4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 49471,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "同一間",
+      "typeduck_candidate_rows": [
+        {
+          "line": 135162,
+          "percentage": 100.0,
+          "raw_reading": "tung4 jat1 gaan1",
+          "raw_weight": "100.0%",
+          "reading": "tung4 jat1 gaan1",
+          "text": "同一間"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "ne1 haang4",
+        "ne1 hang4",
+        "ne1 hang6",
+        "ne1 hong2",
+        "ne1 hong4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 53040,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "呢行",
+      "typeduck_candidate_rows": [
+        {
+          "line": 69196,
+          "percentage": 15.91,
+          "raw_reading": "ji1 hong4",
+          "raw_weight": "15.91%",
+          "reading": "ji1 hong4",
+          "text": "呢行"
+        },
+        {
+          "line": 101274,
+          "percentage": 100.0,
+          "raw_reading": "nei1 hong4",
+          "raw_weight": "100.0%",
+          "reading": "nei1 hong4",
+          "text": "呢行"
+        },
+        {
+          "line": 105116,
+          "percentage": 100.0,
+          "raw_reading": "ni1 hong4",
+          "raw_weight": "100.0%",
+          "reading": "ni1 hong4",
+          "text": "呢行"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "zau1 saang1 saang1",
+        "zau1 saang1 sang1",
+        "zau1 sang1 saang1",
+        "zau1 sang1 sang1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 53230,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "周生生",
+      "typeduck_candidate_rows": [
+        {
+          "line": 144095,
+          "percentage": 100.0,
+          "raw_reading": "zau1 sang1 sang1",
+          "raw_weight": "100.0%",
+          "reading": "zau1 sang1 sang1",
+          "text": "周生生"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "wo4 saang1 wai4",
+        "wo4 sang1 wai4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 54445,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "和生圍",
+      "typeduck_candidate_rows": [
+        {
+          "line": 139084,
+          "percentage": 100.0,
+          "raw_reading": "wo4 sang1 wai4",
+          "raw_weight": "100.0%",
+          "reading": "wo4 sang1 wai4",
+          "text": "和生圍"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "mai1 jat1 joeng6",
+        "mai5 jat1 joeng6",
+        "mai6 jat1 joeng6",
+        "mei1 jat1 joeng6",
+        "mi1 jat1 joeng6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 55115,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "咪一樣",
+      "typeduck_candidate_rows": [
+        {
+          "line": 93718,
+          "percentage": 100.0,
+          "raw_reading": "mai6 jat1 joeng6",
+          "raw_weight": "100.0%",
+          "reading": "mai6 jat1 joeng6",
+          "text": "咪一樣"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "mai1 heoi3",
+        "mai5 heoi3",
+        "mai6 heoi3",
+        "mei1 heoi3",
+        "mi1 heoi3"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 55128,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "咪去",
+      "typeduck_candidate_rows": [
+        {
+          "line": 93649,
+          "percentage": 100.0,
+          "raw_reading": "mai5 heoi3",
+          "raw_weight": "100.0%",
+          "reading": "mai5 heoi3",
+          "text": "咪去"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "mai1 gam3",
+        "mai5 gam3",
+        "mai6 gam3",
+        "mei1 gam3",
+        "mi1 gam3"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 55136,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "咪咁",
+      "typeduck_candidate_rows": [
+        {
+          "line": 93644,
+          "percentage": 100.0,
+          "raw_reading": "mai5 gam3",
+          "raw_weight": "100.0%",
+          "reading": "mai5 gam3",
+          "text": "咪咁"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "mai1 dak1 lo1",
+        "mai5 dak1 lo1",
+        "mai6 dak1 lo1",
+        "mei1 dak1 lo1",
+        "mi1 dak1 lo1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 55159,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "咪得囉",
+      "typeduck_candidate_rows": [
+        {
+          "line": 93713,
+          "percentage": 100.0,
+          "raw_reading": "mai6 dak1 lo1",
+          "raw_weight": "100.0%",
+          "reading": "mai6 dak1 lo1",
+          "text": "咪得囉"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "m4 dou2 keoi5",
+        "m4 dou3 keoi5"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 56256,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "唔到佢",
+      "typeduck_candidate_rows": [
+        {
+          "line": 91699,
+          "percentage": 13.26,
+          "raw_reading": "m4 dou3 heoi5",
+          "raw_weight": "13.26%",
+          "reading": "m4 dou3 heoi5",
+          "text": "唔到佢"
+        },
+        {
+          "line": 91700,
+          "percentage": 100.0,
+          "raw_reading": "m4 dou3 keoi5",
+          "raw_weight": "100.0%",
+          "reading": "m4 dou3 keoi5",
+          "text": "唔到佢"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "m4 dou2 ngo5",
+        "m4 dou3 ngo5"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 56261,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "唔到我",
+      "typeduck_candidate_rows": [
+        {
+          "line": 91702,
+          "percentage": 100.0,
+          "raw_reading": "m4 dou3 ngo5",
+          "raw_weight": "100.0%",
+          "reading": "m4 dou3 ngo5",
+          "text": "唔到我"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "m4 wui2 hai6",
+        "m4 wui3 hai6",
+        "m4 wui5 hai6",
+        "m4 wui6 hai6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 56590,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "唔會係",
+      "typeduck_candidate_rows": [
+        {
+          "line": 91926,
+          "percentage": 100.0,
+          "raw_reading": "m4 wui5 hai6",
+          "raw_weight": "100.0%",
+          "reading": "m4 wui5 hai6",
+          "text": "唔會係"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "gaa1 mui1 cin4 dei6",
+        "gaa1 mui2 cin4 dei6",
+        "gaa1 mui6 cin4 dei6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 59080,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "嘉妹前地",
+      "typeduck_candidate_rows": [
+        {
+          "line": 38425,
+          "percentage": 100.0,
+          "raw_reading": "gaa1 mui6 cin4 dei6",
+          "raw_weight": "100.0%",
+          "reading": "gaa1 mui6 cin4 dei6",
+          "text": "嘉妹前地"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "gei1 duk1 gaau3 sing3 joek3 gaau3 wui2",
+        "gei1 duk1 gaau3 sing3 joek3 gaau3 wui3",
+        "gei1 duk1 gaau3 sing3 joek3 gaau3 wui5",
+        "gei1 duk1 gaau3 sing3 joek3 gaau3 wui6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 66676,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "基督教聖約教會",
+      "typeduck_candidate_rows": [
+        {
+          "line": 43386,
+          "percentage": 100.0,
+          "raw_reading": "gei1 duk1 gaau3 sing3 joek3 gaau3 wui2",
+          "raw_weight": "100.0%",
+          "reading": "gei1 duk1 gaau3 sing3 joek3 gaau3 wui2",
+          "text": "基督教聖約教會"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "tong4 soeng5 cyun1",
+        "tong4 soeng6 cyun1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 67200,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "塘上村",
+      "typeduck_candidate_rows": [
+        {
+          "line": 134029,
+          "percentage": 100.0,
+          "raw_reading": "tong4 soeng6 cyun1",
+          "raw_weight": "100.0%",
+          "reading": "tong4 soeng6 cyun1",
+          "text": "塘上村"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "gau3 si4 gaan1",
+        "gau3 si4 gaan3",
+        "gau3 si4 haan4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 69191,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "夠時間",
+      "typeduck_candidate_rows": [
+        {
+          "line": 43089,
+          "percentage": 100.0,
+          "raw_reading": "gau3 si4 gaan3",
+          "raw_weight": "100.0%",
+          "reading": "gau3 si4 gaan3",
+          "text": "夠時間"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "daai6 saang1 wai4",
+        "daai6 sang1 wai4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 72949,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "大生圍",
+      "typeduck_candidate_rows": [
+        {
+          "line": 23423,
+          "percentage": 100.0,
+          "raw_reading": "daai6 sang1 wai4",
+          "raw_weight": "100.0%",
+          "reading": "daai6 sang1 wai4",
+          "text": "大生圍"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "daai6 nou5 soeng5 joeng4",
+        "daai6 nou5 soeng6 joeng4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 73577,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "大腦上洋",
+      "typeduck_candidate_rows": [
+        {
+          "line": 23311,
+          "percentage": 100.0,
+          "raw_reading": "daai6 nou5 soeng6 joeng4",
+          "raw_weight": "100.0%",
+          "reading": "daai6 nou5 soeng6 joeng4",
+          "text": "大腦上洋"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "tin1 jan4 ming4 caa4",
+        "tin1 jan4 ming5 caa4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 75016,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "天仁茗茶",
+      "typeduck_candidate_rows": [
+        {
+          "line": 132076,
+          "percentage": 100.0,
+          "raw_reading": "tin1 jan4 ming5 caa4",
+          "raw_weight": "100.0%",
+          "reading": "tin1 jan4 ming5 caa4",
+          "text": "天仁茗茶"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "jiu4 lin4 saang1 zung1 hok6",
+        "jiu4 lin4 sang1 zung1 hok6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 82710,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "姚連生中學",
+      "typeduck_candidate_rows": [
+        {
+          "line": 73669,
+          "percentage": 100.0,
+          "raw_reading": "jiu4 lin4 sang1 zung1 hok6",
+          "raw_weight": "100.0%",
+          "reading": "jiu4 lin4 sang1 zung1 hok6",
+          "text": "姚連生中學"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "maa1 gok3 soeng5 gaai1",
+        "maa1 gok3 soeng6 gaai1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 83669,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "媽閣上街",
+      "typeduck_candidate_rows": [
+        {
+          "line": 92282,
+          "percentage": 100.0,
+          "raw_reading": "maa5 gok3 soeng6 gaai1",
+          "raw_weight": "100.0%",
+          "reading": "maa5 gok3 soeng6 gaai1",
+          "text": "媽閣上街"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "syun1 dou6 wui2",
+        "syun1 dou6 wui3",
+        "syun1 dou6 wui5",
+        "syun1 dou6 wui6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 88149,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "宣道會",
+      "typeduck_candidate_rows": [
+        {
+          "line": 128959,
+          "percentage": 100.0,
+          "raw_reading": "syun1 dou6 wui2",
+          "raw_weight": "100.0%",
+          "reading": "syun1 dou6 wui2",
+          "text": "宣道會"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "fu3 bong1 ngan4 haang4",
+        "fu3 bong1 ngan4 hang4",
+        "fu3 bong1 ngan4 hang6",
+        "fu3 bong1 ngan4 hong2",
+        "fu3 bong1 ngan4 hong4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 91535,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "富邦銀行",
+      "typeduck_candidate_rows": [
+        {
+          "line": 36320,
+          "percentage": 100.0,
+          "raw_reading": "fu3 bong1 ngan4 hong4",
+          "raw_weight": "100.0%",
+          "reading": "fu3 bong1 ngan4 hong4",
+          "text": "富邦銀行"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "siu2 fei1 hap6 aa3 tung4 muk6",
+        "siu2 fei1 hap6 o1 tung4 muk6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 96519,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "小飛俠阿童木",
+      "typeduck_candidate_rows": [
+        {
+          "line": 124873,
+          "percentage": 100.0,
+          "raw_reading": "siu2 fei1 hap6 aa3 tung4 muk6",
+          "raw_weight": "100.0%",
+          "reading": "siu2 fei1 hap6 aa3 tung4 muk6",
+          "text": "小飛俠阿童木"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "ping4 wui2 zung1 sam1",
+        "ping4 wui3 zung1 sam1",
+        "ping4 wui5 zung1 sam1",
+        "ping4 wui6 zung1 sam1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 97603,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "屏會中心",
+      "typeduck_candidate_rows": [
+        {
+          "line": 109396,
+          "percentage": 100.0,
+          "raw_reading": "ping4 wui6 zung1 sam1",
+          "raw_weight": "100.0%",
+          "reading": "ping4 wui6 zung1 sam1",
+          "text": "屏會中心"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "ping4 wui2 gaai1",
+        "ping4 wui3 gaai1",
+        "ping4 wui5 gaai1",
+        "ping4 wui6 gaai1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 97604,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "屏會街",
+      "typeduck_candidate_rows": [
+        {
+          "line": 109395,
+          "percentage": 100.0,
+          "raw_reading": "ping4 wui6 gaai1",
+          "raw_weight": "100.0%",
+          "reading": "ping4 wui6 gaai1",
+          "text": "屏會街"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "tyun4 mun4 hoeng1 si6 wui2 lou6",
+        "tyun4 mun4 hoeng1 si6 wui3 lou6",
+        "tyun4 mun4 hoeng1 si6 wui5 lou6",
+        "tyun4 mun4 hoeng1 si6 wui6 lou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 97911,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "屯門鄉事會路",
+      "typeduck_candidate_rows": [
+        {
+          "line": 135437,
+          "percentage": 100.0,
+          "raw_reading": "tyun4 mun4 hoeng1 si6 wui2 lou6",
+          "raw_weight": "100.0%",
+          "reading": "tyun4 mun4 hoeng1 si6 wui2 lou6",
+          "text": "屯門鄉事會路"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "zoeng3 soeng5",
+        "zoeng3 soeng6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 99364,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "嶂上",
+      "typeduck_candidate_rows": [
+        {
+          "line": 151569,
+          "percentage": 100.0,
+          "raw_reading": "zoeng3 soeng6",
+          "raw_weight": "100.0%",
+          "reading": "zoeng3 soeng6",
+          "text": "嶂上"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "caa1 gun2 soeng5 gaai1",
+        "caa1 gun2 soeng6 gaai1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 100918,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "差館上街",
+      "typeduck_candidate_rows": [
+        {
+          "line": 9868,
+          "percentage": 100.0,
+          "raw_reading": "caa1 gun2 soeng6 gaai1",
+          "raw_weight": "100.0%",
+          "reading": "caa1 gun2 soeng6 gaai1",
+          "text": "差館上街"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "cong2 soeng1 wui2 zung1 hok6",
+        "cong2 soeng1 wui3 zung1 hok6",
+        "cong2 soeng1 wui5 zung1 hok6",
+        "cong2 soeng1 wui6 zung1 hok6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 106325,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "廠商會中學",
+      "typeduck_candidate_rows": [
+        {
+          "line": 19499,
+          "percentage": 100.0,
+          "raw_reading": "cong2 soeng1 wui2 zung1 hok6",
+          "raw_weight": "100.0%",
+          "reading": "cong2 soeng1 wui2 zung1 hok6",
+          "text": "廠商會中學"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "gin3 saang1",
+        "gin3 sang1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 111066,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "建生",
+      "typeduck_candidate_rows": [
+        {
+          "line": 45363,
+          "percentage": 100.0,
+          "raw_reading": "gin3 sang1",
+          "raw_weight": "100.0%",
+          "reading": "gin3 sang1",
+          "text": "建生"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "gin3 saang1 cyun1",
+        "gin3 sang1 cyun1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 111081,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "建生邨",
+      "typeduck_candidate_rows": [
+        {
+          "line": 45364,
+          "percentage": 100.0,
+          "raw_reading": "gin3 sang1 cyun1",
+          "raw_weight": "100.0%",
+          "reading": "gin3 sang1 cyun1",
+          "text": "建生邨"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "dak1 zeoi6 jan4 do1 cing1 fu1 jan4 siu2",
+        "dak1 zeoi6 jan4 do1 cing3 fu1 jan4 siu2"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 113937,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "得罪人多稱呼人少",
+      "typeduck_candidate_rows": [
+        {
+          "line": 25661,
+          "percentage": 100.0,
+          "raw_reading": "dak1 zeoi6 jan4 do1 cing1 fu1 jan4 siu2",
+          "raw_weight": "100.0%",
+          "reading": "dak1 zeoi6 jan4 do1 cing1 fu1 jan4 siu2",
+          "text": "得罪人多稱呼人少"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "ngo5 gin3 dou2",
+        "ngo5 gin3 dou3"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 124245,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "我見到",
+      "typeduck_candidate_rows": [
+        {
+          "line": 104346,
+          "percentage": 100.0,
+          "raw_reading": "ngo5 gin3 dou3",
+          "raw_weight": "100.0%",
+          "reading": "ngo5 gin3 dou3",
+          "text": "我見到"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "fong4 uk1 wai2 jyun4 wui2",
+        "fong4 uk1 wai2 jyun4 wui3",
+        "fong4 uk1 wai2 jyun4 wui5",
+        "fong4 uk1 wai2 jyun4 wui6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 124630,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "房屋委員會",
+      "typeduck_candidate_rows": [
+        {
+          "line": 35833,
+          "percentage": 100.0,
+          "raw_reading": "fong4 uk1 wai2 jyun4 wui2",
+          "raw_weight": "100.0%",
+          "reading": "fong4 uk1 wai2 jyun4 wui2",
+          "text": "房屋委員會"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "baat3 tau4 gu2",
+        "paa1 tau4 gu2",
+        "paa2 tau4 gu2",
+        "paa4 tau4 gu2"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 124877,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "扒頭鼓",
+      "typeduck_candidate_rows": [
+        {
+          "line": 107373,
+          "percentage": 100.0,
+          "raw_reading": "paa4 tau4 gu2",
+          "raw_weight": "100.0%",
+          "reading": "paa4 tau4 gu2",
+          "text": "扒頭鼓"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "baat3 tau4 gu2 bak1 waan1",
+        "paa1 tau4 gu2 bak1 waan1",
+        "paa2 tau4 gu2 bak1 waan1",
+        "paa4 tau4 gu2 bak1 waan1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 124878,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "扒頭鼓北灣",
+      "typeduck_candidate_rows": [
+        {
+          "line": 107374,
+          "percentage": 100.0,
+          "raw_reading": "paa4 tau4 gu2 bak1 waan1",
+          "raw_weight": "100.0%",
+          "reading": "paa4 tau4 gu2 bak1 waan1",
+          "text": "扒頭鼓北灣"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "baat3 tau4 gu2 naam4 waan1",
+        "paa1 tau4 gu2 naam4 waan1",
+        "paa2 tau4 gu2 naam4 waan1",
+        "paa4 tau4 gu2 naam4 waan1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 124879,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "扒頭鼓南灣",
+      "typeduck_candidate_rows": [
+        {
+          "line": 107375,
+          "percentage": 100.0,
+          "raw_reading": "paa4 tau4 gu2 naam4 waan1",
+          "raw_weight": "100.0%",
+          "reading": "paa4 tau4 gu2 naam4 waan1",
+          "text": "扒頭鼓南灣"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "daa2 m4 dou2",
+        "daa2 m4 dou3"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 124902,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "打唔到",
+      "typeduck_candidate_rows": [
+        {
+          "line": 22083,
+          "percentage": 100.0,
+          "raw_reading": "daa2 m4 dou2",
+          "raw_weight": "100.0%",
+          "reading": "daa2 m4 dou2",
+          "text": "打唔到"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "gaau2 dou2 ngo5",
+        "gaau2 dou3 ngo5"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 127318,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "搞到我",
+      "typeduck_candidate_rows": [
+        {
+          "line": 40258,
+          "percentage": 100.0,
+          "raw_reading": "gaau2 dou3 ngo5",
+          "raw_weight": "100.0%",
+          "reading": "gaau2 dou3 ngo5",
+          "text": "搞到我"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "mo1 lo4 soeng5 gaai1",
+        "mo1 lo4 soeng6 gaai1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 127607,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "摩羅上街",
+      "typeduck_candidate_rows": [
+        {
+          "line": 97024,
+          "percentage": 100.0,
+          "raw_reading": "mo1 lo4 soeng6 gaai1",
+          "raw_weight": "100.0%",
+          "reading": "mo1 lo4 soeng6 gaai1",
+          "text": "摩羅上街"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "sau1 m4 dou2",
+        "sau1 m4 dou3"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 128129,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "收唔到",
+      "typeduck_candidate_rows": [
+        {
+          "line": 117099,
+          "percentage": 100.0,
+          "raw_reading": "sau1 m4 dou3",
+          "raw_weight": "100.0%",
+          "reading": "sau1 m4 dou3",
+          "text": "收唔到"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "zing3 fu2 fei1 haang4 fuk6 mou6 deoi6",
+        "zing3 fu2 fei1 hang4 fuk6 mou6 deoi6",
+        "zing3 fu2 fei1 hang6 fuk6 mou6 deoi6",
+        "zing3 fu2 fei1 hong2 fuk6 mou6 deoi6",
+        "zing3 fu2 fei1 hong4 fuk6 mou6 deoi6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 128320,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "政府飛行服務隊",
+      "typeduck_candidate_rows": [
+        {
+          "line": 149557,
+          "percentage": 100.0,
+          "raw_reading": "zing3 fu2 fei1 hang4 fuk6 mou6 deoi6",
+          "raw_weight": "100.0%",
+          "reading": "zing3 fu2 fei1 hang4 fuk6 mou6 deoi6",
+          "text": "政府飛行服務隊"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "sok3 sap6 hong6",
+        "sou2 sap6 hong6",
+        "sou3 sap6 hong6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 128875,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "數十項",
+      "typeduck_candidate_rows": [
+        {
+          "line": 127882,
+          "percentage": 100.0,
+          "raw_reading": "sou3 sap6 hong6",
+          "raw_weight": "100.0%",
+          "reading": "sou3 sap6 hong6",
+          "text": "數十項"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "sok3 maa5 gong2 soeng1 coeng4",
+        "sou2 maa5 gong2 soeng1 coeng4",
+        "sou3 maa5 gong2 soeng1 coeng4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 128932,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "數碼港商場",
+      "typeduck_candidate_rows": [
+        {
+          "line": 127628,
+          "percentage": 100.0,
+          "raw_reading": "sou3 maa5 gong2 soeng1 coeng4",
+          "raw_weight": "100.0%",
+          "reading": "sou3 maa5 gong2 soeng1 coeng4",
+          "text": "數碼港商場"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "sok3 maa5 gong2 dou6",
+        "sou2 maa5 gong2 dou6",
+        "sou3 maa5 gong2 dou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 128936,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "數碼港道",
+      "typeduck_candidate_rows": [
+        {
+          "line": 127627,
+          "percentage": 100.0,
+          "raw_reading": "sou3 maa5 gong2 dou6",
+          "raw_weight": "100.0%",
+          "reading": "sou3 maa5 gong2 dou6",
+          "text": "數碼港道"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "san1 gaa3 fe1 waan1 wing6 taan1",
+        "san1 kaa1 fe1 waan1 wing6 taan1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 131786,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "新咖啡灣泳灘",
+      "typeduck_candidate_rows": [
+        {
+          "line": 114678,
+          "percentage": 100.0,
+          "raw_reading": "san1 gaa3 fe1 waan1 wing6 taan1",
+          "raw_weight": "100.0%",
+          "reading": "san1 gaa3 fe1 waan1 wing6 taan1",
+          "text": "新咖啡灣泳灘"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "san1 wui2 soeng1 wui2",
+        "san1 wui2 soeng1 wui3",
+        "san1 wui2 soeng1 wui5",
+        "san1 wui2 soeng1 wui6",
+        "san1 wui3 soeng1 wui2",
+        "san1 wui3 soeng1 wui3",
+        "san1 wui3 soeng1 wui5",
+        "san1 wui3 soeng1 wui6",
+        "san1 wui5 soeng1 wui2",
+        "san1 wui5 soeng1 wui3",
+        "san1 wui5 soeng1 wui5",
+        "san1 wui5 soeng1 wui6",
+        "san1 wui6 soeng1 wui2",
+        "san1 wui6 soeng1 wui3",
+        "san1 wui6 soeng1 wui5",
+        "san1 wui6 soeng1 wui6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 134499,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "新會商會",
+      "typeduck_candidate_rows": [
+        {
+          "line": 115064,
+          "percentage": 100.0,
+          "raw_reading": "san1 wui6 soeng1 wui2",
+          "raw_weight": "100.0%",
+          "reading": "san1 wui6 soeng1 wui2",
+          "text": "新會商會"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "san1 wui2 soeng1 wui2 zung1 hok6",
+        "san1 wui2 soeng1 wui3 zung1 hok6",
+        "san1 wui2 soeng1 wui5 zung1 hok6",
+        "san1 wui2 soeng1 wui6 zung1 hok6",
+        "san1 wui3 soeng1 wui2 zung1 hok6",
+        "san1 wui3 soeng1 wui3 zung1 hok6",
+        "san1 wui3 soeng1 wui5 zung1 hok6",
+        "san1 wui3 soeng1 wui6 zung1 hok6",
+        "san1 wui5 soeng1 wui2 zung1 hok6",
+        "san1 wui5 soeng1 wui3 zung1 hok6",
+        "san1 wui5 soeng1 wui5 zung1 hok6",
+        "san1 wui5 soeng1 wui6 zung1 hok6",
+        "san1 wui6 soeng1 wui2 zung1 hok6",
+        "san1 wui6 soeng1 wui3 zung1 hok6",
+        "san1 wui6 soeng1 wui5 zung1 hok6",
+        "san1 wui6 soeng1 wui6 zung1 hok6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 134500,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "新會商會中學",
+      "typeduck_candidate_rows": [
+        {
+          "line": 115066,
+          "percentage": 100.0,
+          "raw_reading": "san1 wui6 soeng1 wui2 zung1 hok6",
+          "raw_weight": "100.0%",
+          "reading": "san1 wui6 soeng1 wui2 zung1 hok6",
+          "text": "新會商會中學"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "san1 wui2 dou6",
+        "san1 wui3 dou6",
+        "san1 wui5 dou6",
+        "san1 wui6 dou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 134506,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "新會道",
+      "typeduck_candidate_rows": [
+        {
+          "line": 115062,
+          "percentage": 100.0,
+          "raw_reading": "san1 wui6 dou6",
+          "raw_weight": "100.0%",
+          "reading": "san1 wui6 dou6",
+          "text": "新會道"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "san1 saang1 san1 cyun1",
+        "san1 sang1 san1 cyun1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 136040,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "新生新村",
+      "typeduck_candidate_rows": [
+        {
+          "line": 114945,
+          "percentage": 100.0,
+          "raw_reading": "san1 sang1 san1 cyun1",
+          "raw_weight": "100.0%",
+          "reading": "san1 sang1 san1 cyun1",
+          "text": "新生新村"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "san1 saang1 cyun1",
+        "san1 sang1 cyun1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 136044,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "新生村",
+      "typeduck_candidate_rows": [
+        {
+          "line": 114943,
+          "percentage": 100.0,
+          "raw_reading": "san1 sang1 cyun1",
+          "raw_weight": "100.0%",
+          "reading": "san1 sang1 cyun1",
+          "text": "新生村"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "san1 dou1 wui2 gwong2 coeng4",
+        "san1 dou1 wui3 gwong2 coeng4",
+        "san1 dou1 wui5 gwong2 coeng4",
+        "san1 dou1 wui6 gwong2 coeng4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 138423,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "新都會廣場",
+      "typeduck_candidate_rows": [
+        {
+          "line": 114633,
+          "percentage": 100.0,
+          "raw_reading": "san1 dou1 wui6 gwong2 coeng4",
+          "raw_weight": "100.0%",
+          "reading": "san1 dou1 wui6 gwong2 coeng4",
+          "text": "新都會廣場"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "san1 sek3 lou6",
+        "san1 sek6 lou6",
+        "san1 sik3 lou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 138598,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "新錫路",
+      "typeduck_candidate_rows": [
+        {
+          "line": 114957,
+          "percentage": 100.0,
+          "raw_reading": "san1 sek3 lou6",
+          "raw_weight": "100.0%",
+          "reading": "san1 sek3 lou6",
+          "text": "新錫路"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "ming4 oi3 zyun1 soeng5 hok6 jyun2",
+        "ming4 oi3 zyun1 soeng6 hok6 jyun2"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 142562,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "明愛專上學院",
+      "typeduck_candidate_rows": [
+        {
+          "line": 96605,
+          "percentage": 100.0,
+          "raw_reading": "ming4 oi3 zyun1 soeng6 hok6 jyun2",
+          "raw_weight": "100.0%",
+          "reading": "ming4 oi3 zyun1 soeng6 hok6 jyun2",
+          "text": "明愛專上學院"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "si4 gaan1 long4",
+        "si4 gaan3 long4",
+        "si4 haan4 long4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 146317,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "時間廊",
+      "typeduck_candidate_rows": [
+        {
+          "line": 121686,
+          "percentage": 100.0,
+          "raw_reading": "si4 gaan3 long4",
+          "raw_weight": "100.0%",
+          "reading": "si4 gaan3 long4",
+          "text": "時間廊"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng3 haang4 dou6",
+        "coeng3 hang4 dou6",
+        "coeng3 hang6 dou6",
+        "coeng3 hong2 dou6",
+        "coeng3 hong4 dou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 148315,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "暢行道",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18521,
+          "percentage": 100.0,
+          "raw_reading": "coeng3 hang4 dou6",
+          "raw_weight": "100.0%",
+          "reading": "coeng3 hang4 dou6",
+          "text": "暢行道"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "gang3 saang1 waan1 wing6 taan1",
+        "gang3 sang1 waan1 wing6 taan1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 148828,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "更生灣泳灘",
+      "typeduck_candidate_rows": [
+        {
+          "line": 41931,
+          "percentage": 100.0,
+          "raw_reading": "gang1 sang1 waan1 wing6 taan1",
+          "raw_weight": "100.0%",
+          "reading": "gang1 sang1 waan1 wing6 taan1",
+          "text": "更生灣泳灘"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "cang4 hong4 saang1",
+        "cang4 hong4 sang1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 149144,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "曾航生",
+      "typeduck_candidate_rows": [
+        {
+          "line": 143530,
+          "percentage": 100.0,
+          "raw_reading": "zang1 hong4 sang1",
+          "raw_weight": "100.0%",
+          "reading": "zang1 hong4 sang1",
+          "text": "曾航生"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "wui2 m4 wui2 hai6",
+        "wui2 m4 wui3 hai6",
+        "wui2 m4 wui5 hai6",
+        "wui2 m4 wui6 hai6",
+        "wui3 m4 wui2 hai6",
+        "wui3 m4 wui3 hai6",
+        "wui3 m4 wui5 hai6",
+        "wui3 m4 wui6 hai6",
+        "wui5 m4 wui2 hai6",
+        "wui5 m4 wui3 hai6",
+        "wui5 m4 wui5 hai6",
+        "wui5 m4 wui6 hai6",
+        "wui6 m4 wui2 hai6",
+        "wui6 m4 wui3 hai6",
+        "wui6 m4 wui5 hai6",
+        "wui6 m4 wui6 hai6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 149279,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "會唔會係",
+      "typeduck_candidate_rows": [
+        {
+          "line": 140885,
+          "percentage": 100.0,
+          "raw_reading": "wui5 m4 wui5 hai6",
+          "raw_weight": "100.0%",
+          "reading": "wui5 m4 wui5 hai6",
+          "text": "會唔會係"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "wui2 zin2 zaam6",
+        "wui3 zin2 zaam6",
+        "wui5 zin2 zaam6",
+        "wui6 zin2 zaam6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 330646,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "會展站",
+      "typeduck_candidate_rows": [
+        {
+          "line": 141008,
+          "percentage": 100.0,
+          "raw_reading": "wui6 zin2 zaam6",
+          "raw_weight": "100.0%",
+          "reading": "wui6 zin2 zaam6",
+          "text": "會展站"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "wui2 dak1 fung1",
+        "wui3 dak1 fung1",
+        "wui5 dak1 fung1",
+        "wui6 dak1 fung1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 149324,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "會德豐",
+      "typeduck_candidate_rows": [
+        {
+          "line": 140950,
+          "percentage": 100.0,
+          "raw_reading": "wui6 dak1 fung1",
+          "raw_weight": "100.0%",
+          "reading": "wui6 dak1 fung1",
+          "text": "會德豐"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "wui2 so2 gaai1",
+        "wui3 so2 gaai1",
+        "wui5 so2 gaai1",
+        "wui6 so2 gaai1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 149329,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "會所街",
+      "typeduck_candidate_rows": [
+        {
+          "line": 140995,
+          "percentage": 100.0,
+          "raw_reading": "wui6 so2 gaai1",
+          "raw_weight": "100.0%",
+          "reading": "wui6 so2 gaai1",
+          "text": "會所街"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "wui2 ji5 dou6",
+        "wui3 ji5 dou6",
+        "wui5 ji5 dou6",
+        "wui6 ji5 dou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 149376,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "會議道",
+      "typeduck_candidate_rows": [
+        {
+          "line": 140977,
+          "percentage": 100.0,
+          "raw_reading": "wui6 ji5 dou6",
+          "raw_weight": "100.0%",
+          "reading": "wui6 ji5 dou6",
+          "text": "會議道"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "mei6 teng1",
+        "mei6 ting1",
+        "mei6 ting3"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 151095,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "未聽",
+      "typeduck_candidate_rows": [
+        {
+          "line": 95931,
+          "percentage": 100.0,
+          "raw_reading": "mei6 teng1",
+          "raw_weight": "100.0%",
+          "reading": "mei6 teng1",
+          "text": "未聽"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "dung1 gun2 tung4 hoeng1 wui2",
+        "dung1 gun2 tung4 hoeng1 wui3",
+        "dung1 gun2 tung4 hoeng1 wui5",
+        "dung1 gun2 tung4 hoeng1 wui6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 156374,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "東莞同鄉會",
+      "typeduck_candidate_rows": [
+        {
+          "line": 30951,
+          "percentage": 100.0,
+          "raw_reading": "dung1 gun2 tung4 hoeng1 wui2",
+          "raw_weight": "100.0%",
+          "reading": "dung1 gun2 tung4 hoeng1 wui2",
+          "text": "東莞同鄉會"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "baan2 coeng4 sau6 si1",
+        "baan2 zoeng2 sau6 si1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 157710,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "板長壽司",
+      "typeduck_candidate_rows": [
+        {
+          "line": 3163,
+          "percentage": 100.0,
+          "raw_reading": "baan2 zoeng2 sau6 si1",
+          "raw_weight": "100.0%",
+          "reading": "baan2 zoeng2 sau6 si1",
+          "text": "板長壽司"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "mui4 wo1 hoeng1 si6 wui2 lou6",
+        "mui4 wo1 hoeng1 si6 wui3 lou6",
+        "mui4 wo1 hoeng1 si6 wui5 lou6",
+        "mui4 wo1 hoeng1 si6 wui6 lou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 160783,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "梅窩鄉事會路",
+      "typeduck_candidate_rows": [
+        {
+          "line": 98853,
+          "percentage": 100.0,
+          "raw_reading": "mui4 wo1 hoeng1 si6 wui2 lou6",
+          "raw_weight": "100.0%",
+          "reading": "mui4 wo1 hoeng1 si6 wui2 lou6",
+          "text": "梅窩鄉事會路"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "min4 fong2 wui2 zung1 hok6",
+        "min4 fong2 wui3 zung1 hok6",
+        "min4 fong2 wui5 zung1 hok6",
+        "min4 fong2 wui6 zung1 hok6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 161255,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "棉紡會中學",
+      "typeduck_candidate_rows": [
+        {
+          "line": 96073,
+          "percentage": 100.0,
+          "raw_reading": "min4 fong2 wui2 zung1 hok6",
+          "raw_weight": "100.0%",
+          "reading": "min4 fong2 wui2 zung1 hok6",
+          "text": "棉紡會中學"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "man4 saang1 syu1 jyun2",
+        "man4 sang1 syu1 jyun2"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 170418,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "民生書院",
+      "typeduck_candidate_rows": [
+        {
+          "line": 94345,
+          "percentage": 100.0,
+          "raw_reading": "man4 sang1 syu1 jyun2",
+          "raw_weight": "100.0%",
+          "reading": "man4 sang1 syu1 jyun2",
+          "text": "民生書院"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "man4 saang1 gaai1",
+        "man4 sang1 gaai1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 170433,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "民生街",
+      "typeduck_candidate_rows": [
+        {
+          "line": 94344,
+          "percentage": 100.0,
+          "raw_reading": "man4 sang1 gaai1",
+          "raw_weight": "100.0%",
+          "reading": "man4 sang1 gaai1",
+          "text": "民生街"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "wing5 lung4 ngan4 haang4",
+        "wing5 lung4 ngan4 hang4",
+        "wing5 lung4 ngan4 hang6",
+        "wing5 lung4 ngan4 hong2",
+        "wing5 lung4 ngan4 hong4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 174677,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "永隆銀行",
+      "typeduck_candidate_rows": [
+        {
+          "line": 138805,
+          "percentage": 100.0,
+          "raw_reading": "wing5 lung4 ngan4 hong4",
+          "raw_weight": "100.0%",
+          "reading": "wing5 lung4 ngan4 hong4",
+          "text": "永隆銀行"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "saa1 tin4 hoeng1 si6 wui2 lou6",
+        "saa1 tin4 hoeng1 si6 wui3 lou6",
+        "saa1 tin4 hoeng1 si6 wui5 lou6",
+        "saa1 tin4 hoeng1 si6 wui6 lou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 178221,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "沙田鄉事會路",
+      "typeduck_candidate_rows": [
+        {
+          "line": 110975,
+          "percentage": 100.0,
+          "raw_reading": "saa1 tin4 hoeng1 si6 wui2 lou6",
+          "raw_weight": "100.0%",
+          "reading": "saa1 tin4 hoeng1 si6 wui2 lou6",
+          "text": "沙田鄉事會路"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "ho4 soeng5 hoeng1",
+        "ho4 soeng6 hoeng1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 178663,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "河上鄉",
+      "typeduck_candidate_rows": [
+        {
+          "line": 59173,
+          "percentage": 100.0,
+          "raw_reading": "ho4 soeng6 hoeng1",
+          "raw_weight": "100.0%",
+          "reading": "ho4 soeng6 hoeng1",
+          "text": "河上鄉"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "ho4 soeng5 hoeng1 lou6",
+        "ho4 soeng6 hoeng1 lou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 178667,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "河上鄉路",
+      "typeduck_candidate_rows": [
+        {
+          "line": 59174,
+          "percentage": 100.0,
+          "raw_reading": "ho4 soeng6 hoeng1 lou6",
+          "raw_weight": "100.0%",
+          "reading": "ho4 soeng6 hoeng1 lou6",
+          "text": "河上鄉路"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "zam3 wui2 daai6 hok6 dou6",
+        "zam3 wui3 daai6 hok6 dou6",
+        "zam3 wui5 daai6 hok6 dou6",
+        "zam3 wui6 daai6 hok6 dou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 186248,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "浸會大學道",
+      "typeduck_candidate_rows": [
+        {
+          "line": 143047,
+          "percentage": 100.0,
+          "raw_reading": "zam3 wui2 daai6 hok6 dou6",
+          "raw_weight": "100.0%",
+          "reading": "zam3 wui2 daai6 hok6 dou6",
+          "text": "浸會大學道"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "daam6 seoi2 waan1",
+        "taam5 seoi2 waan1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 186624,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "淡水灣",
+      "typeduck_candidate_rows": [
+        {
+          "line": 24023,
+          "percentage": 100.0,
+          "raw_reading": "daam6 seoi2 waan1",
+          "raw_weight": "100.0%",
+          "reading": "daam6 seoi2 waan1",
+          "text": "淡水灣"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "gong2 dou2 man4 saang1 syu1 jyun2",
+        "gong2 dou2 man4 sang1 syu1 jyun2"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 189680,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "港島民生書院",
+      "typeduck_candidate_rows": [
+        {
+          "line": 47586,
+          "percentage": 100.0,
+          "raw_reading": "gong2 dou2 man4 sang1 syu1 jyun2",
+          "raw_weight": "100.0%",
+          "reading": "gong2 dou2 man4 sang1 syu1 jyun2",
+          "text": "港島民生書院"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "gong2 ou3 seon3 ji6 wui2",
+        "gong2 ou3 seon3 ji6 wui3",
+        "gong2 ou3 seon3 ji6 wui5",
+        "gong2 ou3 seon3 ji6 wui6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 189814,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "港澳信義會",
+      "typeduck_candidate_rows": [
+        {
+          "line": 47702,
+          "percentage": 100.0,
+          "raw_reading": "gong2 ou3 seon3 ji6 wui2",
+          "raw_weight": "100.0%",
+          "reading": "gong2 ou3 seon3 ji6 wui2",
+          "text": "港澳信義會"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "ciu4 zau1 wui2 gun2",
+        "ciu4 zau1 wui3 gun2",
+        "ciu4 zau1 wui5 gun2",
+        "ciu4 zau1 wui6 gun2"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 195884,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "潮州會館",
+      "typeduck_candidate_rows": [
+        {
+          "line": 17928,
+          "percentage": 100.0,
+          "raw_reading": "ciu4 zau1 wui6 gun2",
+          "raw_weight": "100.0%",
+          "reading": "ciu4 zau1 wui6 gun2",
+          "text": "潮州會館"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "ciu4 zau1 wui2 gun2 zung1 hok6",
+        "ciu4 zau1 wui3 gun2 zung1 hok6",
+        "ciu4 zau1 wui5 gun2 zung1 hok6",
+        "ciu4 zau1 wui6 gun2 zung1 hok6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 195885,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "潮州會館中學",
+      "typeduck_candidate_rows": [
+        {
+          "line": 17929,
+          "percentage": 100.0,
+          "raw_reading": "ciu4 zau1 wui6 gun2 zung1 hok6",
+          "raw_weight": "100.0%",
+          "reading": "ciu4 zau1 wui6 gun2 zung1 hok6",
+          "text": "潮州會館中學"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "ngau4 tau4 gok3 soeng5 cyun1",
+        "ngau4 tau4 gok3 soeng6 cyun1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 201367,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "牛頭角上邨",
+      "typeduck_candidate_rows": [
+        {
+          "line": 104105,
+          "percentage": 100.0,
+          "raw_reading": "ngau4 tau4 gok3 soeng6 cyun1",
+          "raw_weight": "100.0%",
+          "reading": "ngau4 tau4 gok3 soeng6 cyun1",
+          "text": "牛頭角上邨"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "si1 zi2 wui2 zung1 hok6",
+        "si1 zi2 wui3 zung1 hok6",
+        "si1 zi2 wui5 zung1 hok6",
+        "si1 zi2 wui6 zung1 hok6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 202015,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "獅子會中學",
+      "typeduck_candidate_rows": [
+        {
+          "line": 121361,
+          "percentage": 100.0,
+          "raw_reading": "si1 zi2 wui2 zung1 hok6",
+          "raw_weight": "100.0%",
+          "reading": "si1 zi2 wui2 zung1 hok6",
+          "text": "獅子會中學"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "hin3 zyu2 wui2",
+        "hin3 zyu2 wui3",
+        "hin3 zyu2 wui5",
+        "hin3 zyu2 wui6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 202245,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "獻主會",
+      "typeduck_candidate_rows": [
+        {
+          "line": 58254,
+          "percentage": 100.0,
+          "raw_reading": "hin3 zyu2 wui2",
+          "raw_weight": "100.0%",
+          "reading": "hin3 zyu2 wui2",
+          "text": "獻主會"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "hin3 zyu2 wui2 siu2 hok6",
+        "hin3 zyu2 wui3 siu2 hok6",
+        "hin3 zyu2 wui5 siu2 hok6",
+        "hin3 zyu2 wui6 siu2 hok6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 202246,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "獻主會小學",
+      "typeduck_candidate_rows": [
+        {
+          "line": 58255,
+          "percentage": 100.0,
+          "raw_reading": "hin3 zyu2 wui2 siu2 hok6",
+          "raw_weight": "100.0%",
+          "reading": "hin3 zyu2 wui2 siu2 hok6",
+          "text": "獻主會小學"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "kam4 haang4 gaai1",
+        "kam4 hang4 gaai1",
+        "kam4 hang6 gaai1",
+        "kam4 hong2 gaai1",
+        "kam4 hong4 gaai1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 204538,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "琴行街",
+      "typeduck_candidate_rows": [
+        {
+          "line": 78281,
+          "percentage": 100.0,
+          "raw_reading": "kam4 hong2 gaai1",
+          "raw_weight": "100.0%",
+          "reading": "kam4 hong2 gaai1",
+          "text": "琴行街"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "saang1 joeng1 gaai1",
+        "sang1 joeng1 gaai1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 206860,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "生央街",
+      "typeduck_candidate_rows": [
+        {
+          "line": 112645,
+          "percentage": 100.0,
+          "raw_reading": "saang1 joeng1 gaai1",
+          "raw_weight": "100.0%",
+          "reading": "saang1 joeng1 gaai1",
+          "text": "生央街"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "jung6 m4 dou2",
+        "jung6 m4 dou3"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 207280,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "用唔到",
+      "typeduck_candidate_rows": [
+        {
+          "line": 75308,
+          "percentage": 100.0,
+          "raw_reading": "jung6 m4 dou3",
+          "raw_weight": "100.0%",
+          "reading": "jung6 m4 dou3",
+          "text": "用唔到"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "waa2 mei4 saan1",
+        "waa6 mei4 saan1",
+        "waak6 mei4 saan1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 208693,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "畫眉山",
+      "typeduck_candidate_rows": [
+        {
+          "line": 136179,
+          "percentage": 100.0,
+          "raw_reading": "waak6 mei4 saan1",
+          "raw_weight": "100.0%",
+          "reading": "waak6 mei4 saan1",
+          "text": "畫眉山"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "waa2 mei4 ging3",
+        "waa6 mei4 ging3",
+        "waak6 mei4 ging3"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 208694,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "畫眉徑",
+      "typeduck_candidate_rows": [
+        {
+          "line": 136178,
+          "percentage": 100.0,
+          "raw_reading": "waak6 mei4 ging3",
+          "raw_weight": "100.0%",
+          "reading": "waak6 mei4 ging3",
+          "text": "畫眉徑"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "dong1 hai6",
+        "dong3 hai6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 208764,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "當係",
+      "typeduck_candidate_rows": [
+        {
+          "line": 29705,
+          "percentage": 100.0,
+          "raw_reading": "dong3 hai6",
+          "raw_weight": "100.0%",
+          "reading": "dong3 hai6",
+          "text": "當係"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "baak6 maa5 haang4",
+        "baak6 maa5 hang4",
+        "baak6 maa5 hang6",
+        "baak6 maa5 hong2",
+        "baak6 maa5 hong4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 210468,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "白馬行",
+      "typeduck_candidate_rows": [
+        {
+          "line": 2766,
+          "percentage": 100.0,
+          "raw_reading": "baak6 maa5 hong4",
+          "raw_weight": "100.0%",
+          "reading": "baak6 maa5 hong4",
+          "text": "白馬行"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "sek6 soeng5 ho4",
+        "sek6 soeng6 ho4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 216606,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "石上河",
+      "typeduck_candidate_rows": [
+        {
+          "line": 119341,
+          "percentage": 100.0,
+          "raw_reading": "sek6 soeng6 ho4",
+          "raw_weight": "100.0%",
+          "reading": "sek6 soeng6 ho4",
+          "text": "石上河"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "san4 ziu6 wui2",
+        "san4 ziu6 wui3",
+        "san4 ziu6 wui5",
+        "san4 ziu6 wui6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 219615,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "神召會",
+      "typeduck_candidate_rows": [
+        {
+          "line": 115332,
+          "percentage": 100.0,
+          "raw_reading": "san4 ziu6 wui2",
+          "raw_weight": "100.0%",
+          "reading": "san4 ziu6 wui2",
+          "text": "神召會"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "wo4 soeng5 deon1",
+        "wo4 soeng6 deon1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 223605,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "禾上墩",
+      "typeduck_candidate_rows": [
+        {
+          "line": 139098,
+          "percentage": 100.0,
+          "raw_reading": "wo4 soeng6 deon1",
+          "raw_weight": "100.0%",
+          "reading": "wo4 soeng6 deon1",
+          "text": "禾上墩"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "wo4 soeng5 deon1 gaai1",
+        "wo4 soeng6 deon1 gaai1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 223606,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "禾上墩街",
+      "typeduck_candidate_rows": [
+        {
+          "line": 139099,
+          "percentage": 100.0,
+          "raw_reading": "wo4 soeng6 deon1 gaai1",
+          "raw_weight": "100.0%",
+          "reading": "wo4 soeng6 deon1 gaai1",
+          "text": "禾上墩街"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "zung2 zik6 dou6",
+        "zung3 zik6 dou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 225074,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "種植道",
+      "typeduck_candidate_rows": [
+        {
+          "line": 154126,
+          "percentage": 100.0,
+          "raw_reading": "zung2 zik6 dou6",
+          "raw_weight": "100.0%",
+          "reading": "zung2 zik6 dou6",
+          "text": "種植道"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "syun3 dak1 soeng5",
+        "syun3 dak1 soeng6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 227878,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "算得上",
+      "typeduck_candidate_rows": [
+        {
+          "line": 129133,
+          "percentage": 100.0,
+          "raw_reading": "syun3 dak1 soeng5",
+          "raw_weight": "100.0%",
+          "reading": "syun3 dak1 soeng5",
+          "text": "算得上"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "tong4 hing1 mui1",
+        "tong4 hing1 mui2",
+        "tong4 hing1 mui6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 229683,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "糖兄妹",
+      "typeduck_candidate_rows": [
+        {
+          "line": 133948,
+          "percentage": 100.0,
+          "raw_reading": "tong4 hing1 mui2",
+          "raw_weight": "100.0%",
+          "reading": "tong4 hing1 mui2",
+          "text": "糖兄妹"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "gong1 ngaa5 fu2",
+        "gong1 ngaa5 pou2",
+        "gong1 ngaa5 pou3"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 234540,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "缸瓦甫",
+      "typeduck_candidate_rows": [
+        {
+          "line": 47487,
+          "percentage": 100.0,
+          "raw_reading": "gong1 ngaa5 fu2",
+          "raw_weight": "100.0%",
+          "reading": "gong1 ngaa5 fu2",
+          "text": "缸瓦甫"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "mei5 soeng5 haau6 wai4",
+        "mei5 soeng6 haau6 wai4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 235496,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "美上校圍",
+      "typeduck_candidate_rows": [
+        {
+          "line": 95726,
+          "percentage": 100.0,
+          "raw_reading": "mei5 soeng6 gaau3 wai4",
+          "raw_weight": "100.0%",
+          "reading": "mei5 soeng6 gaau3 wai4",
+          "text": "美上校圍"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "sing3 on1 dong1",
+        "sing3 on1 dong3"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 241449,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "聖安當",
+      "typeduck_candidate_rows": [
+        {
+          "line": 123821,
+          "percentage": 100.0,
+          "raw_reading": "sing3 on1 dong1",
+          "raw_weight": "100.0%",
+          "reading": "sing3 on1 dong1",
+          "text": "聖安當"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "sing3 on1 dong1 neoi5 syu1 jyun2",
+        "sing3 on1 dong3 neoi5 syu1 jyun2"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 241450,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "聖安當女書院",
+      "typeduck_candidate_rows": [
+        {
+          "line": 123822,
+          "percentage": 100.0,
+          "raw_reading": "sing3 on1 dong1 neoi5 syu1 jyun2",
+          "raw_weight": "100.0%",
+          "reading": "sing3 on1 dong1 neoi5 syu1 jyun2",
+          "text": "聖安當女書院"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "sing3 on1 dong1 siu2 hok6",
+        "sing3 on1 dong3 siu2 hok6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 241451,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "聖安當小學",
+      "typeduck_candidate_rows": [
+        {
+          "line": 123823,
+          "percentage": 100.0,
+          "raw_reading": "sing3 on1 dong1 siu2 hok6",
+          "raw_weight": "100.0%",
+          "reading": "sing3 on1 dong1 siu2 hok6",
+          "text": "聖安當小學"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "lyun4 saang1 gung1 jip6 cyun1",
+        "lyun4 sang1 gung1 jip6 cyun1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 243342,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "聯生工業村",
+      "typeduck_candidate_rows": [
+        {
+          "line": 91521,
+          "percentage": 100.0,
+          "raw_reading": "lyun4 sang1 gung1 jip6 cyun1",
+          "raw_weight": "100.0%",
+          "reading": "lyun4 sang1 gung1 jip6 cyun1",
+          "text": "聯生工業村"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "teng1 m4 teng1",
+        "teng1 m4 ting1",
+        "teng1 m4 ting3",
+        "ting1 m4 teng1",
+        "ting1 m4 ting1",
+        "ting1 m4 ting3",
+        "ting3 m4 teng1",
+        "ting3 m4 ting1",
+        "ting3 m4 ting3"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 244037,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "聽唔聽",
+      "typeduck_candidate_rows": [
+        {
+          "line": 131475,
+          "percentage": 100.0,
+          "raw_reading": "teng1 m4 teng1",
+          "raw_weight": "100.0%",
+          "reading": "teng1 m4 teng1",
+          "text": "聽唔聽"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "gau6 gaa3 fe1 waan1 wing6 taan1",
+        "gau6 kaa1 fe1 waan1 wing6 taan1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 247984,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "舊咖啡灣泳灘",
+      "typeduck_candidate_rows": [
+        {
+          "line": 43151,
+          "percentage": 100.0,
+          "raw_reading": "gau6 gaa3 fe1 waan1 wing6 taan1",
+          "raw_weight": "100.0%",
+          "reading": "gau6 gaa3 fe1 waan1 wing6 taan1",
+          "text": "舊咖啡灣泳灘"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "faa1 dei6 maa5 gaau3 wui2 gaai1",
+        "faa1 dei6 maa5 gaau3 wui3 gaai1",
+        "faa1 dei6 maa5 gaau3 wui5 gaai1",
+        "faa1 dei6 maa5 gaau3 wui6 gaai1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 249724,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "花地瑪教會街",
+      "typeduck_candidate_rows": [
+        {
+          "line": 31608,
+          "percentage": 100.0,
+          "raw_reading": "faa1 dei6 maa5 gaau3 wui2 gaai1",
+          "raw_weight": "100.0%",
+          "reading": "faa1 dei6 maa5 gaau3 wui2 gaai1",
+          "text": "花地瑪教會街"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "faa1 kei4 ngan4 haang4 gwong2 coeng4",
+        "faa1 kei4 ngan4 hang4 gwong2 coeng4",
+        "faa1 kei4 ngan4 hang6 gwong2 coeng4",
+        "faa1 kei4 ngan4 hong2 gwong2 coeng4",
+        "faa1 kei4 ngan4 hong4 gwong2 coeng4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 249918,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "花旗銀行廣場",
+      "typeduck_candidate_rows": [
+        {
+          "line": 31687,
+          "percentage": 100.0,
+          "raw_reading": "faa1 kei4 ngan4 hong4 gwong2 coeng4",
+          "raw_weight": "100.0%",
+          "reading": "faa1 kei4 ngan4 hong4 gwong2 coeng4",
+          "text": "花旗銀行廣場"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "cyun4 waan1 soeng1 wui2 hok6 haau6",
+        "cyun4 waan1 soeng1 wui3 hok6 haau6",
+        "cyun4 waan1 soeng1 wui5 hok6 haau6",
+        "cyun4 waan1 soeng1 wui6 hok6 haau6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 252598,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "荃灣商會學校",
+      "typeduck_candidate_rows": [
+        {
+          "line": 21630,
+          "percentage": 100.0,
+          "raw_reading": "cyun4 waan1 soeng1 wui2 hok6 haau6",
+          "raw_weight": "100.0%",
+          "reading": "cyun4 waan1 soeng1 wui2 hok6 haau6",
+          "text": "荃灣商會學校"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "pou4 soeng5 cyun1",
+        "pou4 soeng6 cyun1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 254060,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "莆上村",
+      "typeduck_candidate_rows": [
+        {
+          "line": 110128,
+          "percentage": 100.0,
+          "raw_reading": "pou4 soeng6 cyun1",
+          "raw_weight": "100.0%",
+          "reading": "pou4 soeng6 cyun1",
+          "text": "莆上村"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "lok6 dei6 haam3 saam1 sing1 hou2 cau2 ming6 saang1 sing4",
+        "lok6 dei6 haam3 saam1 sing1 hou2 cau2 ming6 sang1 sing4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 262534,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "落地喊三聲好醜命生成",
+      "typeduck_candidate_rows": [
+        {
+          "line": 89055,
+          "percentage": 100.0,
+          "raw_reading": "lok6 dei6 haam3 saam1 seng1 hou2 cau2 meng6 saang1 seng4",
+          "raw_weight": "100.0%",
+          "reading": "lok6 dei6 haam3 saam1 seng1 hou2 cau2 meng6 saang1 seng4",
+          "text": "落地喊三聲好醜命生成"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "got3 loeng4 hung4 haau6 jau5 wui2",
+        "got3 loeng4 hung4 haau6 jau5 wui3",
+        "got3 loeng4 hung4 haau6 jau5 wui5",
+        "got3 loeng4 hung4 haau6 jau5 wui6",
+        "got3 loeng6 hung4 haau6 jau5 wui2",
+        "got3 loeng6 hung4 haau6 jau5 wui3",
+        "got3 loeng6 hung4 haau6 jau5 wui5",
+        "got3 loeng6 hung4 haau6 jau5 wui6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 262762,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "葛量洪校友會",
+      "typeduck_candidate_rows": [
+        {
+          "line": 47907,
+          "percentage": 100.0,
+          "raw_reading": "got3 loeng4 hung4 haau6 jau5 wui2",
+          "raw_weight": "100.0%",
+          "reading": "got3 loeng4 hung4 haau6 jau5 wui2",
+          "text": "葛量洪校友會"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "sou1 saa1 ji1 saang1 gaai1",
+        "sou1 saa1 ji1 sang1 gaai1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 265942,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "蘇沙醫生街",
+      "typeduck_candidate_rows": [
+        {
+          "line": 127089,
+          "percentage": 100.0,
+          "raw_reading": "sou1 saa1 ji1 sang1 gaai1",
+          "raw_weight": "100.0%",
+          "reading": "sou1 saa1 ji1 sang1 gaai1",
+          "text": "蘇沙醫生街"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "fu2 dei6 soeng5 cyun1",
+        "fu2 dei6 soeng6 cyun1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 266464,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "虎地上村",
+      "typeduck_candidate_rows": [
+        {
+          "line": 36143,
+          "percentage": 100.0,
+          "raw_reading": "fu2 dei6 soeng6 cyun1",
+          "raw_weight": "100.0%",
+          "reading": "fu2 dei6 soeng6 cyun1",
+          "text": "虎地上村"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "haang4 zing3 lou6",
+        "hang4 zing3 lou6",
+        "hang6 zing3 lou6",
+        "hong2 zing3 lou6",
+        "hong4 zing3 lou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 268229,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "行政路",
+      "typeduck_candidate_rows": [
+        {
+          "line": 55765,
+          "percentage": 100.0,
+          "raw_reading": "hang4 zing3 lou6",
+          "raw_weight": "100.0%",
+          "reading": "hang4 zing3 lou6",
+          "text": "行政路"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "cung1 jyun4 gok3",
+        "cung1 jyun4 haak3",
+        "cung1 jyun4 kat1",
+        "cung1 jyun4 lo1",
+        "cung1 jyun4 lo3",
+        "cung1 jyun4 lok3",
+        "cung1 jyun4 lok6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 268561,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "衝完咯",
+      "typeduck_candidate_rows": [
+        {
+          "line": 20317,
+          "percentage": 100.0,
+          "raw_reading": "cung1 jyun4 lok3",
+          "raw_weight": "100.0%",
+          "reading": "cung1 jyun4 lok3",
+          "text": "衝完咯"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "gin3 dou2 keoi5",
+        "gin3 dou3 keoi5"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 271922,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "見到佢",
+      "typeduck_candidate_rows": [
+        {
+          "line": 45259,
+          "percentage": 0.0,
+          "raw_reading": "gin3 dou2 heoi5",
+          "raw_weight": "0.0%",
+          "reading": "gin3 dou2 heoi5",
+          "text": "見到佢"
+        },
+        {
+          "line": 45261,
+          "percentage": 0.0,
+          "raw_reading": "gin3 dou2 keoi5",
+          "raw_weight": "0.0%",
+          "reading": "gin3 dou2 keoi5",
+          "text": "見到佢"
+        },
+        {
+          "line": 45264,
+          "percentage": 11.98,
+          "raw_reading": "gin3 dou3 heoi5",
+          "raw_weight": "11.98%",
+          "reading": "gin3 dou3 heoi5",
+          "text": "見到佢"
+        },
+        {
+          "line": 45266,
+          "percentage": 100.0,
+          "raw_reading": "gin3 dou3 keoi5",
+          "raw_weight": "100.0%",
+          "reading": "gin3 dou3 keoi5",
+          "text": "見到佢"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "deu6 ging2 ling5 zaam6",
+        "diu6 ging2 ling5 zaam6",
+        "tiu4 ging2 ling5 zaam6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 273768,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "調景嶺站",
+      "typeduck_candidate_rows": [
+        {
+          "line": 133072,
+          "percentage": 100.0,
+          "raw_reading": "tiu4 ging2 leng5 zaam6",
+          "raw_weight": "100.0%",
+          "reading": "tiu4 ging2 leng5 zaam6",
+          "text": "調景嶺站"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "nam2 dou2",
+        "nam2 dou3"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 273863,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "諗到",
+      "typeduck_candidate_rows": [
+        {
+          "line": 100891,
+          "percentage": 100.0,
+          "raw_reading": "nam2 dou2",
+          "raw_weight": "100.0%",
+          "reading": "nam2 dou2",
+          "text": "諗到"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "maai5 m4 dou2",
+        "maai5 m4 dou3"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 277077,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "買唔到",
+      "typeduck_candidate_rows": [
+        {
+          "line": 92724,
+          "percentage": 100.0,
+          "raw_reading": "maai5 m4 dou2",
+          "raw_weight": "100.0%",
+          "reading": "maai5 m4 dou2",
+          "text": "買唔到"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "jung2 joek6 bou3 ming4",
+        "jung5 joek6 bou3 ming4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 279924,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "踴躍報名",
+      "typeduck_candidate_rows": [
+        {
+          "line": 74978,
+          "percentage": 100.0,
+          "raw_reading": "jung2 joek3 bou3 meng2",
+          "raw_weight": "100.0%",
+          "reading": "jung2 joek3 bou3 meng2",
+          "text": "踴躍報名"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "zeoi1 m4 dou2",
+        "zeoi1 m4 dou3"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 282679,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "追唔到",
+      "typeduck_candidate_rows": [
+        {
+          "line": 145512,
+          "percentage": 100.0,
+          "raw_reading": "zeoi1 m4 dou3",
+          "raw_weight": "100.0%",
+          "reading": "zeoi1 m4 dou3",
+          "text": "追唔到"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "dou1 wui2 gwong2 coeng4",
+        "dou1 wui3 gwong2 coeng4",
+        "dou1 wui5 gwong2 coeng4",
+        "dou1 wui6 gwong2 coeng4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 286492,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "都會廣場",
+      "typeduck_candidate_rows": [
+        {
+          "line": 29947,
+          "percentage": 100.0,
+          "raw_reading": "dou1 wui6 gwong2 coeng4",
+          "raw_weight": "100.0%",
+          "reading": "dou1 wui6 gwong2 coeng4",
+          "text": "都會廣場"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "dou1 wui2 dou6",
+        "dou1 wui3 dou6",
+        "dou1 wui5 dou6",
+        "dou1 wui6 dou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 286502,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "都會道",
+      "typeduck_candidate_rows": [
+        {
+          "line": 29946,
+          "percentage": 100.0,
+          "raw_reading": "dou1 wui6 dou6",
+          "raw_weight": "100.0%",
+          "reading": "dou1 wui6 dou6",
+          "text": "都會道"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "hoeng1 si6 wui2 fong1",
+        "hoeng1 si6 wui3 fong1",
+        "hoeng1 si6 wui5 fong1",
+        "hoeng1 si6 wui6 fong1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 286655,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "鄉事會坊",
+      "typeduck_candidate_rows": [
+        {
+          "line": 59616,
+          "percentage": 100.0,
+          "raw_reading": "hoeng1 si6 wui2 fong1",
+          "raw_weight": "100.0%",
+          "reading": "hoeng1 si6 wui2 fong1",
+          "text": "鄉事會坊"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "hoeng1 si6 wui2 gaai1",
+        "hoeng1 si6 wui3 gaai1",
+        "hoeng1 si6 wui5 gaai1",
+        "hoeng1 si6 wui6 gaai1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 286656,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "鄉事會街",
+      "typeduck_candidate_rows": [
+        {
+          "line": 59617,
+          "percentage": 100.0,
+          "raw_reading": "hoeng1 si6 wui2 gaai1",
+          "raw_weight": "100.0%",
+          "reading": "hoeng1 si6 wui2 gaai1",
+          "text": "鄉事會街"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "cung4 si6 gaai1",
+        "cung5 si6 gaai1",
+        "zung6 si6 gaai1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 287633,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "重士街",
+      "typeduck_candidate_rows": [
+        {
+          "line": 20656,
+          "percentage": 100.0,
+          "raw_reading": "cung4 si6 gaai1",
+          "raw_weight": "100.0%",
+          "reading": "cung4 si6 gaai1",
+          "text": "重士街"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "cung4 waa4 lou6",
+        "cung5 waa4 lou6",
+        "zung6 waa4 lou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 287925,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "重華路",
+      "typeduck_candidate_rows": [
+        {
+          "line": 20688,
+          "percentage": 100.0,
+          "raw_reading": "cung4 waa4 lou6",
+          "raw_weight": "100.0%",
+          "reading": "cung4 waa4 lou6",
+          "text": "重華路"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "cung4 dim2 hai6",
+        "cung5 dim2 hai6",
+        "zung6 dim2 hai6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 287939,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "重點係",
+      "typeduck_candidate_rows": [
+        {
+          "line": 154309,
+          "percentage": 100.0,
+          "raw_reading": "zung6 dim2 hai6",
+          "raw_weight": "100.0%",
+          "reading": "zung6 dim2 hai6",
+          "text": "重點係"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "ngan4 haang4 gaai1",
+        "ngan4 hang4 gaai1",
+        "ngan4 hang6 gaai1",
+        "ngan4 hong2 gaai1",
+        "ngan4 hong4 gaai1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 296146,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "銀行街",
+      "typeduck_candidate_rows": [
+        {
+          "line": 103741,
+          "percentage": 100.0,
+          "raw_reading": "ngan4 hong4 gaai1",
+          "raw_weight": "100.0%",
+          "reading": "ngan4 hong4 gaai1",
+          "text": "銀行街"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "gam2 soeng5 lou6 zaam6",
+        "gam2 soeng6 lou6 zaam6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 296942,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "錦上路站",
+      "typeduck_candidate_rows": [
+        {
+          "line": 41406,
+          "percentage": 100.0,
+          "raw_reading": "gam2 soeng6 lou6 zaam6",
+          "raw_weight": "100.0%",
+          "reading": "gam2 soeng6 lou6 zaam6",
+          "text": "錦上路站"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "sek3 gong3 wai4",
+        "sek6 gong3 wai4",
+        "sik3 gong3 wai4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 298086,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "錫降圍",
+      "typeduck_candidate_rows": [
+        {
+          "line": 119103,
+          "percentage": 100.0,
+          "raw_reading": "sek3 gong3 wai4",
+          "raw_weight": "100.0%",
+          "reading": "sek3 gong3 wai4",
+          "text": "錫降圍"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "sek3 gong3 wai4 lou6",
+        "sek6 gong3 wai4 lou6",
+        "sik3 gong3 wai4 lou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 298087,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "錫降圍路",
+      "typeduck_candidate_rows": [
+        {
+          "line": 119104,
+          "percentage": 100.0,
+          "raw_reading": "sek3 gong3 wai4 lou6",
+          "raw_weight": "100.0%",
+          "reading": "sek3 gong3 wai4 lou6",
+          "text": "錫降圍路"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "sek3 gong3 cyun1",
+        "sek6 gong3 cyun1",
+        "sik3 gong3 cyun1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 298088,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "錫降村",
+      "typeduck_candidate_rows": [
+        {
+          "line": 119102,
+          "percentage": 100.0,
+          "raw_reading": "sek3 gong3 cyun1",
+          "raw_weight": "100.0%",
+          "reading": "sek3 gong3 cyun1",
+          "text": "錫降村"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 hang1 soeng1 coeng4",
+        "zoeng2 hang1 soeng1 coeng4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 299953,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長亨商場",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18718,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 hang1 soeng1 coeng4",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 hang1 soeng1 coeng4",
+          "text": "長亨商場"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 hang1 cyun1",
+        "zoeng2 hang1 cyun1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 299957,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長亨邨",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18717,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 hang1 cyun1",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 hang1 cyun1",
+          "text": "長亨邨"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 jan4 hong6",
+        "zoeng2 jan4 hong6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 299962,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長仁巷",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18730,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 jan4 hong2",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 jan4 hong2",
+          "text": "長仁巷"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 gin6 lou6",
+        "zoeng2 gin6 lou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 299988,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長健路",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18691,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 gin6 lou6",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 gin6 lou6",
+          "text": "長健路"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 zeoi2",
+        "zoeng2 zeoi2"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 300031,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長咀",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18942,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 zeoi2",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 zeoi2",
+          "text": "長咀"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 haang1 cyun1",
+        "zoeng2 haang1 cyun1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 300072,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長坑村",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18715,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 haang1 cyun1",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 haang1 cyun1",
+          "text": "長坑村"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 haang1 lou6",
+        "zoeng2 haang1 lou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 300074,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長坑路",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18716,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 haang1 lou6",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 haang1 lou6",
+          "text": "長坑路"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 sing4 gaai1",
+        "zoeng2 sing4 gaai1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 300167,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長城街",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18871,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 sing4 gaai1",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 sing4 gaai1",
+          "text": "長城街"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 hou2 gaai1",
+        "zoeng2 hou2 gaai1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 300281,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長好街",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18728,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 hou2 gaai1",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 hou2 gaai1",
+          "text": "長好街"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 on1 cyun1",
+        "zoeng2 on1 cyun1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 300337,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長安邨",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18810,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 on1 cyun1",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 on1 cyun1",
+          "text": "長安邨"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 wang4 cyun1",
+        "zoeng2 wang4 cyun1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 300358,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長宏邨",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18909,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 wang4 cyun1",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 wang4 cyun1",
+          "text": "長宏邨"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 sat6",
+        "zoeng2 sat6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 300372,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長實",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18855,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 sat6",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 sat6",
+          "text": "長實"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 ning4 gaai1",
+        "zoeng2 ning4 gaai1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 300380,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長寧街",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18807,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 ning4 gaai1",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 ning4 gaai1",
+          "text": "長寧街"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 kei1 gaai1",
+        "zoeng2 kei1 gaai1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 300403,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長崎街",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18744,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 kei4 gaai1",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 kei4 gaai1",
+          "text": "長崎街"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 hong1 gaai1",
+        "zoeng2 hong1 gaai1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 300509,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長康街",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18726,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 hong1 gaai1",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 hong1 gaai1",
+          "text": "長康街"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 hong1 cyun1",
+        "zoeng2 hong1 cyun1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 300510,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長康邨",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18725,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 hong1 cyun1",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 hong1 cyun1",
+          "text": "長康邨"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 paai4 tau4",
+        "zoeng2 paai4 tau4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 300560,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長排頭",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18814,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 paai4 tau4",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 paai4 tau4",
+          "text": "長排頭"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 wong6 dou6",
+        "zoeng2 wong6 dou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 300580,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長旺道",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18914,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 wong6 dou6",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 wong6 dou6",
+          "text": "長旺道"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 ceon1 san1 cyun1",
+        "zoeng2 ceon1 san1 cyun1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 300613,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長春新村",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18626,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 ceon1 san1 cyun1",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 ceon1 san1 cyun1",
+          "text": "長春新村"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 zi3 hong6",
+        "zoeng2 zi3 hong6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 300641,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長智巷",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18954,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 zi3 hong2",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 zi3 hong2",
+          "text": "長智巷"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 lok6 gaai1",
+        "zoeng2 lok6 gaai1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 300717,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長樂街",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18765,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 lok6 gaai1",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 lok6 gaai1",
+          "text": "長樂街"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 gong1 cyun1",
+        "zoeng2 gong1 cyun1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 300795,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長江村",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18701,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 gong1 cyun1",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 gong1 cyun1",
+          "text": "長江村"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 saa1 soeng5 cyun1",
+        "coeng4 saa1 soeng6 cyun1",
+        "zoeng2 saa1 soeng5 cyun1",
+        "zoeng2 saa1 soeng6 cyun1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 300855,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長沙上村",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18833,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 saa1 soeng6 cyun1",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 saa1 soeng6 cyun1",
+          "text": "長沙上村"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 saa1 haa6 cyun1",
+        "zoeng2 saa1 haa6 cyun1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 300857,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長沙下村",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18829,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 saa1 haa6 cyun1",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 saa1 haa6 cyun1",
+          "text": "長沙下村"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 saa1 laan4",
+        "zoeng2 saa1 laan4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 300883,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長沙欄",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18830,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 saa1 laan4",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 saa1 laan4",
+          "text": "長沙欄"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 saa1 waan1 ging3",
+        "zoeng2 saa1 waan1 ging3"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 300898,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長沙灣徑",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18837,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 saa1 waan1 ging3",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 saa1 waan1 ging3",
+          "text": "長沙灣徑"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 saa1 waan1 zaam6",
+        "zoeng2 saa1 waan1 zaam6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 300904,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長沙灣站",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18840,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 saa1 waan1 zaam6",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 saa1 waan1 zaam6",
+          "text": "長沙灣站"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 saa1 waan1 dou6",
+        "zoeng2 saa1 waan1 dou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 300911,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長沙灣道",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18836,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 saa1 waan1 dou6",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 saa1 waan1 dou6",
+          "text": "長沙灣道"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 saa1 waan1 cyun1",
+        "zoeng2 saa1 waan1 cyun1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 300912,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長沙灣邨",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18835,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 saa1 waan1 cyun1",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 saa1 waan1 cyun1",
+          "text": "長沙灣邨"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 saa1 gaai1",
+        "zoeng2 saa1 gaai1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 300930,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長沙街",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18828,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 saa1 gaai1",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 saa1 gaai1",
+          "text": "長沙街"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 zau1 gun1 laap6 zung1 hok6",
+        "zoeng2 zau1 gun1 laap6 zung1 hok6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 300972,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長洲官立中學",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18925,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 zau1 gun1 laap6 zung1 hok6",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 zau1 gun1 laap6 zung1 hok6",
+          "text": "長洲官立中學"
+        },
+        {
+          "line": 18926,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 zau1 gun1 lap6 zung1 hok6",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 zau1 gun1 lap6 zung1 hok6",
+          "text": "長洲官立中學"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 zau1 gaau3 tong4 lou6",
+        "zoeng2 zau1 gaau3 tong4 lou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 300992,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長洲教堂路",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18923,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 zau1 gaau3 tong4 lou6",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 zau1 gaau3 tong4 lou6",
+          "text": "長洲教堂路"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 zau1 dung1 tai4 lou6",
+        "zoeng2 zau1 dung1 tai4 lou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 300995,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長洲東堤路",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18921,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 zau1 dung1 tai4 lou6",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 zau1 dung1 tai4 lou6",
+          "text": "長洲東堤路"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 zau1 dung1 waan1 wing6 taan1",
+        "zoeng2 zau1 dung1 waan1 wing6 taan1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 300996,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長洲東灣泳灘",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18922,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 zau1 dung1 waan1 wing6 taan1",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 zau1 dung1 waan1 wing6 taan1",
+          "text": "長洲東灣泳灘"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 zau1 waan1",
+        "zoeng2 zau1 waan1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 301007,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長洲灣",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18937,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 zau1 waan1",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 zau1 waan1",
+          "text": "長洲灣"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 zau1 sai1 tai4 dou6",
+        "zoeng2 zau1 sai1 tai4 dou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 301026,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長洲西堤道",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18932,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 zau1 sai1 tai4 dou6",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 zau1 sai1 tai4 dou6",
+          "text": "長洲西堤道"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 zau1 ji1 jyun2",
+        "zoeng2 zau1 ji1 jyun2"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 301037,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長洲醫院",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18927,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 zau1 ji1 jyun2",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 zau1 ji1 jyun2",
+          "text": "長洲醫院"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 zau1 ji1 jyun2 lou6",
+        "zoeng2 zau1 ji1 jyun2 lou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 301038,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長洲醫院路",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18928,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 zau1 ji1 jyun2 lou6",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 zau1 ji1 jyun2 lou6",
+          "text": "長洲醫院路"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 zau1 tai2 juk6 lou6",
+        "zoeng2 zau1 tai2 juk6 lou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 301047,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長洲體育路",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18935,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 zau1 tai2 juk6 lou6",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 zau1 tai2 juk6 lou6",
+          "text": "長洲體育路"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 jyun4 lou6",
+        "zoeng2 jyun4 lou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 301139,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長源路",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18740,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 jyun4 lou6",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 jyun4 lou6",
+          "text": "長源路"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 lik1",
+        "zoeng2 lik1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 301150,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長瀝",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18758,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 lik6",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 lik6",
+          "text": "長瀝"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 lik1 mei5",
+        "zoeng2 lik1 mei5"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 301151,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長瀝尾",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18759,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 lik6 mei5",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 lik6 mei5",
+          "text": "長瀝尾"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 lik1 mei5 gaai1",
+        "zoeng2 lik1 mei5 gaai1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 301152,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長瀝尾街",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18760,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 lik6 mei5 gaai1",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 lik6 mei5 gaai1",
+          "text": "長瀝尾街"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 waan1",
+        "zoeng2 waan1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 301157,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長灣",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18905,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 waan1",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 waan1",
+          "text": "長灣"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 paai4 deon1",
+        "zoeng2 paai4 deon1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 301162,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長牌墩",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18813,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 paai4 deon1",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 paai4 deon1",
+          "text": "長牌墩"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 waan4 gaai1",
+        "zoeng2 waan4 gaai1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 301164,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長環街",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18906,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 waan4 gaai1",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 waan4 gaai1",
+          "text": "長環街"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 fu2 tau4",
+        "coeng4 pou2 tau4",
+        "coeng4 pou3 tau4",
+        "zoeng2 fu2 tau4",
+        "zoeng2 pou2 tau4",
+        "zoeng2 pou3 tau4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 301169,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長甫頭",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18671,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 fu2 tau4",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 fu2 tau4",
+          "text": "長甫頭"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 sing6 gaai1",
+        "zoeng2 sing6 gaai1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 301215,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長盛街",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18872,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 sing6 gaai1",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 sing6 gaai1",
+          "text": "長盛街"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 sek6 zeoi2",
+        "zoeng2 sek6 zeoi2"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 301226,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長石咀",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18862,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 sek6 zeoi2",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 sek6 zeoi2",
+          "text": "長石咀"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 sek6 lou6",
+        "zoeng2 sek6 lou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 301228,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長碩路",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18861,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 sek6 lou6",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 sek6 lou6",
+          "text": "長碩路"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 wo1",
+        "zoeng2 wo1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 301254,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長窩",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18910,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 wo1",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 wo1",
+          "text": "長窩"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 sok3",
+        "zoeng2 sok3"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 301286,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長索",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18878,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 sok3",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 sok3",
+          "text": "長索"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 ji6 gaai1",
+        "zoeng2 ji6 gaai1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 301296,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長義街",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18735,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 ji6 gaai1",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 ji6 gaai1",
+          "text": "長義街"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 mau6 gaai1",
+        "zoeng2 mau6 gaai1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 301412,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長茂街",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18773,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 mau6 gaai1",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 mau6 gaai1",
+          "text": "長茂街"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 lai6 gaai1",
+        "zoeng2 lai6 gaai1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 301414,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長荔街",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18754,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 lai6 gaai1",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 lai6 gaai1",
+          "text": "長荔街"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 jyu6 gaai1",
+        "zoeng2 jyu6 gaai1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 301486,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長裕街",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18738,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 jyu6 gaai1",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 jyu6 gaai1",
+          "text": "長裕街"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 gwai3 lou6",
+        "zoeng2 gwai3 lou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 301532,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長貴路",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18713,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 gwai3 lou6",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 gwai3 lou6",
+          "text": "長貴路"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 gwai3 cyun1",
+        "zoeng2 gwai3 cyun1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 301533,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長貴邨",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18712,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 gwai3 cyun1",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 gwai3 cyun1",
+          "text": "長貴邨"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 fai1 lou6",
+        "zoeng2 fai1 lou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 301542,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長輝路",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18668,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 fai1 lou6",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 fai1 lou6",
+          "text": "長輝路"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 lin4 saan1",
+        "zoeng2 lin4 saan1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 301557,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長連山",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18761,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 lin4 saan1",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 lin4 saan1",
+          "text": "長連山"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 daat6 lou6",
+        "zoeng2 daat6 lou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 301569,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長達路",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18650,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 daat6 lou6",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 daat6 lou6",
+          "text": "長達路"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 lung4 gaai1",
+        "zoeng2 lung4 gaai1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 301619,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長隆街",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18766,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 lung4 gaai1",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 lung4 gaai1",
+          "text": "長隆街"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 cing1 gung1 lou6",
+        "zoeng2 cing1 gung1 lou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 301628,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長青公路",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18632,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 cing1 gung1 lou6",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 cing1 gung1 lou6",
+          "text": "長青公路"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 cing1 soeng1 coeng4",
+        "zoeng2 cing1 soeng1 coeng4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 301630,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長青商場",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18634,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 cing1 soeng1 coeng4",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 cing1 soeng1 coeng4",
+          "text": "長青商場"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 cing1 cyun1",
+        "zoeng2 cing1 cyun1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 301649,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長青邨",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18631,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 cing1 cyun1",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 cing1 cyun1",
+          "text": "長青邨"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "coeng4 seon6 gaai1",
+        "zoeng2 seon6 gaai1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 301665,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "長順街",
+      "typeduck_candidate_rows": [
+        {
+          "line": 18863,
+          "percentage": 100.0,
+          "raw_reading": "coeng4 seon6 gaai1",
+          "raw_weight": "100.0%",
+          "reading": "coeng4 seon6 gaai1",
+          "text": "長順街"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "hoi1 m4 dou2",
+        "hoi1 m4 dou3"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 301900,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "開唔到",
+      "typeduck_candidate_rows": [
+        {
+          "line": 59981,
+          "percentage": 100.0,
+          "raw_reading": "hoi1 m4 dou3",
+          "raw_weight": "100.0%",
+          "reading": "hoi1 m4 dou3",
+          "text": "開唔到"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "aa3 gung1 waan1",
+        "o1 gung1 waan1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 302781,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "阿公灣",
+      "typeduck_candidate_rows": [
+        {
+          "line": 211,
+          "percentage": 100.0,
+          "raw_reading": "aa3 gung1 waan1",
+          "raw_weight": "100.0%",
+          "reading": "aa3 gung1 waan1",
+          "text": "阿公灣"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "din6 seon3 sok3 maa5",
+        "din6 seon3 sou2 maa5",
+        "din6 seon3 sou3 maa5"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 309671,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "電訊數碼",
+      "typeduck_candidate_rows": [
+        {
+          "line": 28018,
+          "percentage": 100.0,
+          "raw_reading": "din6 seon3 sou3 maa5",
+          "raw_weight": "100.0%",
+          "reading": "din6 seon3 sou3 maa5",
+          "text": "電訊數碼"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "ling4 wui2 saan1",
+        "ling4 wui3 saan1",
+        "ling4 wui5 saan1",
+        "ling4 wui6 saan1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 310041,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "靈會山",
+      "typeduck_candidate_rows": [
+        {
+          "line": 86988,
+          "percentage": 100.0,
+          "raw_reading": "ling4 wui6 saan1",
+          "raw_weight": "100.0%",
+          "reading": "ling4 wui6 saan1",
+          "text": "靈會山"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "cing1 nin4 wui2 zyun1 jip6 syu1 jyun2",
+        "cing1 nin4 wui3 zyun1 jip6 syu1 jyun2",
+        "cing1 nin4 wui5 zyun1 jip6 syu1 jyun2",
+        "cing1 nin4 wui6 zyun1 jip6 syu1 jyun2"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 310291,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "青年會專業書院",
+      "typeduck_candidate_rows": [
+        {
+          "line": 17043,
+          "percentage": 100.0,
+          "raw_reading": "cing1 nin4 wui6 zyun1 jip6 syu1 jyun2",
+          "raw_weight": "100.0%",
+          "reading": "cing1 nin4 wui6 zyun1 jip6 syu1 jyun2",
+          "text": "青年會專業書院"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "cing1 nin4 wui2 syu1 jyun2",
+        "cing1 nin4 wui3 syu1 jyun2",
+        "cing1 nin4 wui5 syu1 jyun2",
+        "cing1 nin4 wui6 syu1 jyun2"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 310293,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "青年會書院",
+      "typeduck_candidate_rows": [
+        {
+          "line": 17042,
+          "percentage": 100.0,
+          "raw_reading": "cing1 nin4 wui2 syu1 jyun2",
+          "raw_weight": "100.0%",
+          "reading": "cing1 nin4 wui2 syu1 jyun2",
+          "text": "青年會書院"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "cing1 zau1 soeng5 gaai1",
+        "cing1 zau1 soeng6 gaai1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 310452,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "青洲上街",
+      "typeduck_candidate_rows": [
+        {
+          "line": 17165,
+          "percentage": 100.0,
+          "raw_reading": "cing1 zau1 soeng6 gaai1",
+          "raw_weight": "100.0%",
+          "reading": "cing1 zau1 soeng6 gaai1",
+          "text": "青洲上街"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "cing1 miu4 kam4 haang4",
+        "cing1 miu4 kam4 hang4",
+        "cing1 miu4 kam4 hang6",
+        "cing1 miu4 kam4 hong2",
+        "cing1 miu4 kam4 hong4"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 310563,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "青苗琴行",
+      "typeduck_candidate_rows": [
+        {
+          "line": 17027,
+          "percentage": 100.0,
+          "raw_reading": "cing1 miu4 kam4 hang4",
+          "raw_weight": "100.0%",
+          "reading": "cing1 miu4 kam4 hang4",
+          "text": "青苗琴行"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "cing1 ji1 soeng1 wui2 siu2 hok6",
+        "cing1 ji1 soeng1 wui3 siu2 hok6",
+        "cing1 ji1 soeng1 wui5 siu2 hok6",
+        "cing1 ji1 soeng1 wui6 siu2 hok6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 310677,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "青衣商會小學",
+      "typeduck_candidate_rows": [
+        {
+          "line": 16959,
+          "percentage": 100.0,
+          "raw_reading": "cing1 ji1 soeng1 wui2 siu2 hok6",
+          "raw_weight": "100.0%",
+          "reading": "cing1 ji1 soeng1 wui2 siu2 hok6",
+          "text": "青衣商會小學"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "cing1 ji1 hoeng1 si6 wui2 lou6",
+        "cing1 ji1 hoeng1 si6 wui3 lou6",
+        "cing1 ji1 hoeng1 si6 wui5 lou6",
+        "cing1 ji1 hoeng1 si6 wui6 lou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 310723,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "青衣鄉事會路",
+      "typeduck_candidate_rows": [
+        {
+          "line": 16949,
+          "percentage": 100.0,
+          "raw_reading": "cing1 ji1 hoeng1 si6 wui2 lou6",
+          "raw_weight": "100.0%",
+          "reading": "cing1 ji1 hoeng1 si6 wui2 lou6",
+          "text": "青衣鄉事會路"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "jam1 deu6 hong6",
+        "jam1 diu6 hong6",
+        "jam1 tiu4 hong6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 311664,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "音調巷",
+      "typeduck_candidate_rows": [
+        {
+          "line": 63441,
+          "percentage": 100.0,
+          "raw_reading": "jam1 diu6 hong6",
+          "raw_weight": "100.0%",
+          "reading": "jam1 diu6 hong6",
+          "text": "音調巷"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "hoeng1 gong2 zai2 zam3 seon3 wui2",
+        "hoeng1 gong2 zai2 zam3 seon3 wui3",
+        "hoeng1 gong2 zai2 zam3 seon3 wui5",
+        "hoeng1 gong2 zai2 zam3 seon3 wui6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 316028,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "香港仔浸信會",
+      "typeduck_candidate_rows": [
+        {
+          "line": 59499,
+          "percentage": 100.0,
+          "raw_reading": "hoeng1 gong2 zai2 zam3 seon3 wui2",
+          "raw_weight": "100.0%",
+          "reading": "hoeng1 gong2 zai2 zam3 seon3 wui2",
+          "text": "香港仔浸信會"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "hoeng1 gong2 zyun1 soeng5 hok6 jyun2",
+        "hoeng1 gong2 zyun1 soeng6 hok6 jyun2"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 316184,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "香港專上學院",
+      "typeduck_candidate_rows": [
+        {
+          "line": 59529,
+          "percentage": 100.0,
+          "raw_reading": "hoeng1 gong2 zyun1 soeng6 hok6 jyun2",
+          "raw_weight": "100.0%",
+          "reading": "hoeng1 gong2 zyun1 soeng6 hok6 jyun2",
+          "text": "香港專上學院"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "hoeng1 gong2 saang1 caan2 lik6 cuk1 zeon3 guk6",
+        "hoeng1 gong2 sang1 caan2 lik6 cuk1 zeon3 guk6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 316349,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "香港生產力促進局",
+      "typeduck_candidate_rows": [
+        {
+          "line": 59458,
+          "percentage": 100.0,
+          "raw_reading": "hoeng1 gong2 sang1 caan2 lik6 cuk1 zeon3 guk2",
+          "raw_weight": "100.0%",
+          "reading": "hoeng1 gong2 sang1 caan2 lik6 cuk1 zeon3 guk2",
+          "text": "香港生產力促進局"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "maa5 liu2 seoi2 san1 cyun1",
+        "maa5 liu6 seoi2 san1 cyun1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 317397,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "馬料水新村",
+      "typeduck_candidate_rows": [
+        {
+          "line": 92406,
+          "percentage": 100.0,
+          "raw_reading": "maa5 liu6 seoi2 san1 cyun1",
+          "raw_weight": "100.0%",
+          "reading": "maa5 liu6 seoi2 san1 cyun1",
+          "text": "馬料水新村"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "maa5 wui2 dou6",
+        "maa5 wui3 dou6",
+        "maa5 wui5 dou6",
+        "maa5 wui6 dou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 317416,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "馬會道",
+      "typeduck_candidate_rows": [
+        {
+          "line": 92562,
+          "percentage": 100.0,
+          "raw_reading": "maa5 wui2 dou6",
+          "raw_weight": "100.0%",
+          "reading": "maa5 wui2 dou6",
+          "text": "馬會道"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "maa5 waan1 hoeng1 si6 wui2 lou6",
+        "maa5 waan1 hoeng1 si6 wui3 lou6",
+        "maa5 waan1 hoeng1 si6 wui5 lou6",
+        "maa5 waan1 hoeng1 si6 wui6 lou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 317502,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "馬灣鄉事會路",
+      "typeduck_candidate_rows": [
+        {
+          "line": 92549,
+          "percentage": 100.0,
+          "raw_reading": "maa5 waan1 hoeng1 si6 wui2 lou6",
+          "raw_weight": "100.0%",
+          "reading": "maa5 waan1 hoeng1 si6 wui2 lou6",
+          "text": "馬灣鄉事會路"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "gou1 haang4 lou6",
+        "gou1 hang4 lou6",
+        "gou1 hang6 lou6",
+        "gou1 hong2 lou6",
+        "gou1 hong4 lou6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 319947,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "高行路",
+      "typeduck_candidate_rows": [
+        {
+          "line": 48097,
+          "percentage": 100.0,
+          "raw_reading": "gou1 hang4 lou6",
+          "raw_weight": "100.0%",
+          "reading": "gou1 hang4 lou6",
+          "text": "高行路"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "sin1 jyu2 haang4 hok6 haau6",
+        "sin1 jyu2 hang4 hok6 haau6",
+        "sin1 jyu2 hang6 hok6 haau6",
+        "sin1 jyu2 hong2 hok6 haau6",
+        "sin1 jyu2 hong4 hok6 haau6"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 321449,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "鮮魚行學校",
+      "typeduck_candidate_rows": [
+        {
+          "line": 122960,
+          "percentage": 100.0,
+          "raw_reading": "sin1 jyu4 hong2 hok6 haau6",
+          "raw_weight": "100.0%",
+          "reading": "sin1 jyu4 hong2 hok6 haau6",
+          "text": "鮮魚行學校"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "wong4 daai6 sin1 soeng5 cyun1",
+        "wong4 daai6 sin1 soeng6 cyun1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 328318,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "黃大仙上邨",
+      "typeduck_candidate_rows": [
+        {
+          "line": 139357,
+          "percentage": 100.0,
+          "raw_reading": "wong4 daai6 sin1 soeng6 cyun1",
+          "raw_weight": "100.0%",
+          "reading": "wong4 daai6 sin1 soeng6 cyun1",
+          "text": "黃大仙上邨"
+        }
+      ]
+    },
+    {
+      "current_ledger_codes": [
+        "hak1 gau2 tau1 sik6 baak6 gau2 dong1 zoi1",
+        "hak1 gau2 tau1 sik6 baak6 gau2 dong3 zoi1"
+      ],
+      "existing_text_frequency_for_review_priority": 0,
+      "line": 329666,
+      "source": "jyut6ping3.phrase.dict.yaml",
+      "text": "黑狗偷食白狗當災",
+      "typeduck_candidate_rows": [
+        {
+          "line": 53337,
+          "percentage": 107.18,
+          "raw_reading": "haak1 gau2 tau1 sik6 baak6 gau2 dong1 zoi1",
+          "raw_weight": "107.18%",
+          "reading": "haak1 gau2 tau1 sik6 baak6 gau2 dong1 zoi1",
+          "text": "黑狗偷食白狗當災"
+        },
+        {
+          "line": 54862,
+          "percentage": 100.0,
+          "raw_reading": "hak1 gau2 tau1 sik6 baak6 gau2 dong1 zoi1",
+          "raw_weight": "100.0%",
+          "reading": "hak1 gau2 tau1 sik6 baak6 gau2 dong1 zoi1",
+          "text": "黑狗偷食白狗當災"
+        }
+      ]
+    }
+  ],
+  "approved_for_live_import": false,
+  "audit_tool_sha256": "bd170b56ce80d86eb5a56038b59dc9e88aad006ea59172d88c418f5d5b5e9189",
+  "candidate_lock_sha256": "6e63509d1fb8d872c7819abc4fd4031e7a9b261e4e8c6a9f6d43724acc9a874a",
+  "counts": {
+    "absent_from_current_authored_pairs": 34364,
+    "absent_from_current_live_pairs": 27850,
+    "canonical_pairs": 155509,
+    "excluded_noncanonical_rows": 2,
+    "maximum_percentage": 785.1,
+    "new_pair_categories": {
+      "multiple_codepoint_text:positive_percent": 25837,
+      "multiple_codepoint_text:zero_percent": 52,
+      "single_codepoint_text:positive_percent": 823,
+      "single_codepoint_text:zero_percent": 1138
+    },
+    "new_texts_vs_current_live": 22229,
+    "overlap_current_authored_pairs": 121145,
+    "overlap_current_live_pairs": 127659,
+    "raw_data_rows": 155511,
+    "unique_texts": 143735,
+    "zero_percentage_rows": 4667
+  },
+  "database_sha256": "aec269744279a5d85a9f5ca459b9a04f060ae53c29b975fd4aab132d90fab39d",
+  "description_component_matches": {},
+  "description_components_without_authored_readings": [
+    "乄",
+    "乊",
+    "乛",
+    "纟",
+    "罓",
+    "肀",
+    "覀",
+    "讠",
+    "钅",
+    "阝",
+    "饣",
+    "𠃍",
+    "𠃑",
+    "𧘇"
+  ],
+  "excluded_rows": [
+    {
+      "line": 21793,
+      "percentage": 100.0,
+      "raw_reading": "~daa2 ~dak1",
+      "raw_weight": "100.0%",
+      "reading": "~daa2 ~dak1",
+      "reason": "Noncanonical reading syntax; source markers retained, not stripped.",
+      "text": "🦆"
+    },
+    {
+      "line": 130344,
+      "percentage": 100.0,
+      "raw_reading": "~tai1 ~dak1",
+      "raw_weight": "100.0%",
+      "reading": "~tai1 ~dak1",
+      "reason": "Noncanonical reading syntax; source markers retained, not stripped.",
+      "text": "🐧"
+    }
+  ],
+  "header": [
+    "",
+    "---",
+    "name: jyut6ping3",
+    "version: \"2026.09.04\"",
+    "sort: by_weight",
+    "use_preset_vocabulary: true",
+    "..."
+  ],
+  "interpretation_limits": [
+    "All three downloaded files remain unmodified candidates; no current entries or review decisions are changed.",
+    "Explicit table notation differs from independently audited authorship. Export/generation and per-row source lineage remain unresolved.",
+    "The repository README declares principal data CC BY 4.0, but has no per-row origin manifest. No categorical assertion of ODbL presence or absence is made.",
+    "Percentages are source ranking values, some above 100; they are not imported or treated as measured reading frequencies or probabilities.",
+    "Overlap with generated readings is shared output, not an independent held-out correctness result or an automatic phrase resolution."
+  ],
+  "phrase_ledger_coverage": {
+    "already_explicit": {
+      "candidate_pairs": 108,
+      "matched_text_rows": 65,
+      "outside_recorded_codes": 17,
+      "same_as_recorded_generated_codes": 91,
+      "source_phrase_rows": 390,
+      "zero_percentage_candidate_pairs": 23
+    },
+    "encoded_ambiguous": {
+      "candidate_pairs": 324,
+      "matched_text_rows": 314,
+      "outside_recorded_codes": 31,
+      "same_as_recorded_generated_codes": 293,
+      "source_phrase_rows": 29537,
+      "zero_percentage_candidate_pairs": 2
+    },
+    "encoded_unique": {
+      "candidate_pairs": 6905,
+      "matched_text_rows": 6751,
+      "outside_recorded_codes": 683,
+      "same_as_recorded_generated_codes": 6222,
+      "source_phrase_rows": 300694,
+      "zero_percentage_candidate_pairs": 1
+    },
+    "truncated": {
+      "source_phrase_rows": 80
+    }
+  },
+  "purpose": "Isolated candidate delta only. Explicit file rows are not independently proven human-authored or contextually correct.",
+  "review_priority_frequency_sha256": "d08836175f598219f43c2f2f9e12e12711212dbefe08d57b2eddb7a9d9f22a5d",
+  "schema_version": 1,
+  "source_sha256": "e54eab6a3ef4328e0803e65fe4320f088329d1f0496cf7b1576dc1d0d2e28a6b"
+}

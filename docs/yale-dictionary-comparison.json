@@ -1,0 +1,338 @@
+{
+  "database_sha256": "3fccc5bcf45cbb676b8a1a51e2030d418803af64b3cd5c0ae7d67cf90a4711bb",
+  "independent_rebuild_sha256": "3fccc5bcf45cbb676b8a1a51e2030d418803af64b3cd5c0ae7d67cf90a4711bb",
+  "new_counts": [
+    736570,
+    621245
+  ],
+  "added_pairs": 129609,
+  "old_texts_missing": [],
+  "old_pairs_replaced": [
+    [
+      "係咪先",
+      "hai6 mai1 sin1",
+      "generated"
+    ],
+    [
+      "係咪先",
+      "hai6 mai5 sin1",
+      "generated"
+    ],
+    [
+      "係咪先",
+      "hai6 mei1 sin1",
+      "generated"
+    ],
+    [
+      "係咪先",
+      "hai6 mi1 sin1",
+      "generated"
+    ],
+    [
+      "只抽",
+      "zi2 cau1",
+      "generated"
+    ],
+    [
+      "唔使多謝",
+      "m4 si2 do1 ze6",
+      "generated"
+    ],
+    [
+      "單眼簷",
+      "daan1 ngaan5 sim4",
+      "generated"
+    ],
+    [
+      "喺呢度",
+      "hai2 ne1 dou6",
+      "generated"
+    ],
+    [
+      "嗱嗱淋",
+      "laa1 laa1 lam4",
+      "generated"
+    ],
+    [
+      "嗱嗱淋",
+      "laa1 laa2 lam4",
+      "generated"
+    ],
+    [
+      "嗱嗱淋",
+      "laa1 laa4 lam4",
+      "generated"
+    ],
+    [
+      "嗱嗱淋",
+      "laa1 laa5 lam4",
+      "generated"
+    ],
+    [
+      "嗱嗱淋",
+      "laa1 naa4 lam4",
+      "generated"
+    ],
+    [
+      "嗱嗱淋",
+      "laa2 laa1 lam4",
+      "generated"
+    ],
+    [
+      "嗱嗱淋",
+      "laa2 laa2 lam4",
+      "generated"
+    ],
+    [
+      "嗱嗱淋",
+      "laa2 laa4 lam4",
+      "generated"
+    ],
+    [
+      "嗱嗱淋",
+      "laa2 laa5 lam4",
+      "generated"
+    ],
+    [
+      "嗱嗱淋",
+      "laa2 naa4 lam4",
+      "generated"
+    ],
+    [
+      "嗱嗱淋",
+      "laa4 laa1 lam4",
+      "generated"
+    ],
+    [
+      "嗱嗱淋",
+      "laa4 laa2 lam4",
+      "generated"
+    ],
+    [
+      "嗱嗱淋",
+      "laa4 laa4 lam4",
+      "generated"
+    ],
+    [
+      "嗱嗱淋",
+      "laa4 laa5 lam4",
+      "generated"
+    ],
+    [
+      "嗱嗱淋",
+      "laa4 naa4 lam4",
+      "generated"
+    ],
+    [
+      "嗱嗱淋",
+      "laa5 laa1 lam4",
+      "generated"
+    ],
+    [
+      "嗱嗱淋",
+      "laa5 laa2 lam4",
+      "generated"
+    ],
+    [
+      "嗱嗱淋",
+      "laa5 laa4 lam4",
+      "generated"
+    ],
+    [
+      "嗱嗱淋",
+      "laa5 laa5 lam4",
+      "generated"
+    ],
+    [
+      "嗱嗱淋",
+      "laa5 naa4 lam4",
+      "generated"
+    ],
+    [
+      "嗱嗱淋",
+      "naa4 laa1 lam4",
+      "generated"
+    ],
+    [
+      "嗱嗱淋",
+      "naa4 laa2 lam4",
+      "generated"
+    ],
+    [
+      "嗱嗱淋",
+      "naa4 laa4 lam4",
+      "generated"
+    ],
+    [
+      "嗱嗱淋",
+      "naa4 laa5 lam4",
+      "generated"
+    ],
+    [
+      "得未呀",
+      "dak1 mei6 aa4",
+      "generated"
+    ],
+    [
+      "心驚驚",
+      "sam1 ging1 ging1",
+      "generated"
+    ],
+    [
+      "念口黃",
+      "nim6 hau2 wong4",
+      "generated"
+    ],
+    [
+      "手袋店",
+      "sau2 doi6 dim3",
+      "generated"
+    ],
+    [
+      "折咗",
+      "zit3 zo2",
+      "generated"
+    ],
+    [
+      "拍姜咁拍",
+      "paak3 goeng1 gam3 paak3",
+      "generated"
+    ],
+    [
+      "拗痕",
+      "aau3 han4",
+      "generated"
+    ],
+    [
+      "捻化",
+      "nip6 faa3",
+      "generated"
+    ],
+    [
+      "數碼影像",
+      "sok3 maa5 jing2 zoeng6",
+      "generated"
+    ],
+    [
+      "數碼影像",
+      "sou2 maa5 jing2 zoeng6",
+      "generated"
+    ],
+    [
+      "松人",
+      "cung4 jan4",
+      "generated"
+    ],
+    [
+      "林沉",
+      "lam4 cam4",
+      "generated"
+    ],
+    [
+      "正鬥",
+      "zing3 dau3",
+      "generated"
+    ],
+    [
+      "派士",
+      "paai3 si6",
+      "generated"
+    ],
+    [
+      "爭好遠",
+      "zang1 hou2 jyun5",
+      "generated"
+    ],
+    [
+      "白牌",
+      "baak6 paai4",
+      "generated"
+    ],
+    [
+      "眼蒙",
+      "ngaan5 mung4",
+      "generated"
+    ],
+    [
+      "着鞋",
+      "zoek6 haai4",
+      "generated"
+    ],
+    [
+      "瞓唔著",
+      "fan3 m4 zoek3",
+      "generated"
+    ],
+    [
+      "瞓唔著",
+      "fan3 m4 zyu3",
+      "generated"
+    ],
+    [
+      "砣表",
+      "to4 biu2",
+      "generated"
+    ],
+    [
+      "硬系",
+      "ngaang6 hai6",
+      "generated"
+    ],
+    [
+      "禁著",
+      "gam3 zoek3",
+      "generated"
+    ],
+    [
+      "禁著",
+      "gam3 zoek6",
+      "generated"
+    ],
+    [
+      "禁著",
+      "gam3 zyu3",
+      "generated"
+    ],
+    [
+      "著實",
+      "zoek3 sat6",
+      "generated"
+    ],
+    [
+      "著實",
+      "zyu3 sat6",
+      "generated"
+    ],
+    [
+      "著燈",
+      "zoek3 dang1",
+      "generated"
+    ],
+    [
+      "著燈",
+      "zyu3 dang1",
+      "generated"
+    ],
+    [
+      "表肉",
+      "biu2 juk6",
+      "generated"
+    ],
+    [
+      "衰衰啖",
+      "seoi1 seoi1 daam6",
+      "generated"
+    ],
+    [
+      "踢燕",
+      "tek3 jin3",
+      "generated"
+    ],
+    [
+      "醒唔起",
+      "sing2 m4 hei2",
+      "generated"
+    ]
+  ],
+  "replacement_reason": "Previously generated alternatives superseded by explicit whole-word Cantonese source readings; every former text is retained. CC character readings are excluded from phrase autoencoding."
+}

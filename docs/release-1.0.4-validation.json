@@ -1,0 +1,46 @@
+{
+  "version": "1.0.4",
+  "package_checks_passed": true,
+  "standard_installer_status": "completed_exit_0",
+  "setup": {
+    "filename": "CantoneseIME-1.0.4-windows-x64-setup.exe",
+    "bytes": 84636835,
+    "sha256": "cbc10c6c19bde2b1f792144fdab767173f5d0878d5245268fc5e416ff0e34a20"
+  },
+  "package_manifest_sha256": "053883f38aba3f64a3dde186954b41075e728b9bfca5a33435d85593a7f2d79f",
+  "installed_payload_files_verified": 121,
+  "installed_checks_passed": 9,
+  "explicit_brand_resource_id": 101,
+  "registered_icon_location_signed": -101,
+  "registered_icon_location_dword": 4294967195,
+  "both_machine_profiles_verified": true,
+  "fresh_user_enabled": {
+    "0409": false,
+    "0c04": true
+  },
+  "engine_status": "ready",
+  "english_us_keyboard_retained": true,
+  "unrelated_input_preferences_and_explicit_ui_default_settings_preserved": true,
+  "legacy_default_query_changed_observed": false,
+  "learning_hash_size_timestamp_unchanged_during_setup": true,
+  "learning_contents_copied": false,
+  "package_builder_checks_passed": 19,
+  "native_category_fixtures_passed": 15,
+  "helper_guards_passed": 18,
+  "production_registration_profile_captures": 2,
+  "captured_resource_pixel_matches": 8,
+  "core_engine_dictionary_dll_migration_lifecycle_changed": false,
+  "switcher_visual_acceptance": "FAILED: user reopened picker and confirmed icon area still blank after 1.0.4",
+  "limitations": [
+    "User visually confirmed blank switcher icon after successful metadata update; 1.0.4 did not resolve that issue.",
+    "Clean-machine and Windows 11 acceptance pending",
+    "Actual uninstall and sign-in startup pending"
+  ],
+  "evidence_sha256": {
+    "windows-installer-repair-evidence/2026-10-23/build-1.0.4.json": "4ae3386bdda75cc8d630349fcea093491ac108a8e3199906f6330e3abf3fae64",
+    "windows-installer-repair-evidence/2026-10-23/native-profile-icon-1.0.4.json": "ba39a6b7d93cdbf1ef9c56cef5bec7aad8a172b8da2303eb1b070c1351cac287",
+    "windows-installer-repair-evidence/2026-10-23/icon-extraction-1.0.4.json": "fbcdb85dc48b985f8b2e0af2190ea46ebb5fecb5a898e5bd321007673397e7b4",
+    "windows-installer-repair-evidence/2026-10-23/installed-1.0.4.json": "7e9df1a217a4484b7fd6b353a62c59cb52a3915b93039969875f54773af32656",
+    "windows-installer-repair-evidence/2026-10-23/setup-1.0.4-completion.json": "545e3ad7fed51038b74f7776eaa44fb524250b69c53e4077eccb0cf0049dfa31"
+  }
+}

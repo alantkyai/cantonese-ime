@@ -1,0 +1,190 @@
+{
+  "archive_members": [
+    {
+      "name": "Unihan_DictionaryIndices.txt",
+      "sha256": "b41c7c5ca3a01d833ed4fe0c7b9cdf41c4ec08cb11a0fd1df6e92ed666ce00e1",
+      "size_bytes": 8921637
+    },
+    {
+      "name": "Unihan_DictionaryLikeData.txt",
+      "sha256": "cce221e3d4719c9fa7f0068d2a86bd0d8f3bf5725a21a77d00fc4f784d5520ed",
+      "size_bytes": 4129290
+    },
+    {
+      "name": "Unihan_IRGSources.txt",
+      "sha256": "e2c484cd22b54f7e0ce896ebb02f33e092b92325accf0fd55e0e14e3863869eb",
+      "size_bytes": 13379351
+    },
+    {
+      "name": "Unihan_NumericValues.txt",
+      "sha256": "ea986cec09192efa3b527049fca964682b394d42b0ce0e15dbe1321dec2dc7e6",
+      "size_bytes": 4990
+    },
+    {
+      "name": "Unihan_OtherMappings.txt",
+      "sha256": "fc7bbb8f923fa1e922a4d421aa15387d1c68250cc5e7619bdf81f575ab38472b",
+      "size_bytes": 3715847
+    },
+    {
+      "name": "Unihan_RadicalStrokeCounts.txt",
+      "sha256": "9330f089ebb61426b277951b319775aa6e3a3e56900f6381cab915891cd4fda9",
+      "size_bytes": 600881
+    },
+    {
+      "name": "Unihan_Readings.txt",
+      "sha256": "9d39995b5de714e8ce93716ed5d15eaa0792d68e407cdf8a0add2893b8f4150b",
+      "size_bytes": 8844571
+    },
+    {
+      "name": "Unihan_Variants.txt",
+      "sha256": "4ccfd34b08ac7b9c14353f6668ba43e3796d85c4cdce7952b635be16015aafa2",
+      "size_bytes": 726700
+    }
+  ],
+  "archive_url": "https://www.unicode.org/Public/18.0.0/ucd/Unihan.zip",
+  "audit_files": [
+    {
+      "name": "audit.py",
+      "origin": "project_authored_offline_audit",
+      "path": "data/candidates/vendor/unihan/18.0.0/audit.py",
+      "sha256": "876c5d90eabb2fda7ab29175901032aa17164d5d70ed8920786712bc4f77fef2",
+      "size_bytes": 8321
+    },
+    {
+      "name": "audit.summary.json",
+      "origin": "derived_candidate_comparison",
+      "path": "data/candidates/vendor/unihan/18.0.0/audit.summary.json",
+      "sha256": "77e5b05d863cf0818c9a4cb5bd49b7cd053b3d62d450e8eaa039940cc16048c4",
+      "size_bytes": 9024
+    },
+    {
+      "name": "new-pairs.tsv",
+      "origin": "derived_candidate_delta",
+      "path": "data/candidates/vendor/unihan/18.0.0/new-pairs.tsv",
+      "sha256": "f391f6b1ac50eef4959a2b3d8c0a00186b395941a4e32369622c5df9e65ecab6",
+      "size_bytes": 191080
+    }
+  ],
+  "audit_reference_inputs": [
+    {
+      "path": "data/mappings/syllables.json",
+      "sha256": "f9f9e3774f59b9cfc3e57424f9024f92b9f89719cb5d73badafd6bccb5bd6413"
+    },
+    {
+      "path": "data/review/path_limited_phrases.tsv",
+      "sha256": "655e05a466050dcb2d30d44e5c72f16b91ff8b6fa09e9ddc86f3d36ae85632da"
+    }
+  ],
+  "audit_reproduction_policy": "Require the original candidate baseline SHA-256 aec269744279a5d85a9f5ca459b9a04f060ae53c29b975fd4aab132d90fab39d; later selected-source builds must not overwrite this historical comparison.",
+  "candidate_status": "audit_only_not_selected",
+  "comparison": {
+    "baseline_pairs": 576125,
+    "baseline_sha256": "aec269744279a5d85a9f5ca459b9a04f060ae53c29b975fd4aab132d90fab39d",
+    "counts": {
+      "missing_components_still_without_kCantonese": 3,
+      "missing_components_with_direct_kCantonese": 11,
+      "new_pairs_vs_authored": 2899,
+      "new_pairs_vs_baseline": 2899,
+      "new_readings_existing_texts": 110,
+      "new_texts": 2789,
+      "overlapping_baseline_pairs": 27037,
+      "path_limited_exact_wholeword_matches": 0,
+      "path_limited_phrase_rows": 80,
+      "source_bases": 659,
+      "source_character_texts": 29936,
+      "source_pairs": 29936,
+      "source_toned_forms": 1869
+    },
+    "new_bases": [
+      "bap",
+      "dun",
+      "eot",
+      "kwaat"
+    ],
+    "new_toned_forms": [
+      "aap6",
+      "bap6",
+      "caa6",
+      "dun1",
+      "eot1",
+      "ju4",
+      "kek3",
+      "koeng6",
+      "kui1",
+      "kwaat1",
+      "meng5",
+      "nip3",
+      "paang6",
+      "zeot6"
+    ]
+  },
+  "data_header_date": "2026-07-31 00:00:00 GMT [KL]",
+  "files": [
+    {
+      "name": "Unihan.zip",
+      "path": "data/candidates/vendor/unihan/18.0.0/Unihan.zip",
+      "sha256": "4c93ea9c1f636451729a840978f1667a53886af37ba854fdcce109721c63d43e",
+      "size_bytes": 8340649,
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/Unihan.zip"
+    },
+    {
+      "name": "LICENSE.txt",
+      "path": "data/candidates/vendor/unihan/18.0.0/LICENSE.txt",
+      "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+      "size_bytes": 1995,
+      "url": "https://www.unicode.org/license.txt"
+    },
+    {
+      "name": "ReadMe.txt",
+      "path": "data/candidates/vendor/unihan/18.0.0/ReadMe.txt",
+      "sha256": "b0ea442f29dee90584aacd3665a6e1ce87ffc917a4d31f34e1916d2d6f7f9205",
+      "size_bytes": 729,
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/ReadMe.txt"
+    },
+    {
+      "archive_member": "Unihan_Readings.txt",
+      "derived_from": "Unihan.zip",
+      "name": "Unihan_Readings.txt",
+      "path": "data/candidates/vendor/unihan/18.0.0/Unihan_Readings.txt",
+      "sha256": "9d39995b5de714e8ce93716ed5d15eaa0792d68e407cdf8a0add2893b8f4150b",
+      "size_bytes": 8844571
+    }
+  ],
+  "integration_policy_if_selected": {
+    "approval_status": "pending_source_selection_decision",
+    "override_existing_pairs": false,
+    "source_property_status": "Provisional",
+    "variant_inheritance": false,
+    "weight": 0,
+    "word_reading_inference": false
+  },
+  "license": {
+    "copyright": "1991-2026 Unicode, Inc.",
+    "license_url_is_versioned": false,
+    "name": "Unicode License V3",
+    "notice_policy": "Retain copyright and permission notice with copies of data/software or in associated documentation.",
+    "retained_file": "LICENSE.txt",
+    "scope": "Official Unicode data files; not a blanket redistribution license for Unicode publications, glyphs or fonts.",
+    "spdx": "Unicode-3.0",
+    "url": "https://www.unicode.org/license.txt"
+  },
+  "limitations": [
+    "kCantonese targets customary Jyutping for CLDR collation/transliteration; not exhaustive pronunciation evidence.",
+    "Single-character readings do not author whole-word pronunciation or frequency.",
+    "New source forms require explicit inventory provenance; absence from existing selected sources is not proof of invalidity."
+  ],
+  "local_directory": "data/candidates/vendor/unihan/18.0.0",
+  "property": "kCantonese",
+  "property_status": "Provisional",
+  "publisher": "Unicode, Inc.",
+  "retrieved_at_utc": "2026-10-22T10:07:22.640090+00:00",
+  "schema_version": 1,
+  "selected_for_default_build": false,
+  "source_id": "unicode-unihan-kCantonese-18.0.0",
+  "unicode_version": "18.0.0",
+  "version_evidence": [
+    "https://www.unicode.org/Public/18.0.0/ucd/ReadMe.txt",
+    "https://www.unicode.org/Public/UCD/latest/ReadMe.txt",
+    "https://www.unicode.org/reports/tr38/tr38-41.html"
+  ]
+}

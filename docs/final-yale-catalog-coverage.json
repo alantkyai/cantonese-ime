@@ -1,0 +1,295 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-22T21:34:37.858183+00:00",
+  "status": "completed",
+  "notice": {
+    "derived_data_license": "CC-BY-SA-4.0",
+    "attribution": [
+      "data/DATA_LICENSE.md",
+      "data/THIRD_PARTY_NOTICES.md"
+    ],
+    "scope": "Finite stored-text retrieval; dictionary-derived keys are not held-out linguistic labels, native typing or all-Chinese coverage."
+  },
+  "inputs_sha256": {
+    "cantonese_ime/__init__.py": "d7652cf2dbc20d81143b337fbfd59f83bbc6dc3c0b929b125cd28371f1ee222d",
+    "cantonese_ime/engine.py": "088d69562a6dae9d3455cfd9e82bcbf6378b300148e13bd1424ae1a943c0d562",
+    "cantonese_ime/mappings.py": "d61d6e7ab3b82bab7a31d42f7abfefb4f224eed5c9dbf505304eef2d940249e1",
+    "tools/check_yale_catalog.py": "f1fe6d434c920d6948a772f360bb006d1f6d1df7ce78ba20fea005b446d7664f",
+    "dictionary": "bd312406a15162556ac58a257ede1514ad40890c793b6f8fa05084fda2d6241a",
+    "reference_fixture": "477f56a946625283e78417e75382d9682b68cbe877fb13e3a67d2bf5a0095745"
+  },
+  "merger_source_sha256": "6a470f43de95d6f3b82a909eb985d4885d974ede51badbd653fc0298f8cbab17",
+  "catalog_sha256": "1beba14c22711405e365ba9227e1b308907cd68d3d47968dbda77e92c3e1bc8c",
+  "shards": 4,
+  "catalog_groups": 503708,
+  "processed_groups": 503708,
+  "remaining_groups": 0,
+  "source_pairs": 776335,
+  "source_pairs_checked": 776335,
+  "outcomes": {
+    "all_found": 503708
+  },
+  "missing_target_memberships": 0,
+  "public_page_calls": 503925,
+  "all_shard_checkpoints_validated": true,
+  "complete_catalog_retrieval_verified": true,
+  "scope": "All stored target texts per compact plain-Yale input. Source-reading alternatives that collapse to the same text/input are represented once. Not all Chinese vocabulary, pronunciation quality, ranking acceptance, native timeout or typing proof.",
+  "checkpoint_summaries": [
+    {
+      "schema_version": 1,
+      "recorded_at_utc": "2026-10-22T21:34:07.120355+00:00",
+      "snapshot_id": "5495973eeded894d0dbe72768ae4201a6b44956f43941f30f24789ad13144b27",
+      "identity": {
+        "inputs_sha256": {
+          "cantonese_ime/__init__.py": "d7652cf2dbc20d81143b337fbfd59f83bbc6dc3c0b929b125cd28371f1ee222d",
+          "cantonese_ime/engine.py": "088d69562a6dae9d3455cfd9e82bcbf6378b300148e13bd1424ae1a943c0d562",
+          "cantonese_ime/mappings.py": "d61d6e7ab3b82bab7a31d42f7abfefb4f224eed5c9dbf505304eef2d940249e1",
+          "tools/check_yale_catalog.py": "f1fe6d434c920d6948a772f360bb006d1f6d1df7ce78ba20fea005b446d7664f",
+          "dictionary": "bd312406a15162556ac58a257ede1514ad40890c793b6f8fa05084fda2d6241a",
+          "reference_fixture": "477f56a946625283e78417e75382d9682b68cbe877fb13e3a67d2bf5a0095745"
+        },
+        "catalog_sha256": "1beba14c22711405e365ba9227e1b308907cd68d3d47968dbda77e92c3e1bc8c",
+        "source_pairs": 776335,
+        "catalog_groups": 503708,
+        "selected_groups": 126114,
+        "selection_sha256": "35a225d340882de00d90f67c5edaefa34a8b66bb9574a6c31f2bf1482c0b4808",
+        "shards": 4,
+        "shard_index": 0,
+        "shard_method": "sha256(ascii_input) modulo shards; visit in ascending SHA256 order",
+        "configuration": {
+          "mode": "forgiving",
+          "prefer_yale": true,
+          "learning_enabled": false,
+          "page_size": 90,
+          "max_pages": 128,
+          "input_limit": 256,
+          "max_offset": 10000
+        },
+        "python_version": "3.11.1",
+        "sqlite_version": "3.39.4"
+      },
+      "notice": {
+        "derived_data_license": "CC-BY-SA-4.0",
+        "attribution": [
+          "data/DATA_LICENSE.md",
+          "data/THIRD_PARTY_NOTICES.md"
+        ],
+        "scope": "Finite stored-text retrieval; dictionary-derived keys are not held-out linguistic labels, native typing or all-Chinese coverage."
+      },
+      "status": "completed",
+      "selected_groups": 126114,
+      "processed_groups": 126114,
+      "remaining_groups": 0,
+      "new_groups_this_run": 0,
+      "outcomes": {
+        "all_found": 126114
+      },
+      "source_pairs_checked": 194753,
+      "missing_target_memberships": 0,
+      "input_limit_excluded_groups": 0,
+      "all_selected_groups_processed": true,
+      "all_selected_target_texts_reached": true,
+      "complete_catalog_retrieval_verified": false,
+      "engine_startup_ms_this_run": null,
+      "wall_seconds_this_run": 0,
+      "lookup_seconds_all_checkpoint_records": 1872.9796053094324,
+      "public_page_calls_all_checkpoint_records": 126166,
+      "checkpoint": ".local\\yale-catalog\\final-v3-full-shard-0.jsonl",
+      "checkpoint_sha256": "48b26770b208c224e5f220520747ae7996ac82300c6da8fefbb7490fcc9214dd",
+      "checkpoint_last_record_sha256": "8a43cb6d96db1ffaa12896651b82034016cb6c33b45a61561b5fc8c5200cc55f",
+      "failures_retained_in_checkpoint": 0
+    },
+    {
+      "schema_version": 1,
+      "recorded_at_utc": "2026-10-22T21:34:16.574902+00:00",
+      "snapshot_id": "6b966ff61c8c65109b3f240ab8b9f77783f429c7e23b62428e314d6bf5581ce0",
+      "identity": {
+        "inputs_sha256": {
+          "cantonese_ime/__init__.py": "d7652cf2dbc20d81143b337fbfd59f83bbc6dc3c0b929b125cd28371f1ee222d",
+          "cantonese_ime/engine.py": "088d69562a6dae9d3455cfd9e82bcbf6378b300148e13bd1424ae1a943c0d562",
+          "cantonese_ime/mappings.py": "d61d6e7ab3b82bab7a31d42f7abfefb4f224eed5c9dbf505304eef2d940249e1",
+          "tools/check_yale_catalog.py": "f1fe6d434c920d6948a772f360bb006d1f6d1df7ce78ba20fea005b446d7664f",
+          "dictionary": "bd312406a15162556ac58a257ede1514ad40890c793b6f8fa05084fda2d6241a",
+          "reference_fixture": "477f56a946625283e78417e75382d9682b68cbe877fb13e3a67d2bf5a0095745"
+        },
+        "catalog_sha256": "1beba14c22711405e365ba9227e1b308907cd68d3d47968dbda77e92c3e1bc8c",
+        "source_pairs": 776335,
+        "catalog_groups": 503708,
+        "selected_groups": 125900,
+        "selection_sha256": "97a2d6bde048fb14ae74ac4bf0fd86fef13482ce19fdd5b322334c5b2cb8973a",
+        "shards": 4,
+        "shard_index": 1,
+        "shard_method": "sha256(ascii_input) modulo shards; visit in ascending SHA256 order",
+        "configuration": {
+          "mode": "forgiving",
+          "prefer_yale": true,
+          "learning_enabled": false,
+          "page_size": 90,
+          "max_pages": 128,
+          "input_limit": 256,
+          "max_offset": 10000
+        },
+        "python_version": "3.11.1",
+        "sqlite_version": "3.39.4"
+      },
+      "notice": {
+        "derived_data_license": "CC-BY-SA-4.0",
+        "attribution": [
+          "data/DATA_LICENSE.md",
+          "data/THIRD_PARTY_NOTICES.md"
+        ],
+        "scope": "Finite stored-text retrieval; dictionary-derived keys are not held-out linguistic labels, native typing or all-Chinese coverage."
+      },
+      "status": "completed",
+      "selected_groups": 125900,
+      "processed_groups": 125900,
+      "remaining_groups": 0,
+      "new_groups_this_run": 0,
+      "outcomes": {
+        "all_found": 125900
+      },
+      "source_pairs_checked": 192040,
+      "missing_target_memberships": 0,
+      "input_limit_excluded_groups": 0,
+      "all_selected_groups_processed": true,
+      "all_selected_target_texts_reached": true,
+      "complete_catalog_retrieval_verified": false,
+      "engine_startup_ms_this_run": null,
+      "wall_seconds_this_run": 0,
+      "lookup_seconds_all_checkpoint_records": 1872.0052268025465,
+      "public_page_calls_all_checkpoint_records": 125945,
+      "checkpoint": ".local\\yale-catalog\\final-v3-full-shard-1.jsonl",
+      "checkpoint_sha256": "61d9d17b0b31c4feda3a0e2161cd062c5e4534b4e404c390a6b4376d005f2d9d",
+      "checkpoint_last_record_sha256": "eb06e80b52a7d355f56201646fcbc14b7575ee7c22e08e83a0bd6a10a1ebd594",
+      "failures_retained_in_checkpoint": 0
+    },
+    {
+      "schema_version": 1,
+      "recorded_at_utc": "2026-10-22T21:34:26.124170+00:00",
+      "snapshot_id": "8d2536192e7891292c07993ae671164103aa65c173e8b3cf0b6ee4e0331e35e6",
+      "identity": {
+        "inputs_sha256": {
+          "cantonese_ime/__init__.py": "d7652cf2dbc20d81143b337fbfd59f83bbc6dc3c0b929b125cd28371f1ee222d",
+          "cantonese_ime/engine.py": "088d69562a6dae9d3455cfd9e82bcbf6378b300148e13bd1424ae1a943c0d562",
+          "cantonese_ime/mappings.py": "d61d6e7ab3b82bab7a31d42f7abfefb4f224eed5c9dbf505304eef2d940249e1",
+          "tools/check_yale_catalog.py": "f1fe6d434c920d6948a772f360bb006d1f6d1df7ce78ba20fea005b446d7664f",
+          "dictionary": "bd312406a15162556ac58a257ede1514ad40890c793b6f8fa05084fda2d6241a",
+          "reference_fixture": "477f56a946625283e78417e75382d9682b68cbe877fb13e3a67d2bf5a0095745"
+        },
+        "catalog_sha256": "1beba14c22711405e365ba9227e1b308907cd68d3d47968dbda77e92c3e1bc8c",
+        "source_pairs": 776335,
+        "catalog_groups": 503708,
+        "selected_groups": 126049,
+        "selection_sha256": "3dd8912101e2be86b375c4722ca2997de36224096c0616d4f59280ccf18d4a4a",
+        "shards": 4,
+        "shard_index": 2,
+        "shard_method": "sha256(ascii_input) modulo shards; visit in ascending SHA256 order",
+        "configuration": {
+          "mode": "forgiving",
+          "prefer_yale": true,
+          "learning_enabled": false,
+          "page_size": 90,
+          "max_pages": 128,
+          "input_limit": 256,
+          "max_offset": 10000
+        },
+        "python_version": "3.11.1",
+        "sqlite_version": "3.39.4"
+      },
+      "notice": {
+        "derived_data_license": "CC-BY-SA-4.0",
+        "attribution": [
+          "data/DATA_LICENSE.md",
+          "data/THIRD_PARTY_NOTICES.md"
+        ],
+        "scope": "Finite stored-text retrieval; dictionary-derived keys are not held-out linguistic labels, native typing or all-Chinese coverage."
+      },
+      "status": "completed",
+      "selected_groups": 126049,
+      "processed_groups": 126049,
+      "remaining_groups": 0,
+      "new_groups_this_run": 0,
+      "outcomes": {
+        "all_found": 126049
+      },
+      "source_pairs_checked": 196614,
+      "missing_target_memberships": 0,
+      "input_limit_excluded_groups": 0,
+      "all_selected_groups_processed": true,
+      "all_selected_target_texts_reached": true,
+      "complete_catalog_retrieval_verified": false,
+      "engine_startup_ms_this_run": null,
+      "wall_seconds_this_run": 0,
+      "lookup_seconds_all_checkpoint_records": 1870.9924570142757,
+      "public_page_calls_all_checkpoint_records": 126118,
+      "checkpoint": ".local\\yale-catalog\\final-v3-full-shard-2.jsonl",
+      "checkpoint_sha256": "ba72199a8b9a6614b2d49d081f7d2d75af6df8674d174e8f6b3676b54eae76c4",
+      "checkpoint_last_record_sha256": "6dfd146cd1de2032dc1cb17d5aedc50cc70b2a1393bf7ce19411e1dad16834ab",
+      "failures_retained_in_checkpoint": 0
+    },
+    {
+      "schema_version": 1,
+      "recorded_at_utc": "2026-10-22T21:34:35.998631+00:00",
+      "snapshot_id": "5d2a6228782efe318b9b5b39cfd985d70dd94a12f077569563b9db59af7e05c2",
+      "identity": {
+        "inputs_sha256": {
+          "cantonese_ime/__init__.py": "d7652cf2dbc20d81143b337fbfd59f83bbc6dc3c0b929b125cd28371f1ee222d",
+          "cantonese_ime/engine.py": "088d69562a6dae9d3455cfd9e82bcbf6378b300148e13bd1424ae1a943c0d562",
+          "cantonese_ime/mappings.py": "d61d6e7ab3b82bab7a31d42f7abfefb4f224eed5c9dbf505304eef2d940249e1",
+          "tools/check_yale_catalog.py": "f1fe6d434c920d6948a772f360bb006d1f6d1df7ce78ba20fea005b446d7664f",
+          "dictionary": "bd312406a15162556ac58a257ede1514ad40890c793b6f8fa05084fda2d6241a",
+          "reference_fixture": "477f56a946625283e78417e75382d9682b68cbe877fb13e3a67d2bf5a0095745"
+        },
+        "catalog_sha256": "1beba14c22711405e365ba9227e1b308907cd68d3d47968dbda77e92c3e1bc8c",
+        "source_pairs": 776335,
+        "catalog_groups": 503708,
+        "selected_groups": 125645,
+        "selection_sha256": "64155eff3f6590f4644647799c873fc404e65e240e75d32a7ecdc5ef701e53cb",
+        "shards": 4,
+        "shard_index": 3,
+        "shard_method": "sha256(ascii_input) modulo shards; visit in ascending SHA256 order",
+        "configuration": {
+          "mode": "forgiving",
+          "prefer_yale": true,
+          "learning_enabled": false,
+          "page_size": 90,
+          "max_pages": 128,
+          "input_limit": 256,
+          "max_offset": 10000
+        },
+        "python_version": "3.11.1",
+        "sqlite_version": "3.39.4"
+      },
+      "notice": {
+        "derived_data_license": "CC-BY-SA-4.0",
+        "attribution": [
+          "data/DATA_LICENSE.md",
+          "data/THIRD_PARTY_NOTICES.md"
+        ],
+        "scope": "Finite stored-text retrieval; dictionary-derived keys are not held-out linguistic labels, native typing or all-Chinese coverage."
+      },
+      "status": "completed",
+      "selected_groups": 125645,
+      "processed_groups": 125645,
+      "remaining_groups": 0,
+      "new_groups_this_run": 0,
+      "outcomes": {
+        "all_found": 125645
+      },
+      "source_pairs_checked": 192928,
+      "missing_target_memberships": 0,
+      "input_limit_excluded_groups": 0,
+      "all_selected_groups_processed": true,
+      "all_selected_target_texts_reached": true,
+      "complete_catalog_retrieval_verified": false,
+      "engine_startup_ms_this_run": null,
+      "wall_seconds_this_run": 0,
+      "lookup_seconds_all_checkpoint_records": 1861.1477568307891,
+      "public_page_calls_all_checkpoint_records": 125696,
+      "checkpoint": ".local\\yale-catalog\\final-v3-full-shard-3.jsonl",
+      "checkpoint_sha256": "94cdc96c8644b4bcdf5e007114388541c31ac849af2c1a55d87e8c02fed87377",
+      "checkpoint_last_record_sha256": "a747a06e3f3beb31ad370fd20dc61f1432dccef38e88dcb6fea0fb9580a67b39",
+      "failures_retained_in_checkpoint": 0
+    }
+  ]
+}

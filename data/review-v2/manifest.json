@@ -1,0 +1,992 @@
+{
+  "human_approval_authenticated": false,
+  "initial_review_status": "pending",
+  "inputs": {
+    "autoencoder_source": {
+      "sha256": "35d97fb9c6e984c9c0264ba49ace32c69db8a8026a8c16a8494319ea496b2464",
+      "size_bytes": 9293
+    },
+    "database": {
+      "sha256": "4353328cb17f8c8f8cc5d78730e34c3aa26c6c8ea7d1a4f4a8f91fee5d900a6e",
+      "size_bytes": 265768960
+    },
+    "generator_source": {
+      "sha256": "2fd1376e555308e71660e2ce5fe2953534a85d7e7bcc5a371e585829d8cab1c1",
+      "size_bytes": 33485
+    },
+    "lshk_lock": {
+      "sha256": "4e8cdb775d3fa396187214f8813a248959aeb8838f704c41f09c481ad38714a1",
+      "size_bytes": 1262
+    },
+    "mapping_manifest": {
+      "sha256": "c445e2bf1c645245e6834065ce0e684700eb09862d803913f72ffdab6d0e2543",
+      "size_bytes": 1389
+    },
+    "mapping_spellings": {
+      "sha256": "0b6fed4339f9a23c6711db0418eb46ed4995497f17359abb470d023ca0fa7c6c",
+      "size_bytes": 404022
+    },
+    "mapping_syllables": {
+      "sha256": "5254e4555c8e043367cb62ab9360fb3da85750464a613ec27326000b59ef0b92",
+      "size_bytes": 1277480
+    },
+    "preset_frequencies": {
+      "sha256": "d08836175f598219f43c2f2f9e12e12711212dbefe08d57b2eddb7a9d9f22a5d",
+      "size_bytes": 3416812
+    },
+    "rime_lock": {
+      "sha256": "e33ae4ae7c4be7d7236f2566da2075ee6c96d9f53ebaac2d43f7dbac53254e88",
+      "size_bytes": 3187
+    },
+    "typeduck_lock": {
+      "sha256": "8aa2dcd72f4d453a0ae8d45f390b2bf2c9b3b8f0e8fa257e725156e2440aa51b",
+      "size_bytes": 5316
+    },
+    "unihan_lock": {
+      "sha256": "0f986fd73849025ffc9a72fbc686fe9aa5ce8540c995a8a15a23f850b8286505",
+      "size_bytes": 6451
+    },
+    "wordshk_lock": {
+      "sha256": "630bfd8dac948638537181b176d8a7a1743a054d19d51506574e3fc54eba94d2",
+      "size_bytes": 1966
+    }
+  },
+  "pack_version": "cantonese-linguistic-review-v2",
+  "provenance": {
+    "autoencoding_algorithm": {
+      "adaptations": [
+        "Valid Unicode text boundaries only; invalid UTF-8 substring probes cannot match valid source text.",
+        "Suffix reachability avoids dead DFS branches without changing the order of successful paths.",
+        "A finite work guard reports truncated instead of silently selecting a reading.",
+        "Reaching the 32-path limit is conservatively marked truncated, even if exactly 32 paths exist.",
+        "Returned codes are deduplicated in first-emission order; path_count retains duplicate DFS paths."
+      ],
+      "collector_url": "https://github.com/rime/librime/blob/1b3417d2b6a11b5e50e0e1fa9dc396056aa11dce/src/rime/dict/entry_collector.cc",
+      "commit": "1b3417d2b6a11b5e50e0e1fa9dc396056aa11dce",
+      "duplicate_single_rows": 0,
+      "encoder_url": "https://github.com/rime/librime/blob/1b3417d2b6a11b5e50e0e1fa9dc396056aa11dce/src/rime/algo/encoder.cc",
+      "explicit_rows": 191819,
+      "ignored_multisyllable_rows": 146939,
+      "license": "BSD-3-Clause",
+      "local_license": "data/licenses/librime-BSD-3-Clause.txt",
+      "max_encoder_paths": 32,
+      "max_phrase_codepoints": 32,
+      "max_work": 100000,
+      "min_reading_weight_share": 0.05,
+      "name": "librime ScriptEncoder + EntryCollector.TranslateWord",
+      "qualifying_readings": 32823,
+      "repository": "https://github.com/rime/librime",
+      "translation_texts": 29830
+    },
+    "database_schema_version": 2,
+    "database_semantic_sha256": "4529344104080eb568410dd89842f2a3643e964dd4cb32226bd3231c8a2133ff",
+    "database_source_metadata": {
+      "attribution": "Rime Cantonese, Cantonese Computational Linguistics Infrastructure Development Workgroup (CanCLID) and contributors; see upstream README and dictionary source headers.",
+      "commit": "259f0e48bba840c3a2e0d117539e96937f3d89bc",
+      "license": "CC-BY-4.0",
+      "repository": "https://github.com/rime/rime-cantonese",
+      "supplements": {
+        "lshk": {
+          "attribution": [
+            "Dr Cheung Kwan Hin",
+            "Prof Lu Qin",
+            "Jyutping Workgroup, Linguistic Society of Hong Kong",
+            "Nathan Hammond"
+          ],
+          "commit": "dad2dd6d6f02fc51138ecc6818f7b38eba5c2ad3",
+          "files": [
+            {
+              "name": "list.tsv",
+              "sha256": "0dbc5922fb886c0434bc58ff013f1ba9d332a721206b876e57b3314496b27b86",
+              "size_bytes": 1026299,
+              "url": "https://raw.githubusercontent.com/lshk-org/jyutping-table/dad2dd6d6f02fc51138ecc6818f7b38eba5c2ad3/list.tsv"
+            },
+            {
+              "name": "LICENSE",
+              "sha256": "f5b745ef98087f531e719ee8ca6a96809444573ecc7173c6fa68eaad39b3cc3f",
+              "size_bytes": 18658,
+              "url": "https://raw.githubusercontent.com/lshk-org/jyutping-table/dad2dd6d6f02fc51138ecc6818f7b38eba5c2ad3/LICENSE"
+            },
+            {
+              "name": "README.md",
+              "sha256": "1541430cfae06169ccf39b63be237e40a33cd7c200adeb0a2bafb0d7d3e1f5d3",
+              "size_bytes": 3028,
+              "url": "https://raw.githubusercontent.com/lshk-org/jyutping-table/dad2dd6d6f02fc51138ecc6818f7b38eba5c2ad3/README.md"
+            }
+          ],
+          "license": "CC-BY-4.0",
+          "local_directory": "data/vendor/lshk-jyutping-table/dad2dd6d6f02fc51138ecc6818f7b38eba5c2ad3",
+          "repository": "https://github.com/lshk-org/jyutping-table"
+        },
+        "typeduck": {
+          "attribution": "TypeDuck-HK and TypeDuck contributors; source maintainer's principal schema/dictionary license declaration retained in README.md.",
+          "candidate_audit": "docs/typeduck-data-audit.md",
+          "candidate_source_lock": "data/candidates/typeduck.sources.lock.json",
+          "changes": "Downloaded files unmodified. Candidate audit normalizes reading whitespace/case in memory only, compares exact pairs, and excludes two tilde-marked emoji reading rows without stripping their markers.",
+          "commit": "7f9d90d4185eca293576de5b5dddaaf1d265f3c9",
+          "commit_date": "2026-09-04T07:18:54Z",
+          "declaration_file": "README.md",
+          "excluded": [
+            "jyut6ping3_scolar.dict.yaml rich translation/annotation table",
+            "essay.txt candidate frequencies",
+            "reverse lookup dictionaries and schemas",
+            "OpenCC binary tables",
+            "all native runtimes, frontends, installers and compiled artifacts"
+          ],
+          "files": [
+            {
+              "git_blob_sha1": "8bf31200c15992a2e2904c194dc2f5671393628f",
+              "name": "jyut6ping3.dict.yaml",
+              "sha256": "e54eab6a3ef4328e0803e65fe4320f088329d1f0496cf7b1576dc1d0d2e28a6b",
+              "size_bytes": 4479053,
+              "url": "https://raw.githubusercontent.com/TypeDuck-HK/schema/7f9d90d4185eca293576de5b5dddaaf1d265f3c9/jyut6ping3.dict.yaml"
+            },
+            {
+              "git_blob_sha1": "55da06d5d093f60267c87396d6e8e2bb96bce04c",
+              "name": "README.md",
+              "sha256": "6776d56c458a585df64b8175534a6a15b9ae244fe41f97f8e22e626d996f9495",
+              "size_bytes": 3896,
+              "url": "https://raw.githubusercontent.com/TypeDuck-HK/schema/7f9d90d4185eca293576de5b5dddaaf1d265f3c9/README.md"
+            },
+            {
+              "git_blob_sha1": "da6ab6cc8f333d7e89a99812866df8f24374d47c",
+              "name": "LICENSE",
+              "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+              "size_bytes": 18657,
+              "url": "https://raw.githubusercontent.com/TypeDuck-HK/schema/7f9d90d4185eca293576de5b5dddaaf1d265f3c9/LICENSE"
+            }
+          ],
+          "format_version": 1,
+          "historical_provenance_evidence": [
+            {
+              "commit": "5050489faa3f059eb39f9eaa56f214a9440494bd",
+              "date": "2023-02-06T16:37:09Z",
+              "finding": "First commit added a separate maps table with explicit OpenStreetMap/ODbL header; the old main dictionary imported that table.",
+              "url": "https://github.com/TypeDuck-HK/schema/blob/5050489faa3f059eb39f9eaa56f214a9440494bd/jyut6ping3.maps.dict.yaml"
+            },
+            {
+              "commit": "f5c375fca1dc272b8c76fda59521b2c65d59d291",
+              "date": "2023-06-09T16:57:10Z",
+              "finding": "Original commit removed the old main import dictionary, maps, phrase and words tables.",
+              "url": "https://github.com/TypeDuck-HK/schema/commit/f5c375fca1dc272b8c76fda59521b2c65d59d291"
+            },
+            {
+              "commit": "2b4030c11cda311b9c664b4626f32407b5e22f11",
+              "date": "2023-06-09T16:58:38Z",
+              "finding": "Cantoboard Schema commit added replacement monolithic principal and scolar tables, without a row-origin manifest or generation source in the inspected tree.",
+              "url": "https://github.com/TypeDuck-HK/schema/commit/2b4030c11cda311b9c664b4626f32407b5e22f11"
+            },
+            {
+              "commit": "c9a464a6c7155e72bfc5fdc7a471d35d94e4e166",
+              "date": "2023-11-16T01:45:28Z",
+              "finding": "Commit message refers to the latest generation script, but this commit changed only the two dictionaries; the inspected recursive tree contains no such script.",
+              "url": "https://github.com/TypeDuck-HK/schema/commit/c9a464a6c7155e72bfc5fdc7a471d35d94e4e166"
+            }
+          ],
+          "license": "CC-BY-4.0",
+          "license_file": "LICENSE",
+          "license_scope": "Principal dictionary/schema as expressly declared by pinned README; separately licensed reverse lookup files excluded.",
+          "license_scope_url": "https://github.com/TypeDuck-HK/schema/blob/7f9d90d4185eca293576de5b5dddaaf1d265f3c9/README.md#license--授權",
+          "local_directory": "data/vendor/typeduck-schema/7f9d90d4185eca293576de5b5dddaaf1d265f3c9",
+          "repository": "https://github.com/TypeDuck-HK/schema",
+          "retrieval_timezone": "Asia/Hong_Kong",
+          "retrieved_date": "2026-10-22",
+          "review_policy": "Quarantine noncanonical phonetic notation with complete physical source line, raw text/reading/percentage and reason; do not strip tilde markers from emoji codes.",
+          "scope": "Only jyut6ping3.dict.yaml physical explicit pairs; no essay, rich translation dictionary, reverse lookups, OpenCC binaries or native components.",
+          "selection_status": "selected additional default source; preserves earlier source pairs; no claim of independent human linguistic approval",
+          "source_id": "typeduck:principal",
+          "source_lineage_status": "The current README expressly declares principal data CC BY 4.0. Per-row/category origin and the principal table generation recipe were not found. Initial 2023 source had an explicitly ODbL maps table, removed before the replacement monolith was added; current monolith inheritance of those rows is not established. Explicit table rows are not independent proof of human authorship.",
+          "weight_policy": "Every newly added pair has weight0 as frequency unknown; raw source percentages are preserved only in the unmodified snapshot and are never treated as cross-corpus frequencies, reading probabilities or replacement weights."
+        },
+        "unihan": {
+          "archive_members": [
+            {
+              "name": "Unihan_DictionaryIndices.txt",
+              "sha256": "b41c7c5ca3a01d833ed4fe0c7b9cdf41c4ec08cb11a0fd1df6e92ed666ce00e1",
+              "size_bytes": 8921637
+            },
+            {
+              "name": "Unihan_DictionaryLikeData.txt",
+              "sha256": "cce221e3d4719c9fa7f0068d2a86bd0d8f3bf5725a21a77d00fc4f784d5520ed",
+              "size_bytes": 4129290
+            },
+            {
+              "name": "Unihan_IRGSources.txt",
+              "sha256": "e2c484cd22b54f7e0ce896ebb02f33e092b92325accf0fd55e0e14e3863869eb",
+              "size_bytes": 13379351
+            },
+            {
+              "name": "Unihan_NumericValues.txt",
+              "sha256": "ea986cec09192efa3b527049fca964682b394d42b0ce0e15dbe1321dec2dc7e6",
+              "size_bytes": 4990
+            },
+            {
+              "name": "Unihan_OtherMappings.txt",
+              "sha256": "fc7bbb8f923fa1e922a4d421aa15387d1c68250cc5e7619bdf81f575ab38472b",
+              "size_bytes": 3715847
+            },
+            {
+              "name": "Unihan_RadicalStrokeCounts.txt",
+              "sha256": "9330f089ebb61426b277951b319775aa6e3a3e56900f6381cab915891cd4fda9",
+              "size_bytes": 600881
+            },
+            {
+              "name": "Unihan_Readings.txt",
+              "sha256": "9d39995b5de714e8ce93716ed5d15eaa0792d68e407cdf8a0add2893b8f4150b",
+              "size_bytes": 8844571
+            },
+            {
+              "name": "Unihan_Variants.txt",
+              "sha256": "4ccfd34b08ac7b9c14353f6668ba43e3796d85c4cdce7952b635be16015aafa2",
+              "size_bytes": 726700
+            }
+          ],
+          "archive_url": "https://www.unicode.org/Public/18.0.0/ucd/Unihan.zip",
+          "attribution": "Unicode, Inc. Unihan Database, Unicode 18.0.0, kCantonese provisional character readings.",
+          "candidate_audit": "docs/unihan-data-audit.md",
+          "candidate_baseline_sha256": "aec269744279a5d85a9f5ca459b9a04f060ae53c29b975fd4aab132d90fab39d",
+          "data_header_date": "2026-07-31 00:00:00 GMT [KL]",
+          "files": [
+            {
+              "name": "Unihan.zip",
+              "sha256": "4c93ea9c1f636451729a840978f1667a53886af37ba854fdcce109721c63d43e",
+              "size_bytes": 8340649,
+              "url": "https://www.unicode.org/Public/18.0.0/ucd/Unihan.zip"
+            },
+            {
+              "name": "LICENSE.txt",
+              "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+              "size_bytes": 1995,
+              "url": "https://www.unicode.org/license.txt"
+            },
+            {
+              "name": "ReadMe.txt",
+              "sha256": "b0ea442f29dee90584aacd3665a6e1ce87ffc917a4d31f34e1916d2d6f7f9205",
+              "size_bytes": 729,
+              "url": "https://www.unicode.org/Public/18.0.0/ucd/ReadMe.txt"
+            },
+            {
+              "archive_member": "Unihan_Readings.txt",
+              "derived_from": "Unihan.zip",
+              "name": "Unihan_Readings.txt",
+              "sha256": "9d39995b5de714e8ce93716ed5d15eaa0792d68e407cdf8a0add2893b8f4150b",
+              "size_bytes": 8844571
+            }
+          ],
+          "format_version": 1,
+          "license": "Unicode-3.0",
+          "license_name": "Unicode License V3",
+          "license_notice": {
+            "copyright": "1991-2026 Unicode, Inc.",
+            "file": "LICENSE.txt",
+            "requirements": "Keep the full copyright and permission notice with data copies or associated documentation.",
+            "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+            "text": "UNICODE LICENSE V3\n\nCOPYRIGHT AND PERMISSION NOTICE\n\nCopyright © 1991-2026 Unicode, Inc.\n\nNOTICE TO USER: Carefully read the following legal agreement. BY\nDOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING DATA FILES, AND/OR\nSOFTWARE, YOU UNEQUIVOCALLY ACCEPT, AND AGREE TO BE BOUND BY, ALL OF THE\nTERMS AND CONDITIONS OF THIS AGREEMENT. IF YOU DO NOT AGREE, DO NOT\nDOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE THE DATA FILES OR SOFTWARE.\n\nPermission is hereby granted, free of charge, to any person obtaining a\ncopy of data files and any associated documentation (the \"Data Files\") or\nsoftware and any associated documentation (the \"Software\") to deal in the\nData Files or Software without restriction, including without limitation\nthe rights to use, copy, modify, merge, publish, distribute, and/or sell\ncopies of the Data Files or Software, and to permit persons to whom the\nData Files or Software are furnished to do so, provided that either (a)\nthis copyright and permission notice appear with all copies of the Data\nFiles or Software, or (b) this copyright and permission notice appear in\nassociated Documentation.\n\nTHE DATA FILES AND SOFTWARE ARE PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY\nKIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF\nTHIRD PARTY RIGHTS.\n\nIN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS NOTICE\nBE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES,\nOR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,\nWHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,\nARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THE DATA\nFILES OR SOFTWARE.\n\nExcept as contained in this notice, the name of a copyright holder shall\nnot be used in advertising or otherwise to promote the sale, use or other\ndealings in these Data Files or Software without prior written\nauthorization of the copyright holder.\n",
+            "url_is_versioned": false
+          },
+          "license_url": "https://www.unicode.org/license.txt",
+          "local_directory": "data/vendor/unihan/18.0.0",
+          "phrase_policy": "Excluded from ScriptAutoencoder translation tokens: provisional character fallback does not supply authored whole-word pronunciations.",
+          "property": "kCantonese",
+          "property_status": "Provisional",
+          "reading_policy": "kCantonese is a provisional customary-reading property for CLDR collation and transliteration. Space-separated values are direct alternative character readings, not word syllables. Preserve direct rows without asserting normative pronunciation or exhaustive alternatives.",
+          "scope": "Direct kCantonese character readings only; no inherited variant readings, word inference, definitions, glyphs or fonts.",
+          "snapshot_retrieved_at": "2026-10-22T10:07:22.640090+00:00",
+          "source_id": "unihan:kCantonese",
+          "unicode_version": "18.0.0",
+          "version_evidence": [
+            "https://www.unicode.org/Public/18.0.0/ucd/ReadMe.txt",
+            "https://www.unicode.org/Public/UCD/latest/ReadMe.txt",
+            "https://www.unicode.org/reports/tr38/tr38-41.html"
+          ],
+          "weight_policy": "No frequency supplied. Every imported pair has unknown weight0; do not overwrite existing pairs or weights."
+        },
+        "wordshk": {
+          "attribution": "words.hk 粵典 contributors. Credit retained as requested by the source.",
+          "data_url": "https://words.hk/faiman/analysis/wordslist.json",
+          "files": [
+            {
+              "name": "wordslist.json",
+              "sha256": "0ea376604451f43401b4b6e574cea28c63d4dedd4aaf5b32e86f920382969886",
+              "size_bytes": 2418939,
+              "url": "https://words.hk/faiman/analysis/wordslist.json"
+            },
+            {
+              "name": "license-declaration.html",
+              "sha256": "bafaf154e5a8cb071e59d0b5ff615881105aa950a8cdc0778e22f3ea00b827dd",
+              "size_bytes": 9152,
+              "url": "https://words.hk/faiman/analysis/wordslist/"
+            }
+          ],
+          "format_version": 1,
+          "license": "public-domain declaration (wordlist and pronunciations only)",
+          "license_declaration": "Data License: public domain. Credits to words.hk appreciated.",
+          "license_declaration_url": "https://words.hk/faiman/analysis/wordslist/",
+          "license_declaration_zh": "授權：公有領域。",
+          "local_directory": "data/vendor/words-hk/2026-10-22",
+          "retrieval_timezone": "Asia/Hong_Kong",
+          "review_policy": "Normalize exactly one documented trailing variant-star marker with source_flag=variant and exact raw text preserved in normalized_variant review records. Quarantine malformed middle/multiple-star markers, non-Jyutping readings and ellipsis templates; never silently strip phonetic notation.",
+          "scope": "Wordlist/pronunciations only; dictionary definitions, examples, media and other API datasets excluded.",
+          "snapshot_id": "2026-10-22",
+          "snapshot_retrieved_at": "2026-10-22T14:44:39+08:00",
+          "source_id": "words.hk:wordlist",
+          "source_updated_display": "2026年10月8日14:24:41",
+          "source_updated_timezone": null,
+          "source_updated_timezone_note": "The upstream page does not state the timezone for its displayed update time.",
+          "weight_policy": "No frequency supplied; imported rows have weight0 until separately attributed text frequencies are applied."
+        }
+      }
+    },
+    "database_sources": [
+      {
+        "name": "jyut6ping3.chars.dict.yaml",
+        "sha256": "9b053a594c80eae76545bcdd83239884a49b1ba48b89ca0ab9e8daac79f33013",
+        "size_bytes": 345329
+      },
+      {
+        "name": "jyut6ping3.words.dict.yaml",
+        "sha256": "54d174ad2bb997e4a678b7b076b84e4dc5914481b32467cdea3b43e88b7d5474",
+        "size_bytes": 2630257
+      },
+      {
+        "name": "jyut6ping3.phrase.dict.yaml",
+        "sha256": "3071d1ca43d6861aefcaa14e1b72780b21537b4e58b86ffce27ae0577c94e2ed",
+        "size_bytes": 4958423
+      },
+      {
+        "name": "essay-cantonese.txt",
+        "sha256": "d08836175f598219f43c2f2f9e12e12711212dbefe08d57b2eddb7a9d9f22a5d",
+        "size_bytes": 3416812
+      },
+      {
+        "name": "LICENSE-CC-BY",
+        "sha256": "97d24386ff776d7160b87031b259a942bd03c9939796cab6724ad5d17d2cf785",
+        "size_bytes": 18657
+      },
+      {
+        "name": "README-en.md",
+        "sha256": "159ae4384c0de771e76952abb5e83e52567dc3ddebfa23435f451f385cfac4f6",
+        "size_bytes": 6099
+      },
+      {
+        "name": "list.tsv",
+        "sha256": "0dbc5922fb886c0434bc58ff013f1ba9d332a721206b876e57b3314496b27b86",
+        "size_bytes": 1026299
+      },
+      {
+        "name": "wordslist.json",
+        "sha256": "0ea376604451f43401b4b6e574cea28c63d4dedd4aaf5b32e86f920382969886",
+        "size_bytes": 2418939
+      },
+      {
+        "name": "jyut6ping3.dict.yaml",
+        "sha256": "e54eab6a3ef4328e0803e65fe4320f088329d1f0496cf7b1576dc1d0d2e28a6b",
+        "size_bytes": 4479053
+      },
+      {
+        "name": "Unihan_Readings.txt",
+        "sha256": "9d39995b5de714e8ce93716ed5d15eaa0792d68e407cdf8a0add2893b8f4150b",
+        "size_bytes": 8844571
+      }
+    ],
+    "mapping_policy": {
+      "ambiguity_policy": "Keep one best derivation per spelling/canonical pair; retain different canonical readings for the same spelling.",
+      "default_mode": "forgiving",
+      "excluded_formal_modes": [
+        "Yale",
+        "Sidney Lau"
+      ],
+      "max_onset_rewrites": 1,
+      "max_rule_steps": 2,
+      "narrowing_from_prototype": "Forbid composing alternative onset conventions, including zaa->jaa->yaa. Onset+final combinations such as caa->chaa->cha remain.",
+      "strict_mode": "jyutping",
+      "tone_policy": "Numeric tone1..6 is passed through unchanged; aliases never substitute tones or imply all six tones are attested."
+    },
+    "mapping_profile_version": "cantonese-safe-v1",
+    "mapping_rules": [
+      {
+        "evidence": "Optional n/l merger; a canonical ng onset is excluded.",
+        "family": "onset",
+        "kind": "pronunciation_merger",
+        "operation": "onset",
+        "original": "n",
+        "penalty": 0.8,
+        "replacement": "l",
+        "rule_id": "onset.n_to_l",
+        "source": [
+          "rime_schema",
+          "google_examples"
+        ]
+      },
+      {
+        "evidence": "Optional ng/zero onset merger; bare syllabic ng is not deleted.",
+        "family": "onset",
+        "kind": "pronunciation_merger",
+        "operation": "onset",
+        "original": "ng",
+        "penalty": 0.8,
+        "replacement": "",
+        "rule_id": "onset.drop_ng",
+        "source": [
+          "rime_schema"
+        ]
+      },
+      {
+        "evidence": "Alternative input convention for the z onset. This is not Jyutping j.",
+        "family": "onset",
+        "kind": "orthographic_alias",
+        "operation": "onset",
+        "original": "z",
+        "penalty": 0.8,
+        "replacement": "j",
+        "rule_id": "onset.z_to_j",
+        "source": [
+          "cantoneseinput_examples"
+        ]
+      },
+      {
+        "evidence": "Alternative input convention for the c onset.",
+        "family": "onset",
+        "kind": "orthographic_alias",
+        "operation": "onset",
+        "original": "c",
+        "penalty": 0.45,
+        "replacement": "ch",
+        "rule_id": "onset.c_to_ch",
+        "source": [
+          "cantoneseinput_examples"
+        ]
+      },
+      {
+        "evidence": "Alternative y spelling for a canonical Jyutping j onset.",
+        "family": "onset",
+        "kind": "orthographic_alias",
+        "operation": "onset",
+        "original": "j",
+        "penalty": 0.45,
+        "replacement": "y",
+        "rule_id": "onset.j_to_y",
+        "source": [
+          "cantoneseinput_examples",
+          "rime_schema"
+        ]
+      },
+      {
+        "evidence": "Example-backed typing convenience, including fai for faai. It must not erase the strict mode's aa/a distinction.",
+        "family": "vowel",
+        "kind": "heuristic_alias",
+        "operation": "contains",
+        "original": "aa",
+        "penalty": 0.3,
+        "replacement": "a",
+        "rule_id": "vowel.shorten_aa",
+        "source": [
+          "google_examples",
+          "rime_schema",
+          "project_policy"
+        ]
+      },
+      {
+        "evidence": "Example-aligned convenience, including bo for bou; not a complete scheme conversion.",
+        "family": "vowel",
+        "kind": "heuristic_alias",
+        "operation": "suffix",
+        "original": "ou",
+        "penalty": 0.35,
+        "replacement": "o",
+        "rule_id": "vowel.ou_to_o",
+        "source": [
+          "cantoneseinput_examples",
+          "project_policy"
+        ]
+      },
+      {
+        "evidence": "Inferred from bao in Google's chasiubao example; generalized only within one canonical syllable.",
+        "family": "vowel",
+        "kind": "heuristic_alias",
+        "operation": "suffix",
+        "original": "aau",
+        "penalty": 0.4,
+        "replacement": "ao",
+        "rule_id": "vowel.aau_to_ao",
+        "source": [
+          "google_examples",
+          "project_policy"
+        ]
+      },
+      {
+        "evidence": "Input spelling tolerance; not a claim that distinct Jyutping finals are identical.",
+        "family": "vowel",
+        "kind": "heuristic_alias",
+        "operation": "contains",
+        "original": "eo",
+        "penalty": 0.3,
+        "replacement": "oe",
+        "rule_id": "vowel.eo_to_oe",
+        "source": [
+          "rime_schema",
+          "project_policy"
+        ]
+      },
+      {
+        "evidence": "Input spelling tolerance; strict mode keeps eo and oe distinct.",
+        "family": "vowel",
+        "kind": "heuristic_alias",
+        "operation": "contains",
+        "original": "oe",
+        "penalty": 0.3,
+        "replacement": "eo",
+        "rule_id": "vowel.oe_to_eo",
+        "source": [
+          "rime_schema",
+          "project_policy"
+        ]
+      },
+      {
+        "evidence": "Narrow exception; not recursively rewritten.",
+        "family": "explicit",
+        "kind": "documented_example",
+        "operation": "explicit",
+        "original": "nei",
+        "penalty": 1.15,
+        "replacement": "lay",
+        "rule_id": "example.lay_nei",
+        "source": [
+          "google_examples"
+        ]
+      },
+      {
+        "evidence": "Narrow exception; not recursively rewritten.",
+        "family": "explicit",
+        "kind": "documented_example",
+        "operation": "explicit",
+        "original": "nei",
+        "penalty": 0.5,
+        "replacement": "nay",
+        "rule_id": "example.nay_nei",
+        "source": [
+          "google_examples"
+        ]
+      },
+      {
+        "evidence": "Narrow exception; not recursively rewritten.",
+        "family": "explicit",
+        "kind": "documented_example",
+        "operation": "explicit",
+        "original": "ngo",
+        "penalty": 0.3,
+        "replacement": "ngoh",
+        "rule_id": "example.ngoh_ngo",
+        "source": [
+          "cantoneseinput_examples"
+        ]
+      },
+      {
+        "evidence": "Narrow exception; not recursively rewritten.",
+        "family": "explicit",
+        "kind": "project_alias",
+        "operation": "explicit",
+        "original": "bou",
+        "penalty": 0.4,
+        "replacement": "boh",
+        "rule_id": "casual.boh_bou",
+        "source": [
+          "project_policy"
+        ]
+      },
+      {
+        "evidence": "Narrow exception; not recursively rewritten.",
+        "family": "explicit",
+        "kind": "project_alias",
+        "operation": "explicit",
+        "original": "soeng",
+        "penalty": 0.45,
+        "replacement": "sheung",
+        "rule_id": "casual.sheung_soeng",
+        "source": [
+          "project_policy"
+        ]
+      },
+      {
+        "evidence": "Narrow exception; not recursively rewritten.",
+        "family": "explicit",
+        "kind": "project_alias",
+        "operation": "explicit",
+        "original": "soeng",
+        "penalty": 0.45,
+        "replacement": "seung",
+        "rule_id": "casual.seung_soeng",
+        "source": [
+          "project_policy"
+        ]
+      },
+      {
+        "evidence": "Narrow exception; not recursively rewritten.",
+        "family": "explicit",
+        "kind": "documented_example",
+        "operation": "explicit",
+        "original": "soeng",
+        "penalty": 0.8,
+        "replacement": "shueng",
+        "rule_id": "example.shueng_soeng",
+        "source": [
+          "google_examples"
+        ]
+      },
+      {
+        "evidence": "Narrow exception; not recursively rewritten.",
+        "family": "explicit",
+        "kind": "project_alias",
+        "operation": "explicit",
+        "original": "hoeng",
+        "penalty": 0.45,
+        "replacement": "heung",
+        "rule_id": "casual.heung_hoeng",
+        "source": [
+          "cantoneseinput_examples",
+          "project_policy"
+        ]
+      },
+      {
+        "evidence": "Narrow exception; not recursively rewritten.",
+        "family": "explicit",
+        "kind": "project_alias",
+        "operation": "explicit",
+        "original": "coeng",
+        "penalty": 0.45,
+        "replacement": "cheung",
+        "rule_id": "casual.cheung_coeng",
+        "source": [
+          "project_policy"
+        ]
+      },
+      {
+        "evidence": "Narrow exception; not recursively rewritten.",
+        "family": "explicit",
+        "kind": "project_alias",
+        "operation": "explicit",
+        "original": "zoeng",
+        "penalty": 0.45,
+        "replacement": "jeung",
+        "rule_id": "casual.jeung_zoeng",
+        "source": [
+          "project_policy"
+        ]
+      },
+      {
+        "evidence": "Narrow exception; not recursively rewritten.",
+        "family": "explicit",
+        "kind": "project_alias",
+        "operation": "explicit",
+        "original": "keoi",
+        "penalty": 0.45,
+        "replacement": "keui",
+        "rule_id": "casual.keui_keoi",
+        "source": [
+          "project_policy"
+        ]
+      },
+      {
+        "evidence": "Narrow exception; not recursively rewritten.",
+        "family": "explicit",
+        "kind": "project_alias",
+        "operation": "explicit",
+        "original": "keoi",
+        "penalty": 0.65,
+        "replacement": "kui",
+        "rule_id": "casual.kui_keoi",
+        "source": [
+          "cantoneseinput_examples",
+          "project_policy"
+        ]
+      },
+      {
+        "evidence": "Narrow exception; not recursively rewritten.",
+        "family": "explicit",
+        "kind": "project_alias",
+        "operation": "explicit",
+        "original": "heoi",
+        "penalty": 0.45,
+        "replacement": "heui",
+        "rule_id": "casual.heui_heoi",
+        "source": [
+          "project_policy"
+        ]
+      },
+      {
+        "evidence": "Narrow exception; not recursively rewritten.",
+        "family": "explicit",
+        "kind": "project_alias",
+        "operation": "explicit",
+        "original": "heoi",
+        "penalty": 0.65,
+        "replacement": "hui",
+        "rule_id": "casual.hui_heoi",
+        "source": [
+          "cantoneseinput_examples",
+          "project_policy"
+        ]
+      },
+      {
+        "evidence": "Narrow exception; not recursively rewritten.",
+        "family": "explicit",
+        "kind": "project_alias",
+        "operation": "explicit",
+        "original": "seoi",
+        "penalty": 0.45,
+        "replacement": "seui",
+        "rule_id": "casual.seui_seoi",
+        "source": [
+          "project_policy"
+        ]
+      },
+      {
+        "evidence": "Narrow exception; not recursively rewritten.",
+        "family": "explicit",
+        "kind": "project_alias",
+        "operation": "explicit",
+        "original": "seoi",
+        "penalty": 0.65,
+        "replacement": "sui",
+        "rule_id": "casual.sui_seoi",
+        "source": [
+          "cantoneseinput_examples",
+          "project_policy"
+        ]
+      }
+    ],
+    "mapping_sources": {
+      "cantoneseinput_examples": {
+        "scope": "Documents alternative initial conventions j/ch/y, bohim, and ngoh. Used as behaviour evidence, not copied dictionary data or a complete Sidney Lau implementation.",
+        "title": "Online Cantonese Input Method public input guide",
+        "url": "https://www.cantoneseinput.com/"
+      },
+      "dictionary_database": {
+        "scope": "Records present in the generated SQLite dictionary; retained source/origin labels describe the selected output rows, not every upstream attestation.",
+        "title": "Generated local multi-source Cantonese dictionary"
+      },
+      "google_examples": {
+        "scope": "Documents lay/nay/lei for nei, failok, and ngoshuengsikchasiubao. These examples do not specify Google's complete decoder or license its dictionary.",
+        "title": "Google Input Tools Cantonese IME guide",
+        "url": "https://www.google.com/intl/ka/inputtools/services/features/input-method.html#cantonese"
+      },
+      "lshk_scheme": {
+        "scope": "Authoritative onset/final spelling and ASCII tone digits. Finals a and oet were added in 2018. Shape compatibility does not assert an attested syllable.",
+        "title": "LSHK Jyutping Cantonese Romanization Scheme",
+        "url": "https://lshk.org/jyutping-scheme/"
+      },
+      "lshk_table": {
+        "license": "CC-BY-4.0",
+        "scope": "Observed single-syllable JP readings; descriptive and multi-syllable rows remain separately classified.",
+        "title": "LSHK Cantonese Pronunciation List of the Characters for Computers",
+        "url": "https://github.com/lshk-org/jyutping-table/tree/dad2dd6d6f02fc51138ecc6818f7b38eba5c2ad3"
+      },
+      "project_policy": {
+        "scope": "Explicit convenience rules and ranking costs, not linguistic equivalence claims. At most two operations and one onset rewrite per syllable; no global text replacement or formal romanization-mode claim.",
+        "title": "Project safe spelling policy v1"
+      },
+      "rime_dictionary": {
+        "license": "CC-BY-4.0",
+        "scope": "Explicit chars/words/phrase readings before autoencoding or supplemental imports. This is distinct from the full generated dictionary inventory.",
+        "title": "Original pinned Rime Cantonese explicit dictionary readings",
+        "url": "https://github.com/rime/rime-cantonese/tree/259f0e48bba840c3a2e0d117539e96937f3d89bc"
+      },
+      "rime_schema": {
+        "scope": "Published n/l and ng/zero options and selected vowel spelling conveniences. This project's penalties and combination policy are independently authored.",
+        "title": "Rime Cantonese published schema",
+        "url": "https://github.com/rime/rime-cantonese/blob/259f0e48bba840c3a2e0d117539e96937f3d89bc/jyut6ping3.schema.yaml"
+      },
+      "typeduck_principal": {
+        "license": "CC-BY-4.0",
+        "scope": "Accepted explicit export rows from the pinned principal table, excluding reverse lookups and marked pronunciation notation. Source attestation does not assert independent human phrase review; source percentages are not imported frequencies.",
+        "title": "TypeDuck principal dictionary export",
+        "url": "https://github.com/TypeDuck-HK/schema/tree/7f9d90d4185eca293576de5b5dddaaf1d265f3c9"
+      },
+      "unihan_kcantonese": {
+        "license": "Unicode-3.0",
+        "property_status": "Provisional",
+        "scope": "Direct character readings for CLDR collation/transliteration, independently parsed before deduplication. Provisional customary-reading attestation is not normative pronunciation, exhaustive alternatives, inherited variants or whole-word evidence.",
+        "title": "Unicode 18.0.0 Unihan kCantonese",
+        "url": "https://www.unicode.org/Public/18.0.0/ucd/Unihan.zip"
+      },
+      "wordshk_wordlist": {
+        "license": "Public-domain declaration for the wordlist/pronunciation endpoint only",
+        "scope": "Accepted explicit pronunciations from the pinned wordlist. Source annotations are handled by the audited importer; quarantined readings are excluded. Overlapping source attestation is retained even when dictionary deduplication selects a different source row.",
+        "title": "words.hk public wordlist and pronunciations",
+        "url": "https://words.hk/faiman/analysis/wordslist/"
+      }
+    },
+    "phrase_translation_policy": {
+      "description": "Rime, LSHK, words.hk and TypeDuck source-explicit one-syllable readings feed mechanical phrase encoding. Provisional Unihan collation/transliteration readings are retained for direct character lookup but do not generate whole-word readings.",
+      "excluded_sources": [
+        "unihan:kCantonese"
+      ]
+    },
+    "queue_coverage": {
+      "ambiguous_phrase_rows_queued": 200,
+      "ambiguous_phrase_rows_total": 29359,
+      "ambiguous_polyphonic_characters_queued": 82,
+      "ambiguous_polyphonic_characters_total": 103,
+      "path_limit_categories": {
+        "exactly_32_paths": 7,
+        "over_32_paths": 73
+      },
+      "path_limited_rows_total": 80,
+      "phrase_heuristic_tags": {
+        "colloquial_marker": 44,
+        "name_or_institution_marker": 43
+      },
+      "phrase_selection_reasons": {
+        "colloquial_marker_frequency_quota": 25,
+        "frequency_top100": 100,
+        "name_marker_frequency_quota": 25,
+        "polyphonic_character_diversity_then_frequency": 50
+      },
+      "source_exception_statuses": {
+        "description_only": 112,
+        "quarantined": 385
+      },
+      "spelling_collision_rows_total": 282
+    },
+    "queue_frequency_policy": "Exact-text essay-cantonese.txt count only for review priority, not a pronunciation probability or an assigned supplement weight. Missing count is 0.",
+    "supplement_weight_policy": "All newly added supplement pairs retain weight 0 (frequency unknown, not a claim of nonoccurrence). Whole-text essay counts and TypeDuck percentage scores are never assigned as pronunciation-specific supplement frequencies. Original Rime weights remain unchanged."
+  },
+  "readiness_approved": false,
+  "readme_sha256": "198fbce8038edcb6c80d76986260694f72790f9e1a24cf044ca9046fd80dac52",
+  "recorded_input_locations": {
+    "autoencoder_source": "D:\\IME_Project\\cantonese_ime\\autoencode.py",
+    "database": "D:\\IME_Project\\data\\generated\\lexicon.sqlite3",
+    "generator_source": "D:\\IME_Project\\tools\\build_review_pack.py",
+    "lshk_lock": "D:\\IME_Project\\data\\mappings\\lshk.sources.lock.json",
+    "mapping_manifest": "D:\\IME_Project\\data\\mappings\\build.manifest.json",
+    "mapping_spellings": "D:\\IME_Project\\data\\mappings\\spellings.json",
+    "mapping_syllables": "D:\\IME_Project\\data\\mappings\\syllables.json",
+    "preset_frequencies": "D:\\IME_Project\\data\\vendor\\rime-cantonese\\259f0e48bba840c3a2e0d117539e96937f3d89bc\\essay-cantonese.txt",
+    "rime_lock": "D:\\IME_Project\\data\\sources.lock.json",
+    "typeduck_lock": "D:\\IME_Project\\data\\supplements\\typeduck.sources.lock.json",
+    "unihan_lock": "D:\\IME_Project\\data\\supplements\\unihan.sources.lock.json",
+    "wordshk_lock": "D:\\IME_Project\\data\\supplements\\wordshk.sources.lock.json"
+  },
+  "reviewer_statuses": [
+    "pending",
+    "needs_evidence",
+    "proposed_change",
+    "confirmed",
+    "exclude"
+  ],
+  "sampling": "Source-derived review queues, not independent held-out evaluation; no approval inferred.",
+  "schema_version": 2,
+  "tables": {
+    "path_limited_phrases.tsv": {
+      "generated_columns": [
+        "record_id",
+        "priority_rank",
+        "selection_reason",
+        "text",
+        "source",
+        "line",
+        "ledger_status",
+        "codes_json",
+        "path_count",
+        "candidate_code_count",
+        "full_path_count",
+        "path_limit_category",
+        "frequency",
+        "polyphonic_characters_json",
+        "qualifying_character_codes_json",
+        "heuristic_tags_json"
+      ],
+      "generated_sha256": "02ecd48c7f04b379523e375097857085cbb78ea8ebfcab03d3f6651d2d638ad3",
+      "initial_file_sha256": "655e05a466050dcb2d30d44e5c72f16b91ff8b6fa09e9ddc86f3d36ae85632da",
+      "reviewer_columns": [
+        "proposed_preferred_reading",
+        "proposed_other_accepted_readings",
+        "review_status",
+        "reviewer",
+        "reviewed_at",
+        "evidence",
+        "review_notes"
+      ],
+      "row_count": 80
+    },
+    "phrases.tsv": {
+      "generated_columns": [
+        "record_id",
+        "priority_rank",
+        "selection_reason",
+        "text",
+        "source",
+        "line",
+        "ledger_status",
+        "codes_json",
+        "path_count",
+        "candidate_code_count",
+        "full_path_count",
+        "path_limit_category",
+        "frequency",
+        "polyphonic_characters_json",
+        "qualifying_character_codes_json",
+        "heuristic_tags_json"
+      ],
+      "generated_sha256": "d751c8fb55937d556bdf027c1b6f76c00fc27049572fd4c668fb720f93803fb6",
+      "initial_file_sha256": "10bff328953f751e6a0661b56031b28b5637e470fa2564db0f651d83fda0a4ee",
+      "reviewer_columns": [
+        "proposed_preferred_reading",
+        "proposed_other_accepted_readings",
+        "review_status",
+        "reviewer",
+        "reviewed_at",
+        "evidence",
+        "review_notes"
+      ],
+      "row_count": 200
+    },
+    "source_exceptions.tsv": {
+      "generated_columns": [
+        "record_id",
+        "source",
+        "text",
+        "source_status",
+        "details_json",
+        "existing_authored_readings_json"
+      ],
+      "generated_sha256": "943979e1d90e41699761c19ebd349ea1b5dda7f9eca4eff68bbaca8d55be8eaf",
+      "initial_file_sha256": "8245bbcb0129f0567762bfc14d207598a77c4ec13326341fb3e0d058640e6b4e",
+      "reviewer_columns": [
+        "proposed_resolution",
+        "proposed_text",
+        "proposed_reading",
+        "review_status",
+        "reviewer",
+        "reviewed_at",
+        "evidence",
+        "review_notes"
+      ],
+      "row_count": 497
+    },
+    "spelling_collisions.tsv": {
+      "generated_columns": [
+        "record_id",
+        "spelling",
+        "canonical_targets_json",
+        "target_count",
+        "alias_records_json",
+        "target_attestations_json",
+        "profile_version"
+      ],
+      "generated_sha256": "6f6c0d53228bde2616946e93ac47a458d257e27d69708ff0bb9d60ee7756e7ac",
+      "initial_file_sha256": "c59784eb3ed27470f4a1dd7815ef25d7b99c48f34cea11f419e0a22d9c5a39ef",
+      "reviewer_columns": [
+        "proposed_policy",
+        "proposed_retained_targets",
+        "review_status",
+        "reviewer",
+        "reviewed_at",
+        "evidence",
+        "review_notes"
+      ],
+      "row_count": 282
+    }
+  },
+  "trust_limit": "Source consistency is freshly checked; local hashes and self-reported reviewer fields cannot authenticate a human or approve linguistic readiness."
+}
