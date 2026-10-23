@@ -19,7 +19,7 @@ $arguments = @('-std=c++17','-O2','-Wall','-Wextra','-DUNICODE','-D_UNICODE','-D
     '-D_WIN32_WINNT=0x0A00','-DWINVER=0x0A00','-shared','-static','-Wl,--no-undefined','-Wl,--dynamicbase','-Wl,--nxcompat')
 $arguments += $sourcePaths
 $arguments += $resourcePath
-$arguments += @('-o',$dllPath,'-lole32','-loleaut32','-luuid','-luser32','-lgdi32','-ladvapi32')
+$arguments += @('-o',$dllPath,'-lole32','-loleaut32','-luuid','-luser32','-lgdi32','-ladvapi32','-lshell32')
 & $compilerPath @arguments
 if ($LASTEXITCODE -ne 0) { throw "Native compiler failed with exit code $LASTEXITCODE" }
 Get-Item -LiteralPath $dllPath | Select-Object FullName,Length

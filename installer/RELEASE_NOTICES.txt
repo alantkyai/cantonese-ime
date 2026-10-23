@@ -5,6 +5,15 @@ declaration in this project. Packaging the owner's application for the
 owner's distribution does not grant rights to third parties in that source.
 No new license for the original code is imposed by this installer.
 
+LXGW WenKai TC Regular (unmodified candidate-window font), Copyright
+2022-2026 The LXGW WenKai Project Authors, is included under the SIL Open
+Font License, Version 1.1. Full original copyright/license, author and
+contributor notices, upstream README, source revision and file hashes are
+retained in assets\fonts\lxgw-wenkai-tc\. The font is loaded privately in
+memory by the IME; it is not installed as a Windows-wide font.
+Source: https://github.com/lxgw/LxgwWenKaiTC
+Revision: 7cde02609845fa4d0824dd88dced1ca4669d4825
+
 The dictionary is assembled from separately licensed upstream data.
 See data\THIRD_PARTY_NOTICES.md and the referenced attribution, source-lock,
 license and source-history files included in this package. In particular,

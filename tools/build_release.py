@@ -24,7 +24,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
-from package_native import amd64, digest, stage
+from package_native import _InputPins, _candidate_font_inputs, amd64, digest, stage
 
 
 def validate_version(version: str) -> str:
@@ -143,6 +143,9 @@ def build(output: Path, *, allow_fetch: bool, compile_setup: bool) -> dict:
                      "installer/dependencies.lock.json", "pyproject.toml", "native/tsf/icons/cantonese.ico",
                      "installer/lifecycle.py", "installer/Set-UserInputSource.ps1", "installer/GETTING_STARTED.txt", "installer/RELEASE_NOTICES.txt"]
     build_source_pins = {name: digest(ROOT / name) for name in build_sources}
+    font_pins = _InputPins()
+    font_inputs = _candidate_font_inputs(pins=font_pins)
+    font_source_pins = {name: font_pins.expected[path.resolve()] for name, path in font_inputs.items()}
     version = project_version()
     python, compiler, lock = tools(allow_fetch)
     compiler_files = {path.relative_to(compiler.parent).as_posix(): digest(path)
@@ -154,6 +157,10 @@ def build(output: Path, *, allow_fetch: bool, compile_setup: bool) -> dict:
     output.mkdir(parents=True)
     payload = output / "package"
     manifest = stage(payload, python / "python.exe", bundled_runtime=python, release=True)
+    staged_files = {item["path"]: item for item in manifest["files"]}
+    if any(staged_files.get(name, {}).get("sha256") != expected
+           for name, expected in font_source_pins.items()):
+        raise ValueError("Staged candidate font assets differ from the original release input pins.")
     manifest["version"] = version
     manifest["supported_platform"] = "Windows 10/11 native AMD64; x64 desktop text applications"
     manifest["release_channel"] = "stable"
@@ -185,6 +192,7 @@ def build(output: Path, *, allow_fetch: bool, compile_setup: bool) -> dict:
               "compiler": {"version": lock["inno_setup"]["version"], "reported_version": actual_version,
                            "sha256": digest(compiler), "fresh_portable_extraction": True,
                            "files_sha256": compiler_files}, "build_sources_sha256": build_source_pins,
+              "candidate_font_sources_sha256": font_source_pins,
               "private_python": lock["python"], "source_pins": source_pins,
               "installation_performed": False}
     if compile_setup:
@@ -207,6 +215,7 @@ def build(output: Path, *, allow_fetch: bool, compile_setup: bool) -> dict:
         raise ValueError("The package manifest changed during compilation.")
     if any(digest(ROOT / name) != pin for name, pin in build_source_pins.items()):
         raise ValueError("A release build source changed during compilation; choose a fresh output and rebuild.")
+    font_pins.verify()
     if any(digest(compiler.parent / name) != pin for name, pin in compiler_files.items()):
         raise ValueError("An extracted compiler file changed during compilation.")
     write_json(output / "release-build.json", report)

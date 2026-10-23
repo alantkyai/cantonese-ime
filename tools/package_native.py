@@ -17,6 +17,12 @@ import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
+CANDIDATE_FONT_DIRECTORY = "assets/fonts/lxgw-wenkai-tc"
+CANDIDATE_FONT_FILE = "LXGWWenKaiTC-Regular.ttf"
+CANDIDATE_FONT_SHA256 = "6662480a3f95b4a90c80b189c679617a48adce3a505118a6af63ce5a482b83fa"
+CANDIDATE_FONT_SIZE = 15341148
+CANDIDATE_FONT_OFL_SHA256 = "1a13783bf4337242834b60309cdcdbeb566ae3f923576fdbba8b78db9d174def"
+CANDIDATE_FONT_SOURCE_COMMIT = "7cde02609845fa4d0824dd88dced1ca4669d4825"
 
 
 def digest(path: Path) -> str:
@@ -79,6 +85,73 @@ def _project_file(relative: str) -> Path:
     if not path.is_relative_to(ROOT.resolve()) or not path.is_file():
         raise ValueError(f"Package source notice is missing or outside the project: {relative}")
     return path
+
+
+def _candidate_font_inputs(*, pins: _InputPins | None = None) -> dict[str, Path]:
+    """Select the reviewed unmodified font and every required original notice.
+
+    Keep the hashes from the first raw lock read. A later self-consistent lock
+    or freshly hashed notice must not replace an already validated input pin.
+    """
+    pins = pins or _InputPins()
+    relative_lock = CANDIDATE_FONT_DIRECTORY + "/sources.lock.json"
+    lock_path = _project_file(relative_lock)
+    payload = lock_path.read_bytes()
+    pins.bind(lock_path, hashlib.sha256(payload).hexdigest())
+    lock = json.loads(payload.decode("utf-8"))
+    fixed = {
+        "schema_version": 1, "family": "LXGW WenKai TC", "style": "Regular",
+        "license": "OFL-1.1", "source_repository": "https://github.com/lxgw/LxgwWenKaiTC",
+        "source_commit": CANDIDATE_FONT_SOURCE_COMMIT,
+        "local_directory": CANDIDATE_FONT_DIRECTORY, "font_file": CANDIDATE_FONT_FILE,
+        "font_sha256": CANDIDATE_FONT_SHA256, "font_size_bytes": CANDIDATE_FONT_SIZE,
+    }
+    if (not isinstance(lock, dict) or set(lock) != set(fixed) | {"modified", "files"}
+            or any(lock.get(key) != value for key, value in fixed.items())
+            or lock.get("modified") is not False):
+        raise ValueError("Candidate font lock differs from the reviewed unmodified LXGW WenKai TC Regular asset.")
+    upstream = {
+        "AUTHORS.txt": "AUTHORS.txt", "CONTRIBUTORS.txt": "CONTRIBUTORS.txt",
+        CANDIDATE_FONT_FILE: "fonts/TTF/" + CANDIDATE_FONT_FILE,
+        "OFL.txt": "OFL.txt", "UPSTREAM_README.md": "README.md",
+    }
+    required = set(upstream) | {"NOTICE.md"}
+    records = lock.get("files")
+    if (not isinstance(records, list) or len(records) != len(required)
+            or any(not isinstance(item, dict) for item in records)
+            or any(not isinstance(item.get("name"), str) for item in records)
+            or {item.get("name") for item in records} != required):
+        raise ValueError("Candidate font lock must retain every required font and license/attribution notice exactly once.")
+    result = {relative_lock: lock_path}
+    for item in records:
+        name = item["name"]
+        expected_keys = {"name", "sha256", "size_bytes"}
+        if name in upstream:
+            expected_keys |= {"upstream_path", "upstream_git_blob_sha"}
+            if (item.get("upstream_path") != upstream[name]
+                    or not isinstance(item.get("upstream_git_blob_sha"), str)
+                    or not re.fullmatch(r"[a-f0-9]{40}", item["upstream_git_blob_sha"])):
+                raise ValueError("Candidate font lock contains an unexpected upstream file location.")
+        else:
+            expected_keys.add("origin")
+            if item.get("origin") != "Project-authored packaging notice":
+                raise ValueError("Candidate font attribution notice has an unexpected origin.")
+        size = item.get("size_bytes")
+        if (set(item) != expected_keys or type(size) is not int or size <= 0 or size > 64 * 1024 * 1024
+                or not isinstance(item.get("sha256"), str)
+                or not re.fullmatch(r"[a-f0-9]{64}", item["sha256"])):
+            raise ValueError("Candidate font lock contains an invalid file pin.")
+        if name == CANDIDATE_FONT_FILE and (item["sha256"] != CANDIDATE_FONT_SHA256 or size != CANDIDATE_FONT_SIZE):
+            raise ValueError("Candidate font file pin differs from the reviewed font.")
+        if name == "OFL.txt" and item["sha256"] != CANDIDATE_FONT_OFL_SHA256:
+            raise ValueError("Candidate font must retain the complete original OFL copyright and license.")
+        relative = CANDIDATE_FONT_DIRECTORY + "/" + name
+        path = _project_file(relative)
+        if path.stat().st_size != size or digest(path) != item["sha256"]:
+            raise ValueError("Candidate font asset differs from its source lock: " + name)
+        pins.bind(path, item["sha256"])
+        result[relative] = path
+    return result
 
 
 def _wordnet_notice_inputs(metadata: dict, *, pins: _InputPins | None = None) -> dict[str, Path]:
@@ -271,6 +344,7 @@ def stage(output: Path, python: Path, *, bundled_runtime: Path | None = None, re
     if not amd64(python):
         raise ValueError("The selected external Python must be AMD64.")
     pins = _InputPins()
+    candidate_font = _candidate_font_inputs(pins=pins)
     python_hash = digest(python)
     pins.bind(python, python_hash)
     dictionary = ROOT / "data/generated/lexicon.sqlite3"
@@ -340,6 +414,8 @@ def stage(output: Path, python: Path, *, bundled_runtime: Path | None = None, re
     add("native/CantoneseMachineRegistration.exe", helper)
     add("native/registration-guard-checks.json", guard_report)
     add("native/build-manifest.json", ROOT / ".local/native/build-x64/build-manifest.json")
+    for relative, source in candidate_font.items():
+        add(relative, source)
     add("data/THIRD_PARTY_NOTICES.md")
     # Retain local notices, declarations, source locks and audit links. Tables
     # and corpora themselves are not among this notice's Markdown references.

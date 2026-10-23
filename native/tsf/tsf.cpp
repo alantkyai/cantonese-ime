@@ -15,6 +15,8 @@
 #include "ime_ids.h"
 #include "ipc.h"
 #include "candidate_layout.h"
+#include "candidate_font.h"
+#include "candidate_appearance.h"
 #include "input_mode_button.h"
 
 namespace {
@@ -323,6 +325,7 @@ public:
         // composition with the existing asynchronous focus-change path.
         DetachComposition(); SetEnglishMode(!english_); return S_OK;
     }
+    HRESULT ShowAppearanceMenu(POINT point) override;
 private:
     void SetEnglishMode(bool english) { english_ = english; if (mode_button_) mode_button_->ModeChanged(); }
     bool Enabled(ITfContext*) const;
@@ -341,7 +344,7 @@ private:
     void MoveSelection(int);
     static LRESULT CALLBACK WindowProcedure(HWND, UINT, WPARAM, LPARAM);
     void Paint(HWND);
-    HFONT CandidateFont() const;
+    HFONT CandidateFont(HDC dc);
     std::wstring CandidateLabel(std::size_t index) const;
     static constexpr UINT kReflowCandidates = WM_APP + 0x4c1;
     Ptr<ITfThreadMgr> manager_;
@@ -369,6 +372,8 @@ private:
     RECT caret_{0, 0, 0, 0};
     unsigned candidate_dpi_ = 96;
     cime::ui::Layout candidate_layout_;
+    cime::ui::PrivateCandidateFont private_candidate_font_;
+    cime::ui::CandidateAppearance candidate_appearance_;
     std::wstring raw_;
     cime::Page page_;
     cime::Backend backend_;
@@ -404,6 +409,7 @@ HRESULT TextService::QueryInterface(REFIID iid, void** result) {
 HRESULT TextService::ActivateEx(ITfThreadMgr* manager, TfClientId client, DWORD) {
     if (!manager) return E_INVALIDARG;
     if (manager_) return E_UNEXPECTED;
+    candidate_appearance_.Load();
     manager_ = Ptr<ITfThreadMgr>(manager); client_ = client;
     HRESULT result = manager_->QueryInterface(IID_ITfKeystrokeMgr, reinterpret_cast<void**>(keystrokes_.Put()));
     if (SUCCEEDED(result)) result = keystrokes_->AdviseKeyEventSink(client_, static_cast<ITfKeyEventSink*>(this), TRUE);
@@ -428,6 +434,20 @@ HRESULT TextService::ActivateEx(ITfThreadMgr* manager, TfClientId client, DWORD)
         categories->RegisterGUID(GUID_CantoneseDisplay, &attribute_);
     return S_OK;
 }
+HRESULT TextService::ShowAppearanceMenu(POINT point) {
+    // TrackPopupMenu runs a nested message loop. Keep the service alive even
+    // if a host deactivates the input processor while that loop is running.
+    AddRef();
+    HRESULT result = S_OK;
+    try {
+        if (candidate_appearance_.ShowMenu(window_, point)) {
+            UpdateWindowState();
+            if (window_) InvalidateRect(window_, nullptr, FALSE);
+        }
+    } catch (...) { result = E_FAIL; }
+    Release();
+    return result;
+}
 HRESULT TextService::Deactivate() {
     if (mode_button_) {
         mode_button_->Detach();
@@ -443,6 +463,7 @@ HRESULT TextService::Deactivate() {
     manager_source_.Reset(); keystrokes_.Reset(); ui_manager_.Reset(); manager_.Reset();
     client_ = TF_CLIENTID_NULL; eaten_keys_.clear();
     if (window_) { DestroyWindow(window_); window_ = nullptr; }
+    private_candidate_font_.Reset();
     return S_OK;
 }
 
@@ -720,10 +741,13 @@ void TextService::UpdateWindowState() {
             WS_POPUP, anchor.left, anchor.bottom, 1, 1, nullptr, nullptr, g_instance, this);
     }
     if (!window_) return;
+    // Another thread/instance of this app may have saved an appearance choice.
+    // Refresh when opening a panel, rather than reading preferences per key.
+    if (!IsWindowVisible(window_)) candidate_appearance_.Reload();
     const UINT dpi = GetDpiForWindow(window_); candidate_dpi_ = dpi ? dpi : 96;
     HDC dc = GetDC(window_);
     if (!dc) { candidate_layout_ = {}; ShowWindow(window_, SW_HIDE); return; }
-    const HFONT font = CandidateFont();
+    const HFONT font = CandidateFont(dc);
     HGDIOBJ old = SelectObject(dc, font ? font : GetStockObject(DEFAULT_GUI_FONT));
     TEXTMETRICW metrics{}; GetTextMetricsW(dc, &metrics);
     std::vector<int> widths; widths.reserve(page_.candidates.size());
@@ -736,10 +760,11 @@ void TextService::UpdateWindowState() {
     if (old && old != HGDI_ERROR) SelectObject(dc, old);
     if (font) DeleteObject(font);
     ReleaseDC(window_, dc);
-    candidate_layout_ = cime::ui::MakeLayout(widths, std::max<int>(metrics.tmHeight, cime::ui::Scale(17, candidate_dpi_)),
+    candidate_layout_ = cime::ui::MakeLayout(widths, std::max<int>(metrics.tmHeight, cime::ui::Scale(cime::ui::kCandidateFontLogicalHeight, candidate_dpi_)),
         std::min(cime::ui::Scale(480, candidate_dpi_), work.right - work.left), work.bottom - work.top, candidate_dpi_, selected_);
     const auto placed = cime::ui::PlacePopup(candidate_layout_, anchor, work, cime::ui::Scale(3, candidate_dpi_));
     if (placed.Empty()) { ShowWindow(window_, SW_HIDE); return; }
+    candidate_appearance_.Apply(window_);
     SetWindowPos(window_, HWND_TOPMOST, placed.left, placed.top, placed.right - placed.left, placed.bottom - placed.top, SWP_NOACTIVATE | SWP_SHOWWINDOW);
     InvalidateRect(window_, nullptr, FALSE);
 }
@@ -751,13 +776,19 @@ LRESULT CALLBACK TextService::WindowProcedure(HWND window, UINT message, WPARAM 
     }
     if (message == WM_MOUSEACTIVATE) return MA_NOACTIVATE;
     if (message == WM_ERASEBKGND) return 1;
-    if (owner && (message == WM_DPICHANGED || message == WM_DISPLAYCHANGE || message == WM_SETTINGCHANGE)) {
+    if (owner && (message == WM_DPICHANGED || message == WM_DISPLAYCHANGE || message == WM_SETTINGCHANGE
+            || message == WM_SYSCOLORCHANGE || message == WM_THEMECHANGED)) {
         // Re-measure with this host window's effective DPI after the move has
         // completed, without changing the application's DPI-awareness context.
         PostMessageW(window, kReflowCandidates, 0, 0); return 0;
     }
     if (owner && message == kReflowCandidates) { owner->UpdateWindowState(); return 0; }
     if (owner && message == WM_PAINT) { owner->Paint(window); return 0; }
+    if (owner && message == WM_CONTEXTMENU) {
+        POINT point{static_cast<short>(LOWORD(lparam)), static_cast<short>(HIWORD(lparam))};
+        if (point.x == -1 && point.y == -1) GetCursorPos(&point);
+        owner->ShowAppearanceMenu(point); return 0;
+    }
     if (owner && message == WM_LBUTTONDOWN) {
         const int x = static_cast<short>(LOWORD(lparam)), y = static_cast<short>(HIWORD(lparam));
         const int index = cime::ui::HitTest(owner->candidate_layout_, x, y);
@@ -767,9 +798,10 @@ LRESULT CALLBACK TextService::WindowProcedure(HWND window, UINT message, WPARAM 
     if (message == WM_NCDESTROY) SetWindowLongPtrW(window, GWLP_USERDATA, 0);
     return DefWindowProcW(window, message, wparam, lparam);
 }
-HFONT TextService::CandidateFont() const {
-    return CreateFontW(-cime::ui::Scale(17, candidate_dpi_), 0, 0, 0, FW_NORMAL, FALSE, FALSE, FALSE,
-        DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, CLEARTYPE_QUALITY, DEFAULT_PITCH, L"Segoe UI");
+HFONT TextService::CandidateFont(HDC dc) {
+    const bool bundled = private_candidate_font_.EnsureForModule(g_instance);
+    return cime::ui::CreateCandidateFont(dc, candidate_dpi_, bundled ? cime::ui::kBundledCandidateFontFamily : nullptr,
+        cime::ui::kCandidateFontLogicalHeight);
 }
 std::wstring TextService::CandidateLabel(std::size_t index) const {
     if (index >= page_.candidates.size()) return {};
@@ -777,16 +809,20 @@ std::wstring TextService::CandidateLabel(std::size_t index) const {
 }
 void TextService::Paint(HWND window) {
     PAINTSTRUCT paint{}; HDC dc = BeginPaint(window, &paint);
-    RECT bounds{}; GetClientRect(window, &bounds); FillRect(dc, &bounds, reinterpret_cast<HBRUSH>(COLOR_WINDOW + 1));
-    FrameRect(dc, &bounds, GetSysColorBrush(COLOR_3DSHADOW));
-    const HFONT font = CandidateFont();
+    const auto colors = candidate_appearance_.Effective();
+    const auto fill = [dc](const RECT& rectangle, COLORREF color) {
+        if (HBRUSH brush = CreateSolidBrush(color)) { FillRect(dc, &rectangle, brush); DeleteObject(brush); }
+    };
+    RECT bounds{}; GetClientRect(window, &bounds); fill(bounds, colors.background);
+    if (HBRUSH border = CreateSolidBrush(colors.border)) { FrameRect(dc, &bounds, border); DeleteObject(border); }
+    const HFONT font = CandidateFont(dc);
     HGDIOBJ old = SelectObject(dc, font ? font : GetStockObject(DEFAULT_GUI_FONT)); SetBkMode(dc, TRANSPARENT);
     for (std::size_t i = 0; i < page_.candidates.size() && i < candidate_layout_.cells.size(); ++i) {
         const auto& cell = candidate_layout_.cells[i];
         if (cell.Empty()) continue;
         RECT box{cell.left, cell.top, cell.right, cell.bottom};
-        if (i == selected_) { FillRect(dc, &box, reinterpret_cast<HBRUSH>(COLOR_HIGHLIGHT + 1)); SetTextColor(dc, GetSysColor(COLOR_HIGHLIGHTTEXT)); }
-        else SetTextColor(dc, GetSysColor(COLOR_WINDOWTEXT));
+        if (i == selected_) { fill(box, colors.highlight); SetTextColor(dc, colors.highlight_text); }
+        else SetTextColor(dc, colors.text);
         box.left += candidate_layout_.text_padding_x; box.right -= candidate_layout_.text_padding_x;
         const std::wstring text = CandidateLabel(i);
         DrawTextW(dc, text.c_str(), static_cast<int>(text.size()), &box, DT_SINGLELINE | DT_VCENTER | DT_END_ELLIPSIS | DT_NOPREFIX);

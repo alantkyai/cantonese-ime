@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "version": "1.0.6",
+  "checked_at_utc": "2026-10-23T16:17:00.401657+00:00",
+  "architecture": "AMD64",
+  "signed": false,
+  "standard_installer_status": "PASS: exact installer upgraded the Windows 10 x64 development installation; exit code 0",
+  "setup": {
+    "filename": "CantoneseIME-1.0.6-windows-x64-setup.exe",
+    "bytes": 91840643,
+    "sha256": "38373c8b4306ec17a81faa244c3ebe44e6a864348efa430722450c4d51f673b7"
+  },
+  "package_manifest_sha256": "c2dc8e3acc008645974fd776daa9e229dc5da61cf1f8dd77c5cf7d693ba2d7b0",
+  "payload_files_verified": 128,
+  "native_compile": {
+    "passed": true,
+    "dll": {
+      "filename": "CantoneseIME.dll",
+      "bytes": 2552320,
+      "sha256": "663762a6fe38530fdd3b5d703903756d08d390a7d715848b174eede32e34384d"
+    },
+    "source_sha256": {
+      "native/tsf/tsf.cpp": "75a2c126bf623765993e626d8a00ae70a537dae739af38f8b093393d21c1f388",
+      "native/tsf/candidate_font.h": "1c5de0537d064811707dc821e92c2926245e742228afa87b266751200dc84094",
+      "native/tsf/candidate_appearance.h": "3988662a0d4918a962c49b3d6ec1124c3d48cf518d374e33b9ea041282eb60ea",
+      "native/tsf/input_mode_button.h": "d3b2b1b47e37b9e51a848dd5eb93f73685d9aa9b19ae16c63e4e4709611ffe83",
+      "native/tsf/resource.h": "5e21efad59bab86352fc749d7e18ae3f54795f8b013d10b34ddb7607266bd5c3"
+    }
+  },
+  "actual_dll_com_smoke": {
+    "passed": true,
+    "service_interfaces_verified": 7,
+    "canonical_iunknown_verified": true,
+    "dll_cleanly_released_and_unloaded": true,
+    "foreground_unchanged": true,
+    "scope": "Actual final DLL loaded into a disposable local x64 process; factory/service construction, interface identities and cleanup. TSF activation and typing were not exercised."
+  },
+  "isolated_native_font_checks": {
+    "passed": true,
+    "family": "LXGW WenKai TC",
+    "style": "Regular",
+    "logical_height": 20,
+    "font_asset_sha256": "6662480a3f95b4a90c80b189c679617a48adce3a505118a6af63ce5a482b83fa",
+    "font_cases": 15,
+    "offscreen_popup_renders": 9,
+    "dpi_values": [
+      96,
+      120,
+      144,
+      192
+    ],
+    "separate_process_private_font_absence_verified": true,
+    "invalid_font_inputs_rejected": 3,
+    "scope": "Windows GDI private memory font fixtures, fallback, representative glyphs, metrics, multiple owners and cleanup. These font-only offscreen renders do not demonstrate the integrated themed candidate panel inside a game."
+  },
+  "isolated_native_appearance_checks": {
+    "passed": true,
+    "default": {
+      "background": "dark",
+      "panel_opacity_percent": 95
+    },
+    "background_choices": [
+      "dark",
+      "light",
+      "Windows system colors"
+    ],
+    "opacity_presets_percent": [
+      100,
+      95,
+      90,
+      85
+    ],
+    "per_application_isolation_reset_and_global_fallback": true,
+    "malformed_preferences_fall_back_safely": true,
+    "no_load_time_preference_writes": true,
+    "atomic_preference_persistence": true,
+    "high_contrast_policy_uses_system_colors_and_full_opacity": true,
+    "real_hidden_window_layered_alpha_readbacks": 4,
+    "nonactivating_window_styles_preserved": true,
+    "scope": "Disposable explicit preferences fixtures and hidden nonactivating Win32 popup; no real user preferences or global theme changes."
+  },
+  "native_mode_button_checks": {
+    "passed": true,
+    "appearance_menu_delegation_preserves_input_mode": true,
+    "detached_owner_is_disconnected": true,
+    "icon_variants": 24,
+    "contrast_renders": 48,
+    "scope": "Local COM button fixture; no live language-bar activation."
+  },
+  "package_and_builder_tests": {
+    "passed": true,
+    "tests_run": 56,
+    "skipped": 0,
+    "source_hashes_unchanged": true,
+    "scope": "Synthetic native package, dictionary source-notice retention, reviewed font/OFL pins, staging race guards and installer compiler boundary. Product setup execution is separate."
+  },
+  "installed_verification": {
+    "status": "PASS: installed package, font, registration, engine and input-source checks",
+    "installed_payload_files_verified": 128,
+    "native_dll_version": "1.0.6.0",
+    "exact_font_bundle_files_verified": 7,
+    "engine_status": "ready",
+    "learning_preservation_verified": true,
+    "learning_contents_published": false,
+    "input_source_preferences_preserved": true,
+    "core_installed_checks_passed": 9,
+    "appearance_unchanged_during_verification": true,
+    "installation_time_appearance_preservation": "NOT PROVEN: absent before installation, an app override was present at read-back; source attribution of that change is not established. Current settings were retained.",
+    "scope": "Read-only installed payload/font/version/registration/runtime/preferences evidence. Live candidate appearance remains user acceptance."
+  },
+  "live_candidate_appearance_acceptance": "PENDING: user checking after installation",
+  "limitations": [
+    "Live game-client rendering and input acceptance pending.",
+    "Clean-machine and Windows 11 acceptance pending.",
+    "Unsigned; native x64 Windows desktop applications only. 32-bit applications, ARM64 and secure/password fields excluded.",
+    "Host-rendered TSF candidate lists control their own appearance. Panel opacity affects both background and text.",
+    "Native macOS compilation, installation and typing validation pending."
+  ],
+  "privacy": {
+    "personal_learning_contents_included": false,
+    "desktop_user_identity_or_absolute_user_paths_included": false,
+    "machine_specific_evidence_published": false
+  }
+}

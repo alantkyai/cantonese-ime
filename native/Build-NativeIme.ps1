@@ -38,7 +38,7 @@ $artifacts = @('CantoneseIME.dll','CantoneseImeNativeTestHost.exe') | ForEach-Ob
     [ordered]@{ path=$path; bytes=(Get-Item -LiteralPath $path).Length;
         sha256=(Get-FileHash -LiteralPath $path -Algorithm SHA256).Hash.ToLowerInvariant(); pe_machine='0x8664' }
 }
-$sourcePaths = @('tsf/tsf.cpp','tsf/ipc.cpp','tsf/ipc.h','tsf/candidate_layout.h','tsf/input_mode_button.h','tsf/registration.cpp','tsf/ime_ids.h','tsf/tsf_guids.cpp','tsf/tsf_compat.h',
+$sourcePaths = @('tsf/tsf.cpp','tsf/ipc.cpp','tsf/ipc.h','tsf/candidate_layout.h','tsf/candidate_font.h','tsf/candidate_appearance.h','tsf/input_mode_button.h','tsf/registration.cpp','tsf/ime_ids.h','tsf/tsf_guids.cpp','tsf/tsf_compat.h',
     'tsf/CantoneseIME.rc','tsf/resource.h','tsf/Build-Icons.ps1','tsf/icons/cantonese.ico','tsf/icons/mode-cantonese.ico','tsf/icons/mode-english.ico',
     'tsf/CantoneseIME.def','testhost/testhost.cpp','tsf/build.ps1','Build-NativeIme.ps1')
 $sources = $sourcePaths | ForEach-Object {

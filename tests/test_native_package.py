@@ -2,6 +2,7 @@
 import json
 from pathlib import Path
 import struct
+import subprocess
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -25,6 +26,41 @@ class NativePackageTests(unittest.TestCase):
         self.root_patch = patch.object(package, "ROOT", self.root)
         self.root_patch.start()
         self.addCleanup(self.root_patch.stop)
+        # A tiny synthetic sfnt placeholder keeps package fixtures independent
+        # of the 15 MB production font. Only this fixture's reviewed pins are
+        # overridden; lock/policy/copy validation is exercised normally.
+        self.font_directory = package.CANDIDATE_FONT_DIRECTORY
+        font_files = []
+        for name, content, upstream in (
+            (package.CANDIDATE_FONT_FILE, b"\x00\x01\x00\x00synthetic reviewed font", "fonts/TTF/" + package.CANDIDATE_FONT_FILE),
+            ("OFL.txt", b"Synthetic complete reviewed OFL/copyright placeholder", "OFL.txt"),
+            ("AUTHORS.txt", b"Synthetic original authors", "AUTHORS.txt"),
+            ("CONTRIBUTORS.txt", b"Synthetic original contributors", "CONTRIBUTORS.txt"),
+            ("UPSTREAM_README.md", b"Synthetic upstream source README", "README.md"),
+            ("NOTICE.md", b"Synthetic project font attribution", None),
+        ):
+            path = self.write(self.font_directory + "/" + name, content)
+            record = {"name": name, "sha256": package.digest(path), "size_bytes": len(content)}
+            if upstream:
+                record.update(upstream_path=upstream, upstream_git_blob_sha="a" * 40)
+            else:
+                record["origin"] = "Project-authored packaging notice"
+            font_files.append(record)
+        self.font_file = self.root / self.font_directory / package.CANDIDATE_FONT_FILE
+        for key, value in (("CANDIDATE_FONT_SHA256", package.digest(self.font_file)),
+                           ("CANDIDATE_FONT_SIZE", self.font_file.stat().st_size),
+                           ("CANDIDATE_FONT_OFL_SHA256", package.digest(self.root / self.font_directory / "OFL.txt"))):
+            override = patch.object(package, key, value)
+            override.start()
+            self.addCleanup(override.stop)
+        self.font_lock = {
+            "schema_version": 1, "family": "LXGW WenKai TC", "style": "Regular", "license": "OFL-1.1",
+            "source_repository": "https://github.com/lxgw/LxgwWenKaiTC",
+            "source_commit": package.CANDIDATE_FONT_SOURCE_COMMIT, "local_directory": self.font_directory,
+            "font_file": package.CANDIDATE_FONT_FILE, "font_sha256": package.CANDIDATE_FONT_SHA256,
+            "font_size_bytes": package.CANDIDATE_FONT_SIZE, "modified": False, "files": font_files,
+        }
+        self.font_lock_path = self.json(self.font_directory + "/sources.lock.json", self.font_lock)
         self.python = self.write("external-python.exe", pe_bytes())
         self.write("cantonese_ime/__init__.py", b"# fixture\n")
         self.mapping_module = self.write("cantonese_ime/mappings.py", b"# synthetic mapping implementation\n")
@@ -214,6 +250,232 @@ class NativePackageTests(unittest.TestCase):
         self.write("data/mappings/syllables.json", original)
         self.mapping_module.write_bytes(self.mapping_module.read_bytes() + b"changed")
         self.assert_rejected_before_staging("Mapping implementation changed")
+
+    def test_reviewed_font_and_all_six_notices_are_bound_in_package_manifest(self):
+        manifest = self.stage()
+        records = {row["path"]: row for row in manifest["files"]}
+        names = {row["name"] for row in self.font_lock["files"]} | {"sources.lock.json"}
+        self.assertEqual(len(names), 7)
+        for name in names:
+            relative = self.font_directory + "/" + name
+            self.assertEqual(records[relative]["sha256"], package.digest(self.root / relative))
+            self.assertEqual((self.output / relative).read_bytes(), (self.root / relative).read_bytes())
+
+    def test_missing_font_or_required_notice_is_rejected_before_staging(self):
+        for name in (package.CANDIDATE_FONT_FILE, "OFL.txt", "NOTICE.md"):
+            path = self.root / self.font_directory / name
+            original = path.read_bytes()
+            with self.subTest(name=name):
+                path.unlink()
+                self.assert_rejected_before_staging("missing or outside")
+                path.write_bytes(original)
+
+    def test_tampered_font_or_ofl_is_rejected_before_staging(self):
+        for name in (package.CANDIDATE_FONT_FILE, "OFL.txt"):
+            path = self.root / self.font_directory / name
+            original = path.read_bytes()
+            with self.subTest(name=name):
+                path.write_bytes(original + b" changed")
+                self.assert_rejected_before_staging("differs from its source lock")
+                path.write_bytes(original)
+
+    def test_font_lock_cannot_select_another_family_style_license_or_location(self):
+        for key, value in (("family", "Other Font"), ("style", "Bold"), ("license", "Other"),
+                           ("modified", True), ("source_commit", "b" * 40),
+                           ("source_repository", "https://example.invalid/font"),
+                           ("local_directory", "../outside"), ("font_file", "other.ttf"),
+                           ("font_sha256", "b" * 64), ("font_size_bytes", 1)):
+            changed = dict(self.font_lock, **{key: value})
+            with self.subTest(key=key):
+                self.json(self.font_directory + "/sources.lock.json", changed)
+                self.assert_rejected_before_staging("reviewed unmodified")
+        self.json(self.font_directory + "/sources.lock.json", self.font_lock)
+
+    def test_self_consistent_replacement_font_is_still_not_the_reviewed_font(self):
+        self.font_file.write_bytes(b"different sfnt pretending to be same family")
+        value = json.loads(json.dumps(self.font_lock))
+        value["font_sha256"] = package.digest(self.font_file)
+        value["font_size_bytes"] = self.font_file.stat().st_size
+        row = next(row for row in value["files"] if row["name"] == package.CANDIDATE_FONT_FILE)
+        row.update(sha256=value["font_sha256"], size_bytes=value["font_size_bytes"])
+        self.json(self.font_directory + "/sources.lock.json", value)
+        self.assert_rejected_before_staging("reviewed unmodified")
+
+    def test_self_consistent_truncated_license_is_not_the_original_full_ofl(self):
+        path = self.root / self.font_directory / "OFL.txt"
+        path.write_bytes(b"OFL-1.1 abbreviated label")
+        value = json.loads(json.dumps(self.font_lock))
+        row = next(row for row in value["files"] if row["name"] == "OFL.txt")
+        row.update(sha256=package.digest(path), size_bytes=path.stat().st_size)
+        self.json(self.font_directory + "/sources.lock.json", value)
+        self.assert_rejected_before_staging("complete original OFL")
+
+    def test_font_lock_requires_exact_safe_file_inventory(self):
+        for failure in ("missing", "duplicate", "upstream", "size"):
+            value = json.loads(json.dumps(self.font_lock))
+            if failure == "missing":
+                value["files"].pop()
+            elif failure == "duplicate":
+                value["files"][-1] = value["files"][0]
+            elif failure == "upstream":
+                value["files"][0]["upstream_path"] = "../../elsewhere.ttf"
+            else:
+                value["files"][0]["size_bytes"] = -1
+            with self.subTest(failure=failure):
+                self.json(self.font_directory + "/sources.lock.json", value)
+                self.assert_rejected_before_staging("Candidate font lock")
+
+    def test_font_notice_edit_after_validation_cannot_replace_original_pin(self):
+        notice = self.root / self.font_directory / "NOTICE.md"
+        original = package._candidate_font_inputs
+
+        def edited(**options):
+            selected = original(**options)
+            notice.write_bytes(notice.read_bytes() + b" after validation")
+            return selected
+
+        with patch.object(package, "_candidate_font_inputs", side_effect=edited), \
+                patch.object(package.subprocess, "run") as launch, \
+                self.assertRaisesRegex(ValueError, "Validated package input changed"):
+            package.stage(self.output, self.python)
+        self.assertFalse(self.output.exists())
+        launch.assert_not_called()
+
+    def test_font_notice_copy_race_restoring_source_still_cannot_publish(self):
+        notice = self.root / self.font_directory / "OFL.txt"
+        original_bytes = notice.read_bytes()
+        copy_file = package.shutil.copyfile
+
+        def raced(source, target, **options):
+            if Path(source) == notice:
+                notice.write_bytes(original_bytes + b" changed during copy")
+                try:
+                    return copy_file(source, target, **options)
+                finally:
+                    notice.write_bytes(original_bytes)
+            return copy_file(source, target, **options)
+
+        with patch.object(package.shutil, "copyfile", side_effect=raced), \
+                patch.object(package.subprocess, "run") as launch, \
+                self.assertRaisesRegex(RuntimeError, "input changed while copying"):
+            package.stage(self.output, self.python)
+        self.assertEqual(notice.read_bytes(), original_bytes)
+        self.assertFalse((self.output / "package-manifest.json").exists())
+        launch.assert_not_called()
+
+    def test_font_lock_and_staged_notice_are_rechecked_after_configuration(self):
+        for target in (self.font_lock_path, self.output / self.font_directory / "NOTICE.md"):
+            with self.subTest(target=target):
+                original = self.font_lock_path.read_bytes()
+
+                def changed(args, **options):
+                    self.fake_configure(args, **options)
+                    target.write_bytes(target.read_bytes() + b" after configure")
+
+                with patch.object(package.subprocess, "run", side_effect=changed), \
+                        self.assertRaises((ValueError, RuntimeError)):
+                    package.stage(self.output, self.python)
+                self.assertFalse((self.output / "package-manifest.json").exists())
+                self.font_lock_path.write_bytes(original)
+                import shutil
+                shutil.rmtree(self.output)
+
+    def test_release_rechecks_original_font_assets_after_inno_compilation(self):
+        from tools import build_release as release
+        for name in ("tools/build_release.py", "tools/package_native.py", "installer/CantoneseIME.iss",
+                     "installer/dependencies.lock.json", "pyproject.toml", "native/tsf/icons/cantonese.ico",
+                     "installer/lifecycle.py", "installer/Set-UserInputSource.ps1",
+                     "installer/GETTING_STARTED.txt", "installer/RELEASE_NOTICES.txt"):
+            self.write(name, b"synthetic release support input")
+        compiler = self.write("compiler/ISCC.exe", pe_bytes())
+        self.write("compiler/license.txt", b"synthetic compiler license")
+        runtime = self.root / "private-python"
+        self.write("private-python/python.exe", pe_bytes())
+        output = self.root / "synthetic-release"
+        notice = self.root / self.font_directory / "NOTICE.md"
+        original = notice.read_bytes()
+
+        def stage_fixture(payload, *args, **options):
+            payload.mkdir()
+            asset = payload / "sentinel"
+            asset.write_bytes(b"stable packaged content")
+            records = [{"path": "sentinel", "bytes": asset.stat().st_size, "sha256": package.digest(asset)}]
+            for relative, source in package._candidate_font_inputs().items():
+                target = payload / relative
+                target.parent.mkdir(parents=True, exist_ok=True)
+                target.write_bytes(source.read_bytes())
+                records.append({"path": relative, "bytes": target.stat().st_size, "sha256": package.digest(target)})
+            return {"files": records}
+
+        def compile_fixture(args, **options):
+            if args[-1] == "--version":
+                return subprocess.CompletedProcess(args, 0, "7.1.0", "")
+            (output / "CantoneseIME-1.0.6-windows-x64-setup.exe").write_bytes(pe_bytes())
+            notice.write_bytes(original + b" changed during compile")
+            return subprocess.CompletedProcess(args, 0, "synthetic compiler success", "")
+
+        with patch.object(release, "ROOT", self.root), \
+                patch.object(release, "_candidate_font_inputs", side_effect=package._candidate_font_inputs), \
+                patch.object(release, "project_version", return_value="1.0.6"), \
+                patch.object(release, "tools", return_value=(runtime, compiler, {"python": {}, "inno_setup": {"version": "7.1.0"}})), \
+                patch.object(release, "stage", side_effect=stage_fixture), \
+                patch.object(release.subprocess, "run", side_effect=compile_fixture), \
+                self.assertRaisesRegex(ValueError, "Validated package input changed"):
+            release.build(output, allow_fetch=False, compile_setup=True)
+        self.assertFalse((output / "release-build.json").exists())
+        self.assertEqual((output / "package/sentinel").read_bytes(), b"stable packaged content")
+        self.assertEqual((output / "package" / self.font_directory / "NOTICE.md").read_bytes(), original)
+
+    def test_release_rejects_new_stage_pins_even_if_original_font_notice_is_restored(self):
+        from tools import build_release as release
+        for name in ("tools/build_release.py", "tools/package_native.py", "installer/CantoneseIME.iss",
+                     "installer/dependencies.lock.json", "pyproject.toml", "native/tsf/icons/cantonese.ico",
+                     "installer/lifecycle.py", "installer/Set-UserInputSource.ps1",
+                     "installer/GETTING_STARTED.txt", "installer/RELEASE_NOTICES.txt"):
+            self.write(name, b"synthetic release support input")
+        compiler = self.write("compiler/ISCC.exe", pe_bytes())
+        self.write("compiler/license.txt", b"synthetic compiler license")
+        runtime = self.root / "private-python"
+        self.write("private-python/python.exe", pe_bytes())
+        output = self.root / "synthetic-release"
+        notice = self.root / self.font_directory / "NOTICE.md"
+        original_notice, original_lock = notice.read_bytes(), self.font_lock_path.read_bytes()
+
+        def stage_fixture(payload, *args, **options):
+            # Emulate a self-consistent notice/lock edit between the release's
+            # original validation and stage's independent validation, then
+            # restore the source. Staged bytes remain changed and self-consistent.
+            notice.write_bytes(original_notice + b" temporary new attribution")
+            lock = json.loads(original_lock)
+            row = next(row for row in lock["files"] if row["name"] == "NOTICE.md")
+            row.update(sha256=package.digest(notice), size_bytes=notice.stat().st_size)
+            self.json(self.font_directory + "/sources.lock.json", lock)
+            payload.mkdir()
+            records = []
+            try:
+                for relative, source in package._candidate_font_inputs().items():
+                    target = payload / relative
+                    target.parent.mkdir(parents=True, exist_ok=True)
+                    target.write_bytes(source.read_bytes())
+                    records.append({"path": relative, "bytes": target.stat().st_size, "sha256": package.digest(target)})
+            finally:
+                notice.write_bytes(original_notice)
+                self.font_lock_path.write_bytes(original_lock)
+            return {"files": records}
+
+        with patch.object(release, "ROOT", self.root), \
+                patch.object(release, "_candidate_font_inputs", side_effect=package._candidate_font_inputs), \
+                patch.object(release, "project_version", return_value="1.0.6"), \
+                patch.object(release, "tools", return_value=(runtime, compiler, {"python": {}, "inno_setup": {"version": "7.1.0"}})), \
+                patch.object(release, "stage", side_effect=stage_fixture), \
+                patch.object(release.subprocess, "run", return_value=subprocess.CompletedProcess([], 0, "7.1.0", "")) as launch, \
+                self.assertRaisesRegex(ValueError, "original release input pins"):
+            release.build(output, allow_fetch=False, compile_setup=True)
+        self.assertEqual(launch.call_count, 1)  # Compiler version only, no compile.
+        self.assertEqual(notice.read_bytes(), original_notice)
+        self.assertEqual(self.font_lock_path.read_bytes(), original_lock)
+        self.assertNotEqual((output / "package" / self.font_directory / "NOTICE.md").read_bytes(), original_notice)
+        self.assertFalse((output / "release-build.json").exists())
 
 
 if __name__ == "__main__":

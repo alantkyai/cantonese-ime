@@ -13,6 +13,7 @@ class InputModeOwner {
 public:
     virtual bool EnglishMode() const = 0;
     virtual HRESULT ToggleInputMode() = 0;
+    virtual HRESULT ShowAppearanceMenu(POINT) { return E_NOTIMPL; }
 protected:
     ~InputModeOwner() = default;
 };
@@ -79,7 +80,8 @@ public:
         return String(english_ ? L"English mode (Ctrl+Space to switch to Cantonese)"
                                : L"Cantonese mode (Ctrl+Space to switch to English)", value);
     }
-    HRESULT STDMETHODCALLTYPE OnClick(TfLBIClick click, POINT, const RECT*) override {
+    HRESULT STDMETHODCALLTYPE OnClick(TfLBIClick click, POINT point, const RECT*) override {
+        if (click == TF_LBI_CLK_RIGHT) return owner_ ? owner_->ShowAppearanceMenu(point) : TF_E_DISCONNECTED;
         if (click != TF_LBI_CLK_LEFT) return S_OK;
         return owner_ ? owner_->ToggleInputMode() : TF_E_DISCONNECTED;
     }

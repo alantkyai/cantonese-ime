@@ -14,9 +14,9 @@ published binary release is for Windows x64.
 
 ## Install
 
-Use [the Windows x64 installer](https://github.com/hadesng173/cantonese-ime/releases/download/v1.0.5/CantoneseIME-1.0.5-windows-x64-setup.exe)
-and [its SHA-256 checksums](https://github.com/hadesng173/cantonese-ime/releases/download/v1.0.5/SHA256SUMS.txt)
-from [release 1.0.5](https://github.com/hadesng173/cantonese-ime/releases/tag/v1.0.5).
+Use [the Windows x64 installer](https://github.com/hadesng173/cantonese-ime/releases/download/v1.0.6/CantoneseIME-1.0.6-windows-x64-setup.exe)
+and [its SHA-256 checksums](https://github.com/hadesng173/cantonese-ime/releases/download/v1.0.6/SHA256SUMS.txt)
+from [release 1.0.6](https://github.com/hadesng173/cantonese-ime/releases/tag/v1.0.6).
 Run Setup normally and approve Windows' administrator prompt. The installer
 includes its own private Python runtime; no system Python, developer tools,
 or Internet connection is required on the target computer.
@@ -37,13 +37,34 @@ the engine. Windows Settings > Apps provides the standard uninstall entry.
 Upgrades and uninstall preserve personal learning at
 `%LOCALAPPDATA%\CantoneseIME\learning.json`.
 
+## Candidate appearance
+
+Version 1.0.6 uses **LXGW WenKai TC Regular (霞鶩文楷 TC)** for the numbered
+word choices, at 20 logical pixels with Windows DPI scaling. The installer
+includes the unmodified font; no separate Windows font installation is needed.
+It is loaded privately for the IME's candidate panel. The receiving application
+continues to control the font of committed text.
+
+Right-click the candidate panel or the native **粵 / 英** mode button to change
+**Background** to **Dark**, **Light** or **Windows system colors**, and **Panel
+opacity** to **100%**, **95%**, **90%** or **85%**. The default is **Dark at 95%**.
+Opacity applies to the entire panel, including its text; choose 100% for an
+opaque panel. Windows High Contrast automatically uses opaque Windows colors.
+
+Appearance choices are saved separately for each application. **Reset appearance
+for this app** restores its default. Settings are stored at
+`%LOCALAPPDATA%\CantoneseIME\appearance.ini` and preserved during upgrades and
+uninstall. Applications that draw their own TSF candidate list control that
+list's appearance.
+
 The package is unsigned. Windows may display an unknown-publisher or SmartScreen
 warning. Support is scoped to native 64-bit desktop applications on Windows x64;
 32-bit applications, ARM64 and secure/password fields are outside this release.
 Validation and remaining platform checks are recorded in
-[the public release summary](docs/GITHUB_RELEASE_1.0.5.md),
-[the technical release notes](docs/RELEASE_NOTES_1.0.5.md) and
-[release checklist](docs/RELEASE_CHECKLIST.md).
+[the 1.0.6 release notes](docs/RELEASE_NOTES_1.0.6.md) and
+[release checklist](docs/RELEASE_CHECKLIST_1.0.6.md). The
+[first public release summary](docs/GITHUB_RELEASE_1.0.5.md) retains the
+historical 1.0.5 checks.
 
 ## Build the installer
 
@@ -57,7 +78,7 @@ python tools/build_release.py --fetch-tools
 ```
 
 The build pins official application-local Python and Inno Setup downloads and
-stages the release under `dist/CantoneseIME-1.0.5-x64`. It verifies source,
+stages the release under `dist/CantoneseIME-1.0.6-x64`. It verifies source,
 dictionary, runtime and attribution files before compiling the single setup
 executable. Running the builder does not install the resulting IME.
 The native sources, toolchain lock and build scripts are in [native/](native/tsf/README.md)
@@ -69,7 +90,10 @@ Dictionary data retains its original component licenses and attribution;
 the combined adaptation is distributed under CC BY-SA 4.0. See
 [data licensing](data/DATA_LICENSE.md),
 [third-party notices](data/THIRD_PARTY_NOTICES.md) and
-[release notices](installer/RELEASE_NOTICES.txt). The independent application
+[release notices](installer/RELEASE_NOTICES.txt). The bundled LXGW WenKai TC
+font retains its [SIL Open Font License 1.1](assets/fonts/lxgw-wenkai-tc/OFL.txt)
+and [original credits and source notice](assets/fonts/lxgw-wenkai-tc/NOTICE.md).
+The independent application
 code is separate from these data licenses and currently has no general
 redistribution license declaration. See the [release notices](installer/RELEASE_NOTICES.txt).
 
@@ -90,7 +114,7 @@ for checking the new mode indicator or a new Windows version.
 
 ## Run the engine
 
-From `D:\IME_Project`:
+From the repository root:
 
 ```powershell
 python tools/build_dictionary.py

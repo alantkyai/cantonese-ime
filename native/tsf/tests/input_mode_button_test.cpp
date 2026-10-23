@@ -12,8 +12,11 @@ class Owner final : public cime::ui::InputModeOwner {
 public:
     bool EnglishMode() const override { return english; }
     HRESULT ToggleInputMode() override { ++toggles; english = !english; item->ModeChanged(); return S_OK; }
+    HRESULT ShowAppearanceMenu(POINT point) override { ++appearance_menus; menu_point = point; return S_OK; }
     bool english = false;
     unsigned toggles = 0;
+    unsigned appearance_menus = 0;
+    POINT menu_point{};
     cime::ui::InputModeButton* item = nullptr;
 };
 class Sink final : public ITfLangBarItemSink {
@@ -155,7 +158,8 @@ int wmain(int argc, wchar_t** argv) {
     assert(source->UnadviseSink(first_cookie + 1) == CONNECT_E_NOCONNECTION);
     Text(item, L"\x7cb5");
     HICON cantonese = nullptr; assert(item->GetIcon(&cantonese) == S_OK); AlphaIcon(cantonese, GetSystemMetrics(SM_CXSMICON), GetSystemMetrics(SM_CYSMICON));
-    assert(item->OnClick(TF_LBI_CLK_RIGHT, POINT{}, nullptr) == S_OK && owner.toggles == 0);
+    assert(item->OnClick(TF_LBI_CLK_RIGHT, POINT{123,456}, nullptr) == S_OK && owner.toggles == 0);
+    assert(owner.appearance_menus == 1 && owner.menu_point.x == 123 && owner.menu_point.y == 456 && sink.events.empty());
     assert(item->OnClick(TF_LBI_CLK_LEFT, POINT{}, nullptr) == S_OK && owner.toggles == 1);
     Text(item, L"\x82f1");
     assert(sink.events.size() == 1 && sink.events.back() == (TF_LBI_ICON | TF_LBI_TEXT | TF_LBI_TOOLTIP));
@@ -176,6 +180,7 @@ int wmain(int argc, wchar_t** argv) {
     assert(source->AdviseSink(IID_ITfLangBarItemSink, &sink, &sink.cookie) == S_OK);
     item->Detach(); assert(sink.references == 1);
     assert(item->OnClick(TF_LBI_CLK_LEFT, POINT{}, nullptr) == TF_E_DISCONNECTED && owner.toggles == 1);
+    assert(item->OnClick(TF_LBI_CLK_RIGHT, POINT{}, nullptr) == TF_E_DISCONNECTED && owner.appearance_menus == 1);
     assert(item->GetStatus(&status) == S_OK && (status & TF_LBI_STATUS_DISABLED));
     source->Release(); assert(item->Release() == 0 && live_objects == 0);
     // Load all actual DPI resources from this exact DLL and render them using

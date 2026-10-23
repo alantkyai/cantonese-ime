@@ -17,6 +17,16 @@ The taskbar button shows 粵 for Cantonese and 英 for direct English input.
 Click that button to change modes. Existing applications may need to be
 closed and reopened after an upgrade before the new icon appears.
 
+The candidate window uses the bundled LXGW WenKai TC font. No separate
+Windows font installation is needed. Right-click the candidate panel or the
+taskbar's Cantonese/English button to choose Dark, Light or System colors
+and panel opacity. These choices are saved separately for each application.
+The default is Dark at 95% opacity; choose 100% for an opaque panel. Windows
+High Contrast uses system colors and full opacity automatically. If an app
+draws its own candidate list, that app controls the list's appearance.
+Saved appearance choices are kept at:
+  %LOCALAPPDATA%\CantoneseIME\appearance.ini
+
 Candidate preferences and phrases are learned locally on this computer.
 Choosing ng -> 唔 also helps longer combinations such as ngho -> 唔好 and
 nghaigam -> 唔係咁. Choosing a whole phrase learns that phrase separately,
@@ -24,6 +34,7 @@ so a short input and a longer input can keep different preferred choices.
 The engine works offline. Personal learning is stored separately at:
   %LOCALAPPDATA%\CantoneseIME\learning.json
 Upgrades and uninstall keep that file.
+They also keep your saved appearance choices.
 
 Start menu > Cantonese IME > Enable Cantonese IME starts the engine and
 enables the keyboard for your account. It also arranges startup at sign-in.
@@ -49,3 +60,5 @@ checked; generated readings and ranking can still need language corrections.
 
 Licensing: see RELEASE_NOTICES.txt and data\THIRD_PARTY_NOTICES.md. The
 bundled dictionary and runtime retain their separate upstream licenses.
+The bundled font's original license and credits are in
+assets\fonts\lxgw-wenkai-tc\.

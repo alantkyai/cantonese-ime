@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "family": "LXGW WenKai TC",
+  "style": "Regular",
+  "license": "OFL-1.1",
+  "source_repository": "https://github.com/lxgw/LxgwWenKaiTC",
+  "source_commit": "7cde02609845fa4d0824dd88dced1ca4669d4825",
+  "local_directory": "assets/fonts/lxgw-wenkai-tc",
+  "font_file": "LXGWWenKaiTC-Regular.ttf",
+  "font_sha256": "6662480a3f95b4a90c80b189c679617a48adce3a505118a6af63ce5a482b83fa",
+  "font_size_bytes": 15341148,
+  "modified": false,
+  "files": [
+    {
+      "name": "AUTHORS.txt",
+      "sha256": "157b2216549168552db7f30ae1b42fcbcc39faf589c3112a59eaac43a9de11c9",
+      "size_bytes": 283,
+      "upstream_path": "AUTHORS.txt",
+      "upstream_git_blob_sha": "d5bc264b78b67f47768c7f944819152e78c42d56"
+    },
+    {
+      "name": "CONTRIBUTORS.txt",
+      "sha256": "9cbc2bed863124b95c67a2a884bdb968ca84998e8bb671bff66760bcaafded81",
+      "size_bytes": 601,
+      "upstream_path": "CONTRIBUTORS.txt",
+      "upstream_git_blob_sha": "e3be2b2e062046cad676437ba04d9d929eafc5c6"
+    },
+    {
+      "name": "LXGWWenKaiTC-Regular.ttf",
+      "sha256": "6662480a3f95b4a90c80b189c679617a48adce3a505118a6af63ce5a482b83fa",
+      "size_bytes": 15341148,
+      "upstream_path": "fonts/TTF/LXGWWenKaiTC-Regular.ttf",
+      "upstream_git_blob_sha": "badae37821982559892cd32082e139b248f8490a"
+    },
+    {
+      "name": "NOTICE.md",
+      "sha256": "cc17bdf46dbb713b3341895c0c08c7d9f7edb055255f69f4b5f3d8b5bec02930",
+      "size_bytes": 1050,
+      "origin": "Project-authored packaging notice"
+    },
+    {
+      "name": "OFL.txt",
+      "sha256": "1a13783bf4337242834b60309cdcdbeb566ae3f923576fdbba8b78db9d174def",
+      "size_bytes": 4395,
+      "upstream_path": "OFL.txt",
+      "upstream_git_blob_sha": "72694770c120925ea3d0940c2cbf635c85d1dae4"
+    },
+    {
+      "name": "UPSTREAM_README.md",
+      "sha256": "4479674a3a1891474cdb98dcb01b2737aba77a874fc80dd1d7457d013f0e0ae7",
+      "size_bytes": 18922,
+      "upstream_path": "README.md",
+      "upstream_git_blob_sha": "64d0c3a11a4d6a113a74e1ce4bccb74b5b0788a3"
+    }
+  ]
+}
