@@ -173,5 +173,13 @@
     "desktop_identity_or_absolute_user_paths_included": false,
     "personal_history_contents_hash_size_or_timestamps_included": false,
     "machine_specific_raw_evidence_published": false
+  },
+  "expanded_sentence_review": {
+    "status": "COMPLETE: QUALITY GATES FAILED; RELEASE WITHHELD",
+    "release_held": true,
+    "policy": "../eval/long_phrase_release_policy.json",
+    "results": "LONG_PHRASE_RELEASE_REVIEW.md",
+    "decision": "long-phrase-release-decision.json",
+    "scope": "Focused195runtime checks remain valid for frozen source but do not establish sentence quality. No candidate installation or publication after the expanded review."
   }
 }

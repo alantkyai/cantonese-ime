@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-23T17:43:47.000882+00:00",
+  "objective_outcome": "Expanded sentence/long-phrase testing completed. Candidate withheld because sentence-quality confidence gates failed.",
+  "candidate_version": "1.0.8",
+  "decision": "WITHHOLD",
+  "release_allowed": false,
+  "engine_sha256": "a4e2d07c98adbb78b8a6978892827bd907a68cd658f06229d6493fbc05e3e141",
+  "engine_or_dictionary_changed_by_campaign": false,
+  "completion_requirements": [
+    {
+      "requirement": "Test different natural longer phrases before deciding to release",
+      "status": "SATISFIED",
+      "evidence": "89 ordinary project-authored phrases across 10 topics and 29/30/30 length bands. The reported example and three controls are excluded from the quality denominator; all 1,206 scheduled lookups are retained."
+    },
+    {
+      "requirement": "Broaden evidence beyond the reported example and previous19developmentphrases",
+      "status": "SATISFIED",
+      "evidence": "The frozen 500 HKCanCor cases were re-derived from 58 transcripts. There are 8,000 queries across baseline/current engines, four forms and two histories, with 217 speech spans of four or more characters stratified by length."
+    },
+    {
+      "requirement": "Check learning, ambiguity, sentence boundaries and actual typing-state behavior",
+      "status": "SATISFIED_WITH_SCOPE",
+      "evidence": "Fresh, five-short and twelve-heavy synthetic histories; habitual-ng subgroup; tone/apostrophe diagnostics; 362 session-prefix states, paging, commit, protocol, reopen and phrase reuse; six 255/256-character stress inputs. This is engine/session evidence, not installed TSF acceptance."
+    },
+    {
+      "requirement": "Keep failures and verify ranking measurements rather than rely on green runtime tests",
+      "status": "SATISFIED",
+      "evidence": "All 23 authored first-page misses and every external request rank are retained. Independent report-only review reproduced denominators, summaries, gates, real-candidate seeding and current pins. Exact text and exact reading are distinguished; alternate orthography is not counted as primary success."
+    },
+    {
+      "requirement": "Release only when sufficiently confident",
+      "status": "SATISFIED_BY_WITHHOLDING",
+      "evidence": "Authored quality gates fail despite passing mechanics, latency and regression gates. No new candidate installation, tag or public release occurred during this expanded review."
+    }
+  ],
+  "gate_results": {
+    "authored_coverage": {
+      "ordinary_case_count": true,
+      "length_band_coverage": true,
+      "topic_coverage": true,
+      "unstored_whole_text_coverage": true,
+      "habitual_ng_coverage": true,
+      "no_errors_or_constraints": true
+    },
+    "authored_quality_passed": false,
+    "failed_authored_checks": [
+      "fresh:plain_yale_compact:top9",
+      "fresh:plain_yale_compact:top90",
+      "fresh:plain_yale_compact:9-12:top9",
+      "short_preferences:plain_yale_compact:top9",
+      "short_preferences:plain_yale_compact:top90",
+      "short_preferences:plain_yale_compact:9-12:top9",
+      "heavy_short_preferences:plain_yale_compact:top9",
+      "heavy_short_preferences:plain_yale_compact:top90",
+      "heavy_short_preferences:plain_yale_compact:9-12:top9",
+      "fresh:habitual_ng_compact:top9",
+      "fresh:habitual_ng_compact:top90",
+      "short_preferences:habitual_ng_compact:top9",
+      "short_preferences:habitual_ng_compact:top90",
+      "heavy_short_preferences:habitual_ng_compact:top9",
+      "heavy_short_preferences:habitual_ng_compact:top90"
+    ],
+    "all_authored_requests_accounted_for": true,
+    "all_guarded_authored_inputs_still_match": true,
+    "authored_lookup_histories_unchanged": true,
+    "external_replay_complete_and_pins_unchanged": true,
+    "external_regression_gate_passed": true,
+    "dedicated_latency_gate_passed": true,
+    "observed_robustness_controls_completed": true,
+    "installed_x64_candidate_acceptance": "NOT_ATTEMPTED: engine quality review did not justify installation; remains required before an eventual release.",
+    "user_application_visual_acceptance": "Not exercised; user-owned as previously requested."
+  },
+  "observed_state": {
+    "installed_version": "1.0.7",
+    "installed_manifest_sha256": "8ab40b4b95fa2b8b74ce7887d3bffe2c3857ad56abda2fc3ad9064ab679a61cc",
+    "github_public_release_tags": [
+      "v1.0.5"
+    ],
+    "candidate_local_tag_present": false,
+    "setup_launched_during_expanded_review": false,
+    "remote_mutations_performed": false
+  },
+  "privacy": {
+    "personal_history_opened_or_modified_during_campaign": false,
+    "public_and_new_synthetic_inputs_only": true,
+    "public_artifacts_checked_for_absolute_user_paths_and_SIDs": true
+  },
+  "artifacts_sha256": {
+    "eval/long_phrase_release_policy.json": "5ab132691d4d987290de2afc03db49e6ee688a19082960a1e5d540c10fb499f0",
+    "eval/long_phrase_review_cases.json": "bfb0eb8cf0ca77633394c3aad450d403603800e9a8108c01817bdb85d1d814c6",
+    "tools/evaluate_long_phrases.py": "5a693edea8985581c45cbb75337e8357a233bb8c28756312509d8debdeee350a",
+    "tests/test_long_phrase_review.py": "921c3433164f5864aa4c1780beeebe7e306e1cb18b5bc8da5b8eaa099a26f5ca",
+    "docs/long-phrase-fixture-freeze.json": "72bbd4487414a3210315878bcb2b807c70392d119ac67089a95d45e7a6b40baf",
+    "docs/long-phrase-authored-evaluation.json": "f3f571ba497a8aa1a8f864c1498e8975c8eb0bf5a5efe3a871c5204a13a37586",
+    "docs/long-phrase-authored-failure-triage.json": "7f6117af555c9d3dd1de59bf498f679ca1b9a93c8be90c7c94f574f8a115ee63",
+    "docs/long-phrase-external-evaluation.json": "22358bb961e3d1f1ad54cd1b36573786dde0400ed6947e7f8c52c9765d643540",
+    "docs/long-phrase-robustness-evaluation.json": "6f8bb25121b3430398c006f51573287227f26f9c6018283420b1aebcc9fda961",
+    "docs/long-phrase-latency-evaluation.json": "55c068880f4887dcc84d2854bbf6e2fe13f636828b8e0425141184aa7670d5f1"
+  },
+  "remaining_engine_work": [
+    "Contextual scoring and ambiguity/orthographic competition rather than individual phrase patches.",
+    "Consistent support for habitual ng-for-唔 input, without relying on single-character memory to rescue every sentence.",
+    "Freeze additional untouched cases after any tuning; replay this campaign as development regression."
+  ],
+  "limits": [
+    "Authored cases are AI-authored and project-reviewed; they are not native-human or audio acceptance.",
+    "External annotations have upstream dictionary overlap and orthographic limitations; there is no held-out accuracy claim.",
+    "Warm engine-only latency passed on this machine; it does not establish IPC, TSF or game latency, or a guarantee across machines.",
+    "Metadata, finite-score and consumption checks do not independently verify every returned candidate against all phonetic constraints."
+  ]
+}

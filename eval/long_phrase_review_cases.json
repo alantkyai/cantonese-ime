@@ -1,0 +1,4310 @@
+{
+  "schema_version": 1,
+  "title": "Authored Cantonese daily long-phrase development review",
+  "provenance": {
+    "kind": "project_authored_development_review",
+    "author": "Codex (AI-authored project fixture; no native-speaker approval claimed)",
+    "authored_date": "2026-10-24",
+    "engine_ranking_consulted_during_authoring": false,
+    "engine_imported_by_authoring_script": false,
+    "private_history_used": false,
+    "held_out_accuracy_claim": false,
+    "construction": "Ten daily-life topic groups, each with three short, three medium and three long phrases. Targets and intended numeric readings frozen before lexical support checks. One reported phrase and three short controls are explicitly separate.",
+    "review_status": "All 93 text/readings independently reviewed by a second project agent before ranking; spelling independently checked against the frozen factual grid. No human/native-speaker or audio approval claimed.",
+    "limits": "Project-authored development cases are neither sampled human keystrokes nor a representative Cantonese test set. Tone-free collisions, alternate natural pronunciations and output orthography require separate interpretation; exact gold text remains fixed.",
+    "authored_targets_sha256": "ecb3e167fbd36b7b7477f80d6cfa99a800b81e4b7da586e320370a525e47b628",
+    "pre_ranking_reading_corrections": [
+      {
+        "id": "lp055",
+        "text": "開會先講",
+        "before": "hoi1 wui6 sin1 gong2",
+        "after": "hoi1 wui2 sin1 gong2",
+        "reason": "Pre-ranking contextual pronunciation review: 開會 meeting uses hoi1 wui2; both pinned Rime and Words.hk exact word sources agree. No target text or primary Yale letters changed."
+      },
+      {
+        "id": "lp063",
+        "text": "聽日開會之前交份報告",
+        "before": "ting1 jat6 hoi1 wui6 zi1 cin4 gaau1 fan6 bou3 gou3",
+        "after": "ting1 jat6 hoi1 wui2 zi1 cin4 gaau1 fan6 bou3 gou3",
+        "reason": "Pre-ranking contextual pronunciation review: 開會 meeting uses hoi1 wui2; both pinned Rime and Words.hk exact word sources agree. No target text or primary Yale letters changed."
+      }
+    ],
+    "contextual_reading_review_sources": [
+      {
+        "text": "開會",
+        "reading": "hoi1 wui2",
+        "reviewed_by": "Parent agent before ranking",
+        "urls": [
+          "https://words.hk/zidin/%E9%96%8B%E6%9C%83",
+          "https://www.ilc.cuhk.edu.hk/workshop/Chinese/Cantonese/Romanization/ch4_tones/6_postassessment.aspx"
+        ]
+      },
+      {
+        "text": "吓",
+        "reading": "haa5",
+        "sense": "Light verb/aspectual use, not the surprise interjection",
+        "reviewed_by": "Parent agent before ranking",
+        "urls": [
+          "https://words.hk/zidin/v/96429/%E5%90%93"
+        ]
+      }
+    ]
+  },
+  "input_profile": "cantonese-yale-ascii-v3",
+  "input_policy": "Primary input is compact plain Yale without tone marks or low-register h. user_input, when present, replaces only 唔/m4 with user-habit ng at syllable boundaries and is scored as a separate input group.",
+  "lexical_validation": {
+    "method": "Read-only exact text/reading existence queries; no candidate engine search or use of weights/ranks. Whole-text presence is measured after authoring and did not select targets.",
+    "dictionary_sha256": "bd312406a15162556ac58a257ede1514ad40890c793b6f8fa05084fda2d6241a",
+    "mapping_module_sha256": "d61d6e7ab3b82bab7a31d42f7abfefb4f224eed5c9dbf505304eef2d940249e1",
+    "independent_chart_grid_sha256": "477f56a946625283e78417e75382d9682b68cbe877fb13e3a67d2bf5a0095745",
+    "syllable_inventory_sha256": "6ba71ec3b02e763be7f371b0c354945075bb974092454aaba4725d750b03ef02",
+    "spelling_inventory_sha256": "6726e07ec0751d8a2017d25eb494c416555c0bc70d744155e48cdd1b513abb60",
+    "unique_syllables_checked": 161,
+    "mapping_checks": "Every used syllable agrees across the production spelling-only converter, independently composed onset/final chart grid and stored syllable Yale field, and has a stored spelling alias row. Alias provenance may retain an earlier cheaper heuristic after deduplication."
+  },
+  "coverage": {
+    "total_cases": 93,
+    "ordinary_cases": 89,
+    "reported_cases": 1,
+    "control_cases": 3,
+    "ordinary_by_length_band": {
+      "4-5": 29,
+      "6-8": 30,
+      "9-12": 30
+    },
+    "ordinary_by_category": {
+      "food_drink": 9,
+      "home_tasks": 9,
+      "messages_chat": 9,
+      "negation_preferences": 9,
+      "questions": 9,
+      "shopping_money": 9,
+      "technical_input": 8,
+      "time_plans": 9,
+      "travel_directions": 9,
+      "work_study": 9
+    },
+    "ordinary_habitual_ng_cases": 29,
+    "ordinary_whole_text_absent_dictionary": 83,
+    "ordinary_whole_text_absent_dictionary_fraction": 0.9325842696629213
+  },
+  "cases": [
+    {
+      "id": "lp001",
+      "category": "questions",
+      "text": "你去邊度",
+      "reading": "nei5 heoi3 bin1 dou6",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "你",
+          "reading": "nei5"
+        },
+        {
+          "text": "去",
+          "reading": "heoi3"
+        },
+        {
+          "text": "邊度",
+          "reading": "bin1 dou6"
+        }
+      ],
+      "char_length": 4,
+      "input": "neiheuibindou",
+      "mode": "forgiving",
+      "expected": [
+        "你去邊度"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "4-5",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries"
+      ]
+    },
+    {
+      "id": "lp002",
+      "category": "questions",
+      "text": "佢係邊個",
+      "reading": "keoi5 hai6 bin1 go3",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "佢",
+          "reading": "keoi5"
+        },
+        {
+          "text": "係",
+          "reading": "hai6"
+        },
+        {
+          "text": "邊個",
+          "reading": "bin1 go3"
+        }
+      ],
+      "char_length": 4,
+      "input": "keuihaibingo",
+      "mode": "forgiving",
+      "expected": [
+        "佢係邊個"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "4-5",
+      "whole_text_in_dictionary": true,
+      "whole_text_reading_in_dictionary": true,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "contextual_reading_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "lp003",
+      "category": "questions",
+      "text": "點解唔得",
+      "reading": "dim2 gaai2 m4 dak1",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "點解",
+          "reading": "dim2 gaai2"
+        },
+        {
+          "text": "唔",
+          "reading": "m4"
+        },
+        {
+          "text": "得",
+          "reading": "dak1"
+        }
+      ],
+      "char_length": 4,
+      "input": "dimgaaimdak",
+      "mode": "forgiving",
+      "expected": [
+        "點解唔得"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "4-5",
+      "user_input": "dimgaaingdak",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "User-reported ng spelling for syllabic m4 in 唔 only; this is a project accepted input habit, not the primary Yale spelling.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "syllabic_m",
+        "habitual_ng_variant"
+      ]
+    },
+    {
+      "id": "lp004",
+      "category": "questions",
+      "text": "你而家喺邊度",
+      "reading": "nei5 ji4 gaa1 hai2 bin1 dou6",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "你",
+          "reading": "nei5"
+        },
+        {
+          "text": "而家",
+          "reading": "ji4 gaa1"
+        },
+        {
+          "text": "喺",
+          "reading": "hai2"
+        },
+        {
+          "text": "邊度",
+          "reading": "bin1 dou6"
+        }
+      ],
+      "char_length": 6,
+      "input": "neiyigahaibindou",
+      "mode": "forgiving",
+      "expected": [
+        "你而家喺邊度"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "6-8",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries"
+      ]
+    },
+    {
+      "id": "lp005",
+      "category": "questions",
+      "text": "邊個同你一齊嚟",
+      "reading": "bin1 go3 tung4 nei5 jat1 cai4 lai4",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "邊個",
+          "reading": "bin1 go3"
+        },
+        {
+          "text": "同",
+          "reading": "tung4"
+        },
+        {
+          "text": "你",
+          "reading": "nei5"
+        },
+        {
+          "text": "一齊",
+          "reading": "jat1 cai4"
+        },
+        {
+          "text": "嚟",
+          "reading": "lai4"
+        }
+      ],
+      "char_length": 7,
+      "input": "bingotungneiyatchailai",
+      "mode": "forgiving",
+      "expected": [
+        "邊個同你一齊嚟"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "6-8",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "contextual_reading_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "lp006",
+      "category": "questions",
+      "text": "你知唔知點樣去",
+      "reading": "nei5 zi1 m4 zi1 dim2 joeng2 heoi3",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "你",
+          "reading": "nei5"
+        },
+        {
+          "text": "知",
+          "reading": "zi1"
+        },
+        {
+          "text": "唔",
+          "reading": "m4"
+        },
+        {
+          "text": "知",
+          "reading": "zi1"
+        },
+        {
+          "text": "點樣",
+          "reading": "dim2 joeng2"
+        },
+        {
+          "text": "去",
+          "reading": "heoi3"
+        }
+      ],
+      "char_length": 7,
+      "input": "neijimjidimyeungheui",
+      "mode": "forgiving",
+      "expected": [
+        "你知唔知點樣去"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "6-8",
+      "user_input": "neijingjidimyeungheui",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "User-reported ng spelling for syllabic m4 in 唔 only; this is a project accepted input habit, not the primary Yale spelling.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "syllabic_m",
+        "habitual_ng_variant"
+      ]
+    },
+    {
+      "id": "lp007",
+      "category": "questions",
+      "text": "你想幾時再過嚟搵我",
+      "reading": "nei5 soeng2 gei2 si4 zoi3 gwo3 lai4 wan2 ngo5",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "你",
+          "reading": "nei5"
+        },
+        {
+          "text": "想",
+          "reading": "soeng2"
+        },
+        {
+          "text": "幾時",
+          "reading": "gei2 si4"
+        },
+        {
+          "text": "再",
+          "reading": "zoi3"
+        },
+        {
+          "text": "過嚟",
+          "reading": "gwo3 lai4"
+        },
+        {
+          "text": "搵",
+          "reading": "wan2"
+        },
+        {
+          "text": "我",
+          "reading": "ngo5"
+        }
+      ],
+      "char_length": 9,
+      "input": "neiseunggeisijoigwolaiwanngo",
+      "mode": "forgiving",
+      "expected": [
+        "你想幾時再過嚟搵我"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters"
+      ]
+    },
+    {
+      "id": "lp008",
+      "category": "questions",
+      "text": "點解你今日咁遲先到",
+      "reading": "dim2 gaai2 nei5 gam1 jat6 gam3 ci4 sin1 dou3",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "點解",
+          "reading": "dim2 gaai2"
+        },
+        {
+          "text": "你",
+          "reading": "nei5"
+        },
+        {
+          "text": "今日",
+          "reading": "gam1 jat6"
+        },
+        {
+          "text": "咁",
+          "reading": "gam3"
+        },
+        {
+          "text": "遲",
+          "reading": "ci4"
+        },
+        {
+          "text": "先",
+          "reading": "sin1"
+        },
+        {
+          "text": "到",
+          "reading": "dou3"
+        }
+      ],
+      "char_length": 9,
+      "input": "dimgaaineigamyatgamchisindou",
+      "mode": "forgiving",
+      "expected": [
+        "點解你今日咁遲先到"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "contextual_reading_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "lp009",
+      "category": "questions",
+      "text": "佢話聽日幾點鐘返嚟",
+      "reading": "keoi5 waa6 ting1 jat6 gei2 dim2 zung1 faan1 lai4",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "佢",
+          "reading": "keoi5"
+        },
+        {
+          "text": "話",
+          "reading": "waa6"
+        },
+        {
+          "text": "聽日",
+          "reading": "ting1 jat6"
+        },
+        {
+          "text": "幾點鐘",
+          "reading": "gei2 dim2 zung1"
+        },
+        {
+          "text": "返嚟",
+          "reading": "faan1 lai4"
+        }
+      ],
+      "char_length": 9,
+      "input": "keuiwatingyatgeidimjungfaanlai",
+      "mode": "forgiving",
+      "expected": [
+        "佢話聽日幾點鐘返嚟"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "contextual_reading_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "lp010",
+      "category": "negation_preferences",
+      "text": "我唔知道",
+      "reading": "ngo5 m4 zi1 dou3",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "唔",
+          "reading": "m4"
+        },
+        {
+          "text": "知道",
+          "reading": "zi1 dou3"
+        }
+      ],
+      "char_length": 4,
+      "input": "ngomjidou",
+      "mode": "forgiving",
+      "expected": [
+        "我唔知道"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "4-5",
+      "user_input": "ngongjidou",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "User-reported ng spelling for syllabic m4 in 唔 only; this is a project accepted input habit, not the primary Yale spelling.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "syllabic_m",
+        "habitual_ng_variant"
+      ]
+    },
+    {
+      "id": "lp011",
+      "category": "negation_preferences",
+      "text": "唔好咁嘈",
+      "reading": "m4 hou2 gam3 cou4",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "唔好",
+          "reading": "m4 hou2"
+        },
+        {
+          "text": "咁",
+          "reading": "gam3"
+        },
+        {
+          "text": "嘈",
+          "reading": "cou4"
+        }
+      ],
+      "char_length": 4,
+      "input": "mhougamchou",
+      "mode": "forgiving",
+      "expected": [
+        "唔好咁嘈"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "4-5",
+      "user_input": "nghougamchou",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "User-reported ng spelling for syllabic m4 in 唔 only; this is a project accepted input habit, not the primary Yale spelling.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "syllabic_m",
+        "habitual_ng_variant"
+      ]
+    },
+    {
+      "id": "lp012",
+      "category": "negation_preferences",
+      "text": "我冇時間",
+      "reading": "ngo5 mou5 si4 gaan3",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "冇",
+          "reading": "mou5"
+        },
+        {
+          "text": "時間",
+          "reading": "si4 gaan3"
+        }
+      ],
+      "char_length": 4,
+      "input": "ngomousigaan",
+      "mode": "forgiving",
+      "expected": [
+        "我冇時間"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "4-5",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters"
+      ]
+    },
+    {
+      "id": "lp013",
+      "category": "negation_preferences",
+      "text": "我而家唔想講",
+      "reading": "ngo5 ji4 gaa1 m4 soeng2 gong2",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "而家",
+          "reading": "ji4 gaa1"
+        },
+        {
+          "text": "唔",
+          "reading": "m4"
+        },
+        {
+          "text": "想",
+          "reading": "soeng2"
+        },
+        {
+          "text": "講",
+          "reading": "gong2"
+        }
+      ],
+      "char_length": 6,
+      "input": "ngoyigamseunggong",
+      "mode": "forgiving",
+      "expected": [
+        "我而家唔想講"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "6-8",
+      "user_input": "ngoyigangseunggong",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "User-reported ng spelling for syllabic m4 in 唔 only; this is a project accepted input habit, not the primary Yale spelling.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "syllabic_m",
+        "habitual_ng_variant"
+      ]
+    },
+    {
+      "id": "lp014",
+      "category": "negation_preferences",
+      "text": "呢件事唔關我事",
+      "reading": "ni1 gin6 si6 m4 gwaan1 ngo5 si6",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "呢",
+          "reading": "ni1"
+        },
+        {
+          "text": "件",
+          "reading": "gin6"
+        },
+        {
+          "text": "事",
+          "reading": "si6"
+        },
+        {
+          "text": "唔關",
+          "reading": "m4 gwaan1"
+        },
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "事",
+          "reading": "si6"
+        }
+      ],
+      "char_length": 7,
+      "input": "niginsimgwaanngosi",
+      "mode": "forgiving",
+      "expected": [
+        "呢件事唔關我事"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "6-8",
+      "user_input": "niginsinggwaanngosi",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "User-reported ng spelling for syllabic m4 in 唔 only; this is a project accepted input habit, not the primary Yale spelling.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "syllabic_m",
+        "habitual_ng_variant"
+      ]
+    },
+    {
+      "id": "lp015",
+      "category": "negation_preferences",
+      "text": "佢仲未覆我呀",
+      "reading": "keoi5 zung6 mei6 fuk1 ngo5 aa3",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "佢",
+          "reading": "keoi5"
+        },
+        {
+          "text": "仲未",
+          "reading": "zung6 mei6"
+        },
+        {
+          "text": "覆",
+          "reading": "fuk1"
+        },
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "呀",
+          "reading": "aa3"
+        }
+      ],
+      "char_length": 6,
+      "input": "keuijungmeifukngoa",
+      "mode": "forgiving",
+      "expected": [
+        "佢仲未覆我呀"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "6-8",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries"
+      ]
+    },
+    {
+      "id": "lp016",
+      "category": "negation_preferences",
+      "text": "我唔係唔想幫你手㗎",
+      "reading": "ngo5 m4 hai6 m4 soeng2 bong1 nei5 sau2 gaa3",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "唔",
+          "reading": "m4"
+        },
+        {
+          "text": "係",
+          "reading": "hai6"
+        },
+        {
+          "text": "唔",
+          "reading": "m4"
+        },
+        {
+          "text": "想",
+          "reading": "soeng2"
+        },
+        {
+          "text": "幫",
+          "reading": "bong1"
+        },
+        {
+          "text": "你",
+          "reading": "nei5"
+        },
+        {
+          "text": "手",
+          "reading": "sau2"
+        },
+        {
+          "text": "㗎",
+          "reading": "gaa3"
+        }
+      ],
+      "char_length": 9,
+      "input": "ngomhaimseungbongneisauga",
+      "mode": "forgiving",
+      "expected": [
+        "我唔係唔想幫你手㗎"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "9-12",
+      "user_input": "ngonghaingseungbongneisauga",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "User-reported ng spelling for syllabic m4 in 唔 only; this is a project accepted input habit, not the primary Yale spelling.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "syllabic_m",
+        "habitual_ng_variant"
+      ]
+    },
+    {
+      "id": "lp017",
+      "category": "negation_preferences",
+      "text": "我真係冇諗過會咁樣",
+      "reading": "ngo5 zan1 hai6 mou5 nam2 gwo3 wui5 gam2 joeng2",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "真係",
+          "reading": "zan1 hai6"
+        },
+        {
+          "text": "冇",
+          "reading": "mou5"
+        },
+        {
+          "text": "諗過",
+          "reading": "nam2 gwo3"
+        },
+        {
+          "text": "會",
+          "reading": "wui5"
+        },
+        {
+          "text": "咁樣",
+          "reading": "gam2 joeng2"
+        }
+      ],
+      "char_length": 9,
+      "input": "ngojanhaimounamgwowuigamyeung",
+      "mode": "forgiving",
+      "expected": [
+        "我真係冇諗過會咁樣"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "contextual_reading_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "lp018",
+      "category": "negation_preferences",
+      "text": "呢個答案唔一定啱晒",
+      "reading": "ni1 go3 daap3 on3 m4 jat1 ding6 ngaam1 saai3",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "呢個",
+          "reading": "ni1 go3"
+        },
+        {
+          "text": "答案",
+          "reading": "daap3 on3"
+        },
+        {
+          "text": "唔",
+          "reading": "m4"
+        },
+        {
+          "text": "一定",
+          "reading": "jat1 ding6"
+        },
+        {
+          "text": "啱晒",
+          "reading": "ngaam1 saai3"
+        }
+      ],
+      "char_length": 9,
+      "input": "nigodaaponmyatdingngaamsaai",
+      "mode": "forgiving",
+      "expected": [
+        "呢個答案唔一定啱晒"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "9-12",
+      "user_input": "nigodaaponngyatdingngaamsaai",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "User-reported ng spelling for syllabic m4 in 唔 only; this is a project accepted input habit, not the primary Yale spelling.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "syllabic_m",
+        "habitual_ng_variant",
+        "contextual_reading_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "lp019",
+      "category": "time_plans",
+      "text": "聽日再傾",
+      "reading": "ting1 jat6 zoi3 king1",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "聽日",
+          "reading": "ting1 jat6"
+        },
+        {
+          "text": "再",
+          "reading": "zoi3"
+        },
+        {
+          "text": "傾",
+          "reading": "king1"
+        }
+      ],
+      "char_length": 4,
+      "input": "tingyatjoiking",
+      "mode": "forgiving",
+      "expected": [
+        "聽日再傾"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "4-5",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries"
+      ]
+    },
+    {
+      "id": "lp020",
+      "category": "time_plans",
+      "text": "等我一陣",
+      "reading": "dang2 ngo5 jat1 zan6",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "等",
+          "reading": "dang2"
+        },
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "一陣",
+          "reading": "jat1 zan6"
+        }
+      ],
+      "char_length": 4,
+      "input": "dangngoyatjan",
+      "mode": "forgiving",
+      "expected": [
+        "等我一陣"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "4-5",
+      "whole_text_in_dictionary": true,
+      "whole_text_reading_in_dictionary": true,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries"
+      ]
+    },
+    {
+      "id": "lp021",
+      "category": "time_plans",
+      "text": "下個星期",
+      "reading": "haa6 go3 sing1 kei4",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "下個",
+          "reading": "haa6 go3"
+        },
+        {
+          "text": "星期",
+          "reading": "sing1 kei4"
+        }
+      ],
+      "char_length": 4,
+      "input": "hagosingkei",
+      "mode": "forgiving",
+      "expected": [
+        "下個星期"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "4-5",
+      "whole_text_in_dictionary": true,
+      "whole_text_reading_in_dictionary": true,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "contextual_reading_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "lp022",
+      "category": "time_plans",
+      "text": "我今晚會早啲返",
+      "reading": "ngo5 gam1 maan5 wui5 zou2 di1 faan1",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "今晚",
+          "reading": "gam1 maan5"
+        },
+        {
+          "text": "會",
+          "reading": "wui5"
+        },
+        {
+          "text": "早啲",
+          "reading": "zou2 di1"
+        },
+        {
+          "text": "返",
+          "reading": "faan1"
+        }
+      ],
+      "char_length": 7,
+      "input": "ngogammaanwuijoudifaan",
+      "mode": "forgiving",
+      "expected": [
+        "我今晚會早啲返"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "6-8",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "contextual_reading_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "lp023",
+      "category": "time_plans",
+      "text": "你聽朝得唔得閒",
+      "reading": "nei5 ting1 ziu1 dak1 m4 dak1 haan4",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "你",
+          "reading": "nei5"
+        },
+        {
+          "text": "聽朝",
+          "reading": "ting1 ziu1"
+        },
+        {
+          "text": "得",
+          "reading": "dak1"
+        },
+        {
+          "text": "唔",
+          "reading": "m4"
+        },
+        {
+          "text": "得閒",
+          "reading": "dak1 haan4"
+        }
+      ],
+      "char_length": 7,
+      "input": "neitingjiudakmdakhaan",
+      "mode": "forgiving",
+      "expected": [
+        "你聽朝得唔得閒"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "6-8",
+      "user_input": "neitingjiudakngdakhaan",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "User-reported ng spelling for syllabic m4 in 唔 only; this is a project accepted input habit, not the primary Yale spelling.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "syllabic_m",
+        "habitual_ng_variant"
+      ]
+    },
+    {
+      "id": "lp024",
+      "category": "time_plans",
+      "text": "我哋約八點半啦",
+      "reading": "ngo5 dei6 joek3 baat3 dim2 bun3 laa1",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "我哋",
+          "reading": "ngo5 dei6"
+        },
+        {
+          "text": "約",
+          "reading": "joek3"
+        },
+        {
+          "text": "八點半",
+          "reading": "baat3 dim2 bun3"
+        },
+        {
+          "text": "啦",
+          "reading": "laa1"
+        }
+      ],
+      "char_length": 7,
+      "input": "ngodeiyeukbaatdimbunla",
+      "mode": "forgiving",
+      "expected": [
+        "我哋約八點半啦"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "6-8",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters"
+      ]
+    },
+    {
+      "id": "lp025",
+      "category": "time_plans",
+      "text": "等你收工我哋先出發",
+      "reading": "dang2 nei5 sau1 gung1 ngo5 dei6 sin1 ceot1 faat3",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "等",
+          "reading": "dang2"
+        },
+        {
+          "text": "你",
+          "reading": "nei5"
+        },
+        {
+          "text": "收工",
+          "reading": "sau1 gung1"
+        },
+        {
+          "text": "我哋",
+          "reading": "ngo5 dei6"
+        },
+        {
+          "text": "先",
+          "reading": "sin1"
+        },
+        {
+          "text": "出發",
+          "reading": "ceot1 faat3"
+        }
+      ],
+      "char_length": 9,
+      "input": "dangneisaugungngodeisincheutfaat",
+      "mode": "forgiving",
+      "expected": [
+        "等你收工我哋先出發"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters"
+      ]
+    },
+    {
+      "id": "lp026",
+      "category": "time_plans",
+      "text": "我想下個禮拜再約你",
+      "reading": "ngo5 soeng2 haa6 go3 lai5 baai3 zoi3 joek3 nei5",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "想",
+          "reading": "soeng2"
+        },
+        {
+          "text": "下個",
+          "reading": "haa6 go3"
+        },
+        {
+          "text": "禮拜",
+          "reading": "lai5 baai3"
+        },
+        {
+          "text": "再",
+          "reading": "zoi3"
+        },
+        {
+          "text": "約",
+          "reading": "joek3"
+        },
+        {
+          "text": "你",
+          "reading": "nei5"
+        }
+      ],
+      "char_length": 9,
+      "input": "ngoseunghagolaibaaijoiyeuknei",
+      "mode": "forgiving",
+      "expected": [
+        "我想下個禮拜再約你"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "contextual_reading_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "lp027",
+      "category": "time_plans",
+      "text": "你得閒嗰陣記住覆我",
+      "reading": "nei5 dak1 haan4 go2 zan6 gei3 zyu6 fuk1 ngo5",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "你",
+          "reading": "nei5"
+        },
+        {
+          "text": "得閒",
+          "reading": "dak1 haan4"
+        },
+        {
+          "text": "嗰陣",
+          "reading": "go2 zan6"
+        },
+        {
+          "text": "記住",
+          "reading": "gei3 zyu6"
+        },
+        {
+          "text": "覆",
+          "reading": "fuk1"
+        },
+        {
+          "text": "我",
+          "reading": "ngo5"
+        }
+      ],
+      "char_length": 9,
+      "input": "neidakhaangojangeijyufukngo",
+      "mode": "forgiving",
+      "expected": [
+        "你得閒嗰陣記住覆我"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters"
+      ]
+    },
+    {
+      "id": "lp028",
+      "category": "food_drink",
+      "text": "食咗飯未",
+      "reading": "sik6 zo2 faan6 mei6",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "食",
+          "reading": "sik6"
+        },
+        {
+          "text": "咗",
+          "reading": "zo2"
+        },
+        {
+          "text": "飯",
+          "reading": "faan6"
+        },
+        {
+          "text": "未",
+          "reading": "mei6"
+        }
+      ],
+      "char_length": 4,
+      "input": "sikjofaanmei",
+      "mode": "forgiving",
+      "expected": [
+        "食咗飯未"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "4-5",
+      "whole_text_in_dictionary": true,
+      "whole_text_reading_in_dictionary": true,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters"
+      ]
+    },
+    {
+      "id": "lp029",
+      "category": "food_drink",
+      "text": "我要凍水",
+      "reading": "ngo5 jiu3 dung3 seoi2",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "要",
+          "reading": "jiu3"
+        },
+        {
+          "text": "凍水",
+          "reading": "dung3 seoi2"
+        }
+      ],
+      "char_length": 4,
+      "input": "ngoyiudungseui",
+      "mode": "forgiving",
+      "expected": [
+        "我要凍水"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "4-5",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries"
+      ]
+    },
+    {
+      "id": "lp030",
+      "category": "food_drink",
+      "text": "少啲糖唔該",
+      "reading": "siu2 di1 tong4 m4 goi1",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "少啲",
+          "reading": "siu2 di1"
+        },
+        {
+          "text": "糖",
+          "reading": "tong4"
+        },
+        {
+          "text": "唔該",
+          "reading": "m4 goi1"
+        }
+      ],
+      "char_length": 5,
+      "input": "siuditongmgoi",
+      "mode": "forgiving",
+      "expected": [
+        "少啲糖唔該"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "4-5",
+      "user_input": "siuditongnggoi",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "User-reported ng spelling for syllabic m4 in 唔 only; this is a project accepted input habit, not the primary Yale spelling.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "syllabic_m",
+        "habitual_ng_variant"
+      ]
+    },
+    {
+      "id": "lp031",
+      "category": "food_drink",
+      "text": "我想食碗牛腩麵",
+      "reading": "ngo5 soeng2 sik6 wun2 ngau4 naam5 min6",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "想",
+          "reading": "soeng2"
+        },
+        {
+          "text": "食",
+          "reading": "sik6"
+        },
+        {
+          "text": "碗",
+          "reading": "wun2"
+        },
+        {
+          "text": "牛腩麵",
+          "reading": "ngau4 naam5 min6"
+        }
+      ],
+      "char_length": 7,
+      "input": "ngoseungsikwunngaunaammin",
+      "mode": "forgiving",
+      "expected": [
+        "我想食碗牛腩麵"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "6-8",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries"
+      ]
+    },
+    {
+      "id": "lp032",
+      "category": "food_drink",
+      "text": "呢杯咖啡太甜啦",
+      "reading": "ni1 bui1 gaa3 fe1 taai3 tim4 laa1",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "呢",
+          "reading": "ni1"
+        },
+        {
+          "text": "杯",
+          "reading": "bui1"
+        },
+        {
+          "text": "咖啡",
+          "reading": "gaa3 fe1"
+        },
+        {
+          "text": "太",
+          "reading": "taai3"
+        },
+        {
+          "text": "甜",
+          "reading": "tim4"
+        },
+        {
+          "text": "啦",
+          "reading": "laa1"
+        }
+      ],
+      "char_length": 7,
+      "input": "nibuigafetaaitimla",
+      "mode": "forgiving",
+      "expected": [
+        "呢杯咖啡太甜啦"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "6-8",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries"
+      ]
+    },
+    {
+      "id": "lp033",
+      "category": "food_drink",
+      "text": "你有冇飲過呢款茶",
+      "reading": "nei5 jau5 mou5 jam2 gwo3 ni1 fun2 caa4",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "你",
+          "reading": "nei5"
+        },
+        {
+          "text": "有冇",
+          "reading": "jau5 mou5"
+        },
+        {
+          "text": "飲過",
+          "reading": "jam2 gwo3"
+        },
+        {
+          "text": "呢",
+          "reading": "ni1"
+        },
+        {
+          "text": "款",
+          "reading": "fun2"
+        },
+        {
+          "text": "茶",
+          "reading": "caa4"
+        }
+      ],
+      "char_length": 8,
+      "input": "neiyaumouyamgwonifuncha",
+      "mode": "forgiving",
+      "expected": [
+        "你有冇飲過呢款茶"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "6-8",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters"
+      ]
+    },
+    {
+      "id": "lp034",
+      "category": "food_drink",
+      "text": "如果唔夠飽可以再叫",
+      "reading": "jyu4 gwo2 m4 gau3 baau2 ho2 ji5 zoi3 giu3",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "如果",
+          "reading": "jyu4 gwo2"
+        },
+        {
+          "text": "唔",
+          "reading": "m4"
+        },
+        {
+          "text": "夠",
+          "reading": "gau3"
+        },
+        {
+          "text": "飽",
+          "reading": "baau2"
+        },
+        {
+          "text": "可以",
+          "reading": "ho2 ji5"
+        },
+        {
+          "text": "再",
+          "reading": "zoi3"
+        },
+        {
+          "text": "叫",
+          "reading": "giu3"
+        }
+      ],
+      "char_length": 9,
+      "input": "yugwomgaubaauhoyijoigiu",
+      "mode": "forgiving",
+      "expected": [
+        "如果唔夠飽可以再叫"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "9-12",
+      "user_input": "yugwonggaubaauhoyijoigiu",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "User-reported ng spelling for syllabic m4 in 唔 only; this is a project accepted input habit, not the primary Yale spelling.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "syllabic_m",
+        "habitual_ng_variant"
+      ]
+    },
+    {
+      "id": "lp035",
+      "category": "food_drink",
+      "text": "食完飯我哋出去行吓",
+      "reading": "sik6 jyun4 faan6 ngo5 dei6 ceot1 heoi3 haang4 haa5",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "食完飯",
+          "reading": "sik6 jyun4 faan6"
+        },
+        {
+          "text": "我哋",
+          "reading": "ngo5 dei6"
+        },
+        {
+          "text": "出去",
+          "reading": "ceot1 heoi3"
+        },
+        {
+          "text": "行吓",
+          "reading": "haang4 haa5"
+        }
+      ],
+      "char_length": 9,
+      "input": "sikyunfaanngodeicheutheuihaangha",
+      "mode": "forgiving",
+      "expected": [
+        "食完飯我哋出去行吓"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed. Intended light-verb 吓 haa5 has pinned Words.hk character support; a local 睇吓 compound row instead has haa3. Retain this disclosed review item before scoring.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "contextual_reading_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "lp036",
+      "category": "food_drink",
+      "text": "呢間餐廳嘅嘢唔好食",
+      "reading": "ni1 gaan1 caan1 teng1 ge3 je5 m4 hou2 sik6",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "呢",
+          "reading": "ni1"
+        },
+        {
+          "text": "間",
+          "reading": "gaan1"
+        },
+        {
+          "text": "餐廳",
+          "reading": "caan1 teng1"
+        },
+        {
+          "text": "嘅",
+          "reading": "ge3"
+        },
+        {
+          "text": "嘢",
+          "reading": "je5"
+        },
+        {
+          "text": "唔好食",
+          "reading": "m4 hou2 sik6"
+        }
+      ],
+      "char_length": 9,
+      "input": "nigaanchaantenggeyemhousik",
+      "mode": "forgiving",
+      "expected": [
+        "呢間餐廳嘅嘢唔好食"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "9-12",
+      "user_input": "nigaanchaantenggeyenghousik",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "User-reported ng spelling for syllabic m4 in 唔 only; this is a project accepted input habit, not the primary Yale spelling.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "syllabic_m",
+        "habitual_ng_variant"
+      ]
+    },
+    {
+      "id": "lp037",
+      "category": "travel_directions",
+      "text": "有冇位坐",
+      "reading": "jau5 mou5 wai2 co5",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "有冇",
+          "reading": "jau5 mou5"
+        },
+        {
+          "text": "位",
+          "reading": "wai2"
+        },
+        {
+          "text": "坐",
+          "reading": "co5"
+        }
+      ],
+      "char_length": 4,
+      "input": "yaumouwaicho",
+      "mode": "forgiving",
+      "expected": [
+        "有冇位坐"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "4-5",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters"
+      ]
+    },
+    {
+      "id": "lp038",
+      "category": "travel_directions",
+      "text": "我要落車",
+      "reading": "ngo5 jiu3 lok6 ce1",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "要",
+          "reading": "jiu3"
+        },
+        {
+          "text": "落車",
+          "reading": "lok6 ce1"
+        }
+      ],
+      "char_length": 4,
+      "input": "ngoyiulokche",
+      "mode": "forgiving",
+      "expected": [
+        "我要落車"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "4-5",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries"
+      ]
+    },
+    {
+      "id": "lp039",
+      "category": "travel_directions",
+      "text": "唔好行住",
+      "reading": "m4 hou2 haang4 zyu6",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "唔好",
+          "reading": "m4 hou2"
+        },
+        {
+          "text": "行住",
+          "reading": "haang4 zyu6"
+        }
+      ],
+      "char_length": 4,
+      "input": "mhouhaangjyu",
+      "mode": "forgiving",
+      "expected": [
+        "唔好行住"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "4-5",
+      "user_input": "nghouhaangjyu",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "User-reported ng spelling for syllabic m4 in 唔 only; this is a project accepted input habit, not the primary Yale spelling.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "syllabic_m",
+        "habitual_ng_variant",
+        "contextual_reading_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "lp040",
+      "category": "travel_directions",
+      "text": "前面個站落車",
+      "reading": "cin4 min6 go3 zaam6 lok6 ce1",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "前面",
+          "reading": "cin4 min6"
+        },
+        {
+          "text": "個",
+          "reading": "go3"
+        },
+        {
+          "text": "站",
+          "reading": "zaam6"
+        },
+        {
+          "text": "落車",
+          "reading": "lok6 ce1"
+        }
+      ],
+      "char_length": 6,
+      "input": "chinmingojaamlokche",
+      "mode": "forgiving",
+      "expected": [
+        "前面個站落車"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "6-8",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "contextual_reading_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "lp041",
+      "category": "travel_directions",
+      "text": "呢條路點樣行",
+      "reading": "ni1 tiu4 lou6 dim2 joeng2 haang4",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "呢",
+          "reading": "ni1"
+        },
+        {
+          "text": "條",
+          "reading": "tiu4"
+        },
+        {
+          "text": "路",
+          "reading": "lou6"
+        },
+        {
+          "text": "點樣",
+          "reading": "dim2 joeng2"
+        },
+        {
+          "text": "行",
+          "reading": "haang4"
+        }
+      ],
+      "char_length": 6,
+      "input": "nitiuloudimyeunghaang",
+      "mode": "forgiving",
+      "expected": [
+        "呢條路點樣行"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "6-8",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "contextual_reading_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "lp042",
+      "category": "travel_directions",
+      "text": "我唔識去車站",
+      "reading": "ngo5 m4 sik1 heoi3 ce1 zaam6",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "唔",
+          "reading": "m4"
+        },
+        {
+          "text": "識",
+          "reading": "sik1"
+        },
+        {
+          "text": "去",
+          "reading": "heoi3"
+        },
+        {
+          "text": "車站",
+          "reading": "ce1 zaam6"
+        }
+      ],
+      "char_length": 6,
+      "input": "ngomsikheuichejaam",
+      "mode": "forgiving",
+      "expected": [
+        "我唔識去車站"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "6-8",
+      "user_input": "ngongsikheuichejaam",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "User-reported ng spelling for syllabic m4 in 唔 only; this is a project accepted input habit, not the primary Yale spelling.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "syllabic_m",
+        "habitual_ng_variant"
+      ]
+    },
+    {
+      "id": "lp043",
+      "category": "travel_directions",
+      "text": "你幫我睇吓架車到咗未",
+      "reading": "nei5 bong1 ngo5 tai2 haa5 gaa3 ce1 dou3 zo2 mei6",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "你",
+          "reading": "nei5"
+        },
+        {
+          "text": "幫",
+          "reading": "bong1"
+        },
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "睇吓",
+          "reading": "tai2 haa5"
+        },
+        {
+          "text": "架",
+          "reading": "gaa3"
+        },
+        {
+          "text": "車",
+          "reading": "ce1"
+        },
+        {
+          "text": "到咗",
+          "reading": "dou3 zo2"
+        },
+        {
+          "text": "未",
+          "reading": "mei6"
+        }
+      ],
+      "char_length": 10,
+      "input": "neibongngotaihagachedoujomei",
+      "mode": "forgiving",
+      "expected": [
+        "你幫我睇吓架車到咗未"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed. Intended light-verb 吓 haa5 has pinned Words.hk character support; a local 睇吓 compound row instead has haa3. Retain this disclosed review item before scoring.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "contextual_reading_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "lp044",
+      "category": "travel_directions",
+      "text": "我聽朝要搭第一班地鐵",
+      "reading": "ngo5 ting1 ziu1 jiu3 daap3 dai6 jat1 baan1 dei6 tit3",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "聽朝",
+          "reading": "ting1 ziu1"
+        },
+        {
+          "text": "要",
+          "reading": "jiu3"
+        },
+        {
+          "text": "搭",
+          "reading": "daap3"
+        },
+        {
+          "text": "第一",
+          "reading": "dai6 jat1"
+        },
+        {
+          "text": "班",
+          "reading": "baan1"
+        },
+        {
+          "text": "地鐵",
+          "reading": "dei6 tit3"
+        }
+      ],
+      "char_length": 10,
+      "input": "ngotingjiuyiudaapdaiyatbaandeitit",
+      "mode": "forgiving",
+      "expected": [
+        "我聽朝要搭第一班地鐵"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries"
+      ]
+    },
+    {
+      "id": "lp045",
+      "category": "travel_directions",
+      "text": "落雨我哋就唔好出去",
+      "reading": "lok6 jyu5 ngo5 dei6 zau6 m4 hou2 ceot1 heoi3",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "落雨",
+          "reading": "lok6 jyu5"
+        },
+        {
+          "text": "我哋",
+          "reading": "ngo5 dei6"
+        },
+        {
+          "text": "就",
+          "reading": "zau6"
+        },
+        {
+          "text": "唔好",
+          "reading": "m4 hou2"
+        },
+        {
+          "text": "出去",
+          "reading": "ceot1 heoi3"
+        }
+      ],
+      "char_length": 9,
+      "input": "lokyungodeijaumhoucheutheui",
+      "mode": "forgiving",
+      "expected": [
+        "落雨我哋就唔好出去"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "9-12",
+      "user_input": "lokyungodeijaunghoucheutheui",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "User-reported ng spelling for syllabic m4 in 唔 only; this is a project accepted input habit, not the primary Yale spelling.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "syllabic_m",
+        "habitual_ng_variant"
+      ]
+    },
+    {
+      "id": "lp046",
+      "category": "home_tasks",
+      "text": "記住熄燈",
+      "reading": "gei3 zyu6 sik1 dang1",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "記住",
+          "reading": "gei3 zyu6"
+        },
+        {
+          "text": "熄燈",
+          "reading": "sik1 dang1"
+        }
+      ],
+      "char_length": 4,
+      "input": "geijyusikdang",
+      "mode": "forgiving",
+      "expected": [
+        "記住熄燈"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "4-5",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries"
+      ]
+    },
+    {
+      "id": "lp047",
+      "category": "home_tasks",
+      "text": "唔好開門",
+      "reading": "m4 hou2 hoi1 mun4",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "唔好",
+          "reading": "m4 hou2"
+        },
+        {
+          "text": "開門",
+          "reading": "hoi1 mun4"
+        }
+      ],
+      "char_length": 4,
+      "input": "mhouhoimun",
+      "mode": "forgiving",
+      "expected": [
+        "唔好開門"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "4-5",
+      "user_input": "nghouhoimun",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "User-reported ng spelling for syllabic m4 in 唔 only; this is a project accepted input habit, not the primary Yale spelling.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "syllabic_m",
+        "habitual_ng_variant"
+      ]
+    },
+    {
+      "id": "lp048",
+      "category": "home_tasks",
+      "text": "幫我攞嘢",
+      "reading": "bong1 ngo5 lo2 je5",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "幫",
+          "reading": "bong1"
+        },
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "攞嘢",
+          "reading": "lo2 je5"
+        }
+      ],
+      "char_length": 4,
+      "input": "bongngoloye",
+      "mode": "forgiving",
+      "expected": [
+        "幫我攞嘢"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "4-5",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters"
+      ]
+    },
+    {
+      "id": "lp049",
+      "category": "home_tasks",
+      "text": "我返到屋企先",
+      "reading": "ngo5 faan1 dou3 uk1 kei2 sin1",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "返到",
+          "reading": "faan1 dou3"
+        },
+        {
+          "text": "屋企",
+          "reading": "uk1 kei2"
+        },
+        {
+          "text": "先",
+          "reading": "sin1"
+        }
+      ],
+      "char_length": 6,
+      "input": "ngofaandouukkeisin",
+      "mode": "forgiving",
+      "expected": [
+        "我返到屋企先"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "6-8",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "contextual_reading_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "lp050",
+      "category": "home_tasks",
+      "text": "件衫仲未乾晒",
+      "reading": "gin6 saam1 zung6 mei6 gon1 saai3",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "件",
+          "reading": "gin6"
+        },
+        {
+          "text": "衫",
+          "reading": "saam1"
+        },
+        {
+          "text": "仲未",
+          "reading": "zung6 mei6"
+        },
+        {
+          "text": "乾晒",
+          "reading": "gon1 saai3"
+        }
+      ],
+      "char_length": 6,
+      "input": "ginsaamjungmeigonsaai",
+      "mode": "forgiving",
+      "expected": [
+        "件衫仲未乾晒"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "6-8",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries"
+      ]
+    },
+    {
+      "id": "lp051",
+      "category": "home_tasks",
+      "text": "今晚唔使煮飯",
+      "reading": "gam1 maan5 m4 sai2 zyu2 faan6",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "今晚",
+          "reading": "gam1 maan5"
+        },
+        {
+          "text": "唔使",
+          "reading": "m4 sai2"
+        },
+        {
+          "text": "煮飯",
+          "reading": "zyu2 faan6"
+        }
+      ],
+      "char_length": 6,
+      "input": "gammaanmsaijyufaan",
+      "mode": "forgiving",
+      "expected": [
+        "今晚唔使煮飯"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "6-8",
+      "user_input": "gammaanngsaijyufaan",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "User-reported ng spelling for syllabic m4 in 唔 only; this is a project accepted input habit, not the primary Yale spelling.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "syllabic_m",
+        "habitual_ng_variant"
+      ]
+    },
+    {
+      "id": "lp052",
+      "category": "home_tasks",
+      "text": "記住出門口之前關冷氣",
+      "reading": "gei3 zyu6 ceot1 mun4 hau2 zi1 cin4 gwaan1 laang5 hei3",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "記住",
+          "reading": "gei3 zyu6"
+        },
+        {
+          "text": "出門口",
+          "reading": "ceot1 mun4 hau2"
+        },
+        {
+          "text": "之前",
+          "reading": "zi1 cin4"
+        },
+        {
+          "text": "關",
+          "reading": "gwaan1"
+        },
+        {
+          "text": "冷氣",
+          "reading": "laang5 hei3"
+        }
+      ],
+      "char_length": 10,
+      "input": "geijyucheutmunhaujichingwaanlaanghei",
+      "mode": "forgiving",
+      "expected": [
+        "記住出門口之前關冷氣"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries"
+      ]
+    },
+    {
+      "id": "lp053",
+      "category": "home_tasks",
+      "text": "我哋食完飯先一齊洗碗",
+      "reading": "ngo5 dei6 sik6 jyun4 faan6 sin1 jat1 cai4 sai2 wun2",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "我哋",
+          "reading": "ngo5 dei6"
+        },
+        {
+          "text": "食完飯",
+          "reading": "sik6 jyun4 faan6"
+        },
+        {
+          "text": "先",
+          "reading": "sin1"
+        },
+        {
+          "text": "一齊",
+          "reading": "jat1 cai4"
+        },
+        {
+          "text": "洗碗",
+          "reading": "sai2 wun2"
+        }
+      ],
+      "char_length": 10,
+      "input": "ngodeisikyunfaansinyatchaisaiwun",
+      "mode": "forgiving",
+      "expected": [
+        "我哋食完飯先一齊洗碗"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters"
+      ]
+    },
+    {
+      "id": "lp054",
+      "category": "home_tasks",
+      "text": "你出街之前記住閂好門",
+      "reading": "nei5 ceot1 gaai1 zi1 cin4 gei3 zyu6 saan1 hou2 mun4",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "你",
+          "reading": "nei5"
+        },
+        {
+          "text": "出街",
+          "reading": "ceot1 gaai1"
+        },
+        {
+          "text": "之前",
+          "reading": "zi1 cin4"
+        },
+        {
+          "text": "記住",
+          "reading": "gei3 zyu6"
+        },
+        {
+          "text": "閂好",
+          "reading": "saan1 hou2"
+        },
+        {
+          "text": "門",
+          "reading": "mun4"
+        }
+      ],
+      "char_length": 10,
+      "input": "neicheutgaaijichingeijyusaanhoumun",
+      "mode": "forgiving",
+      "expected": [
+        "你出街之前記住閂好門"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries"
+      ]
+    },
+    {
+      "id": "lp055",
+      "category": "work_study",
+      "text": "開會先講",
+      "reading": "hoi1 wui2 sin1 gong2",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "開會",
+          "reading": "hoi1 wui2"
+        },
+        {
+          "text": "先",
+          "reading": "sin1"
+        },
+        {
+          "text": "講",
+          "reading": "gong2"
+        }
+      ],
+      "char_length": 4,
+      "input": "hoiwuisingong",
+      "mode": "forgiving",
+      "expected": [
+        "開會先講"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "4-5",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed. Contextual 開會 hoi1 wui2 corrected from authored wui6 before scoring; original snapshot and correction log retained.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "contextual_reading_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "lp056",
+      "category": "work_study",
+      "text": "份嘢做完",
+      "reading": "fan6 je5 zou6 jyun4",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "份",
+          "reading": "fan6"
+        },
+        {
+          "text": "嘢",
+          "reading": "je5"
+        },
+        {
+          "text": "做完",
+          "reading": "zou6 jyun4"
+        }
+      ],
+      "char_length": 4,
+      "input": "fanyejouyun",
+      "mode": "forgiving",
+      "expected": [
+        "份嘢做完"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "4-5",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters"
+      ]
+    },
+    {
+      "id": "lp057",
+      "category": "work_study",
+      "text": "我唔明白",
+      "reading": "ngo5 m4 ming4 baak6",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "唔",
+          "reading": "m4"
+        },
+        {
+          "text": "明白",
+          "reading": "ming4 baak6"
+        }
+      ],
+      "char_length": 4,
+      "input": "ngommingbaak",
+      "mode": "forgiving",
+      "expected": [
+        "我唔明白"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "4-5",
+      "user_input": "ngongmingbaak",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "User-reported ng spelling for syllabic m4 in 唔 only; this is a project accepted input habit, not the primary Yale spelling.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "syllabic_m",
+        "habitual_ng_variant"
+      ]
+    },
+    {
+      "id": "lp058",
+      "category": "work_study",
+      "text": "麻煩你睇吓先",
+      "reading": "maa4 faan4 nei5 tai2 haa5 sin1",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "麻煩",
+          "reading": "maa4 faan4"
+        },
+        {
+          "text": "你",
+          "reading": "nei5"
+        },
+        {
+          "text": "睇吓",
+          "reading": "tai2 haa5"
+        },
+        {
+          "text": "先",
+          "reading": "sin1"
+        }
+      ],
+      "char_length": 6,
+      "input": "mafaanneitaihasin",
+      "mode": "forgiving",
+      "expected": [
+        "麻煩你睇吓先"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "6-8",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed. Intended light-verb 吓 haa5 has pinned Words.hk character support; a local 睇吓 compound row instead has haa3. Retain this disclosed review item before scoring.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "contextual_reading_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "lp059",
+      "category": "work_study",
+      "text": "呢個數計錯咗",
+      "reading": "ni1 go3 sou3 gai3 co3 zo2",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "呢個",
+          "reading": "ni1 go3"
+        },
+        {
+          "text": "數",
+          "reading": "sou3"
+        },
+        {
+          "text": "計錯咗",
+          "reading": "gai3 co3 zo2"
+        }
+      ],
+      "char_length": 6,
+      "input": "nigosougaichojo",
+      "mode": "forgiving",
+      "expected": [
+        "呢個數計錯咗"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "6-8",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "contextual_reading_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "lp060",
+      "category": "work_study",
+      "text": "我哋一齊諗辦法",
+      "reading": "ngo5 dei6 jat1 cai4 nam2 baan6 faat3",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "我哋",
+          "reading": "ngo5 dei6"
+        },
+        {
+          "text": "一齊",
+          "reading": "jat1 cai4"
+        },
+        {
+          "text": "諗",
+          "reading": "nam2"
+        },
+        {
+          "text": "辦法",
+          "reading": "baan6 faat3"
+        }
+      ],
+      "char_length": 7,
+      "input": "ngodeiyatchainambaanfaat",
+      "mode": "forgiving",
+      "expected": [
+        "我哋一齊諗辦法"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "6-8",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters"
+      ]
+    },
+    {
+      "id": "lp061",
+      "category": "work_study",
+      "text": "可唔可以幫我再檢查一次",
+      "reading": "ho2 m4 ho2 ji5 bong1 ngo5 zoi3 gim2 caa4 jat1 ci3",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "可唔可以",
+          "reading": "ho2 m4 ho2 ji5"
+        },
+        {
+          "text": "幫",
+          "reading": "bong1"
+        },
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "再",
+          "reading": "zoi3"
+        },
+        {
+          "text": "檢查",
+          "reading": "gim2 caa4"
+        },
+        {
+          "text": "一次",
+          "reading": "jat1 ci3"
+        }
+      ],
+      "char_length": 11,
+      "input": "homhoyibongngojoigimchayatchi",
+      "mode": "forgiving",
+      "expected": [
+        "可唔可以幫我再檢查一次"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "9-12",
+      "user_input": "honghoyibongngojoigimchayatchi",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "User-reported ng spelling for syllabic m4 in 唔 only; this is a project accepted input habit, not the primary Yale spelling.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "syllabic_m",
+        "habitual_ng_variant"
+      ]
+    },
+    {
+      "id": "lp062",
+      "category": "work_study",
+      "text": "我仲未做完今日啲功課",
+      "reading": "ngo5 zung6 mei6 zou6 jyun4 gam1 jat6 di1 gung1 fo3",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "仲未",
+          "reading": "zung6 mei6"
+        },
+        {
+          "text": "做完",
+          "reading": "zou6 jyun4"
+        },
+        {
+          "text": "今日",
+          "reading": "gam1 jat6"
+        },
+        {
+          "text": "啲",
+          "reading": "di1"
+        },
+        {
+          "text": "功課",
+          "reading": "gung1 fo3"
+        }
+      ],
+      "char_length": 10,
+      "input": "ngojungmeijouyungamyatdigungfo",
+      "mode": "forgiving",
+      "expected": [
+        "我仲未做完今日啲功課"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters"
+      ]
+    },
+    {
+      "id": "lp063",
+      "category": "work_study",
+      "text": "聽日開會之前交份報告",
+      "reading": "ting1 jat6 hoi1 wui2 zi1 cin4 gaau1 fan6 bou3 gou3",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "聽日",
+          "reading": "ting1 jat6"
+        },
+        {
+          "text": "開會",
+          "reading": "hoi1 wui2"
+        },
+        {
+          "text": "之前",
+          "reading": "zi1 cin4"
+        },
+        {
+          "text": "交",
+          "reading": "gaau1"
+        },
+        {
+          "text": "份",
+          "reading": "fan6"
+        },
+        {
+          "text": "報告",
+          "reading": "bou3 gou3"
+        }
+      ],
+      "char_length": 10,
+      "input": "tingyathoiwuijichingaaufanbougou",
+      "mode": "forgiving",
+      "expected": [
+        "聽日開會之前交份報告"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed. Contextual 開會 hoi1 wui2 corrected from authored wui6 before scoring; original snapshot and correction log retained.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "contextual_reading_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "lp064",
+      "category": "messages_chat",
+      "text": "等陣覆你",
+      "reading": "dang2 zan6 fuk1 nei5",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "等陣",
+          "reading": "dang2 zan6"
+        },
+        {
+          "text": "覆",
+          "reading": "fuk1"
+        },
+        {
+          "text": "你",
+          "reading": "nei5"
+        }
+      ],
+      "char_length": 4,
+      "input": "dangjanfuknei",
+      "mode": "forgiving",
+      "expected": [
+        "等陣覆你"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "4-5",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries"
+      ]
+    },
+    {
+      "id": "lp065",
+      "category": "messages_chat",
+      "text": "唔該晒你",
+      "reading": "m4 goi1 saai3 nei5",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "唔該晒",
+          "reading": "m4 goi1 saai3"
+        },
+        {
+          "text": "你",
+          "reading": "nei5"
+        }
+      ],
+      "char_length": 4,
+      "input": "mgoisaainei",
+      "mode": "forgiving",
+      "expected": [
+        "唔該晒你"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "4-5",
+      "user_input": "nggoisaainei",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "User-reported ng spelling for syllabic m4 in 唔 only; this is a project accepted input habit, not the primary Yale spelling.",
+      "whole_text_in_dictionary": true,
+      "whole_text_reading_in_dictionary": true,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "syllabic_m",
+        "habitual_ng_variant"
+      ]
+    },
+    {
+      "id": "lp066",
+      "category": "messages_chat",
+      "text": "真係好笑",
+      "reading": "zan1 hai6 hou2 siu3",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "真係",
+          "reading": "zan1 hai6"
+        },
+        {
+          "text": "好笑",
+          "reading": "hou2 siu3"
+        }
+      ],
+      "char_length": 4,
+      "input": "janhaihousiu",
+      "mode": "forgiving",
+      "expected": [
+        "真係好笑"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "4-5",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries"
+      ]
+    },
+    {
+      "id": "lp067",
+      "category": "messages_chat",
+      "text": "我頭先冇聽到",
+      "reading": "ngo5 tau4 sin1 mou5 teng1 dou2",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "頭先",
+          "reading": "tau4 sin1"
+        },
+        {
+          "text": "冇",
+          "reading": "mou5"
+        },
+        {
+          "text": "聽到",
+          "reading": "teng1 dou2"
+        }
+      ],
+      "char_length": 6,
+      "input": "ngotausinmoutengdou",
+      "mode": "forgiving",
+      "expected": [
+        "我頭先冇聽到"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "6-8",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "contextual_reading_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "lp068",
+      "category": "messages_chat",
+      "text": "你可唔可以再講",
+      "reading": "nei5 ho2 m4 ho2 ji5 zoi3 gong2",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "你",
+          "reading": "nei5"
+        },
+        {
+          "text": "可唔可以",
+          "reading": "ho2 m4 ho2 ji5"
+        },
+        {
+          "text": "再",
+          "reading": "zoi3"
+        },
+        {
+          "text": "講",
+          "reading": "gong2"
+        }
+      ],
+      "char_length": 7,
+      "input": "neihomhoyijoigong",
+      "mode": "forgiving",
+      "expected": [
+        "你可唔可以再講"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "6-8",
+      "user_input": "neihonghoyijoigong",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "User-reported ng spelling for syllabic m4 in 唔 only; this is a project accepted input habit, not the primary Yale spelling.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "syllabic_m",
+        "habitual_ng_variant"
+      ]
+    },
+    {
+      "id": "lp069",
+      "category": "messages_chat",
+      "text": "我哋遲啲再傾啦",
+      "reading": "ngo5 dei6 ci4 di1 zoi3 king1 laa1",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "我哋",
+          "reading": "ngo5 dei6"
+        },
+        {
+          "text": "遲啲",
+          "reading": "ci4 di1"
+        },
+        {
+          "text": "再",
+          "reading": "zoi3"
+        },
+        {
+          "text": "傾",
+          "reading": "king1"
+        },
+        {
+          "text": "啦",
+          "reading": "laa1"
+        }
+      ],
+      "char_length": 7,
+      "input": "ngodeichidijoikingla",
+      "mode": "forgiving",
+      "expected": [
+        "我哋遲啲再傾啦"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "6-8",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters"
+      ]
+    },
+    {
+      "id": "lp070",
+      "category": "messages_chat",
+      "text": "你收到之後記住覆返我呀",
+      "reading": "nei5 sau1 dou2 zi1 hau6 gei3 zyu6 fuk1 faan1 ngo5 aa3",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "你",
+          "reading": "nei5"
+        },
+        {
+          "text": "收到",
+          "reading": "sau1 dou2"
+        },
+        {
+          "text": "之後",
+          "reading": "zi1 hau6"
+        },
+        {
+          "text": "記住",
+          "reading": "gei3 zyu6"
+        },
+        {
+          "text": "覆返",
+          "reading": "fuk1 faan1"
+        },
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "呀",
+          "reading": "aa3"
+        }
+      ],
+      "char_length": 11,
+      "input": "neisaudoujihaugeijyufukfaanngoa",
+      "mode": "forgiving",
+      "expected": [
+        "你收到之後記住覆返我呀"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "contextual_reading_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "lp071",
+      "category": "messages_chat",
+      "text": "如果你唔方便就遲啲先講",
+      "reading": "jyu4 gwo2 nei5 m4 fong1 bin6 zau6 ci4 di1 sin1 gong2",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "如果",
+          "reading": "jyu4 gwo2"
+        },
+        {
+          "text": "你",
+          "reading": "nei5"
+        },
+        {
+          "text": "唔方便",
+          "reading": "m4 fong1 bin6"
+        },
+        {
+          "text": "就",
+          "reading": "zau6"
+        },
+        {
+          "text": "遲啲",
+          "reading": "ci4 di1"
+        },
+        {
+          "text": "先",
+          "reading": "sin1"
+        },
+        {
+          "text": "講",
+          "reading": "gong2"
+        }
+      ],
+      "char_length": 11,
+      "input": "yugwoneimfongbinjauchidisingong",
+      "mode": "forgiving",
+      "expected": [
+        "如果你唔方便就遲啲先講"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "9-12",
+      "user_input": "yugwoneingfongbinjauchidisingong",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "User-reported ng spelling for syllabic m4 in 唔 only; this is a project accepted input habit, not the primary Yale spelling.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "syllabic_m",
+        "habitual_ng_variant"
+      ]
+    },
+    {
+      "id": "lp072",
+      "category": "messages_chat",
+      "text": "我聽唔清楚你頭先講乜嘢",
+      "reading": "ngo5 teng1 m4 cing1 co2 nei5 tau4 sin1 gong2 mat1 je5",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "聽唔清楚",
+          "reading": "teng1 m4 cing1 co2"
+        },
+        {
+          "text": "你",
+          "reading": "nei5"
+        },
+        {
+          "text": "頭先",
+          "reading": "tau4 sin1"
+        },
+        {
+          "text": "講",
+          "reading": "gong2"
+        },
+        {
+          "text": "乜嘢",
+          "reading": "mat1 je5"
+        }
+      ],
+      "char_length": 11,
+      "input": "ngotengmchingchoneitausingongmatye",
+      "mode": "forgiving",
+      "expected": [
+        "我聽唔清楚你頭先講乜嘢"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "9-12",
+      "user_input": "ngotengngchingchoneitausingongmatye",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "User-reported ng spelling for syllabic m4 in 唔 only; this is a project accepted input habit, not the primary Yale spelling.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "syllabic_m",
+        "habitual_ng_variant"
+      ]
+    },
+    {
+      "id": "lp073",
+      "category": "technical_input",
+      "text": "打唔到字",
+      "reading": "daa2 m4 dou2 zi6",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "打唔到",
+          "reading": "daa2 m4 dou2"
+        },
+        {
+          "text": "字",
+          "reading": "zi6"
+        }
+      ],
+      "char_length": 4,
+      "input": "damdouji",
+      "mode": "forgiving",
+      "expected": [
+        "打唔到字"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "4-5",
+      "user_input": "dangdouji",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "User-reported ng spelling for syllabic m4 in 唔 only; this is a project accepted input habit, not the primary Yale spelling.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "syllabic_m",
+        "habitual_ng_variant",
+        "contextual_reading_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "lp074",
+      "category": "technical_input",
+      "text": "換咗啲字型",
+      "reading": "wun6 zo2 di1 zi6 jing4",
+      "case_role": "reported",
+      "segments": [
+        {
+          "text": "換咗",
+          "reading": "wun6 zo2"
+        },
+        {
+          "text": "啲",
+          "reading": "di1"
+        },
+        {
+          "text": "字型",
+          "reading": "zi6 jing4"
+        }
+      ],
+      "char_length": 5,
+      "input": "wunjodijiying",
+      "mode": "forgiving",
+      "expected": [
+        "換咗啲字型"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "4-5",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed. User-reported font phrase, intentionally excluded from ordinary-case quality denominator.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters"
+      ]
+    },
+    {
+      "id": "lp075",
+      "category": "technical_input",
+      "text": "重新開機",
+      "reading": "cung4 san1 hoi1 gei1",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "重新",
+          "reading": "cung4 san1"
+        },
+        {
+          "text": "開機",
+          "reading": "hoi1 gei1"
+        }
+      ],
+      "char_length": 4,
+      "input": "chungsanhoigei",
+      "mode": "forgiving",
+      "expected": [
+        "重新開機"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "4-5",
+      "whole_text_in_dictionary": true,
+      "whole_text_reading_in_dictionary": true,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries"
+      ]
+    },
+    {
+      "id": "lp076",
+      "category": "technical_input",
+      "text": "呢個字點樣打",
+      "reading": "ni1 go3 zi6 dim2 joeng2 daa2",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "呢個",
+          "reading": "ni1 go3"
+        },
+        {
+          "text": "字",
+          "reading": "zi6"
+        },
+        {
+          "text": "點樣",
+          "reading": "dim2 joeng2"
+        },
+        {
+          "text": "打",
+          "reading": "daa2"
+        }
+      ],
+      "char_length": 6,
+      "input": "nigojidimyeungda",
+      "mode": "forgiving",
+      "expected": [
+        "呢個字點樣打"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "6-8",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "contextual_reading_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "lp077",
+      "category": "technical_input",
+      "text": "我想改返設定",
+      "reading": "ngo5 soeng2 goi2 faan1 cit3 ding6",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "想",
+          "reading": "soeng2"
+        },
+        {
+          "text": "改返",
+          "reading": "goi2 faan1"
+        },
+        {
+          "text": "設定",
+          "reading": "cit3 ding6"
+        }
+      ],
+      "char_length": 6,
+      "input": "ngoseunggoifaanchitding",
+      "mode": "forgiving",
+      "expected": [
+        "我想改返設定"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "6-8",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries"
+      ]
+    },
+    {
+      "id": "lp078",
+      "category": "technical_input",
+      "text": "部電腦冇反應",
+      "reading": "bou6 din6 nou5 mou5 faan2 jing3",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "部",
+          "reading": "bou6"
+        },
+        {
+          "text": "電腦",
+          "reading": "din6 nou5"
+        },
+        {
+          "text": "冇",
+          "reading": "mou5"
+        },
+        {
+          "text": "反應",
+          "reading": "faan2 jing3"
+        }
+      ],
+      "char_length": 6,
+      "input": "boudinnoumoufaanying",
+      "mode": "forgiving",
+      "expected": [
+        "部電腦冇反應"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "6-8",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters"
+      ]
+    },
+    {
+      "id": "lp079",
+      "category": "technical_input",
+      "text": "我想知點樣改返原本設定",
+      "reading": "ngo5 soeng2 zi1 dim2 joeng2 goi2 faan1 jyun4 bun2 cit3 ding6",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "想",
+          "reading": "soeng2"
+        },
+        {
+          "text": "知",
+          "reading": "zi1"
+        },
+        {
+          "text": "點樣",
+          "reading": "dim2 joeng2"
+        },
+        {
+          "text": "改返",
+          "reading": "goi2 faan1"
+        },
+        {
+          "text": "原本",
+          "reading": "jyun4 bun2"
+        },
+        {
+          "text": "設定",
+          "reading": "cit3 ding6"
+        }
+      ],
+      "char_length": 11,
+      "input": "ngoseungjidimyeunggoifaanyunbunchitding",
+      "mode": "forgiving",
+      "expected": [
+        "我想知點樣改返原本設定"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries"
+      ]
+    },
+    {
+      "id": "lp080",
+      "category": "technical_input",
+      "text": "你可唔可以教我點樣用呢個",
+      "reading": "nei5 ho2 m4 ho2 ji5 gaau3 ngo5 dim2 joeng2 jung6 ni1 go3",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "你",
+          "reading": "nei5"
+        },
+        {
+          "text": "可唔可以",
+          "reading": "ho2 m4 ho2 ji5"
+        },
+        {
+          "text": "教",
+          "reading": "gaau3"
+        },
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "點樣",
+          "reading": "dim2 joeng2"
+        },
+        {
+          "text": "用",
+          "reading": "jung6"
+        },
+        {
+          "text": "呢個",
+          "reading": "ni1 go3"
+        }
+      ],
+      "char_length": 12,
+      "input": "neihomhoyigaaungodimyeungyungnigo",
+      "mode": "forgiving",
+      "expected": [
+        "你可唔可以教我點樣用呢個"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "9-12",
+      "user_input": "neihonghoyigaaungodimyeungyungnigo",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "User-reported ng spelling for syllabic m4 in 唔 only; this is a project accepted input habit, not the primary Yale spelling.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "syllabic_m",
+        "habitual_ng_variant",
+        "contextual_reading_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "lp081",
+      "category": "technical_input",
+      "text": "呢部電腦點解成日都咁慢",
+      "reading": "ni1 bou6 din6 nou5 dim2 gaai2 sing4 jat6 dou1 gam3 maan6",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "呢",
+          "reading": "ni1"
+        },
+        {
+          "text": "部",
+          "reading": "bou6"
+        },
+        {
+          "text": "電腦",
+          "reading": "din6 nou5"
+        },
+        {
+          "text": "點解",
+          "reading": "dim2 gaai2"
+        },
+        {
+          "text": "成日",
+          "reading": "sing4 jat6"
+        },
+        {
+          "text": "都",
+          "reading": "dou1"
+        },
+        {
+          "text": "咁",
+          "reading": "gam3"
+        },
+        {
+          "text": "慢",
+          "reading": "maan6"
+        }
+      ],
+      "char_length": 11,
+      "input": "niboudinnoudimgaaisingyatdougammaan",
+      "mode": "forgiving",
+      "expected": [
+        "呢部電腦點解成日都咁慢"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries"
+      ]
+    },
+    {
+      "id": "lp082",
+      "category": "shopping_money",
+      "text": "呢個幾錢",
+      "reading": "ni1 go3 gei2 cin2",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "呢個",
+          "reading": "ni1 go3"
+        },
+        {
+          "text": "幾錢",
+          "reading": "gei2 cin2"
+        }
+      ],
+      "char_length": 4,
+      "input": "nigogeichin",
+      "mode": "forgiving",
+      "expected": [
+        "呢個幾錢"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "4-5",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "contextual_reading_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "lp083",
+      "category": "shopping_money",
+      "text": "唔使找喇",
+      "reading": "m4 sai2 zaau2 laa3",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "唔使",
+          "reading": "m4 sai2"
+        },
+        {
+          "text": "找",
+          "reading": "zaau2"
+        },
+        {
+          "text": "喇",
+          "reading": "laa3"
+        }
+      ],
+      "char_length": 4,
+      "input": "msaijaaula",
+      "mode": "forgiving",
+      "expected": [
+        "唔使找喇"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "4-5",
+      "user_input": "ngsaijaaula",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "User-reported ng spelling for syllabic m4 in 唔 only; this is a project accepted input habit, not the primary Yale spelling.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "syllabic_m",
+        "habitual_ng_variant"
+      ]
+    },
+    {
+      "id": "lp084",
+      "category": "shopping_money",
+      "text": "有冇細碼",
+      "reading": "jau5 mou5 sai3 maa5",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "有冇",
+          "reading": "jau5 mou5"
+        },
+        {
+          "text": "細碼",
+          "reading": "sai3 maa5"
+        }
+      ],
+      "char_length": 4,
+      "input": "yaumousaima",
+      "mode": "forgiving",
+      "expected": [
+        "有冇細碼"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "4-5",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters"
+      ]
+    },
+    {
+      "id": "lp085",
+      "category": "shopping_money",
+      "text": "呢件衫唔啱着",
+      "reading": "ni1 gin6 saam1 m4 ngaam1 zoek3",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "呢",
+          "reading": "ni1"
+        },
+        {
+          "text": "件",
+          "reading": "gin6"
+        },
+        {
+          "text": "衫",
+          "reading": "saam1"
+        },
+        {
+          "text": "唔",
+          "reading": "m4"
+        },
+        {
+          "text": "啱",
+          "reading": "ngaam1"
+        },
+        {
+          "text": "着",
+          "reading": "zoek3"
+        }
+      ],
+      "char_length": 6,
+      "input": "niginsaammngaamjeuk",
+      "mode": "forgiving",
+      "expected": [
+        "呢件衫唔啱着"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "6-8",
+      "user_input": "niginsaamngngaamjeuk",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "User-reported ng spelling for syllabic m4 in 唔 only; this is a project accepted input habit, not the primary Yale spelling.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "syllabic_m",
+        "habitual_ng_variant",
+        "contextual_reading_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "lp086",
+      "category": "shopping_money",
+      "text": "可唔可以平啲",
+      "reading": "ho2 m4 ho2 ji5 peng4 di1",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "可唔可以",
+          "reading": "ho2 m4 ho2 ji5"
+        },
+        {
+          "text": "平啲",
+          "reading": "peng4 di1"
+        }
+      ],
+      "char_length": 6,
+      "input": "homhoyipengdi",
+      "mode": "forgiving",
+      "expected": [
+        "可唔可以平啲"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "6-8",
+      "user_input": "honghoyipengdi",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "User-reported ng spelling for syllabic m4 in 唔 only; this is a project accepted input habit, not the primary Yale spelling.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "syllabic_m",
+        "habitual_ng_variant",
+        "contextual_reading_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "lp087",
+      "category": "shopping_money",
+      "text": "我想買多一個",
+      "reading": "ngo5 soeng2 maai5 do1 jat1 go3",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "想",
+          "reading": "soeng2"
+        },
+        {
+          "text": "買多",
+          "reading": "maai5 do1"
+        },
+        {
+          "text": "一個",
+          "reading": "jat1 go3"
+        }
+      ],
+      "char_length": 6,
+      "input": "ngoseungmaaidoyatgo",
+      "mode": "forgiving",
+      "expected": [
+        "我想買多一個"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "6-8",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "contextual_reading_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "lp088",
+      "category": "shopping_money",
+      "text": "買之前我想再比較吓價錢",
+      "reading": "maai5 zi1 cin4 ngo5 soeng2 zoi3 bei2 gaau3 haa5 gaa3 cin2",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "買",
+          "reading": "maai5"
+        },
+        {
+          "text": "之前",
+          "reading": "zi1 cin4"
+        },
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "想",
+          "reading": "soeng2"
+        },
+        {
+          "text": "再",
+          "reading": "zoi3"
+        },
+        {
+          "text": "比較",
+          "reading": "bei2 gaau3"
+        },
+        {
+          "text": "吓",
+          "reading": "haa5"
+        },
+        {
+          "text": "價錢",
+          "reading": "gaa3 cin2"
+        }
+      ],
+      "char_length": 11,
+      "input": "maaijichinngoseungjoibeigaauhagachin",
+      "mode": "forgiving",
+      "expected": [
+        "買之前我想再比較吓價錢"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed. Intended light-verb 吓 haa5 has pinned Words.hk character support; a local 睇吓 compound row instead has haa3. Retain this disclosed review item before scoring.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "contextual_reading_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "lp089",
+      "category": "shopping_money",
+      "text": "如果唔啱用可唔可以退錢",
+      "reading": "jyu4 gwo2 m4 ngaam1 jung6 ho2 m4 ho2 ji5 teoi3 cin2",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "如果",
+          "reading": "jyu4 gwo2"
+        },
+        {
+          "text": "唔",
+          "reading": "m4"
+        },
+        {
+          "text": "啱用",
+          "reading": "ngaam1 jung6"
+        },
+        {
+          "text": "可唔可以",
+          "reading": "ho2 m4 ho2 ji5"
+        },
+        {
+          "text": "退錢",
+          "reading": "teoi3 cin2"
+        }
+      ],
+      "char_length": 11,
+      "input": "yugwomngaamyunghomhoyiteuichin",
+      "mode": "forgiving",
+      "expected": [
+        "如果唔啱用可唔可以退錢"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "9-12",
+      "user_input": "yugwongngaamyunghonghoyiteuichin",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "User-reported ng spelling for syllabic m4 in 唔 only; this is a project accepted input habit, not the primary Yale spelling.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "syllabic_m",
+        "habitual_ng_variant"
+      ]
+    },
+    {
+      "id": "lp090",
+      "category": "shopping_money",
+      "text": "呢個價錢已經包埋運費未",
+      "reading": "ni1 go3 gaa3 cin2 ji5 ging1 baau1 maai4 wan6 fai3 mei6",
+      "case_role": "ordinary",
+      "segments": [
+        {
+          "text": "呢個",
+          "reading": "ni1 go3"
+        },
+        {
+          "text": "價錢",
+          "reading": "gaa3 cin2"
+        },
+        {
+          "text": "已經",
+          "reading": "ji5 ging1"
+        },
+        {
+          "text": "包埋",
+          "reading": "baau1 maai4"
+        },
+        {
+          "text": "運費",
+          "reading": "wan6 fai3"
+        },
+        {
+          "text": "未",
+          "reading": "mei6"
+        }
+      ],
+      "char_length": 11,
+      "input": "nigogachinyigingbaaumaaiwanfaimei",
+      "mode": "forgiving",
+      "expected": [
+        "呢個價錢已經包埋運費未"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "contextual_reading_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "lp091",
+      "category": "controls",
+      "text": "啲字型",
+      "reading": "di1 zi6 jing4",
+      "case_role": "control",
+      "segments": [
+        {
+          "text": "啲",
+          "reading": "di1"
+        },
+        {
+          "text": "字型",
+          "reading": "zi6 jing4"
+        }
+      ],
+      "char_length": 3,
+      "input": "dijiying",
+      "mode": "forgiving",
+      "expected": [
+        "啲字型"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "control",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed. Short control, excluded from ordinary-case quality denominator.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters"
+      ]
+    },
+    {
+      "id": "lp092",
+      "category": "controls",
+      "text": "我唔知",
+      "reading": "ngo5 m4 zi1",
+      "case_role": "control",
+      "segments": [
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "唔",
+          "reading": "m4"
+        },
+        {
+          "text": "知",
+          "reading": "zi1"
+        }
+      ],
+      "char_length": 3,
+      "input": "ngomji",
+      "mode": "forgiving",
+      "expected": [
+        "我唔知"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "control",
+      "user_input": "ngongji",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "User-reported ng spelling for syllabic m4 in 唔 only; this is a project accepted input habit, not the primary Yale spelling.",
+      "whole_text_in_dictionary": true,
+      "whole_text_reading_in_dictionary": true,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed. Short control, excluded from ordinary-case quality denominator.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries",
+        "colloquial_hk_characters",
+        "syllabic_m",
+        "habitual_ng_variant"
+      ]
+    },
+    {
+      "id": "lp093",
+      "category": "controls",
+      "text": "再傾啦",
+      "reading": "zoi3 king1 laa1",
+      "case_role": "control",
+      "segments": [
+        {
+          "text": "再",
+          "reading": "zoi3"
+        },
+        {
+          "text": "傾",
+          "reading": "king1"
+        },
+        {
+          "text": "啦",
+          "reading": "laa1"
+        }
+      ],
+      "char_length": 3,
+      "input": "joikingla",
+      "mode": "forgiving",
+      "expected": [
+        "再傾啦"
+      ],
+      "top_k": 9,
+      "input_form": "plain_yale_compact",
+      "length_band": "control",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Intended reading authored manually before lexical queries. Every character/reading has an exact local dictionary row. Lexical attestation does not establish phrase-level pronunciation or naturalness. Independent project-agent review completed before scoring; no native-speaker or audio review claimed. Short control, excluded from ordinary-case quality denominator.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "unmarked_syllable_boundaries"
+      ]
+    }
+  ]
+}

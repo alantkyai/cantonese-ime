@@ -1,5 +1,11 @@
 # Cantonese IME 1.0.8 for Windows x64
 
+**Release withheld after expanded sentence testing.** The broader review is
+complete and its sentence-quality gates failed. The
+[review policy and results](LONG_PHRASE_RELEASE_REVIEW.md) take precedence over
+the earlier plan to install after the focused checks. This remains a development
+candidate.
+
 **Final checks pending:** the engine is frozen and its runtime regressions have
 passed. The first standard Setup attempt was canceled before the protected
 payload update. The installed version remains 1.0.7; installed 1.0.8 broker

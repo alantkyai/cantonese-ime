@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "recorded_before_scoring_at_utc": "2026-10-23T17:34:03.004578+00:00",
+  "fixture_sha256": "bfb0eb8cf0ca77633394c3aad450d403603800e9a8108c01817bdb85d1d814c6",
+  "policy_sha256": "5ab132691d4d987290de2afc03db49e6ee688a19082960a1e5d540c10fb499f0",
+  "runner_sha256": "5a693edea8985581c45cbb75337e8357a233bb8c28756312509d8debdeee350a",
+  "engine_sha256": "a4e2d07c98adbb78b8a6978892827bd907a68cd658f06229d6493fbc05e3e141",
+  "independently_read_all_target_and_reading_pairs": true,
+  "human_native_speaker_or_audio_acceptance": false,
+  "pre_score_corrections": [
+    {
+      "case_id": "lp055",
+      "word": "開會",
+      "from": "hoi1 wui6",
+      "to": "hoi1 wui2"
+    },
+    {
+      "case_id": "lp063",
+      "word": "開會",
+      "from": "hoi1 wui6",
+      "to": "hoi1 wui2"
+    }
+  ],
+  "reading_sources": [
+    {
+      "word": "開會",
+      "url": "https://words.hk/zidin/%E9%96%8B%E6%9C%83",
+      "fact": "hoi1 wui2"
+    },
+    {
+      "word": "吓",
+      "url": "https://words.hk/zidin/v/96429/%E5%90%93",
+      "fact": "haa5 for brief/light verbal action; retain instead of conflicting supplemental compound metadata"
+    }
+  ],
+  "case_count": 93,
+  "ordinary_case_count": 89,
+  "ordinary_length_bands": {
+    "4-5": 29,
+    "6-8": 30,
+    "9-12": 30
+  },
+  "ordinary_topics": 10,
+  "ordinary_ng_input_variants": 29,
+  "ordinary_whole_texts_absent_dictionary": 83,
+  "dictionary_reading_partition_found": 93,
+  "no_cases_removed_after_ranking": true,
+  "ranking_not_run_by_authors": true,
+  "interpretation": "Rank-blind project-authored development fixture against a frozen engine; not observed human typing, representative random sampling or held-out language accuracy."
+}

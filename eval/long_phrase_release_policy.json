@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "policy_id": "long-phrase-review-2026-10-24-v1",
+  "recorded_at_utc": "2026-10-23T17:24:05.988014+00:00",
+  "purpose": "Conservative product release gates recorded before scoring the new authored phrase fixture. These are engineering targets, not statistical confidence or general Cantonese accuracy claims.",
+  "candidate_engine_sha256": "a4e2d07c98adbb78b8a6978892827bd907a68cd658f06229d6493fbc05e3e141",
+  "release_action": "Withhold installation/publication while expanded review is incomplete or any required gate fails. Preserve original scores and failure cases; do not change targets or thresholds after seeing ranks.",
+  "authored_coverage": {
+    "minimum_ordinary_cases_4plus_chars": 80,
+    "minimum_cases_per_length_band": 15,
+    "length_bands": [
+      "4-5",
+      "6-8",
+      "9-12"
+    ],
+    "minimum_topic_categories": 8,
+    "minimum_expected_text_absent_dictionary_fraction": 0.5,
+    "reported_examples_and_short_controls": "Report separately; do not substitute them for new quality cases.",
+    "spelling": "Plain ASCII Yale without tone letters/marks, derived from explicit Jyutping readings; not observed human keystrokes.",
+    "review": "Independent reading and spelling checks before rank scoring; preserve any uncertainty and exclusions.",
+    "minimum_ordinary_habitual_ng_cases": 15
+  },
+  "authored_quality_required_for_each_profile": {
+    "profiles": [
+      "fresh",
+      "short_preferences",
+      "heavy_short_preferences"
+    ],
+    "minimum_top9_fraction_overall": 0.9,
+    "minimum_top9_fraction_each_length_band": 0.8,
+    "minimum_top90_fraction_overall": 0.95,
+    "maximum_top9_decline_from_fresh_percentage_points": 2.0,
+    "primary_input_form": "plain_yale_compact",
+    "diagnostic_forms": [
+      "plain_yale_apostrophes",
+      "strict_jyutping_toned",
+      "strict_jyutping_tone_free"
+    ],
+    "exact_match": "Full intended text only; no partial output, alternate orthography or later-page relabeling.",
+    "additional_required_input_group": {
+      "form": "habitual_ng_compact",
+      "scope": "At least15 authored ordinary negative phrases with ng replacing the syllabic m input for 唔 only, matching the user habit.",
+      "minimum_top9_fraction": 0.9,
+      "minimum_top90_fraction": 0.95,
+      "maximum_top9_decline_from_fresh_percentage_points": 2.0
+    }
+  },
+  "external_replay": {
+    "fixture": "eval/hkcancor_cases.json",
+    "expected_cases": 500,
+    "forms": [
+      "strict_jyutping_toned",
+      "strict_jyutping_tone_free",
+      "plain_yale_compact",
+      "plain_yale_apostrophes"
+    ],
+    "histories": [
+      "fresh",
+      "synthetic_short_preferences"
+    ],
+    "baseline": "ca015cc 1.0.6 engine with the same current dictionary and mapping modules; isolate imports.",
+    "maximum_top9_decline_vs_matching_baseline_percentage_points": 2.0,
+    "required_cohorts": [
+      "all",
+      "speech_spans_4plus_chars"
+    ],
+    "interpretation": "Retained externally annotated corpus replay; overlap and prior development use preclude a held-out accuracy claim."
+  },
+  "correctness": {
+    "zero_unexpected_exceptions": true,
+    "zero_partial_input_consumption": true,
+    "zero_constraint_violations": true,
+    "learning_file_schema_preserved": true,
+    "explicit_whole_input_learning_and_persistence": true,
+    "valid_ambiguous_boundaries_retained": true,
+    "candidate_paging_and_session_commit_consistent": true,
+    "stress": "Dense ambiguous and maximum-length inputs must terminate with bounded candidates or explicit capacity status; never silently claim exhaustive results after truncation."
+  },
+  "performance": {
+    "measurement": "Dedicated serial changing-query run after concurrent quality jobs finish; disclose machine/run, cold initialization and engine-only scope. No OS or IPC deadline claim.",
+    "ordinary_changing_query_p95_ms_maximum": 100.0,
+    "ordinary_changing_query_p99_ms_maximum": 200.0,
+    "ordinary_single_query_ms_maximum": 500.0,
+    "cold_start": "Record separately; do not mix into warm-query percentiles.",
+    "stress_latency": "Report separately from ordinary typing; watchdog termination is not a successful engine termination."
+  },
+  "reporting": {
+    "all_failures_retained": true,
+    "report_length_topic_spelling_and_history_strata": true,
+    "compare_candidate_prefix_diversity": true,
+    "freeze_runtime_dictionary_fixture_and_runner_hashes": true,
+    "public_or_synthetic_inputs_only": true,
+    "personal_history": "Do not read or modify personal learning for this campaign.",
+    "historical_evidence": "Do not overwrite prior frozen reports or imply source tests are installed x64/visual acceptance.",
+    "publication": "Existing native installation/publication approvals do not override this explicit hold pending confidence."
+  },
+  "native_acceptance": {
+    "after_engine_quality_passes": "Build a fresh x64 package, install through standard Setup, verify installed hashes/registration/owned broker and public phrase lookups; preserve user learning, appearance and input preferences.",
+    "scope": "Engine/protocol tests on this Windows computer alone cannot certify TSF integration or live application typing.",
+    "user_visual_check": "User owns live application/game acceptance as previously requested."
+  }
+}

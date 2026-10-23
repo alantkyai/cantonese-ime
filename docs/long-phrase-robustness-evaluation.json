@@ -1,0 +1,3671 @@
+{
+  "schema_version": 1,
+  "scope": "Public dictionary and NEW synthetic preferences; engine/session robustness, not held-out language accuracy.",
+  "timing_scope": "CONTENDED: other quality campaigns active; timing not an acceptance benchmark",
+  "engine_sha256": "a4e2d07c98adbb78b8a6978892827bd907a68cd658f06229d6493fbc05e3e141",
+  "source_sha256": {
+    "cantonese_ime/engine.py": "a4e2d07c98adbb78b8a6978892827bd907a68cd658f06229d6493fbc05e3e141",
+    "cantonese_ime/mappings.py": "d61d6e7ab3b82bab7a31d42f7abfefb4f224eed5c9dbf505304eef2d940249e1",
+    "cantonese_ime/session.py": "ae888430f5d2b0e9a3a72afdbe69f31e9d9c16b08a97333c9eb1bfe6a1457424",
+    "cantonese_ime/native_protocol.py": "99fd60652eab93b6bf4e6c2bf4a1ace39a6571419963670ff9807287115e422f",
+    "data/generated/lexicon.sqlite3": "bd312406a15162556ac58a257ede1514ad40890c793b6f8fa05084fda2d6241a"
+  },
+  "personal_history_accessed": false,
+  "installed_ime_or_os_settings_changed": false,
+  "case_count": 15,
+  "excluded_unverified": [],
+  "new_engine_startup_ms": 5076.401500031352,
+  "resources_after_startup": {
+    "available": true,
+    "working_set_bytes": 360169472,
+    "peak_working_set_bytes": 445546496,
+    "pagefile_bytes": 353693696
+  },
+  "synthetic_training": [
+    {
+      "input": "ng",
+      "text": "唔",
+      "reading": "ng4",
+      "explicit_new_selections": 12
+    },
+    {
+      "input": "ji",
+      "text": "字",
+      "reading": "zi6",
+      "explicit_new_selections": 12
+    },
+    {
+      "input": "di",
+      "text": "啲",
+      "reading": "di1",
+      "explicit_new_selections": 12
+    },
+    {
+      "input": "go",
+      "text": "個",
+      "reading": "go3",
+      "explicit_new_selections": 12
+    },
+    {
+      "input": "bin",
+      "text": "邊",
+      "reading": "bin1",
+      "explicit_new_selections": 12
+    },
+    {
+      "input": "ngo",
+      "text": "我",
+      "reading": "ngo5",
+      "explicit_new_selections": 12
+    },
+    {
+      "input": "seung",
+      "text": "想",
+      "reading": "soeng2",
+      "explicit_new_selections": 12
+    },
+    {
+      "input": "wun",
+      "text": "換",
+      "reading": "wun6",
+      "explicit_new_selections": 12
+    },
+    {
+      "input": "jo",
+      "text": "咗",
+      "reading": "zo2",
+      "explicit_new_selections": 12
+    },
+    {
+      "input": "yung",
+      "text": "用",
+      "reading": "jung6",
+      "explicit_new_selections": 12
+    },
+    {
+      "input": "ni",
+      "text": "呢",
+      "reading": "ni1",
+      "explicit_new_selections": 12
+    },
+    {
+      "input": "gam",
+      "text": "咁",
+      "reading": "gam3",
+      "explicit_new_selections": 12
+    }
+  ],
+  "protocol": [
+    {
+      "input": "dijiying",
+      "status": "OK",
+      "target_in_page": true,
+      "candidate_count": 9,
+      "truncated": false,
+      "scope": "In-process native wire protocol encode/dispatch/decode; no named pipe, TSF or installed broker."
+    },
+    {
+      "input": "wunjodijiying",
+      "status": "OK",
+      "target_in_page": true,
+      "candidate_count": 9,
+      "truncated": false,
+      "scope": "In-process native wire protocol encode/dispatch/decode; no named pipe, TSF or installed broker."
+    },
+    {
+      "input": "ngoseungwunjodijiyingjihaujoisihayungjungmandaji",
+      "status": "OK",
+      "target_in_page": true,
+      "candidate_count": 9,
+      "truncated": false,
+      "scope": "In-process native wire protocol encode/dispatch/decode; no named pipe, TSF or installed broker."
+    }
+  ],
+  "whole_phrase_reuse": {
+    "override": {
+      "input": "wunjodijiying",
+      "target": "換咗啲字形",
+      "rank": 1,
+      "lookup_ms": 6.859499961137772,
+      "candidate_count": 90,
+      "next_offset": null,
+      "truncated": false,
+      "top9": [
+        "換咗啲字形",
+        "換咗啲字型",
+        "換咗啲字凝",
+        "換咗啲自認",
+        "換咗啲紙型",
+        "換咗啲字影",
+        "碗咗啲字型",
+        "玩咗啲字型",
+        "換咗啲知凝"
+      ],
+      "error": null
+    },
+    "prefix": {
+      "input": "ngowunjodijiying",
+      "target": "我換咗啲字形",
+      "rank": 1,
+      "lookup_ms": 15.161399962380528,
+      "candidate_count": 90,
+      "next_offset": null,
+      "truncated": false,
+      "top9": [
+        "我換咗啲字形",
+        "哦換咗啲字形",
+        "餓換咗啲字形",
+        "我換咗啲字型",
+        "我換咗啲字凝",
+        "我換咗啲自認",
+        "娥換咗啲字形",
+        "我換咗啲紙型",
+        "蛾換咗啲字形"
+      ],
+      "error": null
+    },
+    "suffix": {
+      "input": "wunjodijiyingngo",
+      "target": "換咗啲字形我",
+      "rank": 1,
+      "lookup_ms": 14.989000046625733,
+      "candidate_count": 90,
+      "next_offset": null,
+      "truncated": false,
+      "top9": [
+        "換咗啲字形我",
+        "換咗啲字形哦",
+        "換咗啲字形餓",
+        "換咗啲字型我",
+        "換咗啲字凝我",
+        "換咗啲自認我",
+        "換咗啲字形娥",
+        "換咗啲紙型我",
+        "換咗啲字形蛾"
+      ],
+      "error": null
+    },
+    "short_input": {
+      "input": "jiying",
+      "target": "字型",
+      "rank": 1,
+      "lookup_ms": 9.105199947953224,
+      "candidate_count": 90,
+      "next_offset": 90,
+      "truncated": false,
+      "top9": [
+        "字型",
+        "字形",
+        "自認",
+        "紙型",
+        "指認",
+        "指认",
+        "支应",
+        "支應",
+        "紫瑩"
+      ],
+      "error": null
+    }
+  },
+  "session_max_input_guard": {
+    "length": 256,
+    "extra_letter_preserves_buffer": true,
+    "scope": "Session input guard with a no-op engine; separate actual-engine stress below."
+  },
+  "native_protocol_257_rejected": true,
+  "resources_after_quality": {
+    "available": true,
+    "working_set_bytes": 369332224,
+    "peak_working_set_bytes": 445546496,
+    "pagefile_bytes": 362569728
+  },
+  "reopen_core": [
+    {
+      "input": "dijiying",
+      "target": "啲字型",
+      "rank": 1,
+      "lookup_ms": 10.186600033193827,
+      "candidate_count": 90,
+      "next_offset": null,
+      "truncated": false,
+      "top9": [
+        "啲字型",
+        "啲字凝",
+        "啲字形",
+        "啲自認",
+        "啲紙型",
+        "啲字影",
+        "啲知凝",
+        "啲字應",
+        "啲而凝"
+      ],
+      "error": null
+    },
+    {
+      "input": "wunjodijiying",
+      "target": "換咗啲字形",
+      "rank": 1,
+      "lookup_ms": 13.053999980911613,
+      "candidate_count": 90,
+      "next_offset": null,
+      "truncated": false,
+      "top9": [
+        "換咗啲字形",
+        "換咗啲字型",
+        "換咗啲字凝",
+        "換咗啲自認",
+        "換咗啲紙型",
+        "換咗啲字影",
+        "碗咗啲字型",
+        "玩咗啲字型",
+        "換咗啲知凝"
+      ],
+      "error": null
+    },
+    {
+      "input": "goibinjiying",
+      "target": "改變字型",
+      "rank": 1,
+      "lookup_ms": 17.330999951809645,
+      "candidate_count": 90,
+      "next_offset": null,
+      "truncated": false,
+      "top9": [
+        "改變字型",
+        "改變字凝",
+        "改變字形",
+        "改變自認",
+        "改變紙型",
+        "改變字影",
+        "改變知凝",
+        "改變字應",
+        "改變而凝"
+      ],
+      "error": null
+    }
+  ],
+  "phases": {
+    "fresh": [
+      {
+        "input": "dijiying",
+        "target": "啲字型",
+        "rank": 1,
+        "lookup_ms": 9.805399924516678,
+        "candidate_count": 90,
+        "next_offset": null,
+        "truncated": false,
+        "top9": [
+          "啲字型",
+          "啲字形",
+          "啲自認",
+          "啲紙型",
+          "啲知凝",
+          "啲而凝",
+          "啲只凝",
+          "啲知影",
+          "啲異形"
+        ],
+        "error": null,
+        "name": "core-short",
+        "characters": 3
+      },
+      {
+        "input": "goibinjiying",
+        "target": "改變字型",
+        "rank": 1,
+        "lookup_ms": 16.759500140324235,
+        "candidate_count": 90,
+        "next_offset": null,
+        "truncated": false,
+        "top9": [
+          "改變字型",
+          "改變字形",
+          "改變自認",
+          "改變紙型",
+          "改變知凝",
+          "改變而凝",
+          "改變只凝",
+          "改變知影",
+          "改變異形"
+        ],
+        "error": null,
+        "name": "four",
+        "characters": 4
+      },
+      {
+        "input": "wunjodijiying",
+        "target": "換咗啲字型",
+        "rank": 2,
+        "lookup_ms": 8.462100056931376,
+        "candidate_count": 90,
+        "next_offset": null,
+        "truncated": false,
+        "top9": [
+          "援助啲字型",
+          "換咗啲字型",
+          "碗咗啲字型",
+          "玩咗啲字型",
+          "換左啲字型",
+          "碗左啲字型",
+          "玩左啲字型",
+          "援助啲字形",
+          "換咗啲字形"
+        ],
+        "error": null,
+        "name": "user-five",
+        "characters": 5
+      },
+      {
+        "input": "ngoseunggoibinjiying",
+        "target": "我想改變字型",
+        "rank": 1,
+        "lookup_ms": 19.617100013419986,
+        "candidate_count": 90,
+        "next_offset": null,
+        "truncated": false,
+        "top9": [
+          "我想改變字型",
+          "我想改變字形",
+          "我想改變自認",
+          "我想改變紙型",
+          "我想改變知凝",
+          "我想改變而凝",
+          "我想改變只凝",
+          "我相改變字型",
+          "我想改變知影"
+        ],
+        "error": null,
+        "name": "six",
+        "characters": 6
+      },
+      {
+        "input": "ngoseungwunjodijiying",
+        "target": "我想換咗啲字型",
+        "rank": 2,
+        "lookup_ms": 19.816200016066432,
+        "candidate_count": 90,
+        "next_offset": null,
+        "truncated": false,
+        "top9": [
+          "我想援助啲字型",
+          "我想換咗啲字型",
+          "我想碗咗啲字型",
+          "我想玩咗啲字型",
+          "我想換左啲字型",
+          "我想碗左啲字型",
+          "我想玩左啲字型",
+          "我想援助啲字形",
+          "我想換咗啲字形"
+        ],
+        "error": null,
+        "name": "seven",
+        "characters": 7
+      },
+      {
+        "input": "ngoseungjoiwunjodijiying",
+        "target": "我想再換咗啲字型",
+        "rank": 2,
+        "lookup_ms": 16.553299967199564,
+        "candidate_count": 90,
+        "next_offset": null,
+        "truncated": false,
+        "top9": [
+          "我想再援助啲字型",
+          "我想再換咗啲字型",
+          "我想再碗咗啲字型",
+          "我想再玩咗啲字型",
+          "我想再換左啲字型",
+          "我想再碗左啲字型",
+          "我想再玩左啲字型",
+          "我想再援助啲字形",
+          "我想再換咗啲字形"
+        ],
+        "error": null,
+        "name": "eight",
+        "characters": 8
+      },
+      {
+        "input": "ngoseungsihayungnigojiying",
+        "target": "我想試下用呢個字型",
+        "rank": null,
+        "lookup_ms": 23.28510000370443,
+        "candidate_count": 90,
+        "next_offset": null,
+        "truncated": false,
+        "top9": [
+          "我嘗試下用哩個字型",
+          "我嘗試下用哩個字形",
+          "我嘗試吓用哩個字型",
+          "我嘗試下用哩個自認",
+          "我嘗試下用哩個紙型",
+          "我嘗試吓用哩個字形",
+          "我嘗試下用哩個知凝",
+          "我嘗試吓用哩個自認",
+          "我上司下用哩個字型"
+        ],
+        "error": null,
+        "name": "eight-nine",
+        "characters": 9
+      },
+      {
+        "input": "ngonghaigamgong",
+        "target": "我唔係咁講",
+        "rank": null,
+        "lookup_ms": 16.191300004720688,
+        "candidate_count": 90,
+        "next_offset": null,
+        "truncated": false,
+        "top9": [
+          "戇係噉講",
+          "戇係咁講",
+          "我嗯係噉講",
+          "我嗯係咁講",
+          "我五係噉講",
+          "我五係咁講",
+          "我吾係噉講",
+          "我吾係咁講",
+          "戇喺噉講"
+        ],
+        "error": null,
+        "name": "legitimate-nonminimal-ngong",
+        "characters": 5
+      },
+      {
+        "input": "gamyattinheihou",
+        "target": "今日天氣好",
+        "rank": 1,
+        "lookup_ms": 11.084900004789233,
+        "candidate_count": 90,
+        "next_offset": null,
+        "truncated": false,
+        "top9": [
+          "今日天氣好",
+          "噉一天氣好",
+          "咁一天氣好",
+          "今日天喜好",
+          "今日天氣皓",
+          "噉日天氣好",
+          "咁日天氣好",
+          "今日天氣號",
+          "今日天起好"
+        ],
+        "error": null,
+        "name": "weather",
+        "characters": 5
+      },
+      {
+        "input": "neiyigaheuibindou",
+        "target": "你而家去邊度",
+        "rank": 1,
+        "lookup_ms": 10.764200007542968,
+        "candidate_count": 90,
+        "next_offset": null,
+        "truncated": false,
+        "top9": [
+          "你而家去邊度",
+          "你依家去邊度",
+          "你而家佢邊度",
+          "你依家佢邊度",
+          "呢而家去邊度",
+          "您而家去邊度",
+          "你而家去邊都",
+          "呢依家去邊度",
+          "妳而家去邊度"
+        ],
+        "error": null,
+        "name": "location",
+        "characters": 6
+      },
+      {
+        "input": "ngogamyatngseungfaangung",
+        "target": "我今日唔想返工",
+        "rank": null,
+        "lookup_ms": 25.427799904718995,
+        "candidate_count": 90,
+        "next_offset": null,
+        "truncated": false,
+        "top9": [
+          "我今日嗯想返工",
+          "我今日五想返工",
+          "我今日吾想返工",
+          "我今日嗯相返工",
+          "我今日五相返工",
+          "我噉一嗯想返工",
+          "我咁一嗯想返工",
+          "我今日吳想返工",
+          "我今日吾相返工"
+        ],
+        "error": null,
+        "name": "work-seven",
+        "characters": 7
+      },
+      {
+        "input": "ngogamyatngseungfaangungsoyilauhaiukkei",
+        "target": "我今日唔想返工所以留喺屋企",
+        "rank": null,
+        "lookup_ms": 35.13159998692572,
+        "candidate_count": 90,
+        "next_offset": null,
+        "truncated": false,
+        "top9": [
+          "我今日嗯想返工所以流係屋企",
+          "我今日嗯想返工所以留係屋企",
+          "我今日嗯想返工所以樓係屋企",
+          "我今日五想返工所以流係屋企",
+          "我今日五想返工所以留係屋企",
+          "我今日五想返工所以樓係屋企",
+          "我今日吾想返工所以流係屋企",
+          "我今日吾想返工所以留係屋企",
+          "我今日嗯想返工所以劉係屋企"
+        ],
+        "error": null,
+        "name": "work-thirteen",
+        "characters": 13
+      },
+      {
+        "input": "ngoseungwunjodijiyingjihaujoisiyatchi",
+        "target": "我想換咗啲字型之後再試一次",
+        "rank": 2,
+        "lookup_ms": 25.942800100892782,
+        "candidate_count": 90,
+        "next_offset": null,
+        "truncated": false,
+        "top9": [
+          "我想援助啲字型之後再試一次",
+          "我想換咗啲字型之後再試一次",
+          "我想碗咗啲字型之後再試一次",
+          "我想玩咗啲字型之後再試一次",
+          "我想援助啲字型之後再事一次",
+          "我想換咗啲字型之後再事一次",
+          "我想碗咗啲字型之後再事一次",
+          "我想玩咗啲字型之後再事一次",
+          "我想換左啲字型之後再試一次"
+        ],
+        "error": null,
+        "name": "font-thirteen",
+        "characters": 13
+      },
+      {
+        "input": "ngoseunggamyatwunjodijiyingjihaujoisiyatchi",
+        "target": "我想今日換咗啲字型之後再試一次",
+        "rank": 2,
+        "lookup_ms": 29.460499994456768,
+        "candidate_count": 90,
+        "next_offset": null,
+        "truncated": false,
+        "top9": [
+          "我想今日援助啲字型之後再試一次",
+          "我想今日換咗啲字型之後再試一次",
+          "我想今日碗咗啲字型之後再試一次",
+          "我想今日玩咗啲字型之後再試一次",
+          "我想今日援助啲字型之後再事一次",
+          "我想今日換咗啲字型之後再事一次",
+          "我想今日碗咗啲字型之後再事一次",
+          "我想今日玩咗啲字型之後再事一次",
+          "我想今日換左啲字型之後再試一次"
+        ],
+        "error": null,
+        "name": "font-fifteen",
+        "characters": 15
+      },
+      {
+        "input": "ngoseungwunjodijiyingjihaujoisihayungjungmandaji",
+        "target": "我想換咗啲字型之後再試下用中文打字",
+        "rank": 28,
+        "lookup_ms": 35.33310000784695,
+        "candidate_count": 90,
+        "next_offset": null,
+        "truncated": false,
+        "top9": [
+          "我想援助啲字型之後再試吓用中文打字",
+          "我想換咗啲字型之後再試吓用中文打字",
+          "我想碗咗啲字型之後再試吓用中文打字",
+          "我想援助啲字型之後再試吓用中文打知",
+          "我想玩咗啲字型之後再試吓用中文打字",
+          "我想換咗啲字型之後再試吓用中文打知",
+          "我想碗咗啲字型之後再試吓用中文打知",
+          "我想玩咗啲字型之後再試吓用中文打知",
+          "我想換左啲字型之後再試吓用中文打字"
+        ],
+        "error": null,
+        "name": "font-seventeen",
+        "characters": 17
+      }
+    ],
+    "heavy_short_preferences": [
+      {
+        "input": "dijiying",
+        "target": "啲字型",
+        "rank": 1,
+        "lookup_ms": 5.141000030562282,
+        "candidate_count": 90,
+        "next_offset": null,
+        "truncated": false,
+        "top9": [
+          "啲字型",
+          "啲字凝",
+          "啲字形",
+          "啲自認",
+          "啲紙型",
+          "啲字影",
+          "啲知凝",
+          "啲字應",
+          "啲而凝"
+        ],
+        "error": null,
+        "name": "core-short",
+        "characters": 3
+      },
+      {
+        "input": "goibinjiying",
+        "target": "改變字型",
+        "rank": 1,
+        "lookup_ms": 9.323199978098273,
+        "candidate_count": 90,
+        "next_offset": null,
+        "truncated": false,
+        "top9": [
+          "改變字型",
+          "改變字凝",
+          "改變字形",
+          "改變自認",
+          "改變紙型",
+          "改變字影",
+          "改變知凝",
+          "改變字應",
+          "改變而凝"
+        ],
+        "error": null,
+        "name": "four",
+        "characters": 4
+      },
+      {
+        "input": "wunjodijiying",
+        "target": "換咗啲字型",
+        "rank": 1,
+        "lookup_ms": 15.204300172626972,
+        "candidate_count": 90,
+        "next_offset": null,
+        "truncated": false,
+        "top9": [
+          "換咗啲字型",
+          "換咗啲字凝",
+          "換咗啲字形",
+          "換咗啲自認",
+          "換咗啲紙型",
+          "換咗啲字影",
+          "碗咗啲字型",
+          "玩咗啲字型",
+          "換咗啲知凝"
+        ],
+        "error": null,
+        "name": "user-five",
+        "characters": 5
+      },
+      {
+        "input": "ngoseunggoibinjiying",
+        "target": "我想改變字型",
+        "rank": 1,
+        "lookup_ms": 28.157199965789914,
+        "candidate_count": 90,
+        "next_offset": null,
+        "truncated": false,
+        "top9": [
+          "我想改變字型",
+          "我想改變字凝",
+          "我想改變字形",
+          "我想改變自認",
+          "我想改變紙型",
+          "我想改變字影",
+          "我想改變知凝",
+          "我想改變字應",
+          "我想改變而凝"
+        ],
+        "error": null,
+        "name": "six",
+        "characters": 6
+      },
+      {
+        "input": "ngoseungwunjodijiying",
+        "target": "我想換咗啲字型",
+        "rank": 1,
+        "lookup_ms": 31.70350007712841,
+        "candidate_count": 90,
+        "next_offset": null,
+        "truncated": false,
+        "top9": [
+          "我想換咗啲字型",
+          "我想換咗啲字凝",
+          "我想換咗啲字形",
+          "我想換咗啲自認",
+          "我想換咗啲紙型",
+          "我想換咗啲字影",
+          "我想碗咗啲字型",
+          "我想玩咗啲字型",
+          "我想換咗啲知凝"
+        ],
+        "error": null,
+        "name": "seven",
+        "characters": 7
+      },
+      {
+        "input": "ngoseungjoiwunjodijiying",
+        "target": "我想再換咗啲字型",
+        "rank": 1,
+        "lookup_ms": 22.660400019958615,
+        "candidate_count": 90,
+        "next_offset": null,
+        "truncated": false,
+        "top9": [
+          "我想再換咗啲字型",
+          "我想再換咗啲字凝",
+          "我想再換咗啲字形",
+          "我想在換咗啲字型",
+          "我想再換咗啲自認",
+          "我想在換咗啲字凝",
+          "我想再換咗啲紙型",
+          "我想再換咗啲字影",
+          "我想再碗咗啲字型"
+        ],
+        "error": null,
+        "name": "eight",
+        "characters": 8
+      },
+      {
+        "input": "ngoseungsihayungnigojiying",
+        "target": "我想試下用呢個字型",
+        "rank": null,
+        "lookup_ms": 34.765300108119845,
+        "candidate_count": 90,
+        "next_offset": null,
+        "truncated": false,
+        "top9": [
+          "我嘗試下用呢個字型",
+          "我嘗試下用哩個字型",
+          "我嘗試下用呢個字凝",
+          "我嘗試下用哩個字凝",
+          "我嘗試下用呢個字形",
+          "我嘗試下用哩個字形",
+          "我嘗試吓用呢個字型",
+          "我嘗試吓用哩個字型",
+          "我嘗試下用呢個自認"
+        ],
+        "error": null,
+        "name": "eight-nine",
+        "characters": 9
+      },
+      {
+        "input": "ngonghaigamgong",
+        "target": "我唔係咁講",
+        "rank": 1,
+        "lookup_ms": 15.513000078499317,
+        "candidate_count": 90,
+        "next_offset": null,
+        "truncated": false,
+        "top9": [
+          "我唔係咁講",
+          "我唔係噉講",
+          "我嗯係咁講",
+          "我五係咁講",
+          "我唔喺咁講",
+          "我吾係咁講",
+          "戇係咁講",
+          "我嗯係噉講",
+          "我五係噉講"
+        ],
+        "error": null,
+        "name": "legitimate-nonminimal-ngong",
+        "characters": 5
+      },
+      {
+        "input": "gamyattinheihou",
+        "target": "今日天氣好",
+        "rank": 1,
+        "lookup_ms": 7.192699937149882,
+        "candidate_count": 90,
+        "next_offset": null,
+        "truncated": false,
+        "top9": [
+          "今日天氣好",
+          "咁一天氣好",
+          "噉一天氣好",
+          "今日天喜好",
+          "咁日天氣好",
+          "今日天氣皓",
+          "噉日天氣好",
+          "咁一天喜好",
+          "今日天氣號"
+        ],
+        "error": null,
+        "name": "weather",
+        "characters": 5
+      },
+      {
+        "input": "neiyigaheuibindou",
+        "target": "你而家去邊度",
+        "rank": 1,
+        "lookup_ms": 15.599400037899613,
+        "candidate_count": 90,
+        "next_offset": null,
+        "truncated": false,
+        "top9": [
+          "你而家去邊度",
+          "你依家去邊度",
+          "你而家佢邊度",
+          "你而家去邊都",
+          "你依家佢邊度",
+          "呢而家去邊度",
+          "您而家去邊度",
+          "你依家去邊都",
+          "呢依家去邊度"
+        ],
+        "error": null,
+        "name": "location",
+        "characters": 6
+      },
+      {
+        "input": "ngogamyatngseungfaangung",
+        "target": "我今日唔想返工",
+        "rank": 1,
+        "lookup_ms": 28.421799885109067,
+        "candidate_count": 90,
+        "next_offset": null,
+        "truncated": false,
+        "top9": [
+          "我今日唔想返工",
+          "我今日嗯想返工",
+          "我今日五想返工",
+          "我咁一唔想返工",
+          "我今日吾想返工",
+          "我咁一嗯想返工",
+          "我噉一唔想返工",
+          "我咁一五想返工",
+          "我今日唔想反攻"
+        ],
+        "error": null,
+        "name": "work-seven",
+        "characters": 7
+      },
+      {
+        "input": "ngogamyatngseungfaangungsoyilauhaiukkei",
+        "target": "我今日唔想返工所以留喺屋企",
+        "rank": 16,
+        "lookup_ms": 40.06080003455281,
+        "candidate_count": 90,
+        "next_offset": null,
+        "truncated": false,
+        "top9": [
+          "我今日唔想返工所以流係屋企",
+          "我今日唔想返工所以留係屋企",
+          "我今日唔想返工所以樓係屋企",
+          "我今日唔想返工所以劉係屋企",
+          "我今日唔想返工所以摟係屋企",
+          "我今日嗯想返工所以流係屋企",
+          "我今日嗯想返工所以留係屋企",
+          "我今日嗯想返工所以樓係屋企",
+          "我今日唔想返工所以漏係屋企"
+        ],
+        "error": null,
+        "name": "work-thirteen",
+        "characters": 13
+      },
+      {
+        "input": "ngoseungwunjodijiyingjihaujoisiyatchi",
+        "target": "我想換咗啲字型之後再試一次",
+        "rank": 1,
+        "lookup_ms": 29.392499942332506,
+        "candidate_count": 90,
+        "next_offset": null,
+        "truncated": false,
+        "top9": [
+          "我想換咗啲字型之後再試一次",
+          "我想換咗啲字型之後再事一次",
+          "我想換咗啲字凝之後再試一次",
+          "我想換咗啲字型之後再是一次",
+          "我想換咗啲字形之後再試一次",
+          "我想換咗啲字凝之後再事一次",
+          "我想換咗啲字凝之後再是一次",
+          "我想換咗啲字形之後再事一次",
+          "我想換咗啲字形之後再是一次"
+        ],
+        "error": null,
+        "name": "font-thirteen",
+        "characters": 13
+      },
+      {
+        "input": "ngoseunggamyatwunjodijiyingjihaujoisiyatchi",
+        "target": "我想今日換咗啲字型之後再試一次",
+        "rank": 1,
+        "lookup_ms": 31.28400002606213,
+        "candidate_count": 90,
+        "next_offset": null,
+        "truncated": false,
+        "top9": [
+          "我想今日換咗啲字型之後再試一次",
+          "我想今日換咗啲字型之後再事一次",
+          "我想今日換咗啲字凝之後再試一次",
+          "我想今日換咗啲字型之後再是一次",
+          "我想今日換咗啲字形之後再試一次",
+          "我想今日換咗啲字凝之後再事一次",
+          "我想今日換咗啲字凝之後再是一次",
+          "我想今日換咗啲字形之後再事一次",
+          "我想今日換咗啲字形之後再是一次"
+        ],
+        "error": null,
+        "name": "font-fifteen",
+        "characters": 15
+      },
+      {
+        "input": "ngoseungwunjodijiyingjihaujoisihayungjungmandaji",
+        "target": "我想換咗啲字型之後再試下用中文打字",
+        "rank": 4,
+        "lookup_ms": 48.07340004481375,
+        "candidate_count": 90,
+        "next_offset": null,
+        "truncated": false,
+        "top9": [
+          "我想換咗啲字型之後再試吓用中文打字",
+          "我想換咗啲字凝之後再試吓用中文打字",
+          "我想換咗啲字形之後再試吓用中文打字",
+          "我想換咗啲字型之後再試下用中文打字",
+          "我想換咗啲字型之後在試吓用中文打字",
+          "我想換咗啲自認之後再試吓用中文打字",
+          "我想換咗啲字型之後再事下用中文打字",
+          "我想換咗啲字凝之後再試下用中文打字",
+          "我想換咗啲字凝之後在試吓用中文打字"
+        ],
+        "error": null,
+        "name": "font-seventeen",
+        "characters": 17
+      }
+    ]
+  },
+  "typing_traces": [
+    {
+      "name": "core-short",
+      "completed": true,
+      "target_selectable_within_11_pages": true,
+      "page_down_events": 0,
+      "committed": "啲字型",
+      "prefixes": [
+        {
+          "prefix": "d",
+          "ms": 30.302600003778934,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "di",
+          "ms": 2.0947998855262995,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "dij",
+          "ms": 2.5628001894801855,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "diji",
+          "ms": 4.8183000180870295,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "dijiy",
+          "ms": 3.765000030398369,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "dijiyi",
+          "ms": 7.330700056627393,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "dijiyin",
+          "ms": 7.368700113147497,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "dijiying",
+          "ms": 6.8286999594420195,
+          "candidates": 9,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "name": "four",
+      "completed": true,
+      "target_selectable_within_11_pages": true,
+      "page_down_events": 0,
+      "committed": "改變字型",
+      "prefixes": [
+        {
+          "prefix": "g",
+          "ms": 31.029599951580167,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "go",
+          "ms": 3.635900095105171,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "goi",
+          "ms": 5.659200018271804,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "goib",
+          "ms": 2.75610014796257,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "goibi",
+          "ms": 2.140300115570426,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "goibin",
+          "ms": 5.424599861726165,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "goibinj",
+          "ms": 3.9581998717039824,
+          "candidates": 2,
+          "truncated": false
+        },
+        {
+          "prefix": "goibinji",
+          "ms": 6.001700181514025,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "goibinjiy",
+          "ms": 3.1435999553650618,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "goibinjiyi",
+          "ms": 7.253500167280436,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "goibinjiyin",
+          "ms": 9.023600025102496,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "goibinjiying",
+          "ms": 8.831500075757504,
+          "candidates": 9,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "name": "user-five",
+      "completed": true,
+      "target_selectable_within_11_pages": true,
+      "page_down_events": 0,
+      "committed": "換咗啲字型",
+      "prefixes": [
+        {
+          "prefix": "w",
+          "ms": 22.63109991326928,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "wu",
+          "ms": 8.997499942779541,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "wun",
+          "ms": 5.3628000896424055,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "wunj",
+          "ms": 2.6800998020917177,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "wunjo",
+          "ms": 4.396899836137891,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "wunjod",
+          "ms": 3.80200007930398,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "wunjodi",
+          "ms": 5.0604999996721745,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "wunjodij",
+          "ms": 3.4117999020963907,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "wunjodiji",
+          "ms": 6.800299976021051,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "wunjodijiy",
+          "ms": 4.538899986073375,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "wunjodijiyi",
+          "ms": 7.6246000826358795,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "wunjodijiyin",
+          "ms": 8.423800114542246,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "wunjodijiying",
+          "ms": 7.037600036710501,
+          "candidates": 9,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "name": "six",
+      "completed": true,
+      "target_selectable_within_11_pages": true,
+      "page_down_events": 0,
+      "committed": "我想改變字型",
+      "prefixes": [
+        {
+          "prefix": "n",
+          "ms": 31.86650015413761,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ng",
+          "ms": 3.434099955484271,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ngo",
+          "ms": 7.962299976497889,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ngos",
+          "ms": 6.999699864536524,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ngose",
+          "ms": 9.203700115904212,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseu",
+          "ms": 6.481299875304103,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseun",
+          "ms": 6.98730000294745,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseung",
+          "ms": 10.767699917778373,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungg",
+          "ms": 7.7668000012636185,
+          "candidates": 2,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggo",
+          "ms": 11.893799994140863,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggoi",
+          "ms": 12.01880001462996,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggoib",
+          "ms": 8.499199990183115,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggoibi",
+          "ms": 13.686199905350804,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggoibin",
+          "ms": 15.73310000821948,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggoibinj",
+          "ms": 7.79190007597208,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggoibinji",
+          "ms": 19.496400142088532,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggoibinjiy",
+          "ms": 12.254100060090423,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggoibinjiyi",
+          "ms": 17.18919980339706,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggoibinjiyin",
+          "ms": 16.080499859526753,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggoibinjiying",
+          "ms": 24.193699937313795,
+          "candidates": 9,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "name": "seven",
+      "completed": true,
+      "target_selectable_within_11_pages": true,
+      "page_down_events": 0,
+      "committed": "我想換咗啲字型",
+      "prefixes": [
+        {
+          "prefix": "n",
+          "ms": 3.604799974709749,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ng",
+          "ms": 3.7414999678730965,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ngo",
+          "ms": 8.09270003810525,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ngos",
+          "ms": 7.881100056692958,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ngose",
+          "ms": 7.67050008289516,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseu",
+          "ms": 5.869900109246373,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseun",
+          "ms": 7.889099884778261,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseung",
+          "ms": 9.977499954402447,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungw",
+          "ms": 12.022800045087934,
+          "candidates": 7,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwu",
+          "ms": 12.34919996932149,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwun",
+          "ms": 15.531500102952123,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunj",
+          "ms": 10.128800058737397,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjo",
+          "ms": 17.859800020232797,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjod",
+          "ms": 12.090499978512526,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodi",
+          "ms": 16.678699990734458,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodij",
+          "ms": 9.899900062009692,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodiji",
+          "ms": 15.439099865034223,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiy",
+          "ms": 14.733299845829606,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyi",
+          "ms": 18.96279980428517,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyin",
+          "ms": 22.015800001099706,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiying",
+          "ms": 22.09670003503561,
+          "candidates": 9,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "name": "eight",
+      "completed": true,
+      "target_selectable_within_11_pages": true,
+      "page_down_events": 0,
+      "committed": "我想再換咗啲字型",
+      "prefixes": [
+        {
+          "prefix": "n",
+          "ms": 3.2589000184088945,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ng",
+          "ms": 3.8171999622136354,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ngo",
+          "ms": 6.996400188654661,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ngos",
+          "ms": 4.388700006529689,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ngose",
+          "ms": 7.547699846327305,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseu",
+          "ms": 7.046899991109967,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseun",
+          "ms": 7.330700056627393,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseung",
+          "ms": 12.940800050273538,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungj",
+          "ms": 9.981899987906218,
+          "candidates": 1,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungjo",
+          "ms": 14.631799887865782,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungjoi",
+          "ms": 15.16259997151792,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungjoiw",
+          "ms": 11.836699908599257,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungjoiwu",
+          "ms": 17.29299989528954,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungjoiwun",
+          "ms": 19.831699784845114,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungjoiwunj",
+          "ms": 15.534800011664629,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungjoiwunjo",
+          "ms": 19.192300038412213,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungjoiwunjod",
+          "ms": 11.329199885949492,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungjoiwunjodi",
+          "ms": 12.64420012012124,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungjoiwunjodij",
+          "ms": 10.79769991338253,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungjoiwunjodiji",
+          "ms": 17.1979998704046,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungjoiwunjodijiy",
+          "ms": 12.36120006069541,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungjoiwunjodijiyi",
+          "ms": 17.03560003079474,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungjoiwunjodijiyin",
+          "ms": 23.555400082841516,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungjoiwunjodijiying",
+          "ms": 21.96350018493831,
+          "candidates": 9,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "name": "eight-nine",
+      "completed": true,
+      "target_selectable_within_11_pages": false,
+      "page_down_events": 9,
+      "committed": null,
+      "prefixes": [
+        {
+          "prefix": "n",
+          "ms": 2.605699934065342,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ng",
+          "ms": 4.0935000870376825,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ngo",
+          "ms": 7.35770002938807,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ngos",
+          "ms": 4.030799958854914,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ngose",
+          "ms": 6.586699979379773,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseu",
+          "ms": 6.927599897608161,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseun",
+          "ms": 10.616699932143092,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseung",
+          "ms": 13.4958999697119,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungs",
+          "ms": 8.887900039553642,
+          "candidates": 3,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungsi",
+          "ms": 11.823199922218919,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungsih",
+          "ms": 8.52390006184578,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungsiha",
+          "ms": 15.891500050202012,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungsihay",
+          "ms": 13.469200115650892,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungsihayu",
+          "ms": 16.844799974933267,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungsihayun",
+          "ms": 17.132099950686097,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungsihayung",
+          "ms": 15.640099998563528,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungsihayungn",
+          "ms": 11.198400054126978,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungsihayungni",
+          "ms": 15.994600020349026,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungsihayungnig",
+          "ms": 12.600899906829,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungsihayungnigo",
+          "ms": 19.62110004387796,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungsihayungnigoj",
+          "ms": 11.417999863624573,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungsihayungnigoji",
+          "ms": 19.63910018093884,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungsihayungnigojiy",
+          "ms": 9.622899815440178,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungsihayungnigojiyi",
+          "ms": 22.087600082159042,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungsihayungnigojiyin",
+          "ms": 20.447999937459826,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungsihayungnigojiying",
+          "ms": 22.179099963977933,
+          "candidates": 9,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "name": "legitimate-nonminimal-ngong",
+      "completed": true,
+      "target_selectable_within_11_pages": true,
+      "page_down_events": 0,
+      "committed": "我唔係咁講",
+      "prefixes": [
+        {
+          "prefix": "n",
+          "ms": 3.069699974730611,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ng",
+          "ms": 4.303299821913242,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ngo",
+          "ms": 6.929200142621994,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ngon",
+          "ms": 9.649999905377626,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ngong",
+          "ms": 11.802199995145202,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ngongh",
+          "ms": 8.394200121983886,
+          "candidates": 6,
+          "truncated": false
+        },
+        {
+          "prefix": "ngongha",
+          "ms": 9.863399900496006,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngonghai",
+          "ms": 11.173699982464314,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngonghaig",
+          "ms": 6.2822001054883,
+          "candidates": 1,
+          "truncated": false
+        },
+        {
+          "prefix": "ngonghaiga",
+          "ms": 9.056600043550134,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngonghaigam",
+          "ms": 13.993100030347705,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngonghaigamg",
+          "ms": 10.003700153902173,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngonghaigamgo",
+          "ms": 16.64249994792044,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngonghaigamgon",
+          "ms": 14.430700102820992,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngonghaigamgong",
+          "ms": 16.595499822869897,
+          "candidates": 9,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "name": "weather",
+      "completed": true,
+      "target_selectable_within_11_pages": true,
+      "page_down_events": 0,
+      "committed": "今日天氣好",
+      "prefixes": [
+        {
+          "prefix": "g",
+          "ms": 31.40549990348518,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ga",
+          "ms": 29.95039988309145,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "gam",
+          "ms": 19.566700095310807,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "gamy",
+          "ms": 5.222700070589781,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "gamya",
+          "ms": 6.354399956762791,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "gamyat",
+          "ms": 6.731700152158737,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "gamyatt",
+          "ms": 5.4663000628352165,
+          "candidates": 4,
+          "truncated": false
+        },
+        {
+          "prefix": "gamyatti",
+          "ms": 4.459999967366457,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "gamyattin",
+          "ms": 7.310499902814627,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "gamyattinh",
+          "ms": 2.9283000621944666,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "gamyattinhe",
+          "ms": 6.472499808296561,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "gamyattinhei",
+          "ms": 8.559799985960126,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "gamyattinheih",
+          "ms": 5.667299963533878,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "gamyattinheiho",
+          "ms": 12.267600046470761,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "gamyattinheihou",
+          "ms": 14.159700134769082,
+          "candidates": 9,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "name": "location",
+      "completed": true,
+      "target_selectable_within_11_pages": true,
+      "page_down_events": 0,
+      "committed": "你而家去邊度",
+      "prefixes": [
+        {
+          "prefix": "n",
+          "ms": 3.3505000174045563,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ne",
+          "ms": 10.004400042816997,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "nei",
+          "ms": 8.752099936828017,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "neiy",
+          "ms": 2.0528000313788652,
+          "candidates": 2,
+          "truncated": false
+        },
+        {
+          "prefix": "neiyi",
+          "ms": 4.670899827033281,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "neiyig",
+          "ms": 2.924500033259392,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "neiyiga",
+          "ms": 4.799699876457453,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "neiyigah",
+          "ms": 2.2269999608397484,
+          "candidates": 1,
+          "truncated": false
+        },
+        {
+          "prefix": "neiyigahe",
+          "ms": 5.529700079932809,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "neiyigaheu",
+          "ms": 5.2732001058757305,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "neiyigaheui",
+          "ms": 5.706799915060401,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "neiyigaheuib",
+          "ms": 4.417399875819683,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "neiyigaheuibi",
+          "ms": 5.820099962875247,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "neiyigaheuibin",
+          "ms": 7.628799881786108,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "neiyigaheuibind",
+          "ms": 4.525500116869807,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "neiyigaheuibindo",
+          "ms": 9.175700135529041,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "neiyigaheuibindou",
+          "ms": 7.653400069102645,
+          "candidates": 9,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "name": "work-seven",
+      "completed": true,
+      "target_selectable_within_11_pages": true,
+      "page_down_events": 0,
+      "committed": "我今日唔想返工",
+      "prefixes": [
+        {
+          "prefix": "n",
+          "ms": 2.5090998969972134,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ng",
+          "ms": 17.879500053822994,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ngo",
+          "ms": 13.387399958446622,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ngog",
+          "ms": 7.816399913281202,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ngoga",
+          "ms": 10.670799994841218,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogam",
+          "ms": 11.817199876531959,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamy",
+          "ms": 7.932899985462427,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamya",
+          "ms": 10.749300010502338,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyat",
+          "ms": 9.706299984827638,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatn",
+          "ms": 7.277800003066659,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatng",
+          "ms": 11.328999884426594,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngs",
+          "ms": 8.16789991222322,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngse",
+          "ms": 13.43240006826818,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngseu",
+          "ms": 13.667999999597669,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngseun",
+          "ms": 13.678699964657426,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngseung",
+          "ms": 16.39120001345873,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngseungf",
+          "ms": 10.6540999840945,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngseungfa",
+          "ms": 16.603800002485514,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngseungfaa",
+          "ms": 18.179399892687798,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngseungfaan",
+          "ms": 19.285800168290734,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngseungfaang",
+          "ms": 21.27419994212687,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngseungfaangu",
+          "ms": 22.79180008918047,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngseungfaangun",
+          "ms": 24.38160008750856,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngseungfaangung",
+          "ms": 31.254800036549568,
+          "candidates": 9,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "name": "work-thirteen",
+      "completed": true,
+      "target_selectable_within_11_pages": true,
+      "page_down_events": 1,
+      "committed": "我今日唔想返工所以留喺屋企",
+      "prefixes": [
+        {
+          "prefix": "n",
+          "ms": 5.224599968641996,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ng",
+          "ms": 6.909499876201153,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ngo",
+          "ms": 6.10160012729466,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ngog",
+          "ms": 5.026400089263916,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ngoga",
+          "ms": 5.888400133699179,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogam",
+          "ms": 7.312800036743283,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamy",
+          "ms": 3.7130999844521284,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamya",
+          "ms": 10.142199927940965,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyat",
+          "ms": 12.423199834302068,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatn",
+          "ms": 8.604200091212988,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatng",
+          "ms": 13.220499968156219,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngs",
+          "ms": 7.061199983581901,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngse",
+          "ms": 14.227999839931726,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngseu",
+          "ms": 12.798300012946129,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngseun",
+          "ms": 13.499599881470203,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngseung",
+          "ms": 12.05429993569851,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngseungf",
+          "ms": 9.402800118550658,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngseungfa",
+          "ms": 15.183700015768409,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngseungfaa",
+          "ms": 157.07980003207922,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngseungfaan",
+          "ms": 20.345599856227636,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngseungfaang",
+          "ms": 19.822200061753392,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngseungfaangu",
+          "ms": 22.763699991628528,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngseungfaangun",
+          "ms": 18.938599852845073,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngseungfaangung",
+          "ms": 26.53559995815158,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngseungfaangungs",
+          "ms": 15.487500000745058,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngseungfaangungso",
+          "ms": 26.358400005847216,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngseungfaangungsoy",
+          "ms": 16.352400183677673,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngseungfaangungsoyi",
+          "ms": 30.896799871698022,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngseungfaangungsoyil",
+          "ms": 21.813899977132678,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngseungfaangungsoyila",
+          "ms": 30.016799923032522,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngseungfaangungsoyilau",
+          "ms": 33.60720002092421,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngseungfaangungsoyilauh",
+          "ms": 19.531700061634183,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngseungfaangungsoyilauha",
+          "ms": 31.258600065484643,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngseungfaangungsoyilauhai",
+          "ms": 38.27090002596378,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngseungfaangungsoyilauhaiu",
+          "ms": 18.066500080749393,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngseungfaangungsoyilauhaiuk",
+          "ms": 30.392100103199482,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngseungfaangungsoyilauhaiukk",
+          "ms": 19.719300093129277,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngseungfaangungsoyilauhaiukke",
+          "ms": 40.86990002542734,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngogamyatngseungfaangungsoyilauhaiukkei",
+          "ms": 34.22969998791814,
+          "candidates": 9,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "name": "font-thirteen",
+      "completed": true,
+      "target_selectable_within_11_pages": true,
+      "page_down_events": 0,
+      "committed": "我想換咗啲字型之後再試一次",
+      "prefixes": [
+        {
+          "prefix": "n",
+          "ms": 3.0714001040905714,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ng",
+          "ms": 3.743099980056286,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ngo",
+          "ms": 6.65090000256896,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ngos",
+          "ms": 6.514800013974309,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ngose",
+          "ms": 9.859599871560931,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseu",
+          "ms": 9.3620999250561,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseun",
+          "ms": 13.608699897304177,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseung",
+          "ms": 10.880500078201294,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungw",
+          "ms": 9.603099897503853,
+          "candidates": 7,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwu",
+          "ms": 12.043700087815523,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwun",
+          "ms": 13.652699999511242,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunj",
+          "ms": 8.73839994892478,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjo",
+          "ms": 14.687300194054842,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjod",
+          "ms": 12.37859996035695,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodi",
+          "ms": 19.312500022351742,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodij",
+          "ms": 6.79480005055666,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodiji",
+          "ms": 23.67859985679388,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiy",
+          "ms": 14.996299985796213,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyi",
+          "ms": 23.05359998717904,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyin",
+          "ms": 19.951000111177564,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiying",
+          "ms": 28.064999962225556,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingj",
+          "ms": 13.590800110250711,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingji",
+          "ms": 24.270599940791726,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjih",
+          "ms": 15.916000120341778,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjiha",
+          "ms": 22.487000096589327,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjihau",
+          "ms": 23.75889988616109,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjihauj",
+          "ms": 13.812300050631166,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjihaujo",
+          "ms": 26.065499987453222,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjihaujoi",
+          "ms": 34.38359987922013,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjihaujois",
+          "ms": 17.27669988758862,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjihaujoisi",
+          "ms": 31.948399962857366,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjihaujoisiy",
+          "ms": 15.497199958190322,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjihaujoisiya",
+          "ms": 27.748499996960163,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjihaujoisiyat",
+          "ms": 25.280499830842018,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjihaujoisiyatc",
+          "ms": 22.364499978721142,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjihaujoisiyatch",
+          "ms": 18.032999942079186,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjihaujoisiyatchi",
+          "ms": 32.249900046736,
+          "candidates": 9,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "name": "font-fifteen",
+      "completed": true,
+      "target_selectable_within_11_pages": true,
+      "page_down_events": 0,
+      "committed": "我想今日換咗啲字型之後再試一次",
+      "prefixes": [
+        {
+          "prefix": "n",
+          "ms": 2.3825999815016985,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ng",
+          "ms": 3.055799985304475,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ngo",
+          "ms": 6.283999886363745,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ngos",
+          "ms": 4.534599836915731,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ngose",
+          "ms": 9.291700087487698,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseu",
+          "ms": 7.744499947875738,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseun",
+          "ms": 7.034299895167351,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseung",
+          "ms": 12.283399933949113,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungg",
+          "ms": 13.620800105854869,
+          "candidates": 2,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungga",
+          "ms": 15.992899890989065,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggam",
+          "ms": 18.665200099349022,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggamy",
+          "ms": 8.104499895125628,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggamya",
+          "ms": 14.848300023004413,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggamyat",
+          "ms": 14.54779994674027,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggamyatw",
+          "ms": 8.138599805533886,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggamyatwu",
+          "ms": 15.107100130990148,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggamyatwun",
+          "ms": 17.483399948105216,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggamyatwunj",
+          "ms": 14.094300102442503,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggamyatwunjo",
+          "ms": 17.52719981595874,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggamyatwunjod",
+          "ms": 11.71520003117621,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggamyatwunjodi",
+          "ms": 19.102900056168437,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggamyatwunjodij",
+          "ms": 8.936299942433834,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggamyatwunjodiji",
+          "ms": 14.407100155949593,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggamyatwunjodijiy",
+          "ms": 15.249799937009811,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggamyatwunjodijiyi",
+          "ms": 20.864699967205524,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggamyatwunjodijiyin",
+          "ms": 21.653500152751803,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggamyatwunjodijiying",
+          "ms": 21.50580007582903,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggamyatwunjodijiyingj",
+          "ms": 19.1512000747025,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggamyatwunjodijiyingji",
+          "ms": 23.643000051379204,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggamyatwunjodijiyingjih",
+          "ms": 16.414199955761433,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggamyatwunjodijiyingjiha",
+          "ms": 30.80260008573532,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggamyatwunjodijiyingjihau",
+          "ms": 23.492899956181645,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggamyatwunjodijiyingjihauj",
+          "ms": 12.720099883154035,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggamyatwunjodijiyingjihaujo",
+          "ms": 27.218100149184465,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggamyatwunjodijiyingjihaujoi",
+          "ms": 26.69410011731088,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggamyatwunjodijiyingjihaujois",
+          "ms": 25.676199933514,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggamyatwunjodijiyingjihaujoisi",
+          "ms": 30.810000142082572,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggamyatwunjodijiyingjihaujoisiy",
+          "ms": 21.386299980804324,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggamyatwunjodijiyingjihaujoisiya",
+          "ms": 33.04770006798208,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggamyatwunjodijiyingjihaujoisiyat",
+          "ms": 30.0157000310719,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggamyatwunjodijiyingjihaujoisiyatc",
+          "ms": 169.74849998950958,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggamyatwunjodijiyingjihaujoisiyatch",
+          "ms": 16.73340005800128,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseunggamyatwunjodijiyingjihaujoisiyatchi",
+          "ms": 31.036500120535493,
+          "candidates": 9,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "name": "font-seventeen",
+      "completed": true,
+      "target_selectable_within_11_pages": true,
+      "page_down_events": 0,
+      "committed": "我想換咗啲字型之後再試下用中文打字",
+      "prefixes": [
+        {
+          "prefix": "n",
+          "ms": 2.5537998881191015,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ng",
+          "ms": 3.622200107201934,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ngo",
+          "ms": 4.60759992711246,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ngos",
+          "ms": 3.4419000148773193,
+          "candidates": 9,
+          "truncated": true
+        },
+        {
+          "prefix": "ngose",
+          "ms": 6.030299933627248,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseu",
+          "ms": 5.522100022062659,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseun",
+          "ms": 7.715400075539947,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseung",
+          "ms": 8.761900011450052,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungw",
+          "ms": 9.392900159582496,
+          "candidates": 7,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwu",
+          "ms": 12.26019999012351,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwun",
+          "ms": 11.676900088787079,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunj",
+          "ms": 8.49570007994771,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjo",
+          "ms": 16.98830001987517,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjod",
+          "ms": 9.56059992313385,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodi",
+          "ms": 15.457100002095103,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodij",
+          "ms": 7.932299980893731,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodiji",
+          "ms": 17.461600014939904,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiy",
+          "ms": 7.565399864688516,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyi",
+          "ms": 17.434699926525354,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyin",
+          "ms": 18.539899960160255,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiying",
+          "ms": 19.368199864402413,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingj",
+          "ms": 13.317900011315942,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingji",
+          "ms": 18.67890008725226,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjih",
+          "ms": 13.998700072988868,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjiha",
+          "ms": 21.56859985552728,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjihau",
+          "ms": 18.972199875861406,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjihauj",
+          "ms": 15.289000002667308,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjihaujo",
+          "ms": 29.875399777665734,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjihaujoi",
+          "ms": 18.51389999501407,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjihaujois",
+          "ms": 15.345599967986345,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjihaujoisi",
+          "ms": 27.097600046545267,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjihaujoisih",
+          "ms": 15.449299942702055,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjihaujoisiha",
+          "ms": 33.0827001016587,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjihaujoisihay",
+          "ms": 18.458199920132756,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjihaujoisihayu",
+          "ms": 21.05049998499453,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjihaujoisihayun",
+          "ms": 25.555500062182546,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjihaujoisihayung",
+          "ms": 28.784200083464384,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjihaujoisihayungj",
+          "ms": 18.274799920618534,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjihaujoisihayungju",
+          "ms": 32.56509988568723,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjihaujoisihayungjun",
+          "ms": 17.3766000661999,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjihaujoisihayungjung",
+          "ms": 30.97409987822175,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjihaujoisihayungjungm",
+          "ms": 37.98639983870089,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjihaujoisihayungjungma",
+          "ms": 36.47429984994233,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjihaujoisihayungjungman",
+          "ms": 37.99730003811419,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjihaujoisihayungjungmand",
+          "ms": 24.900499964132905,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjihaujoisihayungjungmanda",
+          "ms": 38.18789985962212,
+          "candidates": 9,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjihaujoisihayungjungmandaj",
+          "ms": 24.757600156590343,
+          "candidates": 0,
+          "truncated": false
+        },
+        {
+          "prefix": "ngoseungwunjodijiyingjihaujoisihayungjungmandaji",
+          "ms": 36.1473998054862,
+          "candidates": 9,
+          "truncated": false
+        }
+      ]
+    }
+  ],
+  "tone_boundary_controls": [
+    {
+      "input": "di'ji'ying",
+      "target": "啲字型",
+      "rank": 1,
+      "lookup_ms": 6.108799949288368,
+      "candidate_count": 90,
+      "next_offset": null,
+      "truncated": false,
+      "top9": [
+        "啲字型",
+        "啲字凝",
+        "啲字形",
+        "啲自認",
+        "啲紙型",
+        "啲字影",
+        "啲知凝",
+        "啲字應",
+        "啲而凝"
+      ],
+      "error": null,
+      "form": "boundaries"
+    },
+    {
+      "input": "di1zi6jing4",
+      "target": "啲字型",
+      "rank": 1,
+      "lookup_ms": 3.958399873226881,
+      "candidate_count": 90,
+      "next_offset": null,
+      "truncated": false,
+      "top9": [
+        "啲字型",
+        "啲字形",
+        "啲字凝",
+        "啲食凝",
+        "啲自凝",
+        "啲字扔",
+        "啲食型",
+        "啲字仍",
+        "啲字嬴"
+      ],
+      "error": null,
+      "form": "toned"
+    },
+    {
+      "input": "wun'jo'di'ji'ying",
+      "target": "換咗啲字型",
+      "rank": 1,
+      "lookup_ms": 7.118399953469634,
+      "candidate_count": 90,
+      "next_offset": null,
+      "truncated": false,
+      "top9": [
+        "換咗啲字型",
+        "換咗啲字凝",
+        "換咗啲字形",
+        "換咗啲自認",
+        "換咗啲紙型",
+        "換咗啲字影",
+        "碗咗啲字型",
+        "玩咗啲字型",
+        "換咗啲知凝"
+      ],
+      "error": null,
+      "form": "boundaries"
+    },
+    {
+      "input": "wun6zo2di1zi6jing4",
+      "target": "換咗啲字型",
+      "rank": 1,
+      "lookup_ms": 4.982399987056851,
+      "candidate_count": 90,
+      "next_offset": null,
+      "truncated": false,
+      "top9": [
+        "換咗啲字型",
+        "玩咗啲字型",
+        "換左啲字型",
+        "玩左啲字型",
+        "換咗啲字形",
+        "玩咗啲字形",
+        "換左啲字形",
+        "玩左啲字形",
+        "喚咗啲字型"
+      ],
+      "error": null,
+      "form": "toned"
+    },
+    {
+      "input": "ngo'ng'hai'gam'gong",
+      "target": "我唔係咁講",
+      "rank": 1,
+      "lookup_ms": 13.839200139045715,
+      "candidate_count": 90,
+      "next_offset": null,
+      "truncated": false,
+      "top9": [
+        "我唔係咁講",
+        "我唔係噉講",
+        "我嗯係咁講",
+        "我五係咁講",
+        "我唔喺咁講",
+        "我吾係咁講",
+        "我嗯係噉講",
+        "我五係噉講",
+        "我唔喺噉講"
+      ],
+      "error": null,
+      "form": "boundaries"
+    },
+    {
+      "input": "ngo5ng4hai6gam3gong2",
+      "target": "我唔係咁講",
+      "rank": null,
+      "lookup_ms": 3.2903000246733427,
+      "candidate_count": 90,
+      "next_offset": null,
+      "truncated": false,
+      "top9": [
+        "我吾係咁講",
+        "我吳係咁講",
+        "我嗯係咁講",
+        "我吾係咁港",
+        "我梧係咁講",
+        "我浯係咁講",
+        "我呉係咁講",
+        "我鯃係咁講",
+        "我鼯係咁講"
+      ],
+      "error": null,
+      "form": "toned"
+    },
+    {
+      "input": "ngo'seung'wun'jo'di'ji'ying'ji'hau'joi'si'ha'yung'jung'man'da'ji",
+      "target": "我想換咗啲字型之後再試下用中文打字",
+      "rank": 4,
+      "lookup_ms": 35.23589996621013,
+      "candidate_count": 90,
+      "next_offset": null,
+      "truncated": false,
+      "top9": [
+        "我想換咗啲字型之後再試吓用中文打字",
+        "我想換咗啲字凝之後再試吓用中文打字",
+        "我想換咗啲字形之後再試吓用中文打字",
+        "我想換咗啲字型之後再試下用中文打字",
+        "我想換咗啲字型之後在試吓用中文打字",
+        "我想換咗啲自認之後再試吓用中文打字",
+        "我想換咗啲字型之後再事下用中文打字",
+        "我想換咗啲字凝之後再試下用中文打字",
+        "我想換咗啲字凝之後在試吓用中文打字"
+      ],
+      "error": null,
+      "form": "boundaries"
+    },
+    {
+      "input": "ngo5soeng2wun6zo2di1zi6jing4zi1hau6zoi3si3haa5jung6zung1man4daa2zi6",
+      "target": "我想換咗啲字型之後再試下用中文打字",
+      "rank": 15,
+      "lookup_ms": 13.64290015771985,
+      "candidate_count": 90,
+      "next_offset": null,
+      "truncated": false,
+      "top9": [
+        "我想換咗啲字型之後再試吓仲中文打字",
+        "我想玩咗啲字型之後再試吓仲中文打字",
+        "我想換咗啲字型之後再試吓用中文打字",
+        "我想換左啲字型之後再試吓仲中文打字",
+        "我想玩咗啲字型之後再試吓用中文打字",
+        "我想玩左啲字型之後再試吓仲中文打字",
+        "我想換咗啲字形之後再試吓仲中文打字",
+        "我想玩咗啲字形之後再試吓仲中文打字",
+        "我想換左啲字型之後再試吓用中文打字"
+      ],
+      "error": null,
+      "form": "toned"
+    }
+  ],
+  "stress": [
+    {
+      "input": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "target": null,
+      "rank": null,
+      "lookup_ms": 905.1867998205125,
+      "candidate_count": 9,
+      "next_offset": 9,
+      "truncated": false,
+      "top9": [
+        "呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀",
+        "呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀啊",
+        "呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀啊呀",
+        "呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀啊呀呀",
+        "呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀啊呀呀呀",
+        "呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀啊呀呀呀呀",
+        "呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀啊呀呀呀呀呀",
+        "呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀啊呀呀呀呀呀呀",
+        "呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀啊呀呀呀呀呀呀呀"
+      ],
+      "error": null,
+      "new_engine_startup_ms": 5351.718700025231,
+      "resources": {
+        "available": true,
+        "working_set_bytes": 368541696,
+        "peak_working_set_bytes": 400146432,
+        "pagefile_bytes": 363601920
+      },
+      "name": "a-256"
+    },
+    {
+      "input": "ngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngngng",
+      "target": null,
+      "rank": null,
+      "lookup_ms": 155.7108999695629,
+      "candidate_count": 9,
+      "next_offset": 9,
+      "truncated": false,
+      "top9": [
+        "嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯",
+        "五嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯",
+        "嗯嗯嗯五嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯",
+        "嗯嗯嗯嗯嗯嗯五嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯",
+        "嗯嗯嗯嗯嗯嗯嗯嗯嗯五嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯",
+        "嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯五嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯",
+        "嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯五嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯",
+        "嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯五嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯",
+        "嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯五嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯嗯"
+      ],
+      "error": null,
+      "new_engine_startup_ms": 5272.216900018975,
+      "resources": {
+        "available": true,
+        "working_set_bytes": 369090560,
+        "peak_working_set_bytes": 370073600,
+        "pagefile_bytes": 362881024
+      },
+      "name": "ng-256"
+    },
+    {
+      "input": "jijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijijiji",
+      "target": null,
+      "rank": null,
+      "lookup_ms": 448.14320001751184,
+      "candidate_count": 9,
+      "next_offset": 9,
+      "truncated": false,
+      "top9": [
+        "姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨",
+        "姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨而已",
+        "姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨而已姨姨",
+        "姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨而已姨姨姨姨",
+        "姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨而已姨姨姨姨姨姨",
+        "姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨而已姨姨姨姨姨姨姨姨",
+        "姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨而已姨姨姨姨姨姨姨姨姨姨",
+        "姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨而已姨姨姨姨姨姨姨姨姨姨姨姨",
+        "姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨姨而已姨姨姨姨姨姨姨姨姨姨姨姨姨姨"
+      ],
+      "error": null,
+      "new_engine_startup_ms": 5345.204599900171,
+      "resources": {
+        "available": true,
+        "working_set_bytes": 369577984,
+        "peak_working_set_bytes": 375431168,
+        "pagefile_bytes": 362442752
+      },
+      "name": "ji-256"
+    },
+    {
+      "input": "jaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaujaua",
+      "target": null,
+      "rank": null,
+      "lookup_ms": 194.16350009851158,
+      "candidate_count": 9,
+      "next_offset": 9,
+      "truncated": false,
+      "top9": [
+        "就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就呀",
+        "就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就有呀",
+        "就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就有就呀",
+        "就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就有就就呀",
+        "就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就有就就就呀",
+        "就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就有就就就就呀",
+        "就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就有就就就就就呀",
+        "就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就有就就就就就就呀",
+        "就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就就有就就就就就就就呀"
+      ],
+      "error": null,
+      "new_engine_startup_ms": 5328.906900016591,
+      "resources": {
+        "available": true,
+        "working_set_bytes": 367943680,
+        "peak_working_set_bytes": 372396032,
+        "pagefile_bytes": 361943040
+      },
+      "name": "jau-dense-256"
+    },
+    {
+      "input": "a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a'a",
+      "target": null,
+      "rank": null,
+      "lookup_ms": 212.65679993666708,
+      "candidate_count": 9,
+      "next_offset": 9,
+      "truncated": false,
+      "top9": [
+        "呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀",
+        "呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀啊",
+        "呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀啊呀",
+        "呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀啊呀呀",
+        "呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀啊呀呀呀",
+        "呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀啊呀呀呀呀",
+        "呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀啊呀呀呀呀呀",
+        "呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀啊呀呀呀呀呀呀",
+        "呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀啊呀呀呀呀呀呀呀"
+      ],
+      "error": null,
+      "new_engine_startup_ms": 5046.828699996695,
+      "resources": {
+        "available": true,
+        "working_set_bytes": 366305280,
+        "peak_working_set_bytes": 377229312,
+        "pagefile_bytes": 360304640
+      },
+      "name": "apostrophe-255"
+    },
+    {
+      "input": "neineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineineinein",
+      "target": null,
+      "rank": null,
+      "lookup_ms": 206.8628000561148,
+      "candidate_count": 9,
+      "next_offset": 9,
+      "truncated": false,
+      "top9": [
+        "你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你呢in",
+        "你你你你你你你你你你你你你你你你你你你你你你呢你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你呢in",
+        "你你你你你你你你你你你你你你你你你你你你你呢你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你呢in",
+        "你你你你你你你你你你你你你你你你你你你你呢你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你呢in",
+        "你你你你你你你你你你你你你你你你你你你呢你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你呢in",
+        "你你你你你你你你你你你你你你你你你你呢你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你呢in",
+        "你你你你你你你你你你你你你你你你你呢你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你呢in",
+        "你你你你你你你你你你你你你你你你呢你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你呢in",
+        "你你你你你你你你你你你你你你你呢你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你你呢in"
+      ],
+      "error": null,
+      "new_engine_startup_ms": 5198.040099814534,
+      "resources": {
+        "available": true,
+        "working_set_bytes": 367665152,
+        "peak_working_set_bytes": 380985344,
+        "pagefile_bytes": 361312256
+      },
+      "name": "nei-tail-256"
+    }
+  ],
+  "contended_full_lookup_timing": {
+    "count": 30,
+    "p50_ms": 19.816200016066432,
+    "p95_ms": 40.06080003455281,
+    "p99_ms": 48.07340004481375,
+    "max_ms": 48.07340004481375,
+    "over_100_ms": 0,
+    "over_200_ms": 0,
+    "over_500_ms": 0
+  },
+  "contended_keystroke_timing": {
+    "count": 362,
+    "p50_ms": 12.36120006069541,
+    "p95_ms": 31.40549990348518,
+    "p99_ms": 38.27090002596378,
+    "max_ms": 169.74849998950958,
+    "over_100_ms": 2,
+    "over_200_ms": 0,
+    "over_500_ms": 0
+  },
+  "capacity_events": 0,
+  "typing_capacity_events": 0,
+  "input_pins_unchanged": true,
+  "finished_at_utc": "2026-10-23T17:27:36.482923+00:00",
+  "quality_is_not_universal_sentence_correctness": true
+}

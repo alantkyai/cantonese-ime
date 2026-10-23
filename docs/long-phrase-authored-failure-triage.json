@@ -1,0 +1,4340 @@
+{
+  "schema_version": 1,
+  "kind": "report_only_authored_failure_triage",
+  "recorded_at_utc": "2026-10-23T17:39:19.025135+00:00",
+  "source_sha256": {
+    "eval/long_phrase_review_cases.json": "bfb0eb8cf0ca77633394c3aad450d403603800e9a8108c01817bdb85d1d814c6",
+    "eval/long_phrase_release_policy.json": "5ab132691d4d987290de2afc03db49e6ee688a19082960a1e5d540c10fb499f0"
+  },
+  "retained_local_runner_hashes": {
+    "authored-run-1.json": "f3f571ba497a8aa1a8f864c1498e8975c8eb0bf5a5efe3a871c5204a13a37586",
+    "authored-fixture-validation.json": "9dcc90b3c2f105041b08ab6097e533ae926a25b72330299f49f2239931cc4c19"
+  },
+  "candidate_engine_sha256": "a4e2d07c98adbb78b8a6978892827bd907a68cd658f06229d6493fbc05e3e141",
+  "fixture_unchanged": true,
+  "original_expectations_preserved": true,
+  "engine_queries_performed_by_triage": 0,
+  "database_queries_performed_by_triage": 0,
+  "personal_history_used": false,
+  "held_out_accuracy_claim": false,
+  "scope": "Read saved public/synthetic evaluation rows only. Classification does not establish causal engine internals and does not upgrade alternate orthography to exact success. No input/ranking/timing changes.",
+  "selection_rule": {
+    "first_four_fresh_plain_yale_top9_misses_by_case_id_per_length_band": {
+      "4-5": [
+        "lp037",
+        "lp046",
+        "lp048",
+        "lp073"
+      ],
+      "6-8": [
+        "lp022",
+        "lp024",
+        "lp031",
+        "lp050"
+      ],
+      "9-12": [
+        "lp008",
+        "lp017",
+        "lp027",
+        "lp035"
+      ]
+    },
+    "also_include_all_fresh_plain_yale_outside_first90": [
+      "lp008",
+      "lp035",
+      "lp043",
+      "lp059",
+      "lp081",
+      "lp084"
+    ],
+    "deduplicated_selected_ids": [
+      "lp008",
+      "lp017",
+      "lp022",
+      "lp024",
+      "lp027",
+      "lp031",
+      "lp035",
+      "lp037",
+      "lp043",
+      "lp046",
+      "lp048",
+      "lp050",
+      "lp059",
+      "lp073",
+      "lp081",
+      "lp084"
+    ]
+  },
+  "classification_rules": {
+    "primary_miss": "Exact frozen text rank is null or greater than9 in fresh ordinary compact plain Yale.",
+    "diagnostic_rescue": "Same exact text reaches first9 under saved diagnostic input. Tones/apostrophes are separate requests, never a primary-input success.",
+    "wrong_initial": "Report both rank1 initial-character mismatch and absence of exact first character among all first9; neither alone proves the root cause.",
+    "orthographic_near_variant_groups": [
+      "麵麪面",
+      "着著",
+      "裏裡",
+      "爲為",
+      "晒曬"
+    ],
+    "colloquial_written_near_variant_groups": [
+      "哋地",
+      "吓下",
+      "呢哩",
+      "咁噉"
+    ],
+    "near_variant_rule": "Same entire string only after explicit character-group normalization. Strict orthography and colloquial written variants are labeled separately. This is a report-only surface annotation, not linguistic interchangeability or primary exact success.",
+    "closest_saved_candidate": "Levenshtein character edit distance among saved first9; ties choose the earlier saved rank.",
+    "dictionary_support": "Copied exact lexical-support metadata from the frozen fixture-validation report. No database or candidate queries were run."
+  },
+  "summary": {
+    "fresh_plain_yale": {
+      "cases": 89,
+      "top1": 32,
+      "top9": 66,
+      "top90": 83,
+      "errors": 0,
+      "constraint_failures": 0
+    },
+    "fresh_plain_yale_by_length_band": {
+      "4-5": {
+        "cases": 29,
+        "top1": 15,
+        "top9": 24,
+        "top90": 28,
+        "errors": 0,
+        "constraint_failures": 0
+      },
+      "6-8": {
+        "cases": 30,
+        "top1": 8,
+        "top9": 24,
+        "top90": 29,
+        "errors": 0,
+        "constraint_failures": 0
+      },
+      "9-12": {
+        "cases": 30,
+        "top1": 9,
+        "top9": 18,
+        "top90": 26,
+        "errors": 0,
+        "constraint_failures": 0
+      }
+    },
+    "plain_yale_by_profile": {
+      "fresh": {
+        "cases": 89,
+        "top1": 32,
+        "top9": 66,
+        "top90": 83,
+        "errors": 0,
+        "constraint_failures": 0
+      },
+      "short_preferences": {
+        "cases": 89,
+        "top1": 32,
+        "top9": 67,
+        "top90": 83,
+        "errors": 0,
+        "constraint_failures": 0
+      },
+      "heavy_short_preferences": {
+        "cases": 89,
+        "top1": 32,
+        "top9": 67,
+        "top90": 84,
+        "errors": 0,
+        "constraint_failures": 0
+      }
+    },
+    "habitual_ng_by_profile": {
+      "fresh": {
+        "cases": 29,
+        "top1": 0,
+        "top9": 0,
+        "top90": 0,
+        "errors": 0,
+        "constraint_failures": 0
+      },
+      "short_preferences": {
+        "cases": 29,
+        "top1": 7,
+        "top9": 17,
+        "top90": 23,
+        "errors": 0,
+        "constraint_failures": 0
+      },
+      "heavy_short_preferences": {
+        "cases": 29,
+        "top1": 7,
+        "top9": 16,
+        "top90": 23,
+        "errors": 0,
+        "constraint_failures": 0
+      }
+    },
+    "fresh_plain_yale_top9_misses": 23,
+    "fresh_plain_yale_outside_first90": 6,
+    "top9_miss_diagnostic_rescue_classes": {
+      "toned_only_rescue_top9": 17,
+      "neither_toned_nor_apostrophe_rescues_top9": 5,
+      "toned_and_apostrophe_rescue_top9": 1
+    },
+    "top9_misses_toned_rescued": 18,
+    "top9_misses_apostrophes_rescued": 1,
+    "top9_misses_strict_tonefree_rescued": 3,
+    "top9_misses_no_diagnostic_rescue": [
+      "lp017",
+      "lp035",
+      "lp043",
+      "lp059"
+    ],
+    "top9_miss_surface_classes": {
+      "exact_initial_present_but_remaining_text_ranked_below9": 16,
+      "near_variant_in_first9": 6,
+      "target_initial_character_absent_first9": 1
+    },
+    "top9_misses_wrong_first_choice_initial": 6,
+    "top9_misses_initial_absent_first9": 3,
+    "top9_misses_with_written_near_variant": [
+      "lp017",
+      "lp031",
+      "lp035",
+      "lp076",
+      "lp088",
+      "lp090"
+    ],
+    "top9_misses_with_strict_orthographic_near_variant": [
+      "lp031"
+    ],
+    "outside_first90_ids": [
+      "lp008",
+      "lp035",
+      "lp043",
+      "lp059",
+      "lp081",
+      "lp084"
+    ],
+    "outside_first90_toned_rescued_top90": 5,
+    "habitual_ng_profile_transitions": {
+      "short_hit_but_heavy_miss_top9": [
+        "lp036"
+      ],
+      "heavy_hit_but_short_miss_top9": [],
+      "outside_first90_both_learned_profiles": [
+        "lp006",
+        "lp051",
+        "lp073",
+        "lp080",
+        "lp083",
+        "lp089"
+      ]
+    }
+  },
+  "all_23_fresh_primary_top9_misses": [
+    {
+      "id": "lp008",
+      "text": "點解你今日咁遲先到",
+      "reading": "dim2 gaai2 nei5 gam1 jat6 gam3 ci4 sin1 dou3",
+      "input": "dimgaaineigamyatgamchisindou",
+      "length_band": "9-12",
+      "category": "questions",
+      "primary_exact_text_rank": null,
+      "outside_first90": true,
+      "profile_ranks": {
+        "fresh": null,
+        "short_preferences": null,
+        "heavy_short_preferences": null
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": null,
+        "strict_jyutping_toned": 1,
+        "strict_jyutping_tone_free": null
+      },
+      "diagnostic_rescue_class": "toned_only_rescue_top9",
+      "strict_toned_top90_rescue": true,
+      "any_diagnostic_top9_rescue": true,
+      "surface_class": "exact_initial_present_but_remaining_text_ranked_below9",
+      "first_choice_initial_wrong": false,
+      "target_initial_available_first9": true,
+      "target_first_two_characters_available_first9": true,
+      "near_variants_first9": [],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 1,
+        "text": "點解你今日今次先都",
+        "edit_distance": 3
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": true,
+      "example_selection_reasons": [
+        "first_four_misses_by_id_in_length_band",
+        "all_fresh_plain_yale_outside_first90"
+      ],
+      "first9": [
+        {
+          "text": "點解你今日今次先都",
+          "reading": "dim2 gaai2 nei5 gam1 jat6 gam1 ci3 sin1 dou1",
+          "match_type": "composed"
+        },
+        {
+          "text": "點解你今日噉癡線都",
+          "reading": "dim2 gaai2 nei5 gam1 jat6 gam2 ci1 sin3 dou1",
+          "match_type": "composed"
+        },
+        {
+          "text": "點解你今日咁癡線都",
+          "reading": "dim2 gaai2 nei5 gam1 jat6 gam3 ci1 sin3 dou1",
+          "match_type": "composed"
+        },
+        {
+          "text": "點解你今日今次先度",
+          "reading": "dim2 gaai2 nei5 gam1 jat6 gam1 ci3 sin1 dou6",
+          "match_type": "composed"
+        },
+        {
+          "text": "點解你今日噉黐線都",
+          "reading": "dim2 gaai2 nei5 gam1 jat6 gam2 ci1 sin3 dou1",
+          "match_type": "composed"
+        },
+        {
+          "text": "點解你今日咁黐線都",
+          "reading": "dim2 gaai2 nei5 gam1 jat6 gam3 ci1 sin3 dou1",
+          "match_type": "composed"
+        },
+        {
+          "text": "點解你今日噉癡線度",
+          "reading": "dim2 gaai2 nei5 gam1 jat6 gam2 ci1 sin3 dou6",
+          "match_type": "composed"
+        },
+        {
+          "text": "點解你今日咁癡線度",
+          "reading": "dim2 gaai2 nei5 gam1 jat6 gam3 ci1 sin3 dou6",
+          "match_type": "composed"
+        },
+        {
+          "text": "點解你今日今次先倒",
+          "reading": "dim2 gaai2 nei5 gam1 jat6 gam1 ci3 sin1 dou2",
+          "match_type": "composed"
+        }
+      ]
+    },
+    {
+      "id": "lp017",
+      "text": "我真係冇諗過會咁樣",
+      "reading": "ngo5 zan1 hai6 mou5 nam2 gwo3 wui5 gam2 joeng2",
+      "input": "ngojanhaimounamgwowuigamyeung",
+      "length_band": "9-12",
+      "category": "negation_preferences",
+      "primary_exact_text_rank": 18,
+      "outside_first90": false,
+      "profile_ranks": {
+        "fresh": 18,
+        "short_preferences": 18,
+        "heavy_short_preferences": 11
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": 18,
+        "strict_jyutping_toned": 40,
+        "strict_jyutping_tone_free": 13
+      },
+      "diagnostic_rescue_class": "neither_toned_nor_apostrophe_rescues_top9",
+      "strict_toned_top90_rescue": false,
+      "any_diagnostic_top9_rescue": false,
+      "surface_class": "near_variant_in_first9",
+      "first_choice_initial_wrong": false,
+      "target_initial_available_first9": true,
+      "target_first_two_characters_available_first9": true,
+      "near_variants_first9": [
+        {
+          "rank": 1,
+          "text": "我真係冇諗過會噉樣",
+          "kind": "colloquial_written_near_variant",
+          "substitutions": [
+            {
+              "position_1based": 8,
+              "expected": "咁",
+              "observed": "噉"
+            }
+          ]
+        }
+      ],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 1,
+        "text": "我真係冇諗過會噉樣",
+        "edit_distance": 1
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": true,
+      "example_selection_reasons": [
+        "first_four_misses_by_id_in_length_band"
+      ],
+      "first9": [
+        {
+          "text": "我真係冇諗過會噉樣",
+          "reading": "ngo5 zan1 hai6 mou5 nam2 gwo3 wui6 gam2 joeng2",
+          "match_type": "composed"
+        },
+        {
+          "text": "我真係冇諗過回噉樣",
+          "reading": "ngo5 zan1 hai6 mou5 nam2 gwo3 wui4 gam2 joeng2",
+          "match_type": "composed"
+        },
+        {
+          "text": "我真係無諗過會噉樣",
+          "reading": "ngo5 zan1 hai6 mou4 nam2 gwo3 wui6 gam2 joeng2",
+          "match_type": "composed"
+        },
+        {
+          "text": "我真係冇諗果會噉樣",
+          "reading": "ngo5 zan1 hai6 mou5 nam2 gwo2 wui6 gam2 joeng2",
+          "match_type": "composed"
+        },
+        {
+          "text": "我真係無諗過回噉樣",
+          "reading": "ngo5 zan1 hai6 mou4 nam2 gwo3 wui4 gam2 joeng2",
+          "match_type": "composed"
+        },
+        {
+          "text": "我真係冇諗果回噉樣",
+          "reading": "ngo5 zan1 hai6 mou5 nam2 gwo2 wui4 gam2 joeng2",
+          "match_type": "composed"
+        },
+        {
+          "text": "我真係冇諗過迴噉樣",
+          "reading": "ngo5 zan1 hai6 mou5 nam2 gwo3 wui4 gam2 joeng2",
+          "match_type": "composed"
+        },
+        {
+          "text": "我真係無諗果會噉樣",
+          "reading": "ngo5 zan1 hai6 mou4 nam2 gwo2 wui6 gam2 joeng2",
+          "match_type": "composed"
+        },
+        {
+          "text": "我人係冇諗過會噉樣",
+          "reading": "ngo5 jan4 hai6 mou5 nam2 gwo3 wui6 gam2 joeng2",
+          "match_type": "composed"
+        }
+      ]
+    },
+    {
+      "id": "lp022",
+      "text": "我今晚會早啲返",
+      "reading": "ngo5 gam1 maan5 wui5 zou2 di1 faan1",
+      "input": "ngogammaanwuijoudifaan",
+      "length_band": "6-8",
+      "category": "time_plans",
+      "primary_exact_text_rank": 11,
+      "outside_first90": false,
+      "profile_ranks": {
+        "fresh": 11,
+        "short_preferences": 13,
+        "heavy_short_preferences": 16
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": 11,
+        "strict_jyutping_toned": 4,
+        "strict_jyutping_tone_free": 11
+      },
+      "diagnostic_rescue_class": "toned_only_rescue_top9",
+      "strict_toned_top90_rescue": false,
+      "any_diagnostic_top9_rescue": true,
+      "surface_class": "exact_initial_present_but_remaining_text_ranked_below9",
+      "first_choice_initial_wrong": false,
+      "target_initial_available_first9": true,
+      "target_first_two_characters_available_first9": true,
+      "near_variants_first9": [],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 1,
+        "text": "我今晚會做啲返",
+        "edit_distance": 1
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": true,
+      "example_selection_reasons": [
+        "first_four_misses_by_id_in_length_band"
+      ],
+      "first9": [
+        {
+          "text": "我今晚會做啲返",
+          "reading": "ngo5 gam1 maan5 wui6 zou6 di1 faan2",
+          "match_type": "composed"
+        },
+        {
+          "text": "我今晚會做啲番",
+          "reading": "ngo5 gam1 maan5 wui6 zou6 di1 faan1",
+          "match_type": "composed"
+        },
+        {
+          "text": "我今晚回做啲返",
+          "reading": "ngo5 gam1 maan5 wui4 zou6 di1 faan2",
+          "match_type": "composed"
+        },
+        {
+          "text": "我噉晚會做啲返",
+          "reading": "ngo5 gam2 maan5 wui2 zou6 di1 faan2",
+          "match_type": "composed"
+        },
+        {
+          "text": "我咁晚會做啲返",
+          "reading": "ngo5 gam3 maan5 wui2 zou6 di1 faan2",
+          "match_type": "composed"
+        },
+        {
+          "text": "我今晚回做啲番",
+          "reading": "ngo5 gam1 maan5 wui4 zou6 di1 faan1",
+          "match_type": "composed"
+        },
+        {
+          "text": "我噉晚會做啲番",
+          "reading": "ngo5 gam2 maan5 wui2 zou6 di1 faan1",
+          "match_type": "composed"
+        },
+        {
+          "text": "我咁晚會做啲番",
+          "reading": "ngo5 gam3 maan5 wui2 zou6 di1 faan1",
+          "match_type": "composed"
+        },
+        {
+          "text": "我今晚會做啲飯",
+          "reading": "ngo5 gam1 maan5 wui6 zou6 di1 faan6",
+          "match_type": "composed"
+        }
+      ]
+    },
+    {
+      "id": "lp024",
+      "text": "我哋約八點半啦",
+      "reading": "ngo5 dei6 joek3 baat3 dim2 bun3 laa1",
+      "input": "ngodeiyeukbaatdimbunla",
+      "length_band": "6-8",
+      "category": "time_plans",
+      "primary_exact_text_rank": 15,
+      "outside_first90": false,
+      "profile_ranks": {
+        "fresh": 15,
+        "short_preferences": 23,
+        "heavy_short_preferences": 23
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": 15,
+        "strict_jyutping_toned": 2,
+        "strict_jyutping_tone_free": 15
+      },
+      "diagnostic_rescue_class": "toned_only_rescue_top9",
+      "strict_toned_top90_rescue": false,
+      "any_diagnostic_top9_rescue": true,
+      "surface_class": "exact_initial_present_but_remaining_text_ranked_below9",
+      "first_choice_initial_wrong": false,
+      "target_initial_available_first9": true,
+      "target_first_two_characters_available_first9": true,
+      "near_variants_first9": [],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 6,
+        "text": "我哋約八點本啦",
+        "edit_distance": 1
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": true,
+      "example_selection_reasons": [
+        "first_four_misses_by_id_in_length_band"
+      ],
+      "first9": [
+        {
+          "text": "我地若八點本啦",
+          "reading": "ngo5 dei6 joek6 baat3 dim2 bun2 laa1",
+          "match_type": "composed"
+        },
+        {
+          "text": "我哋若八點本啦",
+          "reading": "ngo5 dei6 joek6 baat3 dim2 bun2 laa1",
+          "match_type": "composed"
+        },
+        {
+          "text": "我地約八點本啦",
+          "reading": "ngo5 dei6 joek3 baat3 dim2 bun2 laa1",
+          "match_type": "composed"
+        },
+        {
+          "text": "我地若八點本喇",
+          "reading": "ngo5 dei6 joek6 baat3 dim2 bun2 laa3",
+          "match_type": "composed"
+        },
+        {
+          "text": "我地若八點半啦",
+          "reading": "ngo5 dei6 joek6 baat3 dim2 bun3 laa1",
+          "match_type": "composed"
+        },
+        {
+          "text": "我哋約八點本啦",
+          "reading": "ngo5 dei6 joek3 baat3 dim2 bun2 laa1",
+          "match_type": "composed"
+        },
+        {
+          "text": "我哋若八點本喇",
+          "reading": "ngo5 dei6 joek6 baat3 dim2 bun2 laa3",
+          "match_type": "composed"
+        },
+        {
+          "text": "我哋若八點半啦",
+          "reading": "ngo5 dei6 joek6 baat3 dim2 bun3 laa1",
+          "match_type": "composed"
+        },
+        {
+          "text": "我地若八點搬啦",
+          "reading": "ngo5 dei6 joek6 baat3 dim2 bun1 laa1",
+          "match_type": "composed"
+        }
+      ]
+    },
+    {
+      "id": "lp027",
+      "text": "你得閒嗰陣記住覆我",
+      "reading": "nei5 dak1 haan4 go2 zan6 gei3 zyu6 fuk1 ngo5",
+      "input": "neidakhaangojangeijyufukngo",
+      "length_band": "9-12",
+      "category": "time_plans",
+      "primary_exact_text_rank": 21,
+      "outside_first90": false,
+      "profile_ranks": {
+        "fresh": 21,
+        "short_preferences": 21,
+        "heavy_short_preferences": 21
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": 21,
+        "strict_jyutping_toned": 1,
+        "strict_jyutping_tone_free": 1
+      },
+      "diagnostic_rescue_class": "toned_only_rescue_top9",
+      "strict_toned_top90_rescue": false,
+      "any_diagnostic_top9_rescue": true,
+      "surface_class": "exact_initial_present_but_remaining_text_ranked_below9",
+      "first_choice_initial_wrong": false,
+      "target_initial_available_first9": true,
+      "target_first_two_characters_available_first9": true,
+      "near_variants_first9": [],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 1,
+        "text": "你得閒個人記住覆我",
+        "edit_distance": 2
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": true,
+      "example_selection_reasons": [
+        "first_four_misses_by_id_in_length_band"
+      ],
+      "first9": [
+        {
+          "text": "你得閒個人記住覆我",
+          "reading": "nei5 dak1 haan4 go3 jan4 gei3 zyu6 fuk1 ngo5",
+          "match_type": "composed"
+        },
+        {
+          "text": "你得閒個人記住幅我",
+          "reading": "nei5 dak1 haan4 go3 jan4 gei3 zyu6 fuk1 ngo5",
+          "match_type": "composed"
+        },
+        {
+          "text": "你得閒個人記住伏我",
+          "reading": "nei5 dak1 haan4 go3 jan4 gei3 zyu6 fuk6 ngo5",
+          "match_type": "composed"
+        },
+        {
+          "text": "你得閒個人記住復我",
+          "reading": "nei5 dak1 haan4 go3 jan4 gei3 zyu6 fuk6 ngo5",
+          "match_type": "composed"
+        },
+        {
+          "text": "你得閒個人基於覆我",
+          "reading": "nei5 dak1 haan4 go3 jan4 gei1 jyu1 fuk1 ngo5",
+          "match_type": "composed"
+        },
+        {
+          "text": "你得閒個人既住覆我",
+          "reading": "nei5 dak1 haan4 go3 jan4 gei3 zyu6 fuk1 ngo5",
+          "match_type": "composed"
+        },
+        {
+          "text": "你得閒個人記住服我",
+          "reading": "nei5 dak1 haan4 go3 jan4 gei3 zyu6 fuk6 ngo5",
+          "match_type": "composed"
+        },
+        {
+          "text": "你得閒個人基於幅我",
+          "reading": "nei5 dak1 haan4 go3 jan4 gei1 jyu1 fuk1 ngo5",
+          "match_type": "composed"
+        },
+        {
+          "text": "你得閒個人既住幅我",
+          "reading": "nei5 dak1 haan4 go3 jan4 gei3 zyu6 fuk1 ngo5",
+          "match_type": "composed"
+        }
+      ]
+    },
+    {
+      "id": "lp031",
+      "text": "我想食碗牛腩麵",
+      "reading": "ngo5 soeng2 sik6 wun2 ngau4 naam5 min6",
+      "input": "ngoseungsikwunngaunaammin",
+      "length_band": "6-8",
+      "category": "food_drink",
+      "primary_exact_text_rank": 87,
+      "outside_first90": false,
+      "profile_ranks": {
+        "fresh": 87,
+        "short_preferences": 87,
+        "heavy_short_preferences": 40
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": 87,
+        "strict_jyutping_toned": 4,
+        "strict_jyutping_tone_free": 87
+      },
+      "diagnostic_rescue_class": "toned_only_rescue_top9",
+      "strict_toned_top90_rescue": false,
+      "any_diagnostic_top9_rescue": true,
+      "surface_class": "near_variant_in_first9",
+      "first_choice_initial_wrong": false,
+      "target_initial_available_first9": true,
+      "target_first_two_characters_available_first9": true,
+      "near_variants_first9": [
+        {
+          "rank": 5,
+          "text": "我想食碗牛腩面",
+          "kind": "orthographic_near_variant_only",
+          "substitutions": [
+            {
+              "position_1based": 7,
+              "expected": "麵",
+              "observed": "面"
+            }
+          ]
+        }
+      ],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 5,
+        "text": "我想食碗牛腩面",
+        "edit_distance": 1
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": true,
+      "example_selection_reasons": [
+        "first_four_misses_by_id_in_length_band"
+      ],
+      "first9": [
+        {
+          "text": "我相識換牛腩面",
+          "reading": "ngo5 soeng1 sik1 wun6 ngau4 naam5 min6",
+          "match_type": "composed"
+        },
+        {
+          "text": "我相識碗牛腩面",
+          "reading": "ngo5 soeng1 sik1 wun2 ngau4 naam5 min6",
+          "match_type": "composed"
+        },
+        {
+          "text": "我相識玩牛腩面",
+          "reading": "ngo5 soeng1 sik1 wun6 ngau4 naam5 min6",
+          "match_type": "composed"
+        },
+        {
+          "text": "我想食換牛腩面",
+          "reading": "ngo5 soeng2 sik6 wun6 ngau4 naam5 min6",
+          "match_type": "composed"
+        },
+        {
+          "text": "我想食碗牛腩面",
+          "reading": "ngo5 soeng2 sik6 wun2 ngau4 naam5 min6",
+          "match_type": "composed"
+        },
+        {
+          "text": "我常識換牛腩面",
+          "reading": "ngo5 soeng4 sik1 wun6 ngau4 naam5 min6",
+          "match_type": "composed"
+        },
+        {
+          "text": "我想食玩牛腩面",
+          "reading": "ngo5 soeng2 sik6 wun6 ngau4 naam5 min6",
+          "match_type": "composed"
+        },
+        {
+          "text": "我常識碗牛腩面",
+          "reading": "ngo5 soeng4 sik1 wun2 ngau4 naam5 min6",
+          "match_type": "composed"
+        },
+        {
+          "text": "我常識玩牛腩面",
+          "reading": "ngo5 soeng4 sik1 wun6 ngau4 naam5 min6",
+          "match_type": "composed"
+        }
+      ]
+    },
+    {
+      "id": "lp035",
+      "text": "食完飯我哋出去行吓",
+      "reading": "sik6 jyun4 faan6 ngo5 dei6 ceot1 heoi3 haang4 haa5",
+      "input": "sikyunfaanngodeicheutheuihaangha",
+      "length_band": "9-12",
+      "category": "food_drink",
+      "primary_exact_text_rank": null,
+      "outside_first90": true,
+      "profile_ranks": {
+        "fresh": null,
+        "short_preferences": null,
+        "heavy_short_preferences": null
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": null,
+        "strict_jyutping_toned": 77,
+        "strict_jyutping_tone_free": null
+      },
+      "diagnostic_rescue_class": "neither_toned_nor_apostrophe_rescues_top9",
+      "strict_toned_top90_rescue": true,
+      "any_diagnostic_top9_rescue": false,
+      "surface_class": "near_variant_in_first9",
+      "first_choice_initial_wrong": false,
+      "target_initial_available_first9": true,
+      "target_first_two_characters_available_first9": true,
+      "near_variants_first9": [
+        {
+          "rank": 3,
+          "text": "食完飯我地出去行下",
+          "kind": "colloquial_written_near_variant",
+          "substitutions": [
+            {
+              "position_1based": 5,
+              "expected": "哋",
+              "observed": "地"
+            },
+            {
+              "position_1based": 9,
+              "expected": "吓",
+              "observed": "下"
+            }
+          ]
+        },
+        {
+          "rank": 7,
+          "text": "食完飯我哋出去行下",
+          "kind": "colloquial_written_near_variant",
+          "substitutions": [
+            {
+              "position_1based": 9,
+              "expected": "吓",
+              "observed": "下"
+            }
+          ]
+        }
+      ],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 7,
+        "text": "食完飯我哋出去行下",
+        "edit_distance": 1
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": true,
+      "example_selection_reasons": [
+        "first_four_misses_by_id_in_length_band",
+        "all_fresh_plain_yale_outside_first90"
+      ],
+      "first9": [
+        {
+          "text": "食完返我地出去行下",
+          "reading": "sik6 jyun4 faan2 ngo5 dei6 ceot1 heoi3 haang4 haa5",
+          "match_type": "composed"
+        },
+        {
+          "text": "食完返我哋出去行下",
+          "reading": "sik6 jyun4 faan2 ngo5 dei6 ceot1 heoi3 haang4 haa5",
+          "match_type": "composed"
+        },
+        {
+          "text": "食完飯我地出去行下",
+          "reading": "sik6 jyun4 faan6 ngo5 dei6 ceot1 heoi3 haang4 haa5",
+          "match_type": "composed"
+        },
+        {
+          "text": "食軟飯我地出去行下",
+          "reading": "sik6 jyun5 faan6 ngo5 dei6 ceot1 heoi3 haang4 haa5",
+          "match_type": "composed"
+        },
+        {
+          "text": "食软饭我地出去行下",
+          "reading": "sik6 jyun5 faan6 ngo5 dei6 ceot1 heoi3 haang4 haa5",
+          "match_type": "composed"
+        },
+        {
+          "text": "食完番我地出去行下",
+          "reading": "sik6 jyun4 faan1 ngo5 dei6 ceot1 heoi3 haang4 haa5",
+          "match_type": "composed"
+        },
+        {
+          "text": "食完飯我哋出去行下",
+          "reading": "sik6 jyun4 faan6 ngo5 dei6 ceot1 heoi3 haang4 haa5",
+          "match_type": "composed"
+        },
+        {
+          "text": "食軟飯我哋出去行下",
+          "reading": "sik6 jyun5 faan6 ngo5 dei6 ceot1 heoi3 haang4 haa5",
+          "match_type": "composed"
+        },
+        {
+          "text": "食软饭我哋出去行下",
+          "reading": "sik6 jyun5 faan6 ngo5 dei6 ceot1 heoi3 haang4 haa5",
+          "match_type": "composed"
+        }
+      ]
+    },
+    {
+      "id": "lp037",
+      "text": "有冇位坐",
+      "reading": "jau5 mou5 wai2 co5",
+      "input": "yaumouwaicho",
+      "length_band": "4-5",
+      "category": "travel_directions",
+      "primary_exact_text_rank": 15,
+      "outside_first90": false,
+      "profile_ranks": {
+        "fresh": 15,
+        "short_preferences": 15,
+        "heavy_short_preferences": 15
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": 15,
+        "strict_jyutping_toned": 2,
+        "strict_jyutping_tone_free": 15
+      },
+      "diagnostic_rescue_class": "toned_only_rescue_top9",
+      "strict_toned_top90_rescue": false,
+      "any_diagnostic_top9_rescue": true,
+      "surface_class": "exact_initial_present_but_remaining_text_ranked_below9",
+      "first_choice_initial_wrong": false,
+      "target_initial_available_first9": true,
+      "target_first_two_characters_available_first9": true,
+      "near_variants_first9": [],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 3,
+        "text": "有冇喂坐",
+        "edit_distance": 1
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": true,
+      "example_selection_reasons": [
+        "first_four_misses_by_id_in_length_band"
+      ],
+      "first9": [
+        {
+          "text": "有無謂坐",
+          "reading": "jau5 mou4 wai6 co5",
+          "match_type": "composed"
+        },
+        {
+          "text": "又無謂坐",
+          "reading": "jau6 mou4 wai6 co5",
+          "match_type": "composed"
+        },
+        {
+          "text": "有冇喂坐",
+          "reading": "jau5 mou5 wai3 co5",
+          "match_type": "composed"
+        },
+        {
+          "text": "有無謂錯",
+          "reading": "jau5 mou4 wai6 co3",
+          "match_type": "composed"
+        },
+        {
+          "text": "又冇喂坐",
+          "reading": "jau6 mou5 wai3 co5",
+          "match_type": "composed"
+        },
+        {
+          "text": "有冇爲坐",
+          "reading": "jau5 mou5 wai4 co5",
+          "match_type": "composed"
+        },
+        {
+          "text": "有無喂坐",
+          "reading": "jau5 mou4 wai3 co5",
+          "match_type": "composed"
+        },
+        {
+          "text": "又無謂錯",
+          "reading": "jau6 mou4 wai6 co3",
+          "match_type": "composed"
+        },
+        {
+          "text": "由無謂坐",
+          "reading": "jau4 mou4 wai6 co5",
+          "match_type": "composed"
+        }
+      ]
+    },
+    {
+      "id": "lp043",
+      "text": "你幫我睇吓架車到咗未",
+      "reading": "nei5 bong1 ngo5 tai2 haa5 gaa3 ce1 dou3 zo2 mei6",
+      "input": "neibongngotaihagachedoujomei",
+      "length_band": "9-12",
+      "category": "travel_directions",
+      "primary_exact_text_rank": null,
+      "outside_first90": true,
+      "profile_ranks": {
+        "fresh": null,
+        "short_preferences": null,
+        "heavy_short_preferences": null
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": null,
+        "strict_jyutping_toned": null,
+        "strict_jyutping_tone_free": null
+      },
+      "diagnostic_rescue_class": "neither_toned_nor_apostrophe_rescues_top9",
+      "strict_toned_top90_rescue": false,
+      "any_diagnostic_top9_rescue": false,
+      "surface_class": "exact_initial_present_but_remaining_text_ranked_below9",
+      "first_choice_initial_wrong": false,
+      "target_initial_available_first9": true,
+      "target_first_two_characters_available_first9": true,
+      "near_variants_first9": [],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 3,
+        "text": "你幫我睇吓㗎車都咗未",
+        "edit_distance": 2
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": true,
+      "example_selection_reasons": [
+        "all_fresh_plain_yale_outside_first90"
+      ],
+      "first9": [
+        {
+          "text": "你幫我睇下㗎車都咗未",
+          "reading": "nei5 bong1 ngo5 tai2 haa6 ga3 ce1 dou1 zo2 mei6",
+          "match_type": "composed"
+        },
+        {
+          "text": "你幫我睇下㗎車都左未",
+          "reading": "nei5 bong1 ngo5 tai2 haa6 ga3 ce1 dou1 zo2 mei6",
+          "match_type": "composed"
+        },
+        {
+          "text": "你幫我睇吓㗎車都咗未",
+          "reading": "nei5 bong1 ngo5 tai2 haa2 ga3 ce1 dou1 zo2 mei6",
+          "match_type": "composed"
+        },
+        {
+          "text": "你幫我睇下㗎車度咗未",
+          "reading": "nei5 bong1 ngo5 tai2 haa6 ga3 ce1 dou6 zo2 mei6",
+          "match_type": "composed"
+        },
+        {
+          "text": "你幫我睇吓㗎車都左未",
+          "reading": "nei5 bong1 ngo5 tai2 haa2 ga3 ce1 dou1 zo2 mei6",
+          "match_type": "composed"
+        },
+        {
+          "text": "你幫我睇下㗎車度左未",
+          "reading": "nei5 bong1 ngo5 tai2 haa6 ga3 ce1 dou6 zo2 mei6",
+          "match_type": "composed"
+        },
+        {
+          "text": "你幫我睇下家車都咗未",
+          "reading": "nei5 bong1 ngo5 tai2 haa6 gaa1 ce1 dou1 zo2 mei6",
+          "match_type": "composed"
+        },
+        {
+          "text": "你幫我睇下㗎斜度咗未",
+          "reading": "nei5 bong1 ngo5 tai2 haa6 ga3 ce3 dou6 zo2 mei6",
+          "match_type": "composed"
+        },
+        {
+          "text": "你幫我睇下㗎扯都咗未",
+          "reading": "nei5 bong1 ngo5 tai2 haa6 ga3 ce2 dou1 zo2 mei6",
+          "match_type": "composed"
+        }
+      ]
+    },
+    {
+      "id": "lp046",
+      "text": "記住熄燈",
+      "reading": "gei3 zyu6 sik1 dang1",
+      "input": "geijyusikdang",
+      "length_band": "4-5",
+      "category": "home_tasks",
+      "primary_exact_text_rank": 67,
+      "outside_first90": false,
+      "profile_ranks": {
+        "fresh": 67,
+        "short_preferences": 67,
+        "heavy_short_preferences": 67
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": 67,
+        "strict_jyutping_toned": 6,
+        "strict_jyutping_tone_free": 42
+      },
+      "diagnostic_rescue_class": "toned_only_rescue_top9",
+      "strict_toned_top90_rescue": false,
+      "any_diagnostic_top9_rescue": true,
+      "surface_class": "exact_initial_present_but_remaining_text_ranked_below9",
+      "first_choice_initial_wrong": false,
+      "target_initial_available_first9": true,
+      "target_first_two_characters_available_first9": true,
+      "near_variants_first9": [],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 8,
+        "text": "記住食燈",
+        "edit_distance": 1
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": true,
+      "example_selection_reasons": [
+        "first_four_misses_by_id_in_length_band"
+      ],
+      "first9": [
+        {
+          "text": "記住食等",
+          "reading": "gei3 zyu6 sik6 dang2",
+          "match_type": "composed"
+        },
+        {
+          "text": "記住識等",
+          "reading": "gei3 zyu6 sik1 dang2",
+          "match_type": "composed"
+        },
+        {
+          "text": "基於食等",
+          "reading": "gei1 jyu1 sik6 dang2",
+          "match_type": "composed"
+        },
+        {
+          "text": "既住食等",
+          "reading": "gei3 zyu6 sik6 dang2",
+          "match_type": "composed"
+        },
+        {
+          "text": "既註釋等",
+          "reading": "gei3 zyu3 sik1 dang2",
+          "match_type": "composed"
+        },
+        {
+          "text": "基於識等",
+          "reading": "gei1 jyu1 sik1 dang2",
+          "match_type": "composed"
+        },
+        {
+          "text": "既住識等",
+          "reading": "gei3 zyu6 sik1 dang2",
+          "match_type": "composed"
+        },
+        {
+          "text": "記住食燈",
+          "reading": "gei3 zyu6 sik6 dang1",
+          "match_type": "composed"
+        },
+        {
+          "text": "記住色等",
+          "reading": "gei3 zyu6 sik1 dang2",
+          "match_type": "composed"
+        }
+      ]
+    },
+    {
+      "id": "lp048",
+      "text": "幫我攞嘢",
+      "reading": "bong1 ngo5 lo2 je5",
+      "input": "bongngoloye",
+      "length_band": "4-5",
+      "category": "home_tasks",
+      "primary_exact_text_rank": 55,
+      "outside_first90": false,
+      "profile_ranks": {
+        "fresh": 55,
+        "short_preferences": 55,
+        "heavy_short_preferences": 54
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": 55,
+        "strict_jyutping_toned": 3,
+        "strict_jyutping_tone_free": 38
+      },
+      "diagnostic_rescue_class": "toned_only_rescue_top9",
+      "strict_toned_top90_rescue": false,
+      "any_diagnostic_top9_rescue": true,
+      "surface_class": "exact_initial_present_but_remaining_text_ranked_below9",
+      "first_choice_initial_wrong": false,
+      "target_initial_available_first9": true,
+      "target_first_two_characters_available_first9": true,
+      "near_variants_first9": [],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 1,
+        "text": "幫我囉嘢",
+        "edit_distance": 1
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": true,
+      "example_selection_reasons": [
+        "first_four_misses_by_id_in_length_band"
+      ],
+      "first9": [
+        {
+          "text": "幫我囉嘢",
+          "reading": "bong1 ngo5 lo1 je5",
+          "match_type": "composed"
+        },
+        {
+          "text": "幫我老嘢",
+          "reading": "bong1 ngo5 lou5 je5",
+          "match_type": "composed"
+        },
+        {
+          "text": "幫我囉野",
+          "reading": "bong1 ngo5 lo1 je5",
+          "match_type": "composed"
+        },
+        {
+          "text": "幫我老爺",
+          "reading": "bong1 ngo5 lou5 je4",
+          "match_type": "composed"
+        },
+        {
+          "text": "綁我囉嘢",
+          "reading": "bong2 ngo5 lo1 je5",
+          "match_type": "composed"
+        },
+        {
+          "text": "幫我姥爺",
+          "reading": "bong1 ngo5 lou5 je4",
+          "match_type": "composed"
+        },
+        {
+          "text": "幫我羅嘢",
+          "reading": "bong1 ngo5 lo4 je5",
+          "match_type": "composed"
+        },
+        {
+          "text": "磅我囉嘢",
+          "reading": "bong6 ngo5 lo1 je5",
+          "match_type": "composed"
+        },
+        {
+          "text": "幫我囉夜",
+          "reading": "bong1 ngo5 lo1 je6",
+          "match_type": "composed"
+        }
+      ]
+    },
+    {
+      "id": "lp050",
+      "text": "件衫仲未乾晒",
+      "reading": "gin6 saam1 zung6 mei6 gon1 saai3",
+      "input": "ginsaamjungmeigonsaai",
+      "length_band": "6-8",
+      "category": "home_tasks",
+      "primary_exact_text_rank": 13,
+      "outside_first90": false,
+      "profile_ranks": {
+        "fresh": 13,
+        "short_preferences": 13,
+        "heavy_short_preferences": 13
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": 13,
+        "strict_jyutping_toned": 1,
+        "strict_jyutping_tone_free": 9
+      },
+      "diagnostic_rescue_class": "toned_only_rescue_top9",
+      "strict_toned_top90_rescue": false,
+      "any_diagnostic_top9_rescue": true,
+      "surface_class": "target_initial_character_absent_first9",
+      "first_choice_initial_wrong": true,
+      "target_initial_available_first9": false,
+      "target_first_two_characters_available_first9": false,
+      "near_variants_first9": [],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 1,
+        "text": "見衫仲未乾晒",
+        "edit_distance": 1
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": true,
+      "example_selection_reasons": [
+        "first_four_misses_by_id_in_length_band"
+      ],
+      "first9": [
+        {
+          "text": "見衫仲未乾晒",
+          "reading": "gin3 saam1 zung6 mei6 gon1 saai3",
+          "match_type": "composed"
+        },
+        {
+          "text": "見衫用未乾晒",
+          "reading": "gin3 saam1 jung6 mei6 gon1 saai3",
+          "match_type": "composed"
+        },
+        {
+          "text": "見三仲未乾晒",
+          "reading": "gin3 saam1 zung6 mei6 gon1 saai3",
+          "match_type": "composed"
+        },
+        {
+          "text": "見衫仲未趕晒",
+          "reading": "gin3 saam1 zung6 mei6 gon2 saai3",
+          "match_type": "composed"
+        },
+        {
+          "text": "見三用未乾晒",
+          "reading": "gin3 saam1 jung6 mei6 gon1 saai3",
+          "match_type": "composed"
+        },
+        {
+          "text": "見衫中未乾晒",
+          "reading": "gin3 saam1 zung1 mei6 gon1 saai3",
+          "match_type": "composed"
+        },
+        {
+          "text": "見衫用未趕晒",
+          "reading": "gin3 saam1 jung6 mei6 gon2 saai3",
+          "match_type": "composed"
+        },
+        {
+          "text": "見三仲未趕晒",
+          "reading": "gin3 saam1 zung6 mei6 gon2 saai3",
+          "match_type": "composed"
+        },
+        {
+          "text": "見三中未乾晒",
+          "reading": "gin3 saam1 zung1 mei6 gon1 saai3",
+          "match_type": "composed"
+        }
+      ]
+    },
+    {
+      "id": "lp053",
+      "text": "我哋食完飯先一齊洗碗",
+      "reading": "ngo5 dei6 sik6 jyun4 faan6 sin1 jat1 cai4 sai2 wun2",
+      "input": "ngodeisikyunfaansinyatchaisaiwun",
+      "length_band": "9-12",
+      "category": "home_tasks",
+      "primary_exact_text_rank": 22,
+      "outside_first90": false,
+      "profile_ranks": {
+        "fresh": 22,
+        "short_preferences": 22,
+        "heavy_short_preferences": 22
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": 22,
+        "strict_jyutping_toned": 2,
+        "strict_jyutping_tone_free": 22
+      },
+      "diagnostic_rescue_class": "toned_only_rescue_top9",
+      "strict_toned_top90_rescue": false,
+      "any_diagnostic_top9_rescue": true,
+      "surface_class": "exact_initial_present_but_remaining_text_ranked_below9",
+      "first_choice_initial_wrong": false,
+      "target_initial_available_first9": true,
+      "target_first_two_characters_available_first9": true,
+      "near_variants_first9": [],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 5,
+        "text": "我哋食完返先一齊洗碗",
+        "edit_distance": 1
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": false,
+      "example_selection_reasons": [],
+      "first9": [
+        {
+          "text": "我地食完返先一齊洗換",
+          "reading": "ngo5 dei6 sik6 jyun4 faan2 sin1 jat1 cai4 sai2 wun6",
+          "match_type": "composed"
+        },
+        {
+          "text": "我地食完返先一齊洗碗",
+          "reading": "ngo5 dei6 sik6 jyun4 faan2 sin1 jat1 cai4 sai2 wun2",
+          "match_type": "composed"
+        },
+        {
+          "text": "我地食完返先一齊洗玩",
+          "reading": "ngo5 dei6 sik6 jyun4 faan2 sin1 jat1 cai4 sai2 wun6",
+          "match_type": "composed"
+        },
+        {
+          "text": "我哋食完返先一齊洗換",
+          "reading": "ngo5 dei6 sik6 jyun4 faan2 sin1 jat1 cai4 sai2 wun6",
+          "match_type": "composed"
+        },
+        {
+          "text": "我哋食完返先一齊洗碗",
+          "reading": "ngo5 dei6 sik6 jyun4 faan2 sin1 jat1 cai4 sai2 wun2",
+          "match_type": "composed"
+        },
+        {
+          "text": "我哋食完返先一齊洗玩",
+          "reading": "ngo5 dei6 sik6 jyun4 faan2 sin1 jat1 cai4 sai2 wun6",
+          "match_type": "composed"
+        },
+        {
+          "text": "我地食完飯先一齊洗換",
+          "reading": "ngo5 dei6 sik6 jyun4 faan6 sin1 jat1 cai4 sai2 wun6",
+          "match_type": "composed"
+        },
+        {
+          "text": "我地食軟飯先一齊洗換",
+          "reading": "ngo5 dei6 sik6 jyun5 faan6 sin1 jat1 cai4 sai2 wun6",
+          "match_type": "composed"
+        },
+        {
+          "text": "我地食软饭先一齊洗換",
+          "reading": "ngo5 dei6 sik6 jyun5 faan6 sin1 jat1 cai4 sai2 wun6",
+          "match_type": "composed"
+        }
+      ]
+    },
+    {
+      "id": "lp059",
+      "text": "呢個數計錯咗",
+      "reading": "ni1 go3 sou3 gai3 co3 zo2",
+      "input": "nigosougaichojo",
+      "length_band": "6-8",
+      "category": "work_study",
+      "primary_exact_text_rank": null,
+      "outside_first90": true,
+      "profile_ranks": {
+        "fresh": null,
+        "short_preferences": null,
+        "heavy_short_preferences": null
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": null,
+        "strict_jyutping_toned": 80,
+        "strict_jyutping_tone_free": null
+      },
+      "diagnostic_rescue_class": "neither_toned_nor_apostrophe_rescues_top9",
+      "strict_toned_top90_rescue": true,
+      "any_diagnostic_top9_rescue": false,
+      "surface_class": "exact_initial_present_but_remaining_text_ranked_below9",
+      "first_choice_initial_wrong": true,
+      "target_initial_available_first9": true,
+      "target_first_two_characters_available_first9": true,
+      "near_variants_first9": [],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 3,
+        "text": "哩個掃街錯咗",
+        "edit_distance": 3
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": true,
+      "example_selection_reasons": [
+        "all_fresh_plain_yale_outside_first90"
+      ],
+      "first9": [
+        {
+          "text": "哩個掃街坐咗",
+          "reading": "ni1 go3 sou3 gaai1 co5 zo2",
+          "match_type": "composed"
+        },
+        {
+          "text": "哩個掃街坐左",
+          "reading": "ni1 go3 sou3 gaai1 co5 zo2",
+          "match_type": "composed"
+        },
+        {
+          "text": "哩個掃街錯咗",
+          "reading": "ni1 go3 sou3 gaai1 co3 zo2",
+          "match_type": "composed"
+        },
+        {
+          "text": "哩個掃街錯左",
+          "reading": "ni1 go3 sou3 gaai1 co3 zo2",
+          "match_type": "composed"
+        },
+        {
+          "text": "呢個掃街坐咗",
+          "reading": "ni1 go3 sou3 gaai1 co5 zo2",
+          "match_type": "composed"
+        },
+        {
+          "text": "呢個掃街坐左",
+          "reading": "ni1 go3 sou3 gaai1 co5 zo2",
+          "match_type": "composed"
+        },
+        {
+          "text": "哩個掃雞坐咗",
+          "reading": "ni1 go3 sou3 gai1 co5 zo2",
+          "match_type": "composed"
+        },
+        {
+          "text": "哩個掃街初咗",
+          "reading": "ni1 go3 sou3 gaai1 co1 zo2",
+          "match_type": "composed"
+        },
+        {
+          "text": "哩個掃雞坐左",
+          "reading": "ni1 go3 sou3 gai1 co5 zo2",
+          "match_type": "composed"
+        }
+      ]
+    },
+    {
+      "id": "lp063",
+      "text": "聽日開會之前交份報告",
+      "reading": "ting1 jat6 hoi1 wui2 zi1 cin4 gaau1 fan6 bou3 gou3",
+      "input": "tingyathoiwuijichingaaufanbougou",
+      "length_band": "9-12",
+      "category": "work_study",
+      "primary_exact_text_rank": 73,
+      "outside_first90": false,
+      "profile_ranks": {
+        "fresh": 73,
+        "short_preferences": 76,
+        "heavy_short_preferences": 76
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": 72,
+        "strict_jyutping_toned": 1,
+        "strict_jyutping_tone_free": 33
+      },
+      "diagnostic_rescue_class": "toned_only_rescue_top9",
+      "strict_toned_top90_rescue": false,
+      "any_diagnostic_top9_rescue": true,
+      "surface_class": "exact_initial_present_but_remaining_text_ranked_below9",
+      "first_choice_initial_wrong": false,
+      "target_initial_available_first9": true,
+      "target_first_two_characters_available_first9": true,
+      "near_variants_first9": [],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 6,
+        "text": "聽日開會之前交返報告",
+        "edit_distance": 1
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": false,
+      "example_selection_reasons": [],
+      "first9": [
+        {
+          "text": "聽日開會之前教訓報告",
+          "reading": "ting1 jat6 hoi1 wui2 zi1 cin4 gaau3 fan3 bou3 gou3",
+          "match_type": "composed"
+        },
+        {
+          "text": "聽日開會以前教訓報告",
+          "reading": "ting1 jat6 hoi1 wui2 ji5 cin4 gaau3 fan3 bou3 gou3",
+          "match_type": "composed"
+        },
+        {
+          "text": "聽日開會之前教訓佈告",
+          "reading": "ting1 jat6 hoi1 wui2 zi1 cin4 gaau3 fan3 bou3 gou3",
+          "match_type": "composed"
+        },
+        {
+          "text": "聽日開會以前教訓佈告",
+          "reading": "ting1 jat6 hoi1 wui2 ji5 cin4 gaau3 fan3 bou3 gou3",
+          "match_type": "composed"
+        },
+        {
+          "text": "聽日開會之前搞瞓報告",
+          "reading": "ting1 jat6 hoi1 wui2 zi1 cin4 gaau2 fan3 bou3 gou3",
+          "match_type": "composed"
+        },
+        {
+          "text": "聽日開會之前交返報告",
+          "reading": "ting1 jat6 hoi1 wui2 zi1 cin4 gaau1 faan1 bou3 gou3",
+          "match_type": "composed"
+        },
+        {
+          "text": "聽日開會以前搞瞓報告",
+          "reading": "ting1 jat6 hoi1 wui2 ji5 cin4 gaau2 fan3 bou3 gou3",
+          "match_type": "composed"
+        },
+        {
+          "text": "聽日開會以前交返報告",
+          "reading": "ting1 jat6 hoi1 wui2 ji5 cin4 gaau1 faan1 bou3 gou3",
+          "match_type": "composed"
+        },
+        {
+          "text": "聽日開會之前教瞓報告",
+          "reading": "ting1 jat6 hoi1 wui2 zi1 cin4 gaau3 fan3 bou3 gou3",
+          "match_type": "composed"
+        }
+      ]
+    },
+    {
+      "id": "lp073",
+      "text": "打唔到字",
+      "reading": "daa2 m4 dou2 zi6",
+      "input": "damdouji",
+      "length_band": "4-5",
+      "category": "technical_input",
+      "primary_exact_text_rank": 17,
+      "outside_first90": false,
+      "profile_ranks": {
+        "fresh": 17,
+        "short_preferences": 2,
+        "heavy_short_preferences": 2
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": 5,
+        "strict_jyutping_toned": 1,
+        "strict_jyutping_tone_free": 18
+      },
+      "diagnostic_rescue_class": "toned_and_apostrophe_rescue_top9",
+      "strict_toned_top90_rescue": false,
+      "any_diagnostic_top9_rescue": true,
+      "surface_class": "exact_initial_present_but_remaining_text_ranked_below9",
+      "first_choice_initial_wrong": true,
+      "target_initial_available_first9": true,
+      "target_first_two_characters_available_first9": true,
+      "near_variants_first9": [],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 2,
+        "text": "打唔到知",
+        "edit_distance": 1
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": true,
+      "example_selection_reasons": [
+        "first_four_misses_by_id_in_length_band"
+      ],
+      "first9": [
+        {
+          "text": "抌都知",
+          "reading": "dam2 dou1 zi1",
+          "match_type": "composed"
+        },
+        {
+          "text": "打唔到知",
+          "reading": "daa2 m4 dou2 zi1",
+          "match_type": "composed"
+        },
+        {
+          "text": "抌都而",
+          "reading": "dam2 dou1 ji4",
+          "match_type": "composed"
+        },
+        {
+          "text": "打唔到而",
+          "reading": "daa2 m4 dou2 ji4",
+          "match_type": "composed"
+        },
+        {
+          "text": "抌都只",
+          "reading": "dam2 dou1 zi2",
+          "match_type": "composed"
+        },
+        {
+          "text": "打唔到只",
+          "reading": "daa2 m4 dou2 zi2",
+          "match_type": "composed"
+        },
+        {
+          "text": "抌度知",
+          "reading": "dam2 dou6 zi1",
+          "match_type": "composed"
+        },
+        {
+          "text": "抌導致",
+          "reading": "dam2 dou6 zi3",
+          "match_type": "composed"
+        },
+        {
+          "text": "噉都知",
+          "reading": "daam6 dou1 zi1",
+          "match_type": "composed"
+        }
+      ]
+    },
+    {
+      "id": "lp076",
+      "text": "呢個字點樣打",
+      "reading": "ni1 go3 zi6 dim2 joeng2 daa2",
+      "input": "nigojidimyeungda",
+      "length_band": "6-8",
+      "category": "technical_input",
+      "primary_exact_text_rank": 32,
+      "outside_first90": false,
+      "profile_ranks": {
+        "fresh": 32,
+        "short_preferences": 2,
+        "heavy_short_preferences": 2
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": 32,
+        "strict_jyutping_toned": 4,
+        "strict_jyutping_tone_free": 19
+      },
+      "diagnostic_rescue_class": "toned_only_rescue_top9",
+      "strict_toned_top90_rescue": false,
+      "any_diagnostic_top9_rescue": true,
+      "surface_class": "near_variant_in_first9",
+      "first_choice_initial_wrong": true,
+      "target_initial_available_first9": false,
+      "target_first_two_characters_available_first9": false,
+      "near_variants_first9": [
+        {
+          "rank": 4,
+          "text": "哩個字點樣打",
+          "kind": "colloquial_written_near_variant",
+          "substitutions": [
+            {
+              "position_1based": 1,
+              "expected": "呢",
+              "observed": "哩"
+            }
+          ]
+        }
+      ],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 4,
+        "text": "哩個字點樣打",
+        "edit_distance": 1
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": false,
+      "example_selection_reasons": [],
+      "first9": [
+        {
+          "text": "哩個知點樣打",
+          "reading": "ni1 go3 zi1 dim2 joeng2 daa2",
+          "match_type": "composed"
+        },
+        {
+          "text": "哩個而點樣打",
+          "reading": "ni1 go3 ji4 dim2 joeng2 daa2",
+          "match_type": "composed"
+        },
+        {
+          "text": "哩個只點樣打",
+          "reading": "ni1 go3 zi2 dim2 joeng2 daa2",
+          "match_type": "composed"
+        },
+        {
+          "text": "哩個字點樣打",
+          "reading": "ni1 go3 zi6 dim2 joeng2 daa2",
+          "match_type": "composed"
+        },
+        {
+          "text": "哩個咦點樣打",
+          "reading": "ni1 go3 ji2 dim2 joeng2 daa2",
+          "match_type": "composed"
+        },
+        {
+          "text": "哩個二點樣打",
+          "reading": "ni1 go3 ji6 dim2 joeng2 daa2",
+          "match_type": "composed"
+        },
+        {
+          "text": "哩個依點樣打",
+          "reading": "ni1 go3 ji1 dim2 joeng2 daa2",
+          "match_type": "composed"
+        },
+        {
+          "text": "哩個以點樣打",
+          "reading": "ni1 go3 ji5 dim2 joeng2 daa2",
+          "match_type": "composed"
+        },
+        {
+          "text": "哩個之點樣打",
+          "reading": "ni1 go3 zi1 dim2 joeng2 daa2",
+          "match_type": "composed"
+        }
+      ]
+    },
+    {
+      "id": "lp080",
+      "text": "你可唔可以教我點樣用呢個",
+      "reading": "nei5 ho2 m4 ho2 ji5 gaau3 ngo5 dim2 joeng2 jung6 ni1 go3",
+      "input": "neihomhoyigaaungodimyeungyungnigo",
+      "length_band": "9-12",
+      "category": "technical_input",
+      "primary_exact_text_rank": 54,
+      "outside_first90": false,
+      "profile_ranks": {
+        "fresh": 54,
+        "short_preferences": 29,
+        "heavy_short_preferences": 24
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": 54,
+        "strict_jyutping_toned": 5,
+        "strict_jyutping_tone_free": 22
+      },
+      "diagnostic_rescue_class": "toned_only_rescue_top9",
+      "strict_toned_top90_rescue": false,
+      "any_diagnostic_top9_rescue": true,
+      "surface_class": "exact_initial_present_but_remaining_text_ranked_below9",
+      "first_choice_initial_wrong": false,
+      "target_initial_available_first9": true,
+      "target_first_two_characters_available_first9": true,
+      "near_variants_first9": [],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 2,
+        "text": "你好唔可以教我點樣用哩個",
+        "edit_distance": 2
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": false,
+      "example_selection_reasons": [],
+      "first9": [
+        {
+          "text": "你好唔可以搞我點樣用哩個",
+          "reading": "nei5 hou2 m4 ho2 ji5 gaau2 ngo5 dim2 joeng2 jung6 ni1 go3",
+          "match_type": "composed"
+        },
+        {
+          "text": "你好唔可以教我點樣用哩個",
+          "reading": "nei5 hou2 m4 ho2 ji5 gaau3 ngo5 dim2 joeng2 jung6 ni1 go3",
+          "match_type": "composed"
+        },
+        {
+          "text": "你可唔可以搞我點樣用哩個",
+          "reading": "nei5 ho2 m4 ho2 ji5 gaau2 ngo5 dim2 joeng2 jung6 ni1 go3",
+          "match_type": "composed"
+        },
+        {
+          "text": "你好唔可以交我點樣用哩個",
+          "reading": "nei5 hou2 m4 ho2 ji5 gaau1 ngo5 dim2 joeng2 jung6 ni1 go3",
+          "match_type": "composed"
+        },
+        {
+          "text": "你好唔可以搞我點樣用呢個",
+          "reading": "nei5 hou2 m4 ho2 ji5 gaau2 ngo5 dim2 joeng2 jung6 ni1 go3",
+          "match_type": "composed"
+        },
+        {
+          "text": "你好唔可以攪我點樣用哩個",
+          "reading": "nei5 hou2 m4 ho2 ji5 gaau2 ngo5 dim2 joeng2 jung6 ni1 go3",
+          "match_type": "composed"
+        },
+        {
+          "text": "你好唔可以較我點樣用哩個",
+          "reading": "nei5 hou2 m4 ho2 ji5 gaau3 ngo5 dim2 joeng2 jung6 ni1 go3",
+          "match_type": "composed"
+        },
+        {
+          "text": "你呵唔可以搞我點樣用哩個",
+          "reading": "nei5 ho2 m4 ho2 ji5 gaau2 ngo5 dim2 joeng2 jung6 ni1 go3",
+          "match_type": "composed"
+        },
+        {
+          "text": "妮可唔可以搞我點樣用哩個",
+          "reading": "nei4 ho2 m4 ho2 ji5 gaau2 ngo5 dim2 joeng2 jung6 ni1 go3",
+          "match_type": "composed"
+        }
+      ]
+    },
+    {
+      "id": "lp081",
+      "text": "呢部電腦點解成日都咁慢",
+      "reading": "ni1 bou6 din6 nou5 dim2 gaai2 sing4 jat6 dou1 gam3 maan6",
+      "input": "niboudinnoudimgaaisingyatdougammaan",
+      "length_band": "9-12",
+      "category": "technical_input",
+      "primary_exact_text_rank": null,
+      "outside_first90": true,
+      "profile_ranks": {
+        "fresh": null,
+        "short_preferences": null,
+        "heavy_short_preferences": 63
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": null,
+        "strict_jyutping_toned": 1,
+        "strict_jyutping_tone_free": null
+      },
+      "diagnostic_rescue_class": "toned_only_rescue_top9",
+      "strict_toned_top90_rescue": true,
+      "any_diagnostic_top9_rescue": true,
+      "surface_class": "exact_initial_present_but_remaining_text_ranked_below9",
+      "first_choice_initial_wrong": false,
+      "target_initial_available_first9": true,
+      "target_first_two_characters_available_first9": true,
+      "near_variants_first9": [],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 1,
+        "text": "呢部電腦點解成日都今晚",
+        "edit_distance": 2
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": true,
+      "example_selection_reasons": [
+        "all_fresh_plain_yale_outside_first90"
+      ],
+      "first9": [
+        {
+          "text": "呢部電腦點解成日都今晚",
+          "reading": "ni1 bou6 din6 nou5 dim2 gaai2 sing4 jat6 dou1 gam1 maan5",
+          "match_type": "composed"
+        },
+        {
+          "text": "呢部電腦點解成日度今晚",
+          "reading": "ni1 bou6 din6 nou5 dim2 gaai2 sing4 jat6 dou6 gam1 maan5",
+          "match_type": "composed"
+        },
+        {
+          "text": "呢步電腦點解成日都今晚",
+          "reading": "ni1 bou6 din6 nou5 dim2 gaai2 sing4 jat6 dou1 gam1 maan5",
+          "match_type": "composed"
+        },
+        {
+          "text": "呢寶電腦點解成日都今晚",
+          "reading": "ni1 bou2 din6 nou5 dim2 gaai2 sing4 jat6 dou1 gam1 maan5",
+          "match_type": "composed"
+        },
+        {
+          "text": "呢報電腦點解成日都今晚",
+          "reading": "ni1 bou3 din6 nou5 dim2 gaai2 sing4 jat6 dou1 gam1 maan5",
+          "match_type": "composed"
+        },
+        {
+          "text": "呢簿電腦點解成日都今晚",
+          "reading": "ni1 bou2 din6 nou5 dim2 gaai2 sing4 jat6 dou1 gam1 maan5",
+          "match_type": "composed"
+        },
+        {
+          "text": "呢煲電腦點解成日都今晚",
+          "reading": "ni1 bou1 din6 nou5 dim2 gaai2 sing4 jat6 dou1 gam1 maan5",
+          "match_type": "composed"
+        },
+        {
+          "text": "呢布電腦點解成日都今晚",
+          "reading": "ni1 bou3 din6 nou5 dim2 gaai2 sing4 jat6 dou1 gam1 maan5",
+          "match_type": "composed"
+        },
+        {
+          "text": "呢步電腦點解成日度今晚",
+          "reading": "ni1 bou6 din6 nou5 dim2 gaai2 sing4 jat6 dou6 gam1 maan5",
+          "match_type": "composed"
+        }
+      ]
+    },
+    {
+      "id": "lp084",
+      "text": "有冇細碼",
+      "reading": "jau5 mou5 sai3 maa5",
+      "input": "yaumousaima",
+      "length_band": "4-5",
+      "category": "shopping_money",
+      "primary_exact_text_rank": null,
+      "outside_first90": true,
+      "profile_ranks": {
+        "fresh": null,
+        "short_preferences": null,
+        "heavy_short_preferences": null
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": null,
+        "strict_jyutping_toned": 4,
+        "strict_jyutping_tone_free": null
+      },
+      "diagnostic_rescue_class": "toned_only_rescue_top9",
+      "strict_toned_top90_rescue": true,
+      "any_diagnostic_top9_rescue": true,
+      "surface_class": "exact_initial_present_but_remaining_text_ranked_below9",
+      "first_choice_initial_wrong": false,
+      "target_initial_available_first9": true,
+      "target_first_two_characters_available_first9": true,
+      "near_variants_first9": [],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 9,
+        "text": "有冇細嘛",
+        "edit_distance": 1
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": true,
+      "example_selection_reasons": [
+        "all_fresh_plain_yale_outside_first90"
+      ],
+      "first9": [
+        {
+          "text": "有冇洗馬",
+          "reading": "jau5 mou5 sai2 maa5",
+          "match_type": "composed"
+        },
+        {
+          "text": "有冇洗嘛",
+          "reading": "jau5 mou5 sai2 maa3",
+          "match_type": "composed"
+        },
+        {
+          "text": "又冇洗馬",
+          "reading": "jau6 mou5 sai2 maa5",
+          "match_type": "composed"
+        },
+        {
+          "text": "有無洗馬",
+          "reading": "jau5 mou4 sai2 maa5",
+          "match_type": "composed"
+        },
+        {
+          "text": "有冇駛嘛",
+          "reading": "jau5 mou5 sai2 maa3",
+          "match_type": "composed"
+        },
+        {
+          "text": "又冇洗嘛",
+          "reading": "jau6 mou5 sai2 maa3",
+          "match_type": "composed"
+        },
+        {
+          "text": "有無洗嘛",
+          "reading": "jau5 mou4 sai2 maa3",
+          "match_type": "composed"
+        },
+        {
+          "text": "又無洗馬",
+          "reading": "jau6 mou4 sai2 maa5",
+          "match_type": "composed"
+        },
+        {
+          "text": "有冇細嘛",
+          "reading": "jau5 mou5 sai3 maa3",
+          "match_type": "composed"
+        }
+      ]
+    },
+    {
+      "id": "lp088",
+      "text": "買之前我想再比較吓價錢",
+      "reading": "maai5 zi1 cin4 ngo5 soeng2 zoi3 bei2 gaau3 haa5 gaa3 cin2",
+      "input": "maaijichinngoseungjoibeigaauhagachin",
+      "length_band": "9-12",
+      "category": "shopping_money",
+      "primary_exact_text_rank": 10,
+      "outside_first90": false,
+      "profile_ranks": {
+        "fresh": 10,
+        "short_preferences": 10,
+        "heavy_short_preferences": 7
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": 10,
+        "strict_jyutping_toned": 54,
+        "strict_jyutping_tone_free": 7
+      },
+      "diagnostic_rescue_class": "neither_toned_nor_apostrophe_rescues_top9",
+      "strict_toned_top90_rescue": false,
+      "any_diagnostic_top9_rescue": true,
+      "surface_class": "near_variant_in_first9",
+      "first_choice_initial_wrong": true,
+      "target_initial_available_first9": true,
+      "target_first_two_characters_available_first9": true,
+      "near_variants_first9": [
+        {
+          "rank": 2,
+          "text": "買之前我想再比較下價錢",
+          "kind": "colloquial_written_near_variant",
+          "substitutions": [
+            {
+              "position_1based": 9,
+              "expected": "吓",
+              "observed": "下"
+            }
+          ]
+        }
+      ],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 2,
+        "text": "買之前我想再比較下價錢",
+        "edit_distance": 1
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": false,
+      "example_selection_reasons": [],
+      "first9": [
+        {
+          "text": "埋之前我想再比較下價錢",
+          "reading": "maai4 zi1 cin4 ngo5 soeng2 zoi3 bei2 gaau3 haa6 gaa3 cin4",
+          "match_type": "composed"
+        },
+        {
+          "text": "買之前我想再比較下價錢",
+          "reading": "maai5 zi1 cin4 ngo5 soeng2 zoi3 bei2 gaau3 haa6 gaa3 cin4",
+          "match_type": "composed"
+        },
+        {
+          "text": "埋以前我想再比較下價錢",
+          "reading": "maai4 ji5 cin4 ngo5 soeng2 zoi3 bei2 gaau3 haa6 gaa3 cin4",
+          "match_type": "composed"
+        },
+        {
+          "text": "埋之前我上載比較下價錢",
+          "reading": "maai4 zi1 cin4 ngo5 soeng6 zoi3 bei2 gaau3 haa6 gaa3 cin4",
+          "match_type": "composed"
+        },
+        {
+          "text": "埋之前我想再比較吓價錢",
+          "reading": "maai4 zi1 cin4 ngo5 soeng2 zoi3 bei2 gaau3 haa2 gaa3 cin4",
+          "match_type": "composed"
+        },
+        {
+          "text": "埋之前我想在比較下價錢",
+          "reading": "maai4 zi1 cin4 ngo5 soeng2 zoi6 bei2 gaau3 haa6 gaa3 cin4",
+          "match_type": "composed"
+        },
+        {
+          "text": "買以前我想再比較下價錢",
+          "reading": "maai5 ji5 cin4 ngo5 soeng2 zoi3 bei2 gaau3 haa6 gaa3 cin4",
+          "match_type": "composed"
+        },
+        {
+          "text": "買之前我上載比較下價錢",
+          "reading": "maai5 zi1 cin4 ngo5 soeng6 zoi3 bei2 gaau3 haa6 gaa3 cin4",
+          "match_type": "composed"
+        },
+        {
+          "text": "埋以前我上載比較下價錢",
+          "reading": "maai4 ji5 cin4 ngo5 soeng6 zoi3 bei2 gaau3 haa6 gaa3 cin4",
+          "match_type": "composed"
+        }
+      ]
+    },
+    {
+      "id": "lp089",
+      "text": "如果唔啱用可唔可以退錢",
+      "reading": "jyu4 gwo2 m4 ngaam1 jung6 ho2 m4 ho2 ji5 teoi3 cin2",
+      "input": "yugwomngaamyunghomhoyiteuichin",
+      "length_band": "9-12",
+      "category": "shopping_money",
+      "primary_exact_text_rank": 45,
+      "outside_first90": false,
+      "profile_ranks": {
+        "fresh": 45,
+        "short_preferences": 45,
+        "heavy_short_preferences": 45
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": 45,
+        "strict_jyutping_toned": 1,
+        "strict_jyutping_tone_free": 16
+      },
+      "diagnostic_rescue_class": "toned_only_rescue_top9",
+      "strict_toned_top90_rescue": false,
+      "any_diagnostic_top9_rescue": true,
+      "surface_class": "exact_initial_present_but_remaining_text_ranked_below9",
+      "first_choice_initial_wrong": false,
+      "target_initial_available_first9": true,
+      "target_first_two_characters_available_first9": true,
+      "near_variants_first9": [],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 9,
+        "text": "如果唔啱用好唔可以退錢",
+        "edit_distance": 1
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": false,
+      "example_selection_reasons": [],
+      "first9": [
+        {
+          "text": "如果唔啱用好唔可以推闡",
+          "reading": "jyu4 gwo2 m4 ngaam1 jung6 hou2 m4 ho2 ji5 teoi1 cin2",
+          "match_type": "composed"
+        },
+        {
+          "text": "如果唔啱用可唔可以推闡",
+          "reading": "jyu4 gwo2 m4 ngaam1 jung6 ho2 m4 ho2 ji5 teoi1 cin2",
+          "match_type": "composed"
+        },
+        {
+          "text": "如果唔啱用好唔可以推錢",
+          "reading": "jyu4 gwo2 m4 ngaam1 jung6 hou2 m4 ho2 ji5 teoi1 cin2",
+          "match_type": "composed"
+        },
+        {
+          "text": "如果唔岩用好唔可以推闡",
+          "reading": "jyu4 gwo2 m4 ngaam4 jung6 hou2 m4 ho2 ji5 teoi1 cin2",
+          "match_type": "composed"
+        },
+        {
+          "text": "如果唔啱用呵唔可以推闡",
+          "reading": "jyu4 gwo2 m4 ngaam1 jung6 ho2 m4 ho2 ji5 teoi1 cin2",
+          "match_type": "composed"
+        },
+        {
+          "text": "如果唔啱用好唔可以推前",
+          "reading": "jyu4 gwo2 m4 ngaam1 jung6 hou2 m4 ho2 ji5 teoi1 cin4",
+          "match_type": "composed"
+        },
+        {
+          "text": "如果唔啱用好唔可以腿錢",
+          "reading": "jyu4 gwo2 m4 ngaam1 jung6 hou2 m4 ho2 ji5 teoi2 cin2",
+          "match_type": "composed"
+        },
+        {
+          "text": "如果唔啱用好唔可以腿前",
+          "reading": "jyu4 gwo2 m4 ngaam1 jung6 hou2 m4 ho2 ji5 teoi2 cin4",
+          "match_type": "composed"
+        },
+        {
+          "text": "如果唔啱用好唔可以退錢",
+          "reading": "jyu4 gwo2 m4 ngaam1 jung6 hou2 m4 ho2 ji5 teoi3 cin2",
+          "match_type": "composed"
+        }
+      ]
+    },
+    {
+      "id": "lp090",
+      "text": "呢個價錢已經包埋運費未",
+      "reading": "ni1 go3 gaa3 cin2 ji5 ging1 baau1 maai4 wan6 fai3 mei6",
+      "input": "nigogachinyigingbaaumaaiwanfaimei",
+      "length_band": "9-12",
+      "category": "shopping_money",
+      "primary_exact_text_rank": 69,
+      "outside_first90": false,
+      "profile_ranks": {
+        "fresh": 69,
+        "short_preferences": 14,
+        "heavy_short_preferences": 14
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": 69,
+        "strict_jyutping_toned": 3,
+        "strict_jyutping_tone_free": 24
+      },
+      "diagnostic_rescue_class": "toned_only_rescue_top9",
+      "strict_toned_top90_rescue": false,
+      "any_diagnostic_top9_rescue": true,
+      "surface_class": "near_variant_in_first9",
+      "first_choice_initial_wrong": true,
+      "target_initial_available_first9": false,
+      "target_first_two_characters_available_first9": false,
+      "near_variants_first9": [
+        {
+          "rank": 2,
+          "text": "哩個價錢已經包埋運費未",
+          "kind": "colloquial_written_near_variant",
+          "substitutions": [
+            {
+              "position_1based": 1,
+              "expected": "呢",
+              "observed": "哩"
+            }
+          ]
+        }
+      ],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 2,
+        "text": "哩個價錢已經包埋運費未",
+        "edit_distance": 1
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": false,
+      "example_selection_reasons": [],
+      "first9": [
+        {
+          "text": "哩個價錢已經包埋搵快未",
+          "reading": "ni1 go3 gaa3 cin4 ji5 ging1 baau1 maai4 wan2 faai3 mei6",
+          "match_type": "composed"
+        },
+        {
+          "text": "哩個價錢已經包埋運費未",
+          "reading": "ni1 go3 gaa3 cin4 ji5 ging1 baau1 maai4 wan6 fai3 mei6",
+          "match_type": "composed"
+        },
+        {
+          "text": "哩個價錢已經飽埋搵快未",
+          "reading": "ni1 go3 gaa3 cin4 ji5 ging1 baau2 maai4 wan2 faai3 mei6",
+          "match_type": "composed"
+        },
+        {
+          "text": "哩個價錢已經爆埋搵快未",
+          "reading": "ni1 go3 gaa3 cin4 ji5 ging1 baau3 maai4 wan2 faai3 mei6",
+          "match_type": "composed"
+        },
+        {
+          "text": "哩個價錢已經飽埋運費未",
+          "reading": "ni1 go3 gaa3 cin4 ji5 ging1 baau2 maai4 wan6 fai3 mei6",
+          "match_type": "composed"
+        },
+        {
+          "text": "哩個價錢已經爆埋運費未",
+          "reading": "ni1 go3 gaa3 cin4 ji5 ging1 baau3 maai4 wan6 fai3 mei6",
+          "match_type": "composed"
+        },
+        {
+          "text": "哩個價錢已經包買搵快未",
+          "reading": "ni1 go3 gaa3 cin4 ji5 ging1 baau1 maai5 wan2 faai3 mei6",
+          "match_type": "composed"
+        },
+        {
+          "text": "哩個價錢已經包買運費未",
+          "reading": "ni1 go3 gaa3 cin4 ji5 ging1 baau1 maai5 wan6 fai3 mei6",
+          "match_type": "composed"
+        },
+        {
+          "text": "哩個價錢已經飽買搵快未",
+          "reading": "ni1 go3 gaa3 cin4 ji5 ging1 baau2 maai5 wan2 faai3 mei6",
+          "match_type": "composed"
+        }
+      ]
+    }
+  ],
+  "all_29_ordinary_habitual_ng_cases": [
+    {
+      "id": "lp003",
+      "text": "點解唔得",
+      "proper_yale_input": "dimgaaimdak",
+      "habitual_ng_input": "dimgaaingdak",
+      "proper_yale_ranks": {
+        "fresh": 1,
+        "short_preferences": 1,
+        "heavy_short_preferences": 1
+      },
+      "habitual_ng_ranks": {
+        "fresh": null,
+        "short_preferences": 1,
+        "heavy_short_preferences": 1
+      }
+    },
+    {
+      "id": "lp006",
+      "text": "你知唔知點樣去",
+      "proper_yale_input": "neijimjidimyeungheui",
+      "habitual_ng_input": "neijingjidimyeungheui",
+      "proper_yale_ranks": {
+        "fresh": 6,
+        "short_preferences": 16,
+        "heavy_short_preferences": 15
+      },
+      "habitual_ng_ranks": {
+        "fresh": null,
+        "short_preferences": null,
+        "heavy_short_preferences": null
+      }
+    },
+    {
+      "id": "lp010",
+      "text": "我唔知道",
+      "proper_yale_input": "ngomjidou",
+      "habitual_ng_input": "ngongjidou",
+      "proper_yale_ranks": {
+        "fresh": 1,
+        "short_preferences": 1,
+        "heavy_short_preferences": 1
+      },
+      "habitual_ng_ranks": {
+        "fresh": null,
+        "short_preferences": 2,
+        "heavy_short_preferences": 2
+      }
+    },
+    {
+      "id": "lp011",
+      "text": "唔好咁嘈",
+      "proper_yale_input": "mhougamchou",
+      "habitual_ng_input": "nghougamchou",
+      "proper_yale_ranks": {
+        "fresh": 4,
+        "short_preferences": 4,
+        "heavy_short_preferences": 3
+      },
+      "habitual_ng_ranks": {
+        "fresh": null,
+        "short_preferences": 4,
+        "heavy_short_preferences": 2
+      }
+    },
+    {
+      "id": "lp013",
+      "text": "我而家唔想講",
+      "proper_yale_input": "ngoyigamseunggong",
+      "habitual_ng_input": "ngoyigangseunggong",
+      "proper_yale_ranks": {
+        "fresh": 2,
+        "short_preferences": 2,
+        "heavy_short_preferences": 3
+      },
+      "habitual_ng_ranks": {
+        "fresh": null,
+        "short_preferences": 1,
+        "heavy_short_preferences": 1
+      }
+    },
+    {
+      "id": "lp014",
+      "text": "呢件事唔關我事",
+      "proper_yale_input": "niginsimgwaanngosi",
+      "habitual_ng_input": "niginsinggwaanngosi",
+      "proper_yale_ranks": {
+        "fresh": 1,
+        "short_preferences": 1,
+        "heavy_short_preferences": 1
+      },
+      "habitual_ng_ranks": {
+        "fresh": null,
+        "short_preferences": 31,
+        "heavy_short_preferences": 31
+      }
+    },
+    {
+      "id": "lp016",
+      "text": "我唔係唔想幫你手㗎",
+      "proper_yale_input": "ngomhaimseungbongneisauga",
+      "habitual_ng_input": "ngonghaingseungbongneisauga",
+      "proper_yale_ranks": {
+        "fresh": 3,
+        "short_preferences": 3,
+        "heavy_short_preferences": 2
+      },
+      "habitual_ng_ranks": {
+        "fresh": null,
+        "short_preferences": 3,
+        "heavy_short_preferences": 2
+      }
+    },
+    {
+      "id": "lp018",
+      "text": "呢個答案唔一定啱晒",
+      "proper_yale_input": "nigodaaponmyatdingngaamsaai",
+      "habitual_ng_input": "nigodaaponngyatdingngaamsaai",
+      "proper_yale_ranks": {
+        "fresh": 4,
+        "short_preferences": 2,
+        "heavy_short_preferences": 2
+      },
+      "habitual_ng_ranks": {
+        "fresh": null,
+        "short_preferences": 2,
+        "heavy_short_preferences": 2
+      }
+    },
+    {
+      "id": "lp023",
+      "text": "你聽朝得唔得閒",
+      "proper_yale_input": "neitingjiudakmdakhaan",
+      "habitual_ng_input": "neitingjiudakngdakhaan",
+      "proper_yale_ranks": {
+        "fresh": 1,
+        "short_preferences": 1,
+        "heavy_short_preferences": 1
+      },
+      "habitual_ng_ranks": {
+        "fresh": null,
+        "short_preferences": 2,
+        "heavy_short_preferences": 2
+      }
+    },
+    {
+      "id": "lp030",
+      "text": "少啲糖唔該",
+      "proper_yale_input": "siuditongmgoi",
+      "habitual_ng_input": "siuditongnggoi",
+      "proper_yale_ranks": {
+        "fresh": 8,
+        "short_preferences": 8,
+        "heavy_short_preferences": 8
+      },
+      "habitual_ng_ranks": {
+        "fresh": null,
+        "short_preferences": 65,
+        "heavy_short_preferences": 65
+      }
+    },
+    {
+      "id": "lp034",
+      "text": "如果唔夠飽可以再叫",
+      "proper_yale_input": "yugwomgaubaauhoyijoigiu",
+      "habitual_ng_input": "yugwonggaubaauhoyijoigiu",
+      "proper_yale_ranks": {
+        "fresh": 9,
+        "short_preferences": 9,
+        "heavy_short_preferences": 9
+      },
+      "habitual_ng_ranks": {
+        "fresh": null,
+        "short_preferences": 22,
+        "heavy_short_preferences": 22
+      }
+    },
+    {
+      "id": "lp036",
+      "text": "呢間餐廳嘅嘢唔好食",
+      "proper_yale_input": "nigaanchaantenggeyemhousik",
+      "habitual_ng_input": "nigaanchaantenggeyenghousik",
+      "proper_yale_ranks": {
+        "fresh": 3,
+        "short_preferences": 3,
+        "heavy_short_preferences": 3
+      },
+      "habitual_ng_ranks": {
+        "fresh": null,
+        "short_preferences": 7,
+        "heavy_short_preferences": 10
+      }
+    },
+    {
+      "id": "lp039",
+      "text": "唔好行住",
+      "proper_yale_input": "mhouhaangjyu",
+      "habitual_ng_input": "nghouhaangjyu",
+      "proper_yale_ranks": {
+        "fresh": 1,
+        "short_preferences": 1,
+        "heavy_short_preferences": 1
+      },
+      "habitual_ng_ranks": {
+        "fresh": null,
+        "short_preferences": 1,
+        "heavy_short_preferences": 1
+      }
+    },
+    {
+      "id": "lp042",
+      "text": "我唔識去車站",
+      "proper_yale_input": "ngomsikheuichejaam",
+      "habitual_ng_input": "ngongsikheuichejaam",
+      "proper_yale_ranks": {
+        "fresh": 2,
+        "short_preferences": 2,
+        "heavy_short_preferences": 2
+      },
+      "habitual_ng_ranks": {
+        "fresh": null,
+        "short_preferences": 2,
+        "heavy_short_preferences": 2
+      }
+    },
+    {
+      "id": "lp045",
+      "text": "落雨我哋就唔好出去",
+      "proper_yale_input": "lokyungodeijaumhoucheutheui",
+      "habitual_ng_input": "lokyungodeijaunghoucheutheui",
+      "proper_yale_ranks": {
+        "fresh": 3,
+        "short_preferences": 8,
+        "heavy_short_preferences": 3
+      },
+      "habitual_ng_ranks": {
+        "fresh": null,
+        "short_preferences": 8,
+        "heavy_short_preferences": 3
+      }
+    },
+    {
+      "id": "lp047",
+      "text": "唔好開門",
+      "proper_yale_input": "mhouhoimun",
+      "habitual_ng_input": "nghouhoimun",
+      "proper_yale_ranks": {
+        "fresh": 1,
+        "short_preferences": 1,
+        "heavy_short_preferences": 1
+      },
+      "habitual_ng_ranks": {
+        "fresh": null,
+        "short_preferences": 1,
+        "heavy_short_preferences": 1
+      }
+    },
+    {
+      "id": "lp051",
+      "text": "今晚唔使煮飯",
+      "proper_yale_input": "gammaanmsaijyufaan",
+      "habitual_ng_input": "gammaanngsaijyufaan",
+      "proper_yale_ranks": {
+        "fresh": 1,
+        "short_preferences": 1,
+        "heavy_short_preferences": 1
+      },
+      "habitual_ng_ranks": {
+        "fresh": null,
+        "short_preferences": null,
+        "heavy_short_preferences": null
+      }
+    },
+    {
+      "id": "lp057",
+      "text": "我唔明白",
+      "proper_yale_input": "ngommingbaak",
+      "habitual_ng_input": "ngongmingbaak",
+      "proper_yale_ranks": {
+        "fresh": 1,
+        "short_preferences": 1,
+        "heavy_short_preferences": 1
+      },
+      "habitual_ng_ranks": {
+        "fresh": null,
+        "short_preferences": 1,
+        "heavy_short_preferences": 1
+      }
+    },
+    {
+      "id": "lp061",
+      "text": "可唔可以幫我再檢查一次",
+      "proper_yale_input": "homhoyibongngojoigimchayatchi",
+      "habitual_ng_input": "honghoyibongngojoigimchayatchi",
+      "proper_yale_ranks": {
+        "fresh": 3,
+        "short_preferences": 3,
+        "heavy_short_preferences": 3
+      },
+      "habitual_ng_ranks": {
+        "fresh": null,
+        "short_preferences": 61,
+        "heavy_short_preferences": 61
+      }
+    },
+    {
+      "id": "lp065",
+      "text": "唔該晒你",
+      "proper_yale_input": "mgoisaainei",
+      "habitual_ng_input": "nggoisaainei",
+      "proper_yale_ranks": {
+        "fresh": 2,
+        "short_preferences": 2,
+        "heavy_short_preferences": 2
+      },
+      "habitual_ng_ranks": {
+        "fresh": null,
+        "short_preferences": 3,
+        "heavy_short_preferences": 3
+      }
+    },
+    {
+      "id": "lp068",
+      "text": "你可唔可以再講",
+      "proper_yale_input": "neihomhoyijoigong",
+      "habitual_ng_input": "neihonghoyijoigong",
+      "proper_yale_ranks": {
+        "fresh": 3,
+        "short_preferences": 3,
+        "heavy_short_preferences": 3
+      },
+      "habitual_ng_ranks": {
+        "fresh": null,
+        "short_preferences": 64,
+        "heavy_short_preferences": 61
+      }
+    },
+    {
+      "id": "lp071",
+      "text": "如果你唔方便就遲啲先講",
+      "proper_yale_input": "yugwoneimfongbinjauchidisingong",
+      "habitual_ng_input": "yugwoneingfongbinjauchidisingong",
+      "proper_yale_ranks": {
+        "fresh": 1,
+        "short_preferences": 1,
+        "heavy_short_preferences": 1
+      },
+      "habitual_ng_ranks": {
+        "fresh": null,
+        "short_preferences": 1,
+        "heavy_short_preferences": 1
+      }
+    },
+    {
+      "id": "lp072",
+      "text": "我聽唔清楚你頭先講乜嘢",
+      "proper_yale_input": "ngotengmchingchoneitausingongmatye",
+      "habitual_ng_input": "ngotengngchingchoneitausingongmatye",
+      "proper_yale_ranks": {
+        "fresh": 1,
+        "short_preferences": 1,
+        "heavy_short_preferences": 1
+      },
+      "habitual_ng_ranks": {
+        "fresh": null,
+        "short_preferences": 1,
+        "heavy_short_preferences": 1
+      }
+    },
+    {
+      "id": "lp073",
+      "text": "打唔到字",
+      "proper_yale_input": "damdouji",
+      "habitual_ng_input": "dangdouji",
+      "proper_yale_ranks": {
+        "fresh": 17,
+        "short_preferences": 2,
+        "heavy_short_preferences": 2
+      },
+      "habitual_ng_ranks": {
+        "fresh": null,
+        "short_preferences": null,
+        "heavy_short_preferences": null
+      }
+    },
+    {
+      "id": "lp080",
+      "text": "你可唔可以教我點樣用呢個",
+      "proper_yale_input": "neihomhoyigaaungodimyeungyungnigo",
+      "habitual_ng_input": "neihonghoyigaaungodimyeungyungnigo",
+      "proper_yale_ranks": {
+        "fresh": 54,
+        "short_preferences": 29,
+        "heavy_short_preferences": 24
+      },
+      "habitual_ng_ranks": {
+        "fresh": null,
+        "short_preferences": null,
+        "heavy_short_preferences": null
+      }
+    },
+    {
+      "id": "lp083",
+      "text": "唔使找喇",
+      "proper_yale_input": "msaijaaula",
+      "habitual_ng_input": "ngsaijaaula",
+      "proper_yale_ranks": {
+        "fresh": 4,
+        "short_preferences": 4,
+        "heavy_short_preferences": 4
+      },
+      "habitual_ng_ranks": {
+        "fresh": null,
+        "short_preferences": null,
+        "heavy_short_preferences": null
+      }
+    },
+    {
+      "id": "lp085",
+      "text": "呢件衫唔啱着",
+      "proper_yale_input": "niginsaammngaamjeuk",
+      "habitual_ng_input": "niginsaamngngaamjeuk",
+      "proper_yale_ranks": {
+        "fresh": 3,
+        "short_preferences": 3,
+        "heavy_short_preferences": 3
+      },
+      "habitual_ng_ranks": {
+        "fresh": null,
+        "short_preferences": 6,
+        "heavy_short_preferences": 6
+      }
+    },
+    {
+      "id": "lp086",
+      "text": "可唔可以平啲",
+      "proper_yale_input": "homhoyipengdi",
+      "habitual_ng_input": "honghoyipengdi",
+      "proper_yale_ranks": {
+        "fresh": 2,
+        "short_preferences": 2,
+        "heavy_short_preferences": 2
+      },
+      "habitual_ng_ranks": {
+        "fresh": null,
+        "short_preferences": 50,
+        "heavy_short_preferences": 50
+      }
+    },
+    {
+      "id": "lp089",
+      "text": "如果唔啱用可唔可以退錢",
+      "proper_yale_input": "yugwomngaamyunghomhoyiteuichin",
+      "habitual_ng_input": "yugwongngaamyunghonghoyiteuichin",
+      "proper_yale_ranks": {
+        "fresh": 45,
+        "short_preferences": 45,
+        "heavy_short_preferences": 45
+      },
+      "habitual_ng_ranks": {
+        "fresh": null,
+        "short_preferences": null,
+        "heavy_short_preferences": null
+      }
+    }
+  ],
+  "fixed_examples": [
+    {
+      "id": "lp008",
+      "text": "點解你今日咁遲先到",
+      "reading": "dim2 gaai2 nei5 gam1 jat6 gam3 ci4 sin1 dou3",
+      "input": "dimgaaineigamyatgamchisindou",
+      "length_band": "9-12",
+      "category": "questions",
+      "primary_exact_text_rank": null,
+      "outside_first90": true,
+      "profile_ranks": {
+        "fresh": null,
+        "short_preferences": null,
+        "heavy_short_preferences": null
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": null,
+        "strict_jyutping_toned": 1,
+        "strict_jyutping_tone_free": null
+      },
+      "diagnostic_rescue_class": "toned_only_rescue_top9",
+      "strict_toned_top90_rescue": true,
+      "any_diagnostic_top9_rescue": true,
+      "surface_class": "exact_initial_present_but_remaining_text_ranked_below9",
+      "first_choice_initial_wrong": false,
+      "target_initial_available_first9": true,
+      "target_first_two_characters_available_first9": true,
+      "near_variants_first9": [],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 1,
+        "text": "點解你今日今次先都",
+        "edit_distance": 3
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": true,
+      "example_selection_reasons": [
+        "first_four_misses_by_id_in_length_band",
+        "all_fresh_plain_yale_outside_first90"
+      ],
+      "first9": [
+        {
+          "text": "點解你今日今次先都",
+          "reading": "dim2 gaai2 nei5 gam1 jat6 gam1 ci3 sin1 dou1",
+          "match_type": "composed"
+        },
+        {
+          "text": "點解你今日噉癡線都",
+          "reading": "dim2 gaai2 nei5 gam1 jat6 gam2 ci1 sin3 dou1",
+          "match_type": "composed"
+        },
+        {
+          "text": "點解你今日咁癡線都",
+          "reading": "dim2 gaai2 nei5 gam1 jat6 gam3 ci1 sin3 dou1",
+          "match_type": "composed"
+        },
+        {
+          "text": "點解你今日今次先度",
+          "reading": "dim2 gaai2 nei5 gam1 jat6 gam1 ci3 sin1 dou6",
+          "match_type": "composed"
+        },
+        {
+          "text": "點解你今日噉黐線都",
+          "reading": "dim2 gaai2 nei5 gam1 jat6 gam2 ci1 sin3 dou1",
+          "match_type": "composed"
+        },
+        {
+          "text": "點解你今日咁黐線都",
+          "reading": "dim2 gaai2 nei5 gam1 jat6 gam3 ci1 sin3 dou1",
+          "match_type": "composed"
+        },
+        {
+          "text": "點解你今日噉癡線度",
+          "reading": "dim2 gaai2 nei5 gam1 jat6 gam2 ci1 sin3 dou6",
+          "match_type": "composed"
+        },
+        {
+          "text": "點解你今日咁癡線度",
+          "reading": "dim2 gaai2 nei5 gam1 jat6 gam3 ci1 sin3 dou6",
+          "match_type": "composed"
+        },
+        {
+          "text": "點解你今日今次先倒",
+          "reading": "dim2 gaai2 nei5 gam1 jat6 gam1 ci3 sin1 dou2",
+          "match_type": "composed"
+        }
+      ]
+    },
+    {
+      "id": "lp017",
+      "text": "我真係冇諗過會咁樣",
+      "reading": "ngo5 zan1 hai6 mou5 nam2 gwo3 wui5 gam2 joeng2",
+      "input": "ngojanhaimounamgwowuigamyeung",
+      "length_band": "9-12",
+      "category": "negation_preferences",
+      "primary_exact_text_rank": 18,
+      "outside_first90": false,
+      "profile_ranks": {
+        "fresh": 18,
+        "short_preferences": 18,
+        "heavy_short_preferences": 11
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": 18,
+        "strict_jyutping_toned": 40,
+        "strict_jyutping_tone_free": 13
+      },
+      "diagnostic_rescue_class": "neither_toned_nor_apostrophe_rescues_top9",
+      "strict_toned_top90_rescue": false,
+      "any_diagnostic_top9_rescue": false,
+      "surface_class": "near_variant_in_first9",
+      "first_choice_initial_wrong": false,
+      "target_initial_available_first9": true,
+      "target_first_two_characters_available_first9": true,
+      "near_variants_first9": [
+        {
+          "rank": 1,
+          "text": "我真係冇諗過會噉樣",
+          "kind": "colloquial_written_near_variant",
+          "substitutions": [
+            {
+              "position_1based": 8,
+              "expected": "咁",
+              "observed": "噉"
+            }
+          ]
+        }
+      ],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 1,
+        "text": "我真係冇諗過會噉樣",
+        "edit_distance": 1
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": true,
+      "example_selection_reasons": [
+        "first_four_misses_by_id_in_length_band"
+      ],
+      "first9": [
+        {
+          "text": "我真係冇諗過會噉樣",
+          "reading": "ngo5 zan1 hai6 mou5 nam2 gwo3 wui6 gam2 joeng2",
+          "match_type": "composed"
+        },
+        {
+          "text": "我真係冇諗過回噉樣",
+          "reading": "ngo5 zan1 hai6 mou5 nam2 gwo3 wui4 gam2 joeng2",
+          "match_type": "composed"
+        },
+        {
+          "text": "我真係無諗過會噉樣",
+          "reading": "ngo5 zan1 hai6 mou4 nam2 gwo3 wui6 gam2 joeng2",
+          "match_type": "composed"
+        },
+        {
+          "text": "我真係冇諗果會噉樣",
+          "reading": "ngo5 zan1 hai6 mou5 nam2 gwo2 wui6 gam2 joeng2",
+          "match_type": "composed"
+        },
+        {
+          "text": "我真係無諗過回噉樣",
+          "reading": "ngo5 zan1 hai6 mou4 nam2 gwo3 wui4 gam2 joeng2",
+          "match_type": "composed"
+        },
+        {
+          "text": "我真係冇諗果回噉樣",
+          "reading": "ngo5 zan1 hai6 mou5 nam2 gwo2 wui4 gam2 joeng2",
+          "match_type": "composed"
+        },
+        {
+          "text": "我真係冇諗過迴噉樣",
+          "reading": "ngo5 zan1 hai6 mou5 nam2 gwo3 wui4 gam2 joeng2",
+          "match_type": "composed"
+        },
+        {
+          "text": "我真係無諗果會噉樣",
+          "reading": "ngo5 zan1 hai6 mou4 nam2 gwo2 wui6 gam2 joeng2",
+          "match_type": "composed"
+        },
+        {
+          "text": "我人係冇諗過會噉樣",
+          "reading": "ngo5 jan4 hai6 mou5 nam2 gwo3 wui6 gam2 joeng2",
+          "match_type": "composed"
+        }
+      ]
+    },
+    {
+      "id": "lp022",
+      "text": "我今晚會早啲返",
+      "reading": "ngo5 gam1 maan5 wui5 zou2 di1 faan1",
+      "input": "ngogammaanwuijoudifaan",
+      "length_band": "6-8",
+      "category": "time_plans",
+      "primary_exact_text_rank": 11,
+      "outside_first90": false,
+      "profile_ranks": {
+        "fresh": 11,
+        "short_preferences": 13,
+        "heavy_short_preferences": 16
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": 11,
+        "strict_jyutping_toned": 4,
+        "strict_jyutping_tone_free": 11
+      },
+      "diagnostic_rescue_class": "toned_only_rescue_top9",
+      "strict_toned_top90_rescue": false,
+      "any_diagnostic_top9_rescue": true,
+      "surface_class": "exact_initial_present_but_remaining_text_ranked_below9",
+      "first_choice_initial_wrong": false,
+      "target_initial_available_first9": true,
+      "target_first_two_characters_available_first9": true,
+      "near_variants_first9": [],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 1,
+        "text": "我今晚會做啲返",
+        "edit_distance": 1
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": true,
+      "example_selection_reasons": [
+        "first_four_misses_by_id_in_length_band"
+      ],
+      "first9": [
+        {
+          "text": "我今晚會做啲返",
+          "reading": "ngo5 gam1 maan5 wui6 zou6 di1 faan2",
+          "match_type": "composed"
+        },
+        {
+          "text": "我今晚會做啲番",
+          "reading": "ngo5 gam1 maan5 wui6 zou6 di1 faan1",
+          "match_type": "composed"
+        },
+        {
+          "text": "我今晚回做啲返",
+          "reading": "ngo5 gam1 maan5 wui4 zou6 di1 faan2",
+          "match_type": "composed"
+        },
+        {
+          "text": "我噉晚會做啲返",
+          "reading": "ngo5 gam2 maan5 wui2 zou6 di1 faan2",
+          "match_type": "composed"
+        },
+        {
+          "text": "我咁晚會做啲返",
+          "reading": "ngo5 gam3 maan5 wui2 zou6 di1 faan2",
+          "match_type": "composed"
+        },
+        {
+          "text": "我今晚回做啲番",
+          "reading": "ngo5 gam1 maan5 wui4 zou6 di1 faan1",
+          "match_type": "composed"
+        },
+        {
+          "text": "我噉晚會做啲番",
+          "reading": "ngo5 gam2 maan5 wui2 zou6 di1 faan1",
+          "match_type": "composed"
+        },
+        {
+          "text": "我咁晚會做啲番",
+          "reading": "ngo5 gam3 maan5 wui2 zou6 di1 faan1",
+          "match_type": "composed"
+        },
+        {
+          "text": "我今晚會做啲飯",
+          "reading": "ngo5 gam1 maan5 wui6 zou6 di1 faan6",
+          "match_type": "composed"
+        }
+      ]
+    },
+    {
+      "id": "lp024",
+      "text": "我哋約八點半啦",
+      "reading": "ngo5 dei6 joek3 baat3 dim2 bun3 laa1",
+      "input": "ngodeiyeukbaatdimbunla",
+      "length_band": "6-8",
+      "category": "time_plans",
+      "primary_exact_text_rank": 15,
+      "outside_first90": false,
+      "profile_ranks": {
+        "fresh": 15,
+        "short_preferences": 23,
+        "heavy_short_preferences": 23
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": 15,
+        "strict_jyutping_toned": 2,
+        "strict_jyutping_tone_free": 15
+      },
+      "diagnostic_rescue_class": "toned_only_rescue_top9",
+      "strict_toned_top90_rescue": false,
+      "any_diagnostic_top9_rescue": true,
+      "surface_class": "exact_initial_present_but_remaining_text_ranked_below9",
+      "first_choice_initial_wrong": false,
+      "target_initial_available_first9": true,
+      "target_first_two_characters_available_first9": true,
+      "near_variants_first9": [],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 6,
+        "text": "我哋約八點本啦",
+        "edit_distance": 1
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": true,
+      "example_selection_reasons": [
+        "first_four_misses_by_id_in_length_band"
+      ],
+      "first9": [
+        {
+          "text": "我地若八點本啦",
+          "reading": "ngo5 dei6 joek6 baat3 dim2 bun2 laa1",
+          "match_type": "composed"
+        },
+        {
+          "text": "我哋若八點本啦",
+          "reading": "ngo5 dei6 joek6 baat3 dim2 bun2 laa1",
+          "match_type": "composed"
+        },
+        {
+          "text": "我地約八點本啦",
+          "reading": "ngo5 dei6 joek3 baat3 dim2 bun2 laa1",
+          "match_type": "composed"
+        },
+        {
+          "text": "我地若八點本喇",
+          "reading": "ngo5 dei6 joek6 baat3 dim2 bun2 laa3",
+          "match_type": "composed"
+        },
+        {
+          "text": "我地若八點半啦",
+          "reading": "ngo5 dei6 joek6 baat3 dim2 bun3 laa1",
+          "match_type": "composed"
+        },
+        {
+          "text": "我哋約八點本啦",
+          "reading": "ngo5 dei6 joek3 baat3 dim2 bun2 laa1",
+          "match_type": "composed"
+        },
+        {
+          "text": "我哋若八點本喇",
+          "reading": "ngo5 dei6 joek6 baat3 dim2 bun2 laa3",
+          "match_type": "composed"
+        },
+        {
+          "text": "我哋若八點半啦",
+          "reading": "ngo5 dei6 joek6 baat3 dim2 bun3 laa1",
+          "match_type": "composed"
+        },
+        {
+          "text": "我地若八點搬啦",
+          "reading": "ngo5 dei6 joek6 baat3 dim2 bun1 laa1",
+          "match_type": "composed"
+        }
+      ]
+    },
+    {
+      "id": "lp027",
+      "text": "你得閒嗰陣記住覆我",
+      "reading": "nei5 dak1 haan4 go2 zan6 gei3 zyu6 fuk1 ngo5",
+      "input": "neidakhaangojangeijyufukngo",
+      "length_band": "9-12",
+      "category": "time_plans",
+      "primary_exact_text_rank": 21,
+      "outside_first90": false,
+      "profile_ranks": {
+        "fresh": 21,
+        "short_preferences": 21,
+        "heavy_short_preferences": 21
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": 21,
+        "strict_jyutping_toned": 1,
+        "strict_jyutping_tone_free": 1
+      },
+      "diagnostic_rescue_class": "toned_only_rescue_top9",
+      "strict_toned_top90_rescue": false,
+      "any_diagnostic_top9_rescue": true,
+      "surface_class": "exact_initial_present_but_remaining_text_ranked_below9",
+      "first_choice_initial_wrong": false,
+      "target_initial_available_first9": true,
+      "target_first_two_characters_available_first9": true,
+      "near_variants_first9": [],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 1,
+        "text": "你得閒個人記住覆我",
+        "edit_distance": 2
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": true,
+      "example_selection_reasons": [
+        "first_four_misses_by_id_in_length_band"
+      ],
+      "first9": [
+        {
+          "text": "你得閒個人記住覆我",
+          "reading": "nei5 dak1 haan4 go3 jan4 gei3 zyu6 fuk1 ngo5",
+          "match_type": "composed"
+        },
+        {
+          "text": "你得閒個人記住幅我",
+          "reading": "nei5 dak1 haan4 go3 jan4 gei3 zyu6 fuk1 ngo5",
+          "match_type": "composed"
+        },
+        {
+          "text": "你得閒個人記住伏我",
+          "reading": "nei5 dak1 haan4 go3 jan4 gei3 zyu6 fuk6 ngo5",
+          "match_type": "composed"
+        },
+        {
+          "text": "你得閒個人記住復我",
+          "reading": "nei5 dak1 haan4 go3 jan4 gei3 zyu6 fuk6 ngo5",
+          "match_type": "composed"
+        },
+        {
+          "text": "你得閒個人基於覆我",
+          "reading": "nei5 dak1 haan4 go3 jan4 gei1 jyu1 fuk1 ngo5",
+          "match_type": "composed"
+        },
+        {
+          "text": "你得閒個人既住覆我",
+          "reading": "nei5 dak1 haan4 go3 jan4 gei3 zyu6 fuk1 ngo5",
+          "match_type": "composed"
+        },
+        {
+          "text": "你得閒個人記住服我",
+          "reading": "nei5 dak1 haan4 go3 jan4 gei3 zyu6 fuk6 ngo5",
+          "match_type": "composed"
+        },
+        {
+          "text": "你得閒個人基於幅我",
+          "reading": "nei5 dak1 haan4 go3 jan4 gei1 jyu1 fuk1 ngo5",
+          "match_type": "composed"
+        },
+        {
+          "text": "你得閒個人既住幅我",
+          "reading": "nei5 dak1 haan4 go3 jan4 gei3 zyu6 fuk1 ngo5",
+          "match_type": "composed"
+        }
+      ]
+    },
+    {
+      "id": "lp031",
+      "text": "我想食碗牛腩麵",
+      "reading": "ngo5 soeng2 sik6 wun2 ngau4 naam5 min6",
+      "input": "ngoseungsikwunngaunaammin",
+      "length_band": "6-8",
+      "category": "food_drink",
+      "primary_exact_text_rank": 87,
+      "outside_first90": false,
+      "profile_ranks": {
+        "fresh": 87,
+        "short_preferences": 87,
+        "heavy_short_preferences": 40
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": 87,
+        "strict_jyutping_toned": 4,
+        "strict_jyutping_tone_free": 87
+      },
+      "diagnostic_rescue_class": "toned_only_rescue_top9",
+      "strict_toned_top90_rescue": false,
+      "any_diagnostic_top9_rescue": true,
+      "surface_class": "near_variant_in_first9",
+      "first_choice_initial_wrong": false,
+      "target_initial_available_first9": true,
+      "target_first_two_characters_available_first9": true,
+      "near_variants_first9": [
+        {
+          "rank": 5,
+          "text": "我想食碗牛腩面",
+          "kind": "orthographic_near_variant_only",
+          "substitutions": [
+            {
+              "position_1based": 7,
+              "expected": "麵",
+              "observed": "面"
+            }
+          ]
+        }
+      ],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 5,
+        "text": "我想食碗牛腩面",
+        "edit_distance": 1
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": true,
+      "example_selection_reasons": [
+        "first_four_misses_by_id_in_length_band"
+      ],
+      "first9": [
+        {
+          "text": "我相識換牛腩面",
+          "reading": "ngo5 soeng1 sik1 wun6 ngau4 naam5 min6",
+          "match_type": "composed"
+        },
+        {
+          "text": "我相識碗牛腩面",
+          "reading": "ngo5 soeng1 sik1 wun2 ngau4 naam5 min6",
+          "match_type": "composed"
+        },
+        {
+          "text": "我相識玩牛腩面",
+          "reading": "ngo5 soeng1 sik1 wun6 ngau4 naam5 min6",
+          "match_type": "composed"
+        },
+        {
+          "text": "我想食換牛腩面",
+          "reading": "ngo5 soeng2 sik6 wun6 ngau4 naam5 min6",
+          "match_type": "composed"
+        },
+        {
+          "text": "我想食碗牛腩面",
+          "reading": "ngo5 soeng2 sik6 wun2 ngau4 naam5 min6",
+          "match_type": "composed"
+        },
+        {
+          "text": "我常識換牛腩面",
+          "reading": "ngo5 soeng4 sik1 wun6 ngau4 naam5 min6",
+          "match_type": "composed"
+        },
+        {
+          "text": "我想食玩牛腩面",
+          "reading": "ngo5 soeng2 sik6 wun6 ngau4 naam5 min6",
+          "match_type": "composed"
+        },
+        {
+          "text": "我常識碗牛腩面",
+          "reading": "ngo5 soeng4 sik1 wun2 ngau4 naam5 min6",
+          "match_type": "composed"
+        },
+        {
+          "text": "我常識玩牛腩面",
+          "reading": "ngo5 soeng4 sik1 wun6 ngau4 naam5 min6",
+          "match_type": "composed"
+        }
+      ]
+    },
+    {
+      "id": "lp035",
+      "text": "食完飯我哋出去行吓",
+      "reading": "sik6 jyun4 faan6 ngo5 dei6 ceot1 heoi3 haang4 haa5",
+      "input": "sikyunfaanngodeicheutheuihaangha",
+      "length_band": "9-12",
+      "category": "food_drink",
+      "primary_exact_text_rank": null,
+      "outside_first90": true,
+      "profile_ranks": {
+        "fresh": null,
+        "short_preferences": null,
+        "heavy_short_preferences": null
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": null,
+        "strict_jyutping_toned": 77,
+        "strict_jyutping_tone_free": null
+      },
+      "diagnostic_rescue_class": "neither_toned_nor_apostrophe_rescues_top9",
+      "strict_toned_top90_rescue": true,
+      "any_diagnostic_top9_rescue": false,
+      "surface_class": "near_variant_in_first9",
+      "first_choice_initial_wrong": false,
+      "target_initial_available_first9": true,
+      "target_first_two_characters_available_first9": true,
+      "near_variants_first9": [
+        {
+          "rank": 3,
+          "text": "食完飯我地出去行下",
+          "kind": "colloquial_written_near_variant",
+          "substitutions": [
+            {
+              "position_1based": 5,
+              "expected": "哋",
+              "observed": "地"
+            },
+            {
+              "position_1based": 9,
+              "expected": "吓",
+              "observed": "下"
+            }
+          ]
+        },
+        {
+          "rank": 7,
+          "text": "食完飯我哋出去行下",
+          "kind": "colloquial_written_near_variant",
+          "substitutions": [
+            {
+              "position_1based": 9,
+              "expected": "吓",
+              "observed": "下"
+            }
+          ]
+        }
+      ],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 7,
+        "text": "食完飯我哋出去行下",
+        "edit_distance": 1
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": true,
+      "example_selection_reasons": [
+        "first_four_misses_by_id_in_length_band",
+        "all_fresh_plain_yale_outside_first90"
+      ],
+      "first9": [
+        {
+          "text": "食完返我地出去行下",
+          "reading": "sik6 jyun4 faan2 ngo5 dei6 ceot1 heoi3 haang4 haa5",
+          "match_type": "composed"
+        },
+        {
+          "text": "食完返我哋出去行下",
+          "reading": "sik6 jyun4 faan2 ngo5 dei6 ceot1 heoi3 haang4 haa5",
+          "match_type": "composed"
+        },
+        {
+          "text": "食完飯我地出去行下",
+          "reading": "sik6 jyun4 faan6 ngo5 dei6 ceot1 heoi3 haang4 haa5",
+          "match_type": "composed"
+        },
+        {
+          "text": "食軟飯我地出去行下",
+          "reading": "sik6 jyun5 faan6 ngo5 dei6 ceot1 heoi3 haang4 haa5",
+          "match_type": "composed"
+        },
+        {
+          "text": "食软饭我地出去行下",
+          "reading": "sik6 jyun5 faan6 ngo5 dei6 ceot1 heoi3 haang4 haa5",
+          "match_type": "composed"
+        },
+        {
+          "text": "食完番我地出去行下",
+          "reading": "sik6 jyun4 faan1 ngo5 dei6 ceot1 heoi3 haang4 haa5",
+          "match_type": "composed"
+        },
+        {
+          "text": "食完飯我哋出去行下",
+          "reading": "sik6 jyun4 faan6 ngo5 dei6 ceot1 heoi3 haang4 haa5",
+          "match_type": "composed"
+        },
+        {
+          "text": "食軟飯我哋出去行下",
+          "reading": "sik6 jyun5 faan6 ngo5 dei6 ceot1 heoi3 haang4 haa5",
+          "match_type": "composed"
+        },
+        {
+          "text": "食软饭我哋出去行下",
+          "reading": "sik6 jyun5 faan6 ngo5 dei6 ceot1 heoi3 haang4 haa5",
+          "match_type": "composed"
+        }
+      ]
+    },
+    {
+      "id": "lp037",
+      "text": "有冇位坐",
+      "reading": "jau5 mou5 wai2 co5",
+      "input": "yaumouwaicho",
+      "length_band": "4-5",
+      "category": "travel_directions",
+      "primary_exact_text_rank": 15,
+      "outside_first90": false,
+      "profile_ranks": {
+        "fresh": 15,
+        "short_preferences": 15,
+        "heavy_short_preferences": 15
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": 15,
+        "strict_jyutping_toned": 2,
+        "strict_jyutping_tone_free": 15
+      },
+      "diagnostic_rescue_class": "toned_only_rescue_top9",
+      "strict_toned_top90_rescue": false,
+      "any_diagnostic_top9_rescue": true,
+      "surface_class": "exact_initial_present_but_remaining_text_ranked_below9",
+      "first_choice_initial_wrong": false,
+      "target_initial_available_first9": true,
+      "target_first_two_characters_available_first9": true,
+      "near_variants_first9": [],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 3,
+        "text": "有冇喂坐",
+        "edit_distance": 1
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": true,
+      "example_selection_reasons": [
+        "first_four_misses_by_id_in_length_band"
+      ],
+      "first9": [
+        {
+          "text": "有無謂坐",
+          "reading": "jau5 mou4 wai6 co5",
+          "match_type": "composed"
+        },
+        {
+          "text": "又無謂坐",
+          "reading": "jau6 mou4 wai6 co5",
+          "match_type": "composed"
+        },
+        {
+          "text": "有冇喂坐",
+          "reading": "jau5 mou5 wai3 co5",
+          "match_type": "composed"
+        },
+        {
+          "text": "有無謂錯",
+          "reading": "jau5 mou4 wai6 co3",
+          "match_type": "composed"
+        },
+        {
+          "text": "又冇喂坐",
+          "reading": "jau6 mou5 wai3 co5",
+          "match_type": "composed"
+        },
+        {
+          "text": "有冇爲坐",
+          "reading": "jau5 mou5 wai4 co5",
+          "match_type": "composed"
+        },
+        {
+          "text": "有無喂坐",
+          "reading": "jau5 mou4 wai3 co5",
+          "match_type": "composed"
+        },
+        {
+          "text": "又無謂錯",
+          "reading": "jau6 mou4 wai6 co3",
+          "match_type": "composed"
+        },
+        {
+          "text": "由無謂坐",
+          "reading": "jau4 mou4 wai6 co5",
+          "match_type": "composed"
+        }
+      ]
+    },
+    {
+      "id": "lp043",
+      "text": "你幫我睇吓架車到咗未",
+      "reading": "nei5 bong1 ngo5 tai2 haa5 gaa3 ce1 dou3 zo2 mei6",
+      "input": "neibongngotaihagachedoujomei",
+      "length_band": "9-12",
+      "category": "travel_directions",
+      "primary_exact_text_rank": null,
+      "outside_first90": true,
+      "profile_ranks": {
+        "fresh": null,
+        "short_preferences": null,
+        "heavy_short_preferences": null
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": null,
+        "strict_jyutping_toned": null,
+        "strict_jyutping_tone_free": null
+      },
+      "diagnostic_rescue_class": "neither_toned_nor_apostrophe_rescues_top9",
+      "strict_toned_top90_rescue": false,
+      "any_diagnostic_top9_rescue": false,
+      "surface_class": "exact_initial_present_but_remaining_text_ranked_below9",
+      "first_choice_initial_wrong": false,
+      "target_initial_available_first9": true,
+      "target_first_two_characters_available_first9": true,
+      "near_variants_first9": [],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 3,
+        "text": "你幫我睇吓㗎車都咗未",
+        "edit_distance": 2
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": true,
+      "example_selection_reasons": [
+        "all_fresh_plain_yale_outside_first90"
+      ],
+      "first9": [
+        {
+          "text": "你幫我睇下㗎車都咗未",
+          "reading": "nei5 bong1 ngo5 tai2 haa6 ga3 ce1 dou1 zo2 mei6",
+          "match_type": "composed"
+        },
+        {
+          "text": "你幫我睇下㗎車都左未",
+          "reading": "nei5 bong1 ngo5 tai2 haa6 ga3 ce1 dou1 zo2 mei6",
+          "match_type": "composed"
+        },
+        {
+          "text": "你幫我睇吓㗎車都咗未",
+          "reading": "nei5 bong1 ngo5 tai2 haa2 ga3 ce1 dou1 zo2 mei6",
+          "match_type": "composed"
+        },
+        {
+          "text": "你幫我睇下㗎車度咗未",
+          "reading": "nei5 bong1 ngo5 tai2 haa6 ga3 ce1 dou6 zo2 mei6",
+          "match_type": "composed"
+        },
+        {
+          "text": "你幫我睇吓㗎車都左未",
+          "reading": "nei5 bong1 ngo5 tai2 haa2 ga3 ce1 dou1 zo2 mei6",
+          "match_type": "composed"
+        },
+        {
+          "text": "你幫我睇下㗎車度左未",
+          "reading": "nei5 bong1 ngo5 tai2 haa6 ga3 ce1 dou6 zo2 mei6",
+          "match_type": "composed"
+        },
+        {
+          "text": "你幫我睇下家車都咗未",
+          "reading": "nei5 bong1 ngo5 tai2 haa6 gaa1 ce1 dou1 zo2 mei6",
+          "match_type": "composed"
+        },
+        {
+          "text": "你幫我睇下㗎斜度咗未",
+          "reading": "nei5 bong1 ngo5 tai2 haa6 ga3 ce3 dou6 zo2 mei6",
+          "match_type": "composed"
+        },
+        {
+          "text": "你幫我睇下㗎扯都咗未",
+          "reading": "nei5 bong1 ngo5 tai2 haa6 ga3 ce2 dou1 zo2 mei6",
+          "match_type": "composed"
+        }
+      ]
+    },
+    {
+      "id": "lp046",
+      "text": "記住熄燈",
+      "reading": "gei3 zyu6 sik1 dang1",
+      "input": "geijyusikdang",
+      "length_band": "4-5",
+      "category": "home_tasks",
+      "primary_exact_text_rank": 67,
+      "outside_first90": false,
+      "profile_ranks": {
+        "fresh": 67,
+        "short_preferences": 67,
+        "heavy_short_preferences": 67
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": 67,
+        "strict_jyutping_toned": 6,
+        "strict_jyutping_tone_free": 42
+      },
+      "diagnostic_rescue_class": "toned_only_rescue_top9",
+      "strict_toned_top90_rescue": false,
+      "any_diagnostic_top9_rescue": true,
+      "surface_class": "exact_initial_present_but_remaining_text_ranked_below9",
+      "first_choice_initial_wrong": false,
+      "target_initial_available_first9": true,
+      "target_first_two_characters_available_first9": true,
+      "near_variants_first9": [],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 8,
+        "text": "記住食燈",
+        "edit_distance": 1
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": true,
+      "example_selection_reasons": [
+        "first_four_misses_by_id_in_length_band"
+      ],
+      "first9": [
+        {
+          "text": "記住食等",
+          "reading": "gei3 zyu6 sik6 dang2",
+          "match_type": "composed"
+        },
+        {
+          "text": "記住識等",
+          "reading": "gei3 zyu6 sik1 dang2",
+          "match_type": "composed"
+        },
+        {
+          "text": "基於食等",
+          "reading": "gei1 jyu1 sik6 dang2",
+          "match_type": "composed"
+        },
+        {
+          "text": "既住食等",
+          "reading": "gei3 zyu6 sik6 dang2",
+          "match_type": "composed"
+        },
+        {
+          "text": "既註釋等",
+          "reading": "gei3 zyu3 sik1 dang2",
+          "match_type": "composed"
+        },
+        {
+          "text": "基於識等",
+          "reading": "gei1 jyu1 sik1 dang2",
+          "match_type": "composed"
+        },
+        {
+          "text": "既住識等",
+          "reading": "gei3 zyu6 sik1 dang2",
+          "match_type": "composed"
+        },
+        {
+          "text": "記住食燈",
+          "reading": "gei3 zyu6 sik6 dang1",
+          "match_type": "composed"
+        },
+        {
+          "text": "記住色等",
+          "reading": "gei3 zyu6 sik1 dang2",
+          "match_type": "composed"
+        }
+      ]
+    },
+    {
+      "id": "lp048",
+      "text": "幫我攞嘢",
+      "reading": "bong1 ngo5 lo2 je5",
+      "input": "bongngoloye",
+      "length_band": "4-5",
+      "category": "home_tasks",
+      "primary_exact_text_rank": 55,
+      "outside_first90": false,
+      "profile_ranks": {
+        "fresh": 55,
+        "short_preferences": 55,
+        "heavy_short_preferences": 54
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": 55,
+        "strict_jyutping_toned": 3,
+        "strict_jyutping_tone_free": 38
+      },
+      "diagnostic_rescue_class": "toned_only_rescue_top9",
+      "strict_toned_top90_rescue": false,
+      "any_diagnostic_top9_rescue": true,
+      "surface_class": "exact_initial_present_but_remaining_text_ranked_below9",
+      "first_choice_initial_wrong": false,
+      "target_initial_available_first9": true,
+      "target_first_two_characters_available_first9": true,
+      "near_variants_first9": [],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 1,
+        "text": "幫我囉嘢",
+        "edit_distance": 1
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": true,
+      "example_selection_reasons": [
+        "first_four_misses_by_id_in_length_band"
+      ],
+      "first9": [
+        {
+          "text": "幫我囉嘢",
+          "reading": "bong1 ngo5 lo1 je5",
+          "match_type": "composed"
+        },
+        {
+          "text": "幫我老嘢",
+          "reading": "bong1 ngo5 lou5 je5",
+          "match_type": "composed"
+        },
+        {
+          "text": "幫我囉野",
+          "reading": "bong1 ngo5 lo1 je5",
+          "match_type": "composed"
+        },
+        {
+          "text": "幫我老爺",
+          "reading": "bong1 ngo5 lou5 je4",
+          "match_type": "composed"
+        },
+        {
+          "text": "綁我囉嘢",
+          "reading": "bong2 ngo5 lo1 je5",
+          "match_type": "composed"
+        },
+        {
+          "text": "幫我姥爺",
+          "reading": "bong1 ngo5 lou5 je4",
+          "match_type": "composed"
+        },
+        {
+          "text": "幫我羅嘢",
+          "reading": "bong1 ngo5 lo4 je5",
+          "match_type": "composed"
+        },
+        {
+          "text": "磅我囉嘢",
+          "reading": "bong6 ngo5 lo1 je5",
+          "match_type": "composed"
+        },
+        {
+          "text": "幫我囉夜",
+          "reading": "bong1 ngo5 lo1 je6",
+          "match_type": "composed"
+        }
+      ]
+    },
+    {
+      "id": "lp050",
+      "text": "件衫仲未乾晒",
+      "reading": "gin6 saam1 zung6 mei6 gon1 saai3",
+      "input": "ginsaamjungmeigonsaai",
+      "length_band": "6-8",
+      "category": "home_tasks",
+      "primary_exact_text_rank": 13,
+      "outside_first90": false,
+      "profile_ranks": {
+        "fresh": 13,
+        "short_preferences": 13,
+        "heavy_short_preferences": 13
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": 13,
+        "strict_jyutping_toned": 1,
+        "strict_jyutping_tone_free": 9
+      },
+      "diagnostic_rescue_class": "toned_only_rescue_top9",
+      "strict_toned_top90_rescue": false,
+      "any_diagnostic_top9_rescue": true,
+      "surface_class": "target_initial_character_absent_first9",
+      "first_choice_initial_wrong": true,
+      "target_initial_available_first9": false,
+      "target_first_two_characters_available_first9": false,
+      "near_variants_first9": [],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 1,
+        "text": "見衫仲未乾晒",
+        "edit_distance": 1
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": true,
+      "example_selection_reasons": [
+        "first_four_misses_by_id_in_length_band"
+      ],
+      "first9": [
+        {
+          "text": "見衫仲未乾晒",
+          "reading": "gin3 saam1 zung6 mei6 gon1 saai3",
+          "match_type": "composed"
+        },
+        {
+          "text": "見衫用未乾晒",
+          "reading": "gin3 saam1 jung6 mei6 gon1 saai3",
+          "match_type": "composed"
+        },
+        {
+          "text": "見三仲未乾晒",
+          "reading": "gin3 saam1 zung6 mei6 gon1 saai3",
+          "match_type": "composed"
+        },
+        {
+          "text": "見衫仲未趕晒",
+          "reading": "gin3 saam1 zung6 mei6 gon2 saai3",
+          "match_type": "composed"
+        },
+        {
+          "text": "見三用未乾晒",
+          "reading": "gin3 saam1 jung6 mei6 gon1 saai3",
+          "match_type": "composed"
+        },
+        {
+          "text": "見衫中未乾晒",
+          "reading": "gin3 saam1 zung1 mei6 gon1 saai3",
+          "match_type": "composed"
+        },
+        {
+          "text": "見衫用未趕晒",
+          "reading": "gin3 saam1 jung6 mei6 gon2 saai3",
+          "match_type": "composed"
+        },
+        {
+          "text": "見三仲未趕晒",
+          "reading": "gin3 saam1 zung6 mei6 gon2 saai3",
+          "match_type": "composed"
+        },
+        {
+          "text": "見三中未乾晒",
+          "reading": "gin3 saam1 zung1 mei6 gon1 saai3",
+          "match_type": "composed"
+        }
+      ]
+    },
+    {
+      "id": "lp059",
+      "text": "呢個數計錯咗",
+      "reading": "ni1 go3 sou3 gai3 co3 zo2",
+      "input": "nigosougaichojo",
+      "length_band": "6-8",
+      "category": "work_study",
+      "primary_exact_text_rank": null,
+      "outside_first90": true,
+      "profile_ranks": {
+        "fresh": null,
+        "short_preferences": null,
+        "heavy_short_preferences": null
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": null,
+        "strict_jyutping_toned": 80,
+        "strict_jyutping_tone_free": null
+      },
+      "diagnostic_rescue_class": "neither_toned_nor_apostrophe_rescues_top9",
+      "strict_toned_top90_rescue": true,
+      "any_diagnostic_top9_rescue": false,
+      "surface_class": "exact_initial_present_but_remaining_text_ranked_below9",
+      "first_choice_initial_wrong": true,
+      "target_initial_available_first9": true,
+      "target_first_two_characters_available_first9": true,
+      "near_variants_first9": [],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 3,
+        "text": "哩個掃街錯咗",
+        "edit_distance": 3
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": true,
+      "example_selection_reasons": [
+        "all_fresh_plain_yale_outside_first90"
+      ],
+      "first9": [
+        {
+          "text": "哩個掃街坐咗",
+          "reading": "ni1 go3 sou3 gaai1 co5 zo2",
+          "match_type": "composed"
+        },
+        {
+          "text": "哩個掃街坐左",
+          "reading": "ni1 go3 sou3 gaai1 co5 zo2",
+          "match_type": "composed"
+        },
+        {
+          "text": "哩個掃街錯咗",
+          "reading": "ni1 go3 sou3 gaai1 co3 zo2",
+          "match_type": "composed"
+        },
+        {
+          "text": "哩個掃街錯左",
+          "reading": "ni1 go3 sou3 gaai1 co3 zo2",
+          "match_type": "composed"
+        },
+        {
+          "text": "呢個掃街坐咗",
+          "reading": "ni1 go3 sou3 gaai1 co5 zo2",
+          "match_type": "composed"
+        },
+        {
+          "text": "呢個掃街坐左",
+          "reading": "ni1 go3 sou3 gaai1 co5 zo2",
+          "match_type": "composed"
+        },
+        {
+          "text": "哩個掃雞坐咗",
+          "reading": "ni1 go3 sou3 gai1 co5 zo2",
+          "match_type": "composed"
+        },
+        {
+          "text": "哩個掃街初咗",
+          "reading": "ni1 go3 sou3 gaai1 co1 zo2",
+          "match_type": "composed"
+        },
+        {
+          "text": "哩個掃雞坐左",
+          "reading": "ni1 go3 sou3 gai1 co5 zo2",
+          "match_type": "composed"
+        }
+      ]
+    },
+    {
+      "id": "lp073",
+      "text": "打唔到字",
+      "reading": "daa2 m4 dou2 zi6",
+      "input": "damdouji",
+      "length_band": "4-5",
+      "category": "technical_input",
+      "primary_exact_text_rank": 17,
+      "outside_first90": false,
+      "profile_ranks": {
+        "fresh": 17,
+        "short_preferences": 2,
+        "heavy_short_preferences": 2
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": 5,
+        "strict_jyutping_toned": 1,
+        "strict_jyutping_tone_free": 18
+      },
+      "diagnostic_rescue_class": "toned_and_apostrophe_rescue_top9",
+      "strict_toned_top90_rescue": false,
+      "any_diagnostic_top9_rescue": true,
+      "surface_class": "exact_initial_present_but_remaining_text_ranked_below9",
+      "first_choice_initial_wrong": true,
+      "target_initial_available_first9": true,
+      "target_first_two_characters_available_first9": true,
+      "near_variants_first9": [],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 2,
+        "text": "打唔到知",
+        "edit_distance": 1
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": true,
+      "example_selection_reasons": [
+        "first_four_misses_by_id_in_length_band"
+      ],
+      "first9": [
+        {
+          "text": "抌都知",
+          "reading": "dam2 dou1 zi1",
+          "match_type": "composed"
+        },
+        {
+          "text": "打唔到知",
+          "reading": "daa2 m4 dou2 zi1",
+          "match_type": "composed"
+        },
+        {
+          "text": "抌都而",
+          "reading": "dam2 dou1 ji4",
+          "match_type": "composed"
+        },
+        {
+          "text": "打唔到而",
+          "reading": "daa2 m4 dou2 ji4",
+          "match_type": "composed"
+        },
+        {
+          "text": "抌都只",
+          "reading": "dam2 dou1 zi2",
+          "match_type": "composed"
+        },
+        {
+          "text": "打唔到只",
+          "reading": "daa2 m4 dou2 zi2",
+          "match_type": "composed"
+        },
+        {
+          "text": "抌度知",
+          "reading": "dam2 dou6 zi1",
+          "match_type": "composed"
+        },
+        {
+          "text": "抌導致",
+          "reading": "dam2 dou6 zi3",
+          "match_type": "composed"
+        },
+        {
+          "text": "噉都知",
+          "reading": "daam6 dou1 zi1",
+          "match_type": "composed"
+        }
+      ]
+    },
+    {
+      "id": "lp081",
+      "text": "呢部電腦點解成日都咁慢",
+      "reading": "ni1 bou6 din6 nou5 dim2 gaai2 sing4 jat6 dou1 gam3 maan6",
+      "input": "niboudinnoudimgaaisingyatdougammaan",
+      "length_band": "9-12",
+      "category": "technical_input",
+      "primary_exact_text_rank": null,
+      "outside_first90": true,
+      "profile_ranks": {
+        "fresh": null,
+        "short_preferences": null,
+        "heavy_short_preferences": 63
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": null,
+        "strict_jyutping_toned": 1,
+        "strict_jyutping_tone_free": null
+      },
+      "diagnostic_rescue_class": "toned_only_rescue_top9",
+      "strict_toned_top90_rescue": true,
+      "any_diagnostic_top9_rescue": true,
+      "surface_class": "exact_initial_present_but_remaining_text_ranked_below9",
+      "first_choice_initial_wrong": false,
+      "target_initial_available_first9": true,
+      "target_first_two_characters_available_first9": true,
+      "near_variants_first9": [],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 1,
+        "text": "呢部電腦點解成日都今晚",
+        "edit_distance": 2
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": true,
+      "example_selection_reasons": [
+        "all_fresh_plain_yale_outside_first90"
+      ],
+      "first9": [
+        {
+          "text": "呢部電腦點解成日都今晚",
+          "reading": "ni1 bou6 din6 nou5 dim2 gaai2 sing4 jat6 dou1 gam1 maan5",
+          "match_type": "composed"
+        },
+        {
+          "text": "呢部電腦點解成日度今晚",
+          "reading": "ni1 bou6 din6 nou5 dim2 gaai2 sing4 jat6 dou6 gam1 maan5",
+          "match_type": "composed"
+        },
+        {
+          "text": "呢步電腦點解成日都今晚",
+          "reading": "ni1 bou6 din6 nou5 dim2 gaai2 sing4 jat6 dou1 gam1 maan5",
+          "match_type": "composed"
+        },
+        {
+          "text": "呢寶電腦點解成日都今晚",
+          "reading": "ni1 bou2 din6 nou5 dim2 gaai2 sing4 jat6 dou1 gam1 maan5",
+          "match_type": "composed"
+        },
+        {
+          "text": "呢報電腦點解成日都今晚",
+          "reading": "ni1 bou3 din6 nou5 dim2 gaai2 sing4 jat6 dou1 gam1 maan5",
+          "match_type": "composed"
+        },
+        {
+          "text": "呢簿電腦點解成日都今晚",
+          "reading": "ni1 bou2 din6 nou5 dim2 gaai2 sing4 jat6 dou1 gam1 maan5",
+          "match_type": "composed"
+        },
+        {
+          "text": "呢煲電腦點解成日都今晚",
+          "reading": "ni1 bou1 din6 nou5 dim2 gaai2 sing4 jat6 dou1 gam1 maan5",
+          "match_type": "composed"
+        },
+        {
+          "text": "呢布電腦點解成日都今晚",
+          "reading": "ni1 bou3 din6 nou5 dim2 gaai2 sing4 jat6 dou1 gam1 maan5",
+          "match_type": "composed"
+        },
+        {
+          "text": "呢步電腦點解成日度今晚",
+          "reading": "ni1 bou6 din6 nou5 dim2 gaai2 sing4 jat6 dou6 gam1 maan5",
+          "match_type": "composed"
+        }
+      ]
+    },
+    {
+      "id": "lp084",
+      "text": "有冇細碼",
+      "reading": "jau5 mou5 sai3 maa5",
+      "input": "yaumousaima",
+      "length_band": "4-5",
+      "category": "shopping_money",
+      "primary_exact_text_rank": null,
+      "outside_first90": true,
+      "profile_ranks": {
+        "fresh": null,
+        "short_preferences": null,
+        "heavy_short_preferences": null
+      },
+      "diagnostic_ranks": {
+        "plain_yale_apostrophes": null,
+        "strict_jyutping_toned": 4,
+        "strict_jyutping_tone_free": null
+      },
+      "diagnostic_rescue_class": "toned_only_rescue_top9",
+      "strict_toned_top90_rescue": true,
+      "any_diagnostic_top9_rescue": true,
+      "surface_class": "exact_initial_present_but_remaining_text_ranked_below9",
+      "first_choice_initial_wrong": false,
+      "target_initial_available_first9": true,
+      "target_first_two_characters_available_first9": true,
+      "near_variants_first9": [],
+      "near_variants_count_as_success": false,
+      "closest_first9_by_character_edit_distance": {
+        "rank": 9,
+        "text": "有冇細嘛",
+        "edit_distance": 1
+      },
+      "stored_whole_text": false,
+      "stored_whole_text_reading": false,
+      "all_intended_character_readings_have_exact_dictionary_rows": true,
+      "some_exact_dictionary_reading_partition_exists": true,
+      "fixed_example_selection": true,
+      "example_selection_reasons": [
+        "all_fresh_plain_yale_outside_first90"
+      ],
+      "first9": [
+        {
+          "text": "有冇洗馬",
+          "reading": "jau5 mou5 sai2 maa5",
+          "match_type": "composed"
+        },
+        {
+          "text": "有冇洗嘛",
+          "reading": "jau5 mou5 sai2 maa3",
+          "match_type": "composed"
+        },
+        {
+          "text": "又冇洗馬",
+          "reading": "jau6 mou5 sai2 maa5",
+          "match_type": "composed"
+        },
+        {
+          "text": "有無洗馬",
+          "reading": "jau5 mou4 sai2 maa5",
+          "match_type": "composed"
+        },
+        {
+          "text": "有冇駛嘛",
+          "reading": "jau5 mou5 sai2 maa3",
+          "match_type": "composed"
+        },
+        {
+          "text": "又冇洗嘛",
+          "reading": "jau6 mou5 sai2 maa3",
+          "match_type": "composed"
+        },
+        {
+          "text": "有無洗嘛",
+          "reading": "jau5 mou4 sai2 maa3",
+          "match_type": "composed"
+        },
+        {
+          "text": "又無洗馬",
+          "reading": "jau6 mou4 sai2 maa5",
+          "match_type": "composed"
+        },
+        {
+          "text": "有冇細嘛",
+          "reading": "jau5 mou5 sai3 maa3",
+          "match_type": "composed"
+        }
+      ]
+    }
+  ],
+  "systemic_followups": [
+    {
+      "area": "Tone-free sequence ranking and search coverage",
+      "evidence": "18 of23 first9 misses become exact first9 hits with tone digits; six exact plain-Yale targets are absent first90. Target prefixes often survive while the rest becomes competing dictionary words.",
+      "proposal": "Investigate context/word-transition scoring and candidate-budget diversity over complete paths. Test against fixed authored and external cases; do not inject case-specific phrases or change gold after inspection."
+    },
+    {
+      "area": "Habitual ng versus true syllabic ng",
+      "evidence": "0 of29 habitual-ng exact targets appear first90 fresh; short/heavy synthetic histories reach17/16 first9 and23/23 first90, still below policy.",
+      "proposal": "Make the user-requested ng-for-唔 input behavior an explicit, bounded and reviewable policy, preserving genuine ng/m readings and separating alias support from learned ranking. Re-evaluate with fresh and varied synthetic histories."
+    },
+    {
+      "area": "Orthographic and colloquial spelling preference",
+      "evidence": "Some exact misses have a near-written variant in first9, including 麵/面 and 哋/地 or 吓/下. Others are genuine competing words and cannot be dismissed as typography.",
+      "proposal": "Consider explicit output-spelling preference and context-sensitive written-form ranking. Keep the current exact targets and primary failure counts unchanged; evaluate any future alternate-output policy separately."
+    },
+    {
+      "area": "Do not substitute manual boundaries for the requested workflow",
+      "evidence": "Only one of23 plain-Yale first9 misses is rescued by adding all syllable apostrophes.",
+      "proposal": "Preserve apostrophes as an optional diagnostic/control, while improving the ordinary compact-input experience rather than requiring users to delimit every syllable."
+    }
+  ],
+  "release_recommendation": "Withhold new installation/publication. The predeclared authored quality gates fail; saved synthetically learned improvements do not establish confidence for ordinary long-phrase use. Timing and external replay are separate reports."
+}

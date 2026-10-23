@@ -14,9 +14,13 @@ published binary release is for Windows x64.
 
 ## Install
 
-Use [the Windows x64 installer](https://github.com/hadesng173/cantonese-ime/releases/download/v1.0.8/CantoneseIME-1.0.8-windows-x64-setup.exe)
-and [its SHA-256 checksums](https://github.com/hadesng173/cantonese-ime/releases/download/v1.0.8/SHA256SUMS.txt)
-from [release 1.0.8](https://github.com/hadesng173/cantonese-ime/releases/tag/v1.0.8).
+Use [the published Windows x64 installer](https://github.com/hadesng173/cantonese-ime/releases/download/v1.0.5/CantoneseIME-1.0.5-windows-x64-setup.exe)
+and [its SHA-256 checksums](https://github.com/hadesng173/cantonese-ime/releases/download/v1.0.5/SHA256SUMS.txt)
+from [release 1.0.5](https://github.com/hadesng173/cantonese-ime/releases/tag/v1.0.5).
+The 1.0.8 development candidate is held after failing the
+[expanded long-phrase review](docs/LONG_PHRASE_RELEASE_REVIEW.md); it is not a
+published or accepted update. The candidate features below describe development
+work after the public 1.0.5 release.
 Run Setup normally and approve Windows' administrator prompt. The installer
 includes its own private Python runtime; no system Python, developer tools,
 or Internet connection is required on the target computer.
