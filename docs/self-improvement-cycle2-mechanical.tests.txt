@@ -1,0 +1,18 @@
+test_character_cost_is_segmentation_invariant (test_context_decoder.ContextDecoderTests.test_character_cost_is_segmentation_invariant) ... ok
+test_dedup_across_many_paths_does_not_consume_distinct_budget (test_context_decoder.ContextDecoderTests.test_dedup_across_many_paths_does_not_consume_distinct_budget) ... ok
+test_equal_cost_reading_ties_finish_after_last_text_cutoff (test_context_decoder.ContextDecoderTests.test_equal_cost_reading_ties_finish_after_last_text_cutoff) ... ok
+test_input_graph_model_and_integer_parameter_validation (test_context_decoder.ContextDecoderTests.test_input_graph_model_and_integer_parameter_validation) ... ok
+test_limits_are_explicit_before_reservation_overrun (test_context_decoder.ContextDecoderTests.test_limits_are_explicit_before_reservation_overrun) ... ok
+test_more_than_ninety_outputs_and_unicode_ties (test_context_decoder.ContextDecoderTests.test_more_than_ninety_outputs_and_unicode_ties) ... ok
+test_naive_suffix_top1_reranker_loses_true_top1 (test_context_decoder.ContextDecoderTests.test_naive_suffix_top1_reranker_loses_true_top1) ... ok
+test_output_length_and_reading_allocation_limits (test_context_decoder.ContextDecoderTests.test_output_length_and_reading_allocation_limits) ... ok
+test_prefix_text_lexical_ties_and_zero_cost_paths (test_context_decoder.ContextDecoderTests.test_prefix_text_lexical_ties_and_zero_cost_paths) ... ok
+test_random_integer_graphs_against_exhaustive_oracle (test_context_decoder.ContextDecoderTests.test_random_integer_graphs_against_exhaustive_oracle) ... ok
+test_result_and_model_are_immutable (test_context_decoder.ContextDecoderTests.test_result_and_model_are_immutable) ... ok
+test_two_incoming_contexts_need_different_suffixes (test_context_decoder.ContextDecoderTests.test_two_incoming_contexts_need_different_suffixes) ... ok
+test_unreachable_and_dead_end_edges (test_context_decoder.ContextDecoderTests.test_unreachable_and_dead_end_edges) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.534s
+
+OK

@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "kind": "synthetic_context_conditioned_kbest_mechanical_check",
+  "recorded_at_utc": "2026-10-24T14:13:59.865908+00:00",
+  "status": "passed",
+  "source_sha256_before": {
+    "tools/experiments/context_search/context_decoder.py": "7c355e1ff76e501ec908c4c0493eefd87a2325affbdc010c2451c546a9bb96ac",
+    "tools/experiments/context_search/test_context_decoder.py": "d17beac6fdaac1be1bd9242c0cb5ab047bf093b576bc3039b77142ab64e51491",
+    "tools/experiments/context_search/run_mechanical_checks.py": "9ec8d30574346d0452dd1b52a02b370531247479ed33bda9852e5a7040d474c4",
+    "tools/experiments/context_search/README.md": "432fb487d1a197e70af90ae243f8da3378787101e5c18529762697f4c35469c7",
+    "cantonese_ime/engine.py": "02cff6ca13c2b59602a89b693ac8b35949a19e8d2e0ec12f02122491f3f3203f",
+    "cantonese_ime/mappings.py": "d61d6e7ab3b82bab7a31d42f7abfefb4f224eed5c9dbf505304eef2d940249e1"
+  },
+  "source_sha256_after": {
+    "tools/experiments/context_search/context_decoder.py": "7c355e1ff76e501ec908c4c0493eefd87a2325affbdc010c2451c546a9bb96ac",
+    "tools/experiments/context_search/test_context_decoder.py": "d17beac6fdaac1be1bd9242c0cb5ab047bf093b576bc3039b77142ab64e51491",
+    "tools/experiments/context_search/run_mechanical_checks.py": "9ec8d30574346d0452dd1b52a02b370531247479ed33bda9852e5a7040d474c4",
+    "tools/experiments/context_search/README.md": "432fb487d1a197e70af90ae243f8da3378787101e5c18529762697f4c35469c7",
+    "cantonese_ime/engine.py": "02cff6ca13c2b59602a89b693ac8b35949a19e8d2e0ec12f02122491f3f3203f",
+    "cantonese_ime/mappings.py": "d61d6e7ab3b82bab7a31d42f7abfefb4f224eed5c9dbf505304eef2d940249e1"
+  },
+  "source_guards_unchanged": true,
+  "tests": {
+    "run": 13,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 0.5338586000725627
+  },
+  "oracle_comparisons": 2897,
+  "random_graphs": 320,
+  "random_comparisons": 2880,
+  "random_seed": 20261024,
+  "objective": "Nonnegative integer lexical plus character-bigram cost; exact topK distinct written texts on the supplied retained DAG. Equal-score same-text pronunciations choose greatest reading string.",
+  "state": "input_position,incoming_character",
+  "checked_properties": [
+    "exhaustive independent path enumeration agreement",
+    "whole-output segmentation-invariant character cost",
+    "context-conditioned child stream ordering",
+    "same-cost reading ties at the K cutoff",
+    "text dedup before K",
+    "more than90 unique outputs",
+    "zero-cost advancing paths",
+    "Unicode and lexical-prefix tie order",
+    "explicit capacity failures with no partial Result",
+    "finite reservations before generated strings, state/transition publication and heap insertion",
+    "immutable model/results",
+    "invalid graph/cost/budget parameters rejected"
+  ],
+  "naive_suffix_reranker_counterexample": {
+    "lexical_suffixes": {
+      "a": 1,
+      "b": 2
+    },
+    "prefix_x_total_cost": {
+      "xa": 5,
+      "xb": 2
+    },
+    "other_stream_z": 3,
+    "naive_top1": "z",
+    "correct_top1": "xb"
+  },
+  "default_limits": {
+    "vertices": 257,
+    "arcs": 4096,
+    "states": 1024,
+    "transitions": 32768,
+    "pushes": 100000,
+    "pops": 100000,
+    "hypotheses": 32768,
+    "text_bytes": 8388608,
+    "reading_bytes": 16777216,
+    "output_chars": 1024,
+    "reading_chars": 8192,
+    "k": 90,
+    "model_pairs": 131072
+  },
+  "limits_are_logical_not_process_rss": true,
+  "scope": {
+    "synthetic_data_only": true,
+    "product_modules_imported": [],
+    "engine_queries": 0,
+    "dictionary_opened": false,
+    "history_opened": false,
+    "language_quality_claim": false,
+    "production_enabled": false,
+    "floating_point_exact_order_proved": false,
+    "retained_graph_only": true,
+    "learned_profile_context_calibration_solved": false
+  },
+  "limitations": [
+    "Cannot recover arcs discarded before the supplied DAG.",
+    "Integer costs prove the tested objective; floats retain ordinary association/ULP limits.",
+    "Budgets count cumulative logical work/UTF8 bytes, not Python RSS; caller-owned inputs have separate finite preparation bounds.",
+    "Fresh-only integration hook is design guidance in README, not a shipped feature or personalized-decoder proof."
+  ],
+  "runtime": {
+    "python": "3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.19045-SP0"
+  },
+  "test_log": "docs/self-improvement-cycle2-mechanical.tests.txt",
+  "test_log_sha256": "19adbbc3fa73184d5201b68d183b40248b33ce4cd6f1cb0e49b32b4ee508d755"
+}

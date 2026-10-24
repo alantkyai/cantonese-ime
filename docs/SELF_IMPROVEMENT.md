@@ -58,13 +58,14 @@ the machine. Enabled startup was 5.14–5.55 seconds, versus 4.92–5.03 seconds
 baseline. Both models had approximately half-second outliers. These are not
 native IPC deadlines or application typing acceptance measurements.
 
-### Next cycle
+### Context experiments
 
-Ordinary long-phrase quality is still limited. The next experiment uses a small
-character-context prior and a decoder that retains incoming context as part of
-its search state. Adding context scores to the current suffix merge without
-changing that state can lose the true best candidate. Mechanical correctness
-against exhaustive small graphs must precede language-quality evaluation.
+Ordinary long-phrase quality is still limited. The following experiments use a
+small character-context prior and a decoder that retains incoming context as
+part of its search state. Adding context scores to the current suffix merge
+without changing that state can lose the true best candidate. Mechanical
+correctness against exhaustive small graphs precedes any integration of a
+context-aware search.
 Context scoring must cover the whole output independently of word splitting,
 remain bounded, and preserve calibrated learning and full-input preferences.
 Licensed word-type evidence will be labeled as such, rather than presented as
@@ -118,3 +119,41 @@ cases, learning/restart, explicit opt-out and corrupt-history fallback. It
 reports the option unavailable on that legacy engine and rejects an explicit
 enable request, preserving the source-kit build path. These are source/transport
 checks on Windows, without native macOS or installed TSF acceptance.
+
+## Cycle 2: context search proof and rejected prior experiments
+
+The [synthetic decoder proof](self-improvement-cycle2-mechanical.json) passes
+13 tests with 2,897 independent exhaustive comparisons. Its public
+[prototype and tests](../tools/experiments/context_search/README.md) retain
+incoming character context, text deduplication, reading ties and explicit
+allocation/work limits. This proves the declared integer objective on a supplied
+retained graph; it does not prove exact floating-point ordering or dictionary
+search coverage.
+
+The [first language diagnostic](self-improvement-cycle2-diagnostic.json) used
+203 saved first-90 pools from all 153 already exposed phrases. It compared five
+fixed coefficients and retained every gain and loss. At coefficient 0.25, a
+108,525-word-type prior helped some sentences but moved 少啲糖唔該 from rank 8 to
+11. The target-reading grid was not included in that pilot's original guards;
+the independent audit discloses this and verifies every saved input against the
+fixture literals. These are development results, not untouched validation.
+
+The [expanded-prior experiment](self-improvement-cycle2-expanded-prior.json)
+held the same pools, formula and coefficient 0.25 fixed, adding only unique
+written types from the locked raw Rime phrase file. It used 438,831 written
+types and made no new engine queries. First-page exact-text counts were:
+
+| Exposed development cohort | Existing pool order | Narrow prior | Expanded prior |
+| --- | ---: | ---: | ---: |
+| Old primary set, including reported/short controls | 70/93 | 75/93 | 81/93 |
+| Cycle 1 primary set | 31/60 | 38/60 | 37/60 |
+| Old habitual-ng forms | 16/30 | 20/30 | 21/30 |
+| Cycle 1 habitual-ng forms | 5/20 | 9/20 | 11/20 |
+
+The expanded prior lost four existing first-page hits in the newer primary
+set while gaining three, relative to the narrow prior. It remains rejected for
+shipping. Word-type counts are not measured conversational frequencies, and a
+first-90 reranker cannot recover any candidate absent from its original pool.
+Both models remain outside the production engine. Context-aware retained-path
+search, suitable corpus evidence, personalized span calibration, independent
+validation and native performance remain separate unfinished work.

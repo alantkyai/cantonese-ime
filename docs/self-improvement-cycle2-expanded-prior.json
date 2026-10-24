@@ -1,0 +1,802 @@
+{
+  "schema_version": 1,
+  "kind": "single_variable_expanded_lexicon_prior_development_diagnostic",
+  "recorded_at_utc": "2026-10-24T14:22:31.435723+00:00",
+  "status": "completed_and_saved_arithmetic_verified",
+  "frozen_parameters": {
+    "delta": 0.1,
+    "tau": 10.0,
+    "max_character_cost": 16.0,
+    "weight": 0.25
+  },
+  "changed_variable": "Add unique eligible text-only rows from locked raw Rime phrase table to the exact original108525 narrow written types; one unit per exact combined written type.",
+  "scope": "Same203 saved fresh nasal-prototype pools for153 already exposed project-authored phrases. No new engine queries, private history, target-driven count changes, native or latency test.",
+  "engine_queries": 0,
+  "saved_candidate_costs_and_order_recomputed": 18270,
+  "source_guards_unchanged": true,
+  "inventory": {
+    "raw_phrase_rows": 330701,
+    "column_counts": {
+      "1": 330701
+    },
+    "raw_accepted_rows": 330672,
+    "raw_excluded_rows": 29,
+    "raw_exclusion_reasons": {
+      "outside_2_to32_characters": 25,
+      "non_Han_or_notation": 4
+    },
+    "raw_phrase_unique_types": 330670,
+    "within_phrase_duplicate_rows": 2,
+    "old_types": 108525,
+    "source_overlap_types": 364,
+    "new_types": 330306,
+    "combined_types": 438831,
+    "old_database_rows_by_source": {
+      "words.hk:wordlist": 12157,
+      "jyut6ping3.words.dict.yaml": 103077
+    },
+    "old_database_row_sha256": "ae481fc15d8f800231725473c4023892f584db7810b7e51d841ea255e620984b",
+    "old_database_exclusions": {
+      "single_character": 456,
+      "non_Han_or_variation_notation": 2290,
+      "source_character_reading_count_mismatch": 4
+    },
+    "narrow_unigram_and_bigram_counts_match_old_binary_exactly": true,
+    "text_digests_sorted_utf8_lines": {
+      "narrow": "076cb55e673cc3813de52b35c320f4e32418a37d579c50c2ff7b86e8a675713d",
+      "phrase": "8ed2be6d8e182790335f5e4cd65626988d9f0c858d8a2ed991cf760f5a4d6cef",
+      "new": "ba0457f04e176fb43aa8c9657924201f5941a60e9185193920839c1aa23363b4",
+      "combined": "555c518fe45f77a1676cf230a40c5fa8dd0e6c3d49d912386fa458ad1c33a149"
+    },
+    "characters": 7607,
+    "bigrams": 327403,
+    "character_type_pseudocount_total": 1859192,
+    "bigram_type_pseudocount_total": 1420361,
+    "notices": {
+      "Rime-CC-BY-4.0.txt": "97d24386ff776d7160b87031b259a942bd03c9939796cab6724ad5d17d2cf785",
+      "Rime-README-en.md": "159ae4384c0de771e76952abb5e83e52567dc3ddebfa23435f451f385cfac4f6",
+      "words-hk-public-domain-declaration.html": "bafaf154e5a8cb071e59d0b5ff615881105aa950a8cdc0778e22f3ea00b827dd",
+      "DATA_LICENSE.md": "63d910caa75a6502b9442be02fb7db6a80eff1adc52b36a9217c202769e73d8a",
+      "THIRD_PARTY_NOTICES.md": "5b871efa3077f226224921381b8d223265a8d3060190f397f026204cd4651c53",
+      "CC-BY-SA-4.0.txt": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5"
+    },
+    "data_distribution_policy": "CC-BY-SA-4.0 combined data adaptation; original RimeCCBY4/words.hkPD attributions retained. Research-only model not shipped.",
+    "not_utterance_frequencies": true,
+    "generated_pronunciation_rows_counted": 0
+  },
+  "summaries": [
+    {
+      "cohort": "long_phrase_review_cases",
+      "form": "habitual_ng_compact",
+      "prior": "baseline",
+      "requests": 30,
+      "top1": 5,
+      "top9": 16,
+      "top90": 21
+    },
+    {
+      "cohort": "long_phrase_review_cases",
+      "form": "habitual_ng_compact",
+      "prior": "narrow",
+      "requests": 30,
+      "top1": 8,
+      "top9": 20,
+      "top90": 21
+    },
+    {
+      "cohort": "long_phrase_review_cases",
+      "form": "habitual_ng_compact",
+      "prior": "expanded",
+      "requests": 30,
+      "top1": 11,
+      "top9": 21,
+      "top90": 21
+    },
+    {
+      "cohort": "long_phrase_review_cases",
+      "form": "plain_yale_compact",
+      "prior": "baseline",
+      "requests": 93,
+      "top1": 35,
+      "top9": 70,
+      "top90": 87
+    },
+    {
+      "cohort": "long_phrase_review_cases",
+      "form": "plain_yale_compact",
+      "prior": "narrow",
+      "requests": 93,
+      "top1": 38,
+      "top9": 75,
+      "top90": 87
+    },
+    {
+      "cohort": "long_phrase_review_cases",
+      "form": "plain_yale_compact",
+      "prior": "expanded",
+      "requests": 93,
+      "top1": 50,
+      "top9": 81,
+      "top90": 87
+    },
+    {
+      "cohort": "self_improvement_cycle_1_cases",
+      "form": "habitual_ng_compact",
+      "prior": "baseline",
+      "requests": 20,
+      "top1": 2,
+      "top9": 5,
+      "top90": 12
+    },
+    {
+      "cohort": "self_improvement_cycle_1_cases",
+      "form": "habitual_ng_compact",
+      "prior": "narrow",
+      "requests": 20,
+      "top1": 3,
+      "top9": 9,
+      "top90": 12
+    },
+    {
+      "cohort": "self_improvement_cycle_1_cases",
+      "form": "habitual_ng_compact",
+      "prior": "expanded",
+      "requests": 20,
+      "top1": 7,
+      "top9": 11,
+      "top90": 12
+    },
+    {
+      "cohort": "self_improvement_cycle_1_cases",
+      "form": "plain_yale_compact",
+      "prior": "baseline",
+      "requests": 60,
+      "top1": 13,
+      "top9": 31,
+      "top90": 45
+    },
+    {
+      "cohort": "self_improvement_cycle_1_cases",
+      "form": "plain_yale_compact",
+      "prior": "narrow",
+      "requests": 60,
+      "top1": 17,
+      "top9": 38,
+      "top90": 45
+    },
+    {
+      "cohort": "self_improvement_cycle_1_cases",
+      "form": "plain_yale_compact",
+      "prior": "expanded",
+      "requests": 60,
+      "top1": 26,
+      "top9": 37,
+      "top90": 45
+    }
+  ],
+  "signed_first9_comparisons": [
+    {
+      "cohort": "long_phrase_review_cases",
+      "form": "habitual_ng_compact",
+      "reference": "baseline",
+      "top9_gains": 5,
+      "top9_losses": 0
+    },
+    {
+      "cohort": "long_phrase_review_cases",
+      "form": "habitual_ng_compact",
+      "reference": "narrow",
+      "top9_gains": 1,
+      "top9_losses": 0
+    },
+    {
+      "cohort": "long_phrase_review_cases",
+      "form": "plain_yale_compact",
+      "reference": "baseline",
+      "top9_gains": 11,
+      "top9_losses": 0
+    },
+    {
+      "cohort": "long_phrase_review_cases",
+      "form": "plain_yale_compact",
+      "reference": "narrow",
+      "top9_gains": 6,
+      "top9_losses": 0
+    },
+    {
+      "cohort": "self_improvement_cycle_1_cases",
+      "form": "habitual_ng_compact",
+      "reference": "baseline",
+      "top9_gains": 6,
+      "top9_losses": 0
+    },
+    {
+      "cohort": "self_improvement_cycle_1_cases",
+      "form": "habitual_ng_compact",
+      "reference": "narrow",
+      "top9_gains": 2,
+      "top9_losses": 0
+    },
+    {
+      "cohort": "self_improvement_cycle_1_cases",
+      "form": "plain_yale_compact",
+      "reference": "baseline",
+      "top9_gains": 8,
+      "top9_losses": 2
+    },
+    {
+      "cohort": "self_improvement_cycle_1_cases",
+      "form": "plain_yale_compact",
+      "reference": "narrow",
+      "top9_gains": 3,
+      "top9_losses": 4
+    }
+  ],
+  "all_signed_first9_crossings": [
+    {
+      "cohort": "long_phrase_review_cases",
+      "id": "lp016",
+      "form": "habitual_ng_compact",
+      "text": "我唔係唔想幫你手㗎",
+      "reference": "baseline",
+      "before_rank": 41,
+      "after_rank": 1,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "long_phrase_review_cases",
+      "id": "lp018",
+      "form": "habitual_ng_compact",
+      "text": "呢個答案唔一定啱晒",
+      "reference": "baseline",
+      "before_rank": 19,
+      "after_rank": 6,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "long_phrase_review_cases",
+      "id": "lp036",
+      "form": "habitual_ng_compact",
+      "text": "呢間餐廳嘅嘢唔好食",
+      "reference": "baseline",
+      "before_rank": 26,
+      "after_rank": 1,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "long_phrase_review_cases",
+      "id": "lp042",
+      "form": "habitual_ng_compact",
+      "text": "我唔識去車站",
+      "reference": "baseline",
+      "before_rank": 12,
+      "after_rank": 2,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "long_phrase_review_cases",
+      "id": "lp085",
+      "form": "habitual_ng_compact",
+      "text": "呢件衫唔啱着",
+      "reference": "baseline",
+      "before_rank": 17,
+      "after_rank": 1,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "long_phrase_review_cases",
+      "id": "lp030",
+      "form": "habitual_ng_compact",
+      "text": "少啲糖唔該",
+      "reference": "narrow",
+      "before_rank": 11,
+      "after_rank": 7,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "long_phrase_review_cases",
+      "id": "lp017",
+      "form": "plain_yale_compact",
+      "text": "我真係冇諗過會咁樣",
+      "reference": "baseline",
+      "before_rank": 18,
+      "after_rank": 7,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "long_phrase_review_cases",
+      "id": "lp022",
+      "form": "plain_yale_compact",
+      "text": "我今晚會早啲返",
+      "reference": "baseline",
+      "before_rank": 11,
+      "after_rank": 2,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "long_phrase_review_cases",
+      "id": "lp024",
+      "form": "plain_yale_compact",
+      "text": "我哋約八點半啦",
+      "reference": "baseline",
+      "before_rank": 15,
+      "after_rank": 2,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "long_phrase_review_cases",
+      "id": "lp037",
+      "form": "plain_yale_compact",
+      "text": "有冇位坐",
+      "reference": "baseline",
+      "before_rank": 15,
+      "after_rank": 7,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "long_phrase_review_cases",
+      "id": "lp050",
+      "form": "plain_yale_compact",
+      "text": "件衫仲未乾晒",
+      "reference": "baseline",
+      "before_rank": 13,
+      "after_rank": 1,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "long_phrase_review_cases",
+      "id": "lp053",
+      "form": "plain_yale_compact",
+      "text": "我哋食完飯先一齊洗碗",
+      "reference": "baseline",
+      "before_rank": 22,
+      "after_rank": 1,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "long_phrase_review_cases",
+      "id": "lp073",
+      "form": "plain_yale_compact",
+      "text": "打唔到字",
+      "reference": "baseline",
+      "before_rank": 17,
+      "after_rank": 6,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "long_phrase_review_cases",
+      "id": "lp076",
+      "form": "plain_yale_compact",
+      "text": "呢個字點樣打",
+      "reference": "baseline",
+      "before_rank": 32,
+      "after_rank": 5,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "long_phrase_review_cases",
+      "id": "lp080",
+      "form": "plain_yale_compact",
+      "text": "你可唔可以教我點樣用呢個",
+      "reference": "baseline",
+      "before_rank": 54,
+      "after_rank": 8,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "long_phrase_review_cases",
+      "id": "lp089",
+      "form": "plain_yale_compact",
+      "text": "如果唔啱用可唔可以退錢",
+      "reference": "baseline",
+      "before_rank": 45,
+      "after_rank": 9,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "long_phrase_review_cases",
+      "id": "lp090",
+      "form": "plain_yale_compact",
+      "text": "呢個價錢已經包埋運費未",
+      "reference": "baseline",
+      "before_rank": 69,
+      "after_rank": 3,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "long_phrase_review_cases",
+      "id": "lp017",
+      "form": "plain_yale_compact",
+      "text": "我真係冇諗過會咁樣",
+      "reference": "narrow",
+      "before_rank": 16,
+      "after_rank": 7,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "long_phrase_review_cases",
+      "id": "lp030",
+      "form": "plain_yale_compact",
+      "text": "少啲糖唔該",
+      "reference": "narrow",
+      "before_rank": 11,
+      "after_rank": 7,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "long_phrase_review_cases",
+      "id": "lp073",
+      "form": "plain_yale_compact",
+      "text": "打唔到字",
+      "reference": "narrow",
+      "before_rank": 16,
+      "after_rank": 6,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "long_phrase_review_cases",
+      "id": "lp080",
+      "form": "plain_yale_compact",
+      "text": "你可唔可以教我點樣用呢個",
+      "reference": "narrow",
+      "before_rank": 57,
+      "after_rank": 8,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "long_phrase_review_cases",
+      "id": "lp089",
+      "form": "plain_yale_compact",
+      "text": "如果唔啱用可唔可以退錢",
+      "reference": "narrow",
+      "before_rank": 11,
+      "after_rank": 9,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "long_phrase_review_cases",
+      "id": "lp090",
+      "form": "plain_yale_compact",
+      "text": "呢個價錢已經包埋運費未",
+      "reference": "narrow",
+      "before_rank": 13,
+      "after_rank": 3,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "self_improvement_cycle_1_cases",
+      "id": "si1-005",
+      "form": "habitual_ng_compact",
+      "text": "唔好企喺度",
+      "reference": "baseline",
+      "before_rank": 76,
+      "after_rank": 5,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "self_improvement_cycle_1_cases",
+      "id": "si1-006",
+      "form": "habitual_ng_compact",
+      "text": "呢度唔可以泊車",
+      "reference": "baseline",
+      "before_rank": 15,
+      "after_rank": 1,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "self_improvement_cycle_1_cases",
+      "id": "si1-008",
+      "form": "habitual_ng_compact",
+      "text": "呢班車唔係直接去機場",
+      "reference": "baseline",
+      "before_rank": 19,
+      "after_rank": 4,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "self_improvement_cycle_1_cases",
+      "id": "si1-009",
+      "form": "habitual_ng_compact",
+      "text": "我唔識答",
+      "reference": "baseline",
+      "before_rank": 23,
+      "after_rank": 1,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "self_improvement_cycle_1_cases",
+      "id": "si1-016",
+      "form": "habitual_ng_compact",
+      "text": "我唔想買同一隻顏色",
+      "reference": "baseline",
+      "before_rank": 15,
+      "after_rank": 4,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "self_improvement_cycle_1_cases",
+      "id": "si1-017",
+      "form": "habitual_ng_compact",
+      "text": "呢個唔啱",
+      "reference": "baseline",
+      "before_rank": 39,
+      "after_rank": 6,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "self_improvement_cycle_1_cases",
+      "id": "si1-005",
+      "form": "habitual_ng_compact",
+      "text": "唔好企喺度",
+      "reference": "narrow",
+      "before_rank": 10,
+      "after_rank": 5,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "self_improvement_cycle_1_cases",
+      "id": "si1-017",
+      "form": "habitual_ng_compact",
+      "text": "呢個唔啱",
+      "reference": "narrow",
+      "before_rank": 10,
+      "after_rank": 6,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "self_improvement_cycle_1_cases",
+      "id": "si1-004",
+      "form": "plain_yale_compact",
+      "text": "我今晚唔會留喺公司食飯",
+      "reference": "baseline",
+      "before_rank": 32,
+      "after_rank": 5,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "self_improvement_cycle_1_cases",
+      "id": "si1-005",
+      "form": "plain_yale_compact",
+      "text": "唔好企喺度",
+      "reference": "baseline",
+      "before_rank": 19,
+      "after_rank": 3,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "self_improvement_cycle_1_cases",
+      "id": "si1-014",
+      "form": "plain_yale_compact",
+      "text": "呢間舖今日唔開門",
+      "reference": "baseline",
+      "before_rank": 31,
+      "after_rank": 5,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "self_improvement_cycle_1_cases",
+      "id": "si1-026",
+      "form": "plain_yale_compact",
+      "text": "部影印機喺樓下",
+      "reference": "baseline",
+      "before_rank": 9,
+      "after_rank": 15,
+      "top9_gain": false,
+      "top9_loss": true
+    },
+    {
+      "cohort": "self_improvement_cycle_1_cases",
+      "id": "si1-033",
+      "form": "plain_yale_compact",
+      "text": "五蚊一個",
+      "reference": "baseline",
+      "before_rank": 6,
+      "after_rank": 17,
+      "top9_gain": false,
+      "top9_loss": true
+    },
+    {
+      "cohort": "self_improvement_cycle_1_cases",
+      "id": "si1-036",
+      "form": "plain_yale_compact",
+      "text": "我諗呢個價錢應該包運費",
+      "reference": "baseline",
+      "before_rank": 37,
+      "after_rank": 1,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "self_improvement_cycle_1_cases",
+      "id": "si1-044",
+      "form": "plain_yale_compact",
+      "text": "你到咗樓下就打電話畀我",
+      "reference": "baseline",
+      "before_rank": 86,
+      "after_rank": 8,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "self_improvement_cycle_1_cases",
+      "id": "si1-049",
+      "form": "plain_yale_compact",
+      "text": "準時交表",
+      "reference": "baseline",
+      "before_rank": 11,
+      "after_rank": 2,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "self_improvement_cycle_1_cases",
+      "id": "si1-051",
+      "form": "plain_yale_compact",
+      "text": "我哋一齊整理呢份資料",
+      "reference": "baseline",
+      "before_rank": 24,
+      "after_rank": 1,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "self_improvement_cycle_1_cases",
+      "id": "si1-059",
+      "form": "plain_yale_compact",
+      "text": "將呢份文件另存一個副本",
+      "reference": "baseline",
+      "before_rank": 12,
+      "after_rank": 1,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "self_improvement_cycle_1_cases",
+      "id": "si1-004",
+      "form": "plain_yale_compact",
+      "text": "我今晚唔會留喺公司食飯",
+      "reference": "narrow",
+      "before_rank": 14,
+      "after_rank": 5,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "self_improvement_cycle_1_cases",
+      "id": "si1-013",
+      "form": "plain_yale_compact",
+      "text": "唔好加辣",
+      "reference": "narrow",
+      "before_rank": 9,
+      "after_rank": 20,
+      "top9_gain": false,
+      "top9_loss": true
+    },
+    {
+      "cohort": "self_improvement_cycle_1_cases",
+      "id": "si1-014",
+      "form": "plain_yale_compact",
+      "text": "呢間舖今日唔開門",
+      "reference": "narrow",
+      "before_rank": 17,
+      "after_rank": 5,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "self_improvement_cycle_1_cases",
+      "id": "si1-026",
+      "form": "plain_yale_compact",
+      "text": "部影印機喺樓下",
+      "reference": "narrow",
+      "before_rank": 8,
+      "after_rank": 15,
+      "top9_gain": false,
+      "top9_loss": true
+    },
+    {
+      "cohort": "self_improvement_cycle_1_cases",
+      "id": "si1-033",
+      "form": "plain_yale_compact",
+      "text": "五蚊一個",
+      "reference": "narrow",
+      "before_rank": 8,
+      "after_rank": 17,
+      "top9_gain": false,
+      "top9_loss": true
+    },
+    {
+      "cohort": "self_improvement_cycle_1_cases",
+      "id": "si1-044",
+      "form": "plain_yale_compact",
+      "text": "你到咗樓下就打電話畀我",
+      "reference": "narrow",
+      "before_rank": 28,
+      "after_rank": 8,
+      "top9_gain": true,
+      "top9_loss": false
+    },
+    {
+      "cohort": "self_improvement_cycle_1_cases",
+      "id": "si1-057",
+      "form": "plain_yale_compact",
+      "text": "開大個視窗",
+      "reference": "narrow",
+      "before_rank": 6,
+      "after_rank": 11,
+      "top9_gain": false,
+      "top9_loss": true
+    }
+  ],
+  "all_rank_change_count": 178,
+  "scope_of_denominators": {
+    "long_phrase_review_cases": "All93 primary/30habitual including controls, not ordinary89-only accuracy.",
+    "self_improvement_cycle_1_cases": "All60 primary/20habitual; former validation cases exposed before this experiment."
+  },
+  "source_pins": {
+    "raw_phrase_sha256": "3071d1ca43d6861aefcaa14e1b72780b21537b4e58b86ffce27ae0577c94e2ed",
+    "rime_lock_sha256": "e33ae4ae7c4be7d7236f2566da2075ee6c96d9f53ebaac2d43f7dbac53254e88",
+    "database_sha256": "bd312406a15162556ac58a257ede1514ad40890c793b6f8fa05084fda2d6241a",
+    "narrow_model_sha256": "d6bbd3f0960e219519d9ceb4cea53c2f45fc5e533240b5ff64e18b7cd48053ae",
+    "expanded_model_sha256": "76c357b82201c0e26ba01dbcd9b94e33888b6e6255a400fb4110c30e722cc009",
+    "expanded_model_bytes": 4020609,
+    "experiment_source_sha256": "00c61d7a6c8ff3672dde8f2d7f43f5816734321fba82e4dbcbe19abb237c8bda",
+    "verifier_source_sha256": "b5d82f316fa40c84890a134f3ba16d6ff71eefd82adc30ea352bf44308954bcc",
+    "policy_sha256": "1b7254cb902c409f3ddc9e115aee36c73cf38a30e02cad10fb327bf9813ffc76",
+    "raw_result_sha256": "0956bac66a258419db353b9880f229a72302beab55f4c4327508c0553dc7627b",
+    "rows_sha256": "05c1a91eeb0e9bbf2af899fbfe7255b2dcb5f769b7ea0e7eddedd9ff3336f9f4",
+    "pool_index_and_costs_sha256": "6839c40f1214bab3d918612409ab93a9c180ab4216139ff9a3a8a58455458261",
+    "original_saved_pools_sha256": "6b86a79f64b3f12016376aab35192e51aad7595876b274e7b62e5f612ad528d6"
+  },
+  "decision": {
+    "enable_in_production": false,
+    "model_shipped": false,
+    "quality_pass_claimed": false,
+    "reason": "Expanded phrases improve old93 primary first9 net6 versus narrow, but reduce exposed new60 primary net1. All signed losses are retained; missing original90 targets remain missing. This mixed development evidence does not justify deployment.",
+    "next_experiment_requires_fresh_policy": true
+  },
+  "limitations": [
+    "Same exposed153 phrases/203forms; not independent validation.",
+    "Same original first90 pool; no missing-target recovery is possible.",
+    "Counts are written-type pseudocounts, not conversational utterance frequencies.",
+    "Exact text ranks only; no new pronunciation, personalization, native or latency test.",
+    "Frozen database winning source rows provide the old inventory, not exhaustive raw-source attestation.",
+    "Counts are unchanged one-per-written-type pseudocounts, not real sentence frequencies or a conversational corpus.",
+    "No parameter tuning or selected-case rejection followed this outcome; onlyweight0.25 was evaluated.",
+    "The retained binary/type inventory/notices remain local research artifacts and are not runtime/package assets."
+  ]
+}
