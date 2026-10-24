@@ -175,11 +175,29 @@
     "machine_specific_raw_evidence_published": false
   },
   "expanded_sentence_review": {
-    "status": "COMPLETE: QUALITY GATES FAILED; RELEASE WITHHELD",
-    "release_held": true,
+    "status": "COMPLETE: QUALITY GATES FAILED; subsequent maintainer instruction requests publication with known limitations",
+    "release_held": false,
     "policy": "../eval/long_phrase_release_policy.json",
     "results": "LONG_PHRASE_RELEASE_REVIEW.md",
     "decision": "long-phrase-release-decision.json",
-    "scope": "Focused195runtime checks remain valid for frozen source but do not establish sentence quality. No candidate installation or publication after the expanded review."
+    "scope": "The historical withholding decision and all failed quality gates remain unchanged. The maintainer subsequently requested publication of the frozen1.0.8 artifact, with installed1.0.8 TSF acceptance still unverified."
+  },
+  "publication": {
+    "requested_by_maintainer": true,
+    "instruction": "publish 1.0.8 to github and then continue the self improvement loop",
+    "record": "RELEASE_PUBLICATION_1.0.8.md",
+    "status": "Prepared; remote verification will be recorded after publication.",
+    "quality_gates_passed": false,
+    "installed_1_0_8_acceptance_passed": false,
+    "scope": "The frozen 1.0.8 artifact is released with known quality limitations; broader sentence-quality gates and installed 1.0.8 acceptance remain unpassed."
+  },
+  "actual_packaged_dll_com_smoke_1_0_8": {
+    "passed": true,
+    "dll_sha256": "1ed29c7988322538b804f690db8c354dfa8c69d463d21c101b1e694f20a0f7ca",
+    "service_interfaces_verified": 7,
+    "canonical_iunknown_verified": true,
+    "cleanly_unloaded": true,
+    "foreground_unchanged": true,
+    "scope": "Exact packaged x64 DLL loaded into a disposable process; class factory and service construction only. No TSF activation, IME registration, application typing or installed-broker acceptance."
   }
 }

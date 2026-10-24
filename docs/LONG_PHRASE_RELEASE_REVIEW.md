@@ -1,5 +1,10 @@
 # Long-phrase release review
 
+This records the quality review and its original decision to withhold. The
+maintainer subsequently requested publication of 1.0.8 with these known limits;
+see [the publication record](RELEASE_PUBLICATION_1.0.8.md). The measurements,
+frozen policy and failed quality gates remain unchanged.
+
 The expanded phrase testing is complete. The candidate remains held because
 its sentence-quality gates failed. This review responds to failures across
 many longer sentences, beyond the original 字型 example.
