@@ -387,3 +387,18 @@ after tuning. Original SHORT (five units twice each), HEAVY (twelve units thirty
 times each), habitual-input, external replay, controlled performance and native
 checks remain unfinished. No context model was integrated or installed, and the
 published v1.0.8 tag and installers remain unchanged.
+
+### Surface context: learning integration mechanics
+
+The [isolated history-aware adapter](SURFACE_CONTEXT_LEARNING.md) now passes
+33 component and 33 tiny-dictionary runtime checks, including overlapping
+child-process writes. Its primary-dictionary smoke passes 26 checks with 43
+explicit candidate calls, eight selection API calls and 15 constructors. All 15
+complete fresh pool comparisons are exact; restart and old/new saved-reading
+checks pass. An independent saved audit reconciles the attempts and 74 input
+hashes, with internal persistence assertions qualified in the aggregate.
+
+This advances integration, not phrase-quality acceptance. Original SHORT/HEAVY
+quality profiles, external replay, controlled performance and native acceptance
+remain pending. Context scoring is still disabled in production, and v1.0.8
+release assets remain frozen.

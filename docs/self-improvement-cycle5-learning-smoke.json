@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "kind": "isolated_surface_context_learning_mechanics",
+  "status": "primary_smoke_passed_original_profile_quality_pending",
+  "production_enabled": false,
+  "installed": false,
+  "published_v1_0_8_assets_changed": false,
+  "mechanical_checks": {
+    "component_test_methods": 33,
+    "zero_reward_preparation_parity_comparisons": 240,
+    "authored_tiny_sqlite_runtime_test_methods": 33,
+    "overlapping_independent_process_writers_passed": true,
+    "primary_smoke_checks": 26,
+    "primary_smoke_checks_passed": 26,
+    "explicit_candidate_calls": 43,
+    "fresh_parity_candidate_calls": 30,
+    "fresh_complete_pool_pairs": 15,
+    "fresh_complete_pool_pairs_exact": 15,
+    "selection_api_calls": 8,
+    "engine_constructions": 15,
+    "expected_stale_lookup_rejections": 2,
+    "expected_read_only_write_rejections": 1,
+    "expected_injected_pre_replace_rejections": 1,
+    "unexpected_errors": 0,
+    "old_ng4_and_current_m4_memory_readings_preserved": true,
+    "independent_saved_audit_checks": 22,
+    "independent_saved_audit_discrepancies": 0,
+    "input_hashes_rechecked_before_after": 74,
+    "personal_histories_accessed": false
+  },
+  "evidence_sha256": {
+    "personalized_runtime_closure": "76b85c926570aab7fd1ecf093ab8d41106382536d4d007374e29ecb4f27066c7",
+    "preserved_fresh_runtime_closure": "5d93a0725822a9deb8443c0c4ba17d9bc4d5ce20a038b23f917d474efb5efd71",
+    "component_checks": "a309a3c4f882badf2585b62dfe20eaf6c2d3326a677156f275e537b97608d4c8",
+    "tiny_sqlite_runtime_checks": "aee5d867691bebffb648c097f1e1cdeb1d6d793ad9f81fab8f91009058466659",
+    "independent_source_review": "e1c1dce24d315823db574af67417caa6d2f7d2bb8078e6e29242ee9ca1530cb9",
+    "primary_smoke_go": "a481856bacf37b6970c8a355e3b6276b86c9ae6f8a0c46182ed9df331dc61a75",
+    "primary_smoke_report": "c730a50e5d19dcb33eaa51cff99eae4d6bc06f1a470955015ea2603fcf6fe853",
+    "primary_smoke_ledger": "af2d95e00484523ebf41f10308ce7d9452ff4a7b27ecbf7b997a4b4ce8c60be6",
+    "independent_saved_smoke_audit": "c13ea59198c17cfb4c6f249e0c3a84a053ea93a882bb609fbc173ca6066859d0"
+  },
+  "qualifications": [
+    "Explicit external API counts exclude unmeasured internal selection snapshot/decode work.",
+    "Five internal persistence predicates are executed pinned-source assertions; their underlying object snapshots were not serialized. One unchanged-file predicate also lacks serialized before/after bytes.",
+    "Outer serialization covers cooperating adapter writers. Direct baseline or external writes can leave a committed but unsealed instance requiring reopen.",
+    "No phrase-quality, external replay, controlled performance, installed TSF or native macOS acceptance is established by this smoke run.",
+    "Raw inputs, candidate pools, synthetic stores, private paths and new evaluation labels remain excluded from this aggregate."
+  ],
+  "remaining_original_requirements": [
+    "All fresh, original SHORT and original HEAVY authored phrase-quality gates and full ordinary habitual-ng group.",
+    "Original HKCanCor500 four-form fresh and synthetic-short replay against matching frozen baseline.",
+    "Dedicated serial changing-input latency and separately recorded cold start.",
+    "Production integration, fresh Windows x64 package and installed broker/TSF/app acceptance; native macOS checks separately."
+  ]
+}
