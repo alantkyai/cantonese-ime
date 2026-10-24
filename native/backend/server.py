@@ -396,16 +396,18 @@ def _watch_stop_file(path: Path, instance: str, stop: threading.Event):
 
 
 @contextmanager
-def _conversion_engine(database: Path, learning_file: Path | None, log):
+def _conversion_engine(database: Path, learning_file: Path | None, log, *, syllabic_m_as_ng: bool = True):
     try:
-        engine = Engine(database, mode="forgiving", learning_path=learning_file)
+        engine = Engine(database, mode="forgiving", learning_path=learning_file,
+                        syllabic_m_as_ng=syllabic_m_as_ng)
     except (OSError, ValueError):
         if learning_file is None:
             raise
         # Preserve the original file and keep conversion usable. A second failure
         # opening the dictionary itself still propagates rather than being hidden.
         log("learning_unavailable", stage="startup")
-        engine = Engine(database, mode="forgiving", learning_path=None)
+        engine = Engine(database, mode="forgiving", learning_path=None,
+                        syllabic_m_as_ng=syllabic_m_as_ng)
     with engine:
         yield engine
 
@@ -413,7 +415,7 @@ def _conversion_engine(database: Path, learning_file: Path | None, log):
 def serve(database: Path, ready_file: Path, log_file: Path, *,
           stop_event: threading.Event | None = None,
           runtime_instance: str | None = None, stop_file: Path | None = None,
-          learning_file: Path | None = None):
+          learning_file: Path | None = None, syllabic_m_as_ng: bool = True):
     outputs = ([database, ready_file, log_file] + ([stop_file] if stop_file is not None else [])
                + ([learning_file] if learning_file is not None else []))
     if len({path.resolve() for path in outputs}) != len(outputs):
@@ -438,7 +440,7 @@ def serve(database: Path, ready_file: Path, log_file: Path, *,
             for number in range(MAX_PIPE_INSTANCES):
                 handles.append(api.create_pipe(name, security, first=number == 0))
             started = time.perf_counter()
-            with _conversion_engine(database, learning_file, log) as engine:
+            with _conversion_engine(database, learning_file, log, syllabic_m_as_ng=syllabic_m_as_ng) as engine:
                 identity = {
                     "kind": "Cantonese IME local broker", "pid": os.getpid(), "python": sys.executable,
                     "python_bits": struct.calcsize("P") * 8, "pipe": name, "windows_session": session_id,
@@ -446,6 +448,7 @@ def serve(database: Path, ready_file: Path, log_file: Path, *,
                     "backend_source_sha256": file_sha256(Path(__file__)),
                     "learning_requested": learning_file is not None,
                     "learning_enabled": getattr(engine, "learning_path", None) is not None,
+                    "input_conventions": {"syllabic_m_as_ng": syllabic_m_as_ng},
                     "learning_file": str(learning_file.resolve()) if learning_file is not None else None,
                     "remote_clients": "rejected", "pipe_acl": "current user and SYSTEM only",
                     "max_pipe_instances": MAX_PIPE_INSTANCES,
@@ -488,9 +491,12 @@ def main():
     parser.add_argument("--runtime-instance", help="Controller launch UUID; requires --stop-file.")
     parser.add_argument("--stop-file", type=Path, help="Nonce-scoped graceful stop request (optional).")
     parser.add_argument("--learning-file", type=Path, help="Optional per-user local selection memory; conversion survives save errors.")
+    parser.add_argument("--syllabic-m-as-ng", action=argparse.BooleanOptionalAction, default=True,
+                        help="Accept whole-syllable ng for m in forgiving input (default: on).")
     args = parser.parse_args()
     serve(args.dictionary, args.ready_file, args.log,
-          runtime_instance=args.runtime_instance, stop_file=args.stop_file, learning_file=args.learning_file)
+          runtime_instance=args.runtime_instance, stop_file=args.stop_file, learning_file=args.learning_file,
+          syllabic_m_as_ng=args.syllabic_m_as_ng)
 
 
 if __name__ == "__main__":

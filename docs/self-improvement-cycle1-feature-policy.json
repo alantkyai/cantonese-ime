@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-24T13:45:31.049136+00:00",
+  "kind": "incremental_opt_in_nasal_input_feature_acceptance",
+  "fixture_sha256": "7b98789e1ea9c307f03a0f0c12dd13492be507500e38f15fdaa1efd158655d64",
+  "candidate_sha256": "37fbc0d115aad3ae9466a7737fc4a45c77cf0a2d67a720bb9a5eeacd6662451b",
+  "baseline_sha256": "a4e2d07c98adbb78b8a6978892827bd907a68cd658f06229d6493fbc05e3e141",
+  "feature": {
+    "syllabic_m_as_ng": true,
+    "alias_cost": 0.8,
+    "default": false
+  },
+  "recorded_before_seed_and_evaluation_lookups": true,
+  "validation_rules": {
+    "proper_yale_compact_all30": "Zero new exact-text first9 losses against baseline, for each of three histories.",
+    "nasal_and_ordinary_controls": "Zero new exact-text first9 losses on validation nasal/ordinary controls across all four primary/diagnostic forms, per history.",
+    "habitual_ng_fresh10": "Candidate first9 hit count minus baseline first9 hit count at least2.",
+    "habitual_ng_learned10": "Candidate first9 hit count at least baseline first9 count for each short/heavy history; all individual losses remain reported."
+  },
+  "contract_rules": {
+    "strict_modes": "Type-independent serialized first90 candidate pools and page metadata identical for both strict Jyutping forms, all60 cases and all histories.",
+    "disabled_behavior": "Explicitly disabled candidate must match baseline pools/page metadata on all260 fresh requests.",
+    "runtime": "Zero exceptions, invalid page/reading metadata, consumption mismatches, nonfinite scores, duplicate texts or lookup history mutations.",
+    "source_guards": "Fixture, candidate, baseline, runtime/data, runner and this policy must retain their recorded SHA256 after the run.",
+    "history_identity": "Create each learned history once through actual baseline record_selection, preserve old ng4 seed reading and clone identical bytes per model/profile. Never seed models independently."
+  },
+  "histories": {
+    "fresh": null,
+    "short_preferences": {
+      "units": 5,
+      "repetitions_each": 2
+    },
+    "heavy_short_preferences": {
+      "units": 12,
+      "repetitions_each": 30
+    }
+  },
+  "scope": "Untouched-within-cycle validation only, not representative human input or held-out language accuracy. These are incremental feature gates, not the previously failed90% sentence release gates.",
+  "full_release_quality_gates_replaced": false,
+  "expected_evaluation_requests": 1820,
+  "expected_paired_requests": 1560,
+  "expected_disabled_requests": 260
+}

@@ -1,0 +1,3226 @@
+{
+  "schema_version": 1,
+  "title": "Self-improvement cycle1 rank-blind Cantonese phrase review",
+  "provenance": {
+    "kind": "project_authored_cycle_development_and_validation",
+    "authored_date": "2026-10-24",
+    "author": "Codex project agent; AI-authored and not human/native-speaker approved",
+    "targets_and_numeric_readings_fixed_before_lexical_queries": true,
+    "engine_queries_during_authoring": 0,
+    "engine_imported_during_authoring": false,
+    "rankings_consulted": false,
+    "personal_history_used": false,
+    "representative_sampling_claim": false,
+    "held_out_language_accuracy_claim": false,
+    "validation_scope": "Untouched within this cycle only. Validation targets are restricted to author/parent linguistic review until the prototype candidate freezes; this is not a held-out language benchmark. Access discipline must be established by the orchestration record, not metadata alone.",
+    "no_rank_based_target_filtering": true,
+    "original_authored_targets_sha256": "917abc56725ea67da9d319abf93570bb30e26bb567aee3959e9ee215e0206df4",
+    "independent_pronunciation_review": "Parent agent independently reviewed all60 text/readings before candidate scoring; no further phonology correction found. Modal wui5 versus meeting wui2, changed-tone meng2 and soeng5 were explicitly checked. No human/audio approval claimed.",
+    "validation_access_at_freeze": "Author and parent pronunciation/schema review only; prototype agent instructed not to inspect validation targets before its candidate code freeze."
+  },
+  "input_profile": "cantonese-yale-ascii-v3",
+  "input_policy": "Primary compact tone-free Yale omits tone marks and low-register h. Negative-group user_input replaces only 唔/m4 with ng; it is scored separately from primary Yale. Nasal controls contain no 唔 and retain genuine ng/ngo/ngong/jing contexts.",
+  "split_policy": {
+    "algorithm": "SHA256 within each group/category stratum",
+    "salt": "cantonese-ime-self-improvement-cycle1-v1",
+    "hash_input": "salt|group|category|text (UTF-8)",
+    "allocation": "Sort each four-case group/category cell by selection_hash then id; first2 development, last2 validation. Target ranks/support do not affect split.",
+    "validation_reveal": "Do not inspect or score validation targets in the prototype work before candidate freeze."
+  },
+  "source_validation": {
+    "method": "Read-only exact text/reading existence queries; no weights, candidate engine or personal learning.",
+    "source_sha256": {
+      "eval/long_phrase_review_cases.json": "bfb0eb8cf0ca77633394c3aad450d403603800e9a8108c01817bdb85d1d814c6",
+      "eval/core_cases.json": "0d705ac210278c498269397173c942863b8fdbb265a9f6d7b1328925395300ed",
+      "eval/hkcancor_cases.json": "410f4b612ca14e5e60da0b147f7bf9fb4b4a1e25c125053e00596981b72ef085",
+      "data/generated/lexicon.sqlite3": "bd312406a15162556ac58a257ede1514ad40890c793b6f8fa05084fda2d6241a",
+      "cantonese_ime/engine.py": "a4e2d07c98adbb78b8a6978892827bd907a68cd658f06229d6493fbc05e3e141",
+      "cantonese_ime/mappings.py": "d61d6e7ab3b82bab7a31d42f7abfefb4f224eed5c9dbf505304eef2d940249e1",
+      "eval/yale_expected.json": "477f56a946625283e78417e75382d9682b68cbe877fb13e3a67d2bf5a0095745",
+      "data/mappings/syllables.json": "6ba71ec3b02e763be7f371b0c354945075bb974092454aaba4725d750b03ef02",
+      "data/mappings/spellings.json": "6726e07ec0751d8a2017d25eb494c416555c0bc70d744155e48cdd1b513abb60"
+    },
+    "comparison_fixture_exact_overlap": {
+      "long_phrase_review_cases.json": [],
+      "core_cases.json": [],
+      "hkcancor_cases.json": []
+    },
+    "unique_syllables_checked": 161,
+    "mapping_agreement": "All used bases agree across converter-only module, independently composed chart grid and stored syllable Yale fields; each has a stored spelling-alias row."
+  },
+  "coverage": {
+    "total_cases": 60,
+    "groups": {
+      "negative": 20,
+      "nasal_control": 20,
+      "ordinary_control": 20
+    },
+    "splits": {
+      "validation": 30,
+      "development": 30
+    },
+    "group_split_counts": {
+      "nasal_control": {
+        "validation": 10,
+        "development": 10
+      },
+      "negative": {
+        "validation": 10,
+        "development": 10
+      },
+      "ordinary_control": {
+        "validation": 10,
+        "development": 10
+      }
+    },
+    "topic_split_counts": {
+      "daily_plans": {
+        "validation": 6,
+        "development": 6
+      },
+      "food_shopping": {
+        "validation": 6,
+        "development": 6
+      },
+      "media_technology": {
+        "validation": 6,
+        "development": 6
+      },
+      "travel_home": {
+        "validation": 6,
+        "development": 6
+      },
+      "work_messages": {
+        "development": 6,
+        "validation": 6
+      }
+    },
+    "length_band_counts": {
+      "4-5": 15,
+      "6-8": 15,
+      "9-12": 30
+    },
+    "length_band_by_split": {
+      "development": {
+        "6-8": 10,
+        "9-12": 16,
+        "4-5": 4
+      },
+      "validation": {
+        "4-5": 11,
+        "9-12": 14,
+        "6-8": 5
+      }
+    },
+    "whole_text_absent_dictionary": 57,
+    "exact_target_overlap_count": 0,
+    "nasal_control_base_counts": {
+      "ngo": 11,
+      "ng": 10,
+      "jing": 9,
+      "ngong": 3
+    }
+  },
+  "cases": [
+    {
+      "id": "si1-001",
+      "category": "daily_plans",
+      "group": "negative",
+      "text": "今晚唔得閒",
+      "reading": "gam1 maan5 m4 dak1 haan4",
+      "segments": [
+        {
+          "text": "今晚",
+          "reading": "gam1 maan5"
+        },
+        {
+          "text": "唔",
+          "reading": "m4"
+        },
+        {
+          "text": "得閒",
+          "reading": "dak1 haan4"
+        }
+      ],
+      "char_length": 5,
+      "case_role": "ordinary",
+      "selection_hash": "988480388930ed7af3563c68fd64afff12b7e6689e947ffae4f76a490ad353f1",
+      "split": "validation",
+      "input": "gammaanmdakhaan",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "今晚唔得閒"
+      ],
+      "top_k": 9,
+      "length_band": "4-5",
+      "user_input": "gammaanngdakhaan",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "Replace only 唔/m4 with the user's habitual ng at syllable boundaries; primary Yale remains m.",
+      "whole_text_in_dictionary": true,
+      "whole_text_reading_in_dictionary": true,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "syllabic_m",
+        "habitual_ng_alias"
+      ]
+    },
+    {
+      "id": "si1-002",
+      "category": "daily_plans",
+      "group": "negative",
+      "text": "我唔想咁早走",
+      "reading": "ngo5 m4 soeng2 gam3 zou2 zau2",
+      "segments": [
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "唔",
+          "reading": "m4"
+        },
+        {
+          "text": "想",
+          "reading": "soeng2"
+        },
+        {
+          "text": "咁",
+          "reading": "gam3"
+        },
+        {
+          "text": "早",
+          "reading": "zou2"
+        },
+        {
+          "text": "走",
+          "reading": "zau2"
+        }
+      ],
+      "char_length": 6,
+      "case_role": "ordinary",
+      "selection_hash": "319d2ebf9e8362209e2156ce941faf738ab38fed4e42a50cf079f846e77ca4c3",
+      "split": "development",
+      "input": "ngomseunggamjoujau",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "我唔想咁早走"
+      ],
+      "top_k": 9,
+      "length_band": "6-8",
+      "user_input": "ngongseunggamjoujau",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "Replace only 唔/m4 with the user's habitual ng at syllable boundaries; primary Yale remains m.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "syllabic_m",
+        "habitual_ng_alias"
+      ]
+    },
+    {
+      "id": "si1-003",
+      "category": "daily_plans",
+      "group": "negative",
+      "text": "聽朝唔使特登過嚟接我",
+      "reading": "ting1 ziu1 m4 sai2 dak6 dang1 gwo3 lai4 zip3 ngo5",
+      "segments": [
+        {
+          "text": "聽朝",
+          "reading": "ting1 ziu1"
+        },
+        {
+          "text": "唔使",
+          "reading": "m4 sai2"
+        },
+        {
+          "text": "特登",
+          "reading": "dak6 dang1"
+        },
+        {
+          "text": "過嚟",
+          "reading": "gwo3 lai4"
+        },
+        {
+          "text": "接",
+          "reading": "zip3"
+        },
+        {
+          "text": "我",
+          "reading": "ngo5"
+        }
+      ],
+      "char_length": 10,
+      "case_role": "ordinary",
+      "selection_hash": "91e9de5b587d2a400d357f8c6b0feb4c3389b33d29480dca53cb2a9af5541783",
+      "split": "development",
+      "input": "tingjiumsaidakdanggwolaijipngo",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "聽朝唔使特登過嚟接我"
+      ],
+      "top_k": 9,
+      "length_band": "9-12",
+      "user_input": "tingjiungsaidakdanggwolaijipngo",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "Replace only 唔/m4 with the user's habitual ng at syllable boundaries; primary Yale remains m.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "syllabic_m",
+        "habitual_ng_alias",
+        "contextual_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "si1-004",
+      "category": "daily_plans",
+      "group": "negative",
+      "text": "我今晚唔會留喺公司食飯",
+      "reading": "ngo5 gam1 maan5 m4 wui5 lau4 hai2 gung1 si1 sik6 faan6",
+      "segments": [
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "今晚",
+          "reading": "gam1 maan5"
+        },
+        {
+          "text": "唔",
+          "reading": "m4"
+        },
+        {
+          "text": "會",
+          "reading": "wui5"
+        },
+        {
+          "text": "留",
+          "reading": "lau4"
+        },
+        {
+          "text": "喺",
+          "reading": "hai2"
+        },
+        {
+          "text": "公司",
+          "reading": "gung1 si1"
+        },
+        {
+          "text": "食飯",
+          "reading": "sik6 faan6"
+        }
+      ],
+      "char_length": 11,
+      "case_role": "ordinary",
+      "selection_hash": "e471770a64fa3b9a04ff93547a4c1fc48b66939b12fe628957ac5411c7c171b5",
+      "split": "validation",
+      "input": "ngogammaanmwuilauhaigungsisikfaan",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "我今晚唔會留喺公司食飯"
+      ],
+      "top_k": 9,
+      "length_band": "9-12",
+      "user_input": "ngogammaanngwuilauhaigungsisikfaan",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "Replace only 唔/m4 with the user's habitual ng at syllable boundaries; primary Yale remains m.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "syllabic_m",
+        "habitual_ng_alias",
+        "contextual_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "si1-005",
+      "category": "travel_home",
+      "group": "negative",
+      "text": "唔好企喺度",
+      "reading": "m4 hou2 kei5 hai2 dou6",
+      "segments": [
+        {
+          "text": "唔好",
+          "reading": "m4 hou2"
+        },
+        {
+          "text": "企",
+          "reading": "kei5"
+        },
+        {
+          "text": "喺度",
+          "reading": "hai2 dou6"
+        }
+      ],
+      "char_length": 5,
+      "case_role": "ordinary",
+      "selection_hash": "d842c15dd2b4a714c864175f31b65976012eef0989a8dbc2362044aaf7010909",
+      "split": "validation",
+      "input": "mhoukeihaidou",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "唔好企喺度"
+      ],
+      "top_k": 9,
+      "length_band": "4-5",
+      "user_input": "nghoukeihaidou",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "Replace only 唔/m4 with the user's habitual ng at syllable boundaries; primary Yale remains m.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "syllabic_m",
+        "habitual_ng_alias"
+      ]
+    },
+    {
+      "id": "si1-006",
+      "category": "travel_home",
+      "group": "negative",
+      "text": "呢度唔可以泊車",
+      "reading": "ni1 dou6 m4 ho2 ji5 paak3 ce1",
+      "segments": [
+        {
+          "text": "呢度",
+          "reading": "ni1 dou6"
+        },
+        {
+          "text": "唔",
+          "reading": "m4"
+        },
+        {
+          "text": "可以",
+          "reading": "ho2 ji5"
+        },
+        {
+          "text": "泊車",
+          "reading": "paak3 ce1"
+        }
+      ],
+      "char_length": 7,
+      "case_role": "ordinary",
+      "selection_hash": "6b2451acd3d49b3bd4cd1f0276063430a8b811fe41e1801bed00222d74966a16",
+      "split": "development",
+      "input": "nidoumhoyipaakche",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "呢度唔可以泊車"
+      ],
+      "top_k": 9,
+      "length_band": "6-8",
+      "user_input": "nidounghoyipaakche",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "Replace only 唔/m4 with the user's habitual ng at syllable boundaries; primary Yale remains m.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "syllabic_m",
+        "habitual_ng_alias"
+      ]
+    },
+    {
+      "id": "si1-007",
+      "category": "travel_home",
+      "group": "negative",
+      "text": "你唔記得帶鎖匙就打畀我",
+      "reading": "nei5 m4 gei3 dak1 daai3 so2 si4 zau6 daa2 bei2 ngo5",
+      "segments": [
+        {
+          "text": "你",
+          "reading": "nei5"
+        },
+        {
+          "text": "唔記得",
+          "reading": "m4 gei3 dak1"
+        },
+        {
+          "text": "帶",
+          "reading": "daai3"
+        },
+        {
+          "text": "鎖匙",
+          "reading": "so2 si4"
+        },
+        {
+          "text": "就",
+          "reading": "zau6"
+        },
+        {
+          "text": "打",
+          "reading": "daa2"
+        },
+        {
+          "text": "畀",
+          "reading": "bei2"
+        },
+        {
+          "text": "我",
+          "reading": "ngo5"
+        }
+      ],
+      "char_length": 11,
+      "case_role": "ordinary",
+      "selection_hash": "1cbb09bee6efaf6c9753d9ad66dead085515d6282154b6dc63a350af99ec937e",
+      "split": "development",
+      "input": "neimgeidakdaaisosijaudabeingo",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "你唔記得帶鎖匙就打畀我"
+      ],
+      "top_k": 9,
+      "length_band": "9-12",
+      "user_input": "neinggeidakdaaisosijaudabeingo",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "Replace only 唔/m4 with the user's habitual ng at syllable boundaries; primary Yale remains m.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "syllabic_m",
+        "habitual_ng_alias"
+      ]
+    },
+    {
+      "id": "si1-008",
+      "category": "travel_home",
+      "group": "negative",
+      "text": "呢班車唔係直接去機場",
+      "reading": "ni1 baan1 ce1 m4 hai6 zik6 zip3 heoi3 gei1 coeng4",
+      "segments": [
+        {
+          "text": "呢",
+          "reading": "ni1"
+        },
+        {
+          "text": "班",
+          "reading": "baan1"
+        },
+        {
+          "text": "車",
+          "reading": "ce1"
+        },
+        {
+          "text": "唔",
+          "reading": "m4"
+        },
+        {
+          "text": "係",
+          "reading": "hai6"
+        },
+        {
+          "text": "直接",
+          "reading": "zik6 zip3"
+        },
+        {
+          "text": "去",
+          "reading": "heoi3"
+        },
+        {
+          "text": "機場",
+          "reading": "gei1 coeng4"
+        }
+      ],
+      "char_length": 10,
+      "case_role": "ordinary",
+      "selection_hash": "eff8590fd83d7946e5287310ba27676b4c667792b9e55d0916512c256a9a10e5",
+      "split": "validation",
+      "input": "nibaanchemhaijikjipheuigeicheung",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "呢班車唔係直接去機場"
+      ],
+      "top_k": 9,
+      "length_band": "9-12",
+      "user_input": "nibaanchenghaijikjipheuigeicheung",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "Replace only 唔/m4 with the user's habitual ng at syllable boundaries; primary Yale remains m.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "syllabic_m",
+        "habitual_ng_alias"
+      ]
+    },
+    {
+      "id": "si1-009",
+      "category": "work_messages",
+      "group": "negative",
+      "text": "我唔識答",
+      "reading": "ngo5 m4 sik1 daap3",
+      "segments": [
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "唔",
+          "reading": "m4"
+        },
+        {
+          "text": "識",
+          "reading": "sik1"
+        },
+        {
+          "text": "答",
+          "reading": "daap3"
+        }
+      ],
+      "char_length": 4,
+      "case_role": "ordinary",
+      "selection_hash": "2582d95b5a712ed133eea19d3f347d309bbe972135d79565135167089234cd16",
+      "split": "development",
+      "input": "ngomsikdaap",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "我唔識答"
+      ],
+      "top_k": 9,
+      "length_band": "4-5",
+      "user_input": "ngongsikdaap",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "Replace only 唔/m4 with the user's habitual ng at syllable boundaries; primary Yale remains m.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "syllabic_m",
+        "habitual_ng_alias"
+      ]
+    },
+    {
+      "id": "si1-010",
+      "category": "work_messages",
+      "group": "negative",
+      "text": "呢封信唔使即刻覆",
+      "reading": "ni1 fung1 seon3 m4 sai2 zik1 hak1 fuk1",
+      "segments": [
+        {
+          "text": "呢",
+          "reading": "ni1"
+        },
+        {
+          "text": "封",
+          "reading": "fung1"
+        },
+        {
+          "text": "信",
+          "reading": "seon3"
+        },
+        {
+          "text": "唔使",
+          "reading": "m4 sai2"
+        },
+        {
+          "text": "即刻",
+          "reading": "zik1 hak1"
+        },
+        {
+          "text": "覆",
+          "reading": "fuk1"
+        }
+      ],
+      "char_length": 8,
+      "case_role": "ordinary",
+      "selection_hash": "746c04b4dad9ab1607254de7fe9374fb148313f6730db706cedf17ba1a4a223f",
+      "split": "validation",
+      "input": "nifungseunmsaijikhakfuk",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "呢封信唔使即刻覆"
+      ],
+      "top_k": 9,
+      "length_band": "6-8",
+      "user_input": "nifungseunngsaijikhakfuk",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "Replace only 唔/m4 with the user's habitual ng at syllable boundaries; primary Yale remains m.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "syllabic_m",
+        "habitual_ng_alias"
+      ]
+    },
+    {
+      "id": "si1-011",
+      "category": "work_messages",
+      "group": "negative",
+      "text": "你唔清楚就等我解釋一次",
+      "reading": "nei5 m4 cing1 co2 zau6 dang2 ngo5 gaai2 sik1 jat1 ci3",
+      "segments": [
+        {
+          "text": "你",
+          "reading": "nei5"
+        },
+        {
+          "text": "唔",
+          "reading": "m4"
+        },
+        {
+          "text": "清楚",
+          "reading": "cing1 co2"
+        },
+        {
+          "text": "就",
+          "reading": "zau6"
+        },
+        {
+          "text": "等",
+          "reading": "dang2"
+        },
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "解釋",
+          "reading": "gaai2 sik1"
+        },
+        {
+          "text": "一次",
+          "reading": "jat1 ci3"
+        }
+      ],
+      "char_length": 11,
+      "case_role": "ordinary",
+      "selection_hash": "1b58e129648fbf35dbff6a77bce8963c63cf6d17dd05fc6878ba79f19fe2c34f",
+      "split": "development",
+      "input": "neimchingchojaudangngogaaisikyatchi",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "你唔清楚就等我解釋一次"
+      ],
+      "top_k": 9,
+      "length_band": "9-12",
+      "user_input": "neingchingchojaudangngogaaisikyatchi",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "Replace only 唔/m4 with the user's habitual ng at syllable boundaries; primary Yale remains m.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "syllabic_m",
+        "habitual_ng_alias"
+      ]
+    },
+    {
+      "id": "si1-012",
+      "category": "work_messages",
+      "group": "negative",
+      "text": "份文件唔齊就做唔到登記",
+      "reading": "fan6 man4 gin6 m4 cai4 zau6 zou6 m4 dou2 dang1 gei3",
+      "segments": [
+        {
+          "text": "份",
+          "reading": "fan6"
+        },
+        {
+          "text": "文件",
+          "reading": "man4 gin6"
+        },
+        {
+          "text": "唔",
+          "reading": "m4"
+        },
+        {
+          "text": "齊",
+          "reading": "cai4"
+        },
+        {
+          "text": "就",
+          "reading": "zau6"
+        },
+        {
+          "text": "做唔到",
+          "reading": "zou6 m4 dou2"
+        },
+        {
+          "text": "登記",
+          "reading": "dang1 gei3"
+        }
+      ],
+      "char_length": 11,
+      "case_role": "ordinary",
+      "selection_hash": "562c2db41c7db90c3802b3a60df648d810ed98de8348987524711e1cc0c20769",
+      "split": "validation",
+      "input": "fanmanginmchaijaujoumdoudanggei",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "份文件唔齊就做唔到登記"
+      ],
+      "top_k": 9,
+      "length_band": "9-12",
+      "user_input": "fanmanginngchaijaujoungdoudanggei",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "Replace only 唔/m4 with the user's habitual ng at syllable boundaries; primary Yale remains m.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "syllabic_m",
+        "habitual_ng_alias",
+        "contextual_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "si1-013",
+      "category": "food_shopping",
+      "group": "negative",
+      "text": "唔好加辣",
+      "reading": "m4 hou2 gaa1 laat6",
+      "segments": [
+        {
+          "text": "唔好",
+          "reading": "m4 hou2"
+        },
+        {
+          "text": "加辣",
+          "reading": "gaa1 laat6"
+        }
+      ],
+      "char_length": 4,
+      "case_role": "ordinary",
+      "selection_hash": "fff722a4f2c96276aa51fbac73c2797924156d0f6d28437e6a869871be120451",
+      "split": "validation",
+      "input": "mhougalaat",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "唔好加辣"
+      ],
+      "top_k": 9,
+      "length_band": "4-5",
+      "user_input": "nghougalaat",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "Replace only 唔/m4 with the user's habitual ng at syllable boundaries; primary Yale remains m.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "syllabic_m",
+        "habitual_ng_alias"
+      ]
+    },
+    {
+      "id": "si1-014",
+      "category": "food_shopping",
+      "group": "negative",
+      "text": "呢間舖今日唔開門",
+      "reading": "ni1 gaan1 pou3 gam1 jat6 m4 hoi1 mun4",
+      "segments": [
+        {
+          "text": "呢",
+          "reading": "ni1"
+        },
+        {
+          "text": "間",
+          "reading": "gaan1"
+        },
+        {
+          "text": "舖",
+          "reading": "pou3"
+        },
+        {
+          "text": "今日",
+          "reading": "gam1 jat6"
+        },
+        {
+          "text": "唔",
+          "reading": "m4"
+        },
+        {
+          "text": "開門",
+          "reading": "hoi1 mun4"
+        }
+      ],
+      "char_length": 8,
+      "case_role": "ordinary",
+      "selection_hash": "95c51053e864d3d636dfa24c85c08866310a67c154f733f0f8ea5d675ae38e1c",
+      "split": "development",
+      "input": "nigaanpougamyatmhoimun",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "呢間舖今日唔開門"
+      ],
+      "top_k": 9,
+      "length_band": "6-8",
+      "user_input": "nigaanpougamyatnghoimun",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "Replace only 唔/m4 with the user's habitual ng at syllable boundaries; primary Yale remains m.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "syllabic_m",
+        "habitual_ng_alias"
+      ]
+    },
+    {
+      "id": "si1-015",
+      "category": "food_shopping",
+      "group": "negative",
+      "text": "如果唔夠熱就幫我翻熱",
+      "reading": "jyu4 gwo2 m4 gau3 jit6 zau6 bong1 ngo5 faan1 jit6",
+      "segments": [
+        {
+          "text": "如果",
+          "reading": "jyu4 gwo2"
+        },
+        {
+          "text": "唔",
+          "reading": "m4"
+        },
+        {
+          "text": "夠",
+          "reading": "gau3"
+        },
+        {
+          "text": "熱",
+          "reading": "jit6"
+        },
+        {
+          "text": "就",
+          "reading": "zau6"
+        },
+        {
+          "text": "幫",
+          "reading": "bong1"
+        },
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "翻熱",
+          "reading": "faan1 jit6"
+        }
+      ],
+      "char_length": 10,
+      "case_role": "ordinary",
+      "selection_hash": "d1a7f9480edffadafcb97dd7754b1046912ddc3f90eb1b7143245e74f1ce4102",
+      "split": "validation",
+      "input": "yugwomgauyitjaubongngofaanyit",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "如果唔夠熱就幫我翻熱"
+      ],
+      "top_k": 9,
+      "length_band": "9-12",
+      "user_input": "yugwonggauyitjaubongngofaanyit",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "Replace only 唔/m4 with the user's habitual ng at syllable boundaries; primary Yale remains m.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "syllabic_m",
+        "habitual_ng_alias"
+      ]
+    },
+    {
+      "id": "si1-016",
+      "category": "food_shopping",
+      "group": "negative",
+      "text": "我唔想買同一隻顏色",
+      "reading": "ngo5 m4 soeng2 maai5 tung4 jat1 zek3 ngaan4 sik1",
+      "segments": [
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "唔",
+          "reading": "m4"
+        },
+        {
+          "text": "想",
+          "reading": "soeng2"
+        },
+        {
+          "text": "買",
+          "reading": "maai5"
+        },
+        {
+          "text": "同一",
+          "reading": "tung4 jat1"
+        },
+        {
+          "text": "隻",
+          "reading": "zek3"
+        },
+        {
+          "text": "顏色",
+          "reading": "ngaan4 sik1"
+        }
+      ],
+      "char_length": 9,
+      "case_role": "ordinary",
+      "selection_hash": "43bf54253da0aefaec47e0d0ca04c0274762dfcb02592016e9354902f8577912",
+      "split": "development",
+      "input": "ngomseungmaaitungyatjekngaansik",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "我唔想買同一隻顏色"
+      ],
+      "top_k": 9,
+      "length_band": "9-12",
+      "user_input": "ngongseungmaaitungyatjekngaansik",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "Replace only 唔/m4 with the user's habitual ng at syllable boundaries; primary Yale remains m.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "syllabic_m",
+        "habitual_ng_alias"
+      ]
+    },
+    {
+      "id": "si1-017",
+      "category": "media_technology",
+      "group": "negative",
+      "text": "呢個唔啱",
+      "reading": "ni1 go3 m4 ngaam1",
+      "segments": [
+        {
+          "text": "呢個",
+          "reading": "ni1 go3"
+        },
+        {
+          "text": "唔",
+          "reading": "m4"
+        },
+        {
+          "text": "啱",
+          "reading": "ngaam1"
+        }
+      ],
+      "char_length": 4,
+      "case_role": "ordinary",
+      "selection_hash": "fb502a4fe1befebe90d59fc3823805f050c375c616599db11f650fa2323a1f12",
+      "split": "validation",
+      "input": "nigomngaam",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "呢個唔啱"
+      ],
+      "top_k": 9,
+      "length_band": "4-5",
+      "user_input": "nigongngaam",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "Replace only 唔/m4 with the user's habitual ng at syllable boundaries; primary Yale remains m.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "syllabic_m",
+        "habitual_ng_alias",
+        "contextual_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "si1-018",
+      "category": "media_technology",
+      "group": "negative",
+      "text": "我部手機上唔到網",
+      "reading": "ngo5 bou6 sau2 gei1 soeng5 m4 dou2 mong5",
+      "segments": [
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "部",
+          "reading": "bou6"
+        },
+        {
+          "text": "手機",
+          "reading": "sau2 gei1"
+        },
+        {
+          "text": "上唔到",
+          "reading": "soeng5 m4 dou2"
+        },
+        {
+          "text": "網",
+          "reading": "mong5"
+        }
+      ],
+      "char_length": 8,
+      "case_role": "ordinary",
+      "selection_hash": "6d3f2a946f90c3d1f88b57be01ee654fa2b0717e6ef07b24f6189d2ebdb350e2",
+      "split": "development",
+      "input": "ngobousaugeiseungmdoumong",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "我部手機上唔到網"
+      ],
+      "top_k": 9,
+      "length_band": "6-8",
+      "user_input": "ngobousaugeiseungngdoumong",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "Replace only 唔/m4 with the user's habitual ng at syllable boundaries; primary Yale remains m.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "syllabic_m",
+        "habitual_ng_alias",
+        "contextual_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "si1-019",
+      "category": "media_technology",
+      "group": "negative",
+      "text": "個視窗唔好遮住我打字",
+      "reading": "go3 si6 coeng1 m4 hou2 ze1 zyu6 ngo5 daa2 zi6",
+      "segments": [
+        {
+          "text": "個",
+          "reading": "go3"
+        },
+        {
+          "text": "視窗",
+          "reading": "si6 coeng1"
+        },
+        {
+          "text": "唔好",
+          "reading": "m4 hou2"
+        },
+        {
+          "text": "遮住",
+          "reading": "ze1 zyu6"
+        },
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "打字",
+          "reading": "daa2 zi6"
+        }
+      ],
+      "char_length": 10,
+      "case_role": "ordinary",
+      "selection_hash": "cedf8092e6d1e5518ea9c816057c17a0ab42261a3f42f6ea67fc0cc93aff4cce",
+      "split": "validation",
+      "input": "gosicheungmhoujejyungodaji",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "個視窗唔好遮住我打字"
+      ],
+      "top_k": 9,
+      "length_band": "9-12",
+      "user_input": "gosicheungnghoujejyungodaji",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "Replace only 唔/m4 with the user's habitual ng at syllable boundaries; primary Yale remains m.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "syllabic_m",
+        "habitual_ng_alias",
+        "contextual_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "si1-020",
+      "category": "media_technology",
+      "group": "negative",
+      "text": "我睇唔到你啱啱傳嗰張相",
+      "reading": "ngo5 tai2 m4 dou2 nei5 ngaam1 ngaam1 cyun4 go2 zoeng1 soeng2",
+      "segments": [
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "睇唔到",
+          "reading": "tai2 m4 dou2"
+        },
+        {
+          "text": "你",
+          "reading": "nei5"
+        },
+        {
+          "text": "啱啱",
+          "reading": "ngaam1 ngaam1"
+        },
+        {
+          "text": "傳",
+          "reading": "cyun4"
+        },
+        {
+          "text": "嗰",
+          "reading": "go2"
+        },
+        {
+          "text": "張",
+          "reading": "zoeng1"
+        },
+        {
+          "text": "相",
+          "reading": "soeng2"
+        }
+      ],
+      "char_length": 11,
+      "case_role": "ordinary",
+      "selection_hash": "ccfd9af6c87210d24a43dbb336189bf463c1e42aa94c094a58bd2f6af56170e8",
+      "split": "development",
+      "input": "ngotaimdouneingaamngaamchyungojeungseung",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "我睇唔到你啱啱傳嗰張相"
+      ],
+      "top_k": 9,
+      "length_band": "9-12",
+      "user_input": "ngotaingdouneingaamngaamchyungojeungseung",
+      "user_input_form": "habitual_ng_compact",
+      "user_input_note": "Replace only 唔/m4 with the user's habitual ng at syllable boundaries; primary Yale remains m.",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "syllabic_m",
+        "habitual_ng_alias",
+        "contextual_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "si1-021",
+      "category": "daily_plans",
+      "group": "nasal_control",
+      "text": "我約五點",
+      "reading": "ngo5 joek3 ng5 dim2",
+      "segments": [
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "約",
+          "reading": "joek3"
+        },
+        {
+          "text": "五點",
+          "reading": "ng5 dim2"
+        }
+      ],
+      "char_length": 4,
+      "case_role": "ordinary",
+      "selection_hash": "c3f83787ed756b8f8512b784bbbeb85c97129776661731e285e20bd856b848a1",
+      "split": "validation",
+      "input": "ngoyeukngdim",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "我約五點"
+      ],
+      "top_k": 9,
+      "length_band": "4-5",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "genuine_nasal_or_ying_ngo_ngong_context"
+      ]
+    },
+    {
+      "id": "si1-022",
+      "category": "daily_plans",
+      "group": "nasal_control",
+      "text": "午飯後返嚟傾",
+      "reading": "ng5 faan6 hau6 faan1 lai4 king1",
+      "segments": [
+        {
+          "text": "午飯",
+          "reading": "ng5 faan6"
+        },
+        {
+          "text": "後",
+          "reading": "hau6"
+        },
+        {
+          "text": "返嚟",
+          "reading": "faan1 lai4"
+        },
+        {
+          "text": "傾",
+          "reading": "king1"
+        }
+      ],
+      "char_length": 6,
+      "case_role": "ordinary",
+      "selection_hash": "bb32598b5b82027db2b9d28729c512b0aba227d96bb8c103b5bd37d01d367b13",
+      "split": "development",
+      "input": "ngfaanhaufaanlaiking",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "午飯後返嚟傾"
+      ],
+      "top_k": 9,
+      "length_band": "6-8",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "genuine_nasal_or_ying_ngo_ngong_context",
+        "contextual_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "si1-023",
+      "category": "daily_plans",
+      "group": "nasal_control",
+      "text": "我晏晝五點先至得閒",
+      "reading": "ngo5 aan3 zau3 ng5 dim2 sin1 zi3 dak1 haan4",
+      "segments": [
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "晏晝",
+          "reading": "aan3 zau3"
+        },
+        {
+          "text": "五點",
+          "reading": "ng5 dim2"
+        },
+        {
+          "text": "先至",
+          "reading": "sin1 zi3"
+        },
+        {
+          "text": "得閒",
+          "reading": "dak1 haan4"
+        }
+      ],
+      "char_length": 9,
+      "case_role": "ordinary",
+      "selection_hash": "3ebccfda811d7f7dd13dae4d3f75c6501f2524d6f2c1eaef3e4a417dcf5d5d00",
+      "split": "development",
+      "input": "ngoaanjaungdimsinjidakhaan",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "我晏晝五點先至得閒"
+      ],
+      "top_k": 9,
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "genuine_nasal_or_ying_ngo_ngong_context"
+      ]
+    },
+    {
+      "id": "si1-024",
+      "category": "daily_plans",
+      "group": "nasal_control",
+      "text": "今晚我哋五個一齊去食飯",
+      "reading": "gam1 maan5 ngo5 dei6 ng5 go3 jat1 cai4 heoi3 sik6 faan6",
+      "segments": [
+        {
+          "text": "今晚",
+          "reading": "gam1 maan5"
+        },
+        {
+          "text": "我哋",
+          "reading": "ngo5 dei6"
+        },
+        {
+          "text": "五個",
+          "reading": "ng5 go3"
+        },
+        {
+          "text": "一齊",
+          "reading": "jat1 cai4"
+        },
+        {
+          "text": "去",
+          "reading": "heoi3"
+        },
+        {
+          "text": "食飯",
+          "reading": "sik6 faan6"
+        }
+      ],
+      "char_length": 11,
+      "case_role": "ordinary",
+      "selection_hash": "ffaf1ec36ffcdbcd2e7855b81b2222f2bc06854bf12bcf5a52002640132c863f",
+      "split": "validation",
+      "input": "gammaanngodeinggoyatchaiheuisikfaan",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "今晚我哋五個一齊去食飯"
+      ],
+      "top_k": 9,
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "genuine_nasal_or_ying_ngo_ngong_context",
+        "contextual_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "si1-025",
+      "category": "travel_home",
+      "group": "nasal_control",
+      "text": "我要影相",
+      "reading": "ngo5 jiu3 jing2 soeng2",
+      "segments": [
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "要",
+          "reading": "jiu3"
+        },
+        {
+          "text": "影相",
+          "reading": "jing2 soeng2"
+        }
+      ],
+      "char_length": 4,
+      "case_role": "ordinary",
+      "selection_hash": "f0bf9d4f101efcc73ad997c44496ec4bb8b5114ec0739745b48e78362a32bfc6",
+      "split": "validation",
+      "input": "ngoyiuyingseung",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "我要影相"
+      ],
+      "top_k": 9,
+      "length_band": "4-5",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "genuine_nasal_or_ying_ngo_ngong_context"
+      ]
+    },
+    {
+      "id": "si1-026",
+      "category": "travel_home",
+      "group": "nasal_control",
+      "text": "部影印機喺樓下",
+      "reading": "bou6 jing2 jan3 gei1 hai2 lau4 haa6",
+      "segments": [
+        {
+          "text": "部",
+          "reading": "bou6"
+        },
+        {
+          "text": "影印機",
+          "reading": "jing2 jan3 gei1"
+        },
+        {
+          "text": "喺",
+          "reading": "hai2"
+        },
+        {
+          "text": "樓下",
+          "reading": "lau4 haa6"
+        }
+      ],
+      "char_length": 7,
+      "case_role": "ordinary",
+      "selection_hash": "6c20dc14e989087efa531bad14707b6b78ce1a73788fffc2f8f962d11f3dd494",
+      "split": "development",
+      "input": "bouyingyangeihailauha",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "部影印機喺樓下"
+      ],
+      "top_k": 9,
+      "length_band": "6-8",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "genuine_nasal_or_ying_ngo_ngong_context"
+      ]
+    },
+    {
+      "id": "si1-027",
+      "category": "travel_home",
+      "group": "nasal_control",
+      "text": "轉彎之後就見到五金舖",
+      "reading": "zyun3 waan1 zi1 hau6 zau6 gin3 dou2 ng5 gam1 pou3",
+      "segments": [
+        {
+          "text": "轉彎",
+          "reading": "zyun3 waan1"
+        },
+        {
+          "text": "之後",
+          "reading": "zi1 hau6"
+        },
+        {
+          "text": "就",
+          "reading": "zau6"
+        },
+        {
+          "text": "見到",
+          "reading": "gin3 dou2"
+        },
+        {
+          "text": "五金舖",
+          "reading": "ng5 gam1 pou3"
+        }
+      ],
+      "char_length": 10,
+      "case_role": "ordinary",
+      "selection_hash": "a007fb33546cd40b2dfaf832e68fc05f52c8eac4df238901c86b066c24b694cd",
+      "split": "validation",
+      "input": "jyunwaanjihaujaugindounggampou",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "轉彎之後就見到五金舖"
+      ],
+      "top_k": 9,
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "genuine_nasal_or_ying_ngo_ngong_context",
+        "contextual_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "si1-028",
+      "category": "travel_home",
+      "group": "nasal_control",
+      "text": "我哋行到海邊先影張合照",
+      "reading": "ngo5 dei6 haang4 dou3 hoi2 bin1 sin1 jing2 zoeng1 hap6 ziu3",
+      "segments": [
+        {
+          "text": "我哋",
+          "reading": "ngo5 dei6"
+        },
+        {
+          "text": "行到",
+          "reading": "haang4 dou3"
+        },
+        {
+          "text": "海邊",
+          "reading": "hoi2 bin1"
+        },
+        {
+          "text": "先",
+          "reading": "sin1"
+        },
+        {
+          "text": "影",
+          "reading": "jing2"
+        },
+        {
+          "text": "張",
+          "reading": "zoeng1"
+        },
+        {
+          "text": "合照",
+          "reading": "hap6 ziu3"
+        }
+      ],
+      "char_length": 11,
+      "case_role": "ordinary",
+      "selection_hash": "2b66137e1a828fbe342f008cc074d92e9d02f63d52e7e8a4f591f560027b3a2f",
+      "split": "development",
+      "input": "ngodeihaangdouhoibinsinyingjeunghapjiu",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "我哋行到海邊先影張合照"
+      ],
+      "top_k": 9,
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "genuine_nasal_or_ying_ngo_ngong_context",
+        "contextual_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "si1-029",
+      "category": "work_messages",
+      "group": "nasal_control",
+      "text": "我應承你",
+      "reading": "ngo5 jing1 sing4 nei5",
+      "segments": [
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "應承",
+          "reading": "jing1 sing4"
+        },
+        {
+          "text": "你",
+          "reading": "nei5"
+        }
+      ],
+      "char_length": 4,
+      "case_role": "ordinary",
+      "selection_hash": "9a4d8322b0a01e6aaac1e61190914780786549de1ca4a9fb40c38f1bdc4f6949",
+      "split": "validation",
+      "input": "ngoyingsingnei",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "我應承你"
+      ],
+      "top_k": 9,
+      "length_band": "4-5",
+      "whole_text_in_dictionary": true,
+      "whole_text_reading_in_dictionary": true,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "genuine_nasal_or_ying_ngo_ngong_context"
+      ]
+    },
+    {
+      "id": "si1-030",
+      "category": "work_messages",
+      "group": "nasal_control",
+      "text": "五個人一齊開會",
+      "reading": "ng5 go3 jan4 jat1 cai4 hoi1 wui2",
+      "segments": [
+        {
+          "text": "五個",
+          "reading": "ng5 go3"
+        },
+        {
+          "text": "人",
+          "reading": "jan4"
+        },
+        {
+          "text": "一齊",
+          "reading": "jat1 cai4"
+        },
+        {
+          "text": "開會",
+          "reading": "hoi1 wui2"
+        }
+      ],
+      "char_length": 7,
+      "case_role": "ordinary",
+      "selection_hash": "803c71b1c16b24abb2ce1d197130819b79b2126c755be0038c44be8ba88f8180",
+      "split": "development",
+      "input": "nggoyanyatchaihoiwui",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "五個人一齊開會"
+      ],
+      "top_k": 9,
+      "length_band": "6-8",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "genuine_nasal_or_ying_ngo_ngong_context",
+        "contextual_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "si1-031",
+      "category": "work_messages",
+      "group": "nasal_control",
+      "text": "我應該聽朝就可以覆你",
+      "reading": "ngo5 jing1 goi1 ting1 ziu1 zau6 ho2 ji5 fuk1 nei5",
+      "segments": [
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "應該",
+          "reading": "jing1 goi1"
+        },
+        {
+          "text": "聽朝",
+          "reading": "ting1 ziu1"
+        },
+        {
+          "text": "就",
+          "reading": "zau6"
+        },
+        {
+          "text": "可以",
+          "reading": "ho2 ji5"
+        },
+        {
+          "text": "覆",
+          "reading": "fuk1"
+        },
+        {
+          "text": "你",
+          "reading": "nei5"
+        }
+      ],
+      "char_length": 10,
+      "case_role": "ordinary",
+      "selection_hash": "488c7c6dba797ceb5918af4c9e72af039dd30250466ebfeb22ba65e7479f6f1d",
+      "split": "development",
+      "input": "ngoyinggoitingjiujauhoyifuknei",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "我應該聽朝就可以覆你"
+      ],
+      "top_k": 9,
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "genuine_nasal_or_ying_ngo_ngong_context"
+      ]
+    },
+    {
+      "id": "si1-032",
+      "category": "work_messages",
+      "group": "nasal_control",
+      "text": "吳先生約咗我五點開會",
+      "reading": "ng4 sin1 saang1 joek3 zo2 ngo5 ng5 dim2 hoi1 wui2",
+      "segments": [
+        {
+          "text": "吳",
+          "reading": "ng4"
+        },
+        {
+          "text": "先生",
+          "reading": "sin1 saang1"
+        },
+        {
+          "text": "約咗",
+          "reading": "joek3 zo2"
+        },
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "五點",
+          "reading": "ng5 dim2"
+        },
+        {
+          "text": "開會",
+          "reading": "hoi1 wui2"
+        }
+      ],
+      "char_length": 10,
+      "case_role": "ordinary",
+      "selection_hash": "94c48ffa68864d5c1329ecedea59c0b66297688c044bc825c3770491f6cc370d",
+      "split": "validation",
+      "input": "ngsinsaangyeukjongongdimhoiwui",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "吳先生約咗我五點開會"
+      ],
+      "top_k": 9,
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "genuine_nasal_or_ying_ngo_ngong_context",
+        "contextual_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "si1-033",
+      "category": "food_shopping",
+      "group": "nasal_control",
+      "text": "五蚊一個",
+      "reading": "ng5 man1 jat1 go3",
+      "segments": [
+        {
+          "text": "五蚊",
+          "reading": "ng5 man1"
+        },
+        {
+          "text": "一個",
+          "reading": "jat1 go3"
+        }
+      ],
+      "char_length": 4,
+      "case_role": "ordinary",
+      "selection_hash": "a37f801fca8c57bbf197b6313079adb3d0ed9462257c9274a53264f3838cd015",
+      "split": "development",
+      "input": "ngmanyatgo",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "五蚊一個"
+      ],
+      "top_k": 9,
+      "length_band": "4-5",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "genuine_nasal_or_ying_ngo_ngong_context",
+        "contextual_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "si1-034",
+      "category": "food_shopping",
+      "group": "nasal_control",
+      "text": "我想買五個橙",
+      "reading": "ngo5 soeng2 maai5 ng5 go3 caang2",
+      "segments": [
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "想",
+          "reading": "soeng2"
+        },
+        {
+          "text": "買",
+          "reading": "maai5"
+        },
+        {
+          "text": "五個",
+          "reading": "ng5 go3"
+        },
+        {
+          "text": "橙",
+          "reading": "caang2"
+        }
+      ],
+      "char_length": 6,
+      "case_role": "ordinary",
+      "selection_hash": "8a75743ae38f1695783c1726a5a4600def32ce2a03f6f84c5f0e7f6a51578df8",
+      "split": "development",
+      "input": "ngoseungmaainggochaang",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "我想買五個橙"
+      ],
+      "top_k": 9,
+      "length_band": "6-8",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "genuine_nasal_or_ying_ngo_ngong_context",
+        "contextual_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "si1-035",
+      "category": "food_shopping",
+      "group": "nasal_control",
+      "text": "我哋一齊去睇今晚套電影",
+      "reading": "ngo5 dei6 jat1 cai4 heoi3 tai2 gam1 maan5 tou3 din6 jing2",
+      "segments": [
+        {
+          "text": "我哋",
+          "reading": "ngo5 dei6"
+        },
+        {
+          "text": "一齊",
+          "reading": "jat1 cai4"
+        },
+        {
+          "text": "去",
+          "reading": "heoi3"
+        },
+        {
+          "text": "睇",
+          "reading": "tai2"
+        },
+        {
+          "text": "今晚",
+          "reading": "gam1 maan5"
+        },
+        {
+          "text": "套",
+          "reading": "tou3"
+        },
+        {
+          "text": "電影",
+          "reading": "din6 jing2"
+        }
+      ],
+      "char_length": 11,
+      "case_role": "ordinary",
+      "selection_hash": "f3e7125d0ef3491b886b623bfd02354f052c5938e21a048e4c34b80fd47a10c2",
+      "split": "validation",
+      "input": "ngodeiyatchaiheuitaigammaantoudinying",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "我哋一齊去睇今晚套電影"
+      ],
+      "top_k": 9,
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "genuine_nasal_or_ying_ngo_ngong_context",
+        "contextual_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "si1-036",
+      "category": "food_shopping",
+      "group": "nasal_control",
+      "text": "我諗呢個價錢應該包運費",
+      "reading": "ngo5 nam2 ni1 go3 gaa3 cin2 jing1 goi1 baau1 wan6 fai3",
+      "segments": [
+        {
+          "text": "我",
+          "reading": "ngo5"
+        },
+        {
+          "text": "諗",
+          "reading": "nam2"
+        },
+        {
+          "text": "呢個",
+          "reading": "ni1 go3"
+        },
+        {
+          "text": "價錢",
+          "reading": "gaa3 cin2"
+        },
+        {
+          "text": "應該",
+          "reading": "jing1 goi1"
+        },
+        {
+          "text": "包",
+          "reading": "baau1"
+        },
+        {
+          "text": "運費",
+          "reading": "wan6 fai3"
+        }
+      ],
+      "char_length": 11,
+      "case_role": "ordinary",
+      "selection_hash": "c8242edba89470b03dc8d29a307bd6b2a0da3b6224a82daf1c9d059921190c3a",
+      "split": "validation",
+      "input": "ngonamnigogachinyinggoibaauwanfai",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "我諗呢個價錢應該包運費"
+      ],
+      "top_k": 9,
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "genuine_nasal_or_ying_ngo_ngong_context",
+        "contextual_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "si1-037",
+      "category": "media_technology",
+      "group": "nasal_control",
+      "text": "真係戇居",
+      "reading": "zan1 hai6 ngong6 geoi1",
+      "segments": [
+        {
+          "text": "真係",
+          "reading": "zan1 hai6"
+        },
+        {
+          "text": "戇居",
+          "reading": "ngong6 geoi1"
+        }
+      ],
+      "char_length": 4,
+      "case_role": "ordinary",
+      "selection_hash": "346155c84484659877e8a4e208015daba232d6678973904d624adc780bddbbe8",
+      "split": "development",
+      "input": "janhaingonggeui",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "真係戇居"
+      ],
+      "top_k": 9,
+      "length_band": "4-5",
+      "whole_text_in_dictionary": true,
+      "whole_text_reading_in_dictionary": true,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "genuine_nasal_or_ying_ngo_ngong_context"
+      ]
+    },
+    {
+      "id": "si1-038",
+      "category": "media_technology",
+      "group": "nasal_control",
+      "text": "個主角有啲戇直",
+      "reading": "go3 zyu2 gok3 jau5 di1 ngong6 zik6",
+      "segments": [
+        {
+          "text": "個",
+          "reading": "go3"
+        },
+        {
+          "text": "主角",
+          "reading": "zyu2 gok3"
+        },
+        {
+          "text": "有啲",
+          "reading": "jau5 di1"
+        },
+        {
+          "text": "戇直",
+          "reading": "ngong6 zik6"
+        }
+      ],
+      "char_length": 7,
+      "case_role": "ordinary",
+      "selection_hash": "e40cb7ad752544c89090e59bc2c704bcf9979d3680777ed802adbcb21453a362",
+      "split": "validation",
+      "input": "gojyugokyaudingongjik",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "個主角有啲戇直"
+      ],
+      "top_k": 9,
+      "length_band": "6-8",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "genuine_nasal_or_ying_ngo_ngong_context",
+        "contextual_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "si1-039",
+      "category": "media_technology",
+      "group": "nasal_control",
+      "text": "佢戇居個樣真係幾好笑",
+      "reading": "keoi5 ngong6 geoi1 go3 joeng2 zan1 hai6 gei2 hou2 siu3",
+      "segments": [
+        {
+          "text": "佢",
+          "reading": "keoi5"
+        },
+        {
+          "text": "戇居",
+          "reading": "ngong6 geoi1"
+        },
+        {
+          "text": "個",
+          "reading": "go3"
+        },
+        {
+          "text": "樣",
+          "reading": "joeng2"
+        },
+        {
+          "text": "真係",
+          "reading": "zan1 hai6"
+        },
+        {
+          "text": "幾",
+          "reading": "gei2"
+        },
+        {
+          "text": "好笑",
+          "reading": "hou2 siu3"
+        }
+      ],
+      "char_length": 10,
+      "case_role": "ordinary",
+      "selection_hash": "ddf7285766df1b772763550bb033dff4aa219d5d089a2a4ca311f464680ed9da",
+      "split": "validation",
+      "input": "keuingonggeuigoyeungjanhaigeihousiu",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "佢戇居個樣真係幾好笑"
+      ],
+      "top_k": 9,
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "genuine_nasal_or_ying_ngo_ngong_context",
+        "contextual_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "si1-040",
+      "category": "media_technology",
+      "group": "nasal_control",
+      "text": "呢啲字型應該可以放大",
+      "reading": "ni1 di1 zi6 jing4 jing1 goi1 ho2 ji5 fong3 daai6",
+      "segments": [
+        {
+          "text": "呢啲",
+          "reading": "ni1 di1"
+        },
+        {
+          "text": "字型",
+          "reading": "zi6 jing4"
+        },
+        {
+          "text": "應該",
+          "reading": "jing1 goi1"
+        },
+        {
+          "text": "可以",
+          "reading": "ho2 ji5"
+        },
+        {
+          "text": "放大",
+          "reading": "fong3 daai6"
+        }
+      ],
+      "char_length": 10,
+      "case_role": "ordinary",
+      "selection_hash": "4f9e3473e88d02e92caa2c250e46dcafdb5868c049267f0f23b3bc7088ed5132",
+      "split": "development",
+      "input": "nidijiyingyinggoihoyifongdaai",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "呢啲字型應該可以放大"
+      ],
+      "top_k": 9,
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "genuine_nasal_or_ying_ngo_ngong_context"
+      ]
+    },
+    {
+      "id": "si1-041",
+      "category": "daily_plans",
+      "group": "ordinary_control",
+      "text": "聽朝早起",
+      "reading": "ting1 ziu1 zou2 hei2",
+      "segments": [
+        {
+          "text": "聽朝",
+          "reading": "ting1 ziu1"
+        },
+        {
+          "text": "早起",
+          "reading": "zou2 hei2"
+        }
+      ],
+      "char_length": 4,
+      "case_role": "ordinary",
+      "selection_hash": "1f0bebe1ac4f711e3a55872d9c78401f9d60970360acabe7b847ad16518ca173",
+      "split": "validation",
+      "input": "tingjiujouhei",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "聽朝早起"
+      ],
+      "top_k": 9,
+      "length_band": "4-5",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries"
+      ]
+    },
+    {
+      "id": "si1-042",
+      "category": "daily_plans",
+      "group": "ordinary_control",
+      "text": "遲少少再出門口",
+      "reading": "ci4 siu2 siu2 zoi3 ceot1 mun4 hau2",
+      "segments": [
+        {
+          "text": "遲",
+          "reading": "ci4"
+        },
+        {
+          "text": "少少",
+          "reading": "siu2 siu2"
+        },
+        {
+          "text": "再",
+          "reading": "zoi3"
+        },
+        {
+          "text": "出門口",
+          "reading": "ceot1 mun4 hau2"
+        }
+      ],
+      "char_length": 7,
+      "case_role": "ordinary",
+      "selection_hash": "d31e70066edea381c381d25dfe320a24337b12e7fb67949d8f4d606a5b831b14",
+      "split": "validation",
+      "input": "chisiusiujoicheutmunhau",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "遲少少再出門口"
+      ],
+      "top_k": 9,
+      "length_band": "6-8",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries"
+      ]
+    },
+    {
+      "id": "si1-043",
+      "category": "daily_plans",
+      "group": "ordinary_control",
+      "text": "我哋食早餐之前先執好嘢",
+      "reading": "ngo5 dei6 sik6 zou2 caan1 zi1 cin4 sin1 zap1 hou2 je5",
+      "segments": [
+        {
+          "text": "我哋",
+          "reading": "ngo5 dei6"
+        },
+        {
+          "text": "食早餐",
+          "reading": "sik6 zou2 caan1"
+        },
+        {
+          "text": "之前",
+          "reading": "zi1 cin4"
+        },
+        {
+          "text": "先",
+          "reading": "sin1"
+        },
+        {
+          "text": "執好",
+          "reading": "zap1 hou2"
+        },
+        {
+          "text": "嘢",
+          "reading": "je5"
+        }
+      ],
+      "char_length": 11,
+      "case_role": "ordinary",
+      "selection_hash": "13c876c083dd77179cd59c25f1def90a6c23db64847063b6c060b9f565299ef9",
+      "split": "development",
+      "input": "ngodeisikjouchaanjichinsinjaphouye",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "我哋食早餐之前先執好嘢"
+      ],
+      "top_k": 9,
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "contextual_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "si1-044",
+      "category": "daily_plans",
+      "group": "ordinary_control",
+      "text": "你到咗樓下就打電話畀我",
+      "reading": "nei5 dou3 zo2 lau4 haa6 zau6 daa2 din6 waa2 bei2 ngo5",
+      "segments": [
+        {
+          "text": "你",
+          "reading": "nei5"
+        },
+        {
+          "text": "到咗",
+          "reading": "dou3 zo2"
+        },
+        {
+          "text": "樓下",
+          "reading": "lau4 haa6"
+        },
+        {
+          "text": "就",
+          "reading": "zau6"
+        },
+        {
+          "text": "打電話",
+          "reading": "daa2 din6 waa2"
+        },
+        {
+          "text": "畀",
+          "reading": "bei2"
+        },
+        {
+          "text": "我",
+          "reading": "ngo5"
+        }
+      ],
+      "char_length": 11,
+      "case_role": "ordinary",
+      "selection_hash": "1e86c0afa9fe3a6b6d25e3ff0c4c5fca22aaf12f3d26c09af3fe4b3662833ed6",
+      "split": "development",
+      "input": "neidoujolauhajaudadinwabeingo",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "你到咗樓下就打電話畀我"
+      ],
+      "top_k": 9,
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "contextual_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "si1-045",
+      "category": "travel_home",
+      "group": "ordinary_control",
+      "text": "轉左再行",
+      "reading": "zyun3 zo2 zoi3 haang4",
+      "segments": [
+        {
+          "text": "轉左",
+          "reading": "zyun3 zo2"
+        },
+        {
+          "text": "再",
+          "reading": "zoi3"
+        },
+        {
+          "text": "行",
+          "reading": "haang4"
+        }
+      ],
+      "char_length": 4,
+      "case_role": "ordinary",
+      "selection_hash": "4b676ed6a5fdb84e8366ed31e2c7ca1bf079e6d95bc4783a0c22a1dc64941186",
+      "split": "development",
+      "input": "jyunjojoihaang",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "轉左再行"
+      ],
+      "top_k": 9,
+      "length_band": "4-5",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries"
+      ]
+    },
+    {
+      "id": "si1-046",
+      "category": "travel_home",
+      "group": "ordinary_control",
+      "text": "跟住條路直行",
+      "reading": "gan1 zyu6 tiu4 lou6 zik6 haang4",
+      "segments": [
+        {
+          "text": "跟住",
+          "reading": "gan1 zyu6"
+        },
+        {
+          "text": "條",
+          "reading": "tiu4"
+        },
+        {
+          "text": "路",
+          "reading": "lou6"
+        },
+        {
+          "text": "直行",
+          "reading": "zik6 haang4"
+        }
+      ],
+      "char_length": 6,
+      "case_role": "ordinary",
+      "selection_hash": "820cacb77383e12dd354e4f54b7c7c2fc6e3d0a4abcbdd206c560dd5ce4bfea6",
+      "split": "validation",
+      "input": "ganjyutiuloujikhaang",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "跟住條路直行"
+      ],
+      "top_k": 9,
+      "length_band": "6-8",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries"
+      ]
+    },
+    {
+      "id": "si1-047",
+      "category": "travel_home",
+      "group": "ordinary_control",
+      "text": "過咗條橋之後轉右就到",
+      "reading": "gwo3 zo2 tiu4 kiu4 zi1 hau6 zyun3 jau6 zau6 dou3",
+      "segments": [
+        {
+          "text": "過咗",
+          "reading": "gwo3 zo2"
+        },
+        {
+          "text": "條",
+          "reading": "tiu4"
+        },
+        {
+          "text": "橋",
+          "reading": "kiu4"
+        },
+        {
+          "text": "之後",
+          "reading": "zi1 hau6"
+        },
+        {
+          "text": "轉右",
+          "reading": "zyun3 jau6"
+        },
+        {
+          "text": "就",
+          "reading": "zau6"
+        },
+        {
+          "text": "到",
+          "reading": "dou3"
+        }
+      ],
+      "char_length": 10,
+      "case_role": "ordinary",
+      "selection_hash": "01eae750c8b09173d97493adcc3e680edf16e7f62b1886719e9653194f3a94db",
+      "split": "development",
+      "input": "gwojotiukiujihaujyunyaujaudou",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "過咗條橋之後轉右就到"
+      ],
+      "top_k": 9,
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "contextual_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "si1-048",
+      "category": "travel_home",
+      "group": "ordinary_control",
+      "text": "請你幫手搬張凳入房",
+      "reading": "cing2 nei5 bong1 sau2 bun1 zoeng1 dang3 jap6 fong2",
+      "segments": [
+        {
+          "text": "請",
+          "reading": "cing2"
+        },
+        {
+          "text": "你",
+          "reading": "nei5"
+        },
+        {
+          "text": "幫手",
+          "reading": "bong1 sau2"
+        },
+        {
+          "text": "搬",
+          "reading": "bun1"
+        },
+        {
+          "text": "張",
+          "reading": "zoeng1"
+        },
+        {
+          "text": "凳",
+          "reading": "dang3"
+        },
+        {
+          "text": "入",
+          "reading": "jap6"
+        },
+        {
+          "text": "房",
+          "reading": "fong2"
+        }
+      ],
+      "char_length": 9,
+      "case_role": "ordinary",
+      "selection_hash": "53346b7f480a57538e1e09068dc7267b48f1df6e1807ad07a11149143e3ca3a9",
+      "split": "validation",
+      "input": "chingneibongsaubunjeungdangyapfong",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "請你幫手搬張凳入房"
+      ],
+      "top_k": 9,
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "contextual_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "si1-049",
+      "category": "work_messages",
+      "group": "ordinary_control",
+      "text": "準時交表",
+      "reading": "zeon2 si4 gaau1 biu2",
+      "segments": [
+        {
+          "text": "準時",
+          "reading": "zeon2 si4"
+        },
+        {
+          "text": "交表",
+          "reading": "gaau1 biu2"
+        }
+      ],
+      "char_length": 4,
+      "case_role": "ordinary",
+      "selection_hash": "dd341b33769461b5be769a5e7b7f695ca4a7b40bbf3e46e9b74b7369c866fe52",
+      "split": "validation",
+      "input": "jeunsigaaubiu",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "準時交表"
+      ],
+      "top_k": 9,
+      "length_band": "4-5",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries"
+      ]
+    },
+    {
+      "id": "si1-050",
+      "category": "work_messages",
+      "group": "ordinary_control",
+      "text": "請你再核對一次",
+      "reading": "cing2 nei5 zoi3 hat6 deoi3 jat1 ci3",
+      "segments": [
+        {
+          "text": "請",
+          "reading": "cing2"
+        },
+        {
+          "text": "你",
+          "reading": "nei5"
+        },
+        {
+          "text": "再",
+          "reading": "zoi3"
+        },
+        {
+          "text": "核對",
+          "reading": "hat6 deoi3"
+        },
+        {
+          "text": "一次",
+          "reading": "jat1 ci3"
+        }
+      ],
+      "char_length": 7,
+      "case_role": "ordinary",
+      "selection_hash": "a61fb2c22f912856e158f8e8f943be0bb56af07f2221af00704839325a0376dc",
+      "split": "validation",
+      "input": "chingneijoihatdeuiyatchi",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "請你再核對一次"
+      ],
+      "top_k": 9,
+      "length_band": "6-8",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries"
+      ]
+    },
+    {
+      "id": "si1-051",
+      "category": "work_messages",
+      "group": "ordinary_control",
+      "text": "我哋一齊整理呢份資料",
+      "reading": "ngo5 dei6 jat1 cai4 zing2 lei5 ni1 fan6 zi1 liu2",
+      "segments": [
+        {
+          "text": "我哋",
+          "reading": "ngo5 dei6"
+        },
+        {
+          "text": "一齊",
+          "reading": "jat1 cai4"
+        },
+        {
+          "text": "整理",
+          "reading": "zing2 lei5"
+        },
+        {
+          "text": "呢",
+          "reading": "ni1"
+        },
+        {
+          "text": "份",
+          "reading": "fan6"
+        },
+        {
+          "text": "資料",
+          "reading": "zi1 liu2"
+        }
+      ],
+      "char_length": 10,
+      "case_role": "ordinary",
+      "selection_hash": "67ce3f70b22cf4678238beb22a66e213704443f1d9c9d0b78617108f9d2c04e5",
+      "split": "development",
+      "input": "ngodeiyatchaijingleinifanjiliu",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "我哋一齊整理呢份資料"
+      ],
+      "top_k": 9,
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "contextual_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "si1-052",
+      "category": "work_messages",
+      "group": "ordinary_control",
+      "text": "你方便嗰陣幫手簽個名",
+      "reading": "nei5 fong1 bin6 go2 zan6 bong1 sau2 cim1 go3 meng2",
+      "segments": [
+        {
+          "text": "你",
+          "reading": "nei5"
+        },
+        {
+          "text": "方便",
+          "reading": "fong1 bin6"
+        },
+        {
+          "text": "嗰陣",
+          "reading": "go2 zan6"
+        },
+        {
+          "text": "幫手",
+          "reading": "bong1 sau2"
+        },
+        {
+          "text": "簽",
+          "reading": "cim1"
+        },
+        {
+          "text": "個",
+          "reading": "go3"
+        },
+        {
+          "text": "名",
+          "reading": "meng2"
+        }
+      ],
+      "char_length": 10,
+      "case_role": "ordinary",
+      "selection_hash": "0c36e71ba0360742b0b4d0f5348f1b9ccf45e57c05804663d356a1c76dffb5e8",
+      "split": "development",
+      "input": "neifongbingojanbongsauchimgomeng",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "你方便嗰陣幫手簽個名"
+      ],
+      "top_k": 9,
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "contextual_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "si1-053",
+      "category": "food_shopping",
+      "group": "ordinary_control",
+      "text": "加多碟菜",
+      "reading": "gaa1 do1 dip6 coi3",
+      "segments": [
+        {
+          "text": "加多",
+          "reading": "gaa1 do1"
+        },
+        {
+          "text": "碟",
+          "reading": "dip6"
+        },
+        {
+          "text": "菜",
+          "reading": "coi3"
+        }
+      ],
+      "char_length": 4,
+      "case_role": "ordinary",
+      "selection_hash": "d86c0fae725aea516c8cddcdb4df370a73760dfd5291fc520b484da20c6052fd",
+      "split": "validation",
+      "input": "gadodipchoi",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "加多碟菜"
+      ],
+      "top_k": 9,
+      "length_band": "4-5",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries"
+      ]
+    },
+    {
+      "id": "si1-054",
+      "category": "food_shopping",
+      "group": "ordinary_control",
+      "text": "麻煩畀杯暖水我",
+      "reading": "maa4 faan4 bei2 bui1 nyun5 seoi2 ngo5",
+      "segments": [
+        {
+          "text": "麻煩",
+          "reading": "maa4 faan4"
+        },
+        {
+          "text": "畀",
+          "reading": "bei2"
+        },
+        {
+          "text": "杯",
+          "reading": "bui1"
+        },
+        {
+          "text": "暖水",
+          "reading": "nyun5 seoi2"
+        },
+        {
+          "text": "我",
+          "reading": "ngo5"
+        }
+      ],
+      "char_length": 7,
+      "case_role": "ordinary",
+      "selection_hash": "6ed494991888928a214defa5bfaf084c14b13fb0a0030c3af7498b334526ce82",
+      "split": "development",
+      "input": "mafaanbeibuinyunseuingo",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "麻煩畀杯暖水我"
+      ],
+      "top_k": 9,
+      "length_band": "6-8",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries"
+      ]
+    },
+    {
+      "id": "si1-055",
+      "category": "food_shopping",
+      "group": "ordinary_control",
+      "text": "呢碗湯放涼少少先飲",
+      "reading": "ni1 wun2 tong1 fong3 loeng4 siu2 siu2 sin1 jam2",
+      "segments": [
+        {
+          "text": "呢",
+          "reading": "ni1"
+        },
+        {
+          "text": "碗",
+          "reading": "wun2"
+        },
+        {
+          "text": "湯",
+          "reading": "tong1"
+        },
+        {
+          "text": "放涼",
+          "reading": "fong3 loeng4"
+        },
+        {
+          "text": "少少",
+          "reading": "siu2 siu2"
+        },
+        {
+          "text": "先",
+          "reading": "sin1"
+        },
+        {
+          "text": "飲",
+          "reading": "jam2"
+        }
+      ],
+      "char_length": 9,
+      "case_role": "ordinary",
+      "selection_hash": "89d2ac6634032c3dd229c2b2a80ac6c45d0095f20041c4dd8198a6b1e2daa33d",
+      "split": "development",
+      "input": "niwuntongfongleungsiusiusinyam",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "呢碗湯放涼少少先飲"
+      ],
+      "top_k": 9,
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries"
+      ]
+    },
+    {
+      "id": "si1-056",
+      "category": "food_shopping",
+      "group": "ordinary_control",
+      "text": "買完餸我哋順便去攞衫",
+      "reading": "maai5 jyun4 sung3 ngo5 dei6 seon6 bin6 heoi3 lo2 saam1",
+      "segments": [
+        {
+          "text": "買完餸",
+          "reading": "maai5 jyun4 sung3"
+        },
+        {
+          "text": "我哋",
+          "reading": "ngo5 dei6"
+        },
+        {
+          "text": "順便",
+          "reading": "seon6 bin6"
+        },
+        {
+          "text": "去",
+          "reading": "heoi3"
+        },
+        {
+          "text": "攞",
+          "reading": "lo2"
+        },
+        {
+          "text": "衫",
+          "reading": "saam1"
+        }
+      ],
+      "char_length": 10,
+      "case_role": "ordinary",
+      "selection_hash": "d2a5b09fc9a8073bcbd05c40fed6136a10ef2a53ea98233a135ff1927bfa9860",
+      "split": "validation",
+      "input": "maaiyunsungngodeiseunbinheuilosaam",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "買完餸我哋順便去攞衫"
+      ],
+      "top_k": 9,
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "contextual_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "si1-057",
+      "category": "media_technology",
+      "group": "ordinary_control",
+      "text": "開大個視窗",
+      "reading": "hoi1 daai6 go3 si6 coeng1",
+      "segments": [
+        {
+          "text": "開大",
+          "reading": "hoi1 daai6"
+        },
+        {
+          "text": "個",
+          "reading": "go3"
+        },
+        {
+          "text": "視窗",
+          "reading": "si6 coeng1"
+        }
+      ],
+      "char_length": 5,
+      "case_role": "ordinary",
+      "selection_hash": "f23353e415e64db1f595f5bf528a9a52b6fc28dd667a62fe0ff676b60cf85d0a",
+      "split": "validation",
+      "input": "hoidaaigosicheung",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "開大個視窗"
+      ],
+      "top_k": 9,
+      "length_band": "4-5",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "contextual_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "si1-058",
+      "category": "media_technology",
+      "group": "ordinary_control",
+      "text": "呢張相要再光啲",
+      "reading": "ni1 zoeng1 soeng2 jiu3 zoi3 gwong1 di1",
+      "segments": [
+        {
+          "text": "呢",
+          "reading": "ni1"
+        },
+        {
+          "text": "張",
+          "reading": "zoeng1"
+        },
+        {
+          "text": "相",
+          "reading": "soeng2"
+        },
+        {
+          "text": "要",
+          "reading": "jiu3"
+        },
+        {
+          "text": "再",
+          "reading": "zoi3"
+        },
+        {
+          "text": "光啲",
+          "reading": "gwong1 di1"
+        }
+      ],
+      "char_length": 7,
+      "case_role": "ordinary",
+      "selection_hash": "94da1b872817f949397f9ae3b13c4d982123aa1f1b609cfc42d2f3895d1bafae",
+      "split": "development",
+      "input": "nijeungseungyiujoigwongdi",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "呢張相要再光啲"
+      ],
+      "top_k": 9,
+      "length_band": "6-8",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries"
+      ]
+    },
+    {
+      "id": "si1-059",
+      "category": "media_technology",
+      "group": "ordinary_control",
+      "text": "將呢份文件另存一個副本",
+      "reading": "zoeng1 ni1 fan6 man4 gin6 ling6 cyun4 jat1 go3 fu3 bun2",
+      "segments": [
+        {
+          "text": "將",
+          "reading": "zoeng1"
+        },
+        {
+          "text": "呢",
+          "reading": "ni1"
+        },
+        {
+          "text": "份",
+          "reading": "fan6"
+        },
+        {
+          "text": "文件",
+          "reading": "man4 gin6"
+        },
+        {
+          "text": "另存",
+          "reading": "ling6 cyun4"
+        },
+        {
+          "text": "一個",
+          "reading": "jat1 go3"
+        },
+        {
+          "text": "副本",
+          "reading": "fu3 bun2"
+        }
+      ],
+      "char_length": 11,
+      "case_role": "ordinary",
+      "selection_hash": "b1d604e21361236227f21d72002c938b73a2c655d757b1699d803e378e8a7d51",
+      "split": "validation",
+      "input": "jeungnifanmanginlingchyunyatgofubun",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "將呢份文件另存一個副本"
+      ],
+      "top_k": 9,
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries",
+        "contextual_or_changed_tone_review"
+      ]
+    },
+    {
+      "id": "si1-060",
+      "category": "media_technology",
+      "group": "ordinary_control",
+      "text": "你可以喺呢度揀另一種顏色",
+      "reading": "nei5 ho2 ji5 hai2 ni1 dou6 gaan2 ling6 jat1 zung2 ngaan4 sik1",
+      "segments": [
+        {
+          "text": "你",
+          "reading": "nei5"
+        },
+        {
+          "text": "可以",
+          "reading": "ho2 ji5"
+        },
+        {
+          "text": "喺",
+          "reading": "hai2"
+        },
+        {
+          "text": "呢度",
+          "reading": "ni1 dou6"
+        },
+        {
+          "text": "揀",
+          "reading": "gaan2"
+        },
+        {
+          "text": "另一",
+          "reading": "ling6 jat1"
+        },
+        {
+          "text": "種",
+          "reading": "zung2"
+        },
+        {
+          "text": "顏色",
+          "reading": "ngaan4 sik1"
+        }
+      ],
+      "char_length": 12,
+      "case_role": "ordinary",
+      "selection_hash": "17a26a5d7ac8b99dc8edc733195c7879220428fe9e1fe4735c0b9787969f52e9",
+      "split": "development",
+      "input": "neihoyihainidougaanlingyatjungngaansik",
+      "input_form": "plain_yale_compact",
+      "mode": "forgiving",
+      "expected": [
+        "你可以喺呢度揀另一種顏色"
+      ],
+      "top_k": 9,
+      "length_band": "9-12",
+      "whole_text_in_dictionary": false,
+      "whole_text_reading_in_dictionary": false,
+      "reading_review": "Numeric readings manually intended before source support queries; spelling checked against the independent Yale grid. All character/readings have exact local dictionary rows. A second project agent reviewed all sixty targets/readings before any candidate scoring and found no further correction. No human/audio acceptance claimed; exact lexical support does not prove phrase naturalness.",
+      "ambiguity": [
+        "tone_free_homophones",
+        "compact_syllable_boundaries"
+      ]
+    }
+  ]
+}

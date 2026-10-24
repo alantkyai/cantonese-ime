@@ -1,6 +1,6 @@
 """CLI contracts tested with an isolated project-authored dictionary."""
 
-from contextlib import redirect_stderr, redirect_stdout
+from contextlib import closing, redirect_stderr, redirect_stdout
 import hashlib
 import io
 import json
@@ -69,6 +69,32 @@ class CliTests(unittest.TestCase):
         code, output, errors = self.run_cli("lookup", "lay", "--mode", "jyutping", "--json")
         self.assertEqual(code, 0)
         self.assertNotIn("你", [candidate["text"] for candidate in json.loads(output)["candidates"]])
+
+    def test_habitual_ng_is_enabled_for_typing_and_can_be_disabled(self):
+        with closing(sqlite3.connect(self.dictionary)) as connection:
+            connection.executemany("INSERT INTO entries VALUES (?, ?, ?, ?)", [
+                ("唔", "m4", "m", 10000), ("唔好", "m4 hou2", "m hou", 1000),
+            ])
+            connection.commit()
+        code, output, errors = self.run_cli("lookup", "nghou", "--json")
+        report = json.loads(output)
+        self.assertEqual((code, errors), (0, ""))
+        self.assertTrue(report["input_conventions"]["syllabic_m_as_ng"])
+        self.assertEqual((report["candidates"][0]["text"], report["candidates"][0]["reading"]),
+                         ("唔好", "m4 hou2"))
+        for flags in (("--no-syllabic-m-as-ng",), ("--mode", "jyutping")):
+            with self.subTest(flags=flags):
+                code, output, errors = self.run_cli("lookup", "nghou", *flags, "--json")
+                self.assertEqual((code, errors), (0, ""))
+                self.assertNotIn("唔好", [candidate["text"] for candidate in json.loads(output)["candidates"]])
+        code, output, errors = self.run_cli("type", "nghou", "--keys", "Space", "--json")
+        self.assertEqual((code, errors, json.loads(output)["committed"]), (0, "", "唔好"))
+
+    def test_evaluation_records_habitual_input_configuration(self):
+        cases = self.write_cases([{"id": "first", "input": "nei", "expected": ["你"]}])
+        code, output, errors = self.run_cli("evaluate", "--cases", str(cases), "--no-syllabic-m-as-ng", "--json")
+        self.assertEqual((code, errors), (0, ""))
+        self.assertEqual(json.loads(output)["input_conventions"], {"syllabic_m_as_ng": False})
 
     def test_lookup_can_page_beyond_90_stored_homophones(self):
         connection = sqlite3.connect(self.dictionary)

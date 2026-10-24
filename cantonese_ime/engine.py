@@ -42,6 +42,10 @@ _LEARNING_MAX_WEIGHT = 5.0
 _SPAN_LEARNING_REWARD = 24.0
 _SPAN_LEARNING_MAX_REWARD = 32.0
 _SPAN_LEARNING_WORK_LIMIT = 100000
+# Optional habitual input convention, separate from formal Yale spellings.
+# Retain the existing optional pronunciation-merger cost instead of treating
+# ng and m as interchangeable zero-cost syllables.
+_SYLLABIC_M_AS_NG_COST = 0.8
 _LEARNING_WRITE_LOCK = threading.RLock()
 _READING = re.compile(r"^([a-z]+)([1-6])$")
 _INPUT = re.compile(r"^[a-z1-6' ]+$")
@@ -163,13 +167,18 @@ def _yale_preselection_key(value: str) -> str:
     return value.replace("eeu", "ew")
 
 
+def _habitual_ng_preselection_key(value: str) -> str:
+    """Coarse selection only; matching must verify complete stored syllables."""
+    return _yale_preselection_key(value).replace("ng", "m")
+
+
 def _match_yale_word(value: str, forms: tuple[tuple[tuple[str, float], ...], ...],
                      *, work: list[int] | None = None) -> float | None:
     """Minimum additive cost on a fixed stored syllable sequence.
 
     States are input offsets, not expanded spelling combinations. At most
     len(value)+1 positions survive per syllable; each has at most two current
-    Yale variants. Explicit apostrophes can only be crossed at a syllable end.
+    input variants. Explicit apostrophes can only be crossed at a syllable end.
     """
     states = {0: 0.0}
     for options in forms:
@@ -237,7 +246,9 @@ class Engine:
     ``lookup`` accepts numeric tones. A frontend must choose how tone entry and
     numbered candidate selection share keys; the prototype Session reserves
     digits for candidate selection. No files are written unless learning_path
-    is supplied and record_selection is called.
+    is supplied and record_selection is called. ``syllabic_m_as_ng`` enables an
+    optional habitual input convention in forgiving mode; canonical readings,
+    formal Yale spellings and strict-mode matching stay separate.
     """
 
     MAX_INPUT_LENGTH = MAX_INPUT_LENGTH
@@ -249,12 +260,16 @@ class Engine:
         mode: str = "forgiving",
         learning_path: str | Path | None = None,
         prefer_yale: bool = True,
+        syllabic_m_as_ng: bool = False,
     ) -> None:
         self._check_mode(mode)
         if not isinstance(prefer_yale, bool):
             raise ValueError("prefer_yale must be a boolean.")
+        if not isinstance(syllabic_m_as_ng, bool):
+            raise ValueError("syllabic_m_as_ng must be a boolean.")
         self.mode = mode
         self.prefer_yale = prefer_yale
+        self.syllabic_m_as_ng = syllabic_m_as_ng
         self.path = Path(db_path).resolve()
         if not self.path.is_file():
             raise FileNotFoundError(f"Dictionary not found: {self.path}. Run tools/build_dictionary.py first.")
@@ -287,7 +302,7 @@ class Engine:
                 if not base.isascii() or not base.isalpha():
                     raise ValueError("Dictionary contains a noncanonical base syllable.")
                 self._insert("jyutping", base, base, 0.0)
-                for spelling, penalty in _spellings(base).items():
+                for spelling, penalty in self._input_spellings(base, "forgiving").items():
                     self._insert("forgiving", spelling, base, penalty)
             # Index each complete stored reading independently of the bounded
             # syllable frontier. A valid Yale word must not disappear because
@@ -314,6 +329,16 @@ class Engine:
                 normalized = _yale_preselection_key(compact)
                 if normalized != compact:
                     self._yale_normalized_readings.setdefault(normalized, []).extend(readings)
+            # The optional ng-as-m convention selects existing stored readings
+            # without expanding every m/ng combination or editing provenance.
+            # Coarse keys may overselect; full syllable validation follows.
+            self._habitual_ng_readings: dict[str, set[str]] = {}
+            if self.syllabic_m_as_ng:
+                for compact, readings in self._yale_readings.items():
+                    for reading, _ in readings:
+                        if "m" in reading.split():
+                            key = _habitual_ng_preselection_key(compact)
+                            self._habitual_ng_readings.setdefault(key, set()).add(reading)
             total, count = self._db.execute("SELECT COALESCE(SUM(weight),0), COUNT(*) FROM entries").fetchone()
             self._log_total = math.log(max(1.0, float(total) + count))
             self._by_base = lru_cache(maxsize=8192)(self._read_base)
@@ -342,7 +367,26 @@ class Engine:
         node.outputs.append((base, penalty))
         self._variants[mode].setdefault(spelling, []).append((base, penalty))
 
+    def _input_spellings(self, base: str, mode: str) -> dict[str, float]:
+        """Shared runtime forms for dictionary matching and learned spans.
+
+        The optional user convention does not become a formal exported Yale
+        route or a new canonical dictionary reading. Strict mode stays literal.
+        """
+        spellings = _spellings(base) if mode == "forgiving" else {base: 0.0}
+        if mode == "forgiving" and self.syllabic_m_as_ng and base == "m":
+            spellings["ng"] = _SYLLABIC_M_AS_NG_COST
+        return spellings
+
+    def _word_input_forms(self, base: str) -> tuple[tuple[str, float], ...]:
+        forms = self._yale_word_forms[base]
+        if self.syllabic_m_as_ng and base == "m":
+            return forms + (("ng", _SYLLABIC_M_AS_NG_COST),)
+        return forms
+
     def _effective_spelling_penalty(self, mode: str, spelling: str, base: str, penalty: float) -> float:
+        if mode == "forgiving" and self.syllabic_m_as_ng and base == "m" and spelling == "ng":
+            return _SYLLABIC_M_AS_NG_COST
         # Yale is a supported spelling convention rather than a typo when the
         # user enables that preference. Preserve original variant metadata for
         # incomplete-alias discovery and keep other forgiving aliases costly.
@@ -462,7 +506,7 @@ class Engine:
         return self._snapshot_value
 
     def _stored_yale_arcs(self, value: str) -> Iterable[_Arc]:
-        """All full stored readings for tone-free Yale, preserving collisions.
+        """Full stored readings for Yale and optional habitual nasal input.
 
         Optional apostrophes must fall at actual syllable boundaries. Numeric
         tones continue through the general decoder with its closure rules.
@@ -476,11 +520,39 @@ class Engine:
         readings.update(self._yale_readings.get(normalized, ()))
         readings.update(self._yale_normalized_readings.get(normalized, ()))
         for base_reading in sorted(readings):
-            forms = tuple(self._yale_word_forms[base] for base in base_reading.split())
+            forms = tuple(self._word_input_forms(base) for base in base_reading.split())
             penalty = _match_yale_word(value, forms)
             if penalty is not None:
                 for entry in self._by_base(base_reading):
                     yield _Arc(len(value), entry, penalty)
+        if self.syllabic_m_as_ng:
+            for reading in sorted(self._habitual_ng_readings.get(_habitual_ng_preselection_key(compact), ())):
+                penalty = self._match_habitual_ng_word(value, reading.split())
+                if penalty is not None:
+                    for entry in self._by_base(reading):
+                        yield _Arc(len(value), entry, penalty)
+
+    def _match_habitual_ng_word(self, value: str, bases: Iterable[str]) -> float | None:
+        # Keep alias-use provenance so proper m input does not acquire another
+        # route solely because its reading shares the supplementary index.
+        states = {(0, False): 0.0}
+        for base in bases:
+            following = {}
+            for (start, used_alias), cost in states.items():
+                for spelling, penalty in self._word_input_forms(base):
+                    if not value.startswith(spelling, start):
+                        continue
+                    end = start + len(spelling)
+                    if end < len(value) and value[end] == "'":
+                        end += 1
+                    used = used_alias or (base == "m" and spelling == "ng")
+                    key = end, used
+                    effective = self._effective_spelling_penalty("forgiving", spelling, base, penalty)
+                    following[key] = min(following.get(key, math.inf), cost + effective)
+            if not following:
+                return None
+            states = following
+        return states.get((len(value), True))
 
     def _rebuild_span_learning(self) -> None:
         """Index existing schema-2 selections for bounded constituent matching.
@@ -499,7 +571,7 @@ class Engine:
             for token in tokens:
                 assert token is not None  # Validated by the learning loader.
                 base, tone = token.groups()
-                spellings = _spellings(base) if mode == "forgiving" else {base: 0.0}
+                spellings = self._input_spellings(base, mode)
                 forms.append(tuple((spelling + suffix, self._effective_spelling_penalty(mode, spelling, base, penalty))
                                    for spelling, penalty in spellings.items() for suffix in ("", tone)))
             penalty = _match_yale_word(raw, tuple(forms))
@@ -735,8 +807,7 @@ class Engine:
         }
         for arc in indexed_yale_arcs:
             direct_arcs[(arc.entry.text, arc.entry.reading)] = arc
-        # Long dictionary words used to exceed the frontend's 64-letter bound.
-        # Serve their indexed full matches promptly, including exact personal
+        # Serve indexed long-word matches promptly, including exact personal
         # phrases, instead of spending the native 250ms deadline on optional
         # sentence alternatives. The omitted tail is explicitly reported.
         indexed_long_word = size > 64 and bool(indexed_yale_arcs)

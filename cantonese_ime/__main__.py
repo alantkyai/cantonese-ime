@@ -74,6 +74,10 @@ def _parser() -> argparse.ArgumentParser:
         command.add_argument("--dictionary", type=Path, default=DEFAULT_DICTIONARY, help="Read-only SQLite lexicon.")
         command.add_argument("--mode", choices=MODES, default="forgiving", help="Default spelling mode.")
         command.add_argument(
+            "--syllabic-m-as-ng", action=argparse.BooleanOptionalAction, default=True,
+            help="Accept whole-syllable ng for m in forgiving input (default: on); canonical readings stay unchanged.",
+        )
+        command.add_argument(
             "--learning", type=Path,
             help="Opt in to local selection memory at this path. Only type selections write it.",
         )
@@ -112,7 +116,8 @@ def _implementation_hashes() -> dict[str, str]:
 
 def _open_engine(args: argparse.Namespace) -> tuple[Engine, float]:
     started = perf_counter()
-    engine = Engine(args.dictionary, mode=args.mode, learning_path=args.learning)
+    engine = Engine(args.dictionary, mode=args.mode, learning_path=args.learning,
+                    syllabic_m_as_ng=args.syllabic_m_as_ng)
     return engine, (perf_counter() - started) * 1000
 
 
@@ -131,6 +136,7 @@ def _lookup(args: argparse.Namespace) -> dict:
         lookup_ms = (perf_counter() - started) * 1000
     return {
         "command": "lookup", "input": args.input, "mode": args.mode,
+        "input_conventions": {"syllabic_m_as_ng": args.syllabic_m_as_ng},
         "learning_enabled": args.learning is not None,
         "candidates": [asdict(candidate) for candidate in candidates],
         "startup_ms": startup_ms, "lookup_ms": lookup_ms,
@@ -155,6 +161,7 @@ def _type(args: argparse.Namespace) -> dict:
                 trace.append({"key": key, **asdict(result)})
         report = {
             "command": "type", "input": args.input, "mode": args.mode,
+            "input_conventions": {"syllabic_m_as_ng": args.syllabic_m_as_ng},
             "learning_enabled": args.learning is not None,
             "committed": "".join(committed), "preedit": session.buffer,
             "candidates": [asdict(candidate) for candidate in session.candidates],
@@ -278,6 +285,7 @@ def _evaluate(args: argparse.Namespace) -> dict:
         "python_version": sys.version.split()[0], "sqlite_version": sqlite3.sqlite_version,
         "command": "evaluate", "evaluation_kind": "seed_case_coverage",
         "notice": SEED_COVERAGE_NOTICE, "learning_enabled": args.learning is not None,
+        "input_conventions": {"syllabic_m_as_ng": args.syllabic_m_as_ng},
         "rank_search_limit": 90, "repeat": args.repeat,
         "startup_ms": startup_ms, "latency_ms": _latency(all_samples),
         "first_sample_latency_ms": _latency(first_samples),

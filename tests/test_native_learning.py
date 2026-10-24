@@ -143,6 +143,29 @@ class NativeLearningTests(unittest.TestCase):
         self.assertEqual(self.memory.read_bytes(), original)
         self.assertEqual(events, [("learning_unavailable", {"stage": "startup"})])
 
+    def test_broker_default_convention_survives_learning_fallback_and_can_be_disabled(self):
+        with closing(sqlite3.connect(self.database)) as db:
+            db.executemany("INSERT INTO entries VALUES(?,?,?,?)", [
+                ("唔", "m4", "m", 10000), ("唔好", "m4 hou2", "m hou", 1000),
+            ])
+            db.commit()
+        events = []
+        log = lambda event, **fields: events.append((event, fields))
+        with server._conversion_engine(self.database, self.memory, log) as engine:
+            request = LookupRequest(10, 0, 0, 9, "nghou")
+            response = dispatch(engine, encode_request(request))
+            self.assertEqual((response.candidates[0].text, response.candidates[0].reading), ("唔好", "m4 hou2"))
+            selected = LearningRequest(11, 0, "nghou", "唔好", "m4 hou2")
+            self.assertEqual(self.send(engine, selected).status, Status.OK)
+        self.assertEqual(self.records()[0]["input"], "nghou")
+        with server._conversion_engine(self.database, None, log, syllabic_m_as_ng=False) as engine:
+            self.assertNotIn("唔好", {row.text for row in engine.lookup("nghou")})
+        self.memory.write_bytes(b"invalid synthetic history")
+        with server._conversion_engine(self.database, self.memory, log) as engine:
+            self.assertIsNone(engine.learning_path)
+            self.assertEqual(engine.lookup("nghou")[0].reading, "m4 hou2")
+        self.assertEqual(self.memory.read_bytes(), b"invalid synthetic history")
+
     def test_corruption_during_save_does_not_break_conversion_or_overwrite_file(self):
         with Engine(self.database, learning_path=self.memory) as engine:
             self.assertEqual(self.send(engine).status, Status.OK)

@@ -14,6 +14,15 @@ Type `fogeui` for 火炬. Use the numbers beside candidates to choose them. Choo
 
 Personal learning stays at `~/Library/Application Support/CantoneseIME/learning.json`. The installer and build scripts do not read, copy, reset, or remove that file.
 
+The development stdio bridge automatically enables the shared whole-syllable
+`ng`-for-`m` typing convention when the bundled engine supports it, including
+conversion-only fallback when learning cannot be read. Its command-line opt-out
+is `--no-syllabic-m-as-ng`. Canonical readings and strict Jyutping are unchanged.
+An older frozen Windows payload keeps its original engine and input behavior;
+the bridge reports `ng-for-m=unavailable` and rejects an explicit request to
+enable that unsupported option. This source change is not part of a validated
+native Mac package.
+
 Before upgrading, switch to another input source and quit Cantonese IME. Other signed-in users must do the same or sign out. The installer refuses to replace a running IMK server or its engine and does not force applications to quit.
 
 For removal, first remove Cantonese IME from your Keyboard input sources, switch to another input source, and quit the IME or sign out. An administrator can then remove **only** `/Library/Input Methods/CantoneseIME.app` in Finder. Learning is retained. Package receipts may remain in macOS; deleting a receipt is not an application uninstall.

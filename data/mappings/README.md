@@ -41,6 +41,14 @@ word priority. Identity spellings keep the existing weighted merger ranking;
 strict Jyutping is unchanged. `prefer_yale=False` disables the ranking preference,
 and saved personal selections can still override the default order. Mapping
 costs and this whole-word preference are separate policy layers.
+The development engine also has an optional `syllabic_m_as_ng` input convention:
+a complete typed `ng` can match canonical `m` in forgiving mode at cost 0.8.
+This is a user typing habit, not a formal Yale conversion or a new dictionary
+pronunciation. It is separate from this exported v3 mapping artifact. The
+library defaults it off; the development CLI and native bridges enable it and
+offer `--no-syllabic-m-as-ng` for their manual launch paths. Strict Jyutping and
+literal `ng` readings remain available. Evaluation records must include this
+option as well as the mapping and engine hashes.
 Google's documented examples and the reference website provide evidence for
 specific behaviours; they do not establish a complete conversion table or
 grant access to their dictionaries. Sidney Lau is not implemented as a complete

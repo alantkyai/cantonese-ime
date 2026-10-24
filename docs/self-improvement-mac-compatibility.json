@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "scope": "Current Mac bridge against real copied released1.0.8 Python modules; public pinned release dictionary referenced read-only. Windows isolated Python stdio smoke, no native macOS compile/AppKit/InputMethodKit proof.",
+  "actual_child_engine_sha256": "a4e2d07c98adbb78b8a6978892827bd907a68cd658f06229d6493fbc05e3e141",
+  "bridge_sha256": "36c2011dc6f29b0d78434e1894259074eac884bdbbd718b89d44a0822adc7603",
+  "dictionary_sha256": "bd312406a15162556ac58a257ede1514ad40890c793b6f8fa05084fda2d6241a",
+  "source_manifest_sha256": "77517c258452f1602880012fc3dc53e6db1f569fa443cce87a65bc41e6469205",
+  "checker_report_sha256": "8dd34937ccbe0eef13320f300e01b89d5430c33c2f33c526cd6d2f4e4d2c5bff",
+  "checker_pins_actual_child_engine": true,
+  "auto_and_learning_restart_passed": true,
+  "auto_capability": {
+    "first_start": "unavailable",
+    "restarted": "unavailable"
+  },
+  "public_dictionary_cases": 34,
+  "cases": {
+    "explicit_true_legacy": {
+      "exit_code": 2,
+      "pass": true,
+      "clear_fixed_capability_diagnostic": true
+    },
+    "explicit_false_legacy": {
+      "exit_code": 0,
+      "pass": true,
+      "capability": "unavailable"
+    },
+    "legacy_corrupt_learning_fallback": {
+      "exit_code": 0,
+      "pass": true,
+      "generated_history_unchanged": true,
+      "capability": "unavailable"
+    }
+  },
+  "personal_history_accessed": false,
+  "os_or_installation_changes": false,
+  "retained_original_report_sha256": "cfa7e3f2fa1913a2db0e0365d74cbd05470465fa461db2041a6619160b0adffd"
+}

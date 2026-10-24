@@ -146,9 +146,10 @@ class RuntimeStopTests(unittest.TestCase):
         engine = FakeEngine(api)
         snapshots = []
 
-        def factory(_database, *, mode, learning_path):
+        def factory(_database, *, mode, learning_path, syllabic_m_as_ng):
             self.assertEqual(mode, "forgiving")
             self.assertEqual(learning_path, learning)
+            self.assertTrue(syllabic_m_as_ng)
             engine.learning_path = learning_path
             return engine
 
@@ -167,6 +168,7 @@ class RuntimeStopTests(unittest.TestCase):
                 server.serve(database, ready, log, learning_file=learning)
         self.assertTrue(snapshots[0]["learning_requested"])
         self.assertTrue(snapshots[0]["learning_enabled"])
+        self.assertEqual(snapshots[0]["input_conventions"], {"syllabic_m_as_ng": True})
         self.assertEqual(snapshots[0]["learning_file"], str(learning.resolve()))
 
     def test_cleanup_cannot_remove_successor_nonce_even_for_same_pid_and_pipe(self):

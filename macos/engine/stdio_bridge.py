@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import inspect
 import os
 from pathlib import Path
 import re
@@ -29,6 +30,10 @@ U32 = struct.Struct("<I")
 
 
 class FramingError(ValueError):
+    pass
+
+
+class EngineCapabilityError(ValueError):
     pass
 
 
@@ -68,9 +73,29 @@ def default_learning_file() -> Path:
     return Path.home() / "Library/Application Support/CantoneseIME/learning.json"
 
 
-def open_engine(dictionary: Path, learning: Path | None) -> Engine:
+def supports_habitual_ng() -> bool:
+    """Negotiate an explicit option; legacy **kwargs alone is not support."""
     try:
-        return Engine(dictionary, learning_path=learning)
+        parameter = inspect.signature(Engine).parameters.get("syllabic_m_as_ng")
+    except (TypeError, ValueError):
+        return False
+    return parameter is not None and parameter.kind != inspect.Parameter.POSITIONAL_ONLY
+
+
+def habitual_ng_status(engine: Engine) -> str:
+    enabled = getattr(engine, "syllabic_m_as_ng", None)
+    return "on" if enabled is True else "off" if enabled is False else "unavailable"
+
+
+def open_engine(dictionary: Path, learning: Path | None, *, syllabic_m_as_ng: bool | None = None) -> Engine:
+    if syllabic_m_as_ng is not None and not isinstance(syllabic_m_as_ng, bool):
+        raise ValueError("syllabic_m_as_ng must be a boolean or None.")
+    supported = supports_habitual_ng()
+    if syllabic_m_as_ng is True and not supported:
+        raise EngineCapabilityError("The bundled engine does not support the requested ng-for-m input convention.")
+    options = ({"syllabic_m_as_ng": syllabic_m_as_ng is not False} if supported else {})
+    try:
+        return Engine(dictionary, learning_path=learning, **options)
     except ValueError as error:
         # Preserve the original file; never silently reset private selections.
         # Dictionary/schema errors must still stop startup, not masquerade as a
@@ -79,7 +104,7 @@ def open_engine(dictionary: Path, learning: Path | None) -> Engine:
             raise
         sys.stderr.write("Cantonese IME: saved learning is unavailable; conversion remains enabled.\n")
         sys.stderr.flush()
-        return Engine(dictionary)
+        return Engine(dictionary, **options)
 
 
 def verify_dictionary(dictionary: Path, expected: str | None):
@@ -99,6 +124,8 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--dictionary", type=Path, required=True)
     parser.add_argument("--expected-dictionary-sha256")
+    parser.add_argument("--syllabic-m-as-ng", action=argparse.BooleanOptionalAction, default=None,
+                        help="Accept whole-syllable ng for m in forgiving input (default: on when supported by the bundled engine).")
     memory = parser.add_mutually_exclusive_group()
     memory.add_argument("--learning-file", type=Path)
     memory.add_argument("--disable-learning", action="store_true")
@@ -113,8 +140,9 @@ def main(argv: list[str] | None = None) -> int:
         if learning == args.dictionary.expanduser().resolve():
             raise ValueError("Personal learning must be separate from the dictionary.")
     verify_dictionary(args.dictionary, args.expected_dictionary_sha256)
-    with open_engine(args.dictionary, learning) as engine:
-        sys.stderr.write("Cantonese IME: local engine ready; learning=" + ("on" if engine.learning_path else "off") + ".\n")
+    with open_engine(args.dictionary, learning, syllabic_m_as_ng=args.syllabic_m_as_ng) as engine:
+        sys.stderr.write("Cantonese IME: local engine ready; learning=" + ("on" if engine.learning_path else "off")
+                         + "; ng-for-m=" + habitual_ng_status(engine) + ".\n")
         sys.stderr.flush()
         serve(engine, sys.stdin.buffer, sys.stdout.buffer)
     return 0
@@ -125,6 +153,10 @@ if __name__ == "__main__":
         raise SystemExit(main())
     except BrokenPipeError:
         raise SystemExit(0)
+    except EngineCapabilityError:
+        # Fixed capability diagnostic, with no request or private path data.
+        sys.stderr.write("Cantonese IME: requested ng-for-m input is unavailable in the bundled engine.\n")
+        raise SystemExit(2)
     except (Exception, KeyboardInterrupt):
         # The parent gets EOF/exit status; logs contain no input, candidate,
         # local filesystem path, exception payload or document contents.

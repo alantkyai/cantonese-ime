@@ -15,6 +15,7 @@ from cantonese_ime import Engine
 from cantonese_ime.native_protocol import (LearningRequest, LookupRequest, MAX_FRAME_BYTES,
     Status, decode_response, encode_learning_request, encode_request)
 from macos.engine import stdio_bridge as bridge
+from tools import check_macos_engine as checker
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -82,6 +83,70 @@ class MacBridgeTests(unittest.TestCase):
     def test_boundary_eof_is_clean_and_never_emits_unframed_output(self):
         self.assertEqual(self.exchange(b""), (0, []))
 
+    def test_bridge_default_and_opt_out_preserve_canonical_nasal_readings(self):
+        with bridge.open_engine(self.database, None) as engine:
+            destination = io.BytesIO()
+            bridge.serve(engine, io.BytesIO(framed(encode_request(LookupRequest(15, 0, 0, 9, "nghou")))), destination)
+            result = responses(destination.getvalue())[0]
+            self.assertEqual((result.candidates[0].text, result.candidates[0].reading), ("唔好", "m4 hou2"))
+            self.assertNotIn("m4 hou2", {row.reading for row in engine.lookup("nghou", mode="jyutping")})
+        with bridge.open_engine(self.database, None, syllabic_m_as_ng=False) as engine:
+            self.assertFalse(engine.syllabic_m_as_ng)
+            self.assertNotIn("m4 hou2", {row.reading for row in engine.lookup("nghou")})
+
+    def test_legacy_constructor_negotiates_auto_and_explicit_opt_out(self):
+        calls = []
+
+        class LegacyEngine:
+            def __init__(self, dictionary, learning_path=None):
+                calls.append((dictionary, learning_path))
+                self.learning_path = learning_path
+
+        with patch.object(bridge, "Engine", LegacyEngine):
+            self.assertFalse(bridge.supports_habitual_ng())
+            auto = bridge.open_engine(self.database, self.memory)
+            disabled = bridge.open_engine(self.database, None, syllabic_m_as_ng=False)
+            self.assertEqual(bridge.habitual_ng_status(auto), "unavailable")
+            self.assertEqual(bridge.habitual_ng_status(disabled), "unavailable")
+            with self.assertRaisesRegex(ValueError, "does not support.*ng-for-m"):
+                bridge.open_engine(self.database, None, syllabic_m_as_ng=True)
+        self.assertEqual(calls, [(self.database, self.memory), (self.database, None)])
+
+    def test_kwargs_alone_is_not_an_explicit_engine_capability(self):
+        class LegacyWrapper:
+            def __init__(self, dictionary, **kwargs):
+                self.options = kwargs
+
+        with patch.object(bridge, "Engine", LegacyWrapper):
+            result = bridge.open_engine(self.database, None)
+            self.assertEqual(result.options, {"learning_path": None})
+            with self.assertRaises(bridge.EngineCapabilityError):
+                bridge.open_engine(self.database, None, syllabic_m_as_ng=True)
+
+    def test_legacy_learning_fallback_retains_the_same_negotiated_options(self):
+        calls = []
+
+        class LegacyEngine:
+            def __init__(self, dictionary, learning_path=None):
+                calls.append((dictionary, learning_path))
+                if learning_path is not None:
+                    raise ValueError("Cannot read learning data: isolated corrupt fixture")
+                self.learning_path = None
+
+        with patch.object(bridge, "Engine", LegacyEngine), redirect_stderr(io.StringIO()):
+            result = bridge.open_engine(self.database, self.memory)
+        self.assertIsNone(result.learning_path)
+        self.assertEqual(calls, [(self.database, self.memory), (self.database, None)])
+
+    def test_checker_pins_the_package_used_by_a_staged_bridge(self):
+        staged = self.root / "stage"
+        (staged / "cantonese_ime").mkdir(parents=True)
+        (staged / "cantonese_ime/engine.py").write_bytes(b"# separately pinned engine\n")
+        script = staged / "stdio_bridge.py"
+        script.write_bytes(b"# bridge fixture\n")
+        self.assertEqual(checker.child_engine_root(script), staged)
+        self.assertEqual(checker.child_engine_root(ROOT / "macos/engine/stdio_bridge.py"), ROOT)
+
     def test_invalid_lengths_and_truncation_are_fatal_without_partial_response(self):
         for data in (b"\x01", struct.pack("<I", 0), struct.pack("<I", MAX_FRAME_BYTES + 1), struct.pack("<I", 4) + b"a"):
             with self.subTest(data=data), Engine(self.database) as engine:
@@ -122,6 +187,7 @@ class MacBridgeTests(unittest.TestCase):
         log = io.StringIO()
         with redirect_stderr(log), bridge.open_engine(self.database, self.memory) as engine:
             self.assertIsNone(engine.learning_path)
+            self.assertTrue(engine.syllabic_m_as_ng)
             self.assertTrue(engine.lookup("ng"))
         self.assertEqual(self.memory.read_bytes(), original)
         self.assertNotIn(str(self.memory), log.getvalue())
@@ -147,12 +213,18 @@ class MacBridgeTests(unittest.TestCase):
 
     def test_real_child_handles_learning_restart_without_stdout_diagnostics(self):
         value = framed(encode_learning_request(LearningRequest(1, 0, "ng", "唔", "ng4")))
-        first = self.child(value, "--learning-file", self.memory)
+        # Create a real legacy ng4 selection through the opt-out, then reopen
+        # the same store with the new default. No fabricated history records.
+        first = self.child(value, "--learning-file", self.memory, "--no-syllabic-m-as-ng")
         self.assertEqual(first.returncode, 0, first.stderr)
+        self.assertIn(b"ng-for-m=off", first.stderr)
         self.assertEqual(responses(first.stdout)[0].status, Status.OK)
         second = self.child(framed(encode_request(LookupRequest(2, 0, 0, 9, "ngho"))), "--learning-file", self.memory)
         self.assertEqual(second.returncode, 0, second.stderr)
+        self.assertIn(b"ng-for-m=on", second.stderr)
         self.assertIn("唔好", {row.text for row in responses(second.stdout)[0].candidates})
+        self.assertEqual(responses(second.stdout)[0].candidates[0].reading, "m4 hou2")
+        self.assertEqual(json.loads(self.memory.read_text(encoding="utf-8"))["selections"][0]["reading"], "ng4")
         self.assertNotIn("ngho", second.stderr.decode())
         self.assertNotIn(str(self.memory), second.stderr.decode())
 

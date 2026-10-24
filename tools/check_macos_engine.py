@@ -7,6 +7,7 @@ import hashlib
 import json
 from pathlib import Path
 import queue
+import re
 import struct
 import subprocess
 import sys
@@ -31,6 +32,15 @@ def sha(path):
 def require(condition, message):
     if not condition:
         raise RuntimeError(message)
+
+
+def child_engine_root(bridge: Path) -> Path:
+    """Match the child's package resolution, not the checker's own imports."""
+    here = bridge.resolve().parent
+    for candidate in (here, here.parents[1]):
+        if (candidate / "cantonese_ime/engine.py").is_file():
+            return candidate
+    raise ValueError("Cannot locate the engine package used by the supplied bridge.")
 
 
 class Child:
@@ -104,6 +114,14 @@ class Child:
         self.log.close()
         require(code == 0, "Child failed during graceful EOF shutdown")
 
+    def habitual_ng_status(self):
+        # Read only the fixed ready diagnostic; older pinned bridges may not
+        # report this capability. Do not infer it from the checker's own code.
+        with Path(self.log.name).open("rb") as stream:
+            header = stream.read(8192)
+        match = re.search(rb"; ng-for-m=(on|off|unavailable)\.", header)
+        return match.group(1).decode("ascii") if match else None
+
     def terminate_own_child(self):
         if self.process.poll() is None:
             self.process.terminate()
@@ -123,12 +141,17 @@ def main():
     output = args.output.resolve()
     output.mkdir(parents=True, exist_ok=False)
     memory = output / "synthetic-learning.json"
-    paths = [args.dictionary.resolve(), args.bridge.resolve(), args.cases.resolve(), ENGINE_ROOT / "cantonese_ime/engine.py",
-             ENGINE_ROOT / "cantonese_ime/mappings.py", ENGINE_ROOT / "cantonese_ime/native_protocol.py", Path(__file__).resolve()]
+    child_root = child_engine_root(args.bridge)
+    driver_protocol = Path(sys.modules[decode_response.__module__].__file__).resolve()
+    paths = [args.dictionary.resolve(), args.bridge.resolve(), args.cases.resolve(), child_root / "cantonese_ime/engine.py",
+             child_root / "cantonese_ime/mappings.py", child_root / "cantonese_ime/native_protocol.py", driver_protocol,
+             Path(__file__).resolve()]
     pins = {str(path): sha(path) for path in paths}
     report = {"started_at_utc": datetime.now(timezone.utc).isoformat(), "passed": False,
               "platform": sys.platform, "native_mac_compile_or_inputmethodkit_proof": False,
-              "personal_learning_opened": False, "test_store": str(memory), "source_pins": pins}
+              "personal_learning_opened": False, "test_store": str(memory), "source_pins": pins,
+              "child_engine_root": str(child_root), "child_engine_sha256": pins[str(child_root / "cantonese_ime/engine.py")],
+              "driver_protocol_sha256": pins[str(driver_protocol)]}
     child = None
     try:
         pin = pins[str(args.dictionary.resolve())]
@@ -155,11 +178,13 @@ def main():
         report["first_start_ms"] = child.timings[0]
         report["max_warm_request_ms"] = max(child.timings[1:])
         child.close()
+        report["habitual_ng_capability"] = {"first_start": child.habitual_ng_status()}
         child = Child(args.python, args.bridge, args.dictionary.resolve(), pin, memory, output, "restarted")
         require(child.lookup("ng").candidates[0].text == "唔", "Short preference did not persist")
         require(child.lookup("ngho").candidates[0] == other, "Full phrase preference did not persist")
         require(any(item.text == "唔係咁" for item in child.lookup("nghaigam").candidates), "Constituent preference did not persist")
         child.close()
+        report["habitual_ng_capability"]["restarted"] = child.habitual_ng_status()
         child = None
         report["learning_restart_passed"] = True
         require(all(sha(Path(path)) == value for path, value in pins.items()), "Input changed during checks")
