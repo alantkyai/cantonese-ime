@@ -445,3 +445,31 @@ and [numeric record](self-improvement-cycle5-boundary-diagnostic.json). Independ
 licensed conversational-data and model-alignment research is separate work.
 No native, performance or release acceptance follows; production context
 scoring and v1.0.8 remain unchanged.
+
+### Occurrence character context: rejected data ablation
+
+One fixed experiment replaced the character factor's type-derived counts and
+vocabulary with admitted TRAIN occurrence counts, preserving 0.5 character/word
+weights, the 0.8 alias cost and all targets, caps and thresholds. An independent
+TRAIN replay matched all counts and class IDs. The model contains 2,295 positive
+character types, 128,253 character occurrences and 110,076 bigram occurrences
+from 18,177 segments across 39 groups and 48 files.
+
+The pilot completes 38 calls with all 19 quantized-zero full-pool controls exact.
+The separately authorized 402 fresh calls also complete cleanly. Proper text
+first-nine/first-90 hits are 73/89 and 89/89, versus the previous surface
+candidate's 81/89 and 88/89; habitual hits are 25/29 and 27/29, versus 26/29 and
+27/29. Length-band first-page hits are 26/29, 25/30 and 22/30. Four unchanged
+gates fail: proper first-page, longest-band first-page, and both habitual gates.
+The full text coverage is not exact-reading coverage: proper reading-pair hits
+are 62/89 and 73/89; habitual pairs are 22/29 and 24/29.
+
+All 804 signed records are retained. Across 402 forms, text ranks have 48 gains,
+139 losses and 215 ties; reading ranks have 30 gains, 117 losses and 255 ties.
+The model is rejected and stops here, without retuning or later learning,
+external, latency or native stages. The earlier cycle5 candidate's two fresh
+habitual failures remain unresolved. These are exposed development results;
+normal internal model/SQL work is unmeasured, and no native/performance or
+release acceptance follows. Production and published v1.0.8 assets stay
+unchanged. See the [experiment note](OCCURRENCE_CONTEXT_EXPERIMENT.md) and
+[numeric evidence](self-improvement-cycle6-occurrence-diagnostic.json).
