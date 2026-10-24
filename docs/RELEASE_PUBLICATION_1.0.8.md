@@ -98,8 +98,19 @@ Native installation and application acceptance require their own evidence.
 
 ## Remote publication evidence
 
-Remote publication has not yet been verified in this record. The publishing
-agent will append the final source commit, public tag/release URL, asset IDs,
-downloaded hash verification, Latest status and preservation checks for 1.0.5
-after completing GitHub publication. No remote completion is claimed by this
-documentation-only step.
+Publication completed on 2026-10-24 at 13:31:04 UTC. The public
+[v1.0.8 release](https://github.com/hadesng173/cantonese-ime/releases/tag/v1.0.8)
+is an ordinary release and was verified as Latest. Its annotated tag and the
+published main branch both resolved to source commit
+`90f8437a09f2c7fce1c1740d0e378b0b84d30e1b` at publication time.
+
+The three uploaded assets were downloaded again and their complete byte counts
+and SHA-256 values matched the frozen local artifacts. Release ID is
+`422747991`; asset IDs are `672335687` (Setup), `672335686` (manifest), and
+`672335685` (checksums). The 1.0.5 source tag, release notes, metadata and assets
+were verified unchanged. The sanitized
+[publication proof](release-1.0.8-publication.json) records these checks.
+
+This publication does not change the failed sentence-quality gates or the
+unverified installed 1.0.8 acceptance described above. Subsequent engine work
+continues separately from the frozen release tag.

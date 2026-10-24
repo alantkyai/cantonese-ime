@@ -186,7 +186,10 @@
     "requested_by_maintainer": true,
     "instruction": "publish 1.0.8 to github and then continue the self improvement loop",
     "record": "RELEASE_PUBLICATION_1.0.8.md",
-    "status": "Prepared; remote verification will be recorded after publication.",
+    "status": "Published and remotely verified, including downloaded asset bytes and Latest status.",
+    "source_commit": "90f8437a09f2c7fce1c1740d0e378b0b84d30e1b",
+    "url": "https://github.com/hadesng173/cantonese-ime/releases/tag/v1.0.8",
+    "proof": "release-1.0.8-publication.json",
     "quality_gates_passed": false,
     "installed_1_0_8_acceptance_passed": false,
     "scope": "The frozen 1.0.8 artifact is released with known quality limitations; broader sentence-quality gates and installed 1.0.8 acceptance remain unpassed."
