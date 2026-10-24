@@ -1,5 +1,7 @@
 # Surface-aware context: fresh development results
 
+The subsequent [fresh validation](SURFACE_CONTEXT_VALIDATION.md) is complete. This page preserves the earlier development snapshot.
+
 The [aggregate diagnostic](self-improvement-cycle5-surface-development-diagnostic.json) records the frozen inputs, gates and evidence hashes.
 
 The fixed experiment passes all 18 preregistered fresh development gates. All

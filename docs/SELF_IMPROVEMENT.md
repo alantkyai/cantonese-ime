@@ -365,3 +365,25 @@ separate protected-validation freeze and GO; validation is pending at this
 snapshot. All-history learning, external replay, controlled performance and
 native acceptance remain unfinished. Production and the v1.0.8 release are
 unchanged. See the [surface experiment note](SURFACE_CONTEXT_EXPERIMENT.md) and [aggregate diagnostic](self-improvement-cycle5-surface-development-diagnostic.json).
+
+
+### Surface context: fixed fresh validation
+
+The subsequent [fixed validation](SURFACE_CONTEXT_VALIDATION.md) completes all
+500 attempts and passes all 13 incremental fresh gates. On 30 previously
+reserved phrases, intended-text first-nine/first-90 hits rise from 12/21 for
+baseline to 15/23 for both character and surface context. Across all 125 input
+forms, surface context reaches 80/104 versus baseline 66/98 and character
+79/104. Three distinct missing phrases are recovered, with no individual nasal
+first-page loss against any control. All 295 signed text/reading changes remain
+recorded, including 11 text and 11 reading rank losses against character context.
+
+Only half of the proper inputs reach the first page; the longest band reaches
+4/11. These incremental results leave substantial sentence-quality limits.
+The [aggregate record](self-improvement-cycle5-surface-validation-diagnostic.json)
+is project-authored within-cycle evidence, not representative language accuracy.
+This reserved set is now exposed and cannot support another untouched claim
+after tuning. Original SHORT (five units twice each), HEAVY (twelve units thirty
+times each), habitual-input, external replay, controlled performance and native
+checks remain unfinished. No context model was integrated or installed, and the
+published v1.0.8 tag and installers remain unchanged.
