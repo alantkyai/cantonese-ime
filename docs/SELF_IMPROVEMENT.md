@@ -260,3 +260,18 @@ inherently required for that objective. The search must use the same discounted
 objective in edges, bounds and caches. The fresh-only guard remains until actual
 personalization, cache-generation, exact-memory and capacity tests pass; this
 design clarification does not replace those tests or alter historical results.
+
+The next [ordered-group revision](../tools/experiments/context_search_lazy5/README.md)
+shares each position's exact group-minimum order between scalar suffix bounds
+and outgoing streams. Its [mechanical proof](self-improvement-cycle3-ordered-groups-mechanical.json)
+passes 9,360 exact comparisons over 390 synthetic graphs. The
+[all-attempt diagnostic](self-improvement-cycle3-ordered-groups-diagnostic.json)
+retains the same 57 attempts: zero control completes 19 of 19 and weighted
+context 17 of 19. Two weighted requests reach the unchanged 1,024-state limit,
+so the runtime gate still fails. The work-limit failures are gone in this pilot.
+All 200 comparisons completed by both this and earlier pilots match full saved
+pools, float-hex scores, pages and ranks exactly; no prior completion is lost.
+Every rank, failure and elapsed time remains recorded. This is fresh source
+evidence on exposed controls, without accuracy, native latency or personalized
+learning acceptance. No broader development, corpus-model or protected-validation
+query follows from this result.

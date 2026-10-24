@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "exact_frozen_generic_search_and_saved_evidence_inventory",
+  "engine_queries_for_publication": 0,
+  "new_synthetic_decode_queries": 0,
+  "sources_byte_identical_to_frozen_inputs": true,
+  "protected_fixture_not_published": true,
+  "files": [
+    {
+      "path": "tools/experiments/context_search_lazy5/lazy_decoder.py",
+      "bytes": 25178,
+      "sha256": "4ca8c0d0bfa6718943262e4043cc8bda2b53861d99ec302f4d3c9ccc6f789d61"
+    },
+    {
+      "path": "tools/experiments/context_search_lazy5/mechanical_types.py",
+      "bytes": 11000,
+      "sha256": "7c355e1ff76e501ec908c4c0493eefd87a2325affbdc010c2451c546a9bb96ac"
+    },
+    {
+      "path": "tools/experiments/context_search_lazy5/check_exact_search.py",
+      "bytes": 11462,
+      "sha256": "49298e2ffaaac3810f315c4081eeef4fedeb58a249f7205c63b74e05eef659e9"
+    },
+    {
+      "path": "docs/self-improvement-cycle3-ordered-groups-mechanical.json",
+      "bytes": 646,
+      "sha256": "de917cee8fabbd3cc26cb2469eb266a0e1986ab49a947ba1ca57938d4694663d"
+    },
+    {
+      "path": "docs/self-improvement-cycle3-ordered-groups-diagnostic.json",
+      "bytes": 315106,
+      "sha256": "7c2d0b093990cf35eff80bf5369ea51102f6810fbb07d5cb995fa60605741d37"
+    },
+    {
+      "path": "tools/experiments/context_search_lazy5/README.md",
+      "bytes": 4412,
+      "sha256": "7e06c781839a4778429114b8788bc6e1a24e464ab2c186f1bdc6be905a4e34a1"
+    }
+  ]
+}
