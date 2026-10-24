@@ -761,7 +761,8 @@ void TextService::UpdateWindowState() {
     if (font) DeleteObject(font);
     ReleaseDC(window_, dc);
     candidate_layout_ = cime::ui::MakeLayout(widths, std::max<int>(metrics.tmHeight, cime::ui::Scale(cime::ui::kCandidateFontLogicalHeight, candidate_dpi_)),
-        std::min(cime::ui::Scale(480, candidate_dpi_), work.right - work.left), work.bottom - work.top, candidate_dpi_, selected_);
+        std::min(cime::ui::Scale(480, candidate_dpi_), work.right - work.left), work.bottom - work.top, candidate_dpi_, selected_,
+        candidate_appearance_.Current().orientation);
     const auto placed = cime::ui::PlacePopup(candidate_layout_, anchor, work, cime::ui::Scale(3, candidate_dpi_));
     if (placed.Empty()) { ShowWindow(window_, SW_HIDE); return; }
     candidate_appearance_.Apply(window_);

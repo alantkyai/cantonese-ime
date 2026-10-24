@@ -1,0 +1,476 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-24T14:25:49.6573508Z",
+  "status": "development_native_layout_checks_passed_not_installed",
+  "artifact_kind": "Untagged development source and isolated x64 DLL; this is not the frozen v1.0.8 release binary or an installer acceptance report.",
+  "feature": {
+    "menu": "Right-click the candidate panel or IME mode button, then Layout > Horizontal or Vertical.",
+    "default": "Horizontal: existing compact flowing rows; wraps within the work-area width.",
+    "vertical": "One column with equal row widths, measured from the numbered candidate labels and constrained to the work area.",
+    "persistence": "Per application, through the existing appearance settings; layout=horizontal|vertical. Old settings without layout default to horizontal. Global defaults, per-app overrides and reset are retained.",
+    "updates": "The existing appearance-menu completion path recomputes layout, resizes and repositions the candidate panel immediately.",
+    "scope": "Number labels, click indices, keyboard selection, candidate paging, themes, opacity and High Contrast behavior are retained. Hosts that draw their own TSF candidate list control that presentation."
+  },
+  "source_freeze": {
+    "changed_or_new_files": [
+      {
+        "path": "native/tsf/candidate_layout.h",
+        "bytes": 5065,
+        "sha256": "06ffa5701e9e45f3258d5874b2b3d824e90ded1058efbd70a3e3c392521831f2"
+      },
+      {
+        "path": "native/tsf/candidate_appearance.h",
+        "bytes": 17981,
+        "sha256": "f467b5fa43928757285b5dd77788065e86a06d8d326fe1e2311088e7137cd997"
+      },
+      {
+        "path": "native/tsf/tsf.cpp",
+        "bytes": 48583,
+        "sha256": "76a634691e80dd66991c8aff1d622990dd8c6983e29508dc00219063a4f25069"
+      },
+      {
+        "path": "native/tsf/tests/candidate_layout_test.cpp",
+        "bytes": 6387,
+        "sha256": "1da30f15d2f69e1e8f1c6f560e320809e85e8b1f9f0d3a335f815b96bd0939a2"
+      },
+      {
+        "path": "native/tsf/tests/candidate_appearance_test.cpp",
+        "bytes": 9271,
+        "sha256": "ce3030bfa26a2b9ce6a17a3cf03f32349c7f9f057c44c89cbc7479f0682383cb"
+      },
+      {
+        "path": "native/tsf/tests/Test-CandidateAppearance.ps1",
+        "bytes": 2059,
+        "sha256": "69ba07557f45727aa97e042b64f1a988078c800e6f72296e6b9b7eb2fd8e854a"
+      },
+      {
+        "path": "native/tsf/tests/candidate_layout_render_test.cpp",
+        "bytes": 10430,
+        "sha256": "31fbaa2534723039f71f23c23f2f690d2f79bc32956813aae4a854de0750fbda"
+      },
+      {
+        "path": "native/tsf/tests/Test-CandidateLayout.ps1",
+        "bytes": 3522,
+        "sha256": "60be37212ff26158c331d72ebe2369c634b96bcd1b3cb6a8cbd1ad42b620acbc"
+      }
+    ],
+    "current_native_build_inputs": [
+      {
+        "path": "native/tsf/build.ps1",
+        "bytes": 1612,
+        "sha256": "eb6f62c69ac1beeb17c9f5d22580fb8eede1b5a1a0c9bdaea5d0ed42eb973d81"
+      },
+      {
+        "path": "native/tsf/tsf.cpp",
+        "bytes": 48583,
+        "sha256": "76a634691e80dd66991c8aff1d622990dd8c6983e29508dc00219063a4f25069"
+      },
+      {
+        "path": "native/tsf/ipc.cpp",
+        "bytes": 11739,
+        "sha256": "9ee9e2d30fa60205a3bba2a3907c9547162165b27da73d0dcfd9f2b3d5b5fcb4"
+      },
+      {
+        "path": "native/tsf/ipc.h",
+        "bytes": 1010,
+        "sha256": "f69376c37714e06469f0fb7c8b7b988f00d78d589820724a986ff81c419a79e8"
+      },
+      {
+        "path": "native/tsf/registration.cpp",
+        "bytes": 6386,
+        "sha256": "3ca3a0c2062afc3564265dd4d82811f7a09eeccd2eac899df62aad97412badea"
+      },
+      {
+        "path": "native/tsf/tsf_guids.cpp",
+        "bytes": 1792,
+        "sha256": "42d178906151685e2d61039c8403cb2fbe6a59f643d013907865705f48aba4b7"
+      },
+      {
+        "path": "native/tsf/CantoneseIME.def",
+        "bytes": 151,
+        "sha256": "8b7694f1540a9d3f549ac94ec1a1d32c44b11bf0afef70962651fd027e9fafa7"
+      },
+      {
+        "path": "native/tsf/CantoneseIME.rc",
+        "bytes": 1139,
+        "sha256": "3198ad60b966c302805bcbdf250207a1df21921d841a2e7954c4f76fc3e4eb4a"
+      },
+      {
+        "path": "native/tsf/resource.h",
+        "bytes": 309,
+        "sha256": "068cca4b038d7f095657bc4c93e59915ee80981c22e4e9be4dbed22690fe8028"
+      },
+      {
+        "path": "native/tsf/ime_ids.h",
+        "bytes": 713,
+        "sha256": "36ff89e83a094e00118629f4c7300aa8e7368334ef411e2a0879377f19c71ca4"
+      },
+      {
+        "path": "native/tsf/tsf_compat.h",
+        "bytes": 5100,
+        "sha256": "0d455b1b7c705386136e4ba0b5165c2872d1133a1d6277f4e3adbd57c2cee029"
+      },
+      {
+        "path": "native/tsf/input_mode_button.h",
+        "bytes": 6270,
+        "sha256": "d3b2b1b47e37b9e51a848dd5eb93f73685d9aa9b19ae16c63e4e4709611ffe83"
+      },
+      {
+        "path": "native/tsf/candidate_font.h",
+        "bytes": 8525,
+        "sha256": "1c5de0537d064811707dc821e92c2926245e742228afa87b266751200dc84094"
+      },
+      {
+        "path": "native/tsf/candidate_appearance.h",
+        "bytes": 17981,
+        "sha256": "f467b5fa43928757285b5dd77788065e86a06d8d326fe1e2311088e7137cd997"
+      },
+      {
+        "path": "native/tsf/candidate_layout.h",
+        "bytes": 5065,
+        "sha256": "06ffa5701e9e45f3258d5874b2b3d824e90ded1058efbd70a3e3c392521831f2"
+      },
+      {
+        "path": "native/tsf/icons/cantonese.ico",
+        "bytes": 313398,
+        "sha256": "6a6064aff0d955320f215e63c09473aa67939d7adac45128bb6d8804ac3edd6d"
+      },
+      {
+        "path": "native/tsf/icons/mode-cantonese.ico",
+        "bytes": 313398,
+        "sha256": "87b6d90f411e41ed4276a932dc4c259664885bfc4728340347602c3112fa2e3b"
+      },
+      {
+        "path": "native/tsf/icons/mode-english.ico",
+        "bytes": 313398,
+        "sha256": "d4f2aabdffe2219305a98b09459e6ebf808bd0af60d0cfdd84e3ff21d12c079a"
+      }
+    ],
+    "test_report_pins_rechecked": true,
+    "geometry_render_sources_unchanged_during_tests": true,
+    "qualification": "Relevant geometry/render inputs were hash-guarded before and after their test run; all recorded report inputs and binaries match at this capture. The isolated full build did not produce its own before/after source manifest; build-input pins here record the reviewed current source freeze."
+  },
+  "environment": {
+    "platform": "Windows x64",
+    "os_version": "10.0.19045.0",
+    "compiler_filename": "x86_64-w64-mingw32-clang++.exe",
+    "compiler_bytes": 13824,
+    "compiler_sha256": "f6599825884bd087a81ef01e7a662025a9553de01dc501c824b6c568aa4e5ec9",
+    "toolchain": "Cached llvm-mingw-20261020-ucrt-x86_64; no toolchain installation for these checks."
+  },
+  "checks": {
+    "geometry": {
+      "passed": true,
+      "runner": "native/tsf/tests/Test-CandidateLayout.ps1",
+      "result": "Candidate geometry checks passed (horizontal/vertical, equal column widths, wrap, DPI, selected viewport, stable click indices, work-area clamp).",
+      "coverage": [
+        "Default horizontal equivalence",
+        "Vertical single-column uniform widths",
+        "96/120/144/192/240 DPI geometry",
+        "Tiny viewport with each selected index",
+        "Stable click indices",
+        "Caret placement above/below and negative monitor coordinates",
+        "Work-area width and height bounds"
+      ]
+    },
+    "settings_and_native_menu": {
+      "passed": true,
+      "runner": "native/tsf/tests/Test-CandidateAppearance.ps1",
+      "checked_at_utc": "2026-10-24T14:13:25.3183892Z",
+      "scope": "isolated app preferences, horizontal/vertical menu commands and persistence/inheritance/reset, validation/defaults, Windows high contrast, hidden layered window, no foreground activation",
+      "coverage": [
+        "Actual native Layout submenu labels and checked state",
+        "Horizontal and Vertical menu command dispatch",
+        "Per-app save and reopen",
+        "Independent app overrides",
+        "Global inheritance, reset and old-file horizontal default",
+        "Invalid enum and settings text rejected or defaulted",
+        "Theme and opacity commands preserve orientation",
+        "High Contrast palette and hidden layered-window alpha retain nonactivation"
+      ],
+      "fixture": "Explicit disposable synthetic app identities and INI file; native menus are built and inspected without showing them."
+    },
+    "gdi_renders": {
+      "passed": true,
+      "runner": "native/tsf/tests/Test-CandidateLayout.ps1",
+      "checked_at_utc": "2026-10-24T14:17:48.8323435Z",
+      "count": 12,
+      "font": {
+        "path": "assets/fonts/lxgw-wenkai-tc/LXGWWenKaiTC-Regular.ttf",
+        "bytes": 15341148,
+        "sha256": "6662480a3f95b4a90c80b189c679617a48adce3a505118a6af63ce5a482b83fa"
+      },
+      "family": "LXGW WenKai TC",
+      "logical_height_at_96_dpi": 20,
+      "scope": "real bundled private-memory font, horizontal and vertical numbered choices, four DPIs, High Contrast source colors, selected viewport/long words, hit indices and monitor bounds; offscreen GDI source pixels, not live opacity or installed IME acceptance",
+      "actual_font_family_and_selected_glyph_indices_checked": true,
+      "private_memory_font_loaded_and_balanced": true,
+      "production_geometry_font_and_palette_helpers_used": true,
+      "visual_review": [
+        "horizontal-96.bmp",
+        "vertical-96.bmp",
+        "vertical-viewport-long-96.bmp"
+      ],
+      "images": [
+        {
+          "filename": "horizontal-96.bmp",
+          "bytes": 185894,
+          "sha256": "33b6b8ba53cff9f708af15ca6332fe4a49fab839b88e0b90b17328ed411f9e33",
+          "dpi": 96,
+          "orientation": "horizontal",
+          "font": "LXGW WenKai TC",
+          "width": 404,
+          "height": 115,
+          "visible_cells": 9,
+          "selected_index_zero_based": 3,
+          "selected_glyph_pixels": 986,
+          "high_contrast": false,
+          "small_viewport": false
+        },
+        {
+          "filename": "vertical-96.bmp",
+          "bytes": 302006,
+          "sha256": "54df3fdc7aa5c3dab88e13ec8a7381b26acf3dc0ddad47893df232443525c727",
+          "dpi": 96,
+          "orientation": "vertical",
+          "font": "LXGW WenKai TC",
+          "width": 224,
+          "height": 337,
+          "visible_cells": 9,
+          "selected_index_zero_based": 3,
+          "selected_glyph_pixels": 986,
+          "high_contrast": false,
+          "small_viewport": false
+        },
+        {
+          "filename": "horizontal-120.bmp",
+          "bytes": 293490,
+          "sha256": "5a4dcbb71bbbcdb6d4374abf58afa9b0d3c586a71404583a80e39305040a7747",
+          "dpi": 120,
+          "orientation": "horizontal",
+          "font": "LXGW WenKai TC",
+          "width": 513,
+          "height": 143,
+          "visible_cells": 9,
+          "selected_index_zero_based": 3,
+          "selected_glyph_pixels": 1413,
+          "high_contrast": false,
+          "small_viewport": false
+        },
+        {
+          "filename": "vertical-120.bmp",
+          "bytes": 472686,
+          "sha256": "434154f8e094aea92814d26470d678f519e68e352fb9343cf6f939afb2d316b3",
+          "dpi": 120,
+          "orientation": "vertical",
+          "font": "LXGW WenKai TC",
+          "width": 282,
+          "height": 419,
+          "visible_cells": 9,
+          "selected_index_zero_based": 3,
+          "selected_glyph_pixels": 1413,
+          "high_contrast": false,
+          "small_viewport": false
+        },
+        {
+          "filename": "horizontal-144.bmp",
+          "bytes": 415606,
+          "sha256": "7a248255a13dc5df6c34b5e262ff886c8d645610aee98f7e05f946f7c9e104fb",
+          "dpi": 144,
+          "orientation": "horizontal",
+          "font": "LXGW WenKai TC",
+          "width": 604,
+          "height": 172,
+          "visible_cells": 9,
+          "selected_index_zero_based": 3,
+          "selected_glyph_pixels": 1864,
+          "high_contrast": false,
+          "small_viewport": false
+        },
+        {
+          "filename": "vertical-144.bmp",
+          "bytes": 674742,
+          "sha256": "12614f13950360fbb8d2560764b813d4a404ee018fc4c6cd487c4473a337684e",
+          "dpi": 144,
+          "orientation": "vertical",
+          "font": "LXGW WenKai TC",
+          "width": 336,
+          "height": 502,
+          "visible_cells": 9,
+          "selected_index_zero_based": 3,
+          "selected_glyph_pixels": 1864,
+          "high_contrast": false,
+          "small_viewport": false
+        },
+        {
+          "filename": "horizontal-192.bmp",
+          "bytes": 724022,
+          "sha256": "9d90d97c26a9269d2cf05d558bfa0f2d5f75e1976f3086d453ff1bdf3d3ce882",
+          "dpi": 192,
+          "orientation": "horizontal",
+          "font": "LXGW WenKai TC",
+          "width": 808,
+          "height": 224,
+          "visible_cells": 9,
+          "selected_index_zero_based": 3,
+          "selected_glyph_pixels": 3058,
+          "high_contrast": false,
+          "small_viewport": false
+        },
+        {
+          "filename": "vertical-192.bmp",
+          "bytes": 1175606,
+          "sha256": "b3b948c1704ed8fb00fa0d5649206a0f53117054674be2160c6c3de7f6119cea",
+          "dpi": 192,
+          "orientation": "vertical",
+          "font": "LXGW WenKai TC",
+          "width": 448,
+          "height": 656,
+          "visible_cells": 9,
+          "selected_index_zero_based": 3,
+          "selected_glyph_pixels": 3058,
+          "high_contrast": false,
+          "small_viewport": false
+        },
+        {
+          "filename": "horizontal-high-contrast-96.bmp",
+          "bytes": 185894,
+          "sha256": "5070b061a58e6da99f523815a5fbdb1da96a3ee31be33d40fadae7eb7fd7a034",
+          "dpi": 96,
+          "orientation": "horizontal",
+          "font": "LXGW WenKai TC",
+          "width": 404,
+          "height": 115,
+          "visible_cells": 9,
+          "selected_index_zero_based": 3,
+          "selected_glyph_pixels": 986,
+          "high_contrast": true,
+          "small_viewport": false
+        },
+        {
+          "filename": "horizontal-viewport-long-96.bmp",
+          "bytes": 64854,
+          "sha256": "7c8edaa19f2307ac4b4379d479659569ca5ddfaea331f87ad77454b930711409",
+          "dpi": 96,
+          "orientation": "horizontal",
+          "font": "LXGW WenKai TC",
+          "width": 180,
+          "height": 90,
+          "visible_cells": 2,
+          "selected_index_zero_based": 8,
+          "selected_glyph_pixels": 640,
+          "high_contrast": false,
+          "small_viewport": true
+        },
+        {
+          "filename": "vertical-high-contrast-96.bmp",
+          "bytes": 302006,
+          "sha256": "064e734c8d4619422480f3c9016f15be29da5a6bc20a5c841f3fe29ba5aba856",
+          "dpi": 96,
+          "orientation": "vertical",
+          "font": "LXGW WenKai TC",
+          "width": 224,
+          "height": 337,
+          "visible_cells": 9,
+          "selected_index_zero_based": 3,
+          "selected_glyph_pixels": 986,
+          "high_contrast": true,
+          "small_viewport": false
+        },
+        {
+          "filename": "vertical-viewport-long-96.bmp",
+          "bytes": 64854,
+          "sha256": "73cad28234032b5ca404d218579306afc274d2081207742bbc5b9f32d2a9278d",
+          "dpi": 96,
+          "orientation": "vertical",
+          "font": "LXGW WenKai TC",
+          "width": 180,
+          "height": 90,
+          "visible_cells": 2,
+          "selected_index_zero_based": 8,
+          "selected_glyph_pixels": 640,
+          "high_contrast": false,
+          "small_viewport": true
+        }
+      ],
+      "qualification": "Test code paints offscreen numbered choices using production helpers and matching DrawText flags. These source pixels are not a live TSF popup or window-opacity composition test; glyph checks cover the rendered samples, not complete Unicode coverage."
+    },
+    "full_native_dll_build": {
+      "passed": true,
+      "runner": "native/tsf/build.ps1",
+      "output_filename": "CantoneseIME.dll",
+      "bytes": 2553344,
+      "sha256": "d36719883f4c13b8f52e96ba35f955a39099fc0737fe0b7c2d14470f1e71c4ed",
+      "pe_signature": "PE\\0\\0",
+      "machine": "0x8664 (AMD64/x64)",
+      "file_version_string": "1.0.8",
+      "product_version_string": "1.0.8",
+      "numeric_file_version": "1.0.8.0",
+      "qualification": "Isolated untagged development DLL. The version resource remains 1.0.8 while work is under development; this hash differs from the frozen release DLL."
+    },
+    "actual_dll_com_smoke": {
+      "passed": true,
+      "checked_at_utc": "2026-10-24T14:20:08.7161977Z",
+      "result": {
+        "passed": true,
+        "architecture": "x64",
+        "service_interfaces": 7,
+        "canonical_iunknown_verified": true,
+        "language_bar_service_qi": "E_NOINTERFACE as expected; button requires activation",
+        "dll_releasable": true,
+        "foreground_unchanged": true,
+        "scope": "Actual newly built DLL LoadLibraryEx, DllGetClassObject, IClassFactory, local service creation, seven interface identities, reference release and clean DLL unload; no TSF activation, registration, typing, preferences reads/writes or game validation"
+      },
+      "tested_dll_sha256": "d36719883f4c13b8f52e96ba35f955a39099fc0737fe0b7c2d14470f1e71c4ed",
+      "qualification": "Read-only local smoke harness; no TSF activation, registration, typing, preferences reads/writes or game acceptance. It validates actual DLL class factory/service interface lifetime and clean unload."
+    }
+  },
+  "preserved_release": {
+    "version": "v1.0.8",
+    "setup_filename": "CantoneseIME-1.0.8-windows-x64-setup.exe",
+    "setup_bytes": 91839114,
+    "setup_sha256": "89643de3f872210a3ee2994af2d1df287ec277111cd3b0615cdc4b226e31e52e",
+    "setup_unchanged": true,
+    "installer_created_for_layout_change": false,
+    "installed_for_layout_change": false
+  },
+  "evidence_receipts": [
+    {
+      "evidence": "appearance-run-1",
+      "bytes": 1627,
+      "sha256": "2c37f2817dac6d98621d31e9f6f07214a1af9ec275570cdfc44e9aea1b22ca93"
+    },
+    {
+      "evidence": "render-run-1",
+      "bytes": 6803,
+      "sha256": "9b30c3257713b0926b1e29e9cff364a11c156b4d2c1d1396f07e81817950a022"
+    },
+    {
+      "evidence": "dll-com-smoke",
+      "bytes": 1738,
+      "sha256": "f5e9f2e6762febafc7b21bd05f80f680cd7772e3f2b82adb68edb8bdf97a8771"
+    }
+  ],
+  "side_effect_scope": {
+    "system_registration_changed": false,
+    "global_font_installation_changed": false,
+    "real_user_preferences_accessed_by_layout_checks": false,
+    "personal_learning_accessed_by_layout_checks": false,
+    "tsf_input_processor_activated": false,
+    "visible_typing_test_performed": false
+  },
+  "reproduction": {
+    "requirements": "Windows x64, bundled font asset and an x64 Windows C++17 compiler compatible with the native build scripts. Use fresh output directories.",
+    "commands": [
+      "powershell -NoProfile -File native/tsf/tests/Test-CandidateAppearance.ps1 -Compiler <x64-clang++> -OutputDirectory <fresh-appearance-output>",
+      "powershell -NoProfile -File native/tsf/tests/Test-CandidateLayout.ps1 -Compiler <x64-clang++> -OutputDirectory <fresh-layout-output>",
+      "powershell -NoProfile -File native/tsf/build.ps1 -Compiler <x64-clang++> -OutputDirectory <fresh-development-build-output>"
+    ]
+  },
+  "limitations": [
+    "No installed IME, live TSF activation, foreground typing or game-client acceptance was performed for this layout revision.",
+    "Per-app menu persistence and dispatch were tested with synthetic settings, while immediate production popup resize/reposition follows the reviewed existing callback path; live user interaction acceptance remains pending.",
+    "Offscreen image checks do not prove live panel opacity, full glyph coverage, Windows 11 behavior or macOS layout support.",
+    "This report covers the frontend layout change; it makes no new typing-engine quality or performance claim."
+  ]
+}

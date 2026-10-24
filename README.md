@@ -70,6 +70,12 @@ for this app** restores its default. Settings are stored at
 uninstall. Applications that draw their own TSF candidate list control that
 list's appearance.
 
+The development Windows build adds **Layout → Horizontal / Vertical** to this
+right-click menu. Horizontal keeps the compact wrapping rows; Vertical shows
+one numbered choice per row. Layout is saved separately for each application
+and changes the visible panel immediately. This option is not in the frozen
+1.0.8 installer linked above. See the [native layout checks](docs/candidate-layout-validation.json).
+
 The package is unsigned. Windows may display an unknown-publisher or SmartScreen
 warning. Support is scoped to native 64-bit desktop applications on Windows x64;
 32-bit applications, ARM64 and secure/password fields are outside this release.
@@ -126,6 +132,16 @@ native, learning and installer checks; earlier evidence is not a substitute
 for checking the new mode indicator or a new Windows version.
 
 ## Run the engine
+
+The development branch enables the optional habit of typing whole-syllable `ng`
+for canonical `m` in forgiving input. This lets existing `m`-reading compounds
+participate without first teaching every compound. Windows and Mac bridges use
+the same option; dictionary pronunciations and strict Jyutping stay unchanged.
+Use `--no-syllabic-m-as-ng` in the CLI or broker to disable it. The library's
+`Engine(..., syllabic_m_as_ng=True)` is explicit and defaults to `False` for
+compatibility. This development change is **not included in the frozen 1.0.8
+installer**. Its incremental tests do not establish general long-sentence
+accuracy; see [the improvement record](docs/SELF_IMPROVEMENT.md).
 
 From the repository root:
 

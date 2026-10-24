@@ -9,15 +9,17 @@
 #include <sstream>
 #include <string>
 #include <utility>
+#include "candidate_layout.h"
 
 namespace cime::ui {
 enum class CandidateTheme { Dark, Light, System };
 struct AppearanceSettings {
     CandidateTheme theme = CandidateTheme::Dark;
     int opacity_percent = 95;
+    CandidateOrientation orientation = CandidateOrientation::Horizontal;
 };
 inline bool operator==(const AppearanceSettings& a, const AppearanceSettings& b) {
-    return a.theme == b.theme && a.opacity_percent == b.opacity_percent;
+    return a.theme == b.theme && a.opacity_percent == b.opacity_percent && a.orientation == b.orientation;
 }
 struct AppearancePalette {
     COLORREF background, text, highlight, highlight_text, border;
@@ -98,6 +100,9 @@ inline void ApplyField(AppearanceSettings& settings, const std::string& key, con
         else if (value == "95") settings.opacity_percent = 95;
         else if (value == "90") settings.opacity_percent = 90;
         else if (value == "85") settings.opacity_percent = 85;
+    } else if (key == "layout") {
+        if (value == "horizontal") settings.orientation = CandidateOrientation::Horizontal;
+        else if (value == "vertical") settings.orientation = CandidateOrientation::Vertical;
     }
 }
 inline Document Parse(const std::string& text) {
@@ -116,7 +121,7 @@ inline Document Parse(const std::string& text) {
         const auto equals = line.find('=');
         if (section.empty() || equals == std::string::npos) continue;
         const std::string key = Trim(line.substr(0, equals));
-        if (key != "theme" && key != "opacity") continue;
+        if (key != "theme" && key != "opacity" && key != "layout") continue;
         if (sections.size() >= kMaxApplications + 1 && !sections.count(section)) continue;
         sections[section][key] = Trim(line.substr(equals + 1));
     }
@@ -132,12 +137,16 @@ inline Document Parse(const std::string& text) {
 inline const char* ThemeName(CandidateTheme theme) {
     switch (theme) { case CandidateTheme::Light: return "light"; case CandidateTheme::System: return "system"; default: return "dark"; }
 }
+inline const char* LayoutName(CandidateOrientation orientation) {
+    return orientation == CandidateOrientation::Vertical ? "vertical" : "horizontal";
+}
 inline std::string Serialize(const Document& document) {
     std::ostringstream output;
     output << "; Cantonese IME candidate panel. App identifiers are hashed executable paths.\r\n";
     const auto write = [&output](const std::string& section, const AppearanceSettings& value) {
         output << '[' << section << "]\r\ntheme=" << ThemeName(value.theme) << "\r\nopacity="
-            << (ValidPanelOpacity(value.opacity_percent) ? value.opacity_percent : 95) << "\r\n\r\n";
+            << (ValidPanelOpacity(value.opacity_percent) ? value.opacity_percent : 95)
+            << "\r\nlayout=" << LayoutName(value.orientation) << "\r\n\r\n";
     };
     write("global", document.global);
     for (const auto& entry : document.applications) if (ValidKey(entry.first)) write(entry.first, entry.second);
@@ -217,7 +226,8 @@ public:
     }
     bool SetForApp(AppearanceSettings settings) {
         if (!ValidPanelOpacity(settings.opacity_percent)
-            || (settings.theme != CandidateTheme::Dark && settings.theme != CandidateTheme::Light && settings.theme != CandidateTheme::System)) return false;
+            || (settings.theme != CandidateTheme::Dark && settings.theme != CandidateTheme::Light && settings.theme != CandidateTheme::System)
+            || (settings.orientation != CandidateOrientation::Horizontal && settings.orientation != CandidateOrientation::Vertical)) return false;
         Load(); current_ = settings; overridden_ = true;
         saved_ = Persist(false); return saved_;
     }
@@ -226,14 +236,13 @@ public:
         if (saved_) Reload();
         return saved_;
     }
-    // A native context menu changes only this host application's panel. Text
-    // says panel opacity because LWA_ALPHA affects the glyphs as well as the bg.
-    // No SetForegroundWindow or host-window message routing is used.
-    bool ShowMenu(HWND owner, POINT point) {
+    // The caller owns the returned native menu. Building it alone does not
+    // display a window or take focus; this also permits native menu checks.
+    HMENU BuildMenu() {
         Reload();
-        HMENU menu = CreatePopupMenu(), themes = CreatePopupMenu(), opacity = CreatePopupMenu();
-        if (!menu || !themes || !opacity) {
-            if (menu) DestroyMenu(menu); if (themes) DestroyMenu(themes); if (opacity) DestroyMenu(opacity); return false;
+        HMENU menu = CreatePopupMenu(), themes = CreatePopupMenu(), opacity = CreatePopupMenu(), layout = CreatePopupMenu();
+        if (!menu || !themes || !opacity || !layout) {
+            if (menu) DestroyMenu(menu); if (themes) DestroyMenu(themes); if (opacity) DestroyMenu(opacity); if (layout) DestroyMenu(layout); return nullptr;
         }
         AppendMenuW(menu, MF_STRING | MF_GRAYED, 0, L"Candidate appearance for this app");
         AppendMenuW(menu, MF_SEPARATOR, 0, nullptr);
@@ -246,10 +255,33 @@ public:
         }
         AppendMenuW(menu, MF_POPUP, reinterpret_cast<UINT_PTR>(themes), L"Background");
         AppendMenuW(menu, MF_POPUP, reinterpret_cast<UINT_PTR>(opacity), L"Panel opacity");
+        const wchar_t* orientations[] = {L"Horizontal", L"Vertical"};
+        for (UINT i = 0; i < 2; ++i)
+            AppendMenuW(layout, MF_STRING | (static_cast<UINT>(current_.orientation) == i ? MF_CHECKED : 0), 400 + i, orientations[i]);
+        AppendMenuW(menu, MF_POPUP, reinterpret_cast<UINT_PTR>(layout), L"Layout");
         AppendMenuW(menu, MF_SEPARATOR, 0, nullptr);
         AppendMenuW(menu, MF_STRING | (overridden_ ? 0 : MF_GRAYED), 300, L"Reset appearance for this app");
         if (Effective().high_contrast) AppendMenuW(menu, MF_STRING | MF_GRAYED, 0, L"High contrast: Windows colors, 100% opacity");
         if (!saved_) AppendMenuW(menu, MF_STRING | MF_GRAYED, 0, L"Previous change could not be saved");
+        return menu;
+    }
+    bool ApplyMenuCommand(UINT command) {
+        if (command == 300) { ResetForApp(); return true; }
+        AppearanceSettings next = Current();
+        if (command >= 100 && command < 103) next.theme = static_cast<CandidateTheme>(command - 100);
+        else if (command >= 200 && command < 204) {
+            const int levels[] = {100, 95, 90, 85};
+            next.opacity_percent = levels[command - 200];
+        } else if (command >= 400 && command < 402) next.orientation = static_cast<CandidateOrientation>(command - 400);
+        else return false;
+        SetForApp(next); return true;
+    }
+    // A native context menu changes only this host application's panel. Text
+    // says panel opacity because LWA_ALPHA affects the glyphs as well as the bg.
+    // No SetForegroundWindow or host-window message routing is used.
+    bool ShowMenu(HWND owner, POINT point) {
+        HMENU menu = BuildMenu();
+        if (!menu) return false;
         HWND temporary = nullptr;
         if (!owner || !IsWindow(owner)) {
             temporary = CreateWindowExW(WS_EX_TOOLWINDOW | WS_EX_NOACTIVATE, L"STATIC", L"Cantonese IME appearance",
@@ -259,12 +291,7 @@ public:
         const UINT command = owner ? TrackPopupMenuEx(menu, TPM_NONOTIFY | TPM_RETURNCMD | TPM_RIGHTBUTTON,
             point.x, point.y, owner, nullptr) : 0;
         DestroyMenu(menu); if (temporary) DestroyWindow(temporary);
-        if (command == 300) { ResetForApp(); return true; }
-        AppearanceSettings next = current_;
-        if (command >= 100 && command < 103) next.theme = static_cast<CandidateTheme>(command - 100);
-        else if (command >= 200 && command < 204) next.opacity_percent = levels[command - 200];
-        else return false;
-        SetForApp(next); return true;
+        return ApplyMenuCommand(command);
     }
 private:
     bool Persist(bool reset) {

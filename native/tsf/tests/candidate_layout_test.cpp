@@ -47,20 +47,38 @@ int main() {
     const auto long_word = MakeLayout({std::numeric_limits<int>::max(), 34}, 20, 480, 500, 96);
     Bounded(long_word, 480, 500);
     assert(long_word.width == 480 && long_word.cells[1].top > long_word.cells[0].top);
-    for (unsigned dpi : {96u, 144u, 192u, 240u}) {
+    const auto vertical = MakeLayout({34, 120, 51, 34, 90, 34, 80, 51, 34}, 20, 480, 500, 96, 0, CandidateOrientation::Vertical);
+    Bounded(vertical, 480, 500);
+    assert(vertical.cells.size() == 9 && vertical.width == 138 && vertical.height > short_words.height);
+    for (std::size_t i = 0; i < vertical.cells.size(); ++i) {
+        assert(vertical.cells[i].left == vertical.cells[0].left && vertical.cells[i].right == vertical.cells[0].right);
+        if (i) assert(vertical.cells[i].top > vertical.cells[i - 1].bottom);
+    }
+    // The default keeps the existing flowing horizontal presentation.
+    const auto explicit_horizontal = MakeLayout(std::vector<int>(9, 34), 20, 480, 500, 96, 0, CandidateOrientation::Horizontal);
+    assert(explicit_horizontal.width == short_words.width && explicit_horizontal.height == short_words.height);
+    for (unsigned dpi : {96u, 120u, 144u, 192u, 240u}) {
         const auto scaled = MakeLayout(std::vector<int>(9, Scale(34, dpi)), Scale(20, dpi), Scale(480, dpi), Scale(500, dpi), dpi);
         Bounded(scaled, Scale(480, dpi), Scale(500, dpi));
         assert(scaled.height <= Scale(40, dpi));
         const auto numbered = MakeLayout(std::vector<int>(9, Scale(51, dpi)), Scale(20, dpi), Scale(480, dpi), Scale(500, dpi), dpi);
         Bounded(numbered, Scale(480, dpi), Scale(500, dpi));
         assert(numbered.height > scaled.height && numbered.height < Scale(72, dpi));
+        const auto column = MakeLayout(std::vector<int>(9, Scale(51, dpi)), Scale(20, dpi), Scale(480, dpi), Scale(500, dpi), dpi, 0, CandidateOrientation::Vertical);
+        Bounded(column, Scale(480, dpi), Scale(500, dpi));
+        assert(column.width < numbered.width && column.height > numbered.height);
+        for (const auto& cell : column.cells) assert(!cell.Empty() && cell.left == column.cells[0].left);
     }
     for (int width : {1, 2, 8, 31, 72, 300, 480}) {
         for (int height : {1, 2, 8, 20, 35, 75, 240}) {
-            for (std::size_t selected = 0; selected < 9; ++selected) {
-                const auto small = MakeLayout(std::vector<int>(9, 1000), 20, width, height, 96, selected);
-                Bounded(small, width, height);
-                assert(!small.cells[selected].Empty());
+            for (const auto orientation : {CandidateOrientation::Horizontal, CandidateOrientation::Vertical}) {
+                for (std::size_t selected = 0; selected < 9; ++selected) {
+                    const auto small = MakeLayout(std::vector<int>(9, 1000), 20, width, height, 96, selected, orientation);
+                    Bounded(small, width, height);
+                    assert(!small.cells[selected].Empty());
+                    const auto& cell = small.cells[selected];
+                    assert(HitTest(small, cell.left, cell.top) == static_cast<int>(selected));
+                }
             }
         }
     }
@@ -71,7 +89,9 @@ int main() {
     }
     const auto above = PlacePopup(short_words, {-500, 970, -490, 980}, work, 3);
     assert(above.bottom <= 970);
+    const auto above_column = PlacePopup(vertical, {-500, 970, -490, 980}, work, 3);
+    assert(above_column.bottom <= 970 && above_column.top >= work.top);
     const auto tiny = PlacePopup(long_word, {99, 99, 100, 100}, {0, 0, 10, 10}, 3);
     assert(tiny.left == 0 && tiny.top == 0 && tiny.right == 10 && tiny.bottom == 10);
-    std::cout << "Candidate geometry checks passed (word rows, wrap, DPI, viewport, hit testing, work-area clamp).\n";
+    std::cout << "Candidate geometry checks passed (horizontal/vertical, equal column widths, wrap, DPI, selected viewport, stable click indices, work-area clamp).\n";
 }

@@ -8,6 +8,7 @@
 #include <vector>
 
 namespace cime::ui {
+enum class CandidateOrientation { Horizontal, Vertical };
 struct Rect {
     int left = 0, top = 0, right = 0, bottom = 0;
     bool Empty() const { return right <= left || bottom <= top; }
@@ -23,7 +24,8 @@ inline int Scale(int logical, unsigned dpi) {
 }
 inline Layout MakeLayout(const std::vector<int>& text_widths, int text_height,
                          int max_width, int max_height, unsigned dpi,
-                         std::size_t selected = 0) {
+                         std::size_t selected = 0,
+                         CandidateOrientation orientation = CandidateOrientation::Horizontal) {
     Layout result;
     if (text_widths.empty() || max_width <= 0 || max_height <= 0) return result;
     const int outer_x = std::min(Scale(3, dpi), (max_width - 1) / 2);
@@ -34,11 +36,17 @@ inline Layout MakeLayout(const std::vector<int>& text_widths, int text_height,
     const int cell_height = static_cast<int>(std::min<std::int64_t>(content_height,
         std::max(1, text_height) + 2LL * Scale(4, dpi)));
     const int gap = Scale(2, dpi);
+    const bool vertical = orientation == CandidateOrientation::Vertical;
+    // A vertical list has a shared width, so its number/word rows and selection
+    // backgrounds line up. Horizontal keeps the existing compact flowing rows.
+    const int column_width = vertical ? static_cast<int>(std::min<std::int64_t>(content_width,
+        std::max(1, *std::max_element(text_widths.begin(), text_widths.end())) + 2LL * result.text_padding_x)) : 0;
     std::int64_t x = outer_x, y = outer_y, used_right = outer_x;
     for (int text_width : text_widths) {
-        const int width = static_cast<int>(std::min<std::int64_t>(content_width,
+        const int width = vertical ? column_width : static_cast<int>(std::min<std::int64_t>(content_width,
             std::max(1, text_width) + 2LL * result.text_padding_x));
-        if (x != outer_x && x + width > max_width - outer_x) { x = outer_x; y += cell_height + gap; }
+        if (vertical && !result.cells.empty()) { x = outer_x; y += cell_height + gap; }
+        else if (!vertical && x != outer_x && x + width > max_width - outer_x) { x = outer_x; y += cell_height + gap; }
         // Production pages contain at most nine cells. Fail closed for a geometry
         // input so large that coordinates cannot be represented.
         if (y + cell_height > std::numeric_limits<int>::max() - outer_y) return {};

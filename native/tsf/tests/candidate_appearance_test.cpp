@@ -31,6 +31,7 @@ int wmain(int argc, wchar_t** argv) {
     assert(GetFileAttributesW(path.c_str()) == INVALID_FILE_ATTRIBUTES); // load does not create settings
     assert(!app.SetForApp({CandidateTheme::Dark, 0}));
     assert(!app.SetForApp({static_cast<CandidateTheme>(77), 95}));
+    assert(!app.SetForApp({CandidateTheme::Dark, 95, static_cast<CandidateOrientation>(77)}));
     assert(GetFileAttributesW(path.c_str()) == INVALID_FILE_ATTRIBUTES);
 
     Fixture(path, "[global]\ntheme=light\nopacity=90\n[" + game_key + "]\ntheme=system\nopacity=85\n");
@@ -46,6 +47,39 @@ int wmain(int argc, wchar_t** argv) {
     assert(appearance_detail::Read(path).find(game_key) == std::string::npos);
     assert(appearance_detail::Read(path).find("C:\\Games") == std::string::npos);
 
+    // Native menu construction/commands use only this disposable INI. Building
+    // the menu never shows it, takes focus, or reads real user preferences.
+    HWND menu_foreground = GetForegroundWindow();
+    assert(app.ApplyMenuCommand(401));
+    assert(app.Current().orientation == CandidateOrientation::Vertical);
+    CandidateAppearance reopened(path, game);
+    assert((reopened.Current() == AppearanceSettings{CandidateTheme::Light,90,CandidateOrientation::Vertical}));
+    assert(appearance_detail::Read(path).find("layout=vertical") != std::string::npos);
+    other.Reload(); assert(other.Current().orientation == CandidateOrientation::Horizontal);
+    HMENU menu = reopened.BuildMenu(); assert(menu);
+    HMENU layouts = GetSubMenu(menu, 4); assert(layouts && GetMenuItemCount(layouts) == 2);
+    wchar_t label[64]{};
+    assert(GetMenuStringW(menu, 4, label, 64, MF_BYPOSITION) > 0 && std::wstring(label) == L"Layout");
+    assert(GetMenuStringW(layouts, 400, label, 64, MF_BYCOMMAND) > 0 && std::wstring(label) == L"Horizontal");
+    assert(GetMenuStringW(layouts, 401, label, 64, MF_BYCOMMAND) > 0 && std::wstring(label) == L"Vertical");
+    assert(!(GetMenuState(layouts, 400, MF_BYCOMMAND) & MF_CHECKED));
+    assert(GetMenuState(layouts, 401, MF_BYCOMMAND) & MF_CHECKED);
+    assert(DestroyMenu(menu) && GetForegroundWindow() == menu_foreground);
+    assert(app.ApplyMenuCommand(100) && app.ApplyMenuCommand(202));
+    assert((app.Current() == AppearanceSettings{CandidateTheme::Dark,90,CandidateOrientation::Vertical}));
+    assert(!app.ApplyMenuCommand(0) && !app.ApplyMenuCommand(402));
+    assert(app.ApplyMenuCommand(400));
+    assert(app.Current().orientation == CandidateOrientation::Horizontal);
+    assert(app.ApplyMenuCommand(300) && !app.HasAppOverride());
+    assert((app.Current() == AppearanceSettings{CandidateTheme::Light,90}));
+
+    const auto inheritance = appearance_detail::Parse("[global]\nlayout=vertical\n[" + game_key + "]\ntheme=light\n");
+    assert(inheritance.global.orientation == CandidateOrientation::Vertical);
+    assert(inheritance.applications.at(game_key).orientation == CandidateOrientation::Vertical);
+    const auto roundtrip = appearance_detail::Parse(appearance_detail::Serialize(inheritance));
+    assert(roundtrip.global == inheritance.global && roundtrip.applications.at(game_key) == inheritance.applications.at(game_key));
+    assert(appearance_detail::Parse("[global]\nlayout=invalid\n").global.orientation == CandidateOrientation::Horizontal);
+
     Fixture(path, "[global]\ntheme=evil\nopacity=-1\n[" + game_key + "]\nopacity=101\ntheme=unrecognised\n[app-../bad]\ntheme=light\n");
     app.Reload(); assert((app.Current() == AppearanceSettings{CandidateTheme::Dark,95}));
     const auto malformed = appearance_detail::Parse("[global]\ntheme=system\nopacity=0\n[" + game_key + "]\nopacity=85\n");
@@ -60,7 +94,7 @@ int wmain(int argc, wchar_t** argv) {
     assert(dark.background == RGB(32,33,36) && dark.text == RGB(244,244,244) && dark.alpha == 217 && !dark.high_contrast);
     const auto light = ResolveAppearance({CandidateTheme::Light,95}, false);
     assert(light.background == RGB(250,250,250) && light.alpha == 242);
-    const auto high = ResolveAppearance({CandidateTheme::Dark,85}, true);
+    const auto high = ResolveAppearance({CandidateTheme::Dark,85,CandidateOrientation::Vertical}, true);
     assert(high.background == GetSysColor(COLOR_WINDOW) && high.text == GetSysColor(COLOR_WINDOWTEXT));
     assert(high.highlight == GetSysColor(COLOR_HIGHLIGHT) && high.highlight_text == GetSysColor(COLOR_HIGHLIGHTTEXT));
     assert(high.high_contrast && high.alpha == 255);
@@ -96,6 +130,6 @@ int wmain(int argc, wchar_t** argv) {
     assert(RemoveDirectoryW(blocked.c_str()));
     assert(DeleteFileW(path.c_str()));
     assert(RemoveDirectoryW(directory.c_str()));
-    std::cout << "{\"passed\":true,\"scope\":\"isolated app preferences, validation/defaults, atomic persistence/reset, Windows high contrast, native hidden layered window, no foreground activation\"}\n";
+    std::cout << "{\"passed\":true,\"scope\":\"isolated app preferences, horizontal/vertical menu commands and persistence/inheritance/reset, validation/defaults, Windows high contrast, hidden layered window, no foreground activation\"}\n";
     return 0;
 }

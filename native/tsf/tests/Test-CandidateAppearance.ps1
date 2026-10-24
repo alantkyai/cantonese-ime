@@ -9,6 +9,7 @@ if (Test-Path -LiteralPath $outputPath) { throw 'Use a fresh appearance test out
 New-Item -ItemType Directory -Path $outputPath | Out-Null
 $sourcePath = Join-Path $PSScriptRoot 'candidate_appearance_test.cpp'
 $headerPath = Join-Path $PSScriptRoot '../candidate_appearance.h'
+$layoutPath = Join-Path $PSScriptRoot '../candidate_layout.h'
 $exe = Join-Path $outputPath 'CandidateAppearanceTest.exe'
 $arguments = @('-std=c++17','-O2','-Wall','-Wextra','-Werror','-DUNICODE','-D_UNICODE','-DWIN32_LEAN_AND_MEAN','-DNOMINMAX',
     '-D_WIN32_WINNT=0x0A00','-DWINVER=0x0A00','-static','-municode','-Wl,--no-undefined','-Wl,--dynamicbase','-Wl,--nxcompat',
@@ -19,7 +20,7 @@ $output = & $exe (Join-Path $outputPath 'fixture')
 if ($LASTEXITCODE -ne 0) { throw "Appearance native test failed with exit code $LASTEXITCODE" }
 $result = $output | ConvertFrom-Json
 if (-not $result.passed) { throw 'Appearance fixture did not report success.' }
-$pins = @($sourcePath,$headerPath,$PSCommandPath,$exe) | ForEach-Object {
+$pins = @($sourcePath,$headerPath,$layoutPath,$PSCommandPath,$exe) | ForEach-Object {
     $item = Get-Item -LiteralPath $_
     [ordered]@{ path=$item.FullName; bytes=$item.Length; sha256=(Get-FileHash -LiteralPath $item.FullName -Algorithm SHA256).Hash.ToLowerInvariant() }
 }
