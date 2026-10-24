@@ -398,7 +398,29 @@ complete fresh pool comparisons are exact; restart and old/new saved-reading
 checks pass. An independent saved audit reconciles the attempts and 74 input
 hashes, with internal persistence assertions qualified in the aggregate.
 
-This advances integration, not phrase-quality acceptance. Original SHORT/HEAVY
-quality profiles, external replay, controlled performance and native acceptance
-remain pending. Context scoring is still disabled in production, and v1.0.8
-release assets remain frozen.
+These mechanical checks preceded the original phrase-profile campaign below.
+Context scoring is still disabled in production, and v1.0.8 release assets
+remain frozen.
+
+### Surface context: original learned profiles
+
+All 4,824 planned lookups complete across four engines and fresh, SHORT and
+HEAVY histories, with twelve clean runtime cells and no history/source changes.
+An independent saved audit reconstructs every pool, rank and per-row diagnostic.
+The fixed surface candidate reaches 81/88 intended-text first-nine/first-90 hits
+on the original 89 proper inputs when fresh, and 82/88 under either learned
+history. All original proper-input gates pass for that candidate.
+
+The 29 ordinary habitual-ng inputs reach 26/27 fresh and 27/29 under each learned
+history. Fresh results miss the required 27 first-nine and 28 first-90 hits, so
+quality eligibility fails. Expected-reading pairs also decline under preserved
+old ng4 histories: first-nine hits fall from 23 to 5/4 and first-90 from 24 to
+6/5. All 1,620 signed rank changes, control failures, spelling/topic/length/history
+strata and prefix-diversity evidence remain recorded. See the
+[learning results](SURFACE_CONTEXT_LEARNING.md) and
+[aggregate record](self-improvement-cycle5-original-profiles.json).
+
+The next engine change must address the remaining fresh habitual-input problem
+without weakening the original targets or thresholds. External replay,
+controlled serial performance and native acceptance remain unfinished; no new
+context engine was installed or enabled in production.

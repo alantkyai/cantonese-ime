@@ -36,10 +36,49 @@ independently reconstructed state snapshots; one unchanged-file predicate also
 lacks serialized before/after bytes. The audit makes no new engine queries.
 See the [aggregate record](self-improvement-cycle5-learning-smoke.json).
 
-This is mechanical integration evidence. Original SHORT (five units twice each)
-and HEAVY (twelve units thirty times each) phrase-quality results remain pending,
-along with the full habitual-input group, external500 replay, controlled latency
-and native acceptance. Internal selection validation may decode again; the
-explicit API counts do not claim zero internal work. Shared smoke timings are
-not performance acceptance. All histories are new synthetic files; no personal
-learning or native registration was accessed or changed.
+Internal selection validation may decode again; the explicit API counts do not
+claim zero internal work. Shared smoke timings are not performance acceptance.
+All histories are new synthetic files; no personal learning or native
+registration was accessed or changed.
+
+## Original phrase profiles
+
+The subsequent campaign completes all 4,824 lookups: 402 original input forms
+across four engines and three histories. SHORT uses five units twice each;
+HEAVY uses twelve units thirty times each. The masters were created through
+the original selection API, and each engine receives identical history bytes.
+All twelve runtime cells complete without errors, partial consumption, capacity
+failure, source/history drift or shutdown failure. No query is retried.
+
+The fixed surface-context candidate produces these intended-text counts:
+
+| History | Proper first 9 / 90, of 89 | Habitual `ng` first 9 / 90, of 29 |
+| --- | --- | --- |
+| Fresh | 81 / 88 | 26 / 27 |
+| SHORT | 82 / 88 | 27 / 29 |
+| HEAVY | 82 / 88 | 27 / 29 |
+
+All original proper-input gates pass for this candidate, including the length
+bands and learning-decline limits. Both learned habitual groups pass. Fresh
+habitual results fail two unchanged gates: at least 27 first-nine and 28
+first-90 hits are required. The candidate therefore remains ineligible for
+release; text improvements do not erase these misses.
+
+Expected-reading coverage also needs care. Habitual first-nine text/reading-pair
+hits fall from 23 fresh to 5 SHORT and 4 HEAVY; first-90 pairs fall from 24 to 6
+and 5. The original `ng4` history keys remain intact, and no expected reading is
+relabelled to turn those losses into successes.
+
+An independent saved audit reconstructs all 4,824 pools, ranks, paging and
+per-row diagnostics and retains 1,620 signed rank-change records. Full
+constructor metadata was not serialized; its strict checks remain source-bound
+initialization witnesses. The [aggregate record](self-improvement-cycle5-original-profiles.json)
+includes every engine's gates, control results, topic/length/form/history counts,
+prefix diversity and signed gains and losses. Full-detail descriptive evidence
+retains all 840 strata locally under its published hash.
+
+Next work is the remaining fresh habitual-input boundary/ranking problem.
+External500 replay, controlled serial latency, production integration and
+native acceptance remain unfinished. These shared-process source timings do
+not establish controlled or native performance. Production context scoring and
+the published v1.0.8 installer remain unchanged.
