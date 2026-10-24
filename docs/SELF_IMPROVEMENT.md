@@ -185,6 +185,26 @@ fallbacks and source guards remain in the diagnostic; incomplete runs provide
 no aggregate accuracy improvement claim. Development and protected validation
 have not been queried. Further exact search work must precede either stage.
 
+The next [lexicographic search revision](../tools/experiments/context_search_lazy2/README.md)
+adds a cached one-step context bound and a written-text lower bound. It stops
+after every path capable of matching the Kth `(cost, text)` pair is processed,
+rather than expanding every text tied on cost. Its
+[independent mechanical proof](self-improvement-cycle3-lexicographic-mechanical.json)
+passes 4,644 comparisons over 387 graphs, including 100,000 equally costly
+complete paths. Numerical resource limits were not increased; string generation
+and cached scalar bounds have explicit allocation units.
+
+Its [real-graph pilot](self-improvement-cycle3-lexicographic-diagnostic.json)
+still fails: the zero-weight arm completes 11/19 requests and the weighted arm
+8/19. Hypothesis-limit failures are gone, but work and cached-state limits now
+stop the remaining inputs. It recovers three weighted requests while losing
+five zero-weight completions. All 35 comparisons completed by both revisions
+match full candidate pools, float-hex scores, pages and ranks exactly, including
+the 19-request baseline repeat guard. Every crossing and failure is retained.
+No corpus-model, development or protected-validation queries follow this failed
+pilot. A zero-cost model should avoid context work, and a tighter exact scalar
+suffix bound is the next isolated search experiment.
+
 Separately, a [frozen conversational-count model](self-improvement-cycle3-corpus-inventory.json)
 uses 39 recording groups from the retained HKCanCor source: 128,253 training
 characters and 30,579 bigram types. It counts actual segment occurrences,
