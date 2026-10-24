@@ -303,3 +303,35 @@ engine-only or native TSF/game latency. Existing frozen measurements remain
 unchanged. A fixed development-only weight grid was recorded before further
 coefficient queries; it retains the quality gates and does not authorize
 protected validation or imply a model choice.
+
+The fixed, preregistered context-weight grid is complete. Its
+[anonymous all-attempt record](self-improvement-cycle3-weight-grid-diagnostic.json)
+retains 2,196 new attempts, including every capacity failure,
+plus the existing weight-0.25 references. All 1,464 baseline/zero saved-pool
+comparisons match exactly. Both weight-1 pilots hit the unchanged work limit,
+so their development stages were skipped rather than evaluated over successful
+requests only.
+
+No point qualifies under the unchanged selection rules. Lexical weight 0.5 is
+closest on the old 89-case set, with 79 first-page hits where 81 are required.
+Corpus weight 0.5 reaches 75/89 and also fails the longest-band and new
+development first-page gain requirements. The weight 0.25 failures remain
+recorded. No development quality counts are inferred for the failed weight-1
+pilots. The eligible set is
+empty, so no model is selected and protected validation remains unqueried.
+Learning, latency and native acceptance are separate unfinished obligations.
+
+The new lookup wall/CPU fields stop before evaluator checks; the historical
+elapsed field remains evaluation-row duration. All are shared-process source
+observations, not a controlled native benchmark or a speedup claim. New
+development text, readings, typed spellings and ordinal mappings remain private.
+
+Saved old-case analysis separates ranking from resource failures: eight of the
+lexical weight-0.5 model's ten remaining old-89 first-page misses already occur
+at ranks 10–90. Missing a first-90 result does not prove that its text is absent
+from the dictionary or retained graph. The next proposed isolated experiment
+is a frequency-based word-context model trained on the fixed licensed training
+partition's original word tokens, with frozen smoothing and unknown-word
+rules. It would require a mechanically checked bounded incoming-word search
+state and independent quality checks. This is an engineering hypothesis;
+no word-context experiment or production change has been made.
