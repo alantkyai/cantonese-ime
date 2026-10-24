@@ -221,3 +221,42 @@ Protected new targets are excluded through an opaque matching list. Model,
 reader, source-policy and attribution hashes are retained. The corpus adapter
 has passed synthetic checks only: no actual dictionary rankings have been
 queried with it. Neither context model is enabled in production or installed.
+
+Two further isolated search revisions retain the failed pilots above. The
+[static/context revision](../tools/experiments/context_search_lazy3/README.md)
+specializes the exact integer-zero model with a position-only suffix merge and
+uses lazy exact scalar suffix costs for nonzero context. Its
+[mechanical proof](self-improvement-cycle3-static-context-mechanical.json)
+passes 9,288 exact comparisons across 387 synthetic graphs. Its
+[57-attempt dictionary diagnostic](self-improvement-cycle3-static-context-diagnostic.json)
+completes all 19 zero-control requests and 11 of 19 weighted requests. The eight
+remaining weighted requests reach the unchanged 100,000-work limit. All 97
+saved-pool comparisons completed by both this and earlier revisions are exact.
+
+The [factored revision](../tools/experiments/context_search_lazy4/README.md)
+shares first-character groups and outgoing streams across incoming contexts,
+with a separate continuation for each written prefix. Its
+[mechanical proof](self-improvement-cycle3-factored-mechanical.json) passes
+9,312 exact comparisons over 388 graphs, including explicit cost tables,
+callback models and a shared-outgoing stress case. Its
+[57-attempt diagnostic](self-improvement-cycle3-factored-diagnostic.json)
+keeps the zero control at 19 of 19 and completes 16 of 19 weighted requests.
+Three weighted requests still reach the same work limit. No earlier completed
+request is lost; all 146 comparisons completed by both revisions match full
+saved pools, float-hex scores, pages and ranks exactly.
+
+Both revisions fail the strict runtime-completion gate. Every attempted rank,
+failure, counter and elapsed time is retained; no accuracy acceptance is inferred
+from completed requests. The timings measure fresh first-90 source queries on
+Windows, separately from initialization. Some samples exceed 250 ms. They do
+not establish native TSF latency, game acceptance or a speedup, and successful
+resource completion would not by itself satisfy a latency gate. No corpus-model,
+broader development or protected-validation queries followed these pilots.
+
+The [context and personal-preference design note](CONTEXT_SCORING_DESIGN.md)
+clarifies that the existing bounded lexical reward can remain an additive
+discount alongside a nonnegative context cost. Context reanchoring is not
+inherently required for that objective. The search must use the same discounted
+objective in edges, bounds and caches. The fresh-only guard remains until actual
+personalization, cache-generation, exact-memory and capacity tests pass; this
+design clarification does not replace those tests or alter historical results.

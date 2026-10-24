@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-24T15:45:31.395418+00:00",
+  "scope": "synthetic integer retained-DAG search only; no engine, model training or language fixture queries",
+  "checker_sha256": "a8ad858a7398521772ac65e90546bf4d3b0258447deb46435128b38641be04f8",
+  "candidate_sha256": "997f1dc91882435360c0cbb5a15e5c86f72024637b48ea952e9155a8edec3541",
+  "model_flavors": [
+    "explicit_table",
+    "callback_hidden_table"
+  ],
+  "graphs": 387,
+  "comparisons": 9288,
+  "complete_paths_enumerated": 152020,
+  "failures": [],
+  "passed": true,
+  "source_unchanged": true,
+  "wall_seconds": 7.0469999997876585
+}

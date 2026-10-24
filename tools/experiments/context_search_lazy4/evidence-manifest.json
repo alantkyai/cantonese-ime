@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "exact_frozen_generic_search_and_saved_evidence_inventory",
+  "engine_queries_for_publication": 0,
+  "new_synthetic_decode_queries": 0,
+  "sources_byte_identical_to_frozen_inputs": true,
+  "protected_fixture_not_published": true,
+  "files": [
+    {
+      "path": "tools/experiments/context_search_lazy4/lazy_decoder.py",
+      "bytes": 22957,
+      "sha256": "48e65a214b36914c1bb773140ed69239def12e92e7fda154872488b0f24d9a62"
+    },
+    {
+      "path": "tools/experiments/context_search_lazy4/mechanical_types.py",
+      "bytes": 11000,
+      "sha256": "7c355e1ff76e501ec908c4c0493eefd87a2325affbdc010c2451c546a9bb96ac"
+    },
+    {
+      "path": "tools/experiments/context_search_lazy4/check_exact_search.py",
+      "bytes": 9997,
+      "sha256": "39b3894c7c892518bfad8aafb03ca68d33d3e9051fcaecfe053afcb0956ae2d3"
+    },
+    {
+      "path": "tools/experiments/context_search_lazy4/README.md",
+      "bytes": 4629,
+      "sha256": "70c7648c590a39613b05af28e11bbf5a440adf003d11b5bb9fdb603f9c044cce"
+    },
+    {
+      "path": "docs/self-improvement-cycle3-factored-mechanical.json",
+      "bytes": 634,
+      "sha256": "56642041a5d98c30f38da885bce965bf1c7ff740892f286b5f4be6ea7cdf6325"
+    },
+    {
+      "path": "docs/self-improvement-cycle3-factored-diagnostic.json",
+      "bytes": 278923,
+      "sha256": "f8907bf2bd95542e75ec674899e0ab42fb66d0f648c1a5683e753b40b37610b5"
+    }
+  ]
+}
