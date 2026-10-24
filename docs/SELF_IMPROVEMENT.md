@@ -473,3 +473,30 @@ normal internal model/SQL work is unmeasured, and no native/performance or
 release acceptance follows. Production and published v1.0.8 assets stay
 unchanged. See the [experiment note](OCCURRENCE_CONTEXT_EXPERIMENT.md) and
 [numeric evidence](self-improvement-cycle6-occurrence-diagnostic.json).
+
+### Blended character context: rejected fixed interaction
+
+One further fixed experiment reused the existing corpus-blended character
+conditional with the bounded word discount. It retained all 7,620 lexical/TRAIN
+union classes through radix 7,621, without changing the state-slot budget,
+weights, alias cost, targets or thresholds. No new training or counts were made.
+
+The 38-call pilot has all 19 quantized-zero pools exact. All 402 original fresh
+calls then complete cleanly, but four original gates fail: proper text first9
+is 76/89, the longest band's first9 is 22/30, and habitual first9/first90 is
+26/29 and 27/29. Proper text first90 is 88/89; exact-reading pairs are only
+65/89 first9 and 73/89 first90. Habitual reading pairs are 23/29 and 24/29.
+Length-band first-page hits are 26/29, 28/30 and 22/30.
+
+All 804 signed changes remain recorded: text ranks have 43 gains, 92 losses
+and 267 ties; reading ranks have 26 gains, 73 losses and 303 ties. Independent
+saved audits reconcile the full results after a preserved one-key metadata
+lookup correction, with no Engine rerun. The candidate is rejected, with no
+retuning or later learned, external, latency or native stage. The earlier
+occurrence candidate remains rejected and the original surface candidate's
+two fresh habitual failures remain unresolved. These exposed development
+results and synthetic proofs do not establish native or release acceptance;
+normal internal model/SQL work remains unmeasured. Production and v1.0.8
+release assets are unchanged; the horizontal/vertical layout remains in
+development. See the [experiment note](BLENDED_CONTEXT_EXPERIMENT.md) and
+[numeric evidence](self-improvement-cycle7-blended-diagnostic.json).

@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "status": "REJECTED_original_fresh_quality_gates_failed",
+  "experiment": {
+    "single_fixed_existing_model_interaction": true,
+    "changed": "The existing corpus-blended character conditional replaces the lexical-only conditional in the fixed surface objective.",
+    "character_weight": 0.5,
+    "word_association_weight": 0.5,
+    "habitual_alias_cost": 0.8,
+    "scale": 1000000,
+    "character_cost_clip": 16.0,
+    "new_model_build_count_or_download": false,
+    "word_model_learning_dictionary_search_and_resource_caps_unchanged": true,
+    "targets_and_thresholds_unchanged": true,
+    "post_result_retuning": false,
+    "engineered_hybrid_is_normalized_independent_joint_language_model": false
+  },
+  "model_reuse": {
+    "character_payload_sha256": "524589c75bc0ac0717ecc2f0cfa74b4d3974a3b12b42ad97afef44abe836df8f",
+    "character_size_bytes": 3017352,
+    "lexical_TRAIN_union_character_classes": 7620,
+    "lexical_character_classes": 7607,
+    "additional_TRAIN_only_classes": 13,
+    "TRAIN_only_classes_assumed_to_be_final_numeric_IDs": false,
+    "unknown_buckets": 1,
+    "state_radix": 7621,
+    "maximum_encoded_state": 42616631,
+    "state_slot_capacity_unchanged": 1024,
+    "smoothing_and_initial_None_vs_UNK_arithmetic_preserved": true,
+    "historical_model_header_future_weight_0_25_rewritten": false,
+    "reader_costs_unweighted_actual_character_weight": 0.5,
+    "source_evidence": "Existing lexical pseudo-count backoff and admitted TRAIN character bigrams; character and word factors share training evidence.",
+    "word_payload_sha256": "f27cb8248b04d0706596202bca3ddeac70d14cb830f0c6f586f2fd39ec578466"
+  },
+  "pilot": {
+    "requests_per_arm": 19,
+    "arms": 2,
+    "constructors": 2,
+    "explicit_lookup_API_calls": 38,
+    "quantized_zero_full90_floathex_pool_page_and_rank_comparisons": 19,
+    "all_quantized_zero_controls_exact": true,
+    "candidate": {
+      "requests": 19,
+      "text_first9": 13,
+      "text_first90": 18,
+      "pair_first9": 13,
+      "pair_first90": 17
+    },
+    "signed_vs_saved_cycle5_surface": {
+      "text_rank": {
+        "gain": 3,
+        "loss": 7,
+        "same": 9
+      },
+      "pair_rank": {
+        "gain": 3,
+        "loss": 6,
+        "same": 10
+      }
+    },
+    "all_signed_text_reading_records_retained": 38,
+    "quality_accepted": false
+  },
+  "fresh": {
+    "constructors": 1,
+    "explicit_lookup_API_calls": 402,
+    "cases": 93,
+    "ordinary_proper_inputs": 89,
+    "ordinary_habitual_inputs": 29,
+    "all_habitual_forms": 30,
+    "habitual_control_forms": 1,
+    "forms": {
+      "proper_compact": 93,
+      "proper_apostrophe": 93,
+      "strict_toned": 93,
+      "strict_tone_free": 93,
+      "habitual_compact": 30
+    },
+    "proper": {
+      "requests": 89,
+      "first1": 45,
+      "first9": 76,
+      "first90": 88,
+      "reading_pair_first9": 65,
+      "reading_pair_first90": 73
+    },
+    "proper_length_bands": {
+      "4-5": {
+        "requests": 29,
+        "first1": 17,
+        "first9": 26,
+        "first90": 29,
+        "reading_pair_first9": 25,
+        "reading_pair_first90": 28
+      },
+      "6-8": {
+        "requests": 30,
+        "first1": 17,
+        "first9": 28,
+        "first90": 30,
+        "reading_pair_first9": 22,
+        "reading_pair_first90": 24
+      },
+      "9-12": {
+        "requests": 30,
+        "first1": 11,
+        "first9": 22,
+        "first90": 29,
+        "reading_pair_first9": 18,
+        "reading_pair_first90": 21
+      }
+    },
+    "habitual": {
+      "requests": 29,
+      "first1": 13,
+      "first9": 26,
+      "first90": 27,
+      "reading_pair_first9": 23,
+      "reading_pair_first90": 24
+    },
+    "previous_cycle5_surface_text": {
+      "proper_first9": 81,
+      "proper_first90": 88,
+      "habitual_first9": 26,
+      "habitual_first90": 27
+    },
+    "failed_gates": [
+      {
+        "group": "proper",
+        "cutoff": 9,
+        "observed": 76,
+        "denominator": 89,
+        "required": 81
+      },
+      {
+        "group": "proper_length9_12",
+        "cutoff": 9,
+        "observed": 22,
+        "denominator": 30,
+        "required": 24
+      },
+      {
+        "group": "habitual",
+        "cutoff": 9,
+        "observed": 26,
+        "denominator": 29,
+        "required": 27
+      },
+      {
+        "group": "habitual",
+        "cutoff": 90,
+        "observed": 27,
+        "denominator": 29,
+        "required": 28
+      }
+    ],
+    "original_gates_evaluated": 14,
+    "original_gates_passed": 10,
+    "quality_gates_pass": false,
+    "signed_vs_saved_cycle5_surface": {
+      "text_rank": {
+        "gain": 43,
+        "loss": 92,
+        "same": 267
+      },
+      "pair_rank": {
+        "gain": 26,
+        "loss": 73,
+        "same": 303
+      }
+    },
+    "all_signed_text_reading_records_retained": 804,
+    "all402_forms_and_failures_retained": true,
+    "successful_subset_used_for_acceptance": false
+  },
+  "runtime": {
+    "total_explicit_lookup_API_calls": 440,
+    "total_constructors": 3,
+    "quality_runtime_exceptions": 0,
+    "capacity_failures": 0,
+    "selection_writes": 0,
+    "query_retries": 0,
+    "all_attempts_runtime_clean": true,
+    "normal_internal_model_SQL_work": "Unmeasured, not zero; explicit API counts do not count inner model/SQL operations.",
+    "timing_scope": "Source/shared-process lookup intervals include engine-owned guards and the small call counter; evaluator validation is outside. These are not controlled/native latency acceptance."
+  },
+  "independent_evidence": {
+    "saved_pools_pages_ranks_all_signed_changes_raw_constraints_and_metadata_reconciled": true,
+    "constructor_envelope_schema": 10,
+    "snapshot_fields": 26,
+    "raw_resource_counters": 7,
+    "raw_statistic_counters": 46,
+    "source_and_lifecycle_qualification": "Actual payload byte guards and lifecycle invariance are producer-executed source-bound witnesses, not independent auditor payload snapshots.",
+    "saved_auditor_initial_failure": "KeyError: expected_metadata_sha256",
+    "saved_auditor_exact_correction": "Use the mandatory existing execution-binding key expected_variant_metadata_sha256 in both saved auditors; no fallback or weakened check.",
+    "earlier_auditor_source_failure_and_revision_retained": true,
+    "auditor_revision_followed_partial_saved_read": true,
+    "Engine_rerun_or_new_model_queries_for_auditor_correction": 0,
+    "evaluator_synthetic_methods": 27,
+    "runtime_adapter_synthetic_methods": 17,
+    "synthetic_proofs_establish_native_acceptance": false
+  },
+  "decision": {
+    "model_selected": false,
+    "stopped_after_original_fresh_failure": true,
+    "later_learned_external_latency_native_stages_run_for_this_model": false,
+    "earlier_occurrence_character_candidate_remains_rejected": true,
+    "earlier_cycle5_original_fresh_habitual_failed_gates_remaining": 2,
+    "exposed_development_cases_with_training_overlap": true,
+    "new_heldout_or_representative_accuracy_claim": false,
+    "individual_failure_source_cause_established": false,
+    "production_context_enabled": false,
+    "new_engine_or_model_installed": false,
+    "horizontal_vertical_layout_development_only": true,
+    "published_v1_0_8_tag_and_installers_unchanged": true,
+    "release_or_native_acceptance": false
+  },
+  "evidence_sha256": {
+    "accepted_experiment_policy": "924be52a733a8793c14acce7f6fcf7c358817d9f46ec5863d080e16f99071b79",
+    "root_accepted_source_policy": "2c31bf3dab6660abd47ed664ba13ef8f59aabec510e319e29b2f02eecfdd0189",
+    "original_release_policy": "5ab132691d4d987290de2afc03db49e6ee688a19082960a1e5d540c10fb499f0",
+    "runtime_source_freeze": "5937065357bc62010c65c28f50601d054aeef9c683c25339f6ac127ffa5ed049",
+    "runtime_adapter_synthetic_proof": "24dd83fde4e877f5b7f5bb321d404b8140132d06dd147eb399466f300c9d597d",
+    "runtime_closure": "7545aa3bb9b13ce85765f89af076a9fa15a46621e0ae392ab46d99db4bc358d8",
+    "runtime_entry": "1313a8f5a5be0801c0c6b41f042212691f1ce068e924e5cb3cf341d5395d4ed1",
+    "reviewed_factory": "f0debaa3c9e477ba1eeefac7215e2fcd64bda2751b053694f1d1b55f0336be5d",
+    "provider": "2a4fa745b9336479734214274aa11531a281dcc8bc9be623bd420950b48cb4b9",
+    "independent_actual_runtime_source_review": "0147f18b2bbc93920ae32e7041a472c7a0deae5d7c8ea378955ddf085a6f4a81",
+    "evaluator_source_freeze": "302e6e190f0da3844acd475acf3fc2ad6526479e7cc123cd212bc670612f38a8",
+    "evaluator_synthetic_proof": "c22849933373f971025fd22f35ad2662f3d3dde12125c3d65ae8258db9a3fa70",
+    "execution_binding": "83b7b8a3476cf08c0382721234f13bc9846be0599b6ce3d520cfb103595775a4",
+    "pilot_report": "4d3d2c31af7ae3d4251e98105058e74b80e9690f946d0bca11d1c96bd8ce092d",
+    "pilot_rows": "abbc4002c1f0e2fbc2d2f707a8bf0e82237acd6e071d082e96a488c1e58f8437",
+    "independent_saved_pilot_audit": "426651c86df29b38fa519f43d5b3ff41e8e2a4ea757227fc6f37b6f227b66886",
+    "initial_saved_auditor_failure": "43e5e2e3629fa049cf843ba759854e8ee7e58258eaebdf379a40fab2c9437af6",
+    "saved_auditor_key_correction": "e755c6104a99902001ed5ce8c113dd1b036e67a746a77091928ddb897802684c",
+    "fresh_report": "047f4bb0209f7afe87b101847fcd05f259629b959b222569efd6b48efa90c4d1",
+    "fresh_rows": "7c0b12bb4931ca41963be1ed61fd107771f031bf002039e7aeae3f5fc61d23df",
+    "independent_saved_fresh_audit": "faba8ff33c2e16dfe22be1e658a56812646777ab926c4abf56453763c1cb8970"
+  },
+  "public_scope": "Numeric aggregates and evidence hashes only; raw inputs, targets, readings, case identifiers, signed row ledgers and returned pools remain private."
+}
