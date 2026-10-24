@@ -348,3 +348,20 @@ these failures and signed gain/loss counts. No model is selected, protected
 validation remains unqueried, and production context scoring remains disabled.
 Actual learning histories, controlled latency and native acceptance remain
 unfinished.
+
+
+### Surface context: fresh development
+
+The surface-aware context experiment passes all 18 fresh development gates.
+Its aggregate record covers 1,388 attempts and 1,041 exact full-pool controls.
+Old 89 text hits improve to 81/89 first 9 and 88/89 first 90, compared with 66/83
+for baseline and 79/87 for character 0.5. The new 30 set reaches 17/26, equal to
+character 0.5 and above baseline 14/22; the combined 179 reaches 139/168.
+
+All signed regressions remain recorded, including 21 text-rank and 20 reading-rank
+losses against character 0.5. Reading-pair first 90 declines 74→73 on old 89 and
+142→141 on the combined set. These exposed development results support a
+separate protected-validation freeze and GO; validation is pending at this
+snapshot. All-history learning, external replay, controlled performance and
+native acceptance remain unfinished. Production and the v1.0.8 release are
+unchanged. See the [surface experiment note](SURFACE_CONTEXT_EXPERIMENT.md) and [aggregate diagnostic](self-improvement-cycle5-surface-development-diagnostic.json).

@@ -1,0 +1,360 @@
+{
+  "schema_version": 1,
+  "snapshot_at_utc": "2026-10-24T19:52:09.327443+00:00",
+  "status": "fresh_development_gates_passed_protected_validation_pending",
+  "evidence_sha256": {
+    "pilot_report": "bf7659a07a707af45e0fa54add1028156fa897b88d7769dd7211f71a07870bf4",
+    "development_report": "40f442fd72c38606f7eceb27eb97e51c7de3d6bb0f80aa197cd1db936c316f7d",
+    "independent_assessor_aggregate": "65bc53a31bda2afb3867597aea062b5c03b3490bb9ffb0089f72b3496707890e",
+    "independent_saved_audit_corrected_count": "71802adb0488f25d2277925ea8fd785a629fa216cbf3ed21eb8cd483e3d64354",
+    "quality_policy": "ce4295c741a8879281fddc445a44af20b24b754f367843cebf5663cc9ccdce6c",
+    "runtime_closure": "5d93a0725822a9deb8443c0c4ba17d9bc4d5ce20a038b23f917d474efb5efd71"
+  },
+  "fixed_experiment": {
+    "arms": [
+      "baseline",
+      "surface_zero",
+      "character_050",
+      "surface_050"
+    ],
+    "character_factor": "Per-character nearest-even integer quantization of 0.5 times unchanged character NLL, continuing context across candidate boundaries",
+    "known_word_discount": "min(B,0.5 * out(previous)/(out(previous)+10) * max(0,wordNLL(None,current)-wordNLL(previous,current)))",
+    "discount_eligibility": "Only observed original known-word pairs; initial, unknown or missing pairs receive zero discount",
+    "B": "Existing combined bounded fresh lexical and spelling cost",
+    "lexical_factor": "Once-quantized max(0,B-discount)",
+    "generic_auxiliary_units": [
+      "static_lower_component",
+      "nonnegative_remainder"
+    ],
+    "joint_normalized_language_model_claim": false,
+    "new_training_counts_or_vocabulary": false,
+    "new_word_frequency_estimate_claim": false,
+    "parameter_sweep": false,
+    "numeric_caps_increased": false,
+    "trained_BOS_or_EOS_word_counts": false,
+    "existing_character_model_sha256": "76c357b82201c0e26ba01dbcd9b94e33888b6e6255a400fb4110c30e722cc009",
+    "existing_word_model_sha256": "f27cb8248b04d0706596202bca3ddeac70d14cb830f0c6f586f2fd39ec578466"
+  },
+  "attempts": {
+    "pilot": 76,
+    "development": 1312,
+    "total": 1388,
+    "pilot_per_arm": 19,
+    "development_per_arm": 328,
+    "pilot_exact_full_controls": 57,
+    "development_exact_full_controls": 984,
+    "exact_full_controls_total": 1041,
+    "runtime_errors": 0,
+    "capacity_or_fallback_records": 0,
+    "invalid_metadata_records": 0,
+    "source_changes": 0
+  },
+  "mechanical_evidence": {
+    "synthetic_graphs": 595,
+    "exact_comparisons": 14232,
+    "complete_paths_enumerated": 234421,
+    "scope": "Generic integer search mechanics and allocation boundaries only; not language quality or native performance",
+    "proof_sha256": "35ee753fb52abe1ff5283a3ab32c0ebb55a33445e486ecfec5518624b8245e9a"
+  },
+  "selected_metrics": {
+    "old89": {
+      "baseline": {
+        "requests": 89,
+        "first1": 32,
+        "first9": 66,
+        "first90": 83,
+        "reading_pair_first9": 58,
+        "reading_pair_first90": 70,
+        "text_hit_without_expected_reading": 13
+      },
+      "surface_zero": {
+        "requests": 89,
+        "first1": 32,
+        "first9": 66,
+        "first90": 83,
+        "reading_pair_first9": 58,
+        "reading_pair_first90": 70,
+        "text_hit_without_expected_reading": 13
+      },
+      "character_050": {
+        "requests": 89,
+        "first1": 48,
+        "first9": 79,
+        "first90": 87,
+        "reading_pair_first9": 67,
+        "reading_pair_first90": 74,
+        "text_hit_without_expected_reading": 13
+      },
+      "surface_050": {
+        "requests": 89,
+        "first1": 49,
+        "first9": 81,
+        "first90": 88,
+        "reading_pair_first9": 68,
+        "reading_pair_first90": 73,
+        "text_hit_without_expected_reading": 15
+      }
+    },
+    "cycle1proper60": {
+      "baseline": {
+        "requests": 60,
+        "first1": 13,
+        "first9": 31,
+        "first90": 45,
+        "reading_pair_first9": 29,
+        "reading_pair_first90": 39,
+        "text_hit_without_expected_reading": 6
+      },
+      "surface_zero": {
+        "requests": 60,
+        "first1": 13,
+        "first9": 31,
+        "first90": 45,
+        "reading_pair_first9": 29,
+        "reading_pair_first90": 39,
+        "text_hit_without_expected_reading": 6
+      },
+      "character_050": {
+        "requests": 60,
+        "first1": 27,
+        "first9": 40,
+        "first90": 53,
+        "reading_pair_first9": 33,
+        "reading_pair_first90": 45,
+        "text_hit_without_expected_reading": 8
+      },
+      "surface_050": {
+        "requests": 60,
+        "first1": 28,
+        "first9": 41,
+        "first90": 54,
+        "reading_pair_first9": 35,
+        "reading_pair_first90": 45,
+        "text_hit_without_expected_reading": 9
+      }
+    },
+    "newproper30": {
+      "baseline": {
+        "requests": 30,
+        "first1": 5,
+        "first9": 14,
+        "first90": 22,
+        "reading_pair_first9": 13,
+        "reading_pair_first90": 20,
+        "text_hit_without_expected_reading": 2
+      },
+      "surface_zero": {
+        "requests": 30,
+        "first1": 5,
+        "first9": 14,
+        "first90": 22,
+        "reading_pair_first9": 13,
+        "reading_pair_first90": 20,
+        "text_hit_without_expected_reading": 2
+      },
+      "character_050": {
+        "requests": 30,
+        "first1": 8,
+        "first9": 17,
+        "first90": 26,
+        "reading_pair_first9": 15,
+        "reading_pair_first90": 23,
+        "text_hit_without_expected_reading": 3
+      },
+      "surface_050": {
+        "requests": 30,
+        "first1": 10,
+        "first9": 17,
+        "first90": 26,
+        "reading_pair_first9": 15,
+        "reading_pair_first90": 23,
+        "text_hit_without_expected_reading": 3
+      }
+    },
+    "newall125": {
+      "baseline": {
+        "requests": 125,
+        "first1": 27,
+        "first9": 71,
+        "first90": 96,
+        "reading_pair_first9": 68,
+        "reading_pair_first90": 90,
+        "text_hit_without_expected_reading": 6
+      },
+      "surface_zero": {
+        "requests": 125,
+        "first1": 27,
+        "first9": 71,
+        "first90": 96,
+        "reading_pair_first9": 68,
+        "reading_pair_first90": 90,
+        "text_hit_without_expected_reading": 6
+      },
+      "character_050": {
+        "requests": 125,
+        "first1": 48,
+        "first9": 83,
+        "first90": 109,
+        "reading_pair_first9": 77,
+        "reading_pair_first90": 100,
+        "text_hit_without_expected_reading": 9
+      },
+      "surface_050": {
+        "requests": 125,
+        "first1": 55,
+        "first9": 83,
+        "first90": 111,
+        "reading_pair_first9": 76,
+        "reading_pair_first90": 102,
+        "text_hit_without_expected_reading": 9
+      }
+    },
+    "primary179": {
+      "baseline": {
+        "requests": 179,
+        "first1": 50,
+        "first9": 111,
+        "first90": 150,
+        "reading_pair_first9": 100,
+        "reading_pair_first90": 129,
+        "text_hit_without_expected_reading": 21
+      },
+      "surface_zero": {
+        "requests": 179,
+        "first1": 50,
+        "first9": 111,
+        "first90": 150,
+        "reading_pair_first9": 100,
+        "reading_pair_first90": 129,
+        "text_hit_without_expected_reading": 21
+      },
+      "character_050": {
+        "requests": 179,
+        "first1": 83,
+        "first9": 136,
+        "first90": 166,
+        "reading_pair_first9": 115,
+        "reading_pair_first90": 142,
+        "text_hit_without_expected_reading": 24
+      },
+      "surface_050": {
+        "requests": 179,
+        "first1": 87,
+        "first9": 139,
+        "first90": 168,
+        "reading_pair_first9": 118,
+        "reading_pair_first90": 141,
+        "text_hit_without_expected_reading": 27
+      }
+    }
+  },
+  "old89_surface_length_bands": {
+    "4-5": {
+      "requests": 29,
+      "first1": 17,
+      "first9": 26,
+      "first90": 29,
+      "reading_pair_first9": 25,
+      "reading_pair_first90": 28,
+      "text_hit_without_expected_reading": 1
+    },
+    "6-8": {
+      "requests": 30,
+      "first1": 17,
+      "first9": 29,
+      "first90": 30,
+      "reading_pair_first9": 23,
+      "reading_pair_first90": 24,
+      "text_hit_without_expected_reading": 6
+    },
+    "9-12": {
+      "requests": 30,
+      "first1": 15,
+      "first9": 26,
+      "first90": 29,
+      "reading_pair_first9": 20,
+      "reading_pair_first90": 21,
+      "text_hit_without_expected_reading": 8
+    }
+  },
+  "quality_gates": {
+    "old89:first9_at_least81": true,
+    "old89:first90_at_least85": true,
+    "old89:4-5:first9_at_least24": true,
+    "old89:6-8:first9_at_least24": true,
+    "old89:9-12:first9_at_least24": true,
+    "baseline:nasal_no_individual_first9_loss_any_form": true,
+    "baseline:newproper30:first90_nondecrease": true,
+    "baseline:newall125:first90_nondecrease": true,
+    "baseline:newproper30:first9_gain_at_least3": true,
+    "surface_zero:nasal_no_individual_first9_loss_any_form": true,
+    "surface_zero:newproper30:first90_nondecrease": true,
+    "surface_zero:newall125:first90_nondecrease": true,
+    "surface_zero:newproper30:first9_gain_at_least3": true,
+    "character_050:nasal_no_individual_first9_loss_any_form": true,
+    "character_050:newproper30:first90_nondecrease": true,
+    "character_050:newall125:first90_nondecrease": true,
+    "character_050:newproper30:first9_nondecrease": true,
+    "at_least2_distinct_newdevelopment_phrase_recoveries": true
+  },
+  "failed_quality_gates": [],
+  "distinct_recovered_development_phrases": 6,
+  "recovered_request_forms": 7,
+  "new_development_nasal_first9_losses": {
+    "baseline": 0,
+    "surface_zero": 0,
+    "character_050": 0
+  },
+  "all_signed_text_and_reading_rank_change_counts": {
+    "baseline:text_rank:gain": 182,
+    "baseline:pair_rank:gain": 146,
+    "surface_zero:text_rank:gain": 182,
+    "surface_zero:pair_rank:gain": 146,
+    "character_050:text_rank:gain": 65,
+    "character_050:pair_rank:gain": 47,
+    "character_050:text_rank:loss": 21,
+    "character_050:pair_rank:loss": 20,
+    "baseline:text_rank:loss": 36,
+    "baseline:pair_rank:loss": 34,
+    "surface_zero:text_rank:loss": 36,
+    "surface_zero:pair_rank:loss": 34
+  },
+  "reading_pair_regressions_retained": {
+    "old89_first90": {
+      "character_050": 74,
+      "surface_050": 73
+    },
+    "primary179_first90": {
+      "character_050": 142,
+      "surface_050": 141
+    },
+    "newall125_first9": {
+      "character_050": 77,
+      "surface_050": 76
+    }
+  },
+  "interpretation": {
+    "development_is_previously_exposed": true,
+    "heldout_language_accuracy_claim": false,
+    "eligible_only_for_separate_fresh_validation_freeze_and_root_go": true,
+    "candidate_selected": false,
+    "protected_validation": "Pending at this snapshot; no protected result is included or inferred",
+    "personalized_learning_validated": false,
+    "controlled_latency_or_native_validated": false,
+    "release_approved": false
+  },
+  "remaining_obligations": [
+    "Untouched protected validation after a separate source freeze and root GO",
+    "Original fresh/short/heavy history gates, habitual input, dynamic constituent adaptation, full versus shorter input preferences and persistence/cache/capacity behavior",
+    "Original HKCanCor500 replay against matching baseline across required forms and histories, within the original regression limits",
+    "Controlled changing-input performance p95<=100ms,p99<=200ms,max<=500ms; shared-process source timings do not establish native latency",
+    "Windows x64 broker/TSF/application and applicable macOS native acceptance, then a reviewable standard installer after engine/native gates"
+  ],
+  "production_state": {
+    "production_integration_from_this_experiment": false,
+    "installation_from_this_experiment": false,
+    "release_tag": "v1.0.8",
+    "release_tag_and_assets_changed": false
+  },
+  "privacy": "Aggregate counts and source hashes only; raw candidate pools, diagnostic rows, target/input/readings, case mappings and private ledgers remain local"
+}
