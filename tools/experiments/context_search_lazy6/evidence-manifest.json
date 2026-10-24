@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "engine_queries_for_publication": 0,
+  "new_synthetic_decode_queries": 0,
+  "source_bytes_identical_to_frozen_inputs": true,
+  "new_development_targets_and_protected_fixture_not_published": true,
+  "files": [
+    {
+      "path": "tools/experiments/context_search_lazy6/lazy_decoder.py",
+      "bytes": 27985,
+      "sha256": "a45761b275f02caef0c47a4f52297a0ae1bfb7ea277e6a40f6165b13dd17f3fe"
+    },
+    {
+      "path": "tools/experiments/context_search_lazy6/mechanical_types.py",
+      "bytes": 11000,
+      "sha256": "7c355e1ff76e501ec908c4c0493eefd87a2325affbdc010c2451c546a9bb96ac"
+    },
+    {
+      "path": "tools/experiments/context_search_lazy6/check_exact_search.py",
+      "bytes": 15695,
+      "sha256": "d3d1179ac68030e20db16724a00204ec3d6a08b1aa3490218a946daf81892373"
+    },
+    {
+      "path": "docs/self-improvement-cycle3-slot-reuse-mechanical.json",
+      "bytes": 26490,
+      "sha256": "a087666a8b67899a291d3859594de7e992a6e432d28a59e1198ec4f04fa2d339"
+    },
+    {
+      "path": "docs/self-improvement-cycle3-slot-reuse-diagnostic.json",
+      "bytes": 352386,
+      "sha256": "e5eab4dc59737d389bb7b7d33f5d2e3ea5a4511be72fe4ce7122351393df119a"
+    },
+    {
+      "path": "docs/self-improvement-cycle3-corpus-pilot-diagnostic.json",
+      "bytes": 311033,
+      "sha256": "780848199a96df084813c0c4f5a143787e76e4d4d24986abe91649d1d555e0eb"
+    },
+    {
+      "path": "docs/self-improvement-cycle3-development-diagnostic.json",
+      "bytes": 1401881,
+      "sha256": "de47a8cfb822e777b810627f90199a5e05f474f96dd4197324856417a340e123"
+    },
+    {
+      "path": "tools/experiments/context_search_lazy6/README.md",
+      "bytes": 3428,
+      "sha256": "d36087d35bc2cb7e5e66194a795f27b681bd0d3307e4108d3d5fbca499eb9784"
+    }
+  ]
+}

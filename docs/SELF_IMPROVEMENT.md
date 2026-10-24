@@ -275,3 +275,31 @@ Every rank, failure and elapsed time remains recorded. This is fresh source
 evidence on exposed controls, without accuracy, native latency or personalized
 learning acceptance. No broader development, corpus-model or protected-validation
 query follows from this result.
+
+The [bounded scalar-slot revision](../tools/experiments/context_search_lazy6/README.md)
+reuses eligible completed scalar records in place and pins recursive or active
+outgoing records. Its [mechanical proof](self-improvement-cycle3-slot-reuse-mechanical.json)
+passes 9,384 exact comparisons and retains constructor-observed tiny-capacity
+tests. The [lexical pilot](self-improvement-cycle3-slot-reuse-diagnostic.json)
+and [corpus pilot](self-improvement-cycle3-corpus-pilot-diagnostic.json) each
+complete all 57 attempts. All 255 earlier completed lexical pool comparisons
+and 38 baseline/zero model-control comparisons match exactly. Corpus-weighted
+costs change some rankings; every gain and loss remains diagnostic.
+
+The [development record](self-improvement-cycle3-development-diagnostic.json)
+contains aggregates and anonymous ranks for all 1,968 attempts. New development
+text, readings, typed spellings and ordinal-to-case mappings remain private.
+Both weight-0.25 models complete the resource checks but fail the unchanged
+old-89 fresh quality gates: lexical first-page hits are 77/89 and corpus 73/89,
+below 90%. Their 9–12-character counts are 23/30 and 20/30, below 80%. Their
+86/89 and 87/89 first-90 counts pass that separate 95% threshold; this does not
+override the failed gates. Short/heavy learning and protected validation have
+not been tested for these candidates, and neither is accepted for release.
+
+The [latency scope audit](CONTEXT_LATENCY_SCOPE.md) corrects the interpretation
+of historical `elapsed_ms`: it includes evaluator validation, target rank scans
+and pool hashing as well as lookup. It is evaluation-row duration, not
+engine-only or native TSF/game latency. Existing frozen measurements remain
+unchanged. A fixed development-only weight grid was recorded before further
+coefficient queries; it retains the quality gates and does not authorize
+protected validation or imply a model choice.
