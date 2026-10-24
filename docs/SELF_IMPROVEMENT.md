@@ -157,3 +157,47 @@ first-90 reranker cannot recover any candidate absent from its original pool.
 Both models remain outside the production engine. Context-aware retained-path
 search, suitable corpus evidence, personalized span calibration, independent
 validation and native performance remain separate unfinished work.
+
+## Cycle 3: real-graph capacity failures and a sparse conversational model
+
+The [retained language diagnostics](self-improvement-cycle3-diagnostic.json)
+record two fresh-profile pilots on the same 19 already exposed requests. The
+first eager context adapter completed no context searches: every request hit
+its preparation or retained-arc bound. One stored dictionary word remained
+available after a caught composition error; its truncated page is a capacity
+failure, not a successful context result. The revised evaluator checks saved
+capacity diagnostics and truncation even when a direct word is returned.
+
+An isolated lazy A* replacement removes only paths without a complete
+continuation and stores unfinished paths as backpointers. Its
+[independent mechanical proof](self-improvement-cycle3-lazy-mechanical.json)
+passes 3,456 exact comparisons over 384 graphs. The
+[standalone decoder and replay](../tools/experiments/context_search_lazy/README.md)
+preserve the frozen source bytes and document allocation/work units separately
+from the earlier eager decoder. These are integer retained-graph proofs, not
+native latency or language-quality acceptance.
+
+On the real dictionary, the lazy zero-weight control completed 16/19 requests
+and the weighted lexical-context model completed 5/19. Every remaining failure
+hit the 32,768-hypothesis bound; the large waiting frontier is now the measured
+bottleneck. Both pilots fail the runtime gate. All saved ranks, signed changes,
+fallbacks and source guards remain in the diagnostic; incomplete runs provide
+no aggregate accuracy improvement claim. Development and protected validation
+have not been queried. Further exact search work must precede either stage.
+
+Separately, a [frozen conversational-count model](self-improvement-cycle3-corpus-inventory.json)
+uses 39 recording groups from the retained HKCanCor source: 128,253 training
+characters and 30,579 bigram types. It counts actual segment occurrences,
+preserves utterance and exclusion boundaries, and blends their conditional
+counts with the fixed expanded lexical prior. Its 7,620-character fitted
+vocabulary is the lexical vocabulary union training characters, with one UNK
+bucket. No development or reserved occurrence counts enter training.
+
+Independent checks reconstructed the source segments, exclusions, training
+counts, binary tables and probability normalization. All corpus groups already
+had prior project exposure through the old 500-case corpus set; retained overlap
+with old development is disclosed, not presented as untouched evaluation.
+Protected new targets are excluded through an opaque matching list. Model,
+reader, source-policy and attribution hashes are retained. The corpus adapter
+has passed synthetic checks only: no actual dictionary rankings have been
+queried with it. Neither context model is enabled in production or installed.
