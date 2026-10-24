@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "status": "nine_call_diagnostic_completed_no_model_fix",
+  "scope": "Three already exposed development examples, each under three spelling forms. Numeric aggregate evidence only; no representative accuracy claim.",
+  "normal_execution": {
+    "engine_constructors": 1,
+    "lookups": 9,
+    "page_size": 90,
+    "offset": 0,
+    "fresh_read_only": true,
+    "selection_writes": 0,
+    "query_retries": 0,
+    "private_history_reads": 0,
+    "exact_original_full_pool_controls": 6,
+    "all_six_controls_identical": true,
+    "all_bound_source_and_input_bytes_unchanged": true,
+    "normal_pool_feedback_from_diagnostic": false
+  },
+  "captured_target_analysis": {
+    "queries_with_complete_capture_and_known_analysis": 9,
+    "text_feasible": 9,
+    "text_plus_canonical_reading_feasible": 9,
+    "text_minimum_equals_canonical_minimum": 9,
+    "examples_with_same_minimum_word_segmentation_ids_rewards_and_character_cost_across_forms": 3,
+    "additional_original_provider_computations": 251,
+    "postprocessing_new_engine_provider_model_sql_calls": 0,
+    "extra_work_cap_per_query_shared_across_both_analyses": 100000,
+    "extra_model_pair_cap_per_query_shared_across_both_analyses": 131072,
+    "quantization_scale": 1000000,
+    "target_cost_increment_per_habitual_substitution": 4.8,
+    "apostrophe_target_cost_change": 0,
+    "anonymous_objective_comparisons_sorted_by_proper_cost": [
+      {
+        "proper_minimum_cost": 32.285097,
+        "compact_habitual_minimum_cost": 37.085097,
+        "apostrophe_habitual_minimum_cost": 37.085097,
+        "proper_first90_rank": 7,
+        "compact_habitual_first90_rank": null,
+        "apostrophe_habitual_first90_rank": 2,
+        "compact_habitual_composed90_cutoff_cost": 35.381178,
+        "compact_target_cost_minus_cutoff": 1.703919
+      },
+      {
+        "proper_minimum_cost": 75.912809,
+        "compact_habitual_minimum_cost": 80.712809,
+        "apostrophe_habitual_minimum_cost": 80.712809,
+        "proper_first90_rank": 3,
+        "compact_habitual_first90_rank": 17,
+        "apostrophe_habitual_first90_rank": 3,
+        "compact_habitual_composed90_cutoff_cost": 84.026035,
+        "compact_target_cost_minus_cutoff": -3.313226
+      },
+      {
+        "proper_minimum_cost": 86.711274,
+        "compact_habitual_minimum_cost": 96.311274,
+        "apostrophe_habitual_minimum_cost": 96.311274,
+        "proper_first90_rank": 7,
+        "compact_habitual_first90_rank": null,
+        "apostrophe_habitual_first90_rank": 7,
+        "compact_habitual_composed90_cutoff_cost": 96.084670,
+        "compact_target_cost_minus_cutoff": 0.226604
+      }
+    ],
+    "null_rank_meaning": "Absent from first90; the constrained target path is nevertheless feasible on the captured graph.",
+    "all_nine_final_first90_pages_match_ordered_composed90": true,
+    "lower_scored_completion_after_first90_in_one_snapshot": true
+  },
+  "observed_source_coverage": {
+    "canonical_target_aligned_span_counts_sorted": [6, 20, 20],
+    "total_aligned_spans_per_form": 46,
+    "observed_stages": 3,
+    "same_aligned_span_keys_across_forms_at_dictionary_merged_and_prepared_stages": true,
+    "same_observed_stored_weights_and_zero_fresh_learning_rewards": true,
+    "observed_exact_target_prefix_drops_at96_frontier": 0,
+    "exhaustive_unpruned_dictionary_coverage_established": false,
+    "unvisited_or_prepruned_word_rows": "unknown",
+    "minimum_scope": "Minimum fixed target cost on the captured productive graph with the original integer objective; not an enumeration of every equal minimum or proof of exhaustive dictionary coverage."
+  },
+  "observer_bounds": {
+    "selected_capture_events_limit_per_query": 100000,
+    "total_profile_and_trace_hook_invocations_limit_per_query": 10000000,
+    "copied_records_limit_per_query": 32768,
+    "scalar_utf8_bytes_limit_per_query": 16777216,
+    "descriptor_references_limit_per_query": 4096,
+    "maximum_observed_selected_capture_events": 177,
+    "maximum_observed_total_hook_invocations": 3128710,
+    "maximum_observed_copied_records": 15284,
+    "maximum_observed_scalar_utf8_bytes": 123457,
+    "maximum_observed_retained_arcs": 2106,
+    "maximum_observed_descriptors": 1274,
+    "maximum_observed_extra_diagnostic_work": 9500,
+    "maximum_observed_extra_model_pairs": 40,
+    "capture_or_extra_analysis_capacity_failures": 0,
+    "callback_captured_generator_provider_or_sql_invocations": 0,
+    "hooks_restored_before_extra_scorer_computations": true,
+    "scope": "Exact code/record observation of naturally visited materialized values; six original pool controls support invariance for those six calls. Hook overhead is not latency evidence."
+  },
+  "unchanged_original_profile_gate_results": {
+    "ordinary_habitual_inputs": 29,
+    "fresh_first9_hits": 26,
+    "fresh_first9_required": 27,
+    "fresh_first90_hits": 27,
+    "fresh_first90_required": 28,
+    "failed_gates": 2,
+    "apostrophe_controls_replace_original_acceptance_cases": false,
+    "targets_dictionary_alias_cost_weights_caps_or_thresholds_changed": false
+  },
+  "limits": {
+    "independent_saved_verification": "Chosen path membership, continuity and integer factor sums were reconstructed. Global minima rely on the executed bounded DP and pinned source proof; all 251 additional transition-cache entries were not serialized or independently recomputed.",
+    "normal_internal_model_and_sql_work": "Unmeasured, not zero. The 251 additional provider computations are separate diagnostic work after the nine normal lookups.",
+    "model_fix_implemented": false,
+    "production_context_enabled": false,
+    "native_acceptance": false,
+    "controlled_performance_acceptance": false,
+    "release_acceptance": false,
+    "published_v1_0_8_installer_unchanged": true,
+    "claim": "Retained intended paths lose under the declared objective and competing parses; the diagnostic does not isolate a single causal corpus or model defect."
+  },
+  "evidence_sha256": {
+    "observer_source_freeze": "8746116beb156b84d87d60e9dba0b53216cffeafe4e3cfe08dbf6fe434590781",
+    "observer_policy": "564e0d3d0541894d7dd0937689a4e1647d3c6a79eebe34ca0dc21a1dda35e0a0",
+    "observer_rows": "e0022758ae663ced094c7f605fb03f57e1df39cfedde818144c1b16b3e00cd00",
+    "observer_terminal_receipt": "1ae7ebf8bccaff95dca2e7b514628af8d095d800bfb7c6860620be8516d8afd2",
+    "independent_saved_witness_audit": "550176fd5d2cefe6d3ad2bb861924d3d75f63454059734c8895c8c1c7a85da62",
+    "saved_source_analysis_receipt": "0599584f8ecbd44e8a6d93fcf567b79c67a40f095b2e77d1a215fd53d4fefea1",
+    "saved_component_check": "8c1724a561ec3de6566ff5f3f0ef627bbfc123b2467010949942e88cf1b86a91"
+  }
+}

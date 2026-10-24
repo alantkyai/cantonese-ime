@@ -424,3 +424,24 @@ The next engine change must address the remaining fresh habitual-input problem
 without weakening the original targets or thresholds. External replay,
 controlled serial performance and native acceptance remain unfinished; no new
 context engine was installed or enabled in production.
+
+### Surface context: retained-path diagnosis
+
+A nine-call diagnostic retains all intended text and canonical-reading paths;
+all six prebound original candidate pools match exactly. Passive hooks are
+restored before 251 additional bounded provider computations. The minimum
+target words, rewards and character costs match across proper, habitual and
+apostrophe forms. Habitual spelling contributes 4.8 lexical-cost units per
+substitution; apostrophes keep that cost while removing competing parses.
+Two absent-first90 target costs exceed their composed cutoffs by 1.703919 and
+0.226604. Matching observed span inventories do not prove exhaustive unpruned
+dictionary coverage.
+
+This explains retained-path ranking failures without repairing them. The two
+original fresh habitual gates still fail at 26/29 first9 and 27/29 first90;
+targets, alias cost, models, weights, caps and thresholds are unchanged. See the
+[boundary analysis](SURFACE_CONTEXT_LEARNING.md#retained-path-boundary-diagnostic)
+and [numeric record](self-improvement-cycle5-boundary-diagnostic.json). Independent
+licensed conversational-data and model-alignment research is separate work.
+No native, performance or release acceptance follows; production context
+scoring and v1.0.8 remain unchanged.

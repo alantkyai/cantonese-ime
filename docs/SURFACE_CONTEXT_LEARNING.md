@@ -82,3 +82,46 @@ External500 replay, controlled serial latency, production integration and
 native acceptance remain unfinished. These shared-process source timings do
 not establish controlled or native performance. Production context scoring and
 the published v1.0.8 installer remain unchanged.
+
+## Retained-path boundary diagnostic
+
+A subsequent diagnostic makes nine normal lookups on three already exposed
+examples, comparing proper compact, habitual compact and explicit apostrophe
+forms. All six prebound original full-pool controls match exactly. Passive
+profile/trace hooks copy naturally visited materialized values; after hook
+restoration, bounded target analysis makes 251 additional original-provider
+computations. It does not alter the normal pool or select any candidate.
+
+All nine intended-text and canonical-reading paths are feasible on their
+captured productive graphs. Each example retains the same minimum word
+segmentation, word IDs, association rewards and character cost across forms.
+Habitual spelling adds exactly 4.8 lexical-cost units per substitution. The
+apostrophe form keeps that target cost while removing competing parses:
+
+| Proper cost / rank | Compact habitual cost / rank | Apostrophe cost / rank | Compact composed90 cutoff |
+| --- | --- | --- | --- |
+| 32.285097 / 7 | 37.085097 / outside90 | 37.085097 / 2 | 35.381178 |
+| 75.912809 / 3 | 80.712809 / 17 | 80.712809 / 3 | 84.026035 |
+| 86.711274 / 7 | 96.311274 / outside90 | 96.311274 / 7 | 96.084670 |
+
+The two outside90 targets exceed their cutoffs by 1.703919 and 0.226604. All
+nine first90 pages match the ordered composed pools, so later candidate tiers
+do not explain these losses. One snapshot has a lower-scored completion at91.
+
+Observed target-aligned word-span inventories contain 6, 20 and 20 spans and
+match across forms at dictionary, merged-arc and productive-graph stages. No
+observed exact target prefix is dropped by the96 frontier. These are source-bound
+minima and comparative inventories, not exhaustive dictionary coverage:
+unvisited rows and rows removed before observation remain unknown. Six exact
+pool controls support hook invariance for those six calls; they do not establish
+native behavior or latency. A source-only follow-up and independent saved audit
+perform no additional engine/model queries.
+
+The original fresh habitual results remain 26/29 first9 and 27/29 first90,
+below the unchanged 27/28 requirements. Apostrophe controls do not replace
+those compact-input cases. No model fix, target, dictionary, alias cost, weight,
+cap or gate change follows from this diagnostic. Corpus/context alignment is
+the next research direction; the result does not isolate one causal model
+defect. See the [numeric diagnostic](self-improvement-cycle5-boundary-diagnostic.json).
+Production context scoring, the v1.0.8 installer, and unfinished external,
+controlled-performance and native requirements remain unchanged.
