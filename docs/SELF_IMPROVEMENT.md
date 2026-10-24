@@ -329,9 +329,22 @@ development text, readings, typed spellings and ordinal mappings remain private.
 Saved old-case analysis separates ranking from resource failures: eight of the
 lexical weight-0.5 model's ten remaining old-89 first-page misses already occur
 at ranks 10–90. Missing a first-90 result does not prove that its text is absent
-from the dictionary or retained graph. The next proposed isolated experiment
-is a frequency-based word-context model trained on the fixed licensed training
-partition's original word tokens, with frozen smoothing and unknown-word
-rules. It would require a mechanically checked bounded incoming-word search
-state and independent quality checks. This is an engineering hypothesis;
-no word-context experiment or production change has been made.
+from the dictionary or retained graph. This motivated an isolated word-context
+experiment using the licensed training partition's original word tokens,
+frozen smoothing and unknown-word rules.
+
+The [word-context experiment](WORD_CONTEXT_EXPERIMENT.md) is now complete.
+Its bounded search passes 12,288 independent mechanical comparisons; original
+word counts, normalized probabilities and immutable model loading were checked
+separately. All 1,041 pilot/development attempts complete without runtime
+failures, and all 694 baseline/zero full-pool controls match exactly.
+
+The fixed word model improves old-89 first-page hits from 66 to 70, below the
+required 81 and the earlier character model's 79. Its 84 first-90 hits miss the
+required 85; two length bands and individual nasal-control requests also fail.
+Exact text-plus-reading first-90 coverage on the old cases falls from 70 to 68.
+The [aggregate record](self-improvement-cycle4-word-diagnostic.json) preserves
+these failures and signed gain/loss counts. No model is selected, protected
+validation remains unqueried, and production context scoring remains disabled.
+Actual learning histories, controlled latency and native acceptance remain
+unfinished.

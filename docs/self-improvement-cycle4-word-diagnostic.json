@@ -1,0 +1,301 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-24T18:42:50.735182+00:00",
+  "status": "fixed_word_model_failed_quality_no_selection",
+  "scope": "Aggregate development diagnostics from local frozen prototypes. Raw reports, full pools, every gain/loss and new case labels remain private; this is not an all-attempt public ledger or reproducible public source package.",
+  "configuration": {
+    "word_context_weight": 0.5,
+    "zero_weight": 0.0,
+    "scale": 1000000,
+    "character_lm_enabled": false,
+    "one_transition_per_composed_arc": true,
+    "internal_character_or_eos_cost": false,
+    "learning_path": null,
+    "dictionary_spelling_direct_priorities_changed": false,
+    "numerical_caps_or_quality_gates_relaxed": false,
+    "parameter_sweep": false
+  },
+  "training": {
+    "groups": 39,
+    "files": 48,
+    "segments": 18177,
+    "word_occurrences": 96304,
+    "characters": 128253,
+    "word_types": 5591,
+    "word_bigram_types": 34610,
+    "word_bigram_occurrences": 78127,
+    "model_bytes": 516787,
+    "source": "HKCanCor, original word occurrences from the frozen training whitelist",
+    "license": "CC-BY-4.0",
+    "attribution": "K.K. Luke and May L.Y. Wong; hosted by Francis Bond",
+    "held_out_corpus_claim": false,
+    "qualification": "All corpus groups were previously exposed in this project. No development/reserved token fitting; protected exclusion inherited from the fixed whitelist. Raw exact word identity; one UNK; delta0.1/tau10; no clipping, BOS/EOS counts or trigrams."
+  },
+  "mechanics": {
+    "independent_graphs": 513,
+    "independent_comparisons": 12288,
+    "all_expected_outcomes_passed": true,
+    "old_completed_pools_exact": 9846,
+    "previous_hypothesis_capacity_failures_now_complete": 18,
+    "expected_state_capacity_failures_retained": true,
+    "first_failed_search_proof_preserved": true,
+    "reader_probability_cost_pairs_exact": 68161,
+    "reader_full_vocabulary_numeric_rows_after_deduplication": 5,
+    "reader_backoff_comparisons_exact": 16776,
+    "token_roundtrips": 5591,
+    "all_rows_sparse_normalization_verified": true,
+    "immutable_reader_and_cached_file_tamper_checks_passed": true,
+    "runtime_toy_tests": 25,
+    "evaluator_test_methods": 24,
+    "evaluator_mutation_subtests": 248,
+    "qualification": "Search proofs concern retained integer graphs. They do not establish dictionary coverage, real ranking, learned behavior or native performance."
+  },
+  "execution": {
+    "pilot_requests_per_arm": 19,
+    "pilot_attempts": 57,
+    "development_requests_per_arm": 328,
+    "development_attempts": 984,
+    "all_attempts_retained": 1041,
+    "errors": 0,
+    "capacity_failures": 0,
+    "truncated_pages": 0,
+    "constraint_violations": 0,
+    "source_drift": false,
+    "full_control_pool_floathex_page_rank_comparisons_exact": 694
+  },
+  "metrics": {
+    "baseline": {
+      "primary179": {
+        "cases": 179,
+        "first1": 50,
+        "first9": 111,
+        "first90": 150,
+        "reading_pair_first90": 129,
+        "text_hit_with_missing_expected_reading": 21
+      },
+      "old89": {
+        "cases": 89,
+        "first1": 32,
+        "first9": 66,
+        "first90": 83,
+        "reading_pair_first90": 70,
+        "text_hit_with_missing_expected_reading": 13
+      },
+      "old89_bands": {
+        "4-5": {
+          "cases": 29,
+          "first1": 15,
+          "first9": 24,
+          "first90": 28
+        },
+        "6-8": {
+          "cases": 30,
+          "first1": 8,
+          "first9": 24,
+          "first90": 29
+        },
+        "9-12": {
+          "cases": 30,
+          "first1": 9,
+          "first9": 18,
+          "first90": 26
+        }
+      },
+      "new30_proper": {
+        "cases": 30,
+        "first1": 5,
+        "first9": 14,
+        "first90": 22,
+        "reading_pair_first90": 20,
+        "text_hit_with_missing_expected_reading": 2
+      },
+      "new125_all_forms": {
+        "cases": 125,
+        "first1": 27,
+        "first9": 71,
+        "first90": 96,
+        "reading_pair_first90": 90,
+        "text_hit_with_missing_expected_reading": 6
+      }
+    },
+    "word_zero": {
+      "primary179": {
+        "cases": 179,
+        "first1": 50,
+        "first9": 111,
+        "first90": 150,
+        "reading_pair_first90": 129,
+        "text_hit_with_missing_expected_reading": 21
+      },
+      "old89": {
+        "cases": 89,
+        "first1": 32,
+        "first9": 66,
+        "first90": 83,
+        "reading_pair_first90": 70,
+        "text_hit_with_missing_expected_reading": 13
+      },
+      "old89_bands": {
+        "4-5": {
+          "cases": 29,
+          "first1": 15,
+          "first9": 24,
+          "first90": 28
+        },
+        "6-8": {
+          "cases": 30,
+          "first1": 8,
+          "first9": 24,
+          "first90": 29
+        },
+        "9-12": {
+          "cases": 30,
+          "first1": 9,
+          "first9": 18,
+          "first90": 26
+        }
+      },
+      "new30_proper": {
+        "cases": 30,
+        "first1": 5,
+        "first9": 14,
+        "first90": 22,
+        "reading_pair_first90": 20,
+        "text_hit_with_missing_expected_reading": 2
+      },
+      "new125_all_forms": {
+        "cases": 125,
+        "first1": 27,
+        "first9": 71,
+        "first90": 96,
+        "reading_pair_first90": 90,
+        "text_hit_with_missing_expected_reading": 6
+      }
+    },
+    "word_050": {
+      "primary179": {
+        "cases": 179,
+        "first1": 65,
+        "first9": 124,
+        "first90": 162,
+        "reading_pair_first90": 136,
+        "text_hit_with_missing_expected_reading": 26
+      },
+      "old89": {
+        "cases": 89,
+        "first1": 34,
+        "first9": 70,
+        "first90": 84,
+        "reading_pair_first90": 68,
+        "text_hit_with_missing_expected_reading": 16
+      },
+      "old89_bands": {
+        "4-5": {
+          "cases": 29,
+          "first1": 17,
+          "first9": 25,
+          "first90": 29
+        },
+        "6-8": {
+          "cases": 30,
+          "first1": 12,
+          "first9": 23,
+          "first90": 26
+        },
+        "9-12": {
+          "cases": 30,
+          "first1": 5,
+          "first9": 22,
+          "first90": 29
+        }
+      },
+      "new30_proper": {
+        "cases": 30,
+        "first1": 11,
+        "first9": 17,
+        "first90": 25,
+        "reading_pair_first90": 23,
+        "text_hit_with_missing_expected_reading": 2
+      },
+      "new125_all_forms": {
+        "cases": 125,
+        "first1": 50,
+        "first9": 85,
+        "first90": 108,
+        "reading_pair_first90": 102,
+        "text_hit_with_missing_expected_reading": 6
+      }
+    }
+  },
+  "unchanged_gate_checks": {
+    "runtime_control_sources": true,
+    "old89_first9_min81": false,
+    "old89_first90_min85": false,
+    "old89_bands_min24_each": false,
+    "baseline_new30_first9_gain_min3": true,
+    "baseline_new30_first90_nondecrease": true,
+    "baseline_new125_first90_nondecrease": true,
+    "baseline_nasal_any_form_no_first9_loss": false,
+    "word_zero_new30_first9_gain_min3": true,
+    "word_zero_new30_first90_nondecrease": true,
+    "word_zero_new125_first90_nondecrease": true,
+    "word_zero_nasal_any_form_no_first9_loss": false,
+    "new_distinct_recovered_phrases_min2": true
+  },
+  "old89_requirements": {
+    "first9_minimum": 81,
+    "first90_minimum": 85,
+    "band_first9_minimum": {
+      "4-5": 24,
+      "6-8": 24,
+      "9-12": 24
+    }
+  },
+  "nasal_control_first9_loss_requests_by_control": {
+    "baseline": 3,
+    "word_zero": 3
+  },
+  "distinct_new_development_phrases_recovered_in_first90": 5,
+  "selected_candidate": null,
+  "protected_validation_queries": 0,
+  "personalized_learning_validated": false,
+  "native_latency_acceptance": false,
+  "native_or_installer_actions": 0,
+  "production_enabled": false,
+  "release_acceptance": false,
+  "timing_scope": "Immediate wall/CPU lookup fields are saved separately from evaluation-row duration. Shared process/cache/order only; no native TSF/IPC/game or controlled latency claim.",
+  "preserved_release": "Published1.0.8 setup and tag unchanged; experimental word model is not included.",
+  "evidence_sha256": {
+    "model": "f27cb8248b04d0706596202bca3ddeac70d14cb830f0c6f586f2fd39ec578466",
+    "model_source_closure": "4a6d0abb1e0ba8c71d780432e876ef5b82502be329963f62564a04259e3be3a9",
+    "count_audit": "bf563328ff4304eb683c7821c149f7a5823d8f331eaab2f7bbfa6f4bf10d6cfc",
+    "reader_audit": "db0d9664d5375d97d38c474a0690cbd828dac9ced48f419d182dc238b2a03761",
+    "original_search_proof": "3d1a74cd9f0d22f4de8a2a0fb8dd45d5fa58fa339f7d4171c769a8d35c2e3cfc",
+    "supplemental_search_proof": "9e56dc6c8c36bcc0604d5456ecbda7ed8aa345c782d4aaf15a38992e9214542f",
+    "runtime_closure": "cc6a69285f24fe9e6e3a28b0ff1b54ee62d413ecbf2b2b624739397514b2e791",
+    "evaluator_closure": "de85850cf4bbe430cbe26f90661466076c52185fc533098f1e1ad0ef1541aaa7",
+    "root-saved-result-audit-run-1.json": "796224a5cdec2765eb3bb581a79f3920e98e7f0a83121a2e577ca48aa354c356",
+    "policy-before-quality.json": "41e3e2f4ca62c83f1b536bba703d6d4e67337bfcc3095e9c940964ce4b62bcf1",
+    "primary-pilot-run-1_report.json": "14289a014b9a0a515d5af400bde8be7f06c2fee6c7b3806e98cef1ef85db6944",
+    "primary-development-run-1_report.json": "30d7a3af4d923e566247b9875665b4f98da0d884036b454cfeabf61f9c03568c",
+    "independent_saved_assessment": "5646ea183590a353808c2b8d13e73f596bf21d94372129f61ff9b80fd64a682f"
+  },
+  "independent_atomic_failed_quality_gates": [
+    "old89:first9_at_least81",
+    "old89:first90_at_least85",
+    "old89:6-8:first9_at_least24",
+    "old89:9-12:first9_at_least24",
+    "baseline:nasal_no_individual_first9_loss_any_form",
+    "word_zero:nasal_no_individual_first9_loss_any_form"
+  ],
+  "signed_rank_change_counts_all328_requests": {
+    "baseline:text_rank:gain": 151,
+    "baseline:pair_rank:gain": 125,
+    "word_zero:text_rank:gain": 151,
+    "word_zero:pair_rank:gain": 125,
+    "baseline:text_rank:loss": 46,
+    "baseline:pair_rank:loss": 43,
+    "word_zero:text_rank:loss": 46,
+    "word_zero:pair_rank:loss": 43
+  }
+}
