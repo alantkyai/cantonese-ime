@@ -536,3 +536,33 @@ model/SQL work remains unmeasured. No context model is enabled or installed,
 and published v1.0.8 remains unchanged. The horizontal/vertical layout remains
 in the development build. See the [experiment note](CURATED_CONTEXT_EXPERIMENT.md)
 and [numeric record](self-improvement-cycle8-curated-diagnostic.json).
+
+### Initial-character marginal: rejected fixed ablation
+
+A separate C9 experiment changes only the first emitted character's factor to
+`(Cu + 10 * L) / (1379235 + 10)`, using the already audited curated unigram
+counts and lexical backoff. Every non-initial conditional, including unknown
+class 0, remains C8. Vocabulary, word discount, weights, alias cost, learning,
+direct tiers and resource limits stay fixed. This is a composition-initial
+marginal, not trained sentence-start evidence or natural usage frequency.
+
+All 58,478 numeric probability/cost pairs agree with the independent count
+oracle, and all seven tested full rows normalize. The 38-call pilot preserves
+all 19 original quantized-zero controls. All 402 original fresh calls then
+complete cleanly. Every reported proper, habitual and length-band first-one,
+first-nine, first-90 and exact-reading coverage count is unchanged from C8:
+proper text reaches 85/89 first-nine and 88/89 first-90; habitual text reaches
+26/29 and 28/29. Habitual first-nine still misses the required 27/29, so one of
+the original 14 gates fails and this fixed candidate is rejected.
+
+Ranks do change despite unchanged coverage. Across all 402 forms, text ranks
+have seven gains, four losses and 391 ties against C8; reading ranks have six
+gains, four losses and 392 ties. Independent audits reconstruct every pool,
+all 804 signed records and all original gates. The two quality stages total
+440 calls and three constructors, without runtime or capacity failures.
+No retuning or later learned-profile, external, controlled-latency, integration
+or native stage follows. This exposed experiment does not establish broader
+accuracy, causality for an individual failure, performance or release acceptance.
+Production context scoring and published v1.0.8 remain unchanged. The layout
+option remains in development. See the [experiment note](INITIAL_CONTEXT_EXPERIMENT.md)
+and [numeric record](self-improvement-cycle9-initial-diagnostic.json).

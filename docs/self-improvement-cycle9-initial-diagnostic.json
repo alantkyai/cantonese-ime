@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "publication_state": "PUBLIC_AGGREGATE_RECORD",
+  "status": "REJECTED_one_original_fresh_quality_gate_failed",
+  "experiment": {
+    "single_fixed_ablation": true,
+    "initial_condition": "previous is None only",
+    "initial_probability": "(Cu(c)+10.0*L(c))/(1379235+10.0)",
+    "initial_tau": 10.0,
+    "curated_unigram_total": 1379235,
+    "unknown_curated_count": 0,
+    "one_UNK_bucket": true,
+    "initial_charge_once_per_complete_composition_first_character": true,
+    "all_nonNone_including_UNK0_probability_and_cost_exact_C8": true,
+    "trained_BOS_or_natural_frequency_claim": false,
+    "C9_new_count_vocabulary_or_parameter_fitting": false,
+    "C8_counts_newly_fit_then_reused_by_C9": true,
+    "same_first_character_class_composed_relative_objective_order_unchanged": true,
+    "zero_curated_count_start_limitation": "Only lexical pseudocount mass before clipping; can incur a strong initial penalty.",
+    "individual_ranking_cause_established": false
+  },
+  "unchanged": {
+    "character_payload_sha256": "7fe684d0f4eb3c4998a736034339d598c5751e45d75060daba4376cf64977737",
+    "character_payload_size_bytes": 4820448,
+    "underlying_C8_reader_sha256": "f34e68f218bd818e01368c3e24e611e7557d33bd02d41b4b83d3f7d3e05edfb0",
+    "positive_character_classes": 8353,
+    "state_radix": 8354,
+    "word_prior_character_word_weights_alias_Q_clip_caps_tiers_learning_requests_gates": true,
+    "character_weight": 0.5,
+    "word_association_weight": 0.5,
+    "alias_penalty": 0.8,
+    "quantization_scale": 1000000,
+    "rounding": "nearest_even",
+    "character_clip": 16.0,
+    "allocated_completion_state_cap": 1024
+  },
+  "numeric_verification": {
+    "selected_previous_classes": [
+      null,
+      0,
+      1,
+      4177,
+      8353,
+      9,
+      2
+    ],
+    "current_classes_per_row_including_one_UNK": 8354,
+    "pairs": 58478,
+    "explicit_probability_API_calls": 58478,
+    "explicit_cost_API_calls": 58478,
+    "mismatches": 0,
+    "exceptions": 0,
+    "normalized_complete_rows": 7,
+    "noninitial_exact_dictionary_comparisons": 50124,
+    "observed_scoring_frames": {
+      "adapter_probability": 58478,
+      "adapter_cost": 58478,
+      "underlying_probability": 100248,
+      "underlying_cost": 50124
+    },
+    "total_observed_scoring_frames": 267328,
+    "underlying_reader_loads": 3,
+    "adapter_constructions": 1,
+    "independent_payload_decodes": 1,
+    "cache_copy_tamper_immutable_and_final_guards_pass": true,
+    "quality_acceptance_established": false
+  },
+  "pilot": {
+    "requests_per_arm": 19,
+    "explicit_lookup_API_calls": 38,
+    "constructors": 2,
+    "original_C5_quantized_zero_full90_floathex_pool_and_page_controls_exact": 19,
+    "candidate_reference_for_signed_changes": "C8 candidate; distinct from original C5 zero control",
+    "candidate_written_first9": 16,
+    "candidate_written_first90": 18,
+    "candidate_exact_reading_pair_first9": 16,
+    "candidate_exact_reading_pair_first90": 18,
+    "signed_candidate_vs_C8": {
+      "text_rank": {
+        "gain": 1,
+        "loss": 1,
+        "same": 17
+      },
+      "reading_pair_rank": {
+        "gain": 1,
+        "loss": 1,
+        "same": 17
+      }
+    },
+    "runtime_errors": 0,
+    "capacity_failures": 0,
+    "query_retries": 0,
+    "selection_writes": 0,
+    "quality_acceptance_established": false
+  },
+  "fresh": {
+    "status": "COMPLETED_RUNTIME_CLEAN_QUALITY_REJECTED_independently_reconciled",
+    "constructors": 1,
+    "explicit_lookup_API_calls": 402,
+    "cases": 93,
+    "ordinary_proper_inputs": 89,
+    "ordinary_habitual_inputs": 29,
+    "all_habitual_forms_including_control": 30,
+    "original_forms": {
+      "proper_compact": 93,
+      "proper_apostrophe": 93,
+      "strict_toned": 93,
+      "strict_tone_free": 93,
+      "habitual_compact": 30
+    },
+    "proper": {
+      "requests": 89,
+      "written_first1": 52,
+      "written_first9": 85,
+      "written_first90": 88,
+      "reading_pair_first9": 70,
+      "reading_pair_first90": 73
+    },
+    "proper_length_bands": {
+      "4-5": {
+        "requests": 29,
+        "written_first1": 18,
+        "written_first9": 27,
+        "written_first90": 29,
+        "reading_pair_first9": 26,
+        "reading_pair_first90": 28
+      },
+      "6-8": {
+        "requests": 30,
+        "written_first1": 22,
+        "written_first9": 30,
+        "written_first90": 30,
+        "reading_pair_first9": 24,
+        "reading_pair_first90": 24
+      },
+      "9-12": {
+        "requests": 30,
+        "written_first1": 12,
+        "written_first9": 28,
+        "written_first90": 29,
+        "reading_pair_first9": 20,
+        "reading_pair_first90": 21
+      }
+    },
+    "habitual": {
+      "requests": 29,
+      "written_first1": 14,
+      "written_first9": 26,
+      "written_first90": 28,
+      "reading_pair_first9": 23,
+      "reading_pair_first90": 25
+    },
+    "all_reported_proper_habitual_and_band_coverage_metrics_equal_C8": true,
+    "original_gates": 14,
+    "passed_original_gates": 13,
+    "failed_original_gates": [
+      {
+        "group": "ordinary habitual inputs",
+        "metric": "written text first9",
+        "observed_hits": 26,
+        "required_hits": 27,
+        "requests": 29
+      }
+    ],
+    "runtime_clean": true,
+    "source_guard_clear": true,
+    "quality_accepted": false,
+    "all_402_signed_vs_C8_candidate": {
+      "text_rank": {
+        "gain": 7,
+        "loss": 4,
+        "same": 391
+      },
+      "reading_pair_rank": {
+        "gain": 6,
+        "loss": 4,
+        "same": 392
+      }
+    },
+    "all_signed_text_reading_records_retained_and_independently_reconciled": 804,
+    "complete_pools_and_all_losses_retained_private": true,
+    "equal_coverage_implies_identical_pools": false,
+    "successful_subset_replaced_original_denominators": false,
+    "later_stage_eligibility_authorized": false
+  },
+  "limits_and_status": {
+    "C8_rejected_and_stopped": true,
+    "later_learned_external_controlled_latency_integration_native_acceptance": false,
+    "normal_inference_internal_model_and_SQL_work": "UNMEASURED_not_zero",
+    "new_heldout_source_disjoint_or_representative_accuracy_claim": false,
+    "post_result_retuning": false,
+    "production_enabled_installed_or_released": false,
+    "published_v1_0_8_unchanged": true,
+    "horizontal_vertical_layout_is_separate_development_work": true,
+    "bounded_hybrid_is_normalized_independent_joint_model": false,
+    "no_success_subset_or_fresh_denominator_replacement": true
+  },
+  "evidence_sha256": {
+    "fixed_C9_policy": "4726a518318d90878f23ad007cb264a18a0d37d775b9c2804210c98ddf8adf6a",
+    "numeric_report": "f869a80263e7072302f6f61b6aa4a9ebe7e87f4e6a04d57babee59f421b21711",
+    "pilot_report": "196b61a2dc703bef3d57550a2c7737cf6cc4e29d281c8d4c1468ba036ee39c70",
+    "independent_saved_pilot_audit": "5b95531b0a4745852756a7e9a5265691dbca69d96ac91675ecd767286d123f21",
+    "runtime_closure": "0e7bac83599dbca723761ae489b69e91bd3b5724e00ebbd7ed36db1ad2e65a53",
+    "assembled_source_review": "91d73859285fbfd733fb33dacb6de4d6b33f89a3e9ab417fd5a785750422aebd",
+    "evaluator_source_closure": "65ef9ce8a3bdf155a4d6b4c2d08725ae7951e290432685cb33d4d3d12728a991",
+    "independent_fresh_audit": "dcfbdb546a21e16f512bb8e9bb5f9415f900f2b2137c571e6253946e7953a509",
+    "fresh_report": "6b84f53339c4985cb783996c8b73e1721252077d6b8abd234ba1dd5845d8fcae",
+    "independent_fresh_audit_binding": "0840ad8a419a3d9879edcad24615b0a3d0493b20d2342cbf7a112b4b0e3a0552",
+    "fresh_rows": "3ade57194b47447a05608e31bbbe079afee361681f436319a8104274fd345e46"
+  },
+  "authoring_scope": "Aggregate methodology, numeric and independently audited quality facts; complete private pools and signed records retained as evidence. Publication exclusion scans are separate from ranking evaluation.",
+  "quality_campaign_mechanics": {
+    "explicit_lookup_API_calls": 440,
+    "constructors": 3,
+    "runtime_errors": 0,
+    "capacity_failures": 0,
+    "query_retries": 0,
+    "selection_writes": 0,
+    "normal_internal_model_and_SQL_work": "UNMEASURED_not_zero",
+    "controlled_latency_or_native_acceptance_established": false
+  },
+  "decision": {
+    "selected": false,
+    "rejected_and_stopped": true,
+    "same_original_fresh_gate_failure_as_C8": true,
+    "proper_or_habitual_first9_or_first90_coverage_improved_over_C8": false,
+    "all_pools_or_rankings_identical_to_C8": false,
+    "post_result_retuning": false,
+    "later_learned_external_controlled_latency_integration_native_stages_run": false,
+    "production_enabled_installed_or_released": false,
+    "published_v1_0_8_unchanged": true,
+    "original_C5_quality_failures_claimed_resolved": false,
+    "C8_rejection_preserved": true
+  }
+}
