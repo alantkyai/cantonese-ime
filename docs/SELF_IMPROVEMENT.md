@@ -568,7 +568,7 @@ option remains in development. See the [experiment note](INITIAL_CONTEXT_EXPERIM
 and [numeric record](self-improvement-cycle9-initial-diagnostic.json).
 
 
-### Additive word context: fresh gates passed; later checks pending
+### Additive word context: fresh and saved-preference gates passed
 
 C10 keeps C8's character factor, including lexical initial backoff, and adds
 fixed sentence-type word counts to the original conversational word counts.
@@ -587,12 +587,30 @@ habitual pairs reach 24/29 and 25/29. Proper length-band first-nine counts are
 records. Across 402 forms against C8, text ranks have 57 gains, 17 losses and
 328 ties; reading ranks have 51 gains, 17 losses and 334 ties. Every loss is retained.
 
-The two stages total 440 calls and three constructors. A preserved CRLF/LF
+The initial two stages total 440 calls and three constructors. A preserved CRLF/LF
 setup failure was corrected before quality queries; it was not a quality retry.
 The pilot auditor's live-output search exposure is recorded without a blinding
-claim. These exposed project results permit separate later checks only. Saved
-learning, external replay, controlled latency and native integration remain
-unrun; no model is selected or enabled. C8/C9 remain rejected. Published v1.0.8
+claim.
+
+The complete original three-profile/four-arm comparison now adds eleven cells,
+4,422 calls and eleven top-level constructors, reusing the existing fresh
+candidate cell once. Independent audit reconciles all 4,824 joined rows and
+6,432 signed records. All twelve runtime cells are clean; all 27 candidate
+profile gates pass. Proper written first-nine increases from 86/89 fresh to
+87/89 under both saved profiles; first-90 stays 89/89. Habitual written
+first-nine/90 stays 27/29 and 28/29. The original histories are unchanged,
+with no new seeding or selection writes. Controls' quality failures remain visible.
+
+Habitual exact-reading coverage regresses: first-nine/90 changes from 24/25
+fresh to 6/6 under SHORT and 5/5 under HEAVY, each out of 29. Alternative
+historical readings are retained; these aggregate counts do not establish the
+cause of every change. All losses remain private diagnostic evidence.
+
+C10 quality work now totals 4,862 calls and fourteen top-level constructors.
+These exposed project results permit separate later checks only. External
+replay, controlled latency, whole-text learning/persistence, dense/paging/session
+correctness and native integration remain pending; no model is selected or
+enabled. C8/C9 remain rejected. Published v1.0.8
 and installation remain unchanged; horizontal/vertical layout is separate
 development work. See the [experiment note](ADDITIVE_WORD_CONTEXT_EXPERIMENT.md)
 and [aggregate record](self-improvement-cycle10-word-diagnostic.json).

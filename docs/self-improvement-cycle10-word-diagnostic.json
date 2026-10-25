@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "FRESH_GATES_PASS_SEPARATE_LATER_CHECKS_PENDING",
+  "status": "FRESH_AND_SAVED_PREFERENCE_GATES_PASS_LATER_CHECKS_PENDING",
   "experiment": "C10_fixed_additive_word_data_with_unchanged_C8_character_factor",
   "model_selected": false,
   "production_enabled": false,
@@ -196,15 +196,20 @@
     "local_paths_accounts_or_identifiers_excluded": true
   },
   "actual_execution_totals": {
-    "quality_API_calls": 440,
-    "constructors": 3,
+    "quality_API_calls": 4862,
+    "top_level_engine_constructors": 14,
     "quality_query_retries": 0,
-    "inherited_larger_profile_schedule_is_not_actual_C10_execution": true
+    "pilot_calls": 38,
+    "fresh_calls": 402,
+    "new_profile_calls": 4422,
+    "historical_seed_API_calls_not_counted_as_C10_work": true,
+    "normal_internal_model_and_SQL_work_not_instrumented": true
   },
   "later_stages": {
-    "saved_learning": "UNRUN",
+    "saved_preference_regression": "PASS_original_three_profiles_twelve_cells",
     "external_replay": "UNRUN",
     "controlled_latency": "UNRUN",
+    "whole_text_learning_persistence_dense_paging_session_correctness": "PENDING",
     "native_and_integration": "UNRUN",
     "separate_later_authorization_required": true
   },
@@ -220,5 +225,250 @@
     "blinding_claim": false,
     "pilot_scope_receipt_sha256": "f465cff7c2b11e33ce6e1e1dc932cb025aae4fae1318aab205893fa4e2f7d7e7",
     "fresh_prerequisite_receipt_sha256": "288969a55e9686d49ef4bce2044c7c758b2abf01743a590b19adc1ec2a11d4fe"
+  },
+  "saved_preference_profiles": {
+    "status": "TERMINAL_INDEPENDENT_SAVED_AUDIT_PASS",
+    "original_profiles": [
+      "fresh",
+      "short_preferences",
+      "heavy_short_preferences"
+    ],
+    "cases": 93,
+    "forms_per_cell": 402,
+    "new_cells": 11,
+    "new_API_calls": 4422,
+    "new_top_level_constructors": 11,
+    "imported_fresh_API_calls": 402,
+    "imported_fresh_constructors": 1,
+    "joined_rows": 4824,
+    "joined_constructor_records": 12,
+    "all12_runtime_cells_clean": true,
+    "candidate_gate_count": 27,
+    "all27_candidate_profile_gates_pass": true,
+    "failed_candidate_gates": [],
+    "same_arm_fresh_first9_decline_gate": "At most two percentage points separately for89 ordinary proper and29 ordinary habitual written results; unchanged original rule",
+    "first90_or_reading_pair_decline_gate_added": false,
+    "candidate_metrics": {
+      "fresh:plain_yale_compact": {
+        "requests": 89,
+        "first1": 55,
+        "first9": 86,
+        "first90": 89,
+        "reading_pair_first9": 71,
+        "reading_pair_first90": 73
+      },
+      "short_preferences:plain_yale_compact": {
+        "requests": 89,
+        "first1": 57,
+        "first9": 87,
+        "first90": 89,
+        "reading_pair_first9": 72,
+        "reading_pair_first90": 73
+      },
+      "heavy_short_preferences:plain_yale_compact": {
+        "requests": 89,
+        "first1": 56,
+        "first9": 87,
+        "first90": 89,
+        "reading_pair_first9": 72,
+        "reading_pair_first90": 73
+      },
+      "fresh:habitual_ng_compact": {
+        "requests": 29,
+        "first1": 15,
+        "first9": 27,
+        "first90": 28,
+        "reading_pair_first9": 24,
+        "reading_pair_first90": 25
+      },
+      "short_preferences:habitual_ng_compact": {
+        "requests": 29,
+        "first1": 17,
+        "first9": 27,
+        "first90": 28,
+        "reading_pair_first9": 6,
+        "reading_pair_first90": 6
+      },
+      "heavy_short_preferences:habitual_ng_compact": {
+        "requests": 29,
+        "first1": 17,
+        "first9": 27,
+        "first90": 28,
+        "reading_pair_first9": 5,
+        "reading_pair_first90": 5
+      }
+    },
+    "control_quality": {
+      "baseline": {
+        "passed": false,
+        "gate_count": 27,
+        "failed_gate_count": 15
+      },
+      "surface_zero": {
+        "passed": false,
+        "gate_count": 27,
+        "failed_gate_count": 15
+      },
+      "character_050": {
+        "passed": false,
+        "gate_count": 27,
+        "failed_gate_count": 4
+      },
+      "surface_050": {
+        "passed": true,
+        "gate_count": 27,
+        "failed_gate_count": 0
+      }
+    },
+    "all6432_signed_records_retained_privately": true,
+    "signed_changes_vs_matching_fresh_all402_forms": {
+      "baseline": {
+        "short_preferences": {
+          "text_rank": {
+            "gain": 29,
+            "loss": 16,
+            "same": 357,
+            "unavailable": 0
+          },
+          "pair_rank": {
+            "gain": 10,
+            "loss": 24,
+            "same": 368,
+            "unavailable": 0
+          }
+        },
+        "heavy_short_preferences": {
+          "text_rank": {
+            "gain": 47,
+            "loss": 15,
+            "same": 340,
+            "unavailable": 0
+          },
+          "pair_rank": {
+            "gain": 20,
+            "loss": 24,
+            "same": 358,
+            "unavailable": 0
+          }
+        }
+      },
+      "surface_zero": {
+        "short_preferences": {
+          "text_rank": {
+            "gain": 29,
+            "loss": 16,
+            "same": 357,
+            "unavailable": 0
+          },
+          "pair_rank": {
+            "gain": 10,
+            "loss": 24,
+            "same": 368,
+            "unavailable": 0
+          }
+        },
+        "heavy_short_preferences": {
+          "text_rank": {
+            "gain": 47,
+            "loss": 15,
+            "same": 340,
+            "unavailable": 0
+          },
+          "pair_rank": {
+            "gain": 20,
+            "loss": 24,
+            "same": 358,
+            "unavailable": 0
+          }
+        }
+      },
+      "character_050": {
+        "short_preferences": {
+          "text_rank": {
+            "gain": 21,
+            "loss": 4,
+            "same": 377,
+            "unavailable": 0
+          },
+          "pair_rank": {
+            "gain": 10,
+            "loss": 21,
+            "same": 371,
+            "unavailable": 0
+          }
+        },
+        "heavy_short_preferences": {
+          "text_rank": {
+            "gain": 31,
+            "loss": 4,
+            "same": 367,
+            "unavailable": 0
+          },
+          "pair_rank": {
+            "gain": 16,
+            "loss": 22,
+            "same": 364,
+            "unavailable": 0
+          }
+        }
+      },
+      "surface_050": {
+        "short_preferences": {
+          "text_rank": {
+            "gain": 12,
+            "loss": 2,
+            "same": 388,
+            "unavailable": 0
+          },
+          "pair_rank": {
+            "gain": 8,
+            "loss": 21,
+            "same": 373,
+            "unavailable": 0
+          }
+        },
+        "heavy_short_preferences": {
+          "text_rank": {
+            "gain": 22,
+            "loss": 6,
+            "same": 374,
+            "unavailable": 0
+          },
+          "pair_rank": {
+            "gain": 14,
+            "loss": 26,
+            "same": 362,
+            "unavailable": 0
+          }
+        }
+      }
+    },
+    "history": "Two original API-produced synthetic masters imported byte for byte; readings/counts/adaptive weights retained; no reseeding",
+    "new_seeding_calls": 0,
+    "new_selection_writes": 0,
+    "new_membership_queries": 0,
+    "reading_diagnostic_regression": {
+      "habitual_denominator": 29,
+      "fresh_first9_90": [
+        24,
+        25
+      ],
+      "SHORT_first9_90": [
+        6,
+        6
+      ],
+      "HEAVY_first9_90": [
+        5,
+        5
+      ],
+      "historical_alternative_readings_including_ng4_preserved": true,
+      "cause_of_every_change_established_by_aggregate": false,
+      "all_losses_retained": true
+    },
+    "report_sha256": "506535368aad130e1566532d6f75454c8ff2c7372d71fca513a54def30e3195d",
+    "independent_aggregate_sha256": "61fc94491f147ddaddcf85098c9e008c137ac09f3b0c827099fc281da78efea7",
+    "eligible_for_separately_authorized_later_checks_only": true,
+    "model_selected": false,
+    "release_approved": false
   }
 }

@@ -1,6 +1,6 @@
-# Additive word context: fresh gates passed
+# Additive word context: fresh and saved-preference gates passed
 
-Independent saved audit confirms all 14 original fresh gates passed. The candidate is eligible for separately authorized later checks only. No model selection, production enable, native or release acceptance follows. C8 and C9 remain rejected and stopped.
+Independent saved audits confirm all 14 original fresh gates and all 27 candidate gates across the original three preference profiles passed. All twelve comparison cells are complete and runtime-clean. The candidate is eligible for separately authorized later checks only. No model selection, production enable, native or release acceptance follows. C8 and C9 remain rejected and stopped.
 
 C10 adds new word-adjacency evidence to the original conversational word counts. It retains every one of the existing 5,591 word surfaces and IDs, with one unobserved unknown bucket. The character factor is exactly C8, including its lexical marginal for initial `None`; C9's initial-character change is not used. Character/word-association weights remain 0.5/0.5, alias cost 0.8, quantization scale 1,000,000, and the existing clipping, dictionary, learning behavior, direct tiers, retained paths, tie rules and query caps stay fixed. Word costs remain unclipped.
 
@@ -31,7 +31,19 @@ The 38-call, two-constructor pilot used the original 19 requests in each arm. It
 
 The terminal fresh report is `cc43a4020e1539f95e204776b9cc53b9b6b12f6620460777c2bdc40951812882`. It records all 402 original forms complete under one constructor with clean runtime and all 14 gates passed. Independent saved audit `57b322b7d721781a609b4ac6e2fb43030eebe805a74fd5aa7d75d0216f2d5923` confirms the results. Across all 402 forms against C8, written ranks have 57 gains, 17 losses and 328 ties; reading-pair ranks have 51 gains, 17 losses and 334 ties. All 804 signed records, including every one of the 17 written-rank losses and 17 reading-pair-rank losses, remain private. The full inventory is 93 cases, 89 ordinary proper inputs, 29 ordinary habitual inputs plus its additional control, and the original length bands; no successful subset replaces those denominators.
 
-C10 has executed **440 lookup calls and three constructors** across pilot and fresh, with no quality-query retry. The larger inherited learned-profile schedule is planned work, not an executed C10 count. Saved learning, external replay, controlled latency, native typing and integration checks remain unrun. Fresh gate passage permits only separately authorized later checks; it does not select a model or accept a release.
+The original saved-preference comparison is now complete. The two original API-produced synthetic histories were imported byte for byte, preserving their readings, counts and adaptive weights. No new seeding, selection write or dictionary-membership query occurred. SHORT retains five units selected twice; HEAVY retains twelve units selected thirty times. Those historical selections are preparation provenance, not new C10 calls.
+
+| Candidate profile | Proper written first 1 / 9 / 90, out of 89 | Proper reading-pair first 9 / 90 | Habitual written first 1 / 9 / 90, out of 29 | Habitual reading-pair first 9 / 90 |
+| --- | --- | --- | --- | --- |
+| Fresh | 55 / 86 / 89 | 71 / 73 | 15 / 27 / 28 | 24 / 25 |
+| SHORT | 57 / 87 / 89 | 72 / 73 | 17 / 27 / 28 | 6 / 6 |
+| HEAVY | 56 / 87 / 89 | 72 / 73 | 17 / 27 / 28 | 5 / 5 |
+
+The reading-pair regression is material: habitual first-nine falls from 24/29 to 6/29 and 5/29 while written first-nine stays 27/29. The original synthetic histories retain their alternative readings, including `ng4`; the aggregate alone does not establish the cause of every reading change. Every signed text/pair change remains available privately. Reading diagnostics are not substituted for the original written-text gates, and the gates were not changed after seeing these results.
+
+The campaign executed eleven new cells with **4,422 calls and eleven top-level constructors**, importing the already completed fresh candidate cell exactly once. Its complete twelve-cell join has 4,824 rows and twelve constructor records. All three candidate profiles pass the original absolute, length-band and two-percentage-point first-nine decline rules. The decline comparison is separately against matching fresh proper and habitual written first-nine; no new first-90 or reading-pair decline gate was introduced. Baseline, zero and character-only controls fail quality requirements, with their results retained; all twelve runtime cells are clean. Independent audit reconstructs all pools, ranks, source/history metadata, actual call sequences, original gates and all 6,432 signed learned-versus-fresh records.
+
+The terminal profile report is `506535368aad130e1566532d6f75454c8ff2c7372d71fca513a54def30e3195d`; the independent aggregate is `61fc94491f147ddaddcf85098c9e008c137ac09f3b0c827099fc281da78efea7`. Across pilot, fresh and the new profile cells, C10 has executed **4,862 calls and fourteen top-level constructors**, without a quality-query retry. Broader phrase replay, controlled latency, whole-text learning/persistence, dense/paging/session correctness and native integration obligations remain pending. Profile passage permits separately authorized later checks only.
 
 Exposed project cases are development evidence, not new blind, source-disjoint or representative accuracy evidence. The bounded hybrid score is not a normalized independent joint language model. Shared-process/source timing does not establish controlled latency or native typing. All original learning, external, performance, integration and native obligations remain unchanged. The v1.0.8 release and installation remain unchanged. UI layout development is separate. This experimental model has not been enabled, installed or released.
 
