@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "status": "REJECTED_one_original_fresh_quality_gate_failed",
+  "publication_state": "PUBLIC_AGGREGATE_RECORD",
+  "experiment": {
+    "single_fixed_data_recipe": true,
+    "new_character_model_count_fitting": true,
+    "runtime_performs_count_or_vocabulary_fitting": false,
+    "character_weight": 0.5,
+    "word_association_weight": 0.5,
+    "habitual_alias_cost": 0.8,
+    "scale": 1000000,
+    "character_cost_clip": 16.0,
+    "word_prior_learning_dictionary_direct_tiers_and_resource_caps_unchanged": true,
+    "targets_controls_and_thresholds_unchanged": true,
+    "post_result_retuning": false,
+    "engineered_hybrid_is_normalized_independent_joint_language_model": false,
+    "pure_corpus_size_effect_or_individual_failure_cause_established": false
+  },
+  "source": {
+    "name": "CTCPC BASE original TRAIN",
+    "first_party_card_url": "https://huggingface.co/datasets/raptorkwok/cantonese-chinese-parallel-corpus-base/blob/5e047fe1764e50868b22ae6f1c191ede448f4f26/README.md",
+    "commit": "5e047fe1764e50868b22ae6f1c191ede448f4f26",
+    "TRAIN_sha256": "38e6e62d3b73380d6222e8f458d4ca2d9ca72c31c8ba6c6faedc0001f7a90db6",
+    "TRAIN_size_bytes": 14118305,
+    "first_party_license_declaration": "CC0 1.0",
+    "ownership_linguistic_quality_or_source_disjointness_established": false,
+    "validation_test_or_merged_export_used": false
+  },
+  "count_recipe": {
+    "unit": "First unique exact decoded nonempty Cantonese sentence type; not natural usage frequency",
+    "empty_exclusion_precedes_deduplication": true,
+    "strip_casefold_Unicode_normalization_or_spelling_merge": false,
+    "original_rows": 109942,
+    "empty_strings_excluded": 5,
+    "nonempty_duplicate_occurrences_excluded": 6964,
+    "unique_exact_nonempty_sentence_types": 102973,
+    "maximal_fixed_Han_runs": 196049,
+    "exact_complete_opaque_runs_excluded": 2,
+    "retained_Han_runs": 196047,
+    "character_occurrences": 1379235,
+    "adjacent_pair_occurrences": 1183188,
+    "positive_TRAIN_character_types": 6165,
+    "positive_TRAIN_pair_types": 254031,
+    "cross_row_non_Han_or_excluded_run_pairs_counted": false,
+    "old_conversational_character_counts_reused": false,
+    "frozen_positive_lexical_counts_retained": true,
+    "independent_all_decisions_tables_IDs_header_and_payload_reconciliation_passed": true
+  },
+  "model": {
+    "character_payload_sha256": "7fe684d0f4eb3c4998a736034339d598c5751e45d75060daba4376cf64977737",
+    "character_size_bytes": 4820448,
+    "positive_union_classes": 8353,
+    "positive_lexical_classes": 7607,
+    "zero_lexical_positive_curated_classes": 746,
+    "unknown_buckets": 1,
+    "state_radix": 8354,
+    "maximum_encoded_state": 46715567,
+    "allocated_completion_state_cap": 1024,
+    "decoder_caps_enlarged": false,
+    "initial_None_and_unknown_previous_floating_arithmetic_distinct_and_preserved": true,
+    "smoothing": {
+      "delta": 0.1,
+      "lexical_tau": 10.0,
+      "curated_tau": 10.0
+    },
+    "word_payload_sha256": "f27cb8248b04d0706596202bca3ddeac70d14cb830f0c6f586f2fd39ec578466"
+  },
+  "numeric_proof": {
+    "complete_previous_context_rows": 7,
+    "all_current_classes_including_UNK_per_row": 8354,
+    "compared_pairs": 58478,
+    "mismatches": 0,
+    "exceptions": 0,
+    "explicit_probability_API_calls": 58478,
+    "explicit_cost_API_calls": 58478,
+    "observed_probability_frame_calls_including_calls_inside_cost": 116956,
+    "observed_probability_calls_inside_cost": 58478,
+    "call_accounting_exact": true,
+    "all_tested_full_rows_normalized": true,
+    "one_UNK_mass_algebra_verified": true,
+    "cached_byte_identical_reload_and_same_size_tamper_rejection_verified": true,
+    "numeric_proof_is_quality_acceptance": false
+  },
+  "pilot": {
+    "requests_per_arm": 19,
+    "arms": 2,
+    "constructors": 2,
+    "explicit_lookup_API_calls": 38,
+    "exact_saved_C5_quantized_zero_full90_floathex_pool_and_page_controls": 19,
+    "all_quantized_zero_controls_exact": true,
+    "candidate": {
+      "requests": 19,
+      "text_first9": 16,
+      "text_first90": 18,
+      "reading_pair_first9": 16,
+      "reading_pair_first90": 18
+    },
+    "signed_candidate_vs_saved_C5_surface": {
+      "text_rank": {
+        "gain": 5,
+        "loss": 8,
+        "same": 6
+      },
+      "reading_pair_rank": {
+        "gain": 5,
+        "loss": 7,
+        "same": 7
+      }
+    },
+    "quality_acceptance_established_by_pilot": false
+  },
+  "fresh": {
+    "constructors": 1,
+    "explicit_lookup_API_calls": 402,
+    "cases": 93,
+    "ordinary_proper_inputs": 89,
+    "ordinary_habitual_inputs": 29,
+    "all_habitual_forms_including_control": 30,
+    "habitual_controls": 1,
+    "original_form_counts": {
+      "proper_compact": 93,
+      "proper_apostrophe": 93,
+      "strict_toned": 93,
+      "strict_tone_free": 93,
+      "habitual_compact": 30
+    },
+    "proper": {
+      "requests": 89,
+      "text_first1": 52,
+      "text_first9": 85,
+      "text_first90": 88,
+      "reading_pair_first9": 70,
+      "reading_pair_first90": 73
+    },
+    "proper_length_bands": {
+      "4-5": {
+        "requests": 29,
+        "text_first9": 27,
+        "text_first90": 29
+      },
+      "6-8": {
+        "requests": 30,
+        "text_first9": 30,
+        "text_first90": 30
+      },
+      "9-12": {
+        "requests": 30,
+        "text_first9": 28,
+        "text_first90": 29
+      }
+    },
+    "habitual": {
+      "requests": 29,
+      "text_first1": 14,
+      "text_first9": 26,
+      "text_first90": 28,
+      "reading_pair_first9": 23,
+      "reading_pair_first90": 25
+    },
+    "saved_C5_surface_written_coverage": {
+      "proper_first9": 81,
+      "proper_first90": 88,
+      "habitual_first9": 26,
+      "habitual_first90": 27
+    },
+    "original_gates": 14,
+    "passed_original_gates": 13,
+    "failed_original_gates": [
+      {
+        "group": "ordinary habitual inputs",
+        "metric": "written text first9",
+        "observed_hits": 26,
+        "required_hits": 27,
+        "requests": 29
+      }
+    ],
+    "runtime_clean": true,
+    "quality_accepted": false,
+    "all_402_signed_vs_saved_C5_surface": {
+      "text_rank": {
+        "gain": 80,
+        "loss": 62,
+        "same": 260
+      },
+      "reading_pair_rank": {
+        "gain": 56,
+        "loss": 56,
+        "same": 290
+      }
+    },
+    "all_signed_text_reading_records_retained_and_independently_reconciled": 804,
+    "complete_pools_and_all_losses_retained_private": true,
+    "successful_subset_replaced_full_denominators": false
+  },
+  "quality_campaign_mechanics": {
+    "explicit_lookup_API_calls": 440,
+    "constructors": 3,
+    "runtime_errors": 0,
+    "capacity_failures": 0,
+    "selection_writes": 0,
+    "query_retries": 0,
+    "normal_inference_internal_model_and_SQL_work": "UNMEASURED_not_zero",
+    "source_shared_process_timings_establish_controlled_latency": false,
+    "source_bound_byte_guard_and_lifecycle_qualification": "Artifact/count/numeric checks and runtime source guards are separate evidence; saved quality audits reconstructed results without new Engine calls."
+  },
+  "decision": {
+    "selected": false,
+    "stopped_after_original_fresh_rejection": true,
+    "later_learned_profile_external_controlled_latency_integration_native_stages_run": false,
+    "production_enabled": false,
+    "new_installer_or_release_created": false,
+    "installed_or_live_typing_or_game_acceptance": false,
+    "published_v1_0_8_unchanged": true,
+    "existing_surface_two_fresh_habitual_failures_claimed_fixed": false,
+    "exposed_project_cases_are_new_heldout_or_representative_accuracy": false
+  },
+  "evidence_sha256": {
+    "fixed_count_and_scoring_policy": "f419f808c441d6d126a3aa2c1902490ab13288f85075dc165b31a6c11cefd4f0",
+    "independent_count_audit": "a6c7c679d632b81fab1f3fc20ecea8f921a478b60ec4e7480a452d3a725505c3",
+    "numeric_report": "500efe3a37f99c4a7b543935258a6c27ed26d66118821d55c9bf2d5bbb29f310",
+    "numeric_artifact_binding": "76105ce82e1a982d99696001b56167dc79bfde753907bc2ca683bab1418641f1",
+    "independent_pilot_audit": "0f3264158bbd12701b259200b540325e337b81cc6bd2429a25055d05dd6b601a",
+    "fresh_producer_report": "f830b0f5a7eed04803dfcab8272cb09d036659d5c57962eaf61a4b49dc95c4a4",
+    "independent_fresh_audit": "bb41e689108bcb9248175c965ae3ea06d7e94f637699d4712ac323df2e565d0a",
+    "assembled_runtime_closure": "04861d60b68ef35a9d7adb95e1f62e66943e3dd115dc67fceedc3c449cee79cb",
+    "assembled_runtime_source_review": "fbcafb3707c72490b8c91c87cb96610c100cc72d20250cebd4651be25e1668ee",
+    "original_release_policy": "5ab132691d4d987290de2afc03db49e6ee688a19082960a1e5d540c10fb499f0"
+  },
+  "summary_authoring_scope": "Aggregate count/numeric metadata and independently audited quality facts; complete private results retained as evidence. Publication exclusion scans are separate from ranking evaluation."
+}

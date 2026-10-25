@@ -500,3 +500,39 @@ normal internal model/SQL work remains unmeasured. Production and v1.0.8
 release assets are unchanged; the horizontal/vertical layout remains in
 development. See the [experiment note](BLENDED_CONTEXT_EXPERIMENT.md) and
 [numeric evidence](self-improvement-cycle7-blended-diagnostic.json).
+
+### Curated sentence-type context: rejected fixed data recipe
+
+A fixed C8 experiment replaces the old conversational character counts with
+counts from the original CTCPC BASE TRAIN split while preserving lexical
+backoff and the surface candidate's other scoring and resource settings.
+Empty exclusion precedes exact nonempty sentence deduplication; admitted Han
+runs produce 1,379,235 character and 1,183,188 adjacent-pair occurrences across
+102,973 sentence types. This is sentence-type-weighted evidence, not natural
+usage frequency. The first-party card declares CC0; row ownership, linguistic
+quality and source-disjointness are not established.
+
+An independent replay matches every count, class ID and payload byte.
+Numerical checks compare 58,478 pairs with zero mismatches across seven complete
+previous-context rows. The 38-call pilot preserves all 19 quantized-zero pools.
+All 402 original fresh calls then complete with no runtime or capacity failure.
+Proper text first-nine/first-90 hits are 85/89 and 88/89, versus the earlier
+surface candidate's 81/89 and 88/89. Length-band first-nine hits are 27/29,
+30/30 and 28/30. Proper exact-reading pairs reach 70/89 and 73/89.
+
+Habitual text first-nine/first-90 hits are 26/29 and 28/29, versus the earlier
+26/29 and 27/29; exact-reading pairs reach 23/29 and 25/29. One of the original
+14 gates still fails: habitual first-nine requires 27/29. The candidate is
+rejected and stops without retuning, learned-profile, external, controlled
+latency, integration or native stages. Across all 402 forms, text ranks have
+80 gains, 62 losses and 260 ties; reading ranks have 56 gains, 56 losses and
+290 ties. Independent saved audits reconcile every result and all 804 signed
+records, retaining all losses and complete denominators.
+
+The two quality stages total 440 lookup calls and three constructors. These
+exposed project results and numerical proofs do not establish representative
+accuracy, controlled performance or release acceptance; normal internal
+model/SQL work remains unmeasured. No context model is enabled or installed,
+and published v1.0.8 remains unchanged. The horizontal/vertical layout remains
+in the development build. See the [experiment note](CURATED_CONTEXT_EXPERIMENT.md)
+and [numeric record](self-improvement-cycle8-curated-diagnostic.json).
