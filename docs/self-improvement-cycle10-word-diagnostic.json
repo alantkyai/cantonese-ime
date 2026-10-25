@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "status": "FRESH_GATES_PASS_SEPARATE_LATER_CHECKS_PENDING",
+  "experiment": "C10_fixed_additive_word_data_with_unchanged_C8_character_factor",
+  "model_selected": false,
+  "production_enabled": false,
+  "native_or_release_acceptance": false,
+  "previous_rejections_preserved": [
+    "C8",
+    "C9"
+  ],
+  "recipe": {
+    "base_word_counts": "Original transcribed-word C4 raw counts, retained exactly",
+    "new_source": "Admitted original CTCPC BASE TRAIN",
+    "admission": "Empty decoded Cantonese excluded first; first exact nonempty whole sentence retained; fixed maximal Han-run instances; existing exact full-run opaque exclusion",
+    "global_run_deduplication": false,
+    "tokenization": "Offline forward-longest exact match over all5591 fixed word surfaces; no training word-length cutoff",
+    "unknown": "Each unmatched scalar ledgered as ID0 and hard adjacency boundary; no observed UNK counts or pairs",
+    "count_combination": "Original plus new known-chain integer counts, coefficient1 each, no rescaling",
+    "natural_frequency_or_linguistic_segmentation_claim": false,
+    "character_factor": "C8 exact, including lexical initial None; no C9 initial marginal",
+    "weights": {
+      "character": 0.5,
+      "word_positive_association": 0.5
+    },
+    "alias_cost": 0.8,
+    "quantization_scale": 1000000,
+    "word_cost_clipped": false,
+    "dictionary_learning_direct_tiers_retained_paths_ties_and_query_caps_unchanged": true
+  },
+  "word_artifact": {
+    "payload_sha256": "f41a775fc578d770b199e8c38cf6c1c1929925da6f1b8d41911c08b05e7a5279",
+    "reader_sha256": "32dbe9f87cfcaea22d71a563786d3d90516a5575a700a11ab267a51da531ada2",
+    "size_bytes": 2699360,
+    "positive_word_IDs": 5591,
+    "unobserved_UNK_buckets": 1,
+    "combined_word_tokens": 1057037,
+    "combined_positive_bigram_types": 216294,
+    "new_data_total_assertions_explicit": true,
+    "word_payload_limit_bytes": 16777216,
+    "header_limit_bytes": 16384,
+    "integer_and_query_resource_caps_unchanged": true,
+    "source_or_pair_pruning_or_count_rescaling": false
+  },
+  "mechanical_evidence": {
+    "independent_count_audit_sha256": "d69cf8a63cc5b8687acc1b5e467602272db0b9b61d41511280969a1ddef51adf",
+    "numeric_report_sha256": "173d9a10f3837ecfca6b006bc20e3533849d3396d7c9c5a35934935b6e4634b8",
+    "agreement_scope": "All original IDs, sentence/run/token/fallback decisions, original/new/combined raw tables, private ledger, full header and payload identity",
+    "numeric_scope": "Bounded normalized word rows, exact arithmetic and initial/zero-outgoing backoff, unclipped costs, immutability and byte-cache/tamper checks",
+    "accuracy_established_by_these_checks": false,
+    "numeric_pairs": 39144,
+    "numeric_complete_previous_rows": 7,
+    "numeric_mismatches": 0,
+    "numeric_unexpected_exceptions": 0,
+    "numeric_explicit_probability_attempts": 39158,
+    "numeric_explicit_cost_attempts": 39158,
+    "numeric_scoring_frames": 117474,
+    "numeric_reader_loads": 3
+  },
+  "setup_attempts": {
+    "first": "Preserved source-assembly failure on exact CRLF/LF pending-entry placeholder before entry writing/model parsing/quality calls",
+    "second": "Separately authorized corrective assembly succeeded",
+    "quality_retry": false
+  },
+  "pilot": {
+    "requests_per_arm": 19,
+    "API_calls": 38,
+    "constructors": 2,
+    "written_first9": 17,
+    "written_first90": 18,
+    "reading_pair_first9": 17,
+    "reading_pair_first90": 18,
+    "text_changes_vs_C8": {
+      "gains": 4,
+      "losses": 1,
+      "ties": 14
+    },
+    "reading_pair_changes_vs_C8": {
+      "gains": 4,
+      "losses": 1,
+      "ties": 14
+    },
+    "original_C5_quantized_zero_full90_floathex_pool_page_controls": {
+      "comparisons": 19,
+      "all_exact": true
+    },
+    "report_sha256": "d6f49a96b4ab71755ce096e6b9f22a6e0019dba6e561526de5fe2aeecb14076c",
+    "independent_audit_sha256": "cc6346ccc6a18445b96550b6784b9f395e9028d4e5cd74d91a31543bded1eeb5"
+  },
+  "fresh": {
+    "status": "TERMINAL_INDEPENDENT_SAVED_AUDIT_PASS",
+    "forms": 402,
+    "cases": 93,
+    "ordinary_proper": 89,
+    "ordinary_habitual": 29,
+    "additional_habitual_control_retained": true,
+    "proper_length_band_denominators": {
+      "4-5": 29,
+      "6-8": 30,
+      "9-12": 30
+    },
+    "metrics": {
+      "proper": {
+        "denominator": 89,
+        "written_first1_9_90": [
+          55,
+          86,
+          89
+        ],
+        "reading_pair_first9_90": [
+          71,
+          73
+        ]
+      },
+      "proper_4_5": {
+        "denominator": 29,
+        "written_first1_9_90": [
+          21,
+          27,
+          29
+        ],
+        "reading_pair_first9_90": [
+          26,
+          28
+        ]
+      },
+      "proper_6_8": {
+        "denominator": 30,
+        "written_first1_9_90": [
+          20,
+          30,
+          30
+        ],
+        "reading_pair_first9_90": [
+          24,
+          24
+        ]
+      },
+      "proper_9_12": {
+        "denominator": 30,
+        "written_first1_9_90": [
+          14,
+          29,
+          30
+        ],
+        "reading_pair_first9_90": [
+          21,
+          21
+        ]
+      },
+      "habitual": {
+        "denominator": 29,
+        "written_first1_9_90": [
+          15,
+          27,
+          28
+        ],
+        "reading_pair_first9_90": [
+          24,
+          25
+        ]
+      }
+    },
+    "all_14_original_gates": true,
+    "failed_gates": [],
+    "runtime_clean": true,
+    "all_804_signed_text_reading_records_retained_privately": true,
+    "signed_text_changes_vs_C8": {
+      "gains": 57,
+      "losses": 17,
+      "ties": 328
+    },
+    "signed_reading_pair_changes_vs_C8": {
+      "gains": 51,
+      "losses": 17,
+      "ties": 334
+    },
+    "report_sha256": "cc43a4020e1539f95e204776b9cc53b9b6b12f6620460777c2bdc40951812882",
+    "independent_audit_sha256": "57b322b7d721781a609b4ac6e2fb43030eebe805a74fd5aa7d75d0216f2d5923",
+    "eligibility": "ELIGIBLE_for_separately_authorized_later_checks_only",
+    "API_calls": 402,
+    "constructors": 1,
+    "all_17_written_rank_losses_and_17_reading_pair_rank_losses_retained_privately": true,
+    "lookup_error_rows": 0,
+    "capacity_failure_rows": 0,
+    "truncated_page_rows": 0
+  },
+  "qualifications": {
+    "exposed_project_cohort": true,
+    "new_blind_source_disjoint_or_representative_accuracy_claim": false,
+    "natural_occurrence_frequency_claim": false,
+    "normalized_independent_joint_language_model_claim": false,
+    "controlled_latency_or_native_typing_established": false,
+    "original_learning_external_performance_integration_native_obligations_unchanged": true,
+    "private_inputs_targets_readings_pools_and_history_excluded": true,
+    "local_paths_accounts_or_identifiers_excluded": true
+  },
+  "actual_execution_totals": {
+    "quality_API_calls": 440,
+    "constructors": 3,
+    "quality_query_retries": 0,
+    "inherited_larger_profile_schedule_is_not_actual_C10_execution": true
+  },
+  "later_stages": {
+    "saved_learning": "UNRUN",
+    "external_replay": "UNRUN",
+    "controlled_latency": "UNRUN",
+    "native_and_integration": "UNRUN",
+    "separate_later_authorization_required": true
+  },
+  "previous_experiments_remain_rejected_and_stopped": true,
+  "release_and_installation": {
+    "version": "1.0.8",
+    "unchanged": true,
+    "UI_layout_development_separate": true
+  },
+  "audit_scope": {
+    "pilot_source_search_included_live_output_before_terminal": true,
+    "exposure_recorded": true,
+    "blinding_claim": false,
+    "pilot_scope_receipt_sha256": "f465cff7c2b11e33ce6e1e1dc932cb025aae4fae1318aab205893fa4e2f7d7e7",
+    "fresh_prerequisite_receipt_sha256": "288969a55e9686d49ef4bce2044c7c758b2abf01743a590b19adc1ec2a11d4fe"
+  }
+}

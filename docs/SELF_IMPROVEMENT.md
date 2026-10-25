@@ -566,3 +566,33 @@ accuracy, causality for an individual failure, performance or release acceptance
 Production context scoring and published v1.0.8 remain unchanged. The layout
 option remains in development. See the [experiment note](INITIAL_CONTEXT_EXPERIMENT.md)
 and [numeric record](self-improvement-cycle9-initial-diagnostic.json).
+
+
+### Additive word context: fresh gates passed; later checks pending
+
+C10 keeps C8's character factor, including lexical initial backoff, and adds
+fixed sentence-type word counts to the original conversational word counts.
+Forward-longest matching preserves all 5,591 word IDs; each unknown scalar
+breaks adjacency and contributes no observed unknown count. The combined
+2,699,360-byte model has 1,057,037 word tokens and 216,294 positive pair types.
+Different source/event units are an explicit mixture, not natural usage
+frequency or validated linguistic segmentation. Weights and query limits stay fixed.
+
+Independent count and numeric proofs pass. The 38-call pilot preserves all
+19 original quantized-zero controls. All 402 original fresh calls then pass
+all 14 unchanged gates: proper text first-nine/first-90 reaches 86/89 and 89/89;
+habitual reaches 27/29 and 28/29. Proper reading pairs reach 71/89 and 73/89;
+habitual pairs reach 24/29 and 25/29. Proper length-band first-nine counts are
+27/29, 30/30 and 29/30. Saved audits reconstruct every row and all 804 signed
+records. Across 402 forms against C8, text ranks have 57 gains, 17 losses and
+328 ties; reading ranks have 51 gains, 17 losses and 334 ties. Every loss is retained.
+
+The two stages total 440 calls and three constructors. A preserved CRLF/LF
+setup failure was corrected before quality queries; it was not a quality retry.
+The pilot auditor's live-output search exposure is recorded without a blinding
+claim. These exposed project results permit separate later checks only. Saved
+learning, external replay, controlled latency and native integration remain
+unrun; no model is selected or enabled. C8/C9 remain rejected. Published v1.0.8
+and installation remain unchanged; horizontal/vertical layout is separate
+development work. See the [experiment note](ADDITIVE_WORD_CONTEXT_EXPERIMENT.md)
+and [aggregate record](self-improvement-cycle10-word-diagnostic.json).
