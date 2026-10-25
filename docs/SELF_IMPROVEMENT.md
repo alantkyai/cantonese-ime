@@ -568,7 +568,7 @@ option remains in development. See the [experiment note](INITIAL_CONTEXT_EXPERIM
 and [numeric record](self-improvement-cycle9-initial-diagnostic.json).
 
 
-### Additive word context: fresh and saved-preference gates passed
+### Additive word context: external completeness rejected
 
 C10 keeps C8's character factor, including lexical initial backoff, and adds
 fixed sentence-type word counts to the original conversational word counts.
@@ -606,11 +606,26 @@ fresh to 6/6 under SHORT and 5/5 under HEAVY, each out of 29. Alternative
 historical readings are retained; these aggregate counts do not establish the
 cause of every change. All losses remain private diagnostic evidence.
 
-C10 quality work now totals 4,862 calls and fourteen top-level constructors.
-These exposed project results permit separate later checks only. External
-replay, controlled latency, whole-text learning/persistence, dense/paging/session
-correctness and native integration remain pending; no model is selected or
-enabled. C8/C9 remain rejected. Published v1.0.8
+The full original external replay then completes 8,000 calls and four serial
+constructors. All 16 numeric relative first-nine gates pass; compact Yale
+improves from 308/500 to 388/500 fresh and from 263/500 to 388/500 with SHORT.
+The full check nevertheless rejects C10: each of the four arms, including the
+frozen legacy control, reports 275 truncated completion pools out of 2,000
+requests. All flagged rows are in the one-to-three-character stratum. No lookup
+or capacity exception occurs, but the original completeness requirement fails.
+No case, control, cap or gate is changed. Independent saved audit reproduces
+the numeric metrics and gates while ending FAIL with 1,100 page/truncation rows
+and two parent runtime/gate-status diagnostics. These are retained negative
+results, not a clean external pass.
+
+C10 quality work totals 12,862 calls and eighteen top-level constructors, with
+no quality-query retry. Controlled latency, actual learning/persistence and
+dense/paging/session correctness, and native integration remain unrun and are
+not authorized after this rejection. The new correctness harness has reviewed
+source and fake evidence only. Investigating inherited completion truncation
+and report semantics is the next step; no model is selected or enabled.
+The exposed external corpus has lexical/training overlap; no held-out claim is
+made. C8/C9 remain rejected. Published v1.0.8
 and installation remain unchanged; horizontal/vertical layout is separate
 development work. See the [experiment note](ADDITIVE_WORD_CONTEXT_EXPERIMENT.md)
 and [aggregate record](self-improvement-cycle10-word-diagnostic.json).

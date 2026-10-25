@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "FRESH_AND_SAVED_PREFERENCE_GATES_PASS_LATER_CHECKS_PENDING",
+  "status": "REJECTED_EXTERNAL_COMPLETENESS_AFTER_FRESH_AND_SAVED_PREFERENCE_PASS",
   "experiment": "C10_fixed_additive_word_data_with_unchanged_C8_character_factor",
   "model_selected": false,
   "production_enabled": false,
@@ -196,20 +196,22 @@
     "local_paths_accounts_or_identifiers_excluded": true
   },
   "actual_execution_totals": {
-    "quality_API_calls": 4862,
-    "top_level_engine_constructors": 14,
+    "quality_API_calls": 12862,
+    "top_level_engine_constructors": 18,
     "quality_query_retries": 0,
     "pilot_calls": 38,
     "fresh_calls": 402,
     "new_profile_calls": 4422,
     "historical_seed_API_calls_not_counted_as_C10_work": true,
-    "normal_internal_model_and_SQL_work_not_instrumented": true
+    "normal_internal_model_and_SQL_work_not_instrumented": true,
+    "external_calls": 8000,
+    "external_constructors": 4
   },
   "later_stages": {
     "saved_preference_regression": "PASS_original_three_profiles_twelve_cells",
-    "external_replay": "UNRUN",
-    "controlled_latency": "UNRUN",
-    "whole_text_learning_persistence_dense_paging_session_correctness": "PENDING",
+    "external_replay": "REJECTED_incomplete_completion_pools_in_all_four_arms",
+    "controlled_latency": "UNRUN_not_authorized_after_external_rejection",
+    "whole_text_learning_persistence_dense_paging_session_correctness": "SOURCE_ONLY_harness_reviewed_actual_execution_UNRUN",
     "native_and_integration": "UNRUN",
     "separate_later_authorization_required": true
   },
@@ -470,5 +472,165 @@
     "eligible_for_separately_authorized_later_checks_only": true,
     "model_selected": false,
     "release_approved": false
+  },
+  "current_experiment_rejected": true,
+  "full_external_acceptance": false,
+  "external_replay": {
+    "status": "TERMINAL_REJECTED_FULL_EXTERNAL_COMPLETENESS",
+    "cases": 500,
+    "forms_per_case": 4,
+    "profiles": [
+      "fresh",
+      "original_SHORT"
+    ],
+    "models": [
+      "frozen_1_0_6_control",
+      "C10_surface_050"
+    ],
+    "API_calls": 8000,
+    "top_level_constructors": 4,
+    "quality_query_retries": 0,
+    "all8000_requests_retained": true,
+    "all16_numeric_relative_gates_pass": true,
+    "full_acceptance": false,
+    "mechanical_complete": true,
+    "all_searches_complete": false,
+    "producer_aggregate_regression_flag": false,
+    "all_original_caps_cases_and_gates_unchanged": true,
+    "metrics": {
+      "fresh:strict_jyutping_toned:all": {
+        "requests": 500,
+        "before_first9": 389,
+        "after_first9": 446,
+        "delta_percentage_points": 11.4
+      },
+      "fresh:strict_jyutping_toned:speech_span_4plus": {
+        "requests": 217,
+        "before_first9": 128,
+        "after_first9": 180,
+        "delta_percentage_points": 23.963133640552996
+      },
+      "fresh:strict_jyutping_tone_free:all": {
+        "requests": 500,
+        "before_first9": 330,
+        "after_first9": 394,
+        "delta_percentage_points": 12.8
+      },
+      "fresh:strict_jyutping_tone_free:speech_span_4plus": {
+        "requests": 217,
+        "before_first9": 86,
+        "after_first9": 136,
+        "delta_percentage_points": 23.04147465437788
+      },
+      "fresh:plain_yale_compact:all": {
+        "requests": 500,
+        "before_first9": 308,
+        "after_first9": 388,
+        "delta_percentage_points": 16.0
+      },
+      "fresh:plain_yale_compact:speech_span_4plus": {
+        "requests": 217,
+        "before_first9": 67,
+        "after_first9": 132,
+        "delta_percentage_points": 29.953917050691246
+      },
+      "fresh:plain_yale_apostrophes:all": {
+        "requests": 500,
+        "before_first9": 310,
+        "after_first9": 388,
+        "delta_percentage_points": 15.6
+      },
+      "fresh:plain_yale_apostrophes:speech_span_4plus": {
+        "requests": 217,
+        "before_first9": 69,
+        "after_first9": 132,
+        "delta_percentage_points": 29.032258064516128
+      },
+      "short:strict_jyutping_toned:all": {
+        "requests": 500,
+        "before_first9": 389,
+        "after_first9": 446,
+        "delta_percentage_points": 11.4
+      },
+      "short:strict_jyutping_toned:speech_span_4plus": {
+        "requests": 217,
+        "before_first9": 128,
+        "after_first9": 180,
+        "delta_percentage_points": 23.963133640552996
+      },
+      "short:strict_jyutping_tone_free:all": {
+        "requests": 500,
+        "before_first9": 330,
+        "after_first9": 394,
+        "delta_percentage_points": 12.8
+      },
+      "short:strict_jyutping_tone_free:speech_span_4plus": {
+        "requests": 217,
+        "before_first9": 86,
+        "after_first9": 136,
+        "delta_percentage_points": 23.04147465437788
+      },
+      "short:plain_yale_compact:all": {
+        "requests": 500,
+        "before_first9": 263,
+        "after_first9": 388,
+        "delta_percentage_points": 25.0
+      },
+      "short:plain_yale_compact:speech_span_4plus": {
+        "requests": 217,
+        "before_first9": 32,
+        "after_first9": 132,
+        "delta_percentage_points": 46.08294930875576
+      },
+      "short:plain_yale_apostrophes:all": {
+        "requests": 500,
+        "before_first9": 264,
+        "after_first9": 388,
+        "delta_percentage_points": 24.8
+      },
+      "short:plain_yale_apostrophes:speech_span_4plus": {
+        "requests": 217,
+        "before_first9": 33,
+        "after_first9": 132,
+        "delta_percentage_points": 45.6221198156682
+      }
+    },
+    "completion_truncation": {
+      "requests_per_arm": 2000,
+      "truncated_requests_per_arm": 275,
+      "all_four_arms_identical": true,
+      "forms": {
+        "strict_jyutping_toned": 49,
+        "strict_jyutping_tone_free": 74,
+        "plain_yale_compact": 76,
+        "plain_yale_apostrophes": 76
+      },
+      "all_flagged_rows_in_1_to_3_character_stratum": true,
+      "lookup_exception_rows": 0,
+      "capacity_exception_rows": 0
+    },
+    "independent_saved_audit": {
+      "status": "FAIL_saved_C10_external500_reconciliation",
+      "reconciliation_error_count": 1102,
+      "page_or_truncation_rows": 1100,
+      "parent_diagnostics": [
+        "parent_runtime_artifact_failure",
+        "producer_gate_eligibility_reconciliation"
+      ],
+      "metrics_and_16_gate_values_exactly_match_producer": true,
+      "source_transcripts_rederived": 58,
+      "original_fixture_provenance_rederived": true,
+      "all_read_input_hashes_unchanged": true,
+      "eligible_for_later_checks": false,
+      "quality_Engine_SQL_model_history_calls": 0
+    },
+    "report_sha256": "379982b964149311e21a55521ffa7728ffba6d997ac97e00d0fc22d026729eab",
+    "independent_aggregate_sha256": "b9cc2a0660c7c0e97986026680af6fe2876b2ecd2e79218eed08994c1ec5d8f3",
+    "qualification": "Previously exposed corpus with lexical/training overlap; no new blind or held-out claim",
+    "raw_pools_readings_inputs_targets_and_signed_changes_private": true,
+    "model_selected": false,
+    "production_enabled": false,
+    "release_approved": false,
+    "next": "Investigate inherited completion-pool truncation and aggregate status semantics under the original gates; no latency/correctness/native execution follows this failure"
   }
 }
