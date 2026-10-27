@@ -26,6 +26,10 @@ High Contrast uses system colors and full opacity automatically. If an app
 draws its own candidate list, that app controls the list's appearance.
 Saved appearance choices are kept at:
   %LOCALAPPDATA%\CantoneseIME\appearance.ini
+To use another installed font or size, add lines like these under [global]
+in that file (font accepts English or Chinese names; size 10-48, default 20):
+  font=Microsoft JhengHei
+  font_size=24
 
 Candidate preferences and phrases are learned locally on this computer.
 Choosing ng -> 唔 also helps longer combinations such as ngho -> 唔好 and

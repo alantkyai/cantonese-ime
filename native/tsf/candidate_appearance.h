@@ -13,11 +13,17 @@
 namespace cime::ui {
 enum class CandidateTheme { Dark, Light, System };
 struct AppearanceSettings {
+    AppearanceSettings() = default;
+    AppearanceSettings(CandidateTheme theme_value, int opacity_value, std::wstring family = {}, int size = 0)
+        : theme(theme_value), opacity_percent(opacity_value), font_family(std::move(family)), font_size(size) {}
     CandidateTheme theme = CandidateTheme::Dark;
     int opacity_percent = 95;
+    std::wstring font_family; // Empty: bundled font, then the built-in fallbacks.
+    int font_size = 0;        // Logical pixels before DPI scaling; 0: default.
 };
 inline bool operator==(const AppearanceSettings& a, const AppearanceSettings& b) {
-    return a.theme == b.theme && a.opacity_percent == b.opacity_percent;
+    return a.theme == b.theme && a.opacity_percent == b.opacity_percent
+        && a.font_family == b.font_family && a.font_size == b.font_size;
 }
 struct AppearancePalette {
     COLORREF background, text, highlight, highlight_text, border;
@@ -26,6 +32,13 @@ struct AppearancePalette {
 };
 
 inline bool ValidPanelOpacity(int value) { return value == 100 || value == 95 || value == 90 || value == 85; }
+inline bool ValidFontSize(int value) { return value == 0 || (value >= 10 && value <= 48); }
+// A GDI face name is shorter than LF_FACESIZE and has no control characters.
+inline bool ValidFontFamily(const std::wstring& value) {
+    if (value.size() >= LF_FACESIZE) return false;
+    for (wchar_t c : value) if (c < 32 || c == 127) return false;
+    return true;
+}
 inline BYTE PanelAlpha(int value) {
     return static_cast<BYTE>(((ValidPanelOpacity(value) ? value : 95) * 255 + 50) / 100);
 }
@@ -88,8 +101,33 @@ inline bool ValidKey(const std::string& value) {
         if (!(value[i] >= '0' && value[i] <= '9') && !(value[i] >= 'a' && value[i] <= 'f')) return false;
     return true;
 }
+inline std::wstring Utf8ToWide(const std::string& value) {
+    if (value.empty() || value.size() > 1024) return {};
+    const int count = MultiByteToWideChar(CP_UTF8, MB_ERR_INVALID_CHARS, value.data(), static_cast<int>(value.size()), nullptr, 0);
+    if (count <= 0) return {};
+    std::wstring result(count, L'\0');
+    if (!MultiByteToWideChar(CP_UTF8, MB_ERR_INVALID_CHARS, value.data(), static_cast<int>(value.size()), result.data(), count)) return {};
+    return result;
+}
+inline std::string WideToUtf8(const std::wstring& value) {
+    if (value.empty()) return {};
+    const int count = WideCharToMultiByte(CP_UTF8, 0, value.data(), static_cast<int>(value.size()), nullptr, 0, nullptr, nullptr);
+    if (count <= 0) return {};
+    std::string result(count, '\0');
+    if (!WideCharToMultiByte(CP_UTF8, 0, value.data(), static_cast<int>(value.size()), result.data(), count, nullptr, nullptr)) return {};
+    return result;
+}
 inline void ApplyField(AppearanceSettings& settings, const std::string& key, const std::string& value) {
-    if (key == "theme") {
+    if (key == "font") {
+        // An empty value restores the default; an invalid name is ignored.
+        const std::wstring family = Utf8ToWide(value);
+        if (value.empty() || (!family.empty() && ValidFontFamily(family))) settings.font_family = family;
+    } else if (key == "font_size") {
+        if (!value.empty() && value.size() <= 2 && value.find_first_not_of("0123456789") == std::string::npos) {
+            const int size = std::stoi(value);
+            if (ValidFontSize(size)) settings.font_size = size;
+        }
+    } else if (key == "theme") {
         if (value == "dark") settings.theme = CandidateTheme::Dark;
         else if (value == "light") settings.theme = CandidateTheme::Light;
         else if (value == "system") settings.theme = CandidateTheme::System;
@@ -104,7 +142,8 @@ inline Document Parse(const std::string& text) {
     Document output;
     if (text.size() > kMaxSettingsBytes || text.find('\0') != std::string::npos) return output;
     std::map<std::string, std::map<std::string, std::string>> sections;
-    std::istringstream input(text); std::string line, section;
+    // Notepad may save a hand-edited file with a UTF-8 byte order mark.
+    std::istringstream input(text.compare(0, 3, "\xEF\xBB\xBF") ? text : text.substr(3)); std::string line, section;
     while (std::getline(input, line)) {
         line = Trim(line);
         if (line.empty() || line[0] == ';' || line[0] == '#') continue;
@@ -116,7 +155,7 @@ inline Document Parse(const std::string& text) {
         const auto equals = line.find('=');
         if (section.empty() || equals == std::string::npos) continue;
         const std::string key = Trim(line.substr(0, equals));
-        if (key != "theme" && key != "opacity") continue;
+        if (key != "theme" && key != "opacity" && key != "font" && key != "font_size") continue;
         if (sections.size() >= kMaxApplications + 1 && !sections.count(section)) continue;
         sections[section][key] = Trim(line.substr(equals + 1));
     }
@@ -137,7 +176,12 @@ inline std::string Serialize(const Document& document) {
     output << "; Cantonese IME candidate panel. App identifiers are hashed executable paths.\r\n";
     const auto write = [&output](const std::string& section, const AppearanceSettings& value) {
         output << '[' << section << "]\r\ntheme=" << ThemeName(value.theme) << "\r\nopacity="
-            << (ValidPanelOpacity(value.opacity_percent) ? value.opacity_percent : 95) << "\r\n\r\n";
+            << (ValidPanelOpacity(value.opacity_percent) ? value.opacity_percent : 95) << "\r\n";
+        // Keep hand-edited font choices when a menu change rewrites the file.
+        if (!value.font_family.empty() && ValidFontFamily(value.font_family))
+            output << "font=" << WideToUtf8(value.font_family) << "\r\n";
+        if (value.font_size && ValidFontSize(value.font_size)) output << "font_size=" << value.font_size << "\r\n";
+        output << "\r\n";
     };
     write("global", document.global);
     for (const auto& entry : document.applications) if (ValidKey(entry.first)) write(entry.first, entry.second);
@@ -216,7 +260,8 @@ public:
         return SetLayeredWindowAttributes(window, 0, Effective().alpha, LWA_ALPHA) != FALSE;
     }
     bool SetForApp(AppearanceSettings settings) {
-        if (!ValidPanelOpacity(settings.opacity_percent)
+        if (!ValidPanelOpacity(settings.opacity_percent) || !ValidFontSize(settings.font_size)
+            || !ValidFontFamily(settings.font_family)
             || (settings.theme != CandidateTheme::Dark && settings.theme != CandidateTheme::Light && settings.theme != CandidateTheme::System)) return false;
         Load(); current_ = settings; overridden_ = true;
         saved_ = Persist(false); return saved_;

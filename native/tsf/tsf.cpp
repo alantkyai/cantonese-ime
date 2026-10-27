@@ -345,6 +345,7 @@ private:
     static LRESULT CALLBACK WindowProcedure(HWND, UINT, WPARAM, LPARAM);
     void Paint(HWND);
     HFONT CandidateFont(HDC dc);
+    int CandidateFontHeight();
     std::wstring CandidateLabel(std::size_t index) const;
     static constexpr UINT kReflowCandidates = WM_APP + 0x4c1;
     Ptr<ITfThreadMgr> manager_;
@@ -760,7 +761,7 @@ void TextService::UpdateWindowState() {
     if (old && old != HGDI_ERROR) SelectObject(dc, old);
     if (font) DeleteObject(font);
     ReleaseDC(window_, dc);
-    candidate_layout_ = cime::ui::MakeLayout(widths, std::max<int>(metrics.tmHeight, cime::ui::Scale(cime::ui::kCandidateFontLogicalHeight, candidate_dpi_)),
+    candidate_layout_ = cime::ui::MakeLayout(widths, std::max<int>(metrics.tmHeight, cime::ui::Scale(CandidateFontHeight(), candidate_dpi_)),
         std::min(cime::ui::Scale(480, candidate_dpi_), work.right - work.left), work.bottom - work.top, candidate_dpi_, selected_);
     const auto placed = cime::ui::PlacePopup(candidate_layout_, anchor, work, cime::ui::Scale(3, candidate_dpi_));
     if (placed.Empty()) { ShowWindow(window_, SW_HIDE); return; }
@@ -798,10 +799,15 @@ LRESULT CALLBACK TextService::WindowProcedure(HWND window, UINT message, WPARAM 
     if (message == WM_NCDESTROY) SetWindowLongPtrW(window, GWLP_USERDATA, 0);
     return DefWindowProcW(window, message, wparam, lparam);
 }
+int TextService::CandidateFontHeight() {
+    const int size = candidate_appearance_.Current().font_size;
+    return size ? size : cime::ui::kCandidateFontLogicalHeight;
+}
 HFONT TextService::CandidateFont(HDC dc) {
     const bool bundled = private_candidate_font_.EnsureForModule(g_instance);
+    const auto settings = candidate_appearance_.Current();
     return cime::ui::CreateCandidateFont(dc, candidate_dpi_, bundled ? cime::ui::kBundledCandidateFontFamily : nullptr,
-        cime::ui::kCandidateFontLogicalHeight);
+        CandidateFontHeight(), settings.font_family.empty() ? nullptr : settings.font_family.c_str());
 }
 std::wstring TextService::CandidateLabel(std::size_t index) const {
     if (index >= page_.candidates.size()) return {};

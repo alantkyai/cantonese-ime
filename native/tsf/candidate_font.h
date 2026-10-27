@@ -144,7 +144,31 @@ inline HFONT TryCandidateFont(HDC dc, unsigned dpi, const wchar_t* family, int l
     return font;
 }
 
-inline HFONT CreateCandidateFont(HDC dc, unsigned dpi, const wchar_t* preferred_family, int logical_height) {
+inline int CALLBACK CandidateFontFound(const LOGFONTW*, const TEXTMETRICW*, DWORD, LPARAM found) {
+    *reinterpret_cast<bool*>(found) = true;
+    return 0;
+}
+
+// A user-chosen face may be written in English or its localized name (for
+// example Microsoft JhengHei's Chinese name), so GetTextFaceW can legitimately
+// report the other name.
+// Enumeration matches either, and still rejects an absent font that GDI would
+// otherwise silently substitute.
+inline HFONT TryUserCandidateFont(HDC dc, unsigned dpi, const wchar_t* family, int logical_height) {
+    if (!dc || !family || !*family || logical_height <= 0 || lstrlenW(family) >= LF_FACESIZE) return nullptr;
+    LOGFONTW query{};
+    query.lfCharSet = DEFAULT_CHARSET;
+    lstrcpynW(query.lfFaceName, family, LF_FACESIZE);
+    bool found = false;
+    EnumFontFamiliesExW(dc, &query, CandidateFontFound, reinterpret_cast<LPARAM>(&found), 0);
+    if (!found) return nullptr;
+    return CreateFontW(-Scale(logical_height, dpi), 0, 0, 0, FW_NORMAL, FALSE, FALSE, FALSE,
+        DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, CLEARTYPE_QUALITY, DEFAULT_PITCH, family);
+}
+
+inline HFONT CreateCandidateFont(HDC dc, unsigned dpi, const wchar_t* preferred_family, int logical_height,
+                                 const wchar_t* user_family = nullptr) {
+    if (HFONT font = TryUserCandidateFont(dc, dpi, user_family, logical_height)) return font;
     const wchar_t* families[]{preferred_family, L"Microsoft JhengHei UI", L"Microsoft JhengHei", L"Segoe UI"};
     for (const wchar_t* family : families)
         if (HFONT font = TryCandidateFont(dc, dpi, family, logical_height)) return font;

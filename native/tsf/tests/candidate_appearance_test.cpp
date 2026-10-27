@@ -1,6 +1,7 @@
 // Uses only an explicit disposable fixture directory and hidden native windows.
 // Does not read the user's appearance settings, learning data, or input state.
 #include "../candidate_appearance.h"
+#include "../candidate_font.h"
 #include <cassert>
 #include <iostream>
 
@@ -54,6 +55,51 @@ int wmain(int argc, wchar_t** argv) {
     assert(appearance_detail::Parse(std::string(65537, 'a')).applications.empty());
     assert(appearance_detail::Parse(std::string("[global]\ntheme=light\0", 22)).global.theme == CandidateTheme::Dark);
     assert(appearance_detail::Parse("[app-000000000000000G]\ntheme=light\n").applications.empty());
+    // Hand-edited font choices: UTF-8 names, size bounds, app inheritance, BOM.
+    const std::string jhenghei_utf8 = "\xE5\xBE\xAE\xE8\xBB\x9F\xE6\xAD\xA3\xE9\xBB\x91\xE9\xAB\x94";
+    const std::wstring jhenghei_local = L"微軟正黑體";
+    const auto fonts = appearance_detail::Parse("\xEF\xBB\xBF[global]\nfont= Segoe UI \nfont_size=24\n[" + game_key
+        + "]\nfont=" + jhenghei_utf8 + "\nfont_size=99\n[" + editor_key + "]\nfont=" + std::string(40, 'x') + "\nfont_size=9\n");
+    assert(fonts.global.font_family == L"Segoe UI" && fonts.global.font_size == 24);
+    assert(fonts.applications.at(game_key).font_family == jhenghei_local && fonts.applications.at(game_key).font_size == 24);
+    assert(fonts.applications.at(editor_key).font_family == L"Segoe UI" && fonts.applications.at(editor_key).font_size == 24);
+    assert(appearance_detail::Parse("[global]\nfont=Segoe UI\nfont=\n").global.font_family.empty());
+    assert(appearance_detail::Parse("[global]\nfont_size=-5\nfont_size=4x\n").global.font_size == 0);
+    assert(appearance_detail::Parse("[global]\nfont=bad\xff\n").global.font_family.empty());
+    // A menu change rewrites the file and must keep the hand-edited font lines.
+    Fixture(path, "[global]\ntheme=dark\nfont=" + jhenghei_utf8 + "\nfont_size=28\n");
+    app.Reload();
+    AppearanceSettings themed = app.Current(); themed.theme = CandidateTheme::Light;
+    assert(app.SetForApp(themed));
+    app.Reload();
+    assert(app.Current().font_family == jhenghei_local && app.Current().font_size == 28 && app.Current().theme == CandidateTheme::Light);
+    other.Reload(); assert(other.Current().font_family == jhenghei_local && other.Current().theme == CandidateTheme::Dark);
+    assert(appearance_detail::Read(path).find("font=" + jhenghei_utf8) != std::string::npos);
+    themed.font_size = 9; assert(!app.SetForApp(themed));
+    assert(app.ResetForApp());
+    // User font resolution: an installed face (English or localized name) wins;
+    // an absent face falls back to the existing order instead of substitution.
+    {
+        HDC dc = CreateCompatibleDC(nullptr); assert(dc);
+        const auto face = [dc](HFONT font) {
+            HGDIOBJ previous = SelectObject(dc, font); wchar_t name[LF_FACESIZE]{};
+            GetTextFaceW(dc, LF_FACESIZE, name); SelectObject(dc, previous); return std::wstring(name);
+        };
+        HFONT segoe = CreateCandidateFont(dc, 96, nullptr, 24, L"Segoe UI"); assert(segoe);
+        LOGFONTW specification{}; assert(GetObjectW(segoe, sizeof(specification), &specification));
+        assert(specification.lfHeight == -24 && face(segoe) == L"Segoe UI"); DeleteObject(segoe);
+        assert(!TryUserCandidateFont(dc, 96, L"CantoneseMissingCandidateFont123", 20));
+        assert(!TryUserCandidateFont(dc, 96, std::wstring(LF_FACESIZE, L'x').c_str(), 20));
+        assert(!TryUserCandidateFont(dc, 96, L"Segoe UI", 0));
+        HFONT fallback = CreateCandidateFont(dc, 96, nullptr, 20, L"CantoneseMissingCandidateFont123"); assert(fallback);
+        assert(face(fallback) != L"CantoneseMissingCandidateFont123"); DeleteObject(fallback);
+        if (HFONT english = TryUserCandidateFont(dc, 96, L"Microsoft JhengHei", 20)) {
+            DeleteObject(english);
+            HFONT localized = TryUserCandidateFont(dc, 96, jhenghei_local.c_str(), 20); assert(localized); DeleteObject(localized);
+        }
+        DeleteDC(dc);
+    }
+
     assert(PanelAlpha(100) == 255 && PanelAlpha(95) == 242 && PanelAlpha(90) == 230 && PanelAlpha(85) == 217);
     assert(PanelAlpha(5) == 242);
     const auto dark = ResolveAppearance({CandidateTheme::Dark,85}, false);

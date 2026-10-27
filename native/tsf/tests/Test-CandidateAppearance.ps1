@@ -12,7 +12,7 @@ $headerPath = Join-Path $PSScriptRoot '../candidate_appearance.h'
 $exe = Join-Path $outputPath 'CandidateAppearanceTest.exe'
 $arguments = @('-std=c++17','-O2','-Wall','-Wextra','-Werror','-DUNICODE','-D_UNICODE','-DWIN32_LEAN_AND_MEAN','-DNOMINMAX',
     '-D_WIN32_WINNT=0x0A00','-DWINVER=0x0A00','-static','-municode','-Wl,--no-undefined','-Wl,--dynamicbase','-Wl,--nxcompat',
-    $sourcePath,'-o',$exe,'-luser32','-lshell32')
+    $sourcePath,'-o',$exe,'-luser32','-lshell32','-lgdi32')
 & $compilerPath @arguments
 if ($LASTEXITCODE -ne 0) { throw "Appearance test build failed with exit code $LASTEXITCODE" }
 $output = & $exe (Join-Path $outputPath 'fixture')

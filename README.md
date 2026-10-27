@@ -91,6 +91,23 @@ for this app** restores its default. Settings are stored at
 uninstall. Applications that draw their own TSF candidate list control that
 list's appearance.
 
+To use another installed font or size, edit `appearance.ini` (UTF-8) in a text
+editor. Put the lines under `[global]` for every application, or under an
+application's `[app-…]` section for that application only:
+
+```ini
+[global]
+font=Microsoft JhengHei
+font_size=24
+```
+
+`font` accepts an installed family's English or localized name (for example
+`微軟正黑體`). If that font is not installed, the panel falls back to the default
+order. `font_size` is 10–48 logical pixels before DPI scaling; the default is 20.
+An empty `font=` restores the bundled font. Changes apply the next time the panel
+opens, and choices made from the right-click menu keep these lines. Sandboxed
+(AppContainer) applications cannot read the file and use the defaults.
+
 The package is unsigned. Windows may display an unknown-publisher or SmartScreen
 warning. Support is scoped to native 64-bit desktop applications on Windows x64;
 32-bit applications, ARM64 and secure/password fields are outside this release.
