@@ -7,8 +7,9 @@ Each non-blank line not starting with ``#`` is one of:
 
 Phrase keys and spellings are 1-32 ASCII letters (case-insensitive). Phrase
 text is the rest of the line, up to 64 characters. A key may repeat; its
-phrases are offered in file order. Alias targets must be toneless syllables of
-the loaded lexicon; the engine ignores unknown targets. Invalid lines are
+phrases are offered in file order. An alias target is a toneless Jyutping
+syllable (``mun``) or any spelling the IME already accepts (``cheut``, which
+means ceot/coet); the engine ignores targets it cannot resolve. Invalid lines are
 counted and skipped so one typo never disables the whole file.
 """
 

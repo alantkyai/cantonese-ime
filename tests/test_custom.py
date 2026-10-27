@@ -80,6 +80,14 @@ class EngineCustomTests(unittest.TestCase):
         self.custom.unlink()
         self.assertEqual(self.texts(engine, "hh"), [])
 
+    def test_alias_target_may_be_a_known_spelling_but_never_another_alias(self) -> None:
+        engine = self.engine()
+        # lay is a built-in forgiving spelling of nei; nee then reaches 你.
+        self.write("nee = lay\nnnn = nee\n")
+        self.assertEqual(self.texts(engine, "nee")[0], "你")
+        self.assertEqual(engine.lookup("nee")[0].match_type, "fuzzy")
+        self.assertEqual(self.texts(engine, "nnn"), [])
+
     def test_unreadable_file_keeps_last_entries_and_lookups_continue(self) -> None:
         self.write("hh 曈曈\n")
         engine = self.engine()

@@ -61,11 +61,14 @@ hh 曈曈
 hh 瞳瞳
 # A spelling: moon is read as the Jyutping syllable mun (moon -> 門, moonhau -> 門口)
 moon = mun
+# The target may also be a spelling the IME already accepts: cheut means ceot
+chut = cheut
 ```
 
 Keys and spellings are 1–32 ASCII letters; phrase text is up to 64 characters.
-Alias targets must be toneless syllables present in the lexicon. Invalid lines
-are skipped. Custom phrases are never written to learning memory, and the file
+An alias target is a toneless Jyutping syllable or a spelling the IME already
+accepts; targets resolve against built-in spellings only, so aliases do not
+chain. Invalid lines and unresolved targets are skipped. Custom phrases are never written to learning memory, and the file
 is only read, never modified. Upgrades and uninstall keep it.
 
 ## Candidate appearance
