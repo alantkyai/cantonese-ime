@@ -246,6 +246,16 @@ class PoolLifecycleTests(unittest.TestCase):
         self.assertLess(api.kernel.calls.index(("engine_closed", None)), close_index)
         self.assertEqual(api.kernel.calls[-1], ("free_security", "descriptor"))
 
+    def test_pipe_security_admits_sandboxed_same_user_clients_only(self):
+        sddl = server.pipe_security_sddl("S-1-5-21-1-2-3-1001")
+        dacl, sacl = sddl.split("S:")
+        self.assertTrue(dacl.startswith("D:P"))  # protected: no inherited ACEs
+        self.assertEqual(set(dacl[3:].strip("()").split(")(")), {
+            "A;;GA;;;SY", "A;;GA;;;S-1-5-21-1-2-3-1001", "A;;GRGW;;;AC", "A;;GRGW;;;S-1-15-2-2"})
+        self.assertEqual(sacl, "(ML;;NW;;;LW)")
+        for broad in ("WD", "AN", "AU", "BU", "NU"):
+            self.assertNotIn(f";;;{broad})", dacl)
+
     def test_partial_pipe_creation_failure_closes_owned_handles_and_security(self):
         api = FakeApi(fail_create_at=3)
         with tempfile.TemporaryDirectory() as temporary:

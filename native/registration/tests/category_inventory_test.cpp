@@ -29,8 +29,12 @@ void Release(const CategoryLinks& links) {
 }
 
 int main() {
-    auto expected = Fixture(4);
-    assert(ValidateCategoryLinks(expected) == std::vector<unsigned>({0, 1, 2, 3})); ++checks;
+    auto expected = Fixture(kCategoryCount);
+    assert(ValidateCategoryLinks(expected) == std::vector<unsigned>({0, 1, 2, 3, 4})); ++checks;
+    // A 1.0.8 install has the four pre-immersive memberships; refresh adds the fifth.
+    const auto pre_immersive = Fixture(4);
+    assert(ValidateCategoryLinks(pre_immersive) == std::vector<unsigned>({0, 1, 2, 3})); ++checks;
+    Reject([&] { Release(pre_immersive); });
     auto original = Fixture(3);
     // Empty known category parents left by an earlier rollback are not members.
     original.reverse.emplace(Guid(*kCategories[3]), std::vector<std::wstring>{});
@@ -39,7 +43,7 @@ int main() {
     Release(expected);
     assert(cached_com_view.size() != ValidateCategoryLinks(expected).size()); ++checks;
     const auto removal_members = ValidateCategoryLinks(expected);
-    assert(removal_members.size() == 4 && std::find(removal_members.begin(), removal_members.end(), 3) != removal_members.end());
+    assert(removal_members.size() == kCategoryCount && std::find(removal_members.begin(), removal_members.end(), 3) != removal_members.end());
     // Removal follows persisted membership, including SYSTRAY omitted by an
     // older COM view. A residual forward/reverse SYSTRAY leaf still blocks it.
     auto only_systray_left = Fixture(4);

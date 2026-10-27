@@ -1,5 +1,6 @@
 #include "ipc.h"
 
+#include <aclapi.h>
 #include <sddl.h>
 #include <algorithm>
 #include <limits>
@@ -41,11 +42,35 @@ std::wstring CurrentSid() {
     return UserSid(token.value);
 }
 
+bool CurrentProcessIsAppContainer() {
+    HANDLE raw = nullptr;
+    if (!OpenProcessToken(GetCurrentProcess(), TOKEN_QUERY, &raw)) return false;
+    Handle token(raw);
+    DWORD value = 0, length = 0;
+    return GetTokenInformation(token.value, TokenIsAppContainer, &value, sizeof(value), &length) && value;
+}
+
+// An AppContainer token cannot open the broker process (its DACL has no
+// app-package ACE). The pipe handle is already open with READ_CONTROL, so
+// compare the pipe object's owner, which is the creating token's owner.
+bool PipeOwnerIsCurrentUser(HANDLE pipe) {
+    PSID owner = nullptr;
+    PSECURITY_DESCRIPTOR descriptor = nullptr;
+    if (GetSecurityInfo(pipe, SE_KERNEL_OBJECT, OWNER_SECURITY_INFORMATION, &owner, nullptr, nullptr, nullptr,
+            &descriptor) != ERROR_SUCCESS) return false;
+    std::wstring result;
+    LPWSTR text = nullptr;
+    if (owner && ConvertSidToStringSidW(owner, &text)) { result = text; LocalFree(text); }
+    LocalFree(descriptor);
+    return !result.empty() && result == CurrentSid();
+}
+
 bool ServerIsCurrentUser(HANDLE pipe) {
     ULONG pid = 0;
     if (!GetNamedPipeServerProcessId(pipe, &pid)) return false;
     Handle process(OpenProcess(PROCESS_QUERY_LIMITED_INFORMATION, FALSE, pid));
-    if (process.value == INVALID_HANDLE_VALUE || !process.value) return false;
+    if (process.value == INVALID_HANDLE_VALUE || !process.value)
+        return CurrentProcessIsAppContainer() && PipeOwnerIsCurrentUser(pipe);
     HANDLE raw = nullptr;
     if (!OpenProcessToken(process.value, TOKEN_QUERY, &raw)) return false;
     Handle token(raw);

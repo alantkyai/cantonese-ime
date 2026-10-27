@@ -44,7 +44,7 @@ Each candidate consists of `u32 textByteLength`, UTF-8 text, `u32 readingByteLen
 
 ## Transport and failure behavior
 
-The named-pipe endpoint is `\\.\pipe\CantoneseIME-<Windows user SID>-<Windows session ID>`. The broker restricts its security descriptor to the current user and SYSTEM, rejects remote clients and requests exclusive ownership when creating its first pipe instance. The native client checks the server process's user SID against its own token. This is a local same-user boundary; it does not protect against another process already controlled by that same user.
+The named-pipe endpoint is `\\.\pipe\CantoneseIME-<Windows user SID>-<Windows session ID>`. The broker grants full access to the current user and SYSTEM and read/write to app packages (`AC`, `S-1-15-2-2`) with a low mandatory label, so AppContainer hosts of the same user can connect; it has no Everyone/anonymous ACE, rejects remote clients and requests exclusive ownership when creating its first pipe instance. The native client checks the server process's user SID against its own token. Inside an AppContainer, where the broker process cannot be opened, it instead compares the pipe object's owner SID with its own user SID. This is a local same-user boundary; it does not protect against another process already controlled by that same user.
 
 The native client uses a bounded lookup deadline and discards failed or stale responses. Failure must not commit a guessed result. Initial failure can leave a Latin key available to the host; an existing composition must remain recoverable through its documented literal-commit or cancel controls. Actual transport timing, focus behavior and recovery still require Windows testing.
 

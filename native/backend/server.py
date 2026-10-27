@@ -39,6 +39,18 @@ WAIT_TIMEOUT = 258
 WAIT_FAILED = 0xFFFFFFFF
 
 
+def pipe_security_sddl(sid: str) -> str:
+    """The connected user and SYSTEM, plus read/write for sandboxed apps.
+
+    AppContainer (ALL APPLICATION PACKAGES / ALL RESTRICTED APPLICATION
+    PACKAGES) hosts run with the same user SID but need their own ACE, and a
+    low mandatory label lets their low-integrity token write. No Everyone or
+    anonymous ACE; remote clients stay rejected by the pipe mode.
+    """
+    return (f"D:P(A;;GA;;;SY)(A;;GA;;;{sid})(A;;GRGW;;;AC)(A;;GRGW;;;S-1-15-2-2)"
+            "S:(ML;;NW;;;LW)")
+
+
 class _AsyncLog:
     """Keep file opens/writes out of pipe worker reconnect and request paths."""
 
@@ -199,9 +211,8 @@ class Win32:
 
     def security(self, sid: str):
         descriptor = w.LPVOID()
-        # The connected user's token and SYSTEM only; no Everyone/anonymous ACE.
         self.checked(self.advapi.ConvertStringSecurityDescriptorToSecurityDescriptorW(
-            f"D:P(A;;GA;;;SY)(A;;GA;;;{sid})", 1, ctypes.byref(descriptor), None))
+            pipe_security_sddl(sid), 1, ctypes.byref(descriptor), None))
         return descriptor, SecurityAttributes(ctypes.sizeof(SecurityAttributes), descriptor, False)
 
     def create_pipe(self, name: str, attributes, *, first: bool):
@@ -396,16 +407,19 @@ def _watch_stop_file(path: Path, instance: str, stop: threading.Event):
 
 
 @contextmanager
-def _conversion_engine(database: Path, learning_file: Path | None, log):
+def _conversion_engine(database: Path, learning_file: Path | None, log, custom_file: Path | None = None):
+    custom = {"custom_path": custom_file} if custom_file is not None else {}
     try:
-        engine = Engine(database, mode="forgiving", learning_path=learning_file)
+        engine = Engine(database, mode="forgiving", learning_path=learning_file, **custom)
     except (OSError, ValueError):
         if learning_file is None:
             raise
         # Preserve the original file and keep conversion usable. A second failure
         # opening the dictionary itself still propagates rather than being hidden.
         log("learning_unavailable", stage="startup")
-        engine = Engine(database, mode="forgiving", learning_path=None)
+        engine = Engine(database, mode="forgiving", learning_path=None, **custom)
+    if getattr(engine, "custom_error", None):
+        log("custom_entries_unavailable", stage="startup")
     with engine:
         yield engine
 
@@ -413,11 +427,12 @@ def _conversion_engine(database: Path, learning_file: Path | None, log):
 def serve(database: Path, ready_file: Path, log_file: Path, *,
           stop_event: threading.Event | None = None,
           runtime_instance: str | None = None, stop_file: Path | None = None,
-          learning_file: Path | None = None):
+          learning_file: Path | None = None, custom_file: Path | None = None):
     outputs = ([database, ready_file, log_file] + ([stop_file] if stop_file is not None else [])
-               + ([learning_file] if learning_file is not None else []))
+               + ([learning_file] if learning_file is not None else [])
+               + ([custom_file] if custom_file is not None else []))
     if len({path.resolve() for path in outputs}) != len(outputs):
-        raise ValueError("Dictionary, ready file, stop file, learning file and log must be separate files.")
+        raise ValueError("Dictionary, ready file, stop file, learning file, custom file and log must be separate files.")
     if (runtime_instance is None) != (stop_file is None):
         raise ValueError("Runtime instance and stop file must be supplied together.")
     if runtime_instance is not None:
@@ -438,16 +453,17 @@ def serve(database: Path, ready_file: Path, log_file: Path, *,
             for number in range(MAX_PIPE_INSTANCES):
                 handles.append(api.create_pipe(name, security, first=number == 0))
             started = time.perf_counter()
-            with _conversion_engine(database, learning_file, log) as engine:
+            with _conversion_engine(database, learning_file, log, custom_file) as engine:
                 identity = {
                     "kind": "Cantonese IME local broker", "pid": os.getpid(), "python": sys.executable,
                     "python_bits": struct.calcsize("P") * 8, "pipe": name, "windows_session": session_id,
                     "dictionary": str(database.resolve()), "dictionary_sha256": file_sha256(database),
                     "backend_source_sha256": file_sha256(Path(__file__)),
+                    "custom_file": str(custom_file.resolve()) if custom_file is not None else None,
                     "learning_requested": learning_file is not None,
                     "learning_enabled": getattr(engine, "learning_path", None) is not None,
                     "learning_file": str(learning_file.resolve()) if learning_file is not None else None,
-                    "remote_clients": "rejected", "pipe_acl": "current user and SYSTEM only",
+                    "remote_clients": "rejected", "pipe_acl": "current user and SYSTEM; app packages read/write; low label",
                     "max_pipe_instances": MAX_PIPE_INSTANCES,
                     "io_timeout_seconds": IO_TIMEOUT_SECONDS,
                     "diagnostic_logging": "bounded asynchronous queue; dropped-record count on shutdown",
@@ -488,9 +504,11 @@ def main():
     parser.add_argument("--runtime-instance", help="Controller launch UUID; requires --stop-file.")
     parser.add_argument("--stop-file", type=Path, help="Nonce-scoped graceful stop request (optional).")
     parser.add_argument("--learning-file", type=Path, help="Optional per-user local selection memory; conversion survives save errors.")
+    parser.add_argument("--custom-file", type=Path, help="Optional per-user custom phrases/spellings; read only, reloaded when changed.")
     args = parser.parse_args()
     serve(args.dictionary, args.ready_file, args.log,
-          runtime_instance=args.runtime_instance, stop_file=args.stop_file, learning_file=args.learning_file)
+          runtime_instance=args.runtime_instance, stop_file=args.stop_file, learning_file=args.learning_file,
+          custom_file=args.custom_file)
 
 
 if __name__ == "__main__":
