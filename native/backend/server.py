@@ -39,6 +39,18 @@ WAIT_TIMEOUT = 258
 WAIT_FAILED = 0xFFFFFFFF
 
 
+def pipe_security_sddl(sid: str) -> str:
+    """The connected user and SYSTEM, plus read/write for sandboxed apps.
+
+    AppContainer (ALL APPLICATION PACKAGES / ALL RESTRICTED APPLICATION
+    PACKAGES) hosts run with the same user SID but need their own ACE, and a
+    low mandatory label lets their low-integrity token write. No Everyone or
+    anonymous ACE; remote clients stay rejected by the pipe mode.
+    """
+    return (f"D:P(A;;GA;;;SY)(A;;GA;;;{sid})(A;;GRGW;;;AC)(A;;GRGW;;;S-1-15-2-2)"
+            "S:(ML;;NW;;;LW)")
+
+
 class _AsyncLog:
     """Keep file opens/writes out of pipe worker reconnect and request paths."""
 
@@ -199,9 +211,8 @@ class Win32:
 
     def security(self, sid: str):
         descriptor = w.LPVOID()
-        # The connected user's token and SYSTEM only; no Everyone/anonymous ACE.
         self.checked(self.advapi.ConvertStringSecurityDescriptorToSecurityDescriptorW(
-            f"D:P(A;;GA;;;SY)(A;;GA;;;{sid})", 1, ctypes.byref(descriptor), None))
+            pipe_security_sddl(sid), 1, ctypes.byref(descriptor), None))
         return descriptor, SecurityAttributes(ctypes.sizeof(SecurityAttributes), descriptor, False)
 
     def create_pipe(self, name: str, attributes, *, first: bool):
@@ -447,7 +458,7 @@ def serve(database: Path, ready_file: Path, log_file: Path, *,
                     "learning_requested": learning_file is not None,
                     "learning_enabled": getattr(engine, "learning_path", None) is not None,
                     "learning_file": str(learning_file.resolve()) if learning_file is not None else None,
-                    "remote_clients": "rejected", "pipe_acl": "current user and SYSTEM only",
+                    "remote_clients": "rejected", "pipe_acl": "current user and SYSTEM; app packages read/write; low label",
                     "max_pipe_instances": MAX_PIPE_INSTANCES,
                     "io_timeout_seconds": IO_TIMEOUT_SECONDS,
                     "diagnostic_logging": "bounded asynchronous queue; dropped-record count on shutdown",
