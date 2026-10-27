@@ -231,6 +231,11 @@ EXPLICIT_ALIASES = (
     ("heoi", "hui", 0.65, "casual.hui_heoi", "project_alias", ("cantoneseinput_examples", "project_policy")),
     ("seoi", "seui", 0.45, "casual.seui_seoi", "project_alias", ("project_policy",)),
     ("seoi", "sui", 0.65, "casual.sui_seoi", "project_alias", ("cantoneseinput_examples", "project_policy")),
+    ("zyun", "juen", 0.45, "casual.juen_zyun", "project_alias", ("project_policy",)),
+    ("cyun", "chuen", 0.45, "casual.chuen_cyun", "project_alias", ("project_policy",)),
+    ("syun", "suen", 0.45, "casual.suen_syun", "project_alias", ("project_policy",)),
+    ("jyun", "yuen", 0.45, "casual.yuen_jyun", "project_alias", ("project_policy",)),
+    ("tyun", "tuen", 0.45, "casual.tuen_tyun", "project_alias", ("project_policy",)),
 )
 
 
