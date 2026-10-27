@@ -36,6 +36,13 @@ The engine works offline. Personal learning is stored separately at:
 Upgrades and uninstall keep that file.
 They also keep your saved appearance choices.
 
+To add your own phrases or spellings, create this UTF-8 text file:
+  %LOCALAPPDATA%\CantoneseIME\custom.txt
+One entry per line; lines starting with # are comments. For example:
+  hh 曈曈        typing hh offers 曈曈 first
+  moon = mun     moon is read as the syllable mun, so it finds 門
+Changes apply on the next keystroke. Upgrades and uninstall keep the file.
+
 Start menu > Cantonese IME > Enable Cantonese IME starts the engine and
 enables the keyboard for your account. It also arranges startup at sign-in.
 Start menu > Cantonese IME > Stop Cantonese IME stops the engine.
