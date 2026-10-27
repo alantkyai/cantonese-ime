@@ -347,11 +347,16 @@ class Engine:
             self._insert("jyutping", base, base, 0.0)
             for spelling, penalty in _spellings(base).items():
                 self._insert("forgiving", spelling, base, penalty)
-        # A user alias is an explicit choice, not a typo, so it costs nothing.
+        # A user alias is an explicit choice, not a typo, so a Jyutping target
+        # costs nothing. A target that is itself a known spelling (cheut ->
+        # ceot/coet) keeps that spelling's costs. Targets resolve against the
+        # built-in index only, so user aliases never chain or depend on order.
         # Strict Jyutping mode keeps identities only.
-        for spelling, base in self._custom.aliases:
-            if base in self._bases:
-                self._insert("forgiving", spelling, base, 0.0)
+        builtin = {spelling: tuple(outputs) for spelling, outputs in self._variants["forgiving"].items()}
+        for spelling, target in self._custom.aliases:
+            outputs = ((target, 0.0),) if target in self._bases else builtin.get(target, ())
+            for base, penalty in outputs:
+                self._insert("forgiving", spelling, base, penalty)
 
     def _refresh_custom(self) -> None:
         """Reload the per-user custom file when its size or mtime changes.
