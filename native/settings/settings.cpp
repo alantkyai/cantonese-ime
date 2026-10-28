@@ -24,6 +24,14 @@ enum : int {
     IDC_ALIAS_LIST = 300, IDC_ALIAS_KEY_LABEL, IDC_ALIAS_KEY, IDC_ALIAS_TARGET_LABEL, IDC_ALIAS_TARGET,
     IDC_ALIAS_ADD, IDC_ALIAS_UPDATE, IDC_ALIAS_DELETE, IDC_ALIAS_HINT,
     IDC_FONT_LABEL = 400, IDC_FONT, IDC_SIZE_LABEL, IDC_FONT_SIZE, IDC_PREVIEW_LABEL, IDC_PREVIEW, IDC_FONT_HINT,
+    IDC_REV_LABEL = 500, IDC_REV_TEXT, IDC_REV_SEARCH, IDC_REV_LIST, IDC_REV_USE, IDC_REV_HINT,
+};
+constexpr int kReverseTab = 3;
+
+// One reading from the engine's reverse lookup (python -m cantonese_ime reverse).
+struct ReverseRow {
+    bool word = false;
+    std::wstring text, reading, spellings, usage;
 };
 
 struct Page {
@@ -48,6 +56,7 @@ struct State {
     int font_size = 0;              // 0: default 20.
     bool custom_dirty = false, font_dirty = false, bundled_loaded = false;
     int tab = 0;
+    std::vector<ReverseRow> reverse_rows;
 } g;
 
 int Scale(int value) { return MulDiv(value, static_cast<int>(g.dpi), 96); }
@@ -273,6 +282,131 @@ bool ConfirmClose() {
     return answer == IDNO || SaveAll();
 }
 
+// ---- Reverse lookup ----
+std::wstring InstallRoot() {
+    // The EXE lives in <root>\native.
+    std::wstring path(32768, L'\0');
+    const DWORD count = GetModuleFileNameW(nullptr, path.data(), static_cast<DWORD>(path.size()));
+    if (!count || count >= path.size()) return {};
+    path.resize(count);
+    for (int i = 0; i < 2; ++i) { const auto slash = path.find_last_of(L'\\'); if (slash == std::wstring::npos) return {}; path.resize(slash); }
+    return path;
+}
+// Runs the bundled engine read-only: python -m cantonese_ime reverse --stdin --tsv.
+// The text goes through stdin, so no command-line quoting is involved.
+bool RunReverseLookup(const std::wstring& text, std::string& output, DWORD& exit_code) {
+    output.clear(); exit_code = 1;
+    const std::wstring root = InstallRoot(), python = root + L"\\runtime\\python\\python.exe";
+    if (root.empty() || GetFileAttributesW(python.c_str()) == INVALID_FILE_ATTRIBUTES) return false;
+    SECURITY_ATTRIBUTES inherit{sizeof(inherit), nullptr, TRUE};
+    HANDLE out_read = nullptr, out_write = nullptr, in_read = nullptr, in_write = nullptr;
+    if (!CreatePipe(&out_read, &out_write, &inherit, 0)) return false;
+    if (!CreatePipe(&in_read, &in_write, &inherit, 0)) { CloseHandle(out_read); CloseHandle(out_write); return false; }
+    SetHandleInformation(out_read, HANDLE_FLAG_INHERIT, 0);
+    SetHandleInformation(in_write, HANDLE_FLAG_INHERIT, 0);
+    STARTUPINFOW startup{}; startup.cb = sizeof(startup); startup.dwFlags = STARTF_USESTDHANDLES;
+    startup.hStdInput = in_read; startup.hStdOutput = out_write; startup.hStdError = out_write;
+    PROCESS_INFORMATION process{};
+    std::wstring command = L"\"" + python + L"\" -B -m cantonese_ime reverse --stdin --tsv";
+    const bool started = CreateProcessW(python.c_str(), command.data(), nullptr, nullptr, TRUE, CREATE_NO_WINDOW,
+        nullptr, root.c_str(), &startup, &process) != FALSE;
+    CloseHandle(in_read); CloseHandle(out_write);
+    if (!started) { CloseHandle(in_write); CloseHandle(out_read); return false; }
+    const std::string input = WideToUtf8(text);
+    DWORD written = 0;
+    WriteFile(in_write, input.data(), static_cast<DWORD>(input.size()), &written, nullptr);
+    CloseHandle(in_write);
+    char buffer[4096]; DWORD read = 0;
+    while (output.size() < 256 * 1024 && ReadFile(out_read, buffer, sizeof(buffer), &read, nullptr) && read) output.append(buffer, read);
+    CloseHandle(out_read);
+    if (WaitForSingleObject(process.hProcess, 15000) != WAIT_OBJECT_0) TerminateProcess(process.hProcess, 1);
+    GetExitCodeProcess(process.hProcess, &exit_code);
+    CloseHandle(process.hThread); CloseHandle(process.hProcess);
+    return true;
+}
+std::vector<std::wstring> SplitTabs(const std::wstring& line) {
+    std::vector<std::wstring> fields; std::size_t start = 0;
+    for (;;) {
+        const auto tab = line.find(L'\t', start);
+        fields.push_back(line.substr(start, tab == std::wstring::npos ? std::wstring::npos : tab - start));
+        if (tab == std::wstring::npos) return fields;
+        start = tab + 1;
+    }
+}
+void ReverseSearch() {
+    const std::wstring text = Trim(Text(IDC_REV_TEXT));
+    if (text.empty()) { SetStatus(L"\u8acb\u5148\u8f38\u5165\u4e00\u500b\u5b57\u6216\u8005\u4e00\u500b\u8a5e\u3002"); SetFocus(Item(IDC_REV_TEXT)); return; }
+    HCURSOR previous = SetCursor(LoadCursorW(nullptr, IDC_WAIT));
+    std::string output; DWORD exit_code = 1;
+    const bool ran = RunReverseLookup(text, output, exit_code);
+    SetCursor(previous);
+    HWND list = Item(IDC_REV_LIST);
+    ListView_DeleteAllItems(list);
+    g.reverse_rows.clear();
+    if (!ran) { SetStatus(L"\u6435\u5514\u5230\u8f38\u5165\u6cd5\u5167\u7f6e\u5605 Python\uff0c\u8acb\u7528 installer \u5b89\u88dd\u4e4b\u5f8c\u518d\u8a66\u3002"); return; }
+    const std::wstring reply = Utf8ToWide(output);
+    std::vector<std::vector<std::wstring>> rows;
+    std::wstring first_line;
+    std::size_t start = 0;
+    while (start < reply.size()) {
+        auto end = reply.find(L'\n', start); if (end == std::wstring::npos) end = reply.size();
+        std::wstring line = reply.substr(start, end - start); start = end + 1;
+        if (!line.empty() && line.back() == L'\r') line.pop_back();
+        if (first_line.empty()) first_line = line;
+        auto fields = SplitTabs(line);
+        if (fields.size() == 5 && (fields[0] == L"word" || fields[0] == L"char")) rows.push_back(std::move(fields));
+    }
+    if (exit_code != 0) { SetStatus(L"\u67e5\u5514\u5230\uff1a" + first_line); return; }
+    // Label each reading relative to the most frequent reading of the same text.
+    for (const auto& fields : rows) {
+        double best = 0;
+        for (const auto& other : rows) if (other[0] == fields[0] && other[1] == fields[1]) best = std::max(best, _wtof(other[3].c_str()));
+        const double weight = _wtof(fields[3].c_str());
+        ReverseRow row;
+        row.word = fields[0] == L"word"; row.text = fields[1]; row.reading = fields[2];
+        row.usage = weight <= 0 ? L"\u5187\u8cc7\u6599" : weight >= best ? L"\u6700\u5e38\u7528" : weight >= best / 10 ? L"\u5e38\u7528" : L"\u5c11\u7528";
+        row.spellings = fields[4];
+        for (auto& c : row.spellings) if (c == L',') c = L'/';
+        g.reverse_rows.push_back(row);
+    }
+    for (std::size_t i = 0; i < g.reverse_rows.size(); ++i) {
+        auto& row = g.reverse_rows[i];
+        LVITEMW item{}; item.mask = LVIF_TEXT | LVIF_PARAM; item.iItem = static_cast<int>(i);
+        item.pszText = const_cast<wchar_t*>(row.text.c_str()); item.lParam = static_cast<LPARAM>(i);
+        ListView_InsertItem(list, &item);
+        ListView_SetItemText(list, static_cast<int>(i), 1, const_cast<wchar_t*>(row.reading.c_str()));
+        ListView_SetItemText(list, static_cast<int>(i), 2, const_cast<wchar_t*>(row.usage.c_str()));
+        ListView_SetItemText(list, static_cast<int>(i), 3, const_cast<wchar_t*>(row.spellings.c_str()));
+    }
+    if (g.reverse_rows.empty()) SetStatus(L"\u5b57\u5178\u5165\u9762\u5187\u5462\u500b\u5b57\uff0f\u8a5e\u5605\u8b80\u97f3\u3002");
+    else {
+        ListView_SetItemState(list, 0, LVIS_SELECTED | LVIS_FOCUSED, LVIS_SELECTED | LVIS_FOCUSED);
+        SetStatus(L"\u300c\u53ef\u4ee5\u5481\u6253\u300d\u4fc2\u8f38\u5165\u6cd5\u672c\u8eab\u5df2\u7d93\u8b58\u5605\u62fc\u6cd5\uff1b\u60f3\u7528\u5176\u4ed6\u62fc\u6cd5\uff0c\u63c0\u4e00\u884c\u518d\u64b3\u300c\u7528\u6240\u9078\u8b80\u97f3\u52a0\u81ea\u8a02\u2026\u300d\u3002");
+    }
+}
+void ShowTab(int tab);
+void UseReverseSelection() {
+    const int row = ListView_GetNextItem(Item(IDC_REV_LIST), -1, LVNI_SELECTED);
+    if (row < 0 || static_cast<std::size_t>(row) >= g.reverse_rows.size()) { SetStatus(L"\u8acb\u5148\u67e5\u4e00\u500b\u5b57\uff0c\u518d\u55ba\u5217\u8868\u63c0\u4e00\u884c\u3002"); return; }
+    const ReverseRow& selected = g.reverse_rows[static_cast<std::size_t>(row)];
+    const bool word = selected.reading.find(L' ') != std::wstring::npos;
+    const int tab = word ? 0 : 1;
+    TabCtrl_SetCurSel(Item(IDC_TABS), tab);
+    ShowTab(tab);
+    const Page& page = kPages[tab];
+    SetWindowTextW(Item(page.key), L"");
+    if (word) {
+        SetWindowTextW(Item(page.value), selected.text.c_str());
+        SetStatus(L"\u6253\u4f60\u60f3\u7528\u5605\u8f38\u5165\uff08\u4f8b\u5982\u7e2e\u5beb\uff09\uff0c\u7136\u5f8c\u64b3\u300c\u65b0\u589e\u300d\u3002");
+    } else {
+        std::wstring base = selected.reading;
+        while (!base.empty() && base.back() >= L'1' && base.back() <= L'6') base.pop_back();
+        SetWindowTextW(Item(page.value), base.c_str());
+        SetStatus(L"\u6253\u4f60\u60f3\u7528\u5605\u62fc\u6cd5\uff08\u4f8b\u5982 chut\uff09\uff0c\u7136\u5f8c\u64b3\u300c\u65b0\u589e\u300d\u3002");
+    }
+    SetFocus(Item(page.key));
+}
+
 // ---- Layout ----
 void ShowTab(int tab) {
     g.tab = tab;
@@ -283,6 +417,8 @@ void ShowTab(int tab) {
     }
     for (int id : {IDC_FONT_LABEL, IDC_FONT, IDC_SIZE_LABEL, IDC_FONT_SIZE, IDC_PREVIEW_LABEL, IDC_PREVIEW, IDC_FONT_HINT})
         ShowWindow(Item(id), tab == 2 ? SW_SHOW : SW_HIDE);
+    for (int id : {IDC_REV_LABEL, IDC_REV_TEXT, IDC_REV_SEARCH, IDC_REV_LIST, IDC_REV_USE, IDC_REV_HINT})
+        ShowWindow(Item(id), tab == kReverseTab ? SW_SHOW : SW_HIDE);
 }
 void Layout() {
     RECT client{}; GetClientRect(g.window, &client);
@@ -327,12 +463,26 @@ void Layout() {
     MoveWindow(Item(IDC_PREVIEW), x + label, y, w - label, Scale(72), TRUE);
     y += Scale(72) + 2 * gap;
     MoveWindow(Item(IDC_FONT_HINT), x, y, w, Scale(48), TRUE);
+
+    y = inner.top + 2 * gap;
+    const int search = Scale(80);
+    MoveWindow(Item(IDC_REV_LABEL), x, y + Scale(3), label, row, TRUE);
+    MoveWindow(Item(IDC_REV_TEXT), x + label, y, std::min(w - label - search - gap, Scale(280)), row, TRUE);
+    MoveWindow(Item(IDC_REV_SEARCH), x + label + std::min(w - label - search - gap, Scale(280)) + gap, y, search, row, TRUE);
+    y += row + 2 * gap;
+    const int list_bottom = inner.bottom - gap - 2 * row - 2 * gap;
+    MoveWindow(Item(IDC_REV_LIST), x, y, w, list_bottom - y, TRUE);
+    const int columns[] = {Scale(90), Scale(130), Scale(90)};
+    for (int c = 0; c < 3; ++c) ListView_SetColumnWidth(Item(IDC_REV_LIST), c, columns[c]);
+    ListView_SetColumnWidth(Item(IDC_REV_LIST), 3, std::max(Scale(120), w - Scale(310) - GetSystemMetrics(SM_CXVSCROLL) - Scale(4)));
+    MoveWindow(Item(IDC_REV_USE), x, list_bottom + gap, Scale(220), row, TRUE);
+    MoveWindow(Item(IDC_REV_HINT), x, list_bottom + row + 2 * gap, w, row, TRUE);
 }
 
 void CreateControls() {
     HWND tabs = Create(WC_TABCONTROLW, L"", WS_VISIBLE | WS_CLIPSIBLINGS | WS_TABSTOP, IDC_TABS);
-    const wchar_t* names[] = {L"\u81ea\u8a02\u8a5e\u8a9e", L"\u81ea\u8a02\u62fc\u97f3", L"\u5019\u9078\u5b57\u578b"};
-    for (int i = 0; i < 3; ++i) {
+    const wchar_t* names[] = {L"\u81ea\u8a02\u8a5e\u8a9e", L"\u81ea\u8a02\u62fc\u97f3", L"\u5019\u9078\u5b57\u578b", L"\u67e5\u62fc\u97f3"};
+    for (int i = 0; i < 4; ++i) {
         TCITEMW item{}; item.mask = TCIF_TEXT; item.pszText = const_cast<wchar_t*>(names[i]);
         TabCtrl_InsertItem(tabs, i, &item);
     }
@@ -368,6 +518,20 @@ void CreateControls() {
     Create(L"STATIC", L"\u9810\u89bd", 0, IDC_PREVIEW_LABEL);
     Create(L"STATIC", L"1  \u4f60\u597d   2  \u5ee3\u6771\u8a71   3  \u66c8\u66c8", SS_LEFT | SS_CENTERIMAGE, IDC_PREVIEW, WS_EX_CLIENTEDGE);
     Create(L"STATIC", L"\u5957\u7528\u5230\u6240\u6709 app\u3002\u7528\u53f3\u9375\u9078\u55ae\u6539\u904e\u5605\u984f\u8272\u540c\u900f\u660e\u5ea6\u5514\u53d7\u5f71\u97ff\u3002\u5927\u5c0f\u4ee5 100% \u7e2e\u653e\u8a08\uff0c\u6703\u8ddf Windows \u7e2e\u653e\u653e\u5927\u3002", SS_LEFT, IDC_FONT_HINT);
+    Create(L"STATIC", L"\u5b57\u6216\u8a5e", 0, IDC_REV_LABEL);
+    Create(L"EDIT", L"", WS_BORDER | WS_TABSTOP | ES_AUTOHSCROLL, IDC_REV_TEXT, WS_EX_CLIENTEDGE);
+    SendMessageW(Item(IDC_REV_TEXT), EM_SETLIMITTEXT, 32, 0);
+    Create(L"BUTTON", L"\u67e5", WS_TABSTOP | BS_PUSHBUTTON, IDC_REV_SEARCH);
+    HWND reverse = Create(WC_LISTVIEWW, L"", WS_BORDER | WS_TABSTOP | LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS, IDC_REV_LIST);
+    ListView_SetExtendedListViewStyle(reverse, LVS_EX_FULLROWSELECT | LVS_EX_DOUBLEBUFFER);
+    const wchar_t* reverse_columns[] = {L"\u5b57\uff0f\u8a5e", L"\u7cb5\u62fc", L"\u5e38\u7528\u5ea6", L"\u53ef\u4ee5\u5481\u6253"};
+    for (int c = 0; c < 4; ++c) {
+        LVCOLUMNW column{}; column.mask = LVCF_TEXT | LVCF_WIDTH; column.cx = Scale(100);
+        column.pszText = const_cast<wchar_t*>(reverse_columns[c]);
+        ListView_InsertColumn(reverse, c, &column);
+    }
+    Create(L"BUTTON", L"\u7528\u6240\u9078\u8b80\u97f3\u52a0\u81ea\u8a02\u2026", WS_TABSTOP | BS_PUSHBUTTON, IDC_REV_USE);
+    Create(L"STATIC", L"\u55ae\u5b57\uff1a\u52a0\u505a\u81ea\u8a02\u62fc\u97f3\uff08\u586b\u597d\u300c\u7576\u4f5c\u300d\uff09\u3002\u8a5e\u8a9e\uff1a\u52a0\u505a\u81ea\u8a02\u8a5e\u8a9e\uff08\u586b\u597d\u300c\u6587\u5b57\u300d\uff09\u3002", SS_LEFT, IDC_REV_HINT);
     Create(L"STATIC", L"", WS_VISIBLE | SS_LEFT | SS_ENDELLIPSIS, IDC_STATUS);
     Create(L"BUTTON", L"\u5132\u5b58", WS_VISIBLE | WS_TABSTOP | BS_PUSHBUTTON, IDC_SAVE);
     Create(L"BUTTON", L"\u95dc\u9589", WS_VISIBLE | WS_TABSTOP | BS_PUSHBUTTON, IDC_CLOSE);
@@ -422,7 +586,13 @@ LRESULT CALLBACK WindowProcedure(HWND window, UINT message, WPARAM wparam, LPARA
         const int id = LOWORD(wparam), code = HIWORD(wparam);
         if (id == IDC_SAVE) { SaveAll(); return 0; }
         if (id == IDC_CLOSE || id == IDCANCEL) { if (ConfirmClose()) DestroyWindow(window); return 0; }
-        if (id == IDOK) { if (g.tab < 2) AddEntryFromFields(kPages[g.tab]); return 0; }
+        if (id == IDOK) {
+            if (g.tab < 2) AddEntryFromFields(kPages[g.tab]);
+            else if (g.tab == kReverseTab) ReverseSearch();
+            return 0;
+        }
+        if (id == IDC_REV_SEARCH && code == BN_CLICKED) { ReverseSearch(); return 0; }
+        if (id == IDC_REV_USE && code == BN_CLICKED) { UseReverseSelection(); return 0; }
         if ((id == IDC_FONT || id == IDC_FONT_SIZE) && code == CBN_SELCHANGE) {
             ReadFontFields(); UpdatePreview(); g.font_dirty = true; UpdateTitle();
             SetStatus(L"\u64b3\u300c\u5132\u5b58\u300d\u5957\u7528\u65b0\u5b57\u578b\u3002"); return 0;
@@ -456,13 +626,8 @@ LRESULT CALLBACK WindowProcedure(HWND window, UINT message, WPARAM wparam, LPARA
 }
 
 std::wstring BundledFontFile() {
-    // The EXE lives in <root>\native; the bundled font is under <root>\assets.
-    std::wstring path(32768, L'\0');
-    const DWORD count = GetModuleFileNameW(nullptr, path.data(), static_cast<DWORD>(path.size()));
-    if (!count || count >= path.size()) return {};
-    path.resize(count);
-    for (int i = 0; i < 2; ++i) { const auto slash = path.find_last_of(L'\\'); if (slash == std::wstring::npos) return {}; path.resize(slash); }
-    return path + L"\\assets\\fonts\\lxgw-wenkai-tc\\LXGWWenKaiTC-Regular.ttf";
+    const std::wstring root = InstallRoot();
+    return root.empty() ? root : root + L"\\assets\\fonts\\lxgw-wenkai-tc\\LXGWWenKaiTC-Regular.ttf";
 }
 } // namespace
 

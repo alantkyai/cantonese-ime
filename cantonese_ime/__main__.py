@@ -16,6 +16,7 @@ import sys
 from time import perf_counter
 
 from .engine import CompositionCapacityError, Engine, MODES, PaginationCapacityError
+from .reverse import reverse_lookup, tsv_lines
 from .session import Session
 
 
@@ -78,6 +79,14 @@ def _parser() -> argparse.ArgumentParser:
             help="Opt in to local selection memory at this path. Only type selections write it.",
         )
         command.add_argument("--json", action="store_true", help="Print UTF-8 JSON instead of a text summary.")
+
+    reverse = subcommands.add_parser("reverse", help="Show the stored readings of a character or word.")
+    reverse.add_argument("text", metavar="TEXT", nargs="?", help="Characters to look up; omit with --stdin.")
+    reverse.add_argument("--stdin", action="store_true", help="Read UTF-8 text from standard input instead.")
+    reverse.add_argument("--dictionary", type=Path, default=DEFAULT_DICTIONARY, help="Read-only SQLite lexicon.")
+    output = reverse.add_mutually_exclusive_group()
+    output.add_argument("--json", action="store_true", help="Print UTF-8 JSON instead of a text summary.")
+    output.add_argument("--tsv", action="store_true", help="Print kind/text/reading/weight/spellings lines.")
     return parser
 
 
@@ -333,6 +342,18 @@ def main(argv: list[str] | None = None) -> int:
     _configure_output()
     args = _parser().parse_args(argv)
     try:
+        if args.command == "reverse":
+            text = sys.stdin.buffer.read(4096).decode("utf-8-sig") if args.stdin else (args.text or "")
+            result = reverse_lookup(args.dictionary, text)
+            if args.json:
+                print(_json(result))
+            elif args.tsv:
+                print("\n".join(tsv_lines(result)))
+            else:
+                for line in tsv_lines(result):
+                    kind, value, reading, weight, spellings = line.split("\t")
+                    print(f"{value}  {reading}  weight={weight}  type: {spellings.replace(',', ' / ') or '-'}")
+            return 0
         if args.command == "lookup":
             report = _lookup(args)
         elif args.command == "type":
