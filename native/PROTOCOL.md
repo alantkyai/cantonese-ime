@@ -26,6 +26,15 @@ The reply is an ordinary `IME1` response with the same request ID, no candidates
 
 `Engine.record_selection` validates the exact text/reading against its current bounded candidate snapshot for the full input and mode under the engine lock before any write. Arbitrary supplied candidate strings are rejected. Previously selected personal phrases for that same full input/mode may also be valid candidates. The local memory is user-owned data, not cryptographically authenticated linguistic evidence. This protocol cannot prove that a same-user client actually committed text; the native frontend must send the request only after successful selected-candidate `EndComposition`. Lookups, literal Enter, cancellation, failed commits and focus-departure completion do not notify learning. A learning notification is best effort and must not roll back a successful document commit. It is not automatically retried because duplicate notifications would count as additional selections.
 
+## Learned suggestion requests
+
+Two further request operations serve optional next-word suggestions learned only from the user's own typing. The native frontend sends them only while `prediction=on` is set in `appearance.ini`.
+
+* `IMP1` (`0x31504D49`) asks for suggestions: three `u32` fields (magic, request ID, context byte length) followed by the UTF-8 context. The context is the last committed text, 1–8 codepoints without whitespace or control characters. The reply is an ordinary `IME1` response with up to 9 candidates whose readings are empty, next offset -1 and truncated 0. Without prediction memory the reply has zero candidates.
+* `IMS1` (`0x31534D49`) records one consecutive commit: four `u32` fields (magic, request ID, previous byte length, following byte length) followed by the two UTF-8 strings, each 1–8 codepoints with the same restrictions. The reply is an `IME1` acknowledgement: status 0 when counted, 1 for malformed or refused text, 3 when prediction memory is unavailable.
+
+The broker keeps these counts in `%LOCALAPPDATA%\CantoneseIME\prediction.json` (passed as `--prediction-file`), separate from selection memory. It also derives "first character → rest" pairs from learned multi-character selections at lower weight; it never uses dictionary frequencies. Deleting the file clears the counts, and the broker drops its in-memory copy when it notices. Neither request echoes text in errors or logs.
+
 ## Response body
 
 | Field | Type | Allowed value |

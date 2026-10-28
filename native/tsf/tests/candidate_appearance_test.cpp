@@ -66,6 +66,11 @@ int wmain(int argc, wchar_t** argv) {
     assert(appearance_detail::Parse("[global]\nfont=Segoe UI\nfont=\n").global.font_family.empty());
     assert(appearance_detail::Parse("[global]\nfont_size=-5\nfont_size=4x\n").global.font_size == 0);
     assert(appearance_detail::Parse("[global]\nfont=bad\xff\n").global.font_family.empty());
+    // Learned suggestions are off unless explicitly on; unknown values are ignored.
+    assert(!appearance_detail::Parse("[global]\ntheme=dark\n").global.prediction);
+    assert(appearance_detail::Parse("[global]\nprediction=on\n").global.prediction);
+    assert(!appearance_detail::Parse("[global]\nprediction=on\nprediction=maybe\nprediction=off\n").global.prediction);
+    assert(appearance_detail::Serialize(appearance_detail::Parse("[global]\nprediction=on\n")).find("prediction=on") != std::string::npos);
     // A menu change rewrites the file and must keep the hand-edited font lines.
     Fixture(path, "[global]\ntheme=dark\nfont=" + jhenghei_utf8 + "\nfont_size=28\n");
     app.Reload();

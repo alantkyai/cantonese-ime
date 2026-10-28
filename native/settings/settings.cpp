@@ -24,6 +24,7 @@ enum : int {
     IDC_ALIAS_LIST = 300, IDC_ALIAS_KEY_LABEL, IDC_ALIAS_KEY, IDC_ALIAS_TARGET_LABEL, IDC_ALIAS_TARGET,
     IDC_ALIAS_ADD, IDC_ALIAS_UPDATE, IDC_ALIAS_DELETE, IDC_ALIAS_HINT,
     IDC_FONT_LABEL = 400, IDC_FONT, IDC_SIZE_LABEL, IDC_FONT_SIZE, IDC_PREVIEW_LABEL, IDC_PREVIEW, IDC_FONT_HINT,
+    IDC_PREDICTION, IDC_PREDICTION_CLEAR, IDC_PREDICTION_HINT,
     IDC_REV_LABEL = 500, IDC_REV_TEXT, IDC_REV_SEARCH, IDC_REV_LIST, IDC_REV_USE, IDC_REV_HINT,
 };
 constexpr int kReverseTab = 3;
@@ -55,6 +56,7 @@ struct State {
     std::wstring font_family;       // Empty: bundled default.
     int font_size = 0;              // 0: default 20.
     bool custom_dirty = false, font_dirty = false, bundled_loaded = false;
+    bool prediction = false;        // Learned next-word suggestions (appearance.ini prediction=on).
     int tab = 0;
     std::vector<ReverseRow> reverse_rows;
 } g;
@@ -207,6 +209,7 @@ void FillFonts() {
     SendMessageW(sizes, CB_ADDSTRING, 0, reinterpret_cast<LPARAM>(L"\u9810\u8a2d\uff0820\uff09"));
     for (int size = 10; size <= 48; ++size) SendMessageW(sizes, CB_ADDSTRING, 0, reinterpret_cast<LPARAM>(std::to_wstring(size).c_str()));
     SendMessageW(sizes, CB_SETCURSEL, g.font_size ? static_cast<WPARAM>(g.font_size - 9) : 0, 0);
+    SendMessageW(Item(IDC_PREDICTION), BM_SETCHECK, g.prediction ? BST_CHECKED : BST_UNCHECKED, 0);
 }
 void ReadFontFields() {
     const LRESULT family = SendMessageW(Item(IDC_FONT), CB_GETCURSEL, 0, 0);
@@ -241,6 +244,7 @@ void LoadAll() {
     const auto document = cime::ui::appearance_detail::Parse(appearance);
     g.font_family = document.global.font_family;
     g.font_size = document.global.font_size;
+    g.prediction = document.global.prediction;
     g.custom_dirty = g.font_dirty = false;
 }
 bool SaveAll() {
@@ -266,7 +270,7 @@ bool SaveAll() {
         g.custom_loaded = text; g.custom_dirty = false;
     }
     if (g.font_dirty) {
-        if (!SaveGlobalFont(g.appearance_path, g.font_family, g.font_size)) {
+        if (!SaveGlobalCandidate(g.appearance_path, g.font_family, g.font_size, g.prediction)) {
             MessageBoxW(g.window, L"\u5132\u5b58 appearance.ini \u5931\u6557\u3002", kTitle, MB_OK | MB_ICONERROR); return false;
         }
         g.font_dirty = false;
@@ -415,7 +419,8 @@ void ShowTab(int tab) {
         for (int id : {page.list, page.key_label, page.key, page.value_label, page.value, page.add, page.update, page.remove, page.hint})
             ShowWindow(Item(id), i == tab ? SW_SHOW : SW_HIDE);
     }
-    for (int id : {IDC_FONT_LABEL, IDC_FONT, IDC_SIZE_LABEL, IDC_FONT_SIZE, IDC_PREVIEW_LABEL, IDC_PREVIEW, IDC_FONT_HINT})
+    for (int id : {IDC_FONT_LABEL, IDC_FONT, IDC_SIZE_LABEL, IDC_FONT_SIZE, IDC_PREVIEW_LABEL, IDC_PREVIEW, IDC_FONT_HINT,
+                   IDC_PREDICTION, IDC_PREDICTION_CLEAR, IDC_PREDICTION_HINT})
         ShowWindow(Item(id), tab == 2 ? SW_SHOW : SW_HIDE);
     for (int id : {IDC_REV_LABEL, IDC_REV_TEXT, IDC_REV_SEARCH, IDC_REV_LIST, IDC_REV_USE, IDC_REV_HINT})
         ShowWindow(Item(id), tab == kReverseTab ? SW_SHOW : SW_HIDE);
@@ -463,6 +468,12 @@ void Layout() {
     MoveWindow(Item(IDC_PREVIEW), x + label, y, w - label, Scale(72), TRUE);
     y += Scale(72) + 2 * gap;
     MoveWindow(Item(IDC_FONT_HINT), x, y, w, Scale(48), TRUE);
+    y += Scale(48) + 2 * gap;
+    MoveWindow(Item(IDC_PREDICTION), x, y, std::min(w, Scale(420)), row, TRUE);
+    y += row + gap;
+    MoveWindow(Item(IDC_PREDICTION_CLEAR), x, y, Scale(160), row, TRUE);
+    y += row + gap;
+    MoveWindow(Item(IDC_PREDICTION_HINT), x, y, w, Scale(48), TRUE);
 
     y = inner.top + 2 * gap;
     const int search = Scale(80);
@@ -481,7 +492,7 @@ void Layout() {
 
 void CreateControls() {
     HWND tabs = Create(WC_TABCONTROLW, L"", WS_VISIBLE | WS_CLIPSIBLINGS | WS_TABSTOP, IDC_TABS);
-    const wchar_t* names[] = {L"\u81ea\u8a02\u8a5e\u8a9e", L"\u81ea\u8a02\u62fc\u97f3", L"\u5019\u9078\u5b57\u578b", L"\u67e5\u62fc\u97f3"};
+    const wchar_t* names[] = {L"\u81ea\u8a02\u8a5e\u8a9e", L"\u81ea\u8a02\u62fc\u97f3", L"\u5b57\u578b\u540c\u806f\u60f3", L"\u67e5\u62fc\u97f3"};
     for (int i = 0; i < 4; ++i) {
         TCITEMW item{}; item.mask = TCIF_TEXT; item.pszText = const_cast<wchar_t*>(names[i]);
         TabCtrl_InsertItem(tabs, i, &item);
@@ -518,6 +529,9 @@ void CreateControls() {
     Create(L"STATIC", L"\u9810\u89bd", 0, IDC_PREVIEW_LABEL);
     Create(L"STATIC", L"1  \u4f60\u597d   2  \u5ee3\u6771\u8a71   3  \u66c8\u66c8", SS_LEFT | SS_CENTERIMAGE, IDC_PREVIEW, WS_EX_CLIENTEDGE);
     Create(L"STATIC", L"\u5957\u7528\u5230\u6240\u6709 app\u3002\u7528\u53f3\u9375\u9078\u55ae\u6539\u904e\u5605\u984f\u8272\u540c\u900f\u660e\u5ea6\u5514\u53d7\u5f71\u97ff\u3002\u5927\u5c0f\u4ee5 100% \u7e2e\u653e\u8a08\uff0c\u6703\u8ddf Windows \u7e2e\u653e\u653e\u5927\u3002", SS_LEFT, IDC_FONT_HINT);
+    Create(L"BUTTON", L"\u6253\u5b8c\u5b57\u4e4b\u5f8c\u986f\u793a\u806f\u60f3\u8a5e\uff08\u8a66\u9a57\u529f\u80fd\uff09", WS_TABSTOP | BS_AUTOCHECKBOX, IDC_PREDICTION);
+    Create(L"BUTTON", L"\u6e05\u9664\u806f\u60f3\u8a18\u9304\u2026", WS_TABSTOP | BS_PUSHBUTTON, IDC_PREDICTION_CLEAR);
+    Create(L"STATIC", L"\u53ea\u5b78\u4f60\u81ea\u5df1\u9023\u7e8c\u6253\u5605\u5b57\u540c\u4f60\u63c0\u904e\u5605\u8a5e\uff0c\u8a18\u9304\u53ea\u5b58\u55ba\u5462\u90e8\u96fb\u8166\u3002\u6578\u5b57\u9375 1\u20139 \u63c0\u806f\u60f3\u8a5e\uff0cEsc \u6536\u8d77\uff0c\u6253\u5176\u4ed6\u5b57\u7167\u5e38\u8f38\u5165\u3002", SS_LEFT, IDC_PREDICTION_HINT);
     Create(L"STATIC", L"\u5b57\u6216\u8a5e", 0, IDC_REV_LABEL);
     Create(L"EDIT", L"", WS_BORDER | WS_TABSTOP | ES_AUTOHSCROLL, IDC_REV_TEXT, WS_EX_CLIENTEDGE);
     SendMessageW(Item(IDC_REV_TEXT), EM_SETLIMITTEXT, 32, 0);
@@ -592,6 +606,20 @@ LRESULT CALLBACK WindowProcedure(HWND window, UINT message, WPARAM wparam, LPARA
             return 0;
         }
         if (id == IDC_REV_SEARCH && code == BN_CLICKED) { ReverseSearch(); return 0; }
+        if (id == IDC_PREDICTION && code == BN_CLICKED) {
+            g.prediction = SendMessageW(Item(IDC_PREDICTION), BM_GETCHECK, 0, 0) == BST_CHECKED;
+            g.font_dirty = true; UpdateTitle();
+            SetStatus(L"\u64b3\u300c\u5132\u5b58\u300d\u5957\u7528\u3002\u5df2\u958b\u4f4f\u5605 app \u8981\u91cd\u958b\u4e00\u6b21\u5148\u6703\u7528\u5230\u806f\u60f3\u8a5e\u3002");
+            return 0;
+        }
+        if (id == IDC_PREDICTION_CLEAR && code == BN_CLICKED) {
+            if (MessageBoxW(window, L"\u6e05\u9664\u6240\u6709\u5b78\u5497\u5605\u9023\u7e8c\u6253\u5b57\u8a18\u9304\uff1f\n\uff08\u4f60\u63c0\u904e\u5605\u8a5e\u8a9e\u4ecd\u7136\u6703\u7528\u569f\u5efa\u8b70\uff1b\u8981\u5b8c\u5168\u505c\u7528\uff0c\u8acb\u53d6\u6d88\u5254\u9078\u806f\u60f3\u8a5e\u3002\uff09",
+                    kTitle, MB_OKCANCEL | MB_ICONQUESTION) != IDOK) return 0;
+            const std::wstring path = UserDataPath(L"prediction.json");
+            const bool cleared = DeleteFileW(path.c_str()) || GetLastError() == ERROR_FILE_NOT_FOUND;
+            SetStatus(cleared ? L"\u5df2\u6e05\u9664\u806f\u60f3\u8a18\u9304\u3002" : L"\u6e05\u9664\u5931\u6557\uff1a\u6a94\u6848\u53ef\u80fd\u7528\u7dca\uff0c\u8acb\u7a0d\u5f8c\u518d\u8a66\u3002");
+            return 0;
+        }
         if (id == IDC_REV_USE && code == BN_CLICKED) { UseReverseSelection(); return 0; }
         if ((id == IDC_FONT || id == IDC_FONT_SIZE) && code == CBN_SELCHANGE) {
             ReadFontFields(); UpdatePreview(); g.font_dirty = true; UpdateTitle();

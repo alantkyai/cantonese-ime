@@ -45,6 +45,8 @@ candidate panel > Custom phrases, spellings and font...) edits your own
 phrases, spellings and the candidate font and size without opening files.
 Its 查拼音 tab shows a character's or word's readings and the spellings you
 can already type, so you know what to map a custom spelling to.
+Its 字型同聯想 tab can turn on experimental next-word suggestions learned
+only from your own typing (off by default; digits 1-9 choose, Escape closes).
 Close it before upgrading.
 
 To edit phrases or spellings by hand, use this UTF-8 text file:

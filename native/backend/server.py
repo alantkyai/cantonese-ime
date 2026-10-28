@@ -27,6 +27,7 @@ sys.path.insert(0, str(ROOT))
 from cantonese_ime import Engine
 from cantonese_ime.dictionary import file_sha256
 from cantonese_ime.native_protocol import decode_frame_length, dispatch, encode_response, frame
+from cantonese_ime.prediction import PredictionStore
 
 
 MAX_PIPE_INSTANCES = 16
@@ -305,7 +306,7 @@ def write_json(path: Path, value: dict):
     os.replace(temporary, path)
 
 
-def _run_pool(api, handles: list, engine, stop: threading.Event, log, publish_ready):
+def _run_pool(api, handles: list, engine, stop: threading.Event, log, publish_ready, predictions=None):
     """Reuse a fixed pipe pool; never allocate instance17 after client16.
 
     Handles stay owned by serve(), workers own only their in-flight operations.
@@ -333,7 +334,8 @@ def _run_pool(api, handles: list, engine, stop: threading.Event, log, publish_re
                     while not stop.is_set():
                         length = decode_frame_length(api.read_exact(handle, 4, stop))
                         payload = api.read_exact(handle, length, stop)
-                        response = dispatch(engine, payload)
+                        response = (dispatch(engine, payload) if predictions is None
+                                    else dispatch(engine, payload, predictions))
                         api.write_all(handle, frame(encode_response(response)), stop)
                         requests += 1
                 except (OSError, EOFError, ValueError) as error:
@@ -416,12 +418,14 @@ def _conversion_engine(database: Path, learning_file: Path | None, log, custom_f
 def serve(database: Path, ready_file: Path, log_file: Path, *,
           stop_event: threading.Event | None = None,
           runtime_instance: str | None = None, stop_file: Path | None = None,
-          learning_file: Path | None = None, custom_file: Path | None = None):
+          learning_file: Path | None = None, custom_file: Path | None = None,
+          prediction_file: Path | None = None):
     outputs = ([database, ready_file, log_file] + ([stop_file] if stop_file is not None else [])
                + ([learning_file] if learning_file is not None else [])
-               + ([custom_file] if custom_file is not None else []))
+               + ([custom_file] if custom_file is not None else [])
+               + ([prediction_file] if prediction_file is not None else []))
     if len({path.resolve() for path in outputs}) != len(outputs):
-        raise ValueError("Dictionary, ready file, stop file, learning file, custom file and log must be separate files.")
+        raise ValueError("Dictionary, ready file, stop file, learning, custom and prediction files and log must be separate files.")
     if (runtime_instance is None) != (stop_file is None):
         raise ValueError("Runtime instance and stop file must be supplied together.")
     if runtime_instance is not None:
@@ -449,6 +453,7 @@ def serve(database: Path, ready_file: Path, log_file: Path, *,
                     "dictionary": str(database.resolve()), "dictionary_sha256": file_sha256(database),
                     "backend_source_sha256": file_sha256(Path(__file__)),
                     "custom_file": str(custom_file.resolve()) if custom_file is not None else None,
+                    "prediction_file": str(prediction_file.resolve()) if prediction_file is not None else None,
                     "learning_requested": learning_file is not None,
                     "learning_enabled": getattr(engine, "learning_path", None) is not None,
                     "learning_file": str(learning_file.resolve()) if learning_file is not None else None,
@@ -471,7 +476,15 @@ def serve(database: Path, ready_file: Path, log_file: Path, *,
                                                args=(stop_file, runtime_instance, stop),
                                                name="CantoneseImeStop", daemon=False)
                     watcher.start()
-                _run_pool(api, handles, engine, stop, log, publish_ready)
+                # Prediction memory is written only when the frontend sends
+                # sequence records, which it does only with the feature on.
+                predictions = PredictionStore(prediction_file) if prediction_file is not None else None
+                try:
+                    extra = (predictions,) if predictions is not None else ()
+                    _run_pool(api, handles, engine, stop, log, publish_ready, *extra)
+                finally:
+                    if predictions is not None:
+                        predictions.save(force=True)
     finally:
         stop.set()
         if watcher is not None and watcher.ident is not None:
@@ -494,10 +507,11 @@ def main():
     parser.add_argument("--stop-file", type=Path, help="Nonce-scoped graceful stop request (optional).")
     parser.add_argument("--learning-file", type=Path, help="Optional per-user local selection memory; conversion survives save errors.")
     parser.add_argument("--custom-file", type=Path, help="Optional per-user custom phrases/spellings; read only, reloaded when changed.")
+    parser.add_argument("--prediction-file", type=Path, help="Optional per-user learned next-text suggestions.")
     args = parser.parse_args()
     serve(args.dictionary, args.ready_file, args.log,
           runtime_instance=args.runtime_instance, stop_file=args.stop_file, learning_file=args.learning_file,
-          custom_file=args.custom_file)
+          custom_file=args.custom_file, prediction_file=args.prediction_file)
 
 
 if __name__ == "__main__":

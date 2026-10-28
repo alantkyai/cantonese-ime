@@ -10,6 +10,9 @@ namespace cime {
 namespace {
 constexpr std::uint32_t kMagic = 0x31454d49;
 constexpr std::uint32_t kLearningMagic = 0x314c4d49;
+constexpr std::uint32_t kPredictionMagic = 0x31504d49;
+constexpr std::uint32_t kSequenceMagic = 0x31534d49;
+constexpr std::size_t kMaxPredictionText = 8;
 constexpr std::size_t kMaxFrame = 1024 * 1024;
 constexpr DWORD kTimeoutMs = 250;
 
@@ -235,6 +238,79 @@ bool Backend::RecordSelection(const std::wstring& raw, bool strict, const Candid
             Get(response, position) == sequence && Get(response, position) == 0 &&
             Get(response, position) == 0xffffffffu && Get(response, position) == 0 &&
             Get(response, position) == 0 && Get(response, position) == 0;
+    } catch (...) { return false; }
+}
+
+namespace {
+// Prediction text: 1-8 UTF-16 units, no spaces or controls (the broker
+// re-validates by codepoint).
+bool PredictionText(const std::wstring& value) {
+    if (value.empty() || value.size() > kMaxPredictionText) return false;
+    for (wchar_t c : value) if (c <= L' ' || c == 0x3000) return false;
+    return true;
+}
+// The last kMaxPredictionText units of a commit, without a split surrogate pair.
+std::wstring PredictionTail(const std::wstring& value) {
+    std::wstring tail = value.size() > kMaxPredictionText ? value.substr(value.size() - kMaxPredictionText) : value;
+    if (!tail.empty() && IS_LOW_SURROGATE(tail.front())) tail.erase(0, 1);
+    return tail;
+}
+bool Acknowledged(const std::vector<BYTE>& response, std::uint32_t sequence) {
+    std::size_t position = 0;
+    return response.size() == 28 && Get(response, position) == kMagic &&
+        Get(response, position) == sequence && Get(response, position) == 0 &&
+        Get(response, position) == 0xffffffffu && Get(response, position) == 0 &&
+        Get(response, position) == 0 && Get(response, position) == 0;
+}
+}  // namespace
+
+bool Backend::Predict(const std::wstring& context, Page& output) {
+    output = {};
+    try {
+        const std::wstring tail = PredictionTail(context);
+        if (!PredictionText(tail)) return false;
+        const auto text = Utf8(tail);
+        std::vector<BYTE> request;
+        Put(request, static_cast<std::uint32_t>(12 + text.size()));
+        Put(request, kPredictionMagic);
+        const auto sequence = ++sequence_;
+        Put(request, sequence); Put(request, static_cast<std::uint32_t>(text.size()));
+        request.insert(request.end(), text.begin(), text.end());
+        std::vector<BYTE> response;
+        if (!Exchange(PipeName(), request, response)) return false;
+        std::size_t position = 0;
+        if (Get(response, position) != kMagic || Get(response, position) != sequence) return false;
+        const auto status = Get(response, position), next = Get(response, position);
+        const auto truncated = Get(response, position), count = Get(response, position);
+        const auto error = GetString(response, position, 8192);
+        if (status != 0 || next != 0xffffffffu || truncated != 0 || count > 9 || !error.empty()) return false;
+        Page page;
+        for (std::uint32_t i = 0; i < count; ++i) {
+            Candidate item{GetString(response, position, 64), GetString(response, position, 64)};
+            if (!PredictionText(item.text) || !item.reading.empty()) return false;
+            page.candidates.push_back(std::move(item));
+        }
+        if (position != response.size()) return false;
+        output = std::move(page);
+        return true;
+    } catch (...) { output = {}; return false; }
+}
+
+bool Backend::RecordSequence(const std::wstring& previous, const std::wstring& following) {
+    try {
+        const std::wstring tail = PredictionTail(previous);
+        if (!PredictionText(tail) || !PredictionText(following)) return false;
+        const auto before = Utf8(tail), after = Utf8(following);
+        std::vector<BYTE> request;
+        Put(request, static_cast<std::uint32_t>(16 + before.size() + after.size()));
+        Put(request, kSequenceMagic);
+        const auto sequence = ++sequence_;
+        Put(request, sequence);
+        Put(request, static_cast<std::uint32_t>(before.size())); Put(request, static_cast<std::uint32_t>(after.size()));
+        request.insert(request.end(), before.begin(), before.end());
+        request.insert(request.end(), after.begin(), after.end());
+        std::vector<BYTE> response;
+        return Exchange(PipeName(), request, response) && Acknowledged(response, sequence);
     } catch (...) { return false; }
 }
 
