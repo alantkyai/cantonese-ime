@@ -20,10 +20,11 @@ struct AppearanceSettings {
     int opacity_percent = 95;
     std::wstring font_family; // Empty: bundled font, then the built-in fallbacks.
     int font_size = 0;        // Logical pixels before DPI scaling; 0: default.
+    bool prediction = false;  // Learned next-word suggestions; off unless chosen.
 };
 inline bool operator==(const AppearanceSettings& a, const AppearanceSettings& b) {
     return a.theme == b.theme && a.opacity_percent == b.opacity_percent
-        && a.font_family == b.font_family && a.font_size == b.font_size;
+        && a.font_family == b.font_family && a.font_size == b.font_size && a.prediction == b.prediction;
 }
 struct AppearancePalette {
     COLORREF background, text, highlight, highlight_text, border;
@@ -127,6 +128,9 @@ inline void ApplyField(AppearanceSettings& settings, const std::string& key, con
             const int size = std::stoi(value);
             if (ValidFontSize(size)) settings.font_size = size;
         }
+    } else if (key == "prediction") {
+        if (value == "on") settings.prediction = true;
+        else if (value == "off") settings.prediction = false;
     } else if (key == "theme") {
         if (value == "dark") settings.theme = CandidateTheme::Dark;
         else if (value == "light") settings.theme = CandidateTheme::Light;
@@ -155,7 +159,7 @@ inline Document Parse(const std::string& text) {
         const auto equals = line.find('=');
         if (section.empty() || equals == std::string::npos) continue;
         const std::string key = Trim(line.substr(0, equals));
-        if (key != "theme" && key != "opacity" && key != "font" && key != "font_size") continue;
+        if (key != "theme" && key != "opacity" && key != "font" && key != "font_size" && key != "prediction") continue;
         if (sections.size() >= kMaxApplications + 1 && !sections.count(section)) continue;
         sections[section][key] = Trim(line.substr(equals + 1));
     }
@@ -181,6 +185,7 @@ inline std::string Serialize(const Document& document) {
         if (!value.font_family.empty() && ValidFontFamily(value.font_family))
             output << "font=" << WideToUtf8(value.font_family) << "\r\n";
         if (value.font_size && ValidFontSize(value.font_size)) output << "font_size=" << value.font_size << "\r\n";
+        if (value.prediction) output << "prediction=on\r\n";
         output << "\r\n";
     };
     write("global", document.global);

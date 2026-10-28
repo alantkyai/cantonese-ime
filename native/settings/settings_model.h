@@ -220,7 +220,15 @@ private:
     bool held_ = false;
 };
 
-inline bool SaveGlobalFont(const std::wstring& path, const std::wstring& family, int size) {
+// The suggestion switch follows the same rule: sections holding the old
+// global value were inheriting it.
+inline void ApplyGlobalPrediction(cime::ui::appearance_detail::Document& document, bool enabled) {
+    const bool old_value = document.global.prediction;
+    document.global.prediction = enabled;
+    for (auto& entry : document.applications) if (entry.second.prediction == old_value) entry.second.prediction = enabled;
+}
+
+inline bool SaveGlobalCandidate(const std::wstring& path, const std::wstring& family, int size, bool prediction) {
     if (!cime::ui::ValidFontFamily(family) || !cime::ui::ValidFontSize(size)) return false;
     AppearanceLock lock(path);
     if (!lock.Held()) return false;
@@ -228,6 +236,7 @@ inline bool SaveGlobalFont(const std::wstring& path, const std::wstring& family,
     if (!ReadUserFile(path, cime::ui::appearance_detail::kMaxSettingsBytes, text)) return false;
     auto document = cime::ui::appearance_detail::Parse(text);
     ApplyGlobalFont(document, family, size);
+    ApplyGlobalPrediction(document, prediction);
     return cime::ui::appearance_detail::WriteAtomic(path, cime::ui::appearance_detail::Serialize(document));
 }
 } // namespace cime::settings

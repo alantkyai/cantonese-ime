@@ -16,6 +16,11 @@ from .engine import Candidate, CompositionCapacityError, Engine, PaginationCapac
 
 MAGIC = 0x31454D49  # IME1
 LEARNING_MAGIC = 0x314C4D49  # IML1; separate request operation, IME1 acknowledgement.
+PREDICTION_MAGIC = 0x31504D49  # IMP1; next-text suggestions, IME1 reply with reading-less candidates.
+SEQUENCE_MAGIC = 0x31534D49  # IMS1; one consecutive-commit record, IME1 acknowledgement.
+PREDICTION_HEADER = struct.Struct("<3I")
+SEQUENCE_HEADER = struct.Struct("<4I")
+MAX_PREDICTION_TEXT = 8
 MAX_FRAME_BYTES = 1_048_576
 MAX_NATIVE_PAGE = 9
 MAX_ERROR_BYTES = 8192
@@ -58,6 +63,19 @@ class LearningRequest:
     raw: str
     text: str
     reading: str
+
+
+@dataclass(frozen=True)
+class PredictionRequest:
+    request_id: int
+    context: str
+
+
+@dataclass(frozen=True)
+class SequenceRequest:
+    request_id: int
+    previous: str
+    following: str
 
 
 @dataclass(frozen=True)
@@ -165,6 +183,64 @@ def decode_learning_request(payload: bytes) -> LearningRequest:
     request = LearningRequest(request_id, mode, raw, text, reading)
     validate_learning_request(request)
     return request
+
+
+def _prediction_text(value: object, label: str) -> bytes:
+    if (not isinstance(value, str) or not 1 <= len(value) <= MAX_PREDICTION_TEXT
+            or any(c.isspace() or ord(c) < 32 for c in value)):
+        raise ProtocolError(f"Invalid {label} text.")
+    return _text_bytes(value)
+
+
+def encode_prediction_request(request: PredictionRequest) -> bytes:
+    _integer(request.request_id, 0, 0xFFFFFFFF, "request id")
+    context = _prediction_text(request.context, "prediction context")
+    return PREDICTION_HEADER.pack(PREDICTION_MAGIC, request.request_id, len(context)) + context
+
+
+def encode_sequence_request(request: SequenceRequest) -> bytes:
+    _integer(request.request_id, 0, 0xFFFFFFFF, "request id")
+    previous = _prediction_text(request.previous, "previous")
+    following = _prediction_text(request.following, "following")
+    return SEQUENCE_HEADER.pack(SEQUENCE_MAGIC, request.request_id, len(previous), len(following)) + previous + following
+
+
+def _decode_texts(payload: bytes, position: int, lengths: tuple[int, ...]) -> list[str]:
+    if any(length > 4 * MAX_PREDICTION_TEXT for length in lengths) or len(payload) != position + sum(lengths):
+        raise ProtocolError("Invalid prediction payload length.")
+    texts = []
+    for length in lengths:
+        try:
+            texts.append(payload[position:position + length].decode("utf-8"))
+        except UnicodeDecodeError as error:
+            raise ProtocolError("Prediction text is not UTF-8.") from error
+        position += length
+    return texts
+
+
+def decode_prediction_request(payload: bytes) -> PredictionRequest:
+    payload = _payload_bytes(payload)
+    if len(payload) < PREDICTION_HEADER.size:
+        raise ProtocolError("Invalid prediction request length.")
+    magic, request_id, length = PREDICTION_HEADER.unpack_from(payload)
+    if magic != PREDICTION_MAGIC:
+        raise ProtocolError("Invalid prediction header.")
+    (context,) = _decode_texts(payload, PREDICTION_HEADER.size, (length,))
+    _prediction_text(context, "prediction context")
+    return PredictionRequest(request_id, context)
+
+
+def decode_sequence_request(payload: bytes) -> SequenceRequest:
+    payload = _payload_bytes(payload)
+    if len(payload) < SEQUENCE_HEADER.size:
+        raise ProtocolError("Invalid sequence request length.")
+    magic, request_id, previous_length, following_length = SEQUENCE_HEADER.unpack_from(payload)
+    if magic != SEQUENCE_MAGIC:
+        raise ProtocolError("Invalid sequence header.")
+    previous, following = _decode_texts(payload, SEQUENCE_HEADER.size, (previous_length, following_length))
+    _prediction_text(previous, "previous")
+    _prediction_text(following, "following")
+    return SequenceRequest(request_id, previous, following)
 
 
 def frame(payload: bytes) -> bytes:
@@ -301,18 +377,59 @@ def _internal_failure(request_id: int) -> LookupResponse:
     return LookupResponse(request_id, Status.INTERNAL, error="Conversion backend could not finish the request.")
 
 
-def dispatch(engine: Engine, payload: bytes) -> LookupResponse:
-    """Translate a lookup or an explicit, engine-validated selection request.
+def _learned_selections(engine: Engine) -> dict:
+    """A consistent copy of learned selections, taken under the engine lock."""
+    selections = getattr(engine, "_selections", None)
+    lock = getattr(engine, "_lock", None)
+    if not isinstance(selections, dict):
+        return {}
+    if lock is None:
+        return dict(selections)
+    with lock:
+        return dict(engine._selections)
+
+
+def _dispatch_prediction(engine: Engine, payload: bytes, predictions, magic: int) -> LookupResponse:
+    if magic == PREDICTION_MAGIC:
+        request = decode_prediction_request(payload)
+        if predictions is None:
+            return LookupResponse(request.request_id, Status.OK)
+        try:
+            texts = predictions.suggest(request.context, limit=MAX_NATIVE_PAGE, selections=_learned_selections(engine))
+            predictions.save()
+        except Exception:
+            return LookupResponse(request.request_id, Status.INTERNAL, error="Prediction memory could not answer.")
+        return LookupResponse(request.request_id, Status.OK,
+                              candidates=tuple(WireCandidate(text, "") for text in texts[:MAX_NATIVE_PAGE]))
+    request = decode_sequence_request(payload)
+    if predictions is None:
+        return LookupResponse(request.request_id, Status.INTERNAL, error="Prediction memory is unavailable.")
+    try:
+        predictions.record(request.previous, request.following)
+    except ValueError:
+        return LookupResponse(request.request_id, Status.INVALID, error="Prediction memory did not accept this record.")
+    except Exception:
+        return LookupResponse(request.request_id, Status.INTERNAL, error="Prediction memory could not save this record.")
+    return LookupResponse(request.request_id, Status.OK)
+
+
+def dispatch(engine: Engine, payload: bytes, predictions=None) -> LookupResponse:
+    """Translate a lookup, an engine-validated selection, or a prediction request.
 
     Lookups never write. Engine.record_selection validates text+reading against
     its bounded current input/mode candidate snapshot while holding its lock;
     a supplied string alone cannot create an arbitrary learned candidate.
+    Prediction requests read or count user sequences in the separate store;
+    without one, suggestions are empty and records are refused.
     """
     request_id = 0
     try:
         payload = _payload_bytes(payload)
         request_id = U32.unpack_from(payload, 4)[0] if len(payload) >= 8 else 0
-        if len(payload) >= 4 and U32.unpack_from(payload)[0] == LEARNING_MAGIC:
+        magic = U32.unpack_from(payload)[0] if len(payload) >= 4 else 0
+        if magic in (PREDICTION_MAGIC, SEQUENCE_MAGIC):
+            return _dispatch_prediction(engine, payload, predictions, magic)
+        if magic == LEARNING_MAGIC:
             request = decode_learning_request(payload)
             if getattr(engine, "learning_path", None) is None:
                 return LookupResponse(request_id, Status.INTERNAL, error="Local selection memory is unavailable.")

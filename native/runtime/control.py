@@ -228,6 +228,10 @@ class State:
     def custom_file(self) -> Path:
         return self.directory.parents[2] / "custom.txt"
 
+    @property
+    def prediction_file(self) -> Path:
+        return self.directory.parents[2] / "prediction.json"
+
 
 def user_state(api) -> State:
     sid, session = api.identity()
@@ -451,6 +455,8 @@ def start(config: Config, api, state: State, *, timeout: float = 20) -> dict:
     if config.learning_enabled:
         args += ["--learning-file", str(learning_file)]
     args += ["--custom-file", str(state.custom_file)]
+    if config.learning_enabled:
+        args += ["--prediction-file", str(state.prediction_file)]
     with state.file(f"{instance}.stdout.log").open("ab") as out, state.file(f"{instance}.stderr.log").open("ab") as err:
         child = subprocess.Popen(args, cwd=config.root, stdin=subprocess.DEVNULL, stdout=out, stderr=err,
                                  close_fds=True, creationflags=0x08000000)  # CREATE_NO_WINDOW
