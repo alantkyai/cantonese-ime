@@ -55,7 +55,10 @@ Upgrades and uninstall preserve personal learning at
 The easiest way is **Start menu > Cantonese IME > Cantonese IME Settings**, or
 right-click the candidate panel or the **粵 / 英** button and choose **Custom
 phrases, spellings and font...**. The settings window lists, adds, edits and
-deletes entries and also sets the candidate font and size. It runs as its own
+deletes entries and also sets the candidate font and size. Its **查拼音** tab
+looks up the stored readings of a character or word, shows how common each is
+and which spellings already work, and can start a custom spelling or phrase
+from the selected reading. It runs as its own
 program and only edits the two files described here, keeping comments in
 `custom.txt`. Close it before upgrading.
 
@@ -180,6 +183,7 @@ python -m cantonese_ime lookup neihou
 python -m cantonese_ime lookup bohim --mode forgiving
 python -m cantonese_ime lookup "nei5'hou2" --mode jyutping --json
 python -m cantonese_ime lookup lei4 --mode jyutping --offset 108 --limit 9 --json
+python -m cantonese_ime reverse 出去
 ```
 
 The dictionary build uses the pinned source files already in this project. It
