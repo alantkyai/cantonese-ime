@@ -293,6 +293,11 @@ public:
         AppendMenuW(menu, MF_POPUP, reinterpret_cast<UINT_PTR>(opacity), L"Panel opacity");
         AppendMenuW(menu, MF_SEPARATOR, 0, nullptr);
         AppendMenuW(menu, MF_STRING | (overridden_ ? 0 : MF_GRAYED), 300, L"Reset appearance for this app");
+        const bool settings = !settings_exe_.empty() && GetFileAttributesW(settings_exe_.c_str()) != INVALID_FILE_ATTRIBUTES;
+        if (settings) {
+            AppendMenuW(menu, MF_SEPARATOR, 0, nullptr);
+            AppendMenuW(menu, MF_STRING, 400, L"Custom phrases, spellings and font...");
+        }
         if (Effective().high_contrast) AppendMenuW(menu, MF_STRING | MF_GRAYED, 0, L"High contrast: Windows colors, 100% opacity");
         if (!saved_) AppendMenuW(menu, MF_STRING | MF_GRAYED, 0, L"Previous change could not be saved");
         HWND temporary = nullptr;
@@ -305,11 +310,25 @@ public:
             point.x, point.y, owner, nullptr) : 0;
         DestroyMenu(menu); if (temporary) DestroyWindow(temporary);
         if (command == 300) { ResetForApp(); return true; }
+        if (command == 400 && settings) { LaunchSettings(); return true; }
         AppearanceSettings next = current_;
         if (command >= 100 && command < 103) next.theme = static_cast<CandidateTheme>(command - 100);
         else if (command >= 200 && command < 204) next.opacity_percent = levels[command - 200];
         else return false;
         SetForApp(next); return true;
+    }
+    // The separate settings EXE beside the service DLL. It runs as its own
+    // process, so no dialog opens inside the host; a sandboxed host that may
+    // not create processes simply gets nothing.
+    void SetSettingsExecutable(std::wstring path) { settings_exe_ = std::move(path); }
+    bool LaunchSettings() const {
+        if (settings_exe_.empty()) return false;
+        STARTUPINFOW startup{}; startup.cb = sizeof(startup);
+        PROCESS_INFORMATION process{};
+        std::wstring command = L"\"" + settings_exe_ + L"\"";
+        if (!CreateProcessW(settings_exe_.c_str(), command.data(), nullptr, nullptr, FALSE, 0, nullptr, nullptr, &startup, &process)) return false;
+        CloseHandle(process.hThread); CloseHandle(process.hProcess);
+        return true;
     }
 private:
     bool Persist(bool reset) {
@@ -330,7 +349,7 @@ private:
         const bool result = appearance_detail::WriteAtomic(path_, appearance_detail::Serialize(document));
         ReleaseMutex(mutex); CloseHandle(mutex); return result;
     }
-    std::wstring path_;
+    std::wstring path_, settings_exe_;
     std::string key_;
     AppearanceSettings current_;
     bool loaded_ = false, overridden_ = false, saved_ = true;

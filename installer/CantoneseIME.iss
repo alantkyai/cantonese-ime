@@ -65,6 +65,7 @@ Source: "{#PayloadRoot}\package-manifest.json"; DestDir: "{tmp}\prereq"; Flags: 
 [Icons]
 Name: "{group}\Enable Cantonese IME"; Filename: "{app}\runtime\python\pythonw.exe"; Parameters: "-B ""{app}\installer\lifecycle.py"" finish-user --install-root ""{app}"""; WorkingDir: "{app}"; IconFilename: "{app}\native\CantoneseMachineRegistration.exe"; IconIndex: 0
 Name: "{group}\Stop Cantonese IME"; Filename: "{app}\runtime\python\pythonw.exe"; Parameters: "-B ""{app}\installer\lifecycle.py"" stop-user --install-root ""{app}"""; WorkingDir: "{app}"; IconFilename: "{app}\native\CantoneseMachineRegistration.exe"; IconIndex: 0
+Name: "{group}\Cantonese IME Settings"; Filename: "{app}\native\CantoneseImeSettings.exe"; WorkingDir: "{app}"
 Name: "{group}\Getting started"; Filename: "{app}\GETTING_STARTED.txt"
 Name: "{group}\Third-party notices"; Filename: "{app}\data\THIRD_PARTY_NOTICES.md"
 
