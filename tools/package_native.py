@@ -370,6 +370,11 @@ def stage(output: Path, python: Path, *, bundled_runtime: Path | None = None, re
     if not amd64(dll) or digest(dll) != built["sha256"]:
         raise ValueError("Native DLL does not match the recorded AMD64 build.")
     pins.bind(dll, built["sha256"])
+    settings_app = ROOT / ".local/native/build-x64/CantoneseImeSettings.exe"
+    settings_built = next((item for item in build["artifacts"] if Path(item["path"]).name == settings_app.name), None)
+    if settings_built is None or not amd64(settings_app) or digest(settings_app) != settings_built["sha256"]:
+        raise ValueError("Settings executable does not match the recorded AMD64 build.")
+    pins.bind(settings_app, settings_built["sha256"])
     # Package exactly the source revision used by the recorded native build.
     for item in build["sources"]:
         if digest(Path(item["path"])) != item["sha256"]:
@@ -411,6 +416,7 @@ def stage(output: Path, python: Path, *, bundled_runtime: Path | None = None, re
                          "native/Update-NativeIme.ps1", "native/UPGRADING.md"):
             selected.pop(relative)
     add("native/CantoneseIME.dll", dll)
+    add("native/CantoneseImeSettings.exe", settings_app)
     add("native/CantoneseMachineRegistration.exe", helper)
     add("native/registration-guard-checks.json", guard_report)
     add("native/build-manifest.json", ROOT / ".local/native/build-x64/build-manifest.json")

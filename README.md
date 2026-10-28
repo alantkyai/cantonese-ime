@@ -52,8 +52,15 @@ Upgrades and uninstall preserve personal learning at
 
 ## Custom phrases and spellings
 
-Create `%LOCALAPPDATA%\CantoneseIME\custom.txt` (UTF-8) to add your own
-entries. Changes apply on the next keystroke; no restart is needed.
+The easiest way is **Start menu > Cantonese IME > Cantonese IME Settings**, or
+right-click the candidate panel or the **粵 / 英** button and choose **Custom
+phrases, spellings and font...**. The settings window lists, adds, edits and
+deletes entries and also sets the candidate font and size. It runs as its own
+program and only edits the two files described here, keeping comments in
+`custom.txt`. Close it before upgrading.
+
+You can also create `%LOCALAPPDATA%\CantoneseIME\custom.txt` (UTF-8) yourself.
+Changes apply on the next keystroke; no restart is needed.
 
 ```text
 # A phrase: typing exactly hh offers 曈曈, then 瞳瞳, before other candidates
@@ -91,8 +98,8 @@ for this app** restores its default. Settings are stored at
 uninstall. Applications that draw their own TSF candidate list control that
 list's appearance.
 
-To use another installed font or size, edit `appearance.ini` (UTF-8) in a text
-editor. Put the lines under `[global]` for every application, or under an
+To use another installed font or size, use the settings window's font tab, or
+edit `appearance.ini` (UTF-8) in a text editor. Put the lines under `[global]` for every application, or under an
 application's `[app-…]` section for that application only:
 
 ```ini

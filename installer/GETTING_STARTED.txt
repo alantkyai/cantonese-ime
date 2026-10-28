@@ -40,7 +40,12 @@ The engine works offline. Personal learning is stored separately at:
 Upgrades and uninstall keep that file.
 They also keep your saved appearance choices.
 
-To add your own phrases or spellings, create this UTF-8 text file:
+Start menu > Cantonese IME > Cantonese IME Settings (or right-click the
+candidate panel > Custom phrases, spellings and font...) edits your own
+phrases, spellings and the candidate font and size without opening files.
+Close it before upgrading.
+
+To edit phrases or spellings by hand, use this UTF-8 text file:
   %LOCALAPPDATA%\CantoneseIME\custom.txt
 One entry per line; lines starting with # are comments. For example:
   hh 曈曈        typing hh offers 曈曈 first

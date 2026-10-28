@@ -101,9 +101,11 @@ class NativePackageTests(unittest.TestCase):
                                  "module_sha256": package.digest(self.mapping_module)}
         self.json("data/mappings/build.manifest.json", self.mapping_manifest)
         dll = self.write(".local/native/build-x64/CantoneseIME.dll", pe_bytes())
+        settings_app = self.write(".local/native/build-x64/CantoneseImeSettings.exe", pe_bytes() + b"settings")
         native_source = self.write("native/tsf/synthetic-source.cpp", b"// synthetic native source\n")
         self.json(".local/native/build-x64/build-manifest.json", {
-            "artifacts": [{"path": str(dll), "sha256": package.digest(dll)}],
+            "artifacts": [{"path": str(dll), "sha256": package.digest(dll)},
+                          {"path": str(settings_app), "sha256": package.digest(settings_app)}],
             "sources": [{"path": str(native_source), "sha256": package.digest(native_source)}]})
         helper = self.write(".local/native/build-x64/CantoneseMachineRegistration.exe", pe_bytes())
         self.json(".local/native/machine-registration-guard-checks.json", {

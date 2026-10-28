@@ -411,6 +411,14 @@ HRESULT TextService::ActivateEx(ITfThreadMgr* manager, TfClientId client, DWORD)
     if (!manager) return E_INVALIDARG;
     if (manager_) return E_UNEXPECTED;
     candidate_appearance_.Load();
+    {
+        // The settings EXE is installed beside this DLL in <root>\native.
+        wchar_t module[MAX_PATH]{};
+        const DWORD length = GetModuleFileNameW(g_instance, module, MAX_PATH);
+        std::wstring path(module, length < MAX_PATH ? length : 0);
+        const auto slash = path.find_last_of(L'\\');
+        if (slash != std::wstring::npos) candidate_appearance_.SetSettingsExecutable(path.substr(0, slash + 1) + L"CantoneseImeSettings.exe");
+    }
     manager_ = Ptr<ITfThreadMgr>(manager); client_ = client;
     HRESULT result = manager_->QueryInterface(IID_ITfKeystrokeMgr, reinterpret_cast<void**>(keystrokes_.Put()));
     if (SUCCEEDED(result)) result = keystrokes_->AdviseKeyEventSink(client_, static_cast<ITfKeyEventSink*>(this), TRUE);
