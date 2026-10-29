@@ -30,8 +30,8 @@ struct Local { void* value = nullptr; ~Local() { if (value) LocalFree(value); } 
 struct Failure { HRESULT result; std::wstring detail; };
 const LANGID kLanguages[] = {0x0409, 0x0c04};
 const GUID* const kCategories[] = {&GUID_TFCAT_TIP_KEYBOARD, &GUID_TFCAT_DISPLAYATTRIBUTEPROVIDER,
-    &GUID_TFCAT_TIPCAP_UIELEMENTENABLED, &GUID_TFCAT_TIPCAP_SYSTRAYSUPPORT};
-const wchar_t* const kCategoryNames[] = {L"keyboard", L"display_attribute", L"ui_element", L"system_tray"};
+    &GUID_TFCAT_TIPCAP_UIELEMENTENABLED, &GUID_TFCAT_TIPCAP_SYSTRAYSUPPORT, &GUID_TFCAT_TIPCAP_IMMERSIVESUPPORT};
+const wchar_t* const kCategoryNames[] = {L"keyboard", L"display_attribute", L"ui_element", L"system_tray", L"immersive"};
 constexpr unsigned kCategoryCount = sizeof(kCategories) / sizeof(kCategories[0]);
 // Modern TSF uses a signed resource location packed in the ULONG argument,
 // matching Microsoft's SampleIME RegisterProfile((UINT)-resourceID) pattern.
@@ -531,7 +531,7 @@ void VerifyRefreshedRegistration(const Plan& plan) {
     }
     const auto observed = ExistingCategories(fresh_categories.value);
     Log(L"refresh_verify_COM_category_view", observed.size() == kCategoryCount ? S_OK : S_FALSE,
-        std::to_wstring(observed.size()) + L" COM-visible category memberships; all four persisted memberships and both directional indexes verified independently");
+        std::to_wstring(observed.size()) + L" COM-visible category memberships; all persisted memberships and both directional indexes verified independently");
 }
 int RefreshRegistration(const Plan& plan, ITfInputProcessorProfileMgr* profiles, ITfCategoryMgr* categories) {
     const auto existing_profiles = ExistingProfiles(profiles);
@@ -594,7 +594,7 @@ int RefreshRegistration(const Plan& plan, ITfInputProcessorProfileMgr* profiles,
         Log(L"refresh_rollback_summary", restored ? S_OK : E_FAIL, L"Previous metadata/enable flags restoration attempted through TSF; no profile unregistration/default setter. Files retained.");
         throw;
     }
-    Log(L"refresh_complete", S_OK, L"Owned existing profiles refreshed with release name, separate protected helper EXE branding icon and system-tray category; current-token enable flags preserved. No layout-list, activation or default API called.");
+    Log(L"refresh_complete", S_OK, L"Owned existing profiles refreshed with release name, separate protected helper EXE branding icon and system-tray/immersive categories; current-token enable flags preserved. No layout-list, activation or default API called.");
     return 0;
 }
 void InspectRefresh() {

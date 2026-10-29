@@ -25,9 +25,12 @@ Profile {A7136205-2245-45CC-A6AA-702B3F2E8D42}
 ```
 
 The machine definition contains `0C04` (Hong Kong Traditional Chinese) and `0409`
-(legacy English-slot Cantonese) profiles. The four categories are keyboard,
-display-attribute provider, candidate UI element and system-tray support. No
-immersive/AppContainer capability is claimed.
+(legacy English-slot Cantonese) profiles. The five categories are keyboard,
+display-attribute provider, candidate UI element, system-tray support and
+immersive support (`GUID_TFCAT_TIPCAP_IMMERSIVESUPPORT`). Without the immersive
+category Windows hides the input source in some packaged hosts, for example the
+Microsoft Store WhatsApp client. `refresh-registration` adds it to an existing
+four-category installation; removal follows persisted membership.
 
 The separate, non-elevated user step adds the owned Hong Kong TIP to the existing
 language list, or appends a Hong Kong language entry if needed. It proves that
