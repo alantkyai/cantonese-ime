@@ -81,6 +81,22 @@ accepts; targets resolve against built-in spellings only, so aliases do not
 chain. Invalid lines and unresolved targets are skipped. Custom phrases are never written to learning memory, and the file
 is only read, never modified. Upgrades and uninstall keep it.
 
+## Learned next-word suggestions (experimental)
+
+Off by default. Turn it on in the settings window's **字型同聯想** tab. After you
+commit a word, the candidate panel suggests what you usually type next: digits
+1–9 choose a suggestion (which then suggests again), Escape closes the panel,
+and any other key types normally.
+
+Suggestions come only from your own typing: consecutive commits in the same
+text box (a letter keeps the sequence going; other keys, focus changes or a
+20-second pause break it) and phrases you have already chosen. Dictionary
+frequencies are not used, so suggestions start sparse and improve with use.
+Password and read-only fields are never recorded. The counts are stored only
+in `%LOCALAPPDATA%\CantoneseIME\prediction.json`; **清除聯想記錄…** deletes them.
+While suggestions are showing, digit keys choose a suggestion instead of
+typing a digit.
+
 ## Candidate appearance
 
 Version 1.0.8 uses **LXGW WenKai TC Regular (霞鶩文楷 TC)** for the numbered

@@ -30,6 +30,10 @@ public:
     // Call only after the application has successfully committed a candidate.
     // Saving preference data is best effort and must never undo that commit.
     bool RecordSelection(const std::wstring& raw, bool strict, const Candidate& candidate);
+    // Learned next-text suggestions (IMP1). Candidates carry no reading.
+    bool Predict(const std::wstring& context, Page& page);
+    // One consecutive-commit record (IMS1); best effort, never retried.
+    bool RecordSequence(const std::wstring& previous, const std::wstring& following);
     static std::wstring PipeName();
 
 private:

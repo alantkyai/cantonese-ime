@@ -268,6 +268,15 @@ class RuntimeTests(unittest.TestCase):
         self.assertEqual(args[args.index("--custom-file") + 1], str(self.state.custom_file))
         self.assertEqual(self.state.custom_file.parent, self.state.learning_file.parent)
         self.assertFalse(self.state.custom_file.exists())
+        # Prediction memory sits beside learning and follows the learning switch.
+        self.assertEqual(args[args.index("--prediction-file") + 1], str(self.state.prediction_file))
+        self.assertFalse(self.state.prediction_file.exists())
+
+    def test_prediction_file_is_omitted_when_learning_is_disabled(self):
+        config = replace(self.config, learning_enabled=False)
+        with mock.patch.object(control.subprocess, "Popen", side_effect=self.spawn) as spawn:
+            control.start(config, self.api, self.state)
+        self.assertNotIn("--prediction-file", spawn.call_args.args[0])
 
     def test_explicit_test_store_overrides_personal_path_without_writing_it(self):
         test_memory = self.root.parent / "isolated-learning.json"

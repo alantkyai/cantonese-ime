@@ -72,7 +72,7 @@ int wmain(int argc, wchar_t** argv) {
     assert(cime::ui::appearance_detail::WriteAtomic(appearance_path, "[global]\r\ntheme=dark\r\nfont=Segoe UI\r\nfont_size=20\r\n"
         "[" + game + "]\r\ntheme=light\r\nopacity=85\r\nfont=Segoe UI\r\nfont_size=20\r\n"
         "[" + editor + "]\r\ntheme=system\r\nfont=Consolas\r\nfont_size=30\r\n")); ++checks;
-    assert(SaveGlobalFont(appearance_path, L"\u5fae\u8edf\u6b63\u9ed1\u9ad4", 24)); ++checks;
+    assert(SaveGlobalCandidate(appearance_path, L"\u5fae\u8edf\u6b63\u9ed1\u9ad4", 24, true)); ++checks;
     std::string saved;
     assert(ReadUserFile(appearance_path, cime::ui::appearance_detail::kMaxSettingsBytes, saved)); ++checks;
     const auto parsed = cime::ui::appearance_detail::Parse(saved);
@@ -84,10 +84,14 @@ int wmain(int argc, wchar_t** argv) {
     const auto& editor_settings = parsed.applications.at(editor);
     assert(editor_settings.font_family == L"Consolas" && editor_settings.font_size == 30
         && editor_settings.theme == cime::ui::CandidateTheme::System); ++checks;
-    assert(SaveGlobalFont(appearance_path, L"", 0)); ++checks; // back to the bundled default
+    // The suggestion switch is inherited the same way and survives a round trip.
+    assert(parsed.global.prediction && game_settings.prediction && editor_settings.prediction); ++checks;
+    assert(saved.find("prediction=on") != std::string::npos); ++checks;
+    assert(SaveGlobalCandidate(appearance_path, L"", 0, false)); ++checks; // back to the bundled default
     ReadUserFile(appearance_path, cime::ui::appearance_detail::kMaxSettingsBytes, saved);
     assert(saved.find("font=") == std::string::npos || saved.find("font=Consolas") != std::string::npos); ++checks;
-    assert(!SaveGlobalFont(appearance_path, L"x", 9)); ++checks;
+    assert(saved.find("prediction=on") == std::string::npos); ++checks;
+    assert(!SaveGlobalCandidate(appearance_path, L"x", 9, false)); ++checks;
 
     assert(DeleteFileW(custom_path.c_str()) && DeleteFileW(appearance_path.c_str()) && RemoveDirectoryW(directory.c_str()));
     std::cout << "{\"passed\":true,\"checks\":" << checks

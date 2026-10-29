@@ -68,6 +68,8 @@ struct SelectionMemory {
 struct LearningTask {
     SelectionMemory selection;
     LearningTask* next = nullptr;
+    // A consecutive-commit record for learned suggestions instead of a selection.
+    std::wstring previous, following;
 };
 // One queue/worker per loaded process. These are POD globals, so DLL detach
 // never joins a worker or destroys a static queue under the loader lock.
@@ -112,7 +114,8 @@ DWORD WINAPI SaveSelection(void* parameter) {
                 cime::Backend backend;
                 // Exactly one attempt, with the transport's existing 250 ms
                 // deadline. Never retry a possibly already-persisted request.
-                backend.RecordSelection(task->selection.raw, task->selection.strict, task->selection.candidate);
+                if (!task->previous.empty()) backend.RecordSequence(task->previous, task->following);
+                else backend.RecordSelection(task->selection.raw, task->selection.strict, task->selection.candidate);
             } catch (...) { /* Preference storage must not affect application input. */ }
         }
         AcquireSRWLockExclusive(&g_learning_lock);
@@ -121,15 +124,23 @@ DWORD WINAPI SaveSelection(void* parameter) {
     }
 }
 
+void QueueLearning(LearningTask entry) noexcept;
 void QueueSelectionLearning(const SelectionMemory& selection) noexcept {
     if (selection.raw.empty()) return;
+    try { QueueLearning(LearningTask{selection, nullptr, {}, {}}); } catch (...) { }
+}
+void QueueSequenceLearning(const std::wstring& previous, const std::wstring& following) noexcept {
+    if (previous.empty() || following.empty()) return;
+    try { QueueLearning(LearningTask{{}, nullptr, previous, following}); } catch (...) { }
+}
+void QueueLearning(LearningTask entry) noexcept {
     try {
         LearningLock lock;
         // Drop only the new optional preference if the broker is unavailable
         // and 32 records are already queued/in flight. Application input stays
         // committed. Enqueue order is linearized under this process's SRW lock.
         if (g_pending_learning >= 32) return;
-        auto task = std::make_unique<LearningTask>(LearningTask{selection, nullptr});
+        auto task = std::make_unique<LearningTask>(std::move(entry));
         HANDLE thread = nullptr;
         if (!g_learning_worker) {
             HMODULE module = nullptr;
@@ -230,7 +241,8 @@ private:
     bool done_ = false;
 };
 
-enum class EditKind { CheckInput, Render, Position };
+// Insert: commit a suggestion at the caret without a composition.
+enum class EditKind { CheckInput, Render, Position, Insert };
 class EditSession final : public ITfEditSession, public Counted {
 public:
     EditSession(TextService*, ITfContext*, EditKind, std::wstring, bool, std::uint64_t, SelectionMemory = {});
@@ -328,6 +340,16 @@ public:
     HRESULT ShowAppearanceMenu(POINT point) override;
 private:
     void SetEnglishMode(bool english) { english_ = english; if (mode_button_) mode_button_->ModeChanged(); }
+    // Learned next-word suggestions. A "sequence" is the last committed text
+    // that the next commit may follow; anything else typed breaks it.
+    bool PredictionEnabled() { return candidate_appearance_.Current().prediction; }
+    void AfterCommit(ITfContext* context, const std::wstring& text);
+    void StartPrediction();
+    void EndPrediction();
+    void BreakSequence() { last_commit_.clear(); ++prediction_ticket_; }
+    void PassThroughKey(WPARAM key);
+    HRESULT CommitPrediction(UINT index, bool synchronous);
+    bool EnsureWindow(int x, int y);
     bool Enabled(ITfContext*) const;
     bool WantsKey(ITfContext*, WPARAM) const;
     bool CheckInput(ITfContext*);
@@ -383,6 +405,14 @@ private:
     std::vector<std::uint32_t> previous_offsets_;
     std::set<WPARAM> eaten_keys_;
     std::uint64_t generation_ = 0;
+    static constexpr UINT kStartPrediction = WM_APP + 0x4c2;
+    static constexpr ULONGLONG kSequenceTimeoutMs = 20000;
+    bool predicting_ = false;          // page_ holds suggestions, not a composition's candidates.
+    std::wstring last_commit_;         // Previous commit a following one may extend.
+    ULONGLONG last_commit_tick_ = 0;
+    std::uint64_t prediction_ticket_ = 0;  // Invalidates a posted StartPrediction.
+    Ptr<ITfContext> pending_context_;
+    std::wstring pending_text_;
 };
 
 EditSession::EditSession(TextService* owner, ITfContext* context, EditKind kind, std::wstring text,
@@ -499,6 +529,10 @@ bool TextService::WantsKey(ITfContext* context, WPARAM key) const {
     if (english_ || control || alt || (GetKeyState(VK_LWIN) & 0x8000) || (GetKeyState(VK_RWIN) & 0x8000)) return false;
     if ((GetKeyState(VK_SHIFT) & 0x8000) || (GetKeyState(VK_CAPITAL) & 1)) return false;
     if (key >= 'A' && key <= 'Z') return true;
+    // Showing suggestions: only Escape and a listed digit belong to the IME;
+    // everything else reaches the application and dismisses them.
+    if (predicting_ && raw_.empty())
+        return key == VK_ESCAPE || (key >= '1' && key <= '9' && static_cast<std::size_t>(key - '1') < page_.candidates.size());
     if (raw_.empty()) return false;
     return key == VK_OEM_7 || key == VK_BACK || key == VK_SPACE || key == VK_RETURN || key == VK_ESCAPE ||
         key == VK_UP || key == VK_DOWN || key == VK_PRIOR || key == VK_NEXT || (key >= '1' && key <= '9');
@@ -513,17 +547,41 @@ bool TextService::CheckInput(ITfContext* context) {
 }
 HRESULT TextService::OnTestKeyDown(ITfContext* context, WPARAM key, LPARAM, BOOL* eaten) {
     if (!eaten) return E_POINTER;
-    *eaten = WantsKey(context, key) ? TRUE : FALSE; return S_OK;
+    *eaten = WantsKey(context, key) ? TRUE : FALSE;
+    if (!*eaten) PassThroughKey(key);
+    return S_OK;
+}
+void TextService::PassThroughKey(WPARAM key) {
+    switch (key) {
+    case VK_SHIFT: case VK_LSHIFT: case VK_RSHIFT: case VK_CONTROL: case VK_LCONTROL: case VK_RCONTROL:
+    case VK_MENU: case VK_LMENU: case VK_RMENU: case VK_LWIN: case VK_RWIN: case VK_CAPITAL:
+        return;  // A modifier alone neither dismisses suggestions nor breaks a sequence.
+    default:
+        if (predicting_) EndPrediction();
+        BreakSequence();
+    }
 }
 
 HRESULT TextService::OnKeyDown(ITfContext* context, WPARAM key, LPARAM, BOOL* eaten) {
     if (!eaten) return E_POINTER;
     *eaten = FALSE;
     try {
-        if (!WantsKey(context, key) || !CheckInput(context)) return S_OK;
+        if (!WantsKey(context, key)) { PassThroughKey(key); return S_OK; }
+        if (!CheckInput(context)) return S_OK;
+        ++prediction_ticket_;
+        if (predicting_) {
+            if (context_.Get() != context) { EndPrediction(); BreakSequence(); return S_OK; }
+            if (key == VK_ESCAPE) { EndPrediction(); eaten_keys_.insert(key); *eaten = TRUE; return S_OK; }
+            if (key >= '1' && key <= '9') {
+                *eaten = SUCCEEDED(CommitPrediction(static_cast<UINT>(key - '1'), true));
+                if (*eaten) eaten_keys_.insert(key);
+                return S_OK;
+            }
+            EndPrediction();  // A letter starts a new composition; the sequence continues.
+        }
         if ((GetKeyState(VK_CONTROL) & 0x8000) && key == VK_SPACE) {
             if (!raw_.empty() && FAILED(Finish(false))) return S_OK;
-            SetEnglishMode(!english_); *eaten = TRUE;
+            SetEnglishMode(!english_); BreakSequence(); *eaten = TRUE;
         } else if (context_ && context_.Get() != context) {
             DetachComposition(); return S_OK;
         } else if (key == VK_ESCAPE || key == VK_RETURN) {
@@ -570,7 +628,7 @@ HRESULT TextService::Request(ITfContext* context, EditKind kind, const std::wstr
     if (!session) return E_OUTOFMEMORY;
     HRESULT outcome = E_FAIL;
     const DWORD flags = (synchronous ? TF_ES_SYNC : TF_ES_ASYNCDONTCARE) |
-        (kind == EditKind::Render ? TF_ES_READWRITE : TF_ES_READ);
+        (kind == EditKind::Render || kind == EditKind::Insert ? TF_ES_READWRITE : TF_ES_READ);
     const HRESULT requested = context->RequestEditSession(client_, session.Get(), flags, &outcome);
     return FAILED(requested) ? requested : outcome;
 }
@@ -603,6 +661,23 @@ HRESULT TextService::DoEdit(ITfContext* context, TfEditCookie cookie, EditKind k
     }
     if (kind == EditKind::Position) {
         if (composition_) { Ptr<ITfRange> range; if (SUCCEEDED(composition_->GetRange(range.Put()))) UpdatePosition(context, cookie, range.Get()); }
+        return S_OK;
+    }
+    if (kind == EditKind::Insert) {
+        // A chosen suggestion is ordinary committed text at the caret.
+        if (composition_ || context_.Get() != context) return E_UNEXPECTED;
+        Ptr<ITfInsertAtSelection> inserter;
+        HRESULT result = context->QueryInterface(IID_ITfInsertAtSelection, reinterpret_cast<void**>(inserter.Put()));
+        if (FAILED(result)) return result;
+        Ptr<ITfRange> range;
+        result = inserter->InsertTextAtSelection(cookie, 0, text.c_str(), static_cast<LONG>(text.size()), range.Put());
+        if (FAILED(result) || !range) return FAILED(result) ? result : E_FAIL;
+        range->Collapse(cookie, TF_ANCHOR_END);
+        TF_SELECTION caret{}; caret.range = range.Get(); caret.style.ase = TF_AE_NONE; caret.style.fInterimChar = FALSE;
+        context->SetSelection(cookie, 1, &caret);
+        UpdatePosition(context, cookie, range.Get());
+        ClearState();
+        AfterCommit(context, text);
         return S_OK;
     }
     if (!composition_) {
@@ -647,6 +722,8 @@ HRESULT TextService::DoEdit(ITfContext* context, TfEditCookie cookie, EditKind k
             // Only a completed candidate commit reaches this point. Rendering,
             // cancellation, literal Enter and stale/failed edits never learn.
             QueueSelectionLearning(selection_memory);
+            if (!selection_memory.raw.empty()) AfterCommit(context, selection_memory.candidate.text);
+            else BreakSequence();  // Literal Latin text or a cancel is not part of a sequence.
         }
     }
     return result;
@@ -662,7 +739,7 @@ void TextService::UnadviseLayout() {
     layout_cookie_ = TF_INVALID_COOKIE; context_source_.Reset();
 }
 void TextService::ClearState() {
-    ++generation_; EndCandidates(); UnadviseLayout(); composition_.Reset(); context_.Reset();
+    ++generation_; predicting_ = false; EndCandidates(); UnadviseLayout(); composition_.Reset(); context_.Reset();
     raw_.clear(); page_ = {}; selected_ = 0; offset_ = 0; previous_offsets_.clear();
 }
 void TextService::DetachComposition() {
@@ -672,12 +749,14 @@ void TextService::DetachComposition() {
         if (edit) { HRESULT outcome = E_FAIL; context_->RequestEditSession(client_, edit.Get(), TF_ES_ASYNCDONTCARE | TF_ES_READWRITE, &outcome); }
     }
     ClearState();
+    BreakSequence();  // Focus moved: the next commit does not follow the last one.
 }
 HRESULT TextService::Finish(bool cancel, bool synchronous) {
     if (!context_ || !composition_) return S_FALSE;
     return Request(context_.Get(), EditKind::Render, cancel ? L"" : raw_, true, synchronous);
 }
 HRESULT TextService::Select(UINT index, bool synchronous) {
+    if (predicting_) return CommitPrediction(index, synchronous);
     if (!context_ || index >= page_.candidates.size()) return E_INVALIDARG;
     SelectionMemory selection{raw_, page_.candidates[index], strict_};
     const std::wstring chosen = selection.candidate.text;
@@ -727,8 +806,46 @@ void TextService::EndCandidates() {
     if (window_) ShowWindow(window_, SW_HIDE);
     show_own_ui_ = true;
 }
+bool TextService::EnsureWindow(int x, int y) {
+    if (!window_) {
+        WNDCLASSEXW type{}; type.cbSize = sizeof(type); type.lpfnWndProc = WindowProcedure;
+        type.hInstance = g_instance; type.hCursor = LoadCursorW(nullptr, IDC_ARROW); type.lpszClassName = kWindowClass;
+        RegisterClassExW(&type);
+        window_ = CreateWindowExW(WS_EX_TOPMOST | WS_EX_TOOLWINDOW | WS_EX_NOACTIVATE, kWindowClass, kProductName,
+            WS_POPUP, x, y, 1, 1, nullptr, nullptr, g_instance, this);
+    }
+    return window_ != nullptr;
+}
+void TextService::AfterCommit(ITfContext* context, const std::wstring& text) {
+    // Runs inside the commit's edit session: record and schedule only. The
+    // broker query and UI update happen afterwards from a posted message.
+    if (!PredictionEnabled() || text.empty()) { BreakSequence(); return; }
+    const ULONGLONG now = GetTickCount64();
+    if (!last_commit_.empty() && now - last_commit_tick_ <= kSequenceTimeoutMs) QueueSequenceLearning(last_commit_, text);
+    last_commit_ = text; last_commit_tick_ = now;
+    pending_context_ = Ptr<ITfContext>(context); pending_text_ = text;
+    const auto ticket = ++prediction_ticket_;
+    if (EnsureWindow(caret_.left, caret_.bottom)) PostMessageW(window_, kStartPrediction, static_cast<WPARAM>(ticket), 0);
+}
+void TextService::StartPrediction() {
+    Ptr<ITfContext> context = std::move(pending_context_);
+    if (!context || !raw_.empty() || composition_ || english_ || !PredictionEnabled() || !Enabled(context.Get())) return;
+    cime::Page page;
+    if (!backend_.Predict(pending_text_, page) || page.candidates.empty()) return;
+    predicting_ = true; context_ = std::move(context); page_ = std::move(page);
+    selected_ = 0; offset_ = 0; previous_offsets_.clear();
+    UpdateCandidates();
+}
+void TextService::EndPrediction() {
+    if (predicting_) ClearState();
+}
+HRESULT TextService::CommitPrediction(UINT index, bool synchronous) {
+    if (!predicting_ || !context_ || index >= page_.candidates.size()) return E_INVALIDARG;
+    const std::wstring text = page_.candidates[index].text;
+    return Request(context_.Get(), EditKind::Insert, text, false, synchronous);
+}
 void TextService::UpdateWindowState() {
-    if (raw_.empty() || page_.candidates.empty() || !show_own_ui_) {
+    if ((raw_.empty() && !predicting_) || page_.candidates.empty() || !show_own_ui_) {
         candidate_layout_ = {};
         if (window_) ShowWindow(window_, SW_HIDE);
         return;
@@ -742,14 +859,7 @@ void TextService::UpdateWindowState() {
     cime::ui::Rect work{0, 0, std::max(1, GetSystemMetrics(SM_CXSCREEN)), std::max(1, GetSystemMetrics(SM_CYSCREEN))};
     if (GetMonitorInfoW(MonitorFromPoint(point, MONITOR_DEFAULTTONEAREST), &monitor))
         work = {monitor.rcWork.left, monitor.rcWork.top, monitor.rcWork.right, monitor.rcWork.bottom};
-    if (!window_) {
-        WNDCLASSEXW type{}; type.cbSize = sizeof(type); type.lpfnWndProc = WindowProcedure;
-        type.hInstance = g_instance; type.hCursor = LoadCursorW(nullptr, IDC_ARROW); type.lpszClassName = kWindowClass;
-        RegisterClassExW(&type);
-        window_ = CreateWindowExW(WS_EX_TOPMOST | WS_EX_TOOLWINDOW | WS_EX_NOACTIVATE, kWindowClass, kProductName,
-            WS_POPUP, anchor.left, anchor.bottom, 1, 1, nullptr, nullptr, g_instance, this);
-    }
-    if (!window_) return;
+    if (!EnsureWindow(anchor.left, anchor.bottom)) return;
     // Another thread/instance of this app may have saved an appearance choice.
     // Refresh when opening a panel, rather than reading preferences per key.
     if (!IsWindowVisible(window_)) candidate_appearance_.Reload();
@@ -792,6 +902,11 @@ LRESULT CALLBACK TextService::WindowProcedure(HWND window, UINT message, WPARAM 
         PostMessageW(window, kReflowCandidates, 0, 0); return 0;
     }
     if (owner && message == kReflowCandidates) { owner->UpdateWindowState(); return 0; }
+    if (owner && message == kStartPrediction) {
+        // Stale if any key, focus change or newer commit happened since posting.
+        if (static_cast<std::uint64_t>(wparam) == owner->prediction_ticket_) owner->StartPrediction();
+        return 0;
+    }
     if (owner && message == WM_PAINT) { owner->Paint(window); return 0; }
     if (owner && message == WM_CONTEXTMENU) {
         POINT point{static_cast<short>(LOWORD(lparam)), static_cast<short>(HIWORD(lparam))};
