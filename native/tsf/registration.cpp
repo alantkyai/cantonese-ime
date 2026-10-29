@@ -22,6 +22,7 @@ const GUID* const kCategories[] = {
     &GUID_TFCAT_DISPLAYATTRIBUTEPROVIDER,
     &GUID_TFCAT_TIPCAP_UIELEMENTENABLED,
     &GUID_TFCAT_TIPCAP_SYSTRAYSUPPORT,
+    &GUID_TFCAT_TIPCAP_IMMERSIVESUPPORT,
 };
 std::wstring ClassKey() {
     wchar_t value[64]{};

@@ -61,6 +61,8 @@ class MappingTests(unittest.TestCase):
             ("zau", "jau", 0.8), ("caa", "cha", 0.75),
             ("faai", "fai", 0.3), ("baau", "bao", 0.4),
             ("soeng", "shueng", 0.8), ("soeng", "sheung", 0.45),
+            ("zyun", "juen", 0.45), ("cyun", "chuen", 0.45), ("syun", "suen", 0.45),
+            ("jyun", "yuen", 0.45), ("tyun", "tuen", 0.45),
         ):
             with self.subTest(canonical=canonical, spelling=spelling):
                 self.assertAlmostEqual(spelling_variants(canonical)[spelling], cost)

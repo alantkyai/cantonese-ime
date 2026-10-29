@@ -68,6 +68,7 @@ ITfCandidateListUIElementBehavior : public ITfCandidateListUIElement {
 // library when available. The fallback definitions live in tsf_guids.cpp.
 EXTERN_C const GUID GUID_TFCAT_TIPCAP_UIELEMENTENABLED;
 EXTERN_C const GUID GUID_TFCAT_TIPCAP_SYSTRAYSUPPORT;
+EXTERN_C const GUID GUID_TFCAT_TIPCAP_IMMERSIVESUPPORT;
 EXTERN_C const GUID GUID_LBI_INPUTMODE;
 
 #ifndef __ITfLangBarItemButton_INTERFACE_DEFINED__
