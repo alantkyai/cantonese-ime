@@ -23,6 +23,7 @@ import threading
 import time
 from typing import Iterable
 
+from .custom import CustomEntries, read_custom
 from .mappings import spelling_variants, yale_ascii, yale_ascii_variants
 
 
@@ -249,6 +250,7 @@ class Engine:
         mode: str = "forgiving",
         learning_path: str | Path | None = None,
         prefer_yale: bool = True,
+        custom_path: str | Path | None = None,
     ) -> None:
         self._check_mode(mode)
         if not isinstance(prefer_yale, bool):
@@ -281,14 +283,12 @@ class Engine:
                     self._prefixes.add(prefix)
                     if size < len(tokens):
                         self._longer.add(prefix)
-            self._roots = {name: _Node() for name in MODES}
-            self._variants: dict[str, dict[str, list[tuple[str, float]]]] = {name: {} for name in MODES}
-            for base in sorted(bases):
+            for base in bases:
                 if not base.isascii() or not base.isalpha():
                     raise ValueError("Dictionary contains a noncanonical base syllable.")
-                self._insert("jyutping", base, base, 0.0)
-                for spelling, penalty in _spellings(base).items():
-                    self._insert("forgiving", spelling, base, penalty)
+            self._bases = frozenset(bases)
+            self._custom = CustomEntries()
+            self._build_spelling_index()
             # Index each complete stored reading independently of the bounded
             # syllable frontier. A valid Yale word must not disappear because
             # other possible syllable splits occupy that frontier first.
@@ -324,7 +324,12 @@ class Engine:
             self._load_learning()
             self._rebuild_span_learning()
             self._learning_generation = 0
-            self._snapshot_key: tuple[str, int, str, int] | None = None
+            self.custom_path = Path(custom_path).resolve() if custom_path is not None else None
+            self.custom_error: str | None = None
+            self._custom_stamp: tuple[int, int] | None = None
+            self._custom_generation = 0
+            self._refresh_custom()
+            self._snapshot_key: tuple[str, int, str, int, int] | None = None
             self._snapshot_value: _Snapshot | None = None
         except Exception:
             self._db.close()
@@ -334,6 +339,56 @@ class Engine:
     def _check_mode(mode: str) -> None:
         if mode not in MODES:
             raise ValueError("Mode must be 'jyutping' or 'forgiving'.")
+
+    def _build_spelling_index(self) -> None:
+        self._roots = {name: _Node() for name in MODES}
+        self._variants: dict[str, dict[str, list[tuple[str, float]]]] = {name: {} for name in MODES}
+        for base in sorted(self._bases):
+            self._insert("jyutping", base, base, 0.0)
+            for spelling, penalty in _spellings(base).items():
+                self._insert("forgiving", spelling, base, penalty)
+        # A user alias is an explicit choice, not a typo, so a Jyutping target
+        # costs nothing. A target that is itself a known spelling (cheut ->
+        # ceot/coet) keeps that spelling's costs. Targets resolve against the
+        # built-in index only, so user aliases never chain or depend on order.
+        # Strict Jyutping mode keeps identities only.
+        builtin = {spelling: tuple(outputs) for spelling, outputs in self._variants["forgiving"].items()}
+        for spelling, target in self._custom.aliases:
+            outputs = ((target, 0.0),) if target in self._bases else builtin.get(target, ())
+            for base, penalty in outputs:
+                self._insert("forgiving", spelling, base, penalty)
+
+    def _refresh_custom(self) -> None:
+        """Reload the per-user custom file when its size or mtime changes.
+
+        A missing file means no custom entries. A file that cannot be read keeps
+        the last good entries and records ``custom_error``; lookups continue.
+        """
+        if self.custom_path is None:
+            return
+        try:
+            stat = self.custom_path.stat()
+            stamp = (stat.st_mtime_ns, stat.st_size)
+        except FileNotFoundError:
+            stamp = None
+        except OSError as error:
+            self.custom_error = str(error)
+            return
+        if stamp == self._custom_stamp and self._custom_generation:
+            return
+        try:
+            entries = read_custom(self.custom_path) if stamp is not None else CustomEntries()
+        except (OSError, ValueError) as error:
+            self.custom_error = str(error)
+            self._custom_stamp = stamp
+            return
+        self.custom_error = None
+        self._custom_stamp = stamp
+        aliases_changed = entries.aliases != self._custom.aliases
+        self._custom = entries
+        if aliases_changed:
+            self._build_spelling_index()
+        self._custom_generation += 1
 
     def _insert(self, mode: str, spelling: str, base: str, penalty: float) -> None:
         node = self._roots[mode]
@@ -414,6 +469,7 @@ class Engine:
         if value is None:
             return []
         with self._lock:
+            self._refresh_custom()
             return list(self._snapshot(value, len(raw), selected_mode).candidates[:limit])
 
     def lookup_page(
@@ -437,6 +493,7 @@ class Engine:
         if value is None:
             return CandidatePage((), offset, None)
         with self._lock:
+            self._refresh_custom()
             snapshot = self._snapshot(value, len(raw), selected_mode)
             total = len(snapshot.candidates)
             if offset >= total and snapshot.completion_truncated:
@@ -452,7 +509,7 @@ class Engine:
             return CandidatePage(candidates, offset, end if more else None, snapshot.completion_truncated)
 
     def _snapshot(self, value: str, consumed: int, mode: str) -> _Snapshot:
-        key = (value, consumed, mode, self._learning_generation)
+        key = (value, consumed, mode, self._learning_generation, self._custom_generation)
         if self._snapshot_key != key:
             snapshot = self._decode(value, consumed, mode)
             # A failed read/decode leaves the last successful snapshot intact.
@@ -782,6 +839,10 @@ class Engine:
             if (learned_mode == mode and learned_input == value
                     and (text, reading) not in existing_pairs):
                 candidates.append(Candidate(text, reading, 800.0, "learned", consumed))
+        # User-defined phrases for this exact input lead, in file order. They
+        # carry no reading, so they are never written to learning memory.
+        for index, text in enumerate(self._custom.phrases.get(value, ())):
+            candidates.append(Candidate(text, "", 1_000_000.0 - index, "custom", consumed))
         unique: dict[str, Candidate] = {}
         for candidate in candidates:
             memory = self._adaptive_weights.get((mode, value, candidate.text, candidate.reading), 0.0)
@@ -966,6 +1027,8 @@ class Engine:
     def record_selection(self, raw: str, candidate: Candidate, mode: str | None = None) -> None:
         if self.learning_path is None:
             return
+        if not candidate.reading:
+            return  # Custom phrases carry no reading and are never learned.
         selected_mode = self.mode if mode is None else mode
         self._check_mode(selected_mode)
         value = self._normalise(raw)

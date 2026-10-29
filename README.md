@@ -50,6 +50,27 @@ the engine. Windows Settings > Apps provides the standard uninstall entry.
 Upgrades and uninstall preserve personal learning at
 `%LOCALAPPDATA%\CantoneseIME\learning.json`.
 
+## Custom phrases and spellings
+
+Create `%LOCALAPPDATA%\CantoneseIME\custom.txt` (UTF-8) to add your own
+entries. Changes apply on the next keystroke; no restart is needed.
+
+```text
+# A phrase: typing exactly hh offers 曈曈, then 瞳瞳, before other candidates
+hh 曈曈
+hh 瞳瞳
+# A spelling: moon is read as the Jyutping syllable mun (moon -> 門, moonhau -> 門口)
+moon = mun
+# The target may also be a spelling the IME already accepts: cheut means ceot
+chut = cheut
+```
+
+Keys and spellings are 1–32 ASCII letters; phrase text is up to 64 characters.
+An alias target is a toneless Jyutping syllable or a spelling the IME already
+accepts; targets resolve against built-in spellings only, so aliases do not
+chain. Invalid lines and unresolved targets are skipped. Custom phrases are never written to learning memory, and the file
+is only read, never modified. Upgrades and uninstall keep it.
+
 ## Candidate appearance
 
 Version 1.0.8 uses **LXGW WenKai TC Regular (霞鶩文楷 TC)** for the numbered
