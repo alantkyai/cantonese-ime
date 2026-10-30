@@ -23,6 +23,8 @@ from dataclasses import dataclass, field
 from pathlib import Path
 import re
 
+from .mappings import FINALS, ONSETS
+
 
 MAX_CUSTOM_BYTES = 256 * 1024
 MAX_CUSTOM_LINES = 5000
@@ -59,15 +61,24 @@ def parse_rule(spelling: str, base: str) -> tuple[str, str, str] | None:
 def rule_spelling(rule: tuple[str, str, str], initial: str, final: str) -> str | None:
     """The spelling a rule gives a syllable split as initial + final, or None.
 
-    Initials and finals match whole (k* = g* leaves gw alone; *oon = *un leaves
-    jyun alone). An inside rule replaces within the final only, never the
+    A side that is a real initial or final matches it whole (k* = g* leaves gw
+    alone; *oon = *un leaves jyun alone). Any other letters match the start or
+    end of the spelling instead (ch* = zy* turns zyu into chu, across the
+    z + yu boundary). An inside rule replaces within the final only, never the
     initial, so it also reaches finals like au or yu that merely contain it.
     """
     kind, typed, canonical = rule
+    base = initial + final
     if kind == "initial":
-        spelling = typed + final if initial == canonical else None
+        if canonical in ONSETS:
+            spelling = typed + final if initial == canonical else None
+        else:
+            spelling = typed + base[len(canonical):] if base.startswith(canonical) and base != canonical else None
     elif kind == "final":
-        spelling = initial + typed if final == canonical else None
+        if canonical in FINALS:
+            spelling = initial + typed if final == canonical else None
+        else:
+            spelling = base[:-len(canonical)] + typed if base.endswith(canonical) and base != canonical else None
     else:
         spelling = initial + final.replace(canonical, typed) if canonical in final else None
     if spelling is None or spelling == initial + final or not _SYLLABLE.fullmatch(spelling):

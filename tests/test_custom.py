@@ -39,6 +39,13 @@ class ParseCustomTests(unittest.TestCase):
         self.assertEqual(rule_spelling(("inside", "oo", "u"), "g", "au"), "gaoo")  # inside rules reach glides
         self.assertIsNone(rule_spelling(("inside", "oo", "u"), "g", "o"))
         self.assertIsNone(rule_spelling(("final", "x" * 12, "un"), "m", "un"))    # longer than the trie allows
+        # Letters that are not a whole initial/final match the spelling's start/end.
+        self.assertEqual(rule_spelling(("initial", "ch", "zy"), "z", "yu"), "chu")
+        self.assertEqual(rule_spelling(("initial", "ch", "zy"), "z", "yun"), "chun")
+        self.assertIsNone(rule_spelling(("initial", "ch", "zy"), "z", "au"))
+        self.assertEqual(rule_spelling(("final", "erng", "oeng"), "s", "oeng"), "serng")   # whole final
+        self.assertEqual(rule_spelling(("final", "nn", "ng"), "g", "ong"), "gonn")      # ng is not a final: suffix
+        self.assertIsNone(rule_spelling(("final", "nn", "ng"), "", "ng"))               # never the whole syllable
 
     def test_missing_file_is_empty_and_oversized_file_raises(self) -> None:
         with tempfile.TemporaryDirectory() as directory:

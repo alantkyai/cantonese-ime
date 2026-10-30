@@ -82,7 +82,9 @@ k* = g*
 A rule's two sides share one shape: `X* = Y*` matches syllables whose whole
 initial is `Y` (`k* = g*` gives `kau` for `gau` but leaves `gw` syllables
 alone), `*X = *Y` matches a whole final (`*oon = *un` gives `moon`, `foon`,
-`goon`), and `*X* = *Y*` replaces `Y` anywhere inside the final, so `*oo* = *u*`
+`goon`). When `Y` is not a whole initial or final, it matches the start or end
+of the spelling instead, across the initial/final boundary (`ch* = zy*` turns
+`zyu` into `chu`, so `chu` finds 住). `*X* = *Y*` replaces `Y` anywhere inside the final, so `*oo* = *u*`
 also reaches finals such as `au` or `ou` (`gau` → `gaoo`). A rule spelling that
 matches an existing spelling (`kau` is already 球) costs more, so the existing
 reading usually ranks first. The settings window previews which syllables a
