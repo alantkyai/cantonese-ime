@@ -210,6 +210,10 @@ RULES = (
     SpellingRule("vowel.aau_to_ao", "suffix", "aau", "ao", 0.4, "heuristic_alias", "vowel", ("google_examples", "project_policy"), "Inferred from bao in Google's chasiubao example; generalized only within one canonical syllable."),
     SpellingRule("vowel.eo_to_oe", "contains", "eo", "oe", 0.3, "heuristic_alias", "vowel", ("rime_schema", "project_policy"), "Input spelling tolerance; not a claim that distinct Jyutping finals are identical."),
     SpellingRule("vowel.oe_to_eo", "contains", "oe", "eo", 0.3, "heuristic_alias", "vowel", ("rime_schema", "project_policy"), "Input spelling tolerance; strict mode keeps eo and oe distinct."),
+    SpellingRule("onset.s_to_sh", "onset", "s", "sh", 0.45, "orthographic_alias", "onset", ("project_policy",), "Hong Kong romanization of the s onset, as in Shing, Shek and Shun; sh is not a Jyutping onset."),
+    SpellingRule("vowel.eoi_to_ui", "suffix", "eoi", "ui", 0.45, "orthographic_alias", "vowel", ("project_policy",), "Hong Kong casual spelling of the eoi final (sui, chui, lui, gui); generalizes the explicit sui/hui/kui aliases. Real ui syllables keep their exact readings."),
+    SpellingRule("vowel.eon_to_un", "suffix", "eon", "un", 0.45, "orthographic_alias", "vowel", ("project_policy",), "Hong Kong casual spelling of the eon final (chun, lun, shun); no Jyutping un syllable takes these onsets."),
+    SpellingRule("vowel.eot_to_ut", "suffix", "eot", "ut", 0.45, "orthographic_alias", "vowel", ("project_policy",), "Hong Kong casual spelling of the eot final (chut, lut)."),
 )
 
 # Explicit examples are not recursively rewritten. That prevents an exception
