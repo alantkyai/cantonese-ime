@@ -6,7 +6,8 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from cantonese_ime.custom import MAX_CUSTOM_BYTES, parse_custom, read_custom
+from cantonese_ime.custom import (
+    MAX_CUSTOM_BYTES, MAX_RULES, parse_custom, parse_rule, preview_rule, read_custom, rule_spelling)
 from cantonese_ime.engine import Engine
 from tests.test_engine import create_fixture_database
 
@@ -20,6 +21,24 @@ class ParseCustomTests(unittest.TestCase):
         self.assertEqual(entries.phrases, {"hh": ("曈曈", "瞳瞳")})
         self.assertEqual(entries.aliases, (("lay", "nei"), ("moon", "mun")))
         self.assertEqual(entries.invalid_lines, 6)
+
+    def test_rules_need_matching_wildcard_shapes(self) -> None:
+        entries = parse_custom("k* = g*\n*OON = *un\n*oo* = *u*\nk* = *g\n*a = *a\noo = u\n*x = y\nk* = g*\n")
+        self.assertEqual(entries.rules, (("initial", "k", "g"), ("final", "oon", "un"), ("inside", "oo", "u")))
+        self.assertEqual(entries.aliases, (("oo", "u"),))        # plain alias; the engine ignores target u
+        self.assertEqual(entries.invalid_lines, 3)              # mismatched, identical and half-starred
+        self.assertIsNone(parse_rule("toolongx*", "g*"))
+        many = "".join(f"*{chr(97 + i // 26)}{chr(97 + i % 26)} = *u\n" for i in range(MAX_RULES + 3))
+        self.assertEqual(len(parse_custom(many).rules), MAX_RULES)
+
+    def test_rule_spelling_matches_whole_initials_and_finals(self) -> None:
+        self.assertEqual(rule_spelling(("initial", "k", "g"), "g", "au"), "kau")
+        self.assertIsNone(rule_spelling(("initial", "k", "g"), "gw", "ong"))    # gw is its own initial
+        self.assertEqual(rule_spelling(("final", "oon", "un"), "m", "un"), "moon")
+        self.assertIsNone(rule_spelling(("final", "oon", "un"), "j", "yun"))
+        self.assertEqual(rule_spelling(("inside", "oo", "u"), "g", "au"), "gaoo")  # inside rules reach glides
+        self.assertIsNone(rule_spelling(("inside", "oo", "u"), "g", "o"))
+        self.assertIsNone(rule_spelling(("final", "x" * 12, "un"), "m", "un"))    # longer than the trie allows
 
     def test_missing_file_is_empty_and_oversized_file_raises(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
@@ -87,6 +106,33 @@ class EngineCustomTests(unittest.TestCase):
         self.assertEqual(self.texts(engine, "nee")[0], "你")
         self.assertEqual(engine.lookup("nee")[0].match_type, "fuzzy")
         self.assertEqual(self.texts(engine, "nnn"), [])
+
+    def test_rules_add_spellings_for_every_matching_syllable(self) -> None:
+        self.write("x* = h*\n*ee* = *ei*\n")
+        engine = self.engine()
+        self.assertEqual(self.texts(engine, "xou")[0], "好")          # initial rule
+        self.assertIn("好樂", self.texts(engine, "xoulok"))           # rule spellings compose
+        self.assertEqual(self.texts(engine, "nee")[0], "你")          # inside rule
+        self.assertEqual(engine.lookup("nee", mode="jyutping"), [])
+        self.write("")
+        self.assertNotIn("好", self.texts(engine, "xou"))           # removing the rule removes the spellings
+
+    def test_a_colliding_rule_spelling_ranks_below_the_real_reading(self) -> None:
+        # *ou = *aau turns baau (包) into "bou", which already spells 保/煲.
+        self.write("*ou = *aau\n")
+        texts = self.texts(self.engine(), "bou")
+        self.assertIn("包", texts)
+        self.assertLess(min(texts.index("保"), texts.index("煲")), texts.index("包"))
+
+    def test_preview_lists_affected_syllables_and_collisions(self) -> None:
+        result = preview_rule(self.database, "*ou = *aau")
+        self.assertEqual(result["count"], 1)
+        self.assertEqual(result["rows"], [{"syllable": "baau", "spelling": "bou", "example": "包", "collides": True}])
+        fresh = preview_rule(self.database, "x* = h*")
+        self.assertEqual({row["syllable"] for row in fresh["rows"]}, {"him", "hoeng", "hou"})
+        self.assertEqual(fresh["collisions"], 0)
+        with self.assertRaises(ValueError):
+            preview_rule(self.database, "oo = u")
 
     def test_unreadable_file_keeps_last_entries_and_lookups_continue(self) -> None:
         self.write("hh 曈曈\n")

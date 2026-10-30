@@ -73,7 +73,21 @@ hh 瞳瞳
 moon = mun
 # The target may also be a spelling the IME already accepts: cheut means ceot
 chut = cheut
+# Rules apply to every syllable: an initial, a whole final, or text inside a final
+k* = g*
+*oon = *un
+*oo* = *u*
 ```
+
+A rule's two sides share one shape: `X* = Y*` matches syllables whose whole
+initial is `Y` (`k* = g*` gives `kau` for `gau` but leaves `gw` syllables
+alone), `*X = *Y` matches a whole final (`*oon = *un` gives `moon`, `foon`,
+`goon`), and `*X* = *Y*` replaces `Y` anywhere inside the final, so `*oo* = *u*`
+also reaches finals such as `au` or `ou` (`gau` → `gaoo`). A rule spelling that
+matches an existing spelling (`kau` is already 球) costs more, so the existing
+reading usually ranks first. The settings window previews which syllables a
+rule affects before adding it; `python -m cantonese_ime rule-preview "*oon = *un"`
+does the same from the command line. Up to 50 rules.
 
 Keys and spellings are 1–32 ASCII letters; phrase text is up to 64 characters.
 An alias target is a toneless Jyutping syllable or a spelling the IME already
