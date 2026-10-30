@@ -23,8 +23,8 @@ import threading
 import time
 from typing import Iterable
 
-from .custom import CustomEntries, read_custom
-from .mappings import spelling_variants, yale_ascii, yale_ascii_variants
+from .custom import CustomEntries, read_custom, rule_spelling
+from .mappings import scheme_parts, spelling_variants, yale_ascii, yale_ascii_variants
 
 
 MODES = ("jyutping", "forgiving")
@@ -33,6 +33,10 @@ MAX_CANDIDATES = 90
 MAX_OFFSET = 10000
 _COMPOSITION_WORK_LIMIT = 100000
 _FUZZY_COST = 6.0
+# Custom spelling rules: a new spelling costs a little; one that collides
+# with an existing spelling costs enough that the real reading usually wins.
+_RULE_COST = 0.3
+_RULE_COLLISION_COST = 1.5
 _MAX_LEARNING_BYTES = 4_000_000
 _MAX_LEARNING_RECORDS = 10000
 _LEARNING_DECAY = 0.8
@@ -357,6 +361,16 @@ class Engine:
             outputs = ((target, 0.0),) if target in self._bases else builtin.get(target, ())
             for base, penalty in outputs:
                 self._insert("forgiving", spelling, base, penalty)
+        # Rules (k* = g*, *oon = *un, *oo* = *u*) apply to every lexicon
+        # syllable, from canonical parts only, so they never chain.
+        if self._custom.rules:
+            for base in sorted(self._bases):
+                initial, final, _ = scheme_parts(base)
+                for rule in self._custom.rules:
+                    spelling = rule_spelling(rule, initial, final)
+                    if spelling is not None:
+                        self._insert("forgiving", spelling, base,
+                                     _RULE_COLLISION_COST if spelling in builtin else _RULE_COST)
 
     def _refresh_custom(self) -> None:
         """Reload the per-user custom file when its size or mtime changes.
@@ -384,7 +398,7 @@ class Engine:
             return
         self.custom_error = None
         self._custom_stamp = stamp
-        aliases_changed = entries.aliases != self._custom.aliases
+        aliases_changed = entries.aliases != self._custom.aliases or entries.rules != self._custom.rules
         self._custom = entries
         if aliases_changed:
             self._build_spelling_index()

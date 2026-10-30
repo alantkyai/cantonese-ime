@@ -47,6 +47,24 @@ inline bool ValidPhrase(const std::wstring& value) {
     for (wchar_t c : value) if (c < 32 || c == 127) return false;
     return true;
 }
+// Spelling rules mirror cantonese_ime/custom.py parse_rule: both sides share one
+// wildcard shape (X*, *X or *X*) with 1-6 letters, and the letters differ.
+enum class RuleShape { None, Initial, Final, Inside };
+inline RuleShape ShapeOf(const std::wstring& value, std::wstring& letters) {
+    letters.clear();
+    if (value.size() >= 3 && value.front() == L'*' && value.back() == L'*') { letters = value.substr(1, value.size() - 2); if (ValidLetters(letters, 6)) return RuleShape::Inside; }
+    else if (value.size() >= 2 && value.back() == L'*') { letters = value.substr(0, value.size() - 1); if (ValidLetters(letters, 6)) return RuleShape::Initial; }
+    else if (value.size() >= 2 && value.front() == L'*') { letters = value.substr(1); if (ValidLetters(letters, 6)) return RuleShape::Final; }
+    letters.clear();
+    return RuleShape::None;
+}
+inline bool IsRuleSide(const std::wstring& value) { return value.find(L'*') != std::wstring::npos; }
+inline bool ValidRule(const std::wstring& typed, const std::wstring& canonical) {
+    std::wstring left, right;
+    const RuleShape shape = ShapeOf(typed, left);
+    return shape != RuleShape::None && shape == ShapeOf(canonical, right) && left != right;
+}
+constexpr std::size_t kMaxRules = 50;
 inline std::wstring FormatPhrase(const std::wstring& key, const std::wstring& text) { return key + L" " + text; }
 inline std::wstring FormatAlias(const std::wstring& spelling, const std::wstring& target) { return spelling + L" = " + target; }
 
@@ -58,7 +76,10 @@ inline CustomLine ClassifyLine(const std::wstring& raw) {
     if (equals != std::wstring::npos) {
         const std::wstring spelling = AsciiLower(Trim(text.substr(0, equals)));
         const std::wstring target = AsciiLower(Trim(text.substr(equals + 1)));
-        if (ValidKey(spelling) && ValidTarget(target)) { line.kind = LineKind::Alias; line.key = spelling; line.value = target; }
+        const bool rule = IsRuleSide(spelling) || IsRuleSide(target);
+        if (rule ? ValidRule(spelling, target) : (ValidKey(spelling) && ValidTarget(target))) {
+            line.kind = LineKind::Alias; line.key = spelling; line.value = target;
+        }
         return line;
     }
     const auto split = text.find_first_of(L" \t");
@@ -137,6 +158,11 @@ inline void UpdateEntry(CustomDocument& document, std::size_t index, const std::
 }
 inline void RemoveEntry(CustomDocument& document, std::size_t index) {
     document.lines.erase(document.lines.begin() + static_cast<std::ptrdiff_t>(index));
+}
+inline std::size_t RuleCount(const CustomDocument& document) {
+    std::size_t count = 0;
+    for (const auto& line : document.lines) if (line.kind == LineKind::Alias && IsRuleSide(line.key)) ++count;
+    return count;
 }
 inline bool WithinCustomLimits(const CustomDocument& document) {
     return document.lines.size() <= kMaxCustomLines && SerializeCustom(document).size() <= kMaxCustomBytes;

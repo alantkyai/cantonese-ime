@@ -52,6 +52,8 @@ To edit phrases or spellings by hand, use this UTF-8 text file:
 One entry per line; lines starting with # are comments. For example:
   hh 曈曈        typing hh offers 曈曈 first
   moon = mun     moon is read as the syllable mun, so it finds 門
+  *oon = *un     rule: every syllable ending in un may end in oon instead
+  k* = g*        rule: every syllable starting with g may start with k
 Changes apply on the next keystroke. Upgrades and uninstall keep the file.
 
 Start menu > Cantonese IME > Enable Cantonese IME starts the engine and

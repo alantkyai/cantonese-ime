@@ -50,6 +50,18 @@ int wmain(int argc, wchar_t** argv) {
     AddEntry(fresh, LineKind::Phrase, L"gg", L"\u54e5\u54e5");
     assert(Entries(fresh, LineKind::Phrase).size() == 1 && fresh.lines[2].raw.empty()); ++checks;
 
+    // Spelling rules: same parsing as custom.py, listed with the spellings.
+    const auto rules = ParseCustom("k* = g*\r\n*OON = *un\r\n*oo* = *u*\r\nk* = *g\r\n*a = *a\r\n*x = y\r\n");
+    const auto rule_lines = Entries(rules, LineKind::Alias);
+    assert(rule_lines.size() == 3 && rules.lines[1].key == L"*oon" && rules.lines[1].value == L"*un"); ++checks;
+    assert(rules.lines[3].kind == LineKind::Other && rules.lines[4].kind == LineKind::Other
+        && rules.lines[5].kind == LineKind::Other && RuleCount(rules) == 3); ++checks;
+    assert(ValidRule(L"*oo*", L"*u*") && ValidRule(L"kw*", L"gw*") && !ValidRule(L"k*", L"*g")
+        && !ValidRule(L"*a", L"*a") && !ValidRule(L"*abcdefg", L"*u") && !ValidRule(L"**", L"*u*")); ++checks;
+    auto with_rule = ParseCustom("moon = mun\r\n");
+    AddEntry(with_rule, LineKind::Alias, L"*oon", L"*un");
+    assert(SerializeCustom(with_rule) == "moon = mun\r\n*oon = *un\r\n"); ++checks;
+
     // Validation matches the engine's limits; '=' would turn a phrase into a spelling.
     assert(ValidKey(L"hh") && !ValidKey(L"h1") && !ValidKey(L"") && !ValidKey(std::wstring(33, L'a'))); ++checks;
     assert(ValidTarget(L"cheut") && !ValidTarget(std::wstring(13, L'a'))); ++checks;

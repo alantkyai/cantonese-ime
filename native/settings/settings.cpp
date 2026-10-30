@@ -22,7 +22,7 @@ enum : int {
     IDC_PHRASE_LIST = 200, IDC_PHRASE_KEY_LABEL, IDC_PHRASE_KEY, IDC_PHRASE_TEXT_LABEL, IDC_PHRASE_TEXT,
     IDC_PHRASE_ADD, IDC_PHRASE_UPDATE, IDC_PHRASE_DELETE, IDC_PHRASE_HINT,
     IDC_ALIAS_LIST = 300, IDC_ALIAS_KEY_LABEL, IDC_ALIAS_KEY, IDC_ALIAS_TARGET_LABEL, IDC_ALIAS_TARGET,
-    IDC_ALIAS_ADD, IDC_ALIAS_UPDATE, IDC_ALIAS_DELETE, IDC_ALIAS_HINT,
+    IDC_ALIAS_ADD, IDC_ALIAS_UPDATE, IDC_ALIAS_DELETE, IDC_ALIAS_HINT, IDC_ALIAS_PREVIEW,
     IDC_FONT_LABEL = 400, IDC_FONT, IDC_SIZE_LABEL, IDC_FONT_SIZE, IDC_PREVIEW_LABEL, IDC_PREVIEW, IDC_FONT_HINT,
     IDC_REV_LABEL = 500, IDC_REV_TEXT, IDC_REV_SEARCH, IDC_REV_LIST, IDC_REV_USE, IDC_REV_HINT,
 };
@@ -124,10 +124,17 @@ void SelectLine(const Page& page, std::size_t index) {
         }
     }
 }
+bool RulePreview(const std::wstring& typed, const std::wstring& canonical, std::wstring& summary);
+std::vector<std::wstring> SplitTabs(const std::wstring& line);
 bool ReadEntry(const Page& page, std::wstring& key, std::wstring& value) {
     key = AsciiLower(Trim(Text(page.key)));
     value = Trim(Text(page.value));
     if (page.kind == LineKind::Alias) value = AsciiLower(value);
+    if (page.kind == LineKind::Alias && (IsRuleSide(key) || IsRuleSide(value))) {
+        if (ValidRule(key, value)) return true;
+        SetStatus(L"\u898f\u5247\u5169\u908a\u8981\u540c\u4e00\u7a2e\u5beb\u6cd5\uff1ak* = g*\uff08\u8072\u6bcd\uff09\u3001*oon = *un\uff08\u97fb\u6bcd\uff09\u6216 *oo* = *u*\uff08\u97fb\u6bcd\u5165\u9762\uff09\uff0c* \u4ee5\u5916\u4fc2 1 \u81f3 6 \u500b\u5b57\u6bcd\u3002");
+        SetFocus(Item(page.key)); return false;
+    }
     if (!ValidKey(key)) { SetStatus(page.kind == LineKind::Phrase
         ? L"\u8f38\u5165\u8981\u4fc2 1 \u81f3 32 \u500b\u82f1\u6587\u5b57\u6bcd\uff0c\u4f8b\u5982 hh\u3002" : L"\u62fc\u6cd5\u8981\u4fc2 1 \u81f3 32 \u500b\u82f1\u6587\u5b57\u6bcd\uff0c\u4f8b\u5982 moon\u3002"); SetFocus(Item(page.key)); return false; }
     if (page.kind == LineKind::Phrase && !ValidPhrase(value)) {
@@ -146,6 +153,15 @@ void AddEntryFromFields(const Page& page) {
     std::wstring key, value;
     if (!ReadEntry(page, key, value)) return;
     if (HasEntry(g.custom, page.kind, key, value)) { SetStatus(L"\u5462\u500b\u7d44\u5408\u5df2\u7d93\u6709\u5497\u3002"); return; }
+    if (page.kind == LineKind::Alias && IsRuleSide(key)) {
+        // A rule can reach many syllables: show what it does before adding it.
+        if (RuleCount(g.custom) >= kMaxRules) { SetStatus(L"\u6700\u591a\u53ea\u53ef\u4ee5\u6709 50 \u689d\u898f\u5247\u3002"); return; }
+        std::wstring summary;
+        RulePreview(key, value, summary);
+        if (MessageBoxW(g.window, (summary + L"\n\n\u78ba\u5b9a\u52a0\u5462\u689d\u898f\u5247\uff1f").c_str(), kTitle, MB_OKCANCEL | MB_ICONQUESTION) != IDOK) {
+            SetStatus(L"\u5187\u52a0\u5462\u689d\u898f\u5247\u3002"); return;
+        }
+    }
     CustomDocument next = g.custom;
     const std::size_t at = AddEntry(next, page.kind, key, value);
     if (!WithinCustomLimits(next)) { SetStatus(L"\u81ea\u8a02\u6a94\u5df2\u7d93\u5230\u5497\u5927\u5c0f\u4e0a\u9650\u3002"); return; }
@@ -292,9 +308,9 @@ std::wstring InstallRoot() {
     for (int i = 0; i < 2; ++i) { const auto slash = path.find_last_of(L'\\'); if (slash == std::wstring::npos) return {}; path.resize(slash); }
     return path;
 }
-// Runs the bundled engine read-only: python -m cantonese_ime reverse --stdin --tsv.
+// Runs the bundled engine read-only: python -m cantonese_ime <arguments>.
 // The text goes through stdin, so no command-line quoting is involved.
-bool RunReverseLookup(const std::wstring& text, std::string& output, DWORD& exit_code) {
+bool RunEngineCommand(const wchar_t* arguments, const std::wstring& text, std::string& output, DWORD& exit_code) {
     output.clear(); exit_code = 1;
     const std::wstring root = InstallRoot(), python = root + L"\\runtime\\python\\python.exe";
     if (root.empty() || GetFileAttributesW(python.c_str()) == INVALID_FILE_ATTRIBUTES) return false;
@@ -307,7 +323,7 @@ bool RunReverseLookup(const std::wstring& text, std::string& output, DWORD& exit
     STARTUPINFOW startup{}; startup.cb = sizeof(startup); startup.dwFlags = STARTF_USESTDHANDLES;
     startup.hStdInput = in_read; startup.hStdOutput = out_write; startup.hStdError = out_write;
     PROCESS_INFORMATION process{};
-    std::wstring command = L"\"" + python + L"\" -B -m cantonese_ime reverse --stdin --tsv";
+    std::wstring command = L"\"" + python + L"\" -B -m cantonese_ime " + arguments;
     const bool started = CreateProcessW(python.c_str(), command.data(), nullptr, nullptr, TRUE, CREATE_NO_WINDOW,
         nullptr, root.c_str(), &startup, &process) != FALSE;
     CloseHandle(in_read); CloseHandle(out_write);
@@ -322,6 +338,43 @@ bool RunReverseLookup(const std::wstring& text, std::string& output, DWORD& exit
     if (WaitForSingleObject(process.hProcess, 15000) != WAIT_OBJECT_0) TerminateProcess(process.hProcess, 1);
     GetExitCodeProcess(process.hProcess, &exit_code);
     CloseHandle(process.hThread); CloseHandle(process.hProcess);
+    return true;
+}
+bool RunReverseLookup(const std::wstring& text, std::string& output, DWORD& exit_code) {
+    return RunEngineCommand(L"reverse --stdin --tsv", text, output, exit_code);
+}
+// Summarizes `python -m cantonese_ime rule-preview` for a rule: how many
+// syllables it affects, how many collide with existing spellings, examples.
+bool RulePreview(const std::wstring& typed, const std::wstring& canonical, std::wstring& summary) {
+    std::string output; DWORD exit_code = 1;
+    if (!RunEngineCommand(L"rule-preview --stdin --tsv", typed + L" = " + canonical, output, exit_code) || exit_code != 0) {
+        summary = L"\u9810\u89bd\u5514\u5230\u5462\u689d\u898f\u5247\uff08\u6435\u5514\u5230\u8f38\u5165\u6cd5\u5167\u7f6e\u5605 Python\uff0c\u6216\u8005\u898f\u5247\u5514\u6b63\u78ba\uff09\u3002";
+        return false;
+    }
+    const std::wstring reply = Utf8ToWide(output);
+    std::wstring count = L"0", collisions = L"0", examples;
+    int shown = 0;
+    std::size_t start = 0;
+    while (start < reply.size()) {
+        auto end = reply.find(L'\n', start); if (end == std::wstring::npos) end = reply.size();
+        std::wstring line = reply.substr(start, end - start); start = end + 1;
+        if (!line.empty() && line.back() == L'\r') line.pop_back();
+        const auto fields = SplitTabs(line);
+        if (fields.size() == 3 && fields[0] == L"count") { count = fields[1]; collisions = fields[2]; }
+        else if (fields.size() == 4 && shown < 12) {
+            examples += L"\n" + fields[0] + L" \u2192 " + fields[1] + (fields[2].empty() ? L"" : L"\u3000" + fields[2])
+                + (fields[3] == L"1" ? L"\u3000\uff08\u540c\u73fe\u6709\u62fc\u6cd5\u91cd\u758a\uff09" : L"");
+            ++shown;
+        }
+    }
+    if (count == L"0") {
+        summary = L"\u5462\u689d\u898f\u5247\u5514\u6703\u5f71\u97ff\u4efb\u4f55\u97f3\u7bc0\u3002\u6aa2\u67e5\u5413\u53f3\u908a\u4fc2\u54aa\u5b8c\u6574\u5605\u8072\u6bcd\u6216\u8005\u97fb\u6bcd\uff08\u4f8b\u5982 *un\u3001g*\uff09\u3002";
+        return true;
+    }
+    summary = L"\u5462\u689d\u898f\u5247\u6703\u5f71\u97ff " + count + L" \u500b\u97f3\u7bc0";
+    if (collisions != L"0")
+        summary += L"\uff0c\u5176\u4e2d " + collisions + L" \u500b\u540c\u73fe\u6709\u62fc\u6cd5\u91cd\u758a\uff08\u91cd\u758a\u5605\u901a\u5e38\u6703\u6392\u55ba\u771f\u6b63\u8b80\u97f3\u5f8c\u9762\uff09";
+    summary += L"\u3002\u5e38\u7528\u4f8b\u5b50\uff1a" + examples;
     return true;
 }
 std::vector<std::wstring> SplitTabs(const std::wstring& line) {
@@ -414,6 +467,7 @@ void ShowTab(int tab) {
         const Page& page = kPages[i];
         for (int id : {page.list, page.key_label, page.key, page.value_label, page.value, page.add, page.update, page.remove, page.hint})
             ShowWindow(Item(id), i == tab ? SW_SHOW : SW_HIDE);
+        if (page.kind == LineKind::Alias) ShowWindow(Item(IDC_ALIAS_PREVIEW), i == tab ? SW_SHOW : SW_HIDE);
     }
     for (int id : {IDC_FONT_LABEL, IDC_FONT, IDC_SIZE_LABEL, IDC_FONT_SIZE, IDC_PREVIEW_LABEL, IDC_PREVIEW, IDC_FONT_HINT})
         ShowWindow(Item(id), tab == 2 ? SW_SHOW : SW_HIDE);
@@ -434,7 +488,7 @@ void Layout() {
     TabCtrl_AdjustRect(Item(IDC_TABS), FALSE, &inner);
     const int x = inner.left + gap, w = inner.right - inner.left - 2 * gap;
     for (const Page& page : kPages) {
-        const int fields = inner.bottom - gap - 3 * row - 2 * gap;
+        const int fields = inner.bottom - gap - 4 * row - 2 * gap;  // Two-line hint.
         MoveWindow(Item(page.list), x, inner.top + gap, w, fields - inner.top - 2 * gap, TRUE);
         const int label = Scale(64), half = (w - 2 * label - 3 * gap) / 2;
         int y = fields;
@@ -446,8 +500,10 @@ void Layout() {
         MoveWindow(Item(page.add), x, y, button, row, TRUE);
         MoveWindow(Item(page.update), x + button + gap, y, button + Scale(16), row, TRUE);
         MoveWindow(Item(page.remove), x + 2 * button + 2 * gap + Scale(16), y, button + Scale(16), row, TRUE);
+        if (page.kind == LineKind::Alias)
+            MoveWindow(Item(IDC_ALIAS_PREVIEW), x + 3 * button + 3 * gap + Scale(32), y, button + Scale(16), row, TRUE);
         y += row + gap;
-        MoveWindow(Item(page.hint), x, y, w, row, TRUE);
+        MoveWindow(Item(page.hint), x, y, w, 2 * row, TRUE);
         ListView_SetColumnWidth(Item(page.list), 0, Scale(160));
         ListView_SetColumnWidth(Item(page.list), 1, std::max(Scale(120), w - Scale(160) - GetSystemMetrics(SM_CXVSCROLL) - Scale(4)));
     }
@@ -490,7 +546,7 @@ void CreateControls() {
     const wchar_t* labels[2][2] = {{L"\u8f38\u5165", L"\u6587\u5b57"}, {L"\u62fc\u6cd5", L"\u7576\u4f5c"}};
     const wchar_t* hints[2] = {
         L"\u6253\u5b8c\u6574\u500b\u8f38\u5165\uff08\u4f8b\u5982 hh\uff09\uff0c\u81ea\u8a02\u6587\u5b57\u6703\u6392\u7b2c\u4e00\u3002\u540c\u4e00\u500b\u8f38\u5165\u53ef\u4ee5\u6709\u5e7e\u500b\u6587\u5b57\u3002",
-        L"\u4f8b\u5982 moon \u7576 mun\uff08\u51fa\u300c\u9580\u300d\uff09\uff0cchut \u7576 cheut\uff08\u51fa\u300c\u51fa\u300d\uff09\u3002\u62fc\u6cd5\u4ea6\u53ef\u4ee5\u55ba\u8a5e\u5165\u9762\u7528\u3002"};
+        L"\u4f8b\u5982 moon \u7576 mun\u3002\u898f\u5247\uff1ak* \u7576 g*\uff08\u8072\u6bcd\uff09\u3001*oon \u7576 *un\uff08\u97fb\u6bcd\uff09\u3001*oo* \u7576 *u*\uff08\u97fb\u6bcd\u5165\u9762\uff09\uff1b\u52a0\u4e4b\u524d\u6703\u9810\u89bd\u5f71\u97ff\u908a\u5572\u5b57\u3002"};
     for (int i = 0; i < 2; ++i) {
         const Page& page = kPages[i];
         HWND list = Create(WC_LISTVIEWW, L"", WS_BORDER | WS_TABSTOP | LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS, page.list);
@@ -510,6 +566,7 @@ void CreateControls() {
         Create(L"BUTTON", L"\u66f4\u65b0\u6240\u9078", WS_TABSTOP | BS_PUSHBUTTON, page.update);
         Create(L"BUTTON", L"\u522a\u9664\u6240\u9078", WS_TABSTOP | BS_PUSHBUTTON, page.remove);
         Create(L"STATIC", hints[i], SS_LEFT, page.hint);
+        if (page.kind == LineKind::Alias) Create(L"BUTTON", L"\u9810\u89bd\u898f\u5247", WS_TABSTOP | BS_PUSHBUTTON, IDC_ALIAS_PREVIEW);
     }
     Create(L"STATIC", L"\u5b57\u578b", 0, IDC_FONT_LABEL);
     Create(WC_COMBOBOXW, L"", WS_TABSTOP | WS_VSCROLL | CBS_DROPDOWNLIST, IDC_FONT);
@@ -598,6 +655,16 @@ LRESULT CALLBACK WindowProcedure(HWND window, UINT message, WPARAM wparam, LPARA
             SetStatus(L"\u64b3\u300c\u5132\u5b58\u300d\u5957\u7528\u65b0\u5b57\u578b\u3002"); return 0;
         }
         const int page = PageForControl(id);
+        if (id == IDC_ALIAS_PREVIEW && code == BN_CLICKED) {
+            const std::wstring key = AsciiLower(Trim(Text(IDC_ALIAS_KEY))), value = AsciiLower(Trim(Text(IDC_ALIAS_TARGET)));
+            if (!ValidRule(key, value)) { SetStatus(L"\u9810\u89bd\u53ea\u9069\u7528\u65bc\u898f\u5247\uff0c\u4f8b\u5982 *oon = *un\u3001k* = g* \u6216 *oo* = *u*\u3002"); return 0; }
+            std::wstring summary;
+            HCURSOR previous = SetCursor(LoadCursorW(nullptr, IDC_WAIT));
+            RulePreview(key, value, summary);
+            SetCursor(previous);
+            MessageBoxW(window, summary.c_str(), kTitle, MB_OK | MB_ICONINFORMATION);
+            return 0;
+        }
         if (page >= 0 && code == BN_CLICKED) {
             if (id == kPages[page].add) AddEntryFromFields(kPages[page]);
             else if (id == kPages[page].update) UpdateSelected(kPages[page]);

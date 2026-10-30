@@ -16,6 +16,7 @@ import sys
 from time import perf_counter
 
 from .engine import CompositionCapacityError, Engine, MODES, PaginationCapacityError
+from .custom import preview_rule
 from .reverse import reverse_lookup, tsv_lines
 from .session import Session
 
@@ -87,6 +88,15 @@ def _parser() -> argparse.ArgumentParser:
     output = reverse.add_mutually_exclusive_group()
     output.add_argument("--json", action="store_true", help="Print UTF-8 JSON instead of a text summary.")
     output.add_argument("--tsv", action="store_true", help="Print kind/text/reading/weight/spellings lines.")
+
+    preview = subcommands.add_parser("rule-preview", help="Show which syllables a custom spelling rule affects.")
+    preview.add_argument("rule", metavar="RULE", nargs="?", help='For example "*oon = *un"; omit with --stdin.')
+    preview.add_argument("--stdin", action="store_true", help="Read the rule line from standard input instead.")
+    preview.add_argument("--dictionary", type=Path, default=DEFAULT_DICTIONARY, help="Read-only SQLite lexicon.")
+    preview_output = preview.add_mutually_exclusive_group()
+    preview_output.add_argument("--json", action="store_true", help="Print UTF-8 JSON.")
+    preview_output.add_argument("--tsv", action="store_true",
+                                help="Print a count line, then syllable/spelling/example/collides lines.")
     return parser
 
 
@@ -353,6 +363,21 @@ def main(argv: list[str] | None = None) -> int:
                 for line in tsv_lines(result):
                     kind, value, reading, weight, spellings = line.split("\t")
                     print(f"{value}  {reading}  weight={weight}  type: {spellings.replace(',', ' / ') or '-'}")
+            return 0
+        if args.command == "rule-preview":
+            line = sys.stdin.buffer.read(1024).decode("utf-8-sig") if args.stdin else (args.rule or "")
+            result = preview_rule(args.dictionary, line.strip())
+            if args.json:
+                print(_json(result))
+            elif args.tsv:
+                print(f"count\t{result['count']}\t{result['collisions']}")
+                for row in result["rows"]:
+                    print(f"{row['syllable']}\t{row['spelling']}\t{row['example']}\t{int(row['collides'])}")
+            else:
+                print(f"{result['count']} syllables affected, {result['collisions']} collide with existing spellings")
+                for row in result["rows"][:20]:
+                    note = "  (collides)" if row["collides"] else ""
+                    print(f"{row['syllable']} -> {row['spelling']}  {row['example']}{note}")
             return 0
         if args.command == "lookup":
             report = _lookup(args)
