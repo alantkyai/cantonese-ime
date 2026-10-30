@@ -63,6 +63,9 @@ struct SelectionMemory {
     std::wstring raw;
     cime::Candidate candidate;
     bool strict = false;
+    // The typed letters as an English word: committed with a trailing space,
+    // remembered by the broker, and not part of a suggestion sequence.
+    bool English() const { return candidate.reading.empty() && !raw.empty() && candidate.text == raw; }
 };
 
 struct LearningTask {
@@ -732,8 +735,8 @@ HRESULT TextService::DoEdit(ITfContext* context, TfEditCookie cookie, EditKind k
             // Only a completed candidate commit reaches this point. Rendering,
             // cancellation, literal Enter and stale/failed edits never learn.
             QueueSelectionLearning(selection_memory);
-            if (!selection_memory.raw.empty()) AfterCommit(context, selection_memory.candidate.text);
-            else BreakSequence();  // Literal Latin text or a cancel is not part of a sequence.
+            if (!selection_memory.raw.empty() && !selection_memory.English()) AfterCommit(context, selection_memory.candidate.text);
+            else BreakSequence();  // Latin text or a cancel is not part of a sequence.
         }
     }
     return result;
@@ -767,13 +770,14 @@ HRESULT TextService::Finish(bool cancel, bool synchronous) {
 }
 HRESULT TextService::CommitLatin() {
     if (!context_ || !composition_) return S_FALSE;
-    return Request(context_.Get(), EditKind::Render, raw_ + L" ", true, true);
+    SelectionMemory selection{raw_, cime::Candidate{raw_, L""}, strict_};
+    return Request(context_.Get(), EditKind::Render, raw_ + L" ", true, true, std::move(selection));
 }
 HRESULT TextService::Select(UINT index, bool synchronous) {
     if (predicting_) return CommitPrediction(index, synchronous);
     if (!context_ || index >= page_.candidates.size()) return E_INVALIDARG;
     SelectionMemory selection{raw_, page_.candidates[index], strict_};
-    const std::wstring chosen = selection.candidate.text;
+    const std::wstring chosen = selection.English() ? selection.candidate.text + L" " : selection.candidate.text;
     return Request(context_.Get(), EditKind::Render, chosen, true, synchronous, std::move(selection));
 }
 bool TextService::LoadPage(std::uint32_t offset, bool forward) {
